@@ -18,5 +18,6 @@ You can run the python file as it is (with required imports). I think it is inte
 
 Constraint: chromedriver's location needs to be specified in the PATH
 
-*Folder naming scheme : URL_Screenshots
-*File naming scheme: URL-page_slug
+Folder naming scheme : URL_Screenshots
+
+File naming scheme: URL-page_slug
