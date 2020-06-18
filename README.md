@@ -7,3 +7,6 @@ Output process
 Folder containing Screenshots
 ![alt text](https://github.com/kanishk307/Crawler-Selenium-Screenshot/blob/master/Output/ImgsInFolder.png?raw=true)
 
+Inputs that need to be provided : Base URL (eg: https://umd.edu/virusinfo OR https://www.ucf.edu/coronavirus)
+
+You can run the python file as it is (with required imports). I think it is interactive to run the python notebook.
