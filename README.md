@@ -1,6 +1,6 @@
 # Crawler-Selenium-Screenshot
 
-* The script crawls through (max 50) urls of a page
+* The script crawls through urls (max 50) of a page
 * Based on the internal links, it crawls further
 * The code then filters and finds the immediate URLS (assuming the usual navigation bar nature)
 * Create a folder dynamically with a unique filename
