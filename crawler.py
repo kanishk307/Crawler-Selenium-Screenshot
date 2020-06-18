@@ -98,20 +98,24 @@ for immediate_url in immediate_urls:
     print(f'{immediate_url}\n') #To see which URLs will be crawled
 
 count = 0
+name_of_folder = f'{base_url_text_domain}_Screenshots'
 for i in immediate_urls:
     options = webdriver.ChromeOptions()
     options.headless = True
-    driver = webdriver.Chrome(options=options,executable_path='chromedriver.exe') #Local Path of chrome driver
+    driver = webdriver.Chrome(options=options,executable_path='chromedriver.exe') # #Local Path of chrome driver
     url = i
     file_name = url.replace(base_url,'')
     file_name = file_name.replace('/','')
-    print(f'{base_url_text_domain}/{file_name}')
+    print(f'Visiting {base_url_text}/{file_name}')
+    print(f'...Taking a screenshot')
     driver.get(url)
-    name_of_folder = f'{base_url_text_domain}_Screenshots'
     if not os.path.exists(name_of_folder):
         os.makedirs(name_of_folder)
     S = lambda X: driver.execute_script('return document.body.parentNode.scroll'+X)
     driver.set_window_size(S('Width'),S('Height')) # May need manual adjustment                                                                                                                
     driver.find_element_by_tag_name('body').screenshot(f'{name_of_folder}\\{base_url_text_domain}-{file_name}.png')
+    print(f'Screenshot of {file_name} page taken! \n')
     driver.quit()
+
+print(f'Task Completed! Files stored in the {name_of_folder} Folder')
     
