@@ -4,7 +4,7 @@
 * Based on the internal links, it crawls further
 * The code then filters and finds the immediate URLS (assuming the usual navigation bar nature)
 * Create a folder dynamically with a unique filename
-* Grabs a screenshot (full page) of all the immediate web pages (as PNG), name them dynamically and store them in a folder
+* Grab a screenshot (full page) of all the immediate web pages (as PNG), name them dynamically and store them in a folder
 
 Output process
 ![alt text](https://github.com/kanishk307/Crawler-Selenium-Screenshot/blob/master/Output/OutputInJupyter.png?raw=true)
