@@ -16,7 +16,7 @@ Inputs that need to be provided : Base URL (eg: https://umd.edu/virusinfo OR htt
 
 You can run the python file as it is (with required imports). I think it is interactive to run the python notebook.
 
-Constraint: chromedriver's location needs to be specified in the PATH
+Constraint: chromedriver's location needs to be specified in the PATH. Download chromedriver based on your OS. (https://chromedriver.chromium.org/)
 
 Folder naming scheme : URL_Screenshots
 
