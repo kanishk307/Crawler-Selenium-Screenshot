@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    
+    var overrides = ["www.asu.edu"];
+    var hostname = window.location.hostname;
+    var ASUHeader = ASUHeader || {};
+    
+    
+    if (overrides.indexOf(hostname) == -1) {  
+        ASUHeader.user_signedin = false;
+        ASUHeader.signout_url = "/caslogout";
+    }
+       
+    //--><!]]>
+  </script><!-- START /asuthemes/4.9/heads/default.shtml TODO: CHANGE URLS BACK AFTER TESTING-->
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header.min.css"/>
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header_media.min.css"/>
+<!--[if IE 9]>
+  <style type="text/css">
+    #asu_universal_nav ul ul {
+      filter: none;
+      box-shadow: 0 6px 6px 0 #999;
+    }
+    #asu_universal_nav > ul > li.parent:hover > a {
+      filter: none;
+      box-shadow: 6px 0 6px -6px #999, -6px 0 6px -6px #999;
+    }
+  </style>
+<![endif]-->
+<script>
+  var ASUHeader = ASUHeader || {};
+  ASUHeader.browser = false;
+  ASUHeader.compliance = "options";
+</script>
+<!--[if IE 5
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 6
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 7
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 8
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<script type="text/javascript" src="https://www.asu.edu/asuthemes/4.9/js/asu_header.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.css"/>
+<script src="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.js"></script>
+<!-- END /asuthemes/4.9/heads/default.shtml -->
+<link rel="shortcut icon" href="https://eoss.asu.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="TileImage" content="/profiles/openasu/themes/innovation/images/mstile.png" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"aee5de0d65",applicationID:"7681246"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="Webspark:1.70.7 (Zipperlandville)" http-equiv="X-Name-of-Distro" name="cmsversion" />
+<link rel="apple-touch-icon-precomposed" href="/profiles/openasu/themes/innovation/images/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" href="/profiles/openasu/themes/innovation/images/apple-touch-icon.png" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5W49ZGG');</script>
+<meta name="theme-color" content="#8c1d40" />
+<meta name="description" content="Current circumstances related to COVID-19 require that we continue to maintain appropriate cautions in gatherings of people. As a result, we will limit almost all instruction in summer B session beginning July 1 to ASU Sync (using Zoom technology), ASU Online and ASU iCourses. A small number of courses in summer B session that do not lend themselves to remote instruction will" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://eoss.asu.edu/health/announcements/coronavirus/may-13-2020" />
+<link rel="shortlink" href="https://eoss.asu.edu/node/11728" />
+<meta name="google-site-verification" content="bnHzDtzxuxgNiR0ABhQIo7f_YqisYou8_IIfYFSAwiU" />
+    <!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <!--[if lt IE 9]>
+      <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+    <meta http-equiv="cleartype" content="on" />
+  <title>Update on summer session B | Arizona State University</title>
+  <link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_MdWjIWSZAk3IpeBkd6flKftJkFvAHy8yehoud--C3nk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_nXUiZ-krHtc2kxJaY-Bmk5hnYrW0t0upjpQh2RW2PjQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_BxTKY-UQmsdQq30X9itLPoC1lDxgBslaXgH7ARtTxJE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_-iCvDp9mfWVf14zsBej7l1LMVSY_1k6rXmL5PP46_f0.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.title-banner{background-image:url("https://eoss.asu.edu/sites/default/files/novel-title-banner.jpg");background-repeat:no-repeat;background-position:center center;background-attachment:scroll;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_hKzJRyaa4bSTfQX4Mh_EpdnQ5B6FTugpHyFdl2DIDNQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_5vui1Bbj3zLfqLLyb_9knN7sI6fEGhyEArCpOFXLU_s.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_siU5Bd8ZF3hR9GnV0ZLcslCql3xKLqfYI93iBkmo4K4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_DmCj3G-NG5xLRmp3tWNuQC0lSftH18TncBM6iqhV1Fs.css" media="print" />
+<link type="text/css" rel="stylesheet" href="https://eoss.asu.edu/sites/default/files/css/css_PxsPpITToy8ZnO0bJDA1TEC6bbFpGTfSWr2ZP8LuFYo.css" media="all" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.2.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/profiles/openasu/modules/contrib/jquery_update/replace/jquery/1.12/jquery.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/profiles/openasu/modules/contrib/jquery_update/replace/ui/ui/jquery-ui.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_lqoVYCiTU9uAU0tSZ0_W1B_FQFZmd5iTH91bQHMJ_SE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var ASUHeader = ASUHeader || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_HC1JJFOQKkGn6QPmA3dhmaPHIexQlrhlN6q3KqXZToI.js"></script>
+<script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_BpDBZFgIi9QVgEhWNFhWpg1f1vPMeaUe3FnK5CQ2BMA.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.ASUHeader = window.ASUHeader || {};ASUHeader.site_menu = ASUHeader.site_menu || {};ASUHeader.site_menu.json = '[{"title":"Home","path":"\/health"},{"title":"Services","path":"\/health\/services"},{"title":"Billing and Insurance","path":"\/health\/billing-insurance","children":[{"title":"Patient Advocacy","path":"\/health\/billing-insurance\/patient-advocacy"},{"title":"For International Students","path":"\/health\/billing-insurance\/international-students"},{"title":"Health Coverage Options","path":"\/health\/billing-insurance\/coverage-options"}]},{"title":"Parents","path":"\/health\/parents","children":[{"title":"New Student Immunizations","path":"\/health\/parents\/immunization"}]},{"title":"Forms","path":"\/health\/forms","children":[{"title":"Medical Records","path":"\/health\/forms\/medical-records"}]},{"title":"Resources","path":"\/health\/resources","children":[{"title":"Food Safety","path":"\/health\/resources\/food-safety"},{"title":"For Parents","path":"\/health\/parents"},{"title":"Live Well @ ASU","path":"https:\/\/wellness.asu.edu"},{"title":"Health Updates","path":"\/health\/resources\/health-updates"},{"title":"International Travel","path":"\/health\/resources\/international-travel"},{"title":"LGBTQIA","path":"\/health\/resources\/LGBTQIA"},{"title":"Sexual Health","path":"https:\/\/wellness.asu.edu\/explore-wellness\/community-support\/relationships\/sexual-wellness\/sexually-transmitted-infections"}]},{"title":"Meet the Team","path":"\/health\/providers","children":[{"title":"Privacy Information","path":"\/health\/faq\/privacy"},{"title":"Vision\/Mission","path":"\/health\/contact\/about"}]},{"title":"Locations and Hours","path":"https:\/\/eoss.asu.edu\/health\/contact"},{"title":"My Health Portal","path":"\/health\/portal"}]';ASUHeader.site_menu.site_name = "ASU Health Services";ASUHeader.site_title = {"title":"ASU Health Services","site_url":"\/"};
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+ASUHeader.gsa = "**d"
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"eoss","theme_token":"wNweqblQtJeWmIQ4Q-b9KZfDkBS8xVNQVz1aA26DYjw","js":{"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_hero\/js\/webspark_hero.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_panels_styles\/plugins\/styles\/customstyles\/js\/customstyles.js":1,"profiles\/openasu\/themes\/innovation\/js\/innovation.js":1,"\/\/code.jquery.com\/jquery-1.12.2.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/code.jquery.com\/ui\/1.10.2\/jquery-ui.js":1,"1":1,"profiles\/openasu\/modules\/panopoly\/panopoly_images\/panopoly-images.js":1,"sites\/all\/modules\/custom\/asu_chat\/js\/asu_chat.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_gcse\/\/js\/asu_gcse.js":1,"sites\/all\/modules\/custom\/eoss_module\/js\/eoss_module.js":1,"profiles\/openasu\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/custom\/hide_filter_tips\/hide_filter_tips.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/mega_footer\/js\/megafoot.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/uto_carousel\/js\/jquery.flexslider-min.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"profiles\/openasu\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"2":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"profiles\/openasu\/libraries\/jquery.imagesloaded\/jquery.imagesloaded.min.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/js\/webspark_megamenu.js":1,"profiles\/openasu\/libraries\/emulatetab\/src\/emulatetab.joelpurra.min.js":1,"sites\/all\/themes\/eoss\/layouts\/responsive\/js\/responsive.js":1,"profiles\/openasu\/modules\/custom\/asu_brand\/asu_brand.js":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-frontend.js":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-touch.js":1,"profiles\/openasu\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/flickr\/flickr_colorbox.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/js\/webspark_megamenu_pre.js":1,"sites\/all\/libraries\/eoss_bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/eoss\/js\/eoss.js":1,"sites\/all\/themes\/eoss\/js\/aos.js":1,"3":1,"4":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_gcse\/\/css\/asu_gcse.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_maps_enhanced\/css\/asu_maps_enhanced.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"profiles\/openasu\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/openasu\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/field_hidden\/field_hidden.css":1,"profiles\/openasu\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_admin\/panopoly-admin-navbar.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-layouts.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.css":1,"profiles\/openasu\/modules\/contrib\/radix_layouts\/radix_layouts.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/uto_carousel\/css\/webspark_carousel.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_banner\/css\/webspark_banner.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_content_callout\/css\/webspark_content_callout.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_hero\/css\/webspark_hero.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_jumbohero\/css\/webspark_jumbohero.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_panels_styles\/plugins\/styles\/customstyles\/css\/customstyles.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"profiles\/openasu\/modules\/contrib\/views\/css\/views.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_spotlight\/css\/asuflex.css":1,"sites\/all\/modules\/contrib\/flickr\/flickr.css":1,"profiles\/openasu\/modules\/contrib\/caption_filter\/caption-filter.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"profiles\/openasu\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/openasu\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/eoss\/layouts\/responsive\/stylesheets\/responsive.css":1,"0":1,"profiles\/openasu\/libraries\/fontawesome\/css\/font-awesome.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/bootstrap.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/base.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/default.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/compatibility.css":1,"sites\/all\/libraries\/eoss_bootstrap\/css\/bootstrap.min.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/mega_footer\/css\/megafoot.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/css\/webspark_megamenu.css":1,"profiles\/openasu\/themes\/kalatheme\/css\/tweaks.css":1,"profiles\/openasu\/themes\/kalatheme\/css\/panopoly.css":1,"profiles\/openasu\/themes\/innovation\/css\/innovation-main.css":1,"profiles\/openasu\/themes\/innovation\/css\/buttons.css":1,"profiles\/openasu\/themes\/innovation\/css\/forms.css":1,"profiles\/openasu\/themes\/innovation\/css\/nav.css":1,"profiles\/openasu\/themes\/innovation\/fonts\/roboto\/css\/roboto.css":1,"sites\/all\/themes\/eoss\/css\/main.css":1,"sites\/all\/themes\/eoss\/css\/aos.css":1,"profiles\/openasu\/themes\/innovation\/css\/print.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleCSE":{"cx":"007921449323584335659:7htbgpmmreu","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":1},"CToolsModal":{"modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"panopoly_magic":{"pane_add_preview_mode":"automatic"},"asu_brand":{"asu_sso_signedin":"false","asu_sso_signinurl":"\/cas?destination=node\/11728","asu_sso_signouturl":"\/caslogout","overrides":"[\u0022www.asu.edu\u0022]"},"better_exposed_filters":{"views":{"microsite_titles":{"displays":{"block_1":{"filters":[]}}},"footer_contact":{"displays":{"block":{"filters":[]}}}}},"field_group":{"div":"full"},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":0,"extExclude":"https:\\\/\\\/weblogin\\.asu\\.edu\\\/cgi-bin\\\/login","extInclude":"\\.pdf","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"}});
+//--><!]]>
+</script>
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-11728 node-type-latest-coronavirus-update region-content" ><!-- Google Tag Manager ASU Universal-->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDWN8Z"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDWN8Z');</script>
+<!-- End Google Tag Manager ASU Universal --><!-- Google Tag Manager EOSS (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W49ZGG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager EOSS (noscript) -->    <div id="page-wrapper"><div id="page">
+  <!-- Page Header -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="row">
+        <div class="column col-md-12">
+            <div class="region region-header">
+    <div class="accessibility-hide"><a href="#main-wrapper" id="skip_to_content">Skip to Main Page Content</a></div><div id="block-asu-brand-asu-brand-header" class="block block-asu-brand">
+
+    
+  <div class="content">
+    <!-- START /asuthemes/4.9/headers/default.shtml -->
+<div id="main-search" class="main-search closed">
+  <form target="_top" action="https://search.asu.edu/search" method="get" name="gs" role="search">
+    <label for="asu_search_box">Search</label>
+    <input name="site" type="hidden" value="default_collection" />
+    <input name="sort" type="hidden" value="date:D:L:d1" />
+    <input name="output" type="hidden" value="xml_no_dtd" />
+    <input name="proxystylesheet" type="hidden" value="asu_frontend" />
+    <input name="ie" type="hidden" value="UTF-8" />
+    <input name="oe" type="hidden" value="UTF-8" />
+    <input name="client" type="hidden" value="asu_frontend" />
+    <input name="q" class="asu_search_box" id="asu_search_box" placeholder="Search" autocomplete="off" type="text" />
+    <input class="asu_search_button" type="submit" value="Search" />
+  </form>
+</div>
+<div id="asu-report-accessiblity" class="accessibility-hide">
+  <a href="https://www.asu.edu/accessibility/" class="sr-only">Report an accessibility problem</a>
+</div>
+<div id="asu_hdr" class="asu_hdr_white">
+  <div id="asu_mobile_hdr">
+    <div id="asu_logo">
+      <a id="asu-hdr-full-logo" href="https://www.asu.edu/" target="_top">
+        <img alt="Arizona State University" src="https://www.asu.edu/asuthemes/4.9/assets/arizona-state-university-logo.png"
+      /></a>
+      <a id="asu-hdr-mobile-logo" href="https://www.asu.edu/" target="_top">
+        <img alt="Arizona State University" src="https://www.asu.edu/asuthemes/4.9/assets/asu-logo.png"
+      /></a>
+    </div>
+    <div class="asuhide f-navicon" id="asu_mobile_button" onclick="javascript:ASUHeader.toggleASU();" role="button">
+      <a href="javascript:ASUHeader.toggleASU();">Menu</a>
+    </div>
+    <div class="f-search" id="search_new" onclick="javascript:ASUHeader.toggleASU('main-search');"></div>
+  </div>
+  <div class="closed" id="asu_mobile_menu">
+    <div id="asu_nav_wrapper">
+      <span class="hidden"> Sign In / Sign Out </span>
+      <ul id="asu_login_module">
+        <li class="end" id="asu_hdr_ssi">
+          <a href="//weblogin.asu.edu/cgi-bin/login" onclick="this.href=ASUHeader.alterLoginHref(this.href);"
+            onfocus="this.href=ASUHeader.alterLoginHref(this.href);"
+            onmouseover="this.href=ASUHeader.alterLoginHref(this.href);" target="_top">Sign In</a>
+        </li>
+      </ul>
+      <div id="asu_nav_menu" role="navigation" aria-labelledby="asuNavLabel">
+        <span class="sr-only" id="asuNavLabel">
+          Navigation for Entire University
+        </span>
+        <div id="asu_universal_nav">
+          <ul>
+            <li class="parent">
+              <a href="//www.asu.edu/" target="_top">ASU Home</a>
+              <ul>
+                <li>
+                  <a class="first" href="//www.asu.edu/?feature=newsevents" target="_top"
+                    title="News and Events">News/Events</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=academics" target="_top" title="Academics">Academics</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=research" target="_top" title="Research">Research</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=athletics" target="_top" title="Athletics">Athletics</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=alumni" target="_top" title="Alumni">Alumni</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=giving" target="_top" title="Giving">Giving</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=president" target="_top" title="President">President</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/about" target="_top" title="About ASU">About ASU</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="//my.asu.edu/" target="_top">My ASU</a></li>
+            <li class="parent">
+              <a href="//www.asu.edu/colleges/" target="_top">Colleges and Schools</a>
+              <ul>
+                <li>
+                  <a class="first" href="//artsandsciences.asu.edu/" target="_top"
+                    title="Arts and Sciences website">Arts and Sciences</a>
+                </li>
+                <li>
+                  <a href="//wpcarey.asu.edu/" target="_top"
+                    title="W. P. Carey School of Business Web and Morrison School of Agribusiness website">Business</a>
+                </li>
+                <li>
+                  <a href="//herbergerinstitute.asu.edu" target="_top"
+                    title="Herberger Institute for Design and the Arts website">Design and the Arts</a>
+                </li>
+                <li>
+                  <a href="//education.asu.edu/" target="_top"
+                    title="Mary Lou Fulton Teachers College website">Education</a>
+                </li>
+                <li>
+                  <a href="//engineering.asu.edu/" target="_top" title="Engineering website">Engineering</a>
+                </li>
+                <li>
+                  <a href="//sfis.asu.edu/" target="_top" title="Future of Innovation in Society website">Future of
+                    Innovation in Society</a>
+                </li>
+                <li>
+                  <a href="//graduate.asu.edu" target="_top" title="Graduate College website">Graduate</a>
+                </li>
+                <li>
+                  <a href="//chs.asu.edu/" target="_top" title="Health Solutions website">Health Solutions</a>
+                </li>
+                <li>
+                  <a href="//honors.asu.edu/" target="_top" title="Barrett, The Honors College website">Honors</a>
+                </li>
+                <li>
+                  <a href="//cronkite.asu.edu" target="_top"
+                    title="Walter Cronkite School of Journalism and Mass Communication website">Journalism</a>
+                </li>
+                <li>
+                  <a href="//www.law.asu.edu/" target="_top" title="Sandra Day O' Connor College of Law website">Law</a>
+                </li>
+                <li>
+                  <a href="//nursingandhealth.asu.edu/" target="_top"
+                    title="College of Nursing and Health Innovation website">Nursing and Health Innovation</a>
+                </li>
+                <li>
+                  <a href="//copp.asu.edu" target="_top" title="College of Public Programs website">Public Service and
+                    Community Solutions</a>
+                </li>
+                <li>
+                  <a href="//schoolofsustainability.asu.edu" target="_top"
+                    title="School of Sustainability website">Sustainability</a>
+                </li>
+                <li>
+                  <a href="//uc.asu.edu/" target="_top" title="University College website">University College</a>
+                </li>
+                <li>
+                  <a target="_top" href="https://thunderbird.asu.edu/"
+                    title="Thunderbird School of Global Management website">Thunderbird School of Global Management</a>
+                </li>
+              </ul>
+            </li>
+            <li class="parent">
+              <a href="//www.asu.edu/map/" target="_top">Map and Locations</a>
+              <ul>
+                <li>
+                  <a class="border first" href="//www.asu.edu/map/" target="_top">Map</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/tempe/" target="_top" title="Tempe campus">Tempe</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/west/" target="_top" title="West campus">West</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/polytechnic/" target="_top" title="Polytechnic campus">Polytechnic</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/downtown/" target="_top" title="Downtown Phoenix campus">Downtown
+                    Phoenix</a>
+                </li>
+                <li>
+                  <a href="//asuonline.asu.edu/" target="_top" title="Online and Extended campus">Online and
+                    Extended</a>
+                </li>
+                <li>
+                  <a class="border" href="//havasu.asu.edu/" target="_top">Lake Havasu</a>
+                </li>
+                <li>
+                  <a href="https://corporate.asu.edu/" target="_top">Corporate Engagement and Strategic Partnerships</a>
+                </li>
+                <li>
+                  <a href="//asuresearchpark.com/" target="_top">Research Park</a>
+                </li>
+                <li>
+                  <a href="//washingtoncenter.asu.edu/" target="_top">Washington D.C.</a>
+                </li>
+                <li>
+                  <a href="//wpcarey.asu.edu/mba/china-program/english/" target="_top">China</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="//isearch.asu.edu/" target="_top" title="Directory, Index and other info">Directory</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="asu_search">
+      <div id="asu_search_module" class="asu_search_module" name="asu_search_module">
+        <form target="_top" action="https://search.asu.edu/search" method="get" name="gs" role="search">
+          <label for="masu_search_box">Search</label>
+          <input name="site" type="hidden" value="default_collection" />
+          <input name="sort" type="hidden" value="date:D:L:d1" />
+          <input name="output" type="hidden" value="xml_no_dtd" />
+          <input name="proxystylesheet" type="hidden" value="asu_frontend" />
+          <input name="ie" type="hidden" value="UTF-8" />
+          <input name="oe" type="hidden" value="UTF-8" />
+          <input name="client" type="hidden" value="asu_frontend" />
+          <input name="q" class="asu_search_box" id="masu_search_box" placeholder="Search" autocomplete="off"
+            type="text" />
+          <input class="asu_search_button" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+  ASUHeader.default_search_text = "Search ASU";
+  ASUHeader.default_search_alttext = "Search ASU";
+
+  if (typeof ASUHeader.signin_callback_url == "undefined") {
+    ASUHeader.signin_callback_url = '';
+  }
+  if (typeof ASUHeader.signin_url == "undefined") {
+    ASUHeader.signin_url = '';
+  }
+  if (typeof ASUHeader.signout_url == "undefined") {
+    ASUHeader.signout_url = 'https://webapp4.asu.edu/myasu/Signout';
+  }
+  if (typeof ASUHeader.user_signedin == "undefined" || (ASUHeader.user_signedin != false && typeof ASUHeader.user_displayname == "undefined")) {
+    ASUHeader.checkSSOCookie();
+  }
+  if (ASUHeader.user_signedin == true) {
+    ASUHeader.setSSOLink();
+  }
+  if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+    document.getElementById('asu_hdr').className = document.getElementById('asu_hdr').className + " chrome";
+  }
+  ASUHeader.generateSiteTitle();
+  //--><!]]>
+
+</script>
+<div style="clear:both;"></div>
+<!-- END /asuthemes/4.9/headers/default.shtml -->
+  </div>
+</div>
+<div id="block-views-microsite-titles-block-1" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-microsite-titles view-id-microsite_titles view-display-id-block_1 view-dom-id-882eaf701e2c3fbd13941d283b26d709">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://eoss.asu.edu/health">ASU Health Services</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+                      <div class="header__sitename element-invisible"><span>Educational Outreach and Student Services</span>
+            </div>
+                  </div>
+      </div>
+    </div>
+  </header><!-- /.header -->
+
+  <!-- Nav Bar -->
+  <div id="ASUNavMenu" class="navmenu" role="navigation" aria-label="Primary">
+    <div class="container">
+      <!--Commented to work with mega menu-->
+      <div class="navbar-collapse collapse">
+          <div class="region region-menu">
+    <div id="block-tb-megamenu-menu-healthservices" class="block block-tb-megamenu">
+
+    
+  <div class="content">
+    <div  class="tb-megamenu tb-megamenu-menu-healthservices">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse  always-show">
+    <ul  class="tb-megamenu-nav nav level-0 items-10">
+  <li  data-id="2896" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/health" >
+        Home          </a>
+  </li>
+
+<li  data-id="2897" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/health/services" >
+        Services          </a>
+  </li>
+
+<li  data-id="2900" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="/health/billing-insurance"  class="dropdown-toggle" aria-haspopup="true">
+        Billing and Insurance          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-7" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
+  <li  data-id="2903" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/billing-insurance/patient-advocacy" >
+        Patient Advocacy          </a>
+  </li>
+
+<li  data-id="2907" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/billing-insurance/international-students" >
+        For International Students          </a>
+  </li>
+
+<li  data-id="2910" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/billing-insurance/coverage-options" >
+        Health Coverage Options          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="2908" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="/health/parents"  class="dropdown-toggle" title="Parents" aria-haspopup="true">
+        Parents          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-8" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-1">
+  <li  data-id="2898" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/parents/immunization" >
+        New Student Immunizations          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="2916" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="/health/forms"  class="dropdown-toggle" title="Forms" aria-haspopup="true">
+        Forms          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-9" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-1">
+  <li  data-id="2901" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/forms/medical-records" >
+        Medical Records          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="2905" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="/health/resources"  class="dropdown-toggle" aria-haspopup="true">
+        Resources          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-10" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-7">
+  <li  data-id="2906" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/resources/food-safety" >
+        Food Safety          </a>
+  </li>
+
+<li  data-id="16642" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/parents"  title="For Parents">
+        For Parents          </a>
+  </li>
+
+<li  data-id="2909" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://wellness.asu.edu"  title="Live Well @ ASU">
+        Live Well @ ASU          </a>
+  </li>
+
+<li  data-id="8963" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/resources/health-updates"  title="Health Updates">
+        Health Updates          </a>
+  </li>
+
+<li  data-id="2911" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/resources/international-travel" >
+        International Travel          </a>
+  </li>
+
+<li  data-id="2912" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/resources/LGBTQIA"  title="LGBTQIA">
+        LGBTQIA          </a>
+  </li>
+
+<li  data-id="2914" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://wellness.asu.edu/explore-wellness/community-support/relationships/sexual-wellness/sexually-transmitted-infections"  title="Sexual Health">
+        Sexual Health          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="2918" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="/health/providers"  class="dropdown-toggle" title="Meet the Team" aria-haspopup="true">
+        Meet the Team          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-11" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
+  <li  data-id="2917" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/faq/privacy" >
+        Privacy Information          </a>
+  </li>
+
+<li  data-id="2920" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/health/contact/about"  title="Vision/Mission">
+        Vision/Mission          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="13051" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="https://eoss.asu.edu/health/contact"  title="Locations and Hours">
+        Locations and Hours          </a>
+  </li>
+
+<li  data-id="16640" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/health/portal"  title="&lt;span style=&quot;background-color: #FFC627; color:#000;padding: 5px 10px; border-radius: 6px;&quot;&gt;My Health Portal&lt;/span&gt;">
+        <span style="background-color: #FFC627; color:#000;padding: 5px 10px; border-radius: 6px;">My Health Portal</span>          </a>
+  </li>
+</ul>
+      </div>
+  </div>
+  </div>
+</div>
+  </div>
+      </div><!-- /#navbar -->
+    </div><!-- /.container -->
+  </div><!-- /.navmenu -->
+
+  <!-- Page Main -->
+  <div id="main-wrapper" role="main" class="clearfix">
+    <div id="main" class="clearfix">
+    <a id="main-content"></a>
+
+    <div id="top-content" class="column container">
+              <h1 id="page-title" class="title">
+          Update on summer session B        </h1>
+      
+      
+              <div id="tabs">
+                  </div>
+      
+          </div> <!-- /#top-content -->
+
+    <div id="content" class="column container">
+      <div id="page-content">
+          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="panelizer-view-mode node node-full node-latest-coronavirus-update node-11728 node-promoted node-promoted">
+        <div class="responsive-mainwrap">
+
+      <div id="hero">
+      <div class="panel-pane pane-fieldable-panels-pane pane-current-2547 pane-bundle-banner title-banner"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="fieldable-panels-pane">
+	<h1>Novel Coronavirus</h1>
+    </div>
+  </div>
+
+  
+  </div>
+    </div>
+  
+  <div class="responsive-layout clearfix">
+        <div class="clearfix zone-main no-sidebar">
+            <div class="main-content">
+        <div class="panel-pane pane-block pane-easy-breadcrumb-easy-breadcrumb"  >
+  
+      
+  
+  <div class="pane-content">
+      <div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb">
+          <span itemprop="title"><a href="/health" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Home</a></span>               <span class="easy-breadcrumb_segment-separator"> / </span>
+                <span itemprop="title"><a href="/health/announcements" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Announcements</a></span>               <span class="easy-breadcrumb_segment-separator"> / </span>
+                <span itemprop="title"><a href="/health/announcements/coronavirus" class="easy-breadcrumb_segment easy-breadcrumb_segment-3">Novel Coronavirus</a></span>               <span class="easy-breadcrumb_segment-separator"> / </span>
+                <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Update on summer session B</span>            </div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-custom pane-1"  >
+  
+      
+  
+  <div class="pane-content">
+    <h3 style="font-size:28px;font-weight:600;">Update on summer session B</h3>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-entity-field pane-node-field-date"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-date field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">May 13, 2020</div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-entity-field pane-node-body"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Current circumstances related to COVID-19 require that we continue to maintain appropriate cautions in gatherings of people. As a result, we will limit almost all instruction in summer B session beginning July 1 to ASU Sync (using Zoom technology), ASU Online and ASU iCourses. A small number of courses in summer B session that do not lend themselves to remote instruction will be offered with in-person instruction on campus. For each of these courses, we will work with faculty and enrolled students on the following safety measures and protocols:</p><ul><li>Appropriate physical distancing measures are followed in the classroom.</li><li>At this point we are strongly recommending face coverings in classrooms and will communicate before July 1 if face coverings will be mandatory.</li><li>Health screenings before students enter the classroom, details of which can be found <a href="https://eoss.asu.edu/health/announcements/coronavirus/faqs#services-faq">here</a>.</li></ul><p>ASU continues to monitor federal and state public health recommendations and will implement appropriate measures as necessary by July 1. </p></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-entity-field pane-node-field-full-update"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-full-update field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This process will also help us better assess how best to accommodate students in the fall semester as we continue our planning to resume teaching and discovery activities on campus.</p><p>If you have any questions, please contact your academic adviser. If you do not see a course you need, please contact Vice Provost for Undergraduate Education Frederick Corey (<a href="mailto:Frederick.Corey@asu.edu">Frederick.Corey@asu.edu</a>), and if you are a graduate student, please contact your college’s graduate office for more information.</p><p>Mark Searle<br />Executive vice president and university provost<br /><br /><strong>Posted: May 13, 2020, at 2:15 p.m.</strong></p></div></div></div>  </div>
+
+  
+  </div>
+      </div>
+          </div>
+    <div class="clearfix zone-triples">
+      <div class="column">
+              </div>
+      <div class="column">
+              </div>
+      <div class="column">
+              </div>
+    </div>
+  </div>
+
+  <div id="bottom-content">
+        <div class="blocks-4 zone-blocks clearfix">
+      <div class="column block1">
+              </div>
+      <div class="column block2">
+              </div>
+      <div class="column block3">
+              </div>
+      <div class="column block4">
+              </div>
+    </div>
+      </div>
+
+</div>
+</div>
+  </div>
+</div>
+  </div>
+      </div><!-- /#page-content -->
+    </div><!-- /#content -->
+
+      </div>
+    </div>
+    <!-- /#main, /#main-wrapper -->
+
+    <footer id="prefooter">
+      <div class="container">
+        <div class="row row-full">
+            <div class="region region-prefooter clearfix">
+    <div id="block-views-footer-contact-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-footer-contact view-id-footer_contact view-display-id-block view-dom-id-b5a906c5941c62884610f661157f63fc">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <article id="node-2034" class="node node-footer-contact node-promoted clearfix" role="article">
+
+        <h2>
+      ASU Health Services    </h2>
+    
+  
+  <div class="content clearfix">
+    <div class="field field-name-field-footer-info field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p><a href="/health/contact">Location and Hours</a></p>
+</div></div></div>  </div>
+
+  
+  
+</article>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+<div id="block-mega-footer-mega-footer" class="block block-mega-footer">
+
+    
+  <div class="content">
+    <div class='megafoot'><div class='row'><div class='col-md-3 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord0' class='big-foot-head'>Admission<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord0' style=''><li><a href='https://students.asu.edu/apply'>Apply Now</a></li><li><a href='https://students.asu.edu/freshman'>Freshman</a></li><li><a href='https://transfer.asu.edu/'>Transfer</a></li><li><a href='https://students.asu.edu/international/future/undergrad'>International</a></li><li><a href='https://students.asu.edu/readmission'>Readmission</a></li><li><a href='https://students.asu.edu/graduate'>Graduate</a></li><li><a href='http://www.law.asu.edu/'>Law</a></li><li><a href='https://students.asu.edu/counselors'>Counselor and Teacher Resources</a></li></ul></div><div class='col-md-3 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord1' class='big-foot-head'>Paying for College<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord1' style=''><li><a href='https://students.asu.edu/tuition'>Costs</a></li><li><a href='https://students.asu.edu/financialaid'>Financial Aid</a></li><li><a href='https://students.asu.edu/scholarships'>Scholarships</a></li><li><a href='https://students.asu.edu/tuitionandfees'>Tuition</a></li><li><a href='https://students.asu.edu/tuitionandbilling'>Billing</a></li><li><a href='https://students.asu.edu/residency'>Residency</a></li></ul></div><div class='col-md-3 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord2' class='big-foot-head'>Academics<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord2' style=''><li><a href='http://www.asu.edu/programs/'>Majors</a></li><li><a href='http://www.bkstr.com/arizonastatestore/home/en?cm_mmc=Redirect-_-VanityURL-_-sundevilbookstores.com-_-196905'>ASU Bookstore</a></li><li><a href='https://students.asu.edu/registration'>Registration</a></li><li><a href='https://students.asu.edu/academic-success'>Tutoring & Advising</a></li><li><a href='https://catalog.asu.edu/'>Course Catalog</a></li><li><a href='https://students.asu.edu/graduation'>Graduation</a></li></ul></div><div class='col-md-3 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord3' class='big-foot-head'>Life at ASU<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord3' style=''><li><a href='https://asuevents.asu.edu/'>ASU Events</a></li><li><a href='https://eoss.asu.edu/health/resources/wellness'>Health & Wellness</a></li><li><a href='https://housing.asu.edu/'>Housing & Dining</a></li><li><a href='https://eoss.asu.edu/student_involvement'>Clubs & Activities</a></li><li><a href='https://cfo.asu.edu/police'>Safety</a></li><li><a href='https://eoss.asu.edu/dos/supportservices'>Student Support</a></li><li><a href='https://cfo.asu.edu/pts'>Transportation</a></li><li><a href='https://students.asu.edu/jobs-careers'>Jobs & Careers</a></li></ul></div></div></div>  </div>
+</div>
+  </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Page Footer -->
+  <footer id="page-footer">
+    <div class="container">
+      <div class="row row-full">
+          <div class="region region-footer">
+    <div id="block-asu-brand-asu-brand-footer" class="block block-asu-brand">
+
+    
+  <div class="content">
+    <div id="innovation-footer">
+  <div id="innovation-bar">
+    <div class="innovation-top">
+      <div class="innovation-status">
+         <a href="https://www.asu.edu/rankings"><span>ASU is No.1 in the U.S. for innovation</span></a>
+      </div>
+      <div class="innovation-hidden">
+        <a href="https://www.asu.edu/rankings"><img src="//www.asu.edu/asuthemes/4.9/assets/ASU-number-1-innovation-best-colleges.png" alt="Best Colleges U.S. News Most Innovative 2020"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-menu">
+    <ul class="default">
+      <li class="innovation-mobile-only"><a href="https://my.asu.edu/">My ASU</a></li>
+      <li><a href="https://www.asu.edu/copyright/">Copyright and Trademark</a></li>
+      <li><a href="https://www.asu.edu/accessibility/">Accessibility</a></li>
+      <li><a href="https://www.asu.edu/privacy/">Privacy</a></li>
+      <li><a href="https://www.asu.edu/tou/">Terms of Use</a></li>
+      <li><a href="https://www.asu.edu/asujobs">Jobs</a></li>
+      <li><a href="https://www.asu.edu/emergency/">Emergency</a></li>
+      <li class="no-border"><a href="https://www.asu.edu/contactasu/">Contact ASU</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+      </div>
+    </div>
+  </footer><!-- /#footer -->
+
+  
+  </div>
+</div>
+<!-- /#page, /#page-wrapper -->
+  <script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_29qYXJz8NLGg8Aomg-RZPjJcj9yEdEst1BMZ9gZbs-4.js"></script>
+<script type="text/javascript" src="https://eoss.asu.edu/sites/default/files/js/js_N_GLcrUPrfeDM7mDYArVZw_j81LHadQQDiGAbfxWgEM.js"></script>
+    <script>
+   AOS.init({
+       disable: 'phone',
+       disable:'tablet', 
+       disable:'mobile',
+duration: 800,
+})
+  </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"aee5de0d65","applicationID":"7681246","transactionName":"NFBbbENUXUdZVBELWw0abEpYGhxdVlMAGhoTXUk=","queueTime":0,"applicationTime":19,"atts":"GBdYGgtOTkk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
