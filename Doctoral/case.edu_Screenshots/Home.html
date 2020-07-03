@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M6NQD8');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"ff6859dcb2",applicationID:"56254627"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="shortlink" href="https://case.edu/studentlife/healthcounseling/node/1086" />
+<link rel="canonical" href="https://case.edu/studentlife/healthcounseling/health-services/health-updates" />
+<meta name="description" content="COVID-19 (Novel Coronavirus) Frequently asked questions related to COVID-19 (Novel Coronavirus) Given the quickly evolving nature of the COVID-19 ou..." />
+<meta name="twitter:title" content="Health Updates" />
+<meta name="abstract" content="COVID-19 (Novel Coronavirus) Frequently asked questions related to COVID-19 (Novel Coronavirus) Given the quickly evolving nature of the COVID-19 ou..." />
+<link rel="image_src" href="https://case.edu/studentlife/healthcounseling/themes/custom/crew/images/CWRU-sign-logo.jpg" />
+<meta name="rights" content="Copyright © 2020 Case Western Reserve University. All rights reserved." />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:image:alt" content="Case Western Reserve University Logo Sign" />
+<meta name="twitter:image" content="https://case.edu/studentlife/healthcounseling/themes/custom/crew/images/CWRU-sign-logo.jpg" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="revision" href="https://case.edu/studentlife/healthcounseling/health-services/health-updates" />
+
+    <title>Health Updates | University Health and Counseling Services | Division of Student Affairs | Case Western Reserve University</title>
+    <link rel="stylesheet" media="all" href="/studentlife/healthcounseling/sites/case.edu.healthcounseling/files/css/css_B5tPkhUr8wBil7K8beb2iZV0ufkrE7cP-CkWW1mWpIo.css?qc555w" />
+<link rel="stylesheet" media="all" href="/studentlife/healthcounseling/sites/case.edu.healthcounseling/files/css/css_HzAYKlLphp-J74k8Ud8lZPlfg0el-iLGQRIFwaN14qI.css?qc555w" />
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8" />
+
+    
+<!--[if lte IE 8]>
+<script src="/studentlife/healthcounseling/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+    <script type="text/javascript">
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {document.write('<script src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/scripts/ieshim.js"><\/script>')};
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6NQD8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <a href="#main-content" class="visually-hidden focusable" role="navigation" aria-label="Jump to content">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+        <div class="region region-rave-region">
+    <div id="cwruravealert"></div>
+<script type="text/javascript">
+  function raveCallback(data) {
+    if (data !== undefined) {
+      if (window['console']) { console.log(data); }
+      var div = document.getElementById('cwruravealert');
+      div.style.backgroundColor = data.bgcolor;
+      div.style.color = data.fgcolor;
+      div.style.width = '100%';
+      div.style.fontWeight = '500';
+      div.style.fontFamily = 'Titillium Web';
+      div.style.padding = '5px 1% 5px 1%';
+      var alert_div = document.createElement('div');
+      alert_div.style.margin = 'auto';
+      alert_div.style.maxWidth = '1000px';
+      alert_div.style.width = '100%';
+      alert_div.style.fontWeight = '500';
+      alert_div.style.fontFamily = 'Titillium Web';
+      alert_div.style.textAlign = 'center';
+      var field;
+      for (field of ['header', 'status', 'event', 'headline', 'description', 'instruction', 'note', 'web', 'contact']) {
+        if (data[field]) {
+          var field_div = document.createElement('div');
+          field_div.innerHTML = data[field];
+          alert_div.appendChild(field_div);
+        }
+      }
+      div.appendChild(alert_div);
+    }
+  }
+</script>
+<script type="text/javascript" src="//webapps.case.edu/t4/rave/jsonp.pl?callback=raveCallback"></script>
+
+  </div>
+
+  
+<!-- BEGIN PRINT HEADER -->
+  <header class="visible-print-block" aria-hidden="true" aria-label="Print Header" role="presentation">
+    <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/logo-print.jpg" alt="Case Western Reserve University" class="logo-default" aria-hidden="true">
+  </header>
+<!-- END PRINT HEADER -->
+
+<!-- BEGIN SITE HEADER -->
+
+
+<!-- BEGIN HEADER TOP -->
+<div class="page-header-top" role="banner" aria-label="Case Western Reserve University Logo Banner">
+  <div class="container">
+    <!-- BEGIN LOGO -->
+    <div class="page-logo">
+      <a href="//case.edu/">
+        <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/cwru-logo.svg" onerror="javascript:this.src='https://dudbm6bcnmy8e.cloudfront.net/cwru/img/logo-default.png';this.style.margin='-12px 0px';this.style.minHeight='55px'" alt="Case Western Reserve University" class="logo-default" title="Case Western Reserve University">
+        <span class="sr-only">Go to case.edu</span>
+      </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="top-menu hidden-sm hidden-xs">
+      <ul class="pull-right">
+        <!-- BEGIN SKIP BUTTON -->
+<!--             <li class="dropdown dropdown-user dropdown-light">
+          <a href="#skip-to-content" class="skip-button element-invisible element-focusable btn blue btn-sm" tabindex="1"> skip to content </a>
+        </li> -->
+                <!-- END SKIP BUTTON -->
+      </ul>
+    </div>
+    <!-- END TOP NAVIGATION MENU -->
+  </div>
+</div>
+<!-- END HEADER TOP -->
+
+
+  <div class="page-head" role="banner" aria-label="School Name Banner">
+              
+<div class="container">
+  <div class="col-md-6">
+              <a href="https://case.edu/studentlife">
+          <div class="page-title">
+            <div>Division of Student Affairs</div>
+          </div>
+        </a>
+      <a href="https://case.edu/studentlife/healthcounseling/">
+        <div class="department-header">
+                <div aria-label="Site title">University Health and Counseling Services</div>
+  
+        </div>
+      </a>
+        </div>
+
+  <div class="col-md-6">
+    
+    <div class="inputs pull-right hidden-xs hidden-sm">
+      <form action="//www.case.edu/search-results/" class="navbar__search-form desktop" name="searchForm" role="search" aria-label="desktop search">
+        <div class="input-group">
+          <span class="search-icon hidden-md hidden-lg"></span>
+          <input placeholder="Search..." title="searchbox" type="search" class="navbar__search form-control form-search form-control" name="q" maxlength="128" size="15" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+          <span class="mobile-search-btn input-group-btn">
+            <button type="submit" class="button js-form-submit form-submit btn icon-only" aria-label="Submit Search">
+              <span class="sr-only">Search</span>
+              <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+          </span>
+          <input type="hidden" name="cx" value="004305171799132815236:ciq4c8b3yv4">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input class="hidden" role="button" name="sa" type="submit" title="search" alt="search" value="search">
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  </div>
+
+      </div>
+
+
+          <header class="navbar navbar-default container" id="navbar" role="navigation" aria-labelledby="block-crew-main-menu">
+            <div class="col-xs-12 no-padding">
+      <div class="navbar-header">
+          <div class="hidden-xs hidden-sm region region-navigation">
+    <nav aria-label="mainmenumenu navigation menu"  id="block-crew-main-menu">
+          
+      
+
+              <ul block="block-crew-main-menu" class="menu nav navbar-nav" role="menubar">
+        <li class="hidden-md hidden-lg mobile-search-box" role="menuitem" tabindex="0">
+          <form action="//www.case.edu/search-results/" class="navbar__search-form" name="searchForm" role="search" aria-label="main search">
+            <span class="search-icon hidden-md hidden-lg"></span>
+            <input placeholder="Search CWRU" title="searchbox" type="search" class="navbar__search" name="q" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+            <span class="mobile-search-btn">
+              <button type="submit" class="btn submit" aria-label="Submit Search">
+                <i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Submit Search</span>
+              </button>
+            </span>
+            <input type="hidden" name="cx" value="004305171799132815236:ciq4c8b3yv4">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input class="hidden" role="button" name="sa" type="submit" title="search" alt="search">
+          </form>
+        </li>
+                            <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/about">About <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/contact-us" data-drupal-link-system-path="node/271">Contact Us</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/meet-our-staff" data-drupal-link-system-path="node/266">Meet Our Staff</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/who-can-use-uhcs" data-drupal-link-system-path="node/1521">Who can use UH&amp;CS?</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/training-positions" data-drupal-link-system-path="node/566">Training Positions</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown active" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/health-services">Health Services <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/general-clinic" data-drupal-link-system-path="node/421">General Clinic</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/allergy-clinic" data-drupal-link-system-path="node/426">Allergy Clinic</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/occupational-health" data-drupal-link-system-path="node/431">Occupational Health</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/sexual-health" data-drupal-link-system-path="node/1026">Sexual Health</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/immunizations" data-drupal-link-system-path="node/441">Immunizations</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/medical-forms" data-drupal-link-system-path="node/446">Medical Forms</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/needle-stick-and-bloodborne-pathogen-exposure" data-drupal-link-system-path="node/841">Needle Stick and Bloodborne Pathogen Exposure</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/price-list" data-drupal-link-system-path="node/456">Price List</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/new-students" data-drupal-link-system-path="node/461">For New Students</a>
+                  </li>
+                        <li class="active" role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/health-updates" data-drupal-link-system-path="node/1086" class="is-active">Health Updates</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/counseling-services">Counseling Services <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/counseling-during-covid" data-drupal-link-system-path="node/551">Counseling during COVID</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/additional-services" data-drupal-link-system-path="node/1621">Additional Services</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/advocate" data-drupal-link-system-path="node/571">Advocate</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/faculty-consultation" data-drupal-link-system-path="node/576">Faculty Consultation</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/group-therapy" data-drupal-link-system-path="node/581">Group Therapy</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/recovery-services" data-drupal-link-system-path="node/586">Recovery Services</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/support-space" data-drupal-link-system-path="node/1021">Support Space</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/psychiatric-services" data-drupal-link-system-path="node/951">Psychiatric Services</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/guided-relaxation-exercises" data-drupal-link-system-path="node/646">Guided Relaxation Exercises</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/student-wellness">Student Wellness <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/virtual-programs" data-drupal-link-system-path="node/1581">Virtual Programs</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/wellness-programs" data-drupal-link-system-path="node/991">Wellness Programs</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/peer-health-education" data-drupal-link-system-path="node/986">Peer Health Education</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/suicide-prevention" data-drupal-link-system-path="node/931">Suicide Prevention</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/alcohol-and-drugs" data-drupal-link-system-path="node/641">Alcohol and Drugs</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/quit-smoking" data-drupal-link-system-path="node/651">Quit Smoking</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/vaping" data-drupal-link-system-path="node/981">Vaping</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/resources" data-drupal-link-system-path="node/976">Resources</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/medical-plan">Medical Plan <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/plan-information" data-drupal-link-system-path="node/536">Plan Information</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/hipaa-privacy-notice" data-drupal-link-system-path="node/801">HIPAA Privacy Notice</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/waiver-information" data-drupal-link-system-path="node/501">Waiver Information</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/contact" data-drupal-link-system-path="node/796">Contact</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/faqs" data-drupal-link-system-path="node/526">FAQs</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/release-information-records">Release of Information/ Records <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-main-menu" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/information-release-records/records-request" data-drupal-link-system-path="node/1481">Records Request</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/information-release-records/release-information" data-drupal-link-system-path="node/1486">Release of Information</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/myhealthconnect" data-drupal-link-system-path="node/301">MyHealthConnect</a>
+                  </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+  </div>
+
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            Navigation + Search
+          </button>
+              </div>
+    </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            	<div class="hidden-md hidden-lg row region region-navigation-collapsible">
+    	<nav aria-label="mobilemenu navigation menu"  id="block-crew-mobile-nav">
+          
+      
+
+              <ul block="block-crew-mobile-nav" class="menu nav navbar-nav" role="menubar">
+        <li class="hidden-md hidden-lg mobile-search-box" role="menuitem" tabindex="0">
+          <form action="//www.case.edu/search-results/" class="navbar__search-form" name="searchForm" role="search" aria-label="mobile search">
+            <span class="search-icon hidden-md hidden-lg"></span>
+            <input placeholder="Search CWRU" title="searchbox" type="search" class="navbar__search" name="q" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+            <span class="mobile-search-btn">
+              <button type="submit" class="btn submit" aria-label="Submit Search">
+                <i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Submit Search</span>
+              </button>
+            </span>
+            <input type="hidden" name="cx" value="004305171799132815236:ciq4c8b3yv4">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input class="hidden" role="button" name="sa" type="submit" title="search" alt="search">
+          </form>
+        </li>
+                            <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/about">About <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/contact-us" data-drupal-link-system-path="node/271">Contact Us</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/meet-our-staff" data-drupal-link-system-path="node/266">Meet Our Staff</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/about/who-can-use-uhcs" data-drupal-link-system-path="node/1521">Who can use UH&amp;CS?</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/about/training-positions">Training Positions <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/abouttraining-positions/psychology-doctoral-internship" data-drupal-link-system-path="node/626">Psychology Doctoral Internship</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown active" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/health-services">Health Services <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/general-clinic" data-drupal-link-system-path="node/421">General Clinic</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/allergy-clinic" data-drupal-link-system-path="node/426">Allergy Clinic</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/occupational-health" data-drupal-link-system-path="node/431">Occupational Health</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/sexual-health" data-drupal-link-system-path="node/1026">Sexual Health</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/health-services/immunizations">Immunizations <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/influenza-flu" data-drupal-link-system-path="node/681">Influenza (Flu)</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/gardasil-hpv" data-drupal-link-system-path="node/686">Gardasil (HPV)</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/polio" data-drupal-link-system-path="node/911">Polio</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/meningococcal-meningitis" data-drupal-link-system-path="node/696">Meningococcal Meningitis</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/measles-mumps-and-rubella" data-drupal-link-system-path="node/691">Measles, Mumps, and Rubella</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/hepatitis" data-drupal-link-system-path="node/701">Hepatitis A</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/hepatitis-b" data-drupal-link-system-path="node/706">Hepatitis B</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/hepatitis-c" data-drupal-link-system-path="node/916">Hepatitis C</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/tetanus-diptheria-and-pertussis" data-drupal-link-system-path="node/711">Tetanus, Diptheria, and Pertussis</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/varicella-chickenpox" data-drupal-link-system-path="node/716">Varicella (Chickenpox)</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/rabies" data-drupal-link-system-path="node/726">Rabies</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-servicesimmunizations/graduating-4th-and-5th-year-medical-students" data-drupal-link-system-path="node/1356">Graduating 4th and 5th Year Medical Students</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/medical-forms" data-drupal-link-system-path="node/446">Medical Forms</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/needle-stick-and-bloodborne-pathogen-exposure" data-drupal-link-system-path="node/841">Needle Stick and Bloodborne Pathogen Exposure</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/price-list" data-drupal-link-system-path="node/456">Price List</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-services/new-students" data-drupal-link-system-path="node/461">For New Students</a>
+                  </li>
+                        <li class="expanded active" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/health-services/health-updates">Health Updates <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-serviceshealth-updates/covid-19-campus-communications" data-drupal-link-system-path="node/1396">COVID-19 Campus Communications</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-serviceshealth-updates/mental-health-and-coping-during-covid-19" data-drupal-link-system-path="node/1441">Mental Health and Coping During COVID-19</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-serviceshealth-updates/do-i-need-self-isolate-quarantine-covid-19" data-drupal-link-system-path="node/1271">Do I need to Self-Isolate/ Quarantine for COVID-19</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/health-serviceshealth-updates/how-cope-staying-home" data-drupal-link-system-path="node/1336">How to Cope with Staying at Home</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/counseling-services">Counseling Services <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/counseling-during-covid" data-drupal-link-system-path="node/551">Counseling during COVID</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/additional-services" data-drupal-link-system-path="node/1621">Additional Services</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/advocate" data-drupal-link-system-path="node/571">Advocate</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/faculty-consultation" data-drupal-link-system-path="node/576">Faculty Consultation</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/group-therapy" data-drupal-link-system-path="node/581">Group Therapy</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/counseling-services/recovery-services">Recovery Services <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-servicesrecovery-services/mission" data-drupal-link-system-path="node/601">Mission</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-servicesrecovery-services/college-recovery-community" data-drupal-link-system-path="node/606">College Recovery Community</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-servicesrecovery-services/recovery-house" data-drupal-link-system-path="node/611">Recovery House</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/support-space" data-drupal-link-system-path="node/1021">Support Space</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/psychiatric-services" data-drupal-link-system-path="node/951">Psychiatric Services</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/counseling-services/guided-relaxation-exercises" data-drupal-link-system-path="node/646">Guided Relaxation Exercises</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/student-wellness">Student Wellness <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/virtual-programs" data-drupal-link-system-path="node/1581">Virtual Programs</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/student-wellness/wellness-programs">Wellness Programs <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnesswellness-programs/cwru-water-challenge" data-drupal-link-system-path="node/1006">CWRU Water Challenge</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnesswellness-programs/light-campus" data-drupal-link-system-path="node/996">Light the Campus</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnesswellness-programs/wellness-wednesday" data-drupal-link-system-path="node/1001">Wellness Wednesday</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/peer-health-education" data-drupal-link-system-path="node/986">Peer Health Education</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/suicide-prevention" data-drupal-link-system-path="node/931">Suicide Prevention</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/student-wellness/alcohol-and-drugs">Alcohol and Drugs <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/blood-alcohol-concentration" data-drupal-link-system-path="node/861">Blood Alcohol Concentration</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/how-help-yourself-friend-or-problem-drinker" data-drupal-link-system-path="node/866">How to Help Yourself, a Friend or Problem Drinker</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/substance-abuse-self-assessments" data-drupal-link-system-path="node/871">Substance Abuse Self-Assessments</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/alcohol-poisoning" data-drupal-link-system-path="node/876">Alcohol Poisoning</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/opioids" data-drupal-link-system-path="node/881">Opioids</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/nicotine" data-drupal-link-system-path="node/886">Nicotine</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/marijuana" data-drupal-link-system-path="node/891">Marijuana</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/ecstasy" data-drupal-link-system-path="node/896">Ecstasy</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/hallucinogens" data-drupal-link-system-path="node/901">Hallucinogens</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellnessalcohol-and-drugs/community-support" data-drupal-link-system-path="node/906">Community Support</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/quit-smoking" data-drupal-link-system-path="node/651">Quit Smoking</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/vaping" data-drupal-link-system-path="node/981">Vaping</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/student-wellness/resources" data-drupal-link-system-path="node/976">Resources</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/medical-plan">Medical Plan <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/medical-plan/plan-information">Plan Information <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/glance-student-coverage" data-drupal-link-system-path="node/656">At a Glance: Student Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/important-definitions" data-drupal-link-system-path="node/926">Important Definitions</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/eligibility-and-coverage" data-drupal-link-system-path="node/661">Eligibility and Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/network-information" data-drupal-link-system-path="node/671">Network Information</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/student-plan-benefits" data-drupal-link-system-path="node/736">Student Plan Benefits</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/dependent-plan-benefits" data-drupal-link-system-path="node/741">Dependent Plan Benefits</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/medical-coverage" data-drupal-link-system-path="node/731">Medical Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/dental-coverage" data-drupal-link-system-path="node/746">Dental Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/vision-coverage" data-drupal-link-system-path="node/751">Vision Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/mental-health-coverage" data-drupal-link-system-path="node/831">Mental Health Coverage</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/accidental-death-travel-assistance-medical-evacuation" data-drupal-link-system-path="node/756">Accidental Death, Travel Assistance, Medical Evacuation</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/coverage-termination" data-drupal-link-system-path="node/761">Coverage Termination</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/personal-medical-leave" data-drupal-link-system-path="node/766">Personal Medical Leave</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/claim-submission" data-drupal-link-system-path="node/771">Claim Submission</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/student-id-card" data-drupal-link-system-path="node/776">Student ID Card</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/refund-policy" data-drupal-link-system-path="node/781">Refund Policy</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/appeal-process-and-denial-benefits" data-drupal-link-system-path="node/786">Appeal Process and Denial of Benefits</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planplan-information/exclusions" data-drupal-link-system-path="node/791">Exclusions</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/hipaa-privacy-notice" data-drupal-link-system-path="node/801">HIPAA Privacy Notice</a>
+                  </li>
+                        <li class="expanded" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/medical-plan/waiver-information">Waiver Information <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planwaiver-information/health-waiver-process" data-drupal-link-system-path="node/506">Health Waiver Process</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planwaiver-information/health-waiver-criteria" data-drupal-link-system-path="node/511">Health Waiver Criteria</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planwaiver-information/late-waiver-appeals" data-drupal-link-system-path="node/516">Late Waiver Appeals</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-planwaiver-information/qualifying-event" data-drupal-link-system-path="node/521">Qualifying Event</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/contact" data-drupal-link-system-path="node/796">Contact</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/medical-plan/faqs" data-drupal-link-system-path="node/526">FAQs</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown" role="menuitem" tabindex="-1">
+        <a href="/studentlife/healthcounseling/release-information-records">Release of Information/ Records <span class="arrow" aria-haspopup="true"></span></a>
+                                  <ul block="block-crew-mobile-nav" class="menu dropdown-menu" role="menu" aria-hidden="true" tabindex="0">
+                            <li role="menuitem">
+        <a href="/studentlife/healthcounseling/information-release-records/records-request" data-drupal-link-system-path="node/1481">Records Request</a>
+                  </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/information-release-records/release-information" data-drupal-link-system-path="node/1486">Release of Information</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li role="menuitem">
+        <a href="/studentlife/healthcounseling/myhealthconnect" data-drupal-link-system-path="node/301">MyHealthConnect</a>
+                  </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+  	</div>
+
+        </div>
+                </header>
+  
+
+  <div role="main" class="main-container container  js-quickedit-main-content">
+
+                
+                                      <div class="highlighted">  <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+</div>
+                  
+                                        <div class="region region-breadcrumbs">
+        <ol class="breadcrumb">
+          <li >
+                  <a href="/studentlife/healthcounseling/">Home</a>
+              </li>
+          <li >
+                  <a href="/studentlife/healthcounseling/health-services">Health Services</a>
+              </li>
+          <li >
+                  Health Updates
+              </li>
+      </ol>
+
+
+  </div>
+
+                  
+                
+      <div class="row pre-sidebar">
+                                
+                                    <aside aria-label="Sidebar Navigation Menu" class="col-lg-3 col-md-3 hidden-sm hidden-xs sidebar-desktop">
+                <div  class="region region-sidebar-first">
+    <nav aria-label="sidebarigationmenu navigation menu"  id="block-crew-sidebar-navigation">
+          
+      
+
+                                                            <a href="/studentlife/healthcounseling/health-services" class="sidebar-menu-title">
+                    <h2>Health Services</h2>
+                </a>
+                <ul class="page-sidebar-menu" role="menubar">
+                                                        <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/general-clinic" class="nav-link" data-drupal-link-system-path="node/421">General Clinic</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/allergy-clinic" class="nav-link" data-drupal-link-system-path="node/426">Allergy Clinic</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/occupational-health" class="nav-link" data-drupal-link-system-path="node/431">Occupational Health</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/sexual-health" class="nav-link" data-drupal-link-system-path="node/1026">Sexual Health</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/immunizations" class="nav-link" data-drupal-link-system-path="node/441">Immunizations</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/medical-forms" class="nav-link" data-drupal-link-system-path="node/446">Medical Forms</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/needle-stick-and-bloodborne-pathogen-exposure" class="nav-link" data-drupal-link-system-path="node/841">Needle Stick and Bloodborne Pathogen Exposure</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/price-list" class="nav-link" data-drupal-link-system-path="node/456">Price List</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/new-students" class="nav-link" data-drupal-link-system-path="node/461">For New Students</a>
+                            </li>
+                                <li class="nav-item active open" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-services/health-updates" class="nav-link is-active" data-drupal-link-system-path="node/1086">Health Updates</a>
+                                    <ul class="sub-menu">
+                                                            <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-serviceshealth-updates/covid-19-campus-communications" class="nav-link" data-drupal-link-system-path="node/1396">COVID-19 Campus Communications</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-serviceshealth-updates/mental-health-and-coping-during-covid-19" class="nav-link" data-drupal-link-system-path="node/1441">Mental Health and Coping During COVID-19</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-serviceshealth-updates/do-i-need-self-isolate-quarantine-covid-19" class="nav-link" data-drupal-link-system-path="node/1271">Do I need to Self-Isolate/ Quarantine for COVID-19</a>
+                            </li>
+                                <li class="nav-item" role="menuitem">
+                <a href="/studentlife/healthcounseling/health-serviceshealth-updates/how-cope-staying-home" class="nav-link" data-drupal-link-system-path="node/1336">How to Cope with Staying at Home</a>
+                            </li>
+            
+                    </ul>
+                            </li>
+            
+                </ul>
+                                                                                                                            
+
+
+
+  </nav>
+
+  </div>
+
+            </aside>
+                        
+            <section role="region" aria-label="main-content"  class="col-sm-12 col-md-9 has-sidebar">
+                          <a id="main-content"></a>
+            <div class="region region-content">
+        <h1 class="page-header"><span>Health Updates</span>
+</h1>
+
+  
+
+<article role="article" about="/studentlife/healthcounseling/health-services/health-updates" class="robust-3-column-page full clearfix">
+  
+    
+
+  
+
+      
+  
+   <div class="content">
+      <div class='row'>
+                    <div class="col-md-12 robust-content-small">
+          
+      <div class="field field--name-field-robust-3-page-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h2>COVID-19 (Novel Coronavirus)</h2>
+
+<h3>Frequently asked questions related to COVID-19 (Novel Coronavirus)</h3>
+
+<p>Given the quickly evolving nature of the COVID-19 outbreak, we have revamped this page to allow visitors to find information of greatest interest to them quickly. As answers to frequently asked questions are updated, the question will note the date of the most recent change.</p>
+
+<p>For a full list of messages sent to the Case Western Reserve community, visit our <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="19958c1e-d5ad-4bb3-bb25-fffa2885bef8" href="/studentlife/healthcounseling/health-serviceshealth-updates/covid-19-campus-communications" title="COVID-19 Campus Communications">COVID-19 Campus Communications page</a>.</p>
+
+<p><em><strong>If you have questions not addressed on this page, please email <a href="mailto:covidprep@case.edu">covidprep@case.edu</a>.</strong></em></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h3>Frequently Asked Questions</h3>
+
+<h4>General</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What is COVID-19 (Novel Coronavirus)? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>A novel coronavirus is a new coronavirus that has not been previously identified. The virus causing coronavirus 2019 (COVID-19), is not the same as the coronaviruses that commonly circulate among humans and cause mild illness, like the common cold. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What are its primary symptoms? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The key symptoms of COVID-19 are fever, cough, and shortness of breath. </p>
+
+<p>For more information on symptoms, <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank">visit the CDC's symptoms page</a>.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What should I do if I have one or more of these symptoms?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><ul><li>Stay home. </li>
+	<li>If on campus, call Health Services at 216.368.2450. Please do not come in. Faculty and staff, or students who are off campus, should contact their primary medical providers.</li>
+	<li>Avoid public transportation.</li>
+	<li>Separate yourself from other people in your home. As much as possible stay in a specific “sick room” and away from other people. Use a separate bathroom, if available. </li>
+	<li>Limit contact with pets and animals. </li>
+</ul><p>For additional information on what to do if you are sick, <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html" target="_blank">visit the CDC website</a>. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Have there been any confirmed cases of COVID-19 at Case Western Reserve? (updated 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>No. For the latest numbers of cases in Ohio and Cuyahoga County, <a href="https://coronavirus.ohio.gov/wps/portal/gov/covid-19/" target="_blank">visit the Ohio Department of Health COVID-19 page</a>.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Will the Student Medical Plan cover care for COVID-19?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Aetna will waive co-pays for all diagnostic testing related to COVID-19, including test kits for patients who meet CDC guidelines for testing, which can be done in any approved laboratory location. Aetna will waive the member costs associated with diagnostic testing at any authorized location.</p>
+
+<p>Students are also welcome to ask questions of a Medical Plan representative via <a href="mailto:medicalplan@case.edu">medicalplan@case.edu</a> or Aetna's customer service representatives at 877.850.6038.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Can I get a test for COVID-19 at University Health Services?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>University Health Services does not have testing kits for COVID-19. Testing for COVID-19 is currently available only with a provider order. In Northeast Ohio, tests are being prioritized for people who are older than 61 years of age or are in the hospital.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How can I take care of myself at home or in the residence hall?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><ul><li>Stay home from work, school and away from other public places. </li>
+	<li>Monitor your symptoms carefully. If your symptoms get worse, call Health Services or your provider immediately. </li>
+	<li>Get rest and stay hydrated. </li>
+	<li>Cover your cough and sneezes. </li>
+	<li>For medical emergencies, call 911 if off campus or 216.368.3333 if on campus and notify the dispatch personnel that you have or may have COVID-19. </li>
+	<li>Avoid sharing personal items with other people in your household, like dishes towels and bedding. </li>
+	<li>Clean all surfaces that are touched often, like counters, tabletops, and doorknobs. </li>
+</ul><p>For more information visit the <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/caring-for-yourself-at-home.html" target="_blank">CDC webpage on caring for yourself at home</a>. </p>
+
+<p>Students who are on campus should contact Residence Life at 216.368.6325 or <a href="mailto:residencelife@case.edu">residencelife@case.edu</a> or Campus Housing at 216.368.3780 or <a href="mailto:housing@case.edu">housing@case.edu</a> if you need assistance. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Do I need to self-isolate or quarantine for COVID-19? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Please refer to our Do I need to <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="4f879762-2b78-49d5-b741-0988081cb676" href="/studentlife/healthcounseling/health-serviceshealth-updates/do-i-need-self-isolate-quarantine-covid-19" title="Do I Need To Self-Isolate or Quarantine">Self-Isolate or Quarantine page</a></p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Prevention</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How can I protect myself from getting COVID-19?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Prevention methods for COVID-19 (coronavirus) are the same as for reducing the chances of catching the flu:</p>
+
+<ul><li>wash your hands frequently with soap and water or an alcohol-based hand sanitizer;</li>
+	<li>practice social distancing;</li>
+	<li>avoid close contact with other people who are ill;</li>
+	<li>cough into your elbow; regularly clean door handles and other surfaces with disinfectant spray or wipes; and</li>
+	<li>stay home if sick.</li>
+</ul></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How do I practice social distancing?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><ul><li>Stay home. </li>
+	<li>Give yourself a buffer zone. Try not to get physically close to people when you’re outside your home. As a general rule, try to be six feet away from the closest person.</li>
+	<li>Rethink your greeting. Don’t hug or shake hands. </li>
+	<li>Avoid groups of people. More people = more chances to come in direct (or indirect) contact with the virus. </li>
+</ul></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Who should practice social distancing?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Everyone!</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Aren’t those suggestions—especially handwashing—pretty basic?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Studies show that effective handwashing can reduce the spread of respiratory illnesses by as much as 20 percent. Below is specific guidance from health officials.</p>
+
+<p>The <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">Centers for Disease Control</a> (CDC) provides <a href="https://www.cdc.gov/handwashing/when-how-handwashing.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Ffeatures%2Fhandwashing%2Findex.html" target="_blank">extensive guidance on handwashing</a>; among its key recommendations are to wash hands no for no fewer than 20 seconds (about the time it takes to sing “Happy Birthday” twice), and if using hand sanitizer, make sure it has at least 60 percent alcohol.</p>
+
+<p>The <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">World Health Organization</a> has even <a href="https://www.who.int/gpsc/5may/Hand_Hygiene_Why_How_and_When_Brochure.pdf" target="_blank">more detailed hand hygiene guidance</a>. Please pay particular attention to pages 3 and 4 of this document.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Should I wear a mask? (update 4/7/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover.html">CDC</a> now recommends wearing cloth face coverings in public settings where other social distancing measures may be difficult to maintain. </p>
+
+<p>It is critical to emphasize that maintaining 6-feet social distancing remains important to slowing the spread of the virus. CDC is additionally advising the use of simple cloth face coverings to slow the spread of the virus and help people who may have the virus and do not know it from transmitting it to others. </p>
+
+<p>More guidance, including instructions to make a mask at home, can be found here: <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html">https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What is the university doing to protect the campus community? (updated 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>We are closely following the recommendations of the CDC, consulting with infectious disease experts within the university, and working with state and local public health officials.</p>
+
+<p>UPDATE as of March 13: The university has made the difficult decision to continue remote education for the rest of the semester. </p>
+
+<p>We have made this choice for several reasons, including:</p>
+
+<ul><li>the health and safety of the campus community amid rapidly growing concern about the spread of COVID-19 in Ohio;</li>
+	<li>a desire to bring clarity regarding the university’s plans for students and their families; and</li>
+	<li>the academic benefits in enabling faculty and students to plan for remote course delivery during the coming months.</li>
+</ul><p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="aec8d1da-a467-4f50-be6a-e7c8b8d622ad" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-campus-remote-education-continue-through-end-semester" title="March 13 Message to Campus: Remote Education to Continue Through the End of the Semester">See the full March 13 message to campus.</a></p>
+
+<hr /><p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="3d891249-0fc1-4bc1-af66-b5150b10736b" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-10-message-campus-moving-remote-delivery-courses-information-students-living-campus" title="March 10 Message to Campus: Moving to remote delivery of courses; information for students living on campus">As announced March 10</a>: Case Western Reserve will move to remote delivery of education for nearly of our programs. The single exception involves those students participating in clinical activities as part of their academic preparation; in those instances, the deans of the respective schools will provide direct guidance regarding which clinical experiences will continue.</p>
+
+<p>To allow faculty time to prepare for this transition, all classes are canceled Monday and Tuesday (March 16-17). </p>
+
+<p>Remote education will commence Wednesday, March 18. As of this writing, we plan to continue this approach through Monday, April 6. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="3d891249-0fc1-4bc1-af66-b5150b10736b" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-10-message-campus-moving-remote-delivery-courses-information-students-living-campus" title="March 10 Message to Campus: Moving to remote delivery of courses; information for students living on campus">See the full March 10 message to campus.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How can I help prevent illness? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><ul><li><strong>Get a flu shot. </strong>We strongly recommend that everyone obtain seasonal flu vaccination. While it will not prevent COVID-19, influenza is in widespread circulation in Ohio, and initial symptoms can be similar to novel coronavirus. Any illness right now can increase anxiety and concerns.  </li>
+	<li><strong>Wash your hands.</strong> Wash with soap and water for at least 20 seconds. If soap and water are not available, use an alcohol based hand sanitizer. </li>
+	<li><strong>Avoid touching</strong> your eyes, nose, and mouth with unwashed hands. </li>
+	<li><strong>Don’t share</strong> food and drinks.</li>
+	<li><strong>Clean and disinfect</strong> shared surfaces and objects that are touched frequently (e.g. door knobs, desks, phones)</li>
+	<li><strong>Avoid close contact</strong> with anyone with cold or flu-like symptoms.</li>
+</ul></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Campus Housing</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Now that the university has moved to remote education for the rest of the semester, how/when do I move out?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>On March 13, the university provided <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ce60baaa-4296-47d9-96ab-62bcaa8948d7" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-undergraduates-move-out-procedures-between-now-and-5-pm-march-17" title="March 13 Message to Undergraduates: Move-Out Procedures Between Now and 5 p.m. March 17">move-out details for those able to do so between March 13-17</a>. </p>
+
+<p><strong>These four days will <em>not</em> be the only opportunity to move out of residence halls.</strong> The university will provide additional details on move-out for other dates as soon as it becomes available.</p>
+
+<p>Refer to the <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/housing&amp;source=gmail&amp;ust=1584226261197000&amp;usg=AFQjCNGEjbFk37XMLJdURvv5jH_W1-BrdA" href="https://case.edu/housing" target="_blank">University Housing website</a> for more information, including storage and shipping options.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How does the university define “extenuating circumstances” in terms of staying in campus housing? What do I have to do to be able to stay? (updated 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>UPDATE as of 3/13: The university has announced remote learning will continue for the remainder of the semester. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ce60baaa-4296-47d9-96ab-62bcaa8948d7" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-undergraduates-move-out-procedures-between-now-and-5-pm-march-17" title="March 13 Message to Undergraduates: Move-Out Procedures Between Now and 5 p.m. March 17">Move-out instructions for those who can do so between March 13-17</a> were sent the evening of March 13.</p>
+
+<hr /><p>We are strongly recommending that students return to their family homes because of our desire to maintain your health and that of other members of the campus community. Many of our undergraduates live in fairly close quarters, and a significant number of their classes involve sizes and/or spaces where students sit quite near one another (and, in some cases, faculty as well).</p>
+
+<p>As of March 12, the university has moved from a registration process to one requiring <strong>review and approval to stay in university housing</strong>. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="24e06c38-0611-40d3-90b8-1d649a14a521" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-12-message-students-changes-campus-housing-process-during-remote-learning" title="March 12 Message to Students: Changes to On-Campus Housing Process during Remote Learning">See the full communication in the March 12 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I am a student and also work on campus; am I allowed to stay on campus? (updated 3/12/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March 12, <em>student employment or volunteering do <strong>not</strong> constitute a reason to stay on campus</em>. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="24e06c38-0611-40d3-90b8-1d649a14a521" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-12-message-students-changes-campus-housing-process-during-remote-learning" title="March 12 Message to Students: Changes to On-Campus Housing Process during Remote Learning">See the full March 12 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I am a student and conduct/assist with research in a campus lab and—even though it is not learning for which I get credit—I very much want to continue this aspect of my education; am I allowed to stay on campus? (updated 3/12/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March 12, <em>student employment or volunteering do <strong>not</strong> constitute a reason to stay on campus</em>. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="24e06c38-0611-40d3-90b8-1d649a14a521" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-12-message-students-changes-campus-housing-process-during-remote-learning" title="March 12 Message to Students: Changes to On-Campus Housing Process during Remote Learning">See the full March 12 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I did not take books or other class-related items with me when I left for spring break. My family cannot afford to send me to get my things and fly me home. What do I do? (update 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March 13: The university has provided <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ce60baaa-4296-47d9-96ab-62bcaa8948d7" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-undergraduates-move-out-procedures-between-now-and-5-pm-march-17" title="March 13 Message to Undergraduates: Move-Out Procedures Between Now and 5 p.m. March 17">move-out instructions for those able to do so between March 13-17</a>. Details for move-out at a later time will be provided when available.</p>
+
+<p>Refer to the <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/housing&amp;source=gmail&amp;ust=1584226261197000&amp;usg=AFQjCNGEjbFk37XMLJdURvv5jH_W1-BrdA" href="https://case.edu/housing" target="_blank">University Housing website</a> for more information, including storage and shipping options.</p>
+
+<hr /><p>As of March 12: At <a href="https://docs.google.com/forms/d/e/1FAIpQLScV6rztbnQGNF1grIn-XGys8aLkmZEJqEdy-nzy1U3CNXNuxg/viewform" target="_blank">your request</a>, the university will make arrangements to ship <em>limited</em> number of education-related items from campus to your home. If you would like staff to enter your campus residence to collect books, technology and other items <em>needed</em> for your remote coursework, please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLScV6rztbnQGNF1grIn-XGys8aLkmZEJqEdy-nzy1U3CNXNuxg/viewform" target="_blank">this Item Request form</a>.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How likely is it that we will be able to move back before April 6? (updated 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>On March 13, the university announced <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="aec8d1da-a467-4f50-be6a-e7c8b8d622ad" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-campus-remote-education-continue-through-end-semester" title="March 13 Message to Campus: Remote Education to Continue Through the End of the Semester">remote delivery of education would continue</a> through the end of the semester. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ce60baaa-4296-47d9-96ab-62bcaa8948d7" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-undergraduates-move-out-procedures-between-now-and-5-pm-march-17" title="March 13 Message to Undergraduates: Move-Out Procedures Between Now and 5 p.m. March 17">Move-out instructions</a> for those who can do so between March 13-17 also were provided.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I am an international student. Given that classes are going to be delivered remotely until at least April 6, should I just go ahead and return to my home country? (updated 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>UPDATE: As of March 13, the university has <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="aec8d1da-a467-4f50-be6a-e7c8b8d622ad" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-campus-remote-education-continue-through-end-semester" title="March 13 Message to Campus: Remote Education to Continue Through the End of the Semester">moved to remote delivery of education</a> for the remainder of the semester.</p>
+
+<hr /><p>We strongly encourage you to stay if at all possible. Given the rapid spread of COVID-19 and measures that governments have been taking in response, leaving this country now risks the real possibility that you may not be able to return to campus if the university returns to regular academic operations next month. In that context, we recommend that you consult with <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/international/international-student-services&amp;source=gmail&amp;ust=1584049852923000&amp;usg=AFQjCNFZ_aUUvIS3MXFwKda1KLjSqFKi8g" href="https://case.edu/international/international-student-services" target="_blank">International Student Services</a> before making any decision, particularly if you are thinking of leaving the U.S.</p>
+
+<p>As of March 12, the university is only allowing students to stay on campus if they meet one of two criteria:</p>
+
+<ol><li><b>Their home is abroad and they have no options for housing in the U.S. with relatives.</b></li>
+	<li><b>Living somewhere other than on campus poses significant hardship (financial or otherwise) and/or risk to their health and well-being.</b></li>
+</ol></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Will I lose my chance to secure a partial refund or rebate if I am not fully moved out by 5 p.m., March 17?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>No. We recognize that the speed of these changes makes it impossible for everyone to pack all of their belongings within four days. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d5582a6a-a2fe-4baa-a50c-0e56f59e298f" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-14-message-students-questions-about-campus-housing" title="March 14 Message to Students: Questions about Campus Housing">Read the full March 14 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            By what date must I have checked out fully to be compensated for the time I have not lived on-campus?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>That date has not yet been determined, but rest assured the university will provide ample notice. For now, we can say that the deadline will not be before April 6. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d5582a6a-a2fe-4baa-a50c-0e56f59e298f" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-14-message-students-questions-about-campus-housing" title="March 14 Message to Students: Questions about Campus Housing">Read the full March 14 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I cannot secure transportation home before 5 p.m., March 17. Can I stay on campus just a little bit longer?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Yes, but please keep in mind that circumstances can change drastically in the next several days. Among the possibilities are: a ban on domestic air travel; a ban on any interstate travel; or restrictions to homes for all except emergency providers.</p>
+
+<p>If you do decide to stay a few days longer, you still must be off campus no later than noon, Sunday, March 22 (just you, not all of your things).</p>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d5582a6a-a2fe-4baa-a50c-0e56f59e298f" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-14-message-students-questions-about-campus-housing" title="March 14 Message to Students: Questions about Campus Housing">Read the full March 14 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I am a graduate assistant working in Residence Life. Do I have to leave too?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Because so many fewer undergraduates will be living on campus, the number of graduate students likewise can be smaller. If you feel you have an extenuating reason to stay, please contact Residence Life.</p>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d5582a6a-a2fe-4baa-a50c-0e56f59e298f" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-14-message-students-questions-about-campus-housing" title="March 14 Message to Students: Questions about Campus Housing">Read the full March 14 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            My family cannot afford the cost of a ticket to get home—what do I do?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>We realize that this major, mid-semester change creates unexpected expenses that some families are unable to afford. In such instances, we recommend you <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/studentlife/about/dean-students/student-emergency-fund&amp;source=gmail&amp;ust=1584286894038000&amp;usg=AFQjCNHNc45uB_nzXR_82FcAJTIJDAOIhA" href="https://case.edu/studentlife/about/dean-students/student-emergency-fund" target="_blank">apply to the Student Emergency Fund</a> where staff already have been reviewing and acting on requests.</p>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d5582a6a-a2fe-4baa-a50c-0e56f59e298f" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-14-message-students-questions-about-campus-housing" title="March 14 Message to Students: Questions about Campus Housing">Read the full March 14 email to students.</a></p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Remote Delivery of Education</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How will we find out how to participate in our classes? Do we contact our professors? Look on SIS or Canvas?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The university is working with faculty to assist them in adapting their courses for remote delivery. As we noted Tuesday, <b>all classes are canceled Monday and Tuesday, March 16-17</b>, to allow professors additional time to prepare. <b>We would expect you to receive an update in some form (email, on Canvas, etc.) no later than 5 p.m. (EDT) Monday, March 16</b>. (Remember, classes resume Wednesday, March 18.)</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about courses impossible to complete remotely (labs, etc.)?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Faculty are working now to develop alternative approaches to meet the course objectives under these new restrictions, and will communicate directly with students regarding how they will address this issue in their particular classes.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about graduate students’ thesis or dissertation defenses, which are required to take place in person?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>In these unusual circumstances, the School of Graduate Studies will adjust those rules to allow those activities to take place remotely. Deadlines to submit materials for degree certifications also will be revised to accommodate the timeline changes this situation creates.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I have an academic internship, externship, or co-op that is managed through the university (or the university assisted me in getting). Do I continue to report to work between now and April 6?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The answer to this question will vary by the nature of your work and, in some cases, the direction of your employers. Below are some broad guidelines, but we strongly encourage that you also consult with the university faculty or staff member coordinating your program and your employer.</p>
+
+<ol><li><i>If your work involves contact with individuals whom the CDC identifies as <a data-saferedirecturl="https://www.google.com/url?q=https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html&amp;source=gmail&amp;ust=1584049852923000&amp;usg=AFQjCNH4MtKHCAt4BkQO61MJGMDkAuWbYQ" href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html" target="_blank">high risk for complications from contracting COVID-19</a> (for example, nursing home, senior center, dialysis center, etc.):</i><br />
+	We recommend that you consult with your campus program representative and employer about ways that you can contribute remotely.<br />
+	 </li>
+	<li><i>If you work in a public setting that involves a broad range of individuals coming and going (for example, a downtown courthouse, board of elections, city hall, etc.):</i><br />
+	We recommend that you consult with your program representative and employer regarding whether you can contribute remotely. If the nature of your work makes doing so impossible (and you are not personally of higher risk from COVID-19), we recommend that you continue to follow the <a data-saferedirecturl="https://www.google.com/url?q=https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal%3Dhttps%253A%252F%252Fwww.cdc.gov%252Fcoronavirus%252F2019-ncov%252Fabout%252Fprevention-treatment.html&amp;source=gmail&amp;ust=1584049852923000&amp;usg=AFQjCNEi8Sn7OFASE4hb4d3IP-itYCo4Cg" href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html" target="_blank">CDC’s guidance for prevention</a>.<br />
+	 </li>
+	<li><i>If you work in a more traditional office setting and your employer has not recommended remote work:</i><br />
+	If you are not personally of higher risk from COVID-19, we recommend that you continue to follow the <a data-saferedirecturl="https://www.google.com/url?q=https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal%3Dhttps%253A%252F%252Fwww.cdc.gov%252Fcoronavirus%252F2019-ncov%252Fabout%252Fprevention-treatment.html&amp;source=gmail&amp;ust=1584049852923000&amp;usg=AFQjCNEi8Sn7OFASE4hb4d3IP-itYCo4Cg" href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html" target="_blank">CDC’s guidance for prevention</a>.  </li>
+</ol><p>For all other circumstances, consult with your campus program representative and employer for guidance.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Other universities say they’re putting their classes online. What does “remote” mean?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>In some instances (such as certain small seminars), faculty may prefer to have students participate on a conference call rather than use an online option (such as a videoconference). The Office of the Provost and [U]Tech are working closely with professors to provide assistance and answer specific questions; for additional resources and guidance, please visit <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/utech/resources/technology-university-closures-and-working-remotely&amp;source=gmail&amp;ust=1584031691086000&amp;usg=AFQjCNFD3pvwGlDttC6YKdV5_e-Fzrgbjg" href="https://case.edu/utech/resources/technology-university-closures-and-working-remotely" target="_blank">UTech's webpage</a>.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about courses (or parts of courses) that require hands-on participation (for example, labs, performances, etc.)?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The specific adjustments necessary will depend on the course, but among the recommendations offered have been:</p>
+
+<ul><li>For some lab courses, faculty can provide types of results students would have achieved through their experiments and have them conduct the analysis part of the assignment.</li>
+	<li>Performance-based assignments could be completed and observed via videoconference.</li>
+	<li>Faculty can consider other kinds of assignments that align with the course objectives.</li>
+</ul></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            When will we know whether remote delivery will continue past April 6? How will the university make this decision? (update 3/13/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March 13, the university has made the difficult decision to continue remote delivery of education for the remainder of the semester. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="aec8d1da-a467-4f50-be6a-e7c8b8d622ad" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-campus-remote-education-continue-through-end-semester" title="March 13 Message to Campus: Remote Education to Continue Through the End of the Semester">Read the full March 13 communication.</a></p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h3>Remote Work</h3>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            My job&#039;s functions can be done remotely. Will I be able to work from home? (update 3/17/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March the 16, the university is transitioning as many of its operations as possible to remote work. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="9ac8212f-056c-4713-a5a4-3688e2406fe2" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-16-message-facultystaff-remote-work-guidance-and-practices" title="March 16 Message to Faculty/Staff: Remote Work Guidance and Practices">Read the full March 16 communications</a> and <a href="https://case.edu/hr/faqs/covid-19-and-work">check a list of FAQ</a>.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I&#039;m an employee and am worried about my and/or my loved ones&#039; health. Can I start working remotely now? (update 3/17/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March the 16, the university is transitioning as many of its operations as possible to remote work. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="9ac8212f-056c-4713-a5a4-3688e2406fe2" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-16-message-facultystaff-remote-work-guidance-and-practices" title="March 16 Message to Faculty/Staff: Remote Work Guidance and Practices">Read the full March 16 communications</a> and <a href="https://case.edu/hr/faqs/covid-19-and-work">check a list of FAQ</a>.</p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Travel</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Do you have specific guidance for faculty, staff or students returning to campus from countries that have seen outbreaks? (updated 3/4/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Yes. We have directed members of the campus community returning from countries <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">the CDC designates for Level 3 warning</a> to <a href="https://docs.google.com/forms/d/e/1FAIpQLSev_YhMi69Z43pT3cB3CSPUgLhe21Pt-X04VJYaDjiy2U_tbQ/viewform" target="_blank">register at least three days</a> before they come to campus; those with potential risk have been required to self-isolate for 14 days. </p>
+
+<p>CWRU recommends avoiding travel to or through any country with a Level 2 designation from the CDC. We will continue to monitor the risk associated with travel to these areas and anticipate the 14-day self-isolation period may be extended to these locations.</p>
+
+<p>As of March 4: In light of the speed and extent of the spread of COVID-19, <strong>Case Western Reserve now encourages all members of the campus community to reconsider upcoming travel abroad</strong>—even to those countries with zero confirmed cases. (See our March 4 communication below.)</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about visitors to campus—for example, scholars coming from abroad to present lectures? (updated 3/10/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p><em><strong>Anyone</strong></em> who has been in a country designated as Level 3 (as of March 1, China, South Korea, Iran and Italy) within the past 14 days cannot come to campus. Such presentations must be rescheduled or done remotely (e.g. online via videoconference).</p>
+
+<p>As of March 10, the university will prohibit all on-campus meetings, gatherings and/or conferences larger than 25 people. This ban will continue through Monday, April 20.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about faculty, staff and students traveling outside the U.S.? (updated 3/4/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Case Western Reserve has prohibited university-related travel to countries the<a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank"> CDC has designated as Level 3</a> (those who wish to request an exception must <a href="https://docs.google.com/forms/d/1CxynsxZeNME01loblM6tLZHKRi-b7rJvDgFHMPugJAI/viewform?ts=5e32fa95&amp;edit_requested=true">complete this form</a>).</p>
+
+<p>Update as of March 4: In light of the speed and extent of the spread of COVID-19, <strong>Case Western Reserve now encourages all members of the campus community to reconsider upcoming travel abroad</strong>—even to those countries with zero confirmed cases.</p>
+
+<p>In that context, the risks that COVID-19 itself poses, the potential difficulties travelers may face in returning, and the possibility of quarantine upon arrival together require that we provide this guidance. If you do plan to travel internationally for any reason, we again ask that faculty and staff <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbycrWJdF83H80MqP4vKnE16yYLyeCMt_umen5tC_M5RrXyA/viewform">complete this registration form</a> at least three days prior to departure. Students are asked to provide their information on <a href="https://studyabroad.case.edu/index.cfm?FuseAction=Programs.ViewProgram&amp;Program_ID=11293">this form with the Office of Education Abroad</a>.</p>
+
+<p>See full March 4 communication below.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about spring break study abroad programs? (updated 3/2/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of March 2, all university-related spring break study abroad programs are canceled. Please see the March 2 message below for additional information. </p>
+
+<p> </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Are there regulations related to domestic travel? (updated 3/5/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>In light of continuing COVID-19-related developments in the U.S., as of March 5, the university is now requesting that all faculty, staff and students traveling <strong> anywhere outside Northeast Ohio</strong> during spring break register with the university before departure.</p>
+
+<p><a href="https://forms.gle/Ap2voniffHjBhwhA7">Faculty and staff are asked to complete this form</a> regarding spring break travel in the U.S.; <a href="https://forms.gle/UZit2xXyJHA8PgYy9">students are asked to complete this form</a>.</p>
+
+<p>We make this request out of the possibility that, as additional outbreaks arise, travelers to certain domestic areas may be required to self-isolate for 14 days before returning to campus (This requirement now applies to those countries the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">Centers for Disease Control designates as Level 2 or 3</a>).</p>
+
+<p>In addition, we are <strong>prohibiting all university-related domestic travel to cities or counties where government leaders have declared a health emergency—or the CDC has declared high risk</strong>. As of now, the only places that fit that definition are Los Angeles and King counties (Seattle is in the latter); we will provide updates should additional localities join them.</p>
+
+<p>See full communications in the March 5 message below.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Per the university’s direction, I have canceled my work-related trip(s). How will I be reimbursed for the costs involved (registration, hotel, airline and other fees?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Those who paid personally for travel that had to be canceled per the university’s direction will be reimbursed per the university’s usual policies and protocols. Please see Item #7 on <a data-saferedirecturl="https://www.google.com/url?q=https://case.edu/policies/sites/case.edu.policies/files/2018-04/payment032613.pdf&amp;source=gmail&amp;ust=1584031691086000&amp;usg=AFQjCNFUhZwuMEdMl3oz--PfgiXS-dg2og" href="https://case.edu/policies/sites/case.edu.policies/files/2018-04/payment032613.pdf" target="_blank">this online document</a> for more information. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What is the direction for sponsored domestic or international travel?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>As of Wednesday, March 11, there is no sponsored international travel for anyone and no sponsored domestic travel for individuals who engage directly in delivery of health care. Other sponsored domestic travel is strongly discouraged (i.e. it should only occur if it’s absolutely essential).</p>
+
+<p>Keep in mind, this can change at any moment. The university will update you promptly should this direction need to be revised.</p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Information for Parents</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What should my student do if feeling sick? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Students should self-isolate (<a data-entity-substitution="media" data-entity-type="media" data-entity-uuid="f8dbb3cc-abd4-436e-9724-1823cfc456a9" href="https://case.edu/studentlife/healthcounseling/sites/case.edu.healthcounseling/files/2020-05/What%20to%20do%20if%20you%20are%20sick_05052020.pdf" title="What to do if you are sick">please follow these instructions</a>). They should call University Health Services at <a href="tel: 216.368.2450">216.368.2450</a> or their local healthcare provider for additional instructions. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Is University Health Services (UHS) open?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Yes, but for the health and safety of the campus community UHS has transitioned to all phone appointments; in-person visits will take place only after a phone consultation during which the UHS provider determines the need for one. </p>
+
+<p>Students who would like an appointment with Health Services should call <a href="tel: 216.368.2450">216.368.2450</a>. Students also can continue using <a href="http://myhealthconnect.case.edu">myhealthconnect.case.edu</a> to <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="32267a72-7bd7-4243-acc1-01e2a755442f" href="/studentlife/healthcounseling/health-servicesgeneral-clinic/prescription-refill-requests" title="Prescription Refill Requests">request refills</a> and send messages to their providers. </p>
+
+<p>Students with fever, cough, any respiratory symptoms or concerns for COVID-19 exposure, should call <a href="tel: 216.368.2450">216.368.2450</a> for instructions. They should NOT come to Health or Counseling Services, </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How are you handling ill students on campus? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Case Western Reserve has no confirmed cases of COVID-19 on our campus. Students with symptoms are asked to self-isolate in their residence hall or apartment. Students on campus receive meals and supplies for self-monitoring and hygiene, and UHS staff also follow their progress, Students should contact UHS right away if their symptoms worsen. </p>
+
+<p>Students who are on-campus can contact Residence Life at <a href="tel: 216.368.6325">216.368.6325</a> or <a href="mailto:residencelife@case.edu">residencelife@case.edu</a> or Campus Housing at <a href="tel: 216.368.3780">216.368.3780</a> or <a href="mailto:housing@case.edu">housing@case.edu</a> if they need assistance. Students should also contact Health Service at <a href="tel: 216.368.2450">216.368.2450</a> if their symptoms worsen. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Is University Counseling Services open? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>University Counseling Services is providing visits via telephone. Students who would like to speak to a counselor, call <a href="tel: 216.368.5872">216.368.5872</a>. The counselor on call will connect that student with an appropriate clinician based on the student's location and concerns. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What should students do if they think they may have been exposed? 
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Please refer to the <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="4f879762-2b78-49d5-b741-0988081cb676" href="/studentlife/healthcounseling/health-serviceshealth-updates/do-i-need-self-isolate-quarantine-covid-19" title="Do I Need To Self-Isolate or Quarantine">Do I Need to Self-Isolate or Quarantine </a>page for instructions on what to do if your student was exposed. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I hear that someone in my student&#039;s residence hall or on campus was ill- is my student at risk?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>UHS has received similar reports, and has investigated every one. In instances of confirmed or suspected cases, UHS contacts any member of the campus community known to have been in contact with that student. </p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h4>Additional Questions and Guidance</h4>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+          
+      <div class="field field--name-field-accordion-section-ref field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What do I do if I am feeling anxious or overwhelmed?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>If you are a student, you can contact <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="a71055ec-3fc8-47c9-8189-376c76f36873" href="/studentlife/healthcounseling/counseling-services" title="Counseling Services">University Counseling Services</a> at <a href="tel:216.368.5872">216.368.5872</a> (a counselor is available 24/7).</p>
+
+<p>If you are a faculty or staff member, you can contact IMPACT Solutions, a confidential and free counseling and referral program for benefits-eligible employees. To learn more, <a href="https://case.edu/hr/worklife/employee-assistance-worklife-program">visit the CWRU Human Resources website</a>.</p>
+
+<p>In addition, we have a number of tips for managing fears and anxiety around coronavirus. We hope the following information will help you better understand reactions you may have and, if needed, point you to helpful resources.</p>
+
+<ul><li><strong>Contact a counselor. </strong>If you need to speak with a counselor, please call (216) 368-5872 any time.</li>
+	<li><strong>Take care of your mind. </strong>Constant searching, scrolling or consumption of coronavirus news will can make students feel more anxious and afraid. Take breaks from media coverage and use this page for updates rather than checking unreliable sites. </li>
+	<li><strong>Social distancing does not mean social isolation.</strong> Reach out to others and offer support, empathy, information and, if possible, tangible help. Stay connected using technology such as video chat, Zoom group calls, and cellphone texting and conversations. Personal relationships are crucial in maintaining perspective and elevating mood.</li>
+	<li><strong>Increase your feel-good activities. </strong>Whether mindfulness, talking to your friends and family members, going for walks, journaling, or watching Netflix, now is the time to increase positive experiences in your daily schedule. For a quick stress reliever, University Health and Counseling services offers <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="cf07bd67-149c-434d-a329-b871390df625" href="/studentlife/healthcounseling/counseling-services/guided-relaxation-exercises" title="Guided Relaxation Exercises">free guided meditations</a>. </li>
+	<li><strong>Take care of your body. </strong>Eating healthy meals, exercising, getting at least seven hours of sleep a night, and limiting your alcohol consumption can help your immune system. Even while maintaining a safe distance from other people, you can still go outside! Regular exercise can reduce anxiety.</li>
+</ul><p>Additional mental health resources can be found <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="49162807-3258-4241-8db9-82e44c4322bb" href="/studentlife/healthcounseling/health-serviceshealth-updates/mental-health-and-coping-during-covid-19" title="Mental Health Resources">here.</a> </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I am an international student and have family in countries with outbreaks. I am really worried about them—and also worried about whether I will be able to get home after the semester ends. What can I do?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The university has already begin exploring different options for our international students based on potential implications of this outbreak. For now, we encourage you to contact the Office of International Student Services at <a href="mailto:international@case.edu">international@case.edu</a>, call <a href="tel:216.368.2517">216.368.2517</a>, or stop by the office in Tomlinson 143 during regular business hours. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What are the university’s plans should COVID-19 reach Cleveland? (updated 3/19/20)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p style="margin-bottom:11px"><strong>UPDATE: </strong>As of March 13, the university has made the difficult decision to continue remote delivery of education for the remainder of the semester. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="aec8d1da-a467-4f50-be6a-e7c8b8d622ad" href="/studentlife/healthcounseling/health-serviceshealth-updates/march-13-message-campus-remote-education-continue-through-end-semester" title="March 13 Message to Campus: Remote Education to Continue Through the End of the Semester">Read the full March 13 communication.</a></p>
+
+<hr /><p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><b>As of March 10, the university has moved to remote delivery of education for nearly all of our programs.</b> The single <b>exception involves those students participating in clinical activities</b> as part of their academic preparation; in those instances, the <b>deans of the respective schools will provide direct guidance</b> regarding which clinical experiences will continue.</span></span></span></p>
+
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">To allow faculty time to prepare for this transition, <b>all classes are cancelled Monday and Tuesday (March 16-17)</b>. </span></span></span></p>
+
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><b>Remote education will commence</b> <b>Wednesday, March 18. </b>As of this writing, we plan to continue this approach through <b>Monday, April 6</b>. In between, we will closely monitor COVID-19 developments within our region and nationwide, and will communicate any changes to that end date as quickly as possible. </span></span></span></p>
+
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">We are amid the university’s Spring Break. Those who have traveled outside of Cleveland this week are encouraged to return to their homes, as are those now staying in our residence halls. Those who need to retrieve additional items from their on-campus housing before returning home are of course permitted to do so. </span></span></span></p>
+
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">We understand that some of our students will want or need to stay in the residence halls. For those individuals, the university will provide meals, cleaning and maintenance; in addition, health and counseling services will continue, and adult residence life staff will be present and provide some small group activities.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">In addition, effective today the university will <b>prohibit all on-campus meetings, gatherings and/or conferences larger than 25 people. </b>This ban will continue through <b>Monday, April 20. </b>As with remote delivery of education, the university will monitor local and national developments closely and provide updates regarding the length of the direction. </span></span></span></p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            What about extracurricular activities like athletics, Greek Life, USG, etc.?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Consult with the Student Affairs staff member who oversees the area that includes your activity for more information. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            I/my parents want to know about refunds for room and board and/or reduced tuition charges for remote vs. in-person education. What is the university going to do for us?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The university’s first priority remains the health and safety of the campus community. In that context, we wanted to communicate with you and your parents as quickly as possible after the decision to transition to remote instruction. </p>
+
+<p>That said, we recognize that some of these decisions have financial and other implications. Staff are working through all of the applicable laws, regulations and university policies to address these issues and will provide more specific guidance as soon as possible.</p>
+
+<p>Again, we recognize that these changes to the spring semester are disappointing and frustrating. We apologize for all of the difficulties and questions that they are creating for you and your loved ones. We also very much appreciate your patience as we work to provide the most accurate and reliable answers as possible.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Is University Health &amp; Counseling Services Open? (3/31/2020)
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>While CWRU works to protect the health of our campus community, UH&amp;CS is open and here to support our students. </p>
+
+<p>We continue to operate under <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="383c10b5-0252-4224-b1c8-89c3976db614" href="/studentlife/healthcounseling/aboutcontact-us/location-and-hours" title="Location and Hours">normal business hours</a>. </p>
+
+<p><strong>Health Services:</strong> </p>
+
+<p>Health Services is currently offering phone and video visits, with in-person visits at the discretion of Health Service staff. </p>
+
+<ul><li>If you would like an appointment with Health Services, please call <a href="tel: 216.368.2450">(216) 368-2450</a> to speak with a medical professional. </li>
+	<li>You are welcome to continue using <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="efc4fc11-cf66-4358-8ccf-863f95f02f60" href="/studentlife/healthcounseling/myhealthconnect" title="MyHealthConnect">myhealthconnect.case.edu</a> for requesting refills and to send messages to your provider.</li>
+	<li>If you have a fever, cough, any respiratory symptoms or concern for COVID-19 exposure, please call <a href="tel: 216.368.2450">(216) 368-2450 </a>to receive instructions, </li>
+</ul><p><strong>Counseling: </strong></p>
+
+<p>We recognize the anxiety and emotional strain that these circumstances may place on students, as well as the disappointment and sadness that many feel. Our staff are committed to working with students to provide guidance and support around mental health needs. </p>
+
+<p>Students continue to have access to counselors through phone visits, and can: </p>
+
+<ul><li>Connect with a counselor any time by calling <a href="tel: 216.368.5872">(216) 368-5872</a>, regardless of the state in which they are living, for in-the-moment support. If after hours, an on-call counselor will speak with them and they receive a follow-up contact the next business day. </li>
+	<li>Continue ongoing counseling visits if they live in Ohio. Due to states' licensing laws, counselors cannot provide therapy across state lines. That said, university counselors can help students connect with counseling services within their own states. </li>
+</ul><p>Care anytime: </p>
+
+<ul><li>You can call <a href="tel: 216.368.5872">(216) 368-5872</a> to speak with a counselor on-call. </li>
+	<li>You can call <a href="tel: 216.368.2450">(216) 368-2450</a> to speak with a nurse on-call. </li>
+	<li>You can send a non-urgent message through <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="efc4fc11-cf66-4358-8ccf-863f95f02f60" href="/studentlife/healthcounseling/myhealthconnect" title="MyHealthConnect">myhealthconnect.case.edu</a></li>
+</ul></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            How do I request a refill on my prescriptions if I&#039;m not on campus?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>Please refer to our <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="32267a72-7bd7-4243-acc1-01e2a755442f" href="/studentlife/healthcounseling/health-servicesgeneral-clinic/prescription-refill-requests" title="Prescription Refill Requests">Prescription Refill page</a> for information on how to request a refill. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            When can I get my immunizations and titers done?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>We appreciate your patience as we defer routine care for your health and safety at this time. We do not know when routine immunizations and titers will resume. If you need an essential immunization (such as tetanus), please call 216.368.2450.</p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Does the Student Medical Plan cover me outside of Ohio?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><p>The Student Medical Plan provides coverage throughout the United States. Students are encouraged to see Aetna network providers whether in the Cleveland area or elsewhere. A list of providers can by accessed on the <a href="https://www.aetnastudenthealth.com/en/school/474889/index.html" target="_blank">Aetna Student Health website</a>. Students may also print an ID card and review the Plan's coverage and exclusions on this site. Aetna's customer service representatives are available to answer any questions and can be reached at 877.850.6038. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="74c6e102-16ed-4b20-8ed3-e409eb18b191" href="/studentlife/healthcounseling/medical-plan/faqs" title="Frequently Asked Questions">Visit the Medical Plan website for more FAQs</a>. </p>
+</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+          
+            <div class="field field--name-field-accordion-section-title field--type-string field--label-hidden field--item">
+        <p class="h3">
+          <a class="accordion-toggle accordion-toggle-styled collapsed" role="tab" data-toggle="collapse">
+            Where can I find additional resources and information?
+          </a>
+        </p>
+      </div>
+      
+            <div class="field field--name-field-accordion-section-content field--type-text-long field--label-hidden field--item"><ul><li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">The CDC's COVID-19 webpage</a></li>
+	<li><a href="https://www.who.int/health-topics/coronavirus&#10;" target="_blank">The WHO's coronavirus webpage</a></li>
+	<li><a href="https://www.idsociety.org/public-health/Novel-Coronavirus/" target="_blank">The Infection Disease Society of America's coronavirus webpage</a></li>
+	<li><a href="https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/2019-nCoV" target="_blank">The Ohio Department of Health's COVID-19 webpage</a></li>
+</ul></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content paragraph--view-mode--default">
+          
+            <div class="field field--name-field-content field--type-text-with-summary field--label-hidden field--item"><h3>Additional Resources</h3>
+
+<p><a data-entity-substitution="media" data-entity-type="media" data-entity-uuid="7cd6c341-84c2-4c90-bcee-c1eb79292b32" href="https://case.edu/studentlife/healthcounseling/sites/case.edu.healthcounseling/files/2020-01/Novel%20Coronavirus_Fact%20Sheet_01-29-20.pdf" title="2020 Novel Coronavirus Fact Sheet">Novel Coronavirus Fact Sheet</a></p>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+        </div>
+            </div>
+    </div>
+</article>
+
+
+  </div>
+
+              </section>
+
+                </div>
+  </div>
+      <footer aria-label="footer" class="footer container" role="contentinfo">
+        <div class="region region-footer">
+      <section role="region" aria-label="footer sections"  class="views-element-container block block-views block-views-blockfooter-block-footer clearfix" id="block-views-block-footer-block-footer">
+  
+    
+
+      <div block="block-views-block-footer-block-footer" class="form-group"><div class="footer view view-footer view-id-footer view-display-id-block_footer js-view-dom-id-4f3a4c8ea154ed37431dc574882d78bdd9b2165026eb6da615f2464a07984d35">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+
+
+
+<div class="footer__block footer__block--university">
+  <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/cwru-logo-formal.svg" onerror="javascript:this.src='https://dudbm6bcnmy8e.cloudfront.net/cwru/img/logo-footer-default.png'" alt="Case Western Reserve University Logo with Tagline" class="footer__logo" title="Case Western Reserve University">
+  <p>&copy; 2020 <a href="//case.edu/">Case Western Reserve University</a></p>
+  <address>10900 Euclid Ave. Cleveland, Ohio 44106</address>
+  <p>
+    216.368.2000<br />
+    <a href="https://case.edu/utech/departments/information-security/policies/legal-privacy-notice">Legal Notice</a> | <a href="https://case.edu/privacy-statement/index.html">Privacy Policy</a>
+  </p>
+</div>
+
+<div class="footer__block footer__block--department">
+  <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/pin-icon.svg" alt="map marker" class="footer__map-icon hidden-sm hidden-xs">
+  <div class="footer__department-info">
+          <div class="footer__header h3">University Health and Counseling Services</div>
+              <strong>Campus Location:</strong>
+      <p>
+        2145 Adelbert Road
+                <br>
+        Cleveland,
+        OH
+        44106
+      </p>
+    
+          <strong>Mailing Address:</strong>
+      <p>
+        10900 Euclid Ave.
+                <br>
+        Cleveland,
+        OH
+        44106-4901
+      </p>
+              <p>
+        <strong>Phone:</strong> <a href="tel:216.368.2450">216.368.2450</a>
+      </p>
+                                                                                                                                                                                                                                                            <p>
+          <strong>Email:</strong> <a href="mailto:healthservice@case.edu">healthservice@case.edu</a>
+        </p>
+                                                        <p>
+        <a href="mailto:healthservice@case.edu">Site Feedback</a>
+      </p>
+      </div>
+</div>
+
+
+<div class="footer__block footer__block--links">
+  <div class="footer__header h3" tabindex="0">CWRU Links</div>
+  <ul role="menu" class="footer-links">
+    <li role="menuitem">
+      <a href="https://case.edu/admissions/">Apply to CWRU</a>
+    </li>
+    <li role="menuitem">
+      <a href="https://case.edu/give/">Give Now</a>
+    </li>
+    <li role="menuitem">
+      <a href="https://case.edu/visit/">Visit Campus</a>
+    </li>
+    <li role="menuitem">
+      <a href="https://webapps.case.edu/directory/">University Directory</a>
+    </li>
+  </ul>
+</div>
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+
+  </div>
+
+<div class="scroll-to-top">
+  <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x fa-inverse" aria-hidden="true"></i>
+      <i class="fa fa-arrow-up fa-stack-1x" aria-hidden="true"></i>
+  </span>
+</div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/studentlife\/healthcounseling\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1086","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_keyboard":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"user":{"uid":0,"permissionsHash":"909012b44a239aa07a7e40d185864c9071f0d893083d6ca418e9aa8086b27826"}}</script>
+<script src="/studentlife/healthcounseling/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/studentlife/healthcounseling/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/studentlife/healthcounseling/core/assets/vendor/underscore/underscore-min.js?v=1.8.3"></script>
+<script src="/studentlife/healthcounseling/core/assets/vendor/jquery/jquery-extend-3.4.0.js?v=3.2.1"></script>
+<script src="/studentlife/healthcounseling/core/misc/drupalSettingsLoader.js?v=8.7.12"></script>
+<script src="/studentlife/healthcounseling/core/misc/drupal.js?v=8.7.12"></script>
+<script src="/studentlife/healthcounseling/core/misc/drupal.init.js?v=8.7.12"></script>
+<script src="/studentlife/healthcounseling/themes/contrib/bootstrap/js/drupal.bootstrap.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/contrib/bootstrap/js/attributes.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/contrib/bootstrap/js/theme.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/js/app.js?v=1.12"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/affix.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/alert.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/button.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/carousel.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/collapse.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/dropdown.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/modal.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/tooltip.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/popover.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/scrollspy.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/tab.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/custom/crew/bootstrap/assets/javascripts/bootstrap/transition.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/contrib/bootstrap/js/popover.js?qc555w"></script>
+<script src="/studentlife/healthcounseling/themes/contrib/bootstrap/js/tooltip.js?qc555w"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ff6859dcb2","applicationID":"56254627","transactionName":"bwEGZhNQWhJWUUYKDVZLJVEVWFsPGHZAFhJZCDhcDlVRPXRdXBcQVwgIVxNteg5TV2QKB08nC1wVQ1sNW1dATlxODQFF","queueTime":0,"applicationTime":1503,"atts":"Q0YFEFtKSRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

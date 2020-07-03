@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<link rel="manifest" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/manifest.json">
+	<script>
+		// registering service worker
+		if ('serviceWorker' in navigator) {  
+			navigator.serviceWorker.register('https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/sw.js', {scope: "/"})
+			.then(function (registration) {    // Registration was successful                 
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);  
+			})
+			.catch(function (err) {    // registration failed :(           
+				console.log('ServiceWorker registration failed: ', err);  
+			});
+		}
+	</script>
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);if (typeof console == "undefined") { this.console = {log: function() {}};};var isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Transportation and Parking - COVID-19 Recovery | Colorado State University</title>
+		<link rel="shortcut icon" type="image/x-icon" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" id="squeezr" data-breakpoints-images="480,760,960,1024,1440,2000">
+	//*/squeezr code
+	(function(e){if(navigator.cookieEnabled){var t="squeezr",n=";path=/",r=document,i=e.innerWidth,s=screen.width,o=screen.height;function u(){for(var e=0,t=r.cookie.split(";"),n=/^\ssqueezr\.([^=]+)=(.*?)\s*$/,i={},s;e<t.length;++e){if(s=t[e].match(n)){i[s[1]]=s[2]}}return i}function a(e,t){e=Math.max(parseFloat(e||1,10),.01);var n=r.documentElement,s=function(){var e=r.createElement("div"),t={width:"1px",height:"1px",display:"inline-block"};for(var n in t){e.style[n]=t[n]}return e},o=r.createElement("div"),u=o.appendChild(s());o.appendChild(s());n.appendChild(o);var a=o.clientHeight,f=Math.floor(i/a),l=f/2,c=0,h=[f];while(c++<1e3&&(Math.abs(l)>e||o.clientHeight>a)){f+=l;u.style.width=f+"em";l/=(o.clientHeight>a?1:-1)*(l>0?-2:2);h.push(f)}n.removeChild(o);return f}function f(e,t){for(var n=0,r=(e||"").split(","),i=/(\d+(?:\.\d+)?)(px)?/i,s=[],o;n<r.length;++n){if(o=r[n].match(i)){s.push(parseFloat(o[1],10))}}return s.sort(function(e,t){return e-t})}function l(){return"devicePixelRatio"in e?e.devicePixelRatio:"deviceXDPI"in e&&"logicalXDPI"in e?e.deviceXDPI/e.logicalXDPI:1}function c(e,t){return t*Math.round(10*e/t)/10}for(var h=0,p=r.getElementsByTagName("script");h<p.length;++h){if(p[h].id==t){var d=1,v="-";r.cookie=t+".screen="+s+"x"+o+"@"+d+n;if(!p[h].getAttribute("data-disable-images")){var m=f(p[h].getAttribute("data-breakpoints-images")),g=Math.max(s,o),y=null;do{if(g>(y=m.pop())){break}v=y*d+"px"}while(m.length)}r.cookie=t+".images="+v+n;var b=u(),w=b.css||"-";if((!("css"in b)||!b.css||b.css=="-")&&!p[h].getAttribute("data-disable-css")){var E=i/a(parseFloat(p[h].getAttribute("data-em-precision")||.5,10)/100);w=s+"x"+o+"@"+Math.round(E*10)/10}r.cookie=t+".css="+w+n;break}}}})(this)
+	//*/
+	</script>
+	
+	<link rel="https://static.colostate.edu/logo/reslogo-v2/assets/img/csu-responsive-symbol.min.svg" as="image" crossorigin="crossorigin"/>
+
+	<style>
+		/*.brandbar {height:64px;}*/
+		.vc_single_image-wrapper {display:inline !important;}
+	</style>
+	<style id="critical">
+	.container{position:relative;margin-left:auto;margin-right:auto;padding-right:16px;padding-left:16px}@media (min-width: 769px){.container{width:736px;max-width:100%}}@media (min-width: 993px){.container{width:960px;max-width:100%}}@media (min-width: 1201px){.container{width:1168px;max-width:100%}}@media (min-width: 1401px){.container{width:1368px;max-width:100%}}.container-fluid{position:relative;margin-left:auto;margin-right:auto;padding-right:16px;padding-left:16px}.row{display:flex;flex-wrap:wrap;margin-right:-16px;margin-left:-16px}.no-gutters{margin-right:0;margin-left:0}.no-gutters>.col,.no-gutters>[class*="col-"]{padding-right:0;padding-left:0}:root{--scrollwidth: 0px}*,*:before,*:after{box-sizing:border-box}html{overflow-x:hidden}body{margin:0;color:#6c6c6c;background-color:#F4F4F4;font-family:sans-serif}.no-js body{font-family:prox-regular,sans-serif}.fonts-loaded body{font-family:prox-regular,sans-serif}.hide{display:none}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}h1,h2,h3,h4,h5,h6,ul,ol,dl,blockquote,p,address,table,fieldset,figure,pre{margin-top:0;margin-bottom:1.8rem}main.main li ul,main.main li ol{margin-bottom:0}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:sans-serif;font-weight:300;line-height:1.1;color:#196F43}.no-js h1,.no-js h2,.no-js h3,.no-js h4,.no-js h5,.no-js h6,.no-js .h1,.no-js .h2,.no-js .h3,.no-js .h4,.no-js .h5,.no-js .h6{font-family:"Lato",sans-serif}.fonts-loaded h1,.fonts-loaded h2,.fonts-loaded h3,.fonts-loaded h4,.fonts-loaded h5,.fonts-loaded h6,.fonts-loaded .h1,.fonts-loaded .h2,.fonts-loaded .h3,.fonts-loaded .h4,.fonts-loaded .h5,.fonts-loaded .h6{font-family:"Lato",sans-serif}a{color:#2c723f}a:hover{color:#bab34d}main.main.col-sm-12>.page-header:first-child,main.main.col-sm-8,aside>div.sidebar-content{padding-top:15px}header#mainheader{position:relative;z-index:1}div#maincontent{position:relative;z-index:0}.nav-component{min-height:50px;background:#1E4D2B;width:100%}.nav-container{margin:0 auto;position:relative;display:flex;justify-content:space-between;flex-wrap:wrap}.nav-container.reverse{flex-direction:row-reverse}@media (min-width: 768px){.nav-container{flex-wrap:initial}}.nav-brand{line-height:50px;text-transform:uppercase;font-size:1.4em;margin-right:16px;margin-left:16px;order:1}.nav-brand a{color:#9dc5b4;text-decoration:none}@media (min-width: 768px){.nav-brand{margin-left:0}}body.touching .nav-container a:hover:before,body.touching .nav-container a:hover:after{content:initial !important}.nav-container .generated-link{display:none}@media screen and (min-width: 768px) and (-ms-high-contrast: active), (min-width: 768px) and (-ms-high-contrast: none){.nav-container ul ul{display:block !important;height:0;overflow:hidden !important}.nav-container ul ul.active{overflow:visible !important;height:auto !important}.nav-container ul ul li{display:block !important}}@media (min-width: 768px){.nav-container .generated-link{display:initial}}@media screen and (min-width: 768px) and (-ms-high-contrast: active), (min-width: 768px) and (-ms-high-contrast: none){.nav-container .generated-link{display:block}}.nav-container b.dropdown-icon{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.nav-container ul li a{white-space:nowrap}.nav-container nav{order:3;width:100%}.nav-container nav>ul{display:flex;flex-direction:column;position:relative;max-height:0px;overflow:hidden}.nav-container nav>ul li a{padding:15px;line-height:20px}.nav-container nav>ul li ul li a{padding-left:30px}@media (max-width: 767px){.nav-container nav>ul.active{display:flex;max-height:800px;overflow:auto;height:auto}}.nav-container nav ul{list-style-type:none;margin:0;padding:0;transition:all 0.5s cubic-bezier(0.6, 0.07, 0.28, 0.98)}.nav-container nav ul.inactive{transition:none}.nav-container nav ul li{position:relative}.nav-container nav ul li a{display:block;padding:0 20px;line-height:50px;background:#1E4D2B;color:#9dc5b4;text-decoration:none}.nav-container nav ul li a:hover{background:transparent;color:#ddebe5}.nav-container nav ul li ul.active{background:#fff;display:block}.nav-container nav ul li ul li{width:100%}.nav-container nav ul li ul a{padding:15px;line-height:20px}@media (min-width: 768px){.nav-container nav{width:auto}.nav-container nav ul{flex-direction:row;flex-wrap:wrap;max-height:initial;overflow:initial}}@media screen and (min-width: 768px) and (-ms-high-contrast: active), (min-width: 768px) and (-ms-high-contrast: none){.nav-container nav ul{max-height:auto;overflow:visible}}.nav-dropdown{z-index:1;position:static}@media (min-width: 768px){.nav-dropdown{display:none;position:absolute;box-shadow:0 3px 12px rgba(0,0,0,0.15)}.nav-dropdown li{min-width:190px}}.nav-toggle-container{display:flex;align-items:center;justify-content:center;background:#1E4D2B;height:50px;width:50px;order:2}.nav-toggle-container:first-child{margin-left:auto}@media (min-width: 768px){.nav-toggle-container{display:none}}.c-hamburger{display:block;position:relative;overflow:hidden;margin:0;padding:0;width:40px;height:32px;font-size:0;text-indent:-9999px;box-shadow:none;border-radius:0;border:none;cursor:pointer;transition:background 0.3s;background:rgba(255,255,255,0.15);border-radius:3px}.c-hamburger span{cursor:pointer;display:block;position:absolute;top:calc(50% - 2px);left:0px;right:0px;height:2px;background:white;transition:background 0s 0.3s;margin:1px 6px}.c-hamburger span:before,.c-hamburger span:after{position:absolute;display:block;left:0;width:100%;height:2px;background-color:white;content:"";transition-duration:0.3s, 0.3s;transition-delay:0.3s, 0s}.c-hamburger span:before{transition-property:top, transform;top:calc(-400% + 1px)}.c-hamburger span:after{transition-property:bottom, transform;bottom:calc(-400% + 1px)}.nav-toggle.active span{background-color:transparent}.nav-toggle.active span:before{top:0;transform:rotate(45deg);transition-delay:0s, 0.3s}.nav-toggle.active span:after{bottom:0;transform:rotate(-45deg);transition-delay:0s, 0.3s}.nav-container{font-weight:300}.nav-container nav ul.nav-dropdown li a{font-weight:normal;font-size:.9em;background:white;color:#1E4D2B}.nav-container nav ul.nav-dropdown li a:hover{color:#2c723f;background-color:#eee}body.mobile .nav-container nav ul li:not(:last-child) a{border-bottom:1px solid #255f35}body.mobile .nav-container nav>ul li a{background-color:#2c723f}body.mobile .nav-container nav ul.nav-dropdown a{color:#ddebe5;background-color:#3b9654;font:inherit;position:relative}body.mobile .nav-container nav ul.nav-dropdown a:hover:after,body.mobile .nav-container nav ul.nav-dropdown a:focus:after{content:'';position:absolute;left:8px;right:8px;display:block;height:2px;border-bottom:2px solid #C8C372;top:80%}body.mobile .nav-container nav ul li.nav-dropdown-item b{display:none}.nav-container nav>ul>li{font-size:1.1em}.nav-container nav>ul>li>a{position:relative}.nav-container nav>ul>li>a:hover:after,.nav-container nav>ul>li>a:focus:after{content:'';position:absolute;left:8px;right:8px;display:block;height:2px;border-bottom:2px solid #C8C372;top:80%}.input-group{display:flex}.topbar{width:auto;background:#284c3a;min-height:35px}.topbar .search{width:200px;display:inline-block;float:left}.topbar .search form{padding:0px;margin:0px}.topbar .search form label{display:none}.topbar .search form .form-control,.topbar .search form .btn{height:35px;border:0px}.topbar .search form .form-control{background:rgba(156,156,156,0.3);color:#e8e8e8 !important;font-size:12px}.topbar .search form .btn{width:39px;background:#4c695a;color:rgba(255,255,255,0.3);font-size:22px;border-right:1px solid #102f1f;border-left:1px solid #102f1f;padding:0px}.topbar .search form .btn:hover{color:white;background:#4c695a}.titlebar{background:#143828;padding:10px 0px;min-height:74px}.titlebar .row{position:relative}.title{float:left}@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){.brandbar svg{height:50px !important}}.brandbar{background:#1E4D2B;min-height:68px}.brandbar .row{display:flex;flex-wrap:wrap;justify-content:space-between}.brandbar .row:before,.brandbar .row:after{content:none}.brandbar .row div.signature{padding-left:5px;padding-top:5px;padding-bottom:5px;width:auto}@media (max-width: 767px){.brandbar .row div.signature{width:100%;flex:initial}}.brandbar div.social{display:flex}@media (max-width: 767px){.brandbar div.social{flex:initial;height:0px;position:relative;z-index:450}.brandbar div.social ul{transform:scale(0.7);transform-origin:left top;position:relative;left:10px;top:12px}}.brandbar div.social p{font-family:sans-serif}.no-js .brandbar div.social p{font-family:factoria-book,sans-serif}.fonts-loaded .brandbar div.social p{font-family:factoria-book,sans-serif}.brandbar div.social ul{display:flex;list-style-type:none;padding:0px;margin:0px}.brandbar div.social ul li{padding:0px;margin:0px;display:block;height:35px;width:35px;border-right:1px solid #102f1f;margin-right:1px}.brandbar div.social ul li a{display:block;text-align:center;line-height:35px;font-size:1.5em;width:35px;background:rgba(255,255,255,0.2);color:rgba(255,255,255,0.4)}.brandbar div.social ul li a:hover{color:white;background:rgba(255,255,255,0.4)}.brandbar div.subhead{background:#286739}.brandbar div.subhead p{margin-left:-9px;margin-top:0px;padding-top:2px;margin-bottom:0px;color:#b9dbc2;font-family:sans-serif;font-weight:300;letter-spacing:1.5px}.no-js .brandbar div.subhead p{font-family:"factoria-book",sans-serif}.fonts-loaded .brandbar div.subhead p{font-family:"factoria-book",sans-serif}.brandbar div.subhead p:empty{display:none}.top-navbar{background:#1E4D2B}div.azList{height:35px;background:#C8C372}div.azList .row{position:relative}div.azList p{float:left;margin:0px;display:block;color:white;line-height:35px;padding-right:10px;font-size:1.1em;font-weight:300}div.azList ul{list-style:none;margin:0px;padding:0px;float:left;display:block;letter-spacing:0px;word-spacing:-3px;white-space:nowrap}div.azList ul li{display:inline-block;margin:0px;text-transform:lowercase;font-size:1.1em;font-weight:300}div.azList a{color:#1E4D2B;text-decoration:none;position:relative;line-height:35px;display:inline-block;height:35px;padding:0px 6px}div.azList a:hover{top:-5px;position:relative;z-index:1}div.azList a:hover:after{content:'';display:block;background:rgba(116,112,45,0.6);position:absolute;top:5px;left:0px;bottom:-5px;right:0px;z-index:-1}div.azList .search{position:absolute;top:0px;right:0px;width:250px}@media (max-width: 991px){div.azList .search{width:140px}}div.azList .search label{display:none}div.azList .search .form-control{background:#dddaa9;color:#868134;font-size:12px;border-color:#99933b;border-width:0px 1px;width:100%;padding-left:10px}div.azList .search .btn{display:block;background-color:#bab34d;border:none;border:none;padding:0px;height:35px;width:40px;color:#1E4D2B}div.azList .search .btn:hover{background-color:#aba543;z-index:auto}@media (max-width: 767px){div.azList{display:none}}.sidebar .dropdown-menu{position:static;top:initial;display:block;float:none;min-width:auto;padding:0;margin:0;background-color:transparent;border:none;box-shadow:none}.sidebar .dropdown-menu a{padding-left:45px}.sidebar .dropdown-menu a:hover{color:#aa974d}.sidebar .dropdown-menu .active a{background-color:inherit;color:inherit}.sidebar .dropdown-menu .active a:hover{color:#aa974d;background:rgba(0,0,0,0.1)}.sidebar.sidebar-left .sidebar-content:after{left:initial;right:-16px}.sidebar-content{margin-bottom:15px;position:relative}@media (min-width: 768px){.sidebar-content:after{content:'';display:block;position:absolute;width:0px;left:-16px;top:10px;bottom:0px;border-left:1px solid rgba(59,150,84,0.7);z-index:0}.sidebar-content section:first-child h3{padding-top:0px}}.sidebar-content h3{margin:0px;padding:10px 5px 10px 5px;font-size:1.6em;font-family:sans-serif;letter-spacing:.05em}.no-js .sidebar-content h3{font-family:factoria-book,sans-serif}.fonts-loaded .sidebar-content h3{font-family:factoria-book,sans-serif}.sidebar-content ul{list-style:none;margin:0px;padding:0px}.sidebar-content ul.nav-dropdown{box-shadow:none;display:block;position:static;padding-left:20px}.sidebar-content li{margin:0px;padding:0px}.sidebar-content li a{padding:5px 10px 5px 15px;text-decoration:none;display:block;transition:background .3s}.sidebar-content li a:hover{background:rgba(0,0,0,0.1);text-decoration:none}@media (min-width: 769px){main.main,aside.sidebar{padding-right:16px;padding-left:16px}main.main.col-sm-8{flex:0 0 66.66667%;max-width:66.66667%}main.main.col-sm-8.sidebar-left{order:2}aside.sidebar.col-sm-4{flex:0 0 33.33333%;max-width:33.33333%}aside.sidebar.col-sm-4.sidebar-left{order:1}}@media (min-width: 1401px){aside.sidebar.col-sm-4{flex:0 0 28%;max-width:28%}main.main.col-sm-8{flex:0 0 72%;max-width:72%}}[class*="vc_col-"]{padding-left:15px;padding-right:15px}.vc_row{margin-left:-15px;margin-right:-15px}.elementor-section-stretched{margin-left:calc(0px - (50vw - 50%) + (var(--scrollwidth) / 2));margin-right:calc(0px - (50vw - 50%) + (var(--scrollwidth) / 2));width:calc(100vw - var(--scrollwidth)) !important}#BrandLogo{display:inline-flex;line-height:0}#BrandLogo .fontLarge{font-size:19px}div#responsiveLogo{box-sizing:border-box;display:inherit;align-self:stretch;align-items:center;width:124px;min-width:124px}div#responsiveLogo *{box-sizing:border-box}@media screen and (min-width: 600px){div#responsiveLogo{width:187px;min-width:187px}}@media screen and (min-width: 800px){div#responsiveLogo{width:384px;min-width:384px}}div#responsiveLogo h1{padding:5px 0px 5px 0px;margin:0;display:block;overflow-x:hidden;width:100%}div#responsiveLogo [id=svgsignature]{height:45px;text-align:center;display:block}#responsiveLogoSubsytem{display:inherit;align-self:stretch;align-items:center;margin:8px 0;padding-left:32px;position:relative}#responsiveLogoSubsytem:before{content:'';display:block;position:absolute;top:0;left:0;bottom:0;right:0;border-left:2px solid white;margin-left:15px;z-index:0}#responsiveLogoSubsytem p,#responsiveLogoSubsytem h2{font-family:'prox-light', sans-serif !important;color:white !important;margin:0px;letter-spacing:.11em;line-height:1.1em;font-size:14px;font-weight:100;text-transform:uppercase;position:relative;z-index:1}#responsiveLogoSubsytem p a,#responsiveLogoSubsytem h2 a{color:inherit;text-decoration:none}.notification-bar__message{background:#323c34;padding:.25rem;border:1px solid rgba(255,255,255,0.2);border-width:1px 0px;display:flex}.notification-bar__message a{color:#ffcc4d;text-decoration:underline}.notification-bar__message a:hover{color:#fff0c9}
+/*# sourceMappingURL=critical.css.map */
+	</style>
+	<noscript><style>body:before {display:none;}</style></noscript>
+	<style id="non-critical"></style>
+	<style>
+.update-alert {
+    background:RGBa(178, 34, 34, .2);
+    padding:1rem 2rem;
+    border:2px solid RGBa(178, 34, 34, 1);
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    color:#3d1a06;
+}
+.latest-information {
+    background:rgba(0,0,0,.1);
+    padding:1rem;
+    border:1px solid darkgreen ;
+}
+
+.status h3 {
+    font-weight: bold;
+    color:inherit;
+    font-size: 1.3rem; text-align: center; margin-bottom: 1.5rem;
+}
+.status {
+    background:#cbe5e5;
+    border:solid #113b4c 2px;
+    padding:2rem;
+    color:#113b4c;
+    /*color:white;*/
+}
+</style>	<!-- wpbuffer start -->
+	<!-- This site is optimized with the Yoast SEO plugin v14.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Transportation and Parking - COVID-19 Recovery</title>
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://covidrecovery.colostate.edu/transportation-and-parking/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Transportation and Parking - COVID-19 Recovery" />
+	<meta property="og:description" content="Parking and Transportation Services provides information about the impact of COVID-19 precautions on parking and transportation. Starting July 1, Colorado State University Parking and Transportation Services will resume paid parking and full enforcement on main and south campus. Valid CSU &hellip;" />
+	<meta property="og:url" content="https://covidrecovery.colostate.edu/transportation-and-parking/" />
+	<meta property="og:site_name" content="COVID-19 Recovery" />
+	<meta property="article:modified_time" content="2020-06-16T18:44:26+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://covidrecovery.colostate.edu/#website","url":"https://covidrecovery.colostate.edu/","name":"COVID-19 Recovery","description":"Just another Athena Multisites Sites site","potentialAction":[{"@type":"SearchAction","target":"https://covidrecovery.colostate.edu/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://covidrecovery.colostate.edu/transportation-and-parking/#webpage","url":"https://covidrecovery.colostate.edu/transportation-and-parking/","name":"Transportation and Parking - COVID-19 Recovery","isPartOf":{"@id":"https://covidrecovery.colostate.edu/#website"},"datePublished":"2020-05-22T18:42:24+00:00","dateModified":"2020-06-16T18:44:26+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://covidrecovery.colostate.edu/transportation-and-parking/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//static.colostate.edu' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript/defer">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/covidrecovery.colostate.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=2cd0570649235b90f6fe4ff0c2aec4ac"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="preload" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/style.css?ver=1.0.3" as="style">
+<link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/style.css?ver=1.0.3" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/style.css?ver=1.0.3" media="all">
+</noscript><link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic" media="all">
+</noscript><link rel="preload" href="https://static.colostate.edu/fonts/factoria/factoria.css" as="style">
+<link rel="stylesheet" href="https://static.colostate.edu/fonts/factoria/factoria.css" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://static.colostate.edu/fonts/factoria/factoria.css" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/vc-overrides.css?ver=1.0.2" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/vc-overrides.css?ver=1.0.2" media="all">
+</noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css?ver=2cd0570649235b90f6fe4ff0c2aec4ac" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css?ver=2cd0570649235b90f6fe4ff0c2aec4ac" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-includes/css/dist/block-library/style.min.css?ver=2cd0570649235b90f6fe4ff0c2aec4ac" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-includes/css/dist/block-library/style.min.css?ver=2cd0570649235b90f6fe4ff0c2aec4ac" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/elementor-overrides.css?ver=1.0.0" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/css/elementor-overrides.css?ver=1.0.0" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.13" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.13" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/custom-frontend.min.css?ver=1593096887" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/custom-frontend.min.css?ver=1593096887" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/custom-pro-frontend.min.css?ver=1593096887" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/custom-pro-frontend.min.css?ver=1593096887" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/ultimate-elementor/assets/min-css/uael-frontend.min.css?ver=1.23.1" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/plugins/ultimate-elementor/assets/min-css/uael-frontend.min.css?ver=1.23.1" media="all">
+</noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/global.css?ver=1593096887" media="print" onload="this.media=(('media' in this.dataset) ? this.dataset.media : 'all')">
+<noscript><link rel="stylesheet" href="https://covidrecovery.colostate.edu/wp-content/uploads/sites/28/elementor/css/global.css?ver=1593096887" media="all">
+</noscript><script type="text/javascript">
+/* <![CDATA[ */
+var uael_script = {"post_loader":"https:\/\/covidrecovery.colostate.edu\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/post-loader.gif","url":"https:\/\/covidrecovery.colostate.edu\/wp-admin\/admin-ajax.php","search_str":"Search:","table_not_found_str":"No matching records found","table_length_string":"Show _MENU_ Entries","uael_particles_url":"https:\/\/covidrecovery.colostate.edu\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js","particles_url":"https:\/\/covidrecovery.colostate.edu\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js"};
+var uael = {"ajax_url":"https:\/\/covidrecovery.colostate.edu\/wp-admin\/admin-ajax.php"};
+var uaelRegistration = {"invalid_mail":"Enter valid Email!","pass_unmatch":"The specified password do not match!","required":"This Field is required!","form_nonce":"53c2bae1e2","incorrect_password":"Error: The Password you have entered is incorrect.","invalid_username":"Unknown username. Check again or try your email address.","invalid_email":"Unknown email address. Check again or try your username."};
+/* ]]> */
+</script>
+<script type='text/javascript' defer src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js?ver=3.1.1'></script>
+<script type='text/javascript' defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js?ver=3.0.0'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/js/vendor/modernizr-2.7.0.min.js'></script>
+<link rel='https://api.w.org/' href='https://covidrecovery.colostate.edu/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://covidrecovery.colostate.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovidrecovery.colostate.edu%2Ftransportation-and-parking%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://covidrecovery.colostate.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovidrecovery.colostate.edu%2Ftransportation-and-parking%2F&#038;format=xml" />
+<!-- wpbuffer end -->	<!-- end wp-head -->
+
+	</head>
+
+<body class="page page-id-46 transportation-and-parking sidebar-primary fonts-loaded blog-layout-img-small elementor-default elementor-kit-11 elementor-page elementor-page-46">
+<a class="sr-only" href="#maincontent">Skip to main content</a>
+
+  <header id="mainheader" class="banner navbar navbar-default navbar-static-top navbar-main" role="banner">
+      
+  <div class="brandbar">
+  <div class="container" style="position: relative;">
+  	<div class="row">
+      <div class="signature">
+<!-- logo start -->
+<section id="BrandLogo" style="height:55px; overflow:hidden"><div id="responsiveLogo"><h1><a href="https://www.colostate.edu"><img src="https://static.colostate.edu/logo/reslogo-v2/assets/img/csu-responsive-symbol.min.svg" type="image/svg+xml" id="svgsignature" style="width:100%;" alt="Colorado State University" /></a></h1></div><div id="responsiveLogoSubsytem">
+
+<!-- ⚠️  Change your link, and secondary identifier name here  ⚠️ -->
+<h2 class="fontSmall"><a href="https://covidrecovery.colostate.edu">COVID-19 Recovery</a></h2>
+<!-- <h2 class="fontSmall"><a href="http://cvmbs.colostate.edu">College of Business</a></h2> -->
+
+</div></section>
+<!-- logo end -->
+
+</div>      <div class="social">
+        <ul>
+        <!--<li class="twitter"><a href="https://twitter.com/admissionscsu"><i class="fa fa-twitter"></i></a></li>-->
+                <!--
+        <li class="twitter"><a href="https://twitter.com/admissionscsu"><i class="fa fa-twitter"></i></a></li>
+        <li class="instagram"><a href="http://instagram.com/admissionscsu"><i class="fa fa-instagram"></i></a></li>
+        <li class="facebook"><a href="https://www.facebook.com/coloradostateuniversityadmissions"><i class="fa fa-facebook"></i></a></li>
+        <li class="googleplus"><a href="https://plus.google.com/b/107038740181719294582/107038740181719294582/posts"><i class="fa fa-google-plus"></i></a></li>
+        -->
+        </ul>
+      </div>
+  	</div>
+  </div>
+  </div>
+<div class="top-navbar">
+  <div class="container">
+    <div class="row">
+
+      <section class="nav-component">
+        <div class="nav-container">
+          <!-- <div class="nav-brand">
+            <a href="#">Logo</a>
+          </div> -->
+                      <div class="nav-toggle-container">
+              <!-- <a id="nav-toggle" href="#"><span></span></a> -->
+              <a href="#" class="nav-toggle c-hamburger">
+                <span>hamburger</span>
+              </a>
+            </div>
+                       <nav class="top-nav scrollbar">
+            <ul id="menu-primary" class="nav-list"><li class="menu-fall-2020"><a href="https://covidrecovery.colostate.edu/fall-2020/">Fall 2020</a></li>
+<li class="nav-dropdown-item menu-road-to-recovery"><a class="dropdown-toggle"  href="https://covidrecovery.colostate.edu/road-to-recovery/">Road to Recovery <b class="dropdown-icon"></b></a>
+<ul class="nav-dropdown">
+	<li class="menu-recovery-plan-priorities"><a href="https://covidrecovery.colostate.edu/recovery-plan-priorities/">Recovery Plan Priorities</a></li>
+	<li class="menu-recovery-planning-scenarios"><a href="https://covidrecovery.colostate.edu/recovery-planning-scenarios/">Recovery Planning Scenarios</a></li>
+	<li class="menu-recovery-planning-process"><a href="https://covidrecovery.colostate.edu/recovery-planning-process/">Recovery Planning Process</a></li>
+	<li class="menu-recovery-planning-timeline"><a href="https://covidrecovery.colostate.edu/recovery-planning-timeline/">Recovery Planning Timeline</a></li>
+	<li class="menu-recovery-planning-town-halls"><a href="https://covidrecovery.colostate.edu/recovery-planning-town-halls/">Recovery Planning Town Halls</a></li>
+</ul>
+</li>
+<li class="nav-dropdown-item menu-staying-healthy"><a class="dropdown-toggle"  href="https://covidrecovery.colostate.edu/staying-healthy/">Staying Healthy <b class="dropdown-icon"></b></a>
+<ul class="nav-dropdown">
+	<li class="menu-pre-semester-public-health-precautions"><a href="https://covidrecovery.colostate.edu/pre-semester-public-health-precautions/">Pre-semester public health precautions</a></li>
+	<li class="menu-public-health-precautions-during-the-semester"><a href="https://covidrecovery.colostate.edu/public-health-precautions-during-the-semester/">Public health precautions during the semester</a></li>
+	<li class="menu-covid-testing"><a href="https://covidrecovery.colostate.edu/covid-testing/">COVID testing</a></li>
+	<li class="menu-contact-tracing"><a href="https://covidrecovery.colostate.edu/contact-tracing/">Contact tracing</a></li>
+	<li class="menu-how-to-guide"><a href="https://covidrecovery.colostate.edu/how-to-guide/">How-to guide</a></li>
+	<li class="menu-health-and-well-being"><a href="https://covidrecovery.colostate.edu/health-and-well-being/">Health and well-being</a></li>
+</ul>
+</li>
+<li class="nav-dropdown-item menu-living-and-learning"><a class="dropdown-toggle"  href="https://covidrecovery.colostate.edu/living-and-learning/">Living and Learning <b class="dropdown-icon"></b></a>
+<ul class="nav-dropdown">
+	<li class="menu-housing-and-university-life-activities"><a href="https://covidrecovery.colostate.edu/housing-and-university-life/">Housing and university life activities</a></li>
+	<li class="menu-learning-and-academic-interactions"><a href="https://covidrecovery.colostate.edu/learning-and-academic-interactions/">Learning and academic interactions</a></li>
+	<li class="menu-addressing-exposure-and-illness"><a href="https://covidrecovery.colostate.edu/addressing-exposure-and-illness/">Addressing exposure and illness</a></li>
+</ul>
+</li>
+<li class="active menu-transportation-and-parking"><a href="https://covidrecovery.colostate.edu/transportation-and-parking/" aria-current="page">Transportation and Parking</a></li>
+<li class="menu-university-services"><a href="https://covidrecovery.colostate.edu/university-services/">University Services</a></li>
+<li class="menu-return-to-campus"><a href="https://covidrecovery.colostate.edu/return-to-campus/">Return to Campus</a></li>
+<li class="menu-daily-symptom-checker"><a href="https://covidrecovery.colostate.edu/daily-symptom-checker/">Daily Symptom Checker</a></li>
+<li class="nav-dropdown-item menu-resources"><a class="dropdown-toggle"  href="#">Resources <b class="dropdown-icon"></b></a>
+<ul class="nav-dropdown">
+	<li class="menu-covid-19-university-communications"><a href="https://covidrecovery.colostate.edu/covid-19-university-communications/">COVID-19: University Communications</a></li>
+	<li class="menu-hr-faq"><a href="https://safety.colostate.edu/covid-19-human-resources-faqs/">HR FAQ</a></li>
+	<li class="menu-keep-engaging"><a href="https://keepengaging.colostate.edu/">Keep Engaging</a></li>
+	<li class="menu-keep-learning"><a href="https://www.acns.colostate.edu/keep-learning/">Keep Learning</a></li>
+	<li class="menu-keep-partnering"><a href="http://engagement.colostate.edu/keep-partnering/">Keep Partnering</a></li>
+	<li class="menu-keep-teaching"><a href="https://canvas.colostate.edu/keepteaching/">Keep Teaching</a></li>
+	<li class="menu-keep-working"><a href="https://www.acns.colostate.edu/keepworking/">Keep Working</a></li>
+	<li class="menu-submit-a-question"><a href="https://covidrecovery.colostate.edu/covid-19-question-form/">Submit a Question</a></li>
+</ul>
+</li>
+</ul>          </nav>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+</header>
+
+  <div id="maincontent" class="outer-container">
+
+  <div class="wrap container" role="document">
+    <div class="content row  sidebar-none">
+
+      <main class="main col-sm-12 sidebar-none 0" role="main">
+        
+<div class="page-header">
+
+ 
+	<h1>Transportation and Parking</h1>
+
+	
+</div>
+
+		<div data-elementor-type="wp-page" data-elementor-id="46" class="elementor elementor-46" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-7b270170 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7b270170" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5e5af8c2 elementor-column elementor-col-100 elementor-top-column" data-id="5e5af8c2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-995f54c elementor-widget elementor-widget-text-editor" data-id="995f54c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><a href="https://pts.colostate.edu/">Parking and Transportation Services</a> provides information about the impact of COVID-19 precautions on parking and transportation.</p>
+<p>Starting July 1, Colorado State University Parking and Transportation Services will resume paid parking and full enforcement on main and south campus. Valid CSU permits and hourly parking payments will be required.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+
+
+
+      </main><!-- /.main -->
+          </div><!-- /.content -->
+  </div><!-- /.wrap -->
+</div>
+  <footer class="content-info main-footer" role="contentinfo">
+	<div class="top-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 span-1-1">
+				  
+						<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+							<div class="wpb_text_column wpb_content_element ">
+								<div class="wpb_wrapper">
+									<h3>Colleges:</h3>
+						<ul>
+							<li><a href="https://agsci.colostate.edu/">Agricultural Sciences</a></li>
+							<li><a href="https://biz.colostate.edu/">Business</a></li>
+							<li><a href="https://www.engr.colostate.edu/">Walter Scott, Jr. College of Engineering</a></li>
+							<li><a href="https://www.chhs.colostate.edu/">Health and Human Sciences</a></li>
+							<li><a href="https://www.libarts.colostate.edu/">Liberal Arts</a></li>
+							<li><a href="https://warnercnr.colostate.edu/">Warner College of Natural Resources</a></li>
+							<li><a href="https://www.natsci.colostate.edu/">Natural Sciences</a></li>
+							<li><a href="https://vetmedbiosci.colostate.edu/">Veterinary Medicine and Biomedical Sciences</a></li>
+						</ul>
+
+								</div>
+							</div>
+						</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+							<div class="wpb_text_column wpb_content_element ">
+								<div class="wpb_wrapper">
+									<h3>Schools &amp; Programs:</h3>
+						<ul>
+							<li><a href="https://graduateschool.colostate.edu/">Graduate School</a></li>
+							<li><a href="https://international.colostate.edu/">International Programs</a></li>
+							<li><a href="https://www.online.colostate.edu/">Online Degrees and Courses</a></li>
+							<li><a href="https://uca.colostate.edu/">School of&nbsp;Music, Theatre and Dance</a></li>
+							<li><a href="https://www.engr.colostate.edu/sbme/">School of Biomedical Engineering</a></li>
+							<li><a href="https://www.chhs.colostate.edu/soe/">School of Education</a></li>
+							<li><a href="https://sustainability.colostate.edu/">School of Global Environmental Sustainability</a></li>
+							<li><a href="http://www.ssw.chhs.colostate.edu/">School of Social Work</a></li>
+							<li><a href="https://publichealth.colostate.edu/">School of Public Health</a></li>
+						</ul>
+
+								</div>
+							</div>
+						</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+							<div class="wpb_text_column wpb_content_element ">
+								<div class="wpb_wrapper">
+									<div class="feature-btn"><a href="https://giving.colostate.edu/"><img src="https://static.colostate.edu/site-templates/2011-secondary/images/make-a-gift.png" alt="CSU Cares"></a></div>
+
+								</div>
+							</div>
+						</div></div></div></div>
+									</div>
+			</div>
+		</div>
+
+	</div>
+
+	<style>
+		a.btn.btn-covid {
+			background: #af4323;
+			color: white !important;
+			border-color: currentColor;
+			border-radius: .2rem;
+			text-decoration: none !important;
+			text-transform: uppercase;
+			font-size: 92% !important;
+		}
+		footer.main-footer div.bottom-footer ul li {
+			margin-bottom: .5rem;
+		}
+		a.btn.btn-covid:hover  {
+			background: #C6522F;
+		}
+		p.copyright {margin-top:-.5rem
+	</style>
+	<div class="bottom-footer">
+		<!-- 150 -->
+<div class="onefifty" style="background:url(https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/img/banner-image.min.jpg) #003a1c repeat; background-size:contain; display:flex; justify-content:space-around; margin-bottom:2rem; margin-top:-25px; box-shadow: 0px 0px 10px 5px #00000030;">
+  <style>
+    .top-footer { margin-bottom: 1.5rem;}
+    .bottom-footer svg { max-width: 100%; }
+  </style>
+  <a href="https://csu150.colostate.edu" style="display:block; width:15rem; margin-top:-1.5rem; margin-bottom:-1.5rem; background:transparent;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 537.65 345.52"><title>CSU 150 Logo</title><style>#title{opacity:0}.primary-color,.secondary-color{fill:#004c23;transition:fill .3s ease}.secondary-color{fill:#fff}#oneFifty{transform:scale(.95);transform-origin:center;transition:all .3s ease}#oneFifty:hover{cursor:pointer;transform:scale(1)}#numbers{transform:translate(0,-7px)}#left-ribbon-top,#right-ribbon-top{transition:all .3s ease;opacity:0}#right-ribbon-top{transform:translate(-25px,-7px)}#left-ribbon-top{transform:translate(25px,-7px)}#oneFifty:hover #bottom-ribbon-left,#oneFifty:hover #bottom-ribbon-right,#oneFifty:hover #fold-ribbon-left,#oneFifty:hover #fold-ribbon-right,#oneFifty:hover #left-ribbon-top,#oneFifty:hover #right-ribbon-top{transform:translate(0,-7px);opacity:1!important}#bottom-ribbon-left,#bottom-ribbon-right{transition:all .3s ease;opacity:.5}#fold-ribbon-left,#fold-ribbon-right{transition:all .3s ease;opacity:0}#fold-ribbon-left{transform:translate(25px,-17px)}#fold-ribbon-right{transform:translate(-25px,-17px)}#bottom-ribbon-left{transform:translate(50px,-17px)}#bottom-ribbon-right{transform:translate(-50px,-17px)}</style><g id="oneFifty"><g id="bottom-ribbon"><g id="bottom-ribbon-left"><path class="primary-color" d="M52.95 175.07v-6.8H8.19c-1.94 0-3.77.94-4.89 2.53a6.047 6.047 0 0 0-.78 5.45l7.49 21.53-7.56 22.69c-.61 1.83-.3 3.85.83 5.41a6.017 6.017 0 0 0 4.87 2.49H52.9l.05-53.3z"/><path class="secondary-color" d="M29.5 175.07H9.42l7.21 20.73c.43 1.25.44 2.63.02 3.87l-7.3 21.89H53v-46.49H29.5z"/></g><g id="bottom-ribbon-right"><path class="primary-color" d="M484.73 168.27H529.85c1.94 0 3.76.94 4.88 2.53a6.047 6.047 0 0 1 .78 5.45l-7.47 21.53 7.55 22.69c.61 1.83.3 3.85-.82 5.41s-2.94 2.49-4.86 2.49h-45.18v-60.1z"/><path class="secondary-color" d="M508.59 175.07h20.04l-7.19 20.73a6.033 6.033 0 0 0-.02 3.87l7.28 21.89h-43.97v-46.49h23.86z"/></g></g><g id="fold-ribbons"><path id="fold-ribbon-left" class="primary-color" d="M30.59 205.3l34.7 29.46V205.3z"/><path id="fold-ribbon-right" class="primary-color" d="M508.44 205.3l-34.7 29.46V205.3z"/></g><g id="shield"><path class="primary-color" d="M485.73 138.29V88.96c0-4.8-3.03-9.15-7.53-10.82L272.84 2.1c-1.29-.48-2.63-.72-4.01-.72s-2.72.24-4.01.72L59.46 78.14c-4.5 1.67-7.53 6.02-7.53 10.82v167.61c0 4.8 3.03 9.15 7.53 10.82l205.36 76.04c1.29.48 2.63.72 4.01.72 1.37 0 2.72-.24 4.01-.72l205.36-76.04c4.5-1.67 7.53-6.02 7.53-10.82V138.29z"/><g id="white_backgroud"><path class="secondary-color" d="M476.68 84.67L271.32 8.63c-.51-.19-1.05-.28-1.59-.28s-1.08.09-1.59.28L62.78 84.67a4.584 4.584 0 0 0-2.99 4.29v167.6a4.58 4.58 0 0 0 2.99 4.29l205.36 76.04c.51.19 1.05.28 1.59.28s1.08-.09 1.59-.28l205.36-76.04a4.584 4.584 0 0 0 2.99-4.29V88.96a4.57 4.57 0 0 0-2.99-4.29zm-9.19 59.78V249.69c0 1.58-.99 3-2.47 3.55l-194.13 71.6c-.84.31-1.77.31-2.62 0l-194.23-71.6a3.782 3.782 0 0 1-2.47-3.55V96.71c0-1.59.99-3 2.48-3.55L183.37 52.9c12.62-4.39 29.12-9.65 31.44-8.03 3.81 2.67-1.53 8.77 4.96 8.39 6.48-.38 31.28-16.02 37-12.97 4.29 2.29 6.29 7.08 8.92 9.96 2.53 2.77 7.09 2.77 9.62 0 2.63-2.88 4.63-7.67 8.92-9.96 5.72-3.05 30.52 12.59 37 12.97s1.14-5.72 4.96-8.39c1.36-.95 7.62.48 15.1 2.7l123.74 45.59a3.79 3.79 0 0 1 2.48 3.55V144.45h-.02z"/><path class="primary-color" d="M-12.13 88.98h.4z"/></g></g><g id="right-ribbon-top"><path class="primary-color" d="M425.89 144.45v62.13H505.07v-.01c3.2-.13 5.76-2.76 5.76-5.99v-16.4l-.03-8.22v-.89l.03-8.22v-16.4c0-3.31-2.69-6-6-6H425.89z"/><path class="secondary-color" d="M486.62 151.29h17.55v48.15h-71.38v-48.15z"/><g id="_x32_020"><path class="primary-color" d="M452.16 180.16h-5.41c0-.81.33-1.67 1.95-3.17 2.93-2.73 3.54-4.51 3.54-6.51 0-2.84-1.32-5.4-5.14-5.4-3.21 0-4.78 2.5-4.78 4.84v1.98h3.72v-1.39c0-.92.36-1.47 1.16-1.47.76 0 1.19.42 1.19 1.47 0 1-.56 2.14-2.45 4.12-2.99 3.14-3.95 5.29-3.95 8.35v1.11h10.17v-3.93zM460.71 184.56c3.19 0 5.19-2.17 5.19-5.37v-8.71c0-3.23-2-5.37-5.19-5.37-3.21 0-5.21 2.14-5.21 5.37v8.71c0 3.2 2 5.37 5.21 5.37zm-1.14-14.3c0-.61.4-1.06 1.14-1.06.71 0 1.11.44 1.11 1.06v9.12c0 .61-.4 1.09-1.11 1.09-.73 0-1.14-.47-1.14-1.09v-9.12zM479.12 180.16h-5.41c0-.81.33-1.67 1.95-3.17 2.93-2.73 3.54-4.51 3.54-6.51 0-2.84-1.32-5.4-5.14-5.4-3.21 0-4.78 2.5-4.78 4.84v1.98H473v-1.39c0-.92.36-1.47 1.16-1.47.76 0 1.19.42 1.19 1.47 0 1-.56 2.14-2.45 4.12-2.99 3.14-3.95 5.29-3.95 8.35v1.11h10.17v-3.93zM487.67 184.56c3.19 0 5.19-2.17 5.19-5.37v-8.71c0-3.23-2-5.37-5.19-5.37-3.21 0-5.21 2.14-5.21 5.37v8.71c0 3.2 2 5.37 5.21 5.37zm-1.14-14.3c0-.61.4-1.06 1.14-1.06.71 0 1.11.44 1.11 1.06v9.12c0 .61-.4 1.09-1.11 1.09-.73 0-1.14-.47-1.14-1.09v-9.12z"/></g></g><g id="left-ribbon-top"><path class="primary-color" d="M111.41 144.45H34.2c-3.31 0-6 2.69-6 6v16.4l.03 8.22v.89l-.03 8.22v16.4c0 3.23 2.57 5.86 5.76 5.99v.01h82.63v-62.13h-5.18z"/><path class="secondary-color" d="M52.41 151.29H34.86v48.15h74.83v-48.15z"/><g id="_x31_870"><path class="primary-color" d="M49.79 167.59v16.5h4.12v-18.53h-2.3c0 1.05-.48 2.03-1.82 2.03zM63.35 165.08c-3.19 0-5.31 1.98-5.31 4.98v1.34c0 1.47.56 2.81 1.67 3.34-1.11.53-1.67 1.86-1.67 3.34v1.5c0 3.01 2.12 4.98 5.31 4.98 3.21 0 5.31-1.98 5.31-4.98v-1.5c0-1.47-.56-2.81-1.67-3.34 1.11-.53 1.67-1.86 1.67-3.34v-1.34c0-3-2.1-4.98-5.31-4.98zm1.24 14.27c0 .78-.51 1.25-1.24 1.25-.71 0-1.24-.47-1.24-1.25v-2.39c0-.78.53-1.25 1.24-1.25.73 0 1.24.47 1.24 1.25v2.39zm0-6.84c0 .78-.51 1.28-1.24 1.28-.71 0-1.24-.5-1.24-1.28v-2.23c0-.78.53-1.25 1.24-1.25.73 0 1.24.47 1.24 1.25v2.23zM71.21 169.73h6.07c-2.43 3.28-4.53 9.29-4.53 14.36h4.63c0-6.23 1.19-11.24 4.05-16.66v-1.86H71.21v4.16zM89.43 165.11c-3.21 0-5.21 2.14-5.21 5.37v8.71c0 3.2 2 5.37 5.21 5.37 3.19 0 5.19-2.17 5.19-5.37v-8.71c-.01-3.23-2.01-5.37-5.19-5.37zm1.11 14.27c0 .61-.4 1.09-1.11 1.09-.73 0-1.14-.47-1.14-1.09v-9.12c0-.61.4-1.06 1.14-1.06.71 0 1.11.44 1.11 1.06v9.12z"/></g></g><g id="numbers"><path class="secondary-color" d="M117.02 143.57c0-2.08 0-2.08-1.94-2.08h-9.7c-.54 0-.99-.48-.99-1.05 0-2.88-.01-5.64.03-8.41 0-.33.34-.7.6-.98 5.73-6.08 11.46-12.16 17.22-18.21.33-.35.8-.54 1.26-.54 11.23-.03 11.58-.02 22.83-.01.1 0 6.7.04 9.81.09.88.01 1.58.77 1.58 1.71v136.36c0 .57-.44 1.03-.98 1.03h-38.75c-.54 0-.98-.46-.98-1.03v-19.86c.01-34.65.01-52.38.01-87.02zM166.38 204.48c0-.76.61-1.37 1.37-1.37h37.89c.76 0 1.37.61 1.37 1.37v16.15c0 .76.61 1.37 1.37 1.37h41.83c.76 0 1.37-.61 1.37-1.37v-27.9c0-.76-.61-1.37-1.37-1.37h-78.4c-.76 0-1.37-.61-1.37-1.37v-76.25c0-.76.61-1.37 1.37-1.37h112.45c.76 0 1.37.61 1.37 1.37v24.68c0 .76-.61 1.37-1.37 1.37h-71.62c-.76 0-1.37.61-1.37 1.37v19.41c0 .76.61 1.37 1.37 1.37l61.27-.02c.99 0 1.7.28 2.41 1.03 4.89 5.23 9.84 10.4 14.71 15.66.51.55.93 1.62.93 2.37.05 16.56.05 35.07 0 51.63 0 .71-.4 1.72-.89 2.25a1316.5 1316.5 0 0 1-14.95 15.82c-.48.5-1.31.88-1.98.88-29.51.04-60.5.04-90.01 0-.67 0-1.5-.38-1.98-.88-5.03-5.23-10.01-10.52-14.97-15.82-.43-.46-.81-1.18-.81-1.79v-28.59h.01zM426.18 131.25c0-.76-.38-1.7-.88-2.24-4.94-5.32-9.93-10.6-14.96-15.83-.48-.5-1.31-.88-1.98-.88-29.51-.04-60.97-.04-90.48 0-.67 0-1.5.37-1.98.87-4.96 5.16-9.85 10.39-14.8 15.56-.78.82-1.11 1.64-1.1 2.81.03 16.46.02 32.91.02 49.37 0 16.51.01 34.96-.02 51.47 0 1.11.3 1.9 1.05 2.68 4.95 5.17 9.84 10.41 14.8 15.56.51.53 1.39.93 2.11.93 29.46.05 60.87.05 90.33 0 .71 0 1.6-.4 2.11-.93 5-5.19 9.95-10.43 14.85-15.72.53-.57.94-1.57.94-2.37.04-33.1.04-68.16-.01-101.28zm-41.02 90.69c0 1.12-.9 2.02-2.02 2.02h-40.22c-1.12 0-2.02-.9-2.02-2.02v-80.06c0-1.12.9-2.02 2.02-2.02h40.22c1.12 0 2.02.9 2.02 2.02v80.06z"/>
+</g></g></svg>
+  </a>
+</div>
+<!-- /150 -->		<div class="container">
+			<div class="row s-grid">
+				<div class="col-md-8 span-2-3">
+										<ul>
+						<li><a href="https://safety.colostate.edu/coronavirus/" class="btn btn-covid"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Covid-19 Information</a></li>
+						<li><a href="https://admissions.colostate.edu">Apply to CSU</a></li>
+						<li><a href="https://www.colostate.edu/contact">Contact CSU</a></li>
+						<li><a href="https://www.colostate.edu/disclaimer">Disclaimer</a></li>
+						<li><a href="https://www.colostate.edu/equal-opportunity">Equal Opportunity</a></li>
+						<li><a href="https://www.colostate.edu/privacy">Privacy Statement</a></li>
+					</ul>
+					<p class="copyright">&copy; 2020 Colorado State University</p>
+				</div>
+				<div class="col-md-4 span-1-3">
+				 	<!--<p class="copyright">&copy; 2020 Colorado State University</p>-->
+					<div class="bottomlogo"><a href="http://www.colostate.edu/"><span class="sr-only">Colorado State University</span><img src="https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/img/csu-onleline-final.svg" alt="Colorado State University" /></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<!-- wpbuffer start --><script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/js/min/lazyload.min.js?ver=1.0.2'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/themes/csu-theme/assets/js/min/script.min.js?ver=1.0.56'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/wp-accessibility/js/current-menu-item.js?ver=1.0'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-includes/js/wp-embed.min.js?ver=2cd0570649235b90f6fe4ff0c2aec4ac'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.13'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.10.2'></script>
+<script type='text/javascript'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/covidrecovery.colostate.edu\/wp-admin\/admin-ajax.php","nonce":"9af6b3aef9","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/covidrecovery.colostate.edu\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.10.2'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'></script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.13'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":992,"lg":992,"xl":1440,"xxl":1600},"version":"2.9.13","urls":{"assets":"https:\/\/covidrecovery.colostate.edu\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":46,"title":"Transportation%20and%20Parking%20-%20COVID-19%20Recovery","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' defer src='https://covidrecovery.colostate.edu/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.13'></script>
+<script class="prevent-defer">
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-11513221-3');ga('send','pageview');
+</script>
+
+<!-- wpbuffer end --><script class="prevent-defer">
+
+//run any inline-defered scripts
+function insertAfter(a,b){b.parentNode.insertBefore(a,b.nextSibling)}window.addEventListener("load",function(){for(var a=document.querySelectorAll("body script[type='text/javascript/defer'], body script:not(.prevent-defer):not([src]):not([type='text/javascript']):not([type*='template']):not([type='text/html'])"),b=0;b<a.length;b++){var c=document.createElement("script");c.appendChild(document.createTextNode(a[b].textContent)),insertAfter(c,a[b])}});
+</script>
+</body>
+</html>
