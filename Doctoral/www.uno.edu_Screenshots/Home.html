@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+
+
+
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"0836a9720d",applicationID:"46833939"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="twitter:card" content="photo" />
+<meta property="og:site_name" content="The University of New Orleans" />
+<link rel="canonical" href="https://www.uno.edu/covid-19" />
+<meta name="twitter:description" content="The University of New Orleans is a place for those who know the future is not something you wait for... it is something you build." />
+<meta name="twitter:title" content="COVID-19 Information" />
+<meta property="og:url" content="https://www.uno.edu/covid-19" />
+<meta property="og:title" content="COVID-19 Information" />
+<meta property="og:description" content="The University of New Orleans is a place for those who know the future is not something you wait for... it is something you build." />
+<meta name="twitter:image" content="https://www.uno.edu/og-image.jpg" />
+<meta property="og:image" content="https://www.uno.edu/og-image.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/sites/default/files/favicons/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/sites/default/files/favicons/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/sites/default/files/favicons/favicon-16x16.png"/>
+<link rel="manifest" href="/sites/default/files/favicons/site.webmanifest"/>
+<link rel="mask-icon" href="/sites/default/files/favicons/safari-pinned-tab.svg" color="#646569"/>
+<meta name="msapplication-TileColor" content="#2b5797"/>
+<meta name="theme-color" content="#646569"/>
+<meta name="favicon-generator" content="Drupal responsive_favicons + realfavicongenerator.net" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #003056} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="revision" href="https://www.uno.edu/covid-19" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qcuqsp" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+        <title>COVID-19 Information | The University of New Orleans</title> <!-- testing deployment flow -->
+        <link rel="stylesheet" media="all" href="/sites/default/files/css/css_PEf_tfjRoE7cXwda5sasFsSyGPL7XBxIklppjJmXB6o.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_jLIj4vquty5bVQpj5fC6wz3Zy6EfVGPoCNq9MYXd-E8.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.9/dialog-polyfill.min.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMontserrat:700" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:700" />
+
+            
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+    <script async src="https://tag.simpli.fi/sifitag/8a58ce50-7b46-0137-60e2-067f653fa718"></script>
+
+                </head>
+<body>
+
+<a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+</a>
+<!--[if lte IE 9]>
+<div class="unsupported">
+    <div class="absolute-center">
+        <h1 class="center">This page uses technologies your browser does not support.</h1>
+        <p>Many of our new website's features will not function and basic layout will appear broken.</p>
+        <p>Visit <a href="https://browsehappy.com/">browsehappy.com</a> to learn how to upgrade your browser.</p>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGB5PXW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+    <div class="content-wrapper">
+        <header>
+                                            <div id="headerStripe"></div>
+<div class="mobile-trigger stuck">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+            <a href="#" data-activates="slide-out" class="triggerMainNav" role="button" aria-label="Open Menu"><i class="material-icons">menu</i></a>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--order-10-desktop" role="search">
+          <!--search box-->
+          <form action="/search" method="get" id="search" accept-charset="UTF-8">
+            <input data-drupal-selector="edit-keywords" size="30" maxlength="128" class="form-text" type="text" type="text" name="keywords" id="query">
+          </form>
+
+        </div>
+        <div class="mdl-cell mdl-cell--8-col" id="header-logo">
+            <img src="https://www.uno.edu/sites/default/files/img/uno-line.png" class="header-logo" alt="University of New Orleans Logo" />
+        </div>
+    </div>
+</div>
+
+                                        
+
+                <nav role="navigation" aria-labelledby="block-hamburgerauxmenu-menu" id="block-hamburgerauxmenu" data-block-plugin-id="system_menu_block:hamburger-aux-menu" class="settings-tray-editable" data-drupal-settingstray="editable">
+            
+  <p class="visually-hidden" id="block-hamburgerauxmenu-menu">Hamburger Aux Menu</p>
+  
+
+        
+              <ul class="hamburger-aux-menu">
+                                  <li class="aux-entry">
+                <a href="http://www.uno.edu/about-uno/campus-map/">Maps &amp; Directions</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/dock" data-drupal-link-system-path="node/2306">For Current Students</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/quick" data-drupal-link-system-path="node/328">For Faculty &amp; Staff</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="http://www.unoalumni.com/">For Alumni</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/parents" data-drupal-link-system-path="node/14946">For Parents</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/jobs/">Employment Opportunities</a>
+              </li>
+                              <li class="aux-entry last">
+                <a href="http://www.unoalumni.com/donate">Give Now</a>
+              </li>
+          <li class="aux-entry" style="display: flex;align-items: center; margin-top: 10px; margin-left: 30px;">
+          <img src="/sites/default/files/add/2019-05/privateer-menu-logo.png">
+          <a href="http://www.unoprivateers.com" style="padding-left: 10px;">Privateer Sports</a>
+      </li>
+    </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-hamburgermenu-menu" id="block-hamburgermenu" data-block-plugin-id="system_menu_block:hamburger-menu" class="settings-tray-editable offCanvasNav" data-drupal-settingstray="editable">
+            
+  <p class="visually-hidden" id="block-hamburgermenu-menu">Hamburger Menu</p>
+  
+
+        
+  
+            <ul class="side-nav" role="tree" id="slide-out" aria-label="main navigation">
+                            <li id="navlogo" role="treeitem">
+            <a href="https://www.uno.edu/"><img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" class="img-responsive" alt="University of New Orleans Logo" aria-roledescription="logo" /></a>
+          </li>
+        
+              <li role="presentation" aria-expanded="false">
+                  <a href="/nse">Accepted Students</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/future-students">Future Students</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Admissions</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/virtual-tour">Take a Virtual Tour</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions">Office of Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions/apply-freshman">Undergraduate Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad/admission-requirements">Graduate Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://uno.tfaforms.net/217741">Request Information</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions/tuition-fees">Tuition and Fees</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/financial-aid/types/scholarships-and-awards">Scholarships and Awards</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/financial-aid">Financial Aid</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Academics</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/academics">Academics Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/undergraduate-programs">Undergraduate Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad/programs">Graduate Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/general-education">General Education</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://extended.uno.edu/">Professional and Continuing Education (PaCE)</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/online-programs">Online Degree Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/service-learning">Service Learning</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/study-abroad">Study Abroad</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Colleges</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coba">Business Administration</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coe">Engineering</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/colaehd">Liberal Arts, Education &amp; Human Development</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/cos">College of Sciences</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/colaehd/sota">School of the Arts</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coba/hrt">Hotel, Restaurant &amp; Tourism</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coe/name">School of Naval Architecture</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/ids">Interdisciplinary Studies</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad">The Graduate School</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">About UNO</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno">About UNO</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/at-a-glance">At A Glance</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/office-of-the-president">Office of the President</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/administration">Administrative Offices</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/mission">Mission &amp; Vision</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/history">History</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/advancement">University Advancement</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.unoalumni.com/">Alumni</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Research</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/research">Research Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/funding">Faculty &amp; Staff Research</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/student">Student Research</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/collaborate">Collaborate with UNO</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/office">Office of Research</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Student Life</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/student-life">Student Life Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/upd">Campus Safety</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/housing">On Campus Housing</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://dineoncampus.com/nola/">Campus Dining</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/recreation-intramural-sports">Recreation &amp; Fitness</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-health">Student Health</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-life">Campus Hangouts</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-involvement-leadership/orgs">Get Involved</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+            
+            
+                
+                                        
+                
+                                                                        <div class="header-image">
+    <div id="block-bannerplaceholder" data-block-plugin-id="block_content:96a0b7ce-7a59-468c-b44c-bdc9714f7b0c" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+  </div>
+
+    <div class="logo-banner" id="hero-logo">
+        <img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" alt="UNO Logo" class="img-responsive-vertical logo" />
+    </div>
+</div>
+
+                                                                                                                                                                                                                           <div>
+    <div id="block-breadcrumbs-2" data-block-plugin-id="system_breadcrumb_block" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+          <ul class="breadcrumbs" id="breadcrumbs" aria-label="breadcrumbs">
+                            <li class="crumb">
+                            <a href="/">university of new orleans</a>
+                    </li>
+                            <li class="crumb">
+                            covid-19 information
+                    </li>
+        </ul>
+
+  </div>
+
+  </div>
+
+                                                                        </header>
+        <a id="main-content" tabindex="-1"></a>
+
+                        
+
+        <div class="layout-content">
+            
+            <section class="mdl-grid container-wide" id="featured-grid">
+
+                        
+                                    <div class="mdl-cell mdl-cell--12-col">
+                          <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-mainregionwidgets" data-block-plugin-id="entity_field:node:field_main_content_paragraphs" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+      <div class="mdl-grid">
+              
+  
+  <div class="paragraph paragraph--type--basic-text-content paragraph--view-mode--default mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+          
+            <div><div style="background-color: #c5d545; padding:20px;">
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--4-col">
+<h1>COVID-19 Information</h1>
+</div>
+
+<div class="mdl-cell mdl-cell--8-col">
+<p>The University of New Orleans continues to closely monitor developments in the outbreak of respiratory illness caused by the 2019 novel coronavirus (COVID-19). The University’s COVID-19 Task Force is assessing the situation and planning for possible impacts to our campus community. The University is in regular contact with public health officials with the City of New Orleans, the Louisiana Department of Health and Oschner Health System, which operates the University’s on-campus clinic, Oschner Health Center - UNO.</p>
+</div>
+</div>
+</div>
+
+<div style="padding-top:18px; ">
+<p>QUICK LINKS: <a class="btn btn-blue" href="/covid-19/faqs">FAQs</a> <a class="btn btn-blue" href="https://myuno.sharepoint.com/sites/UNOCloudShare/_layouts/15/Doc.aspx?sourcedoc=%7BA23DBD20-8326-459A-83F6-207D36CD3D07%7D&amp;file=UNO%20Return-to-Campus%20Guide.docx&amp;action=default&amp;mobileredirect=true&amp;CID=d82fa2fd-8692-3ede-4b43-76eb38be56a1">Return to Campus Guide</a> <a class="btn btn-blue" href="https://neworleans.co1.qualtrics.com/jfe/form/SV_0Mz6wWldRozJBZ3
+">Student COVID-19 Self-Assessment</a> <a class="btn btn-blue" href="https://neworleans.co1.qualtrics.com/jfe/form/SV_3qKudYGtIoV0WEZ">Employee COVID-19 Self-Assessment</a></p>
+</div>
+</div>
+      
+      </div>
+          </div>
+  
+  </div>
+<article role="article" about="/covid-19">
+
+  
+    
+
+  
+  <div>
+    
+  </div>
+
+</article>
+
+  </div>
+
+                    </div>
+
+                                                    </section>
+
+                      <div class="prefooter">
+    <div id="block-bottomregionwidgets" data-block-plugin-id="entity_field:node:field_pre_footer_paragraphs" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+
+<div id="pre-footer" class="mdl-grid">
+        
+                    
+  
+  <div class="paragraph paragraph--type--basic-text-content paragraph--view-mode--default mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+          
+            <div><p><strong>UNIVERSITY COMMUNICATIONS COVID-19 ARCHIVE</strong></p>
+</div>
+      
+      </div>
+
+                    
+  
+  <div class="paragraph paragraph--type--accordion paragraph--view-mode--default mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet">
+          
+      <ul class="collapsible" data-collapsible="accordion" role="tablist">
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Wishes for a Happy and Safe Holiday Weekend – July 2, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>I hope you will have an opportunity to rest and recharge during this Independence Day weekend. As you do so, it is very important to avoid large gatherings that have the potential to spread the coronavirus on a significant scale. The virus can infect anyone.&nbsp;</p>
+
+<p>This is a critical time for our city and our region. Younger residents of New Orleans—particularly those 18-29 years old—are among those who are increasingly testing positive for COVID-19. Even if you don’t have any symptoms, it’s possible for you to spread the virus to others, especially older and more vulnerable people. As always, wear a mask or face covering and practice social distancing. The best way to ensure that we will have the kind of fall semester that we are all hoping for and our students deserve is to practice these vital measures now. We do not want to revert to a citywide shutdown. We all play a role in helping to avoid that.</p>
+
+<p>In the meantime, we are continuing to conduct summer school and make preparations to welcome back our students and employees for the fall semester. Campus will look different. What remains unchanged is our relentless commitment to supporting our students in their pursuit of a UNO degree. We look forward to demonstrating that commitment repeatedly in the weeks and months ahead.</p>
+
+<p>Enjoy your holiday weekend!</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+<i>President</i><br />
+UNIVERSITY OF NEW ORLEANS</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Moving to Phase B – June 12, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>Beginning on Monday, June 15, the University will move into Phase B of its Return-to-Campus plan. Please review Phase B of the plan <a href="https://myuno.sharepoint.com/sites/UNOCloudShare/_layouts/15/doc2.aspx?sourcedoc=%7bA23DBD20-8326-459A-83F6-207D36CD3D07%7d&amp;file=UNO+Return-to-Campus+Guide.docx&amp;action=default&amp;mobileredirect=true&amp;CID=d82fa2fd-8692-3ede-4b43-76eb38be56a1&amp;CID=bf0071de-c5e4-55f0-2edc-1135096112f9&amp;CT=1591972694837&amp;OR=OWA-NT">here</a>. This represents another milestone in our safe, gradual and methodical return to campus during the pandemic.</p>
+
+<p>In Phase B, additional non-essential employees can begin working on campus on an as-needed basis. Some departments and units may choose to stagger the schedules of their employees to reduce the number of people in a common area. Other employees, with their supervisor’s permission, may continue to telework if they are able to fulfill their responsibilities remotely. The public health guidelines on social distancing and proper hand hygiene remain intact.</p>
+
+<p>Here are a few highlights of Phase B:</p>
+
+<ul>
+	<li>Consistent with the City of New Orleans’ mandate, all students, employees and visitors are required to wear face coverings in all shared indoor spaces.</li>
+	<li>Each day, prior to reporting to campus, employees are expected to complete the self-assessment tool <a href="https://neworleans.co1.qualtrics.com/jfe/form/SV_3qKudYGtIoV0WEZ">found here</a> or on the our website under the COVID-19 Information link.</li>
+	<li>Campus security will continue to maintain a single-entry checkpoint (Elysian Fields). Access is limited to members of our University community and partners. Those entering campus must display an appropriate student, employee, contractor or UNO Federal Credit Union identification to the officer on duty.</li>
+	<li>Rooms and indoor venues are limited to 25% of capacity or 50 people, whichever is less.</li>
+	<li>The first and second floors of the Earl K. Long Library will reopen on weekdays with the following hours: Mondays: 8 am-4:30 pm, Tuesdays: 8 am-6 pm, Wednesdays-Fridays: 8 am-5 pm.</li>
+	<li>The Recreation &amp; Fitness Center will open on June 22 with <a href="/recreation-intramural-sports">limited hours of operation</a> and new precautions in place.</li>
+</ul>
+
+<p>As previously mentioned, we are working hard to prepare campus for the fall semester by adding hand sanitizer dispensers, clear plastic shields on counters, informational signage and floor markings that emphasize social distancing. We are also reconfiguring classrooms to create more space between people. You can see some of the progress we’ve made by scrolling though the pictures in <a href="/covidsignage">this photo gallery</a>. Our efforts are highly focused on your safety and health, while ensuring that meaningful learning and research continue.</p>
+
+<p>I would like to thank all members of our University community whose actions have helped reduce the spread of the coronavirus and allow the City of New Orleans to move to Phase Two of its reopening this weekend. We will continue to overcome these challenges as we have from the outset of the pandemic—together.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+UNIVERSITY OF NEW ORLEANS</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Important Calendar Changes for Fall 2020 – June 4, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>The University is evaluating our plans and procedures for the upcoming academic year to ensure that we keep our employees and students safe. To that end, we are modifying our academic and employee calendars for the fall 2020 semester. We are making these changes to take advantage of our time on campus and minimize the increased health risks associated with mass travel around holidays. These are the highlights:</p>
+
+<ul>
+	<li>Classes will begin on Aug. 19, as originally planned.</li>
+	<li>There will be no fall break in October. University closure days originally scheduled for Oct. 15-16 will be moved to Dec. 21-22.</li>
+	<li>Beginning on Nov. 19, all instruction will be moved online for the remainder of the fall semester. Pontchartrain Hall will remain open for residents until Dec. 12.</li>
+	<li>Thanksgiving break (Nov. 25-27) will proceed as planned and classes will conclude—remotely—on Dec. 2.</li>
+	<li>Final exams will take place Dec. 5-10, as originally planned, but they will be administered remotely.</li>
+</ul>
+
+<p>In effect, face-to-face instruction will conclude for the fall 2020 semester on Nov. 18. We are doing this because we recognize that many of our students and employees will either travel or come into contact with friends and family members over the Thanksgiving break. Given that increased contact, moving to remote instruction at that time helps reduce risks of potential spread of the coronavirus within our campus community. For the same reason, we also strongly encourage all students, faculty and staff to remain in the New Orleans area and limit travel for the duration of the fall semester.</p>
+
+<p>First-year and residential students will receive additional information about move-in and orientation programs, which are being finalized now.</p>
+
+<p>I recognize that some of these changes may be inconvenient. Please know that these adjustments to our calendars are intended to better protect our campus community while delivering the high-quality education that our students deserve.</p>
+
+<p>I also encourage you to review our <a href="https://myuno.sharepoint.com/:w:/r/sites/UNOCloudShare/_layouts/15/doc2.aspx?sourcedoc=%7bA23DBD20-8326-459A-83F6-207D36CD3D07%7d&amp;file=UNO+Return-to-Campus+Guide.docx&amp;action=default&amp;mobileredirect=true&amp;CID=9091b213-e4c2-43f5-07bc-df9592aa7ba6">Return-to-Campus Guide</a>, which we have recently updated. As a reminder, we are currently in Phase A. We hope to move into Phase B sometime this month, pending new guidance from the City.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+THE UNIVERSITY OF NEW ORLEANS</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Students: Getting Ready for Fall – May 29, 2020   </div>
+      
+             <div class="collapsible-body"><p>Dear Privateers,</p>
+
+<p>I realize that summer break has just begun but I want to provide you with an update on our activities and priorities in the coming weeks and months. We have started preparing campus for the fall semester to ensure your health and safety, while also continuing to deliver the UNO experience to which you are accustomed.</p>
+
+<p>Not surprisingly, you should expect campus to look a bit different in the fall. We are installing high visibility signage with reminders about sound health practices. We are adding plexiglass shields and floor markings that emphasize social distancing to key areas across campus. We will have hand sanitizer dispensers in all of our buildings. We are adding new technology to about 80 classrooms to support hybrid and flexible instruction. We are both cleaning and rearranging seating in our classrooms. We will continue to work with faculty to increase their proficiency in technology-enhanced delivery of course content that will meet your needs. We are also considering some minor adjustments to our fall calendar in order to support the safety of our campus community. I am sharing these details with you so that you and your families are informed. I am also asking for your cooperation. I believe our campus community is strengthened by mutual respect and care for each other. By adhering to our new guidelines and following science-based practices, we, as individuals, demonstrate consideration for the health and safety of our fellow Privateers and their loved ones.</p>
+
+<p>I intend to communicate with you throughout the summer but please know that I cannot wait to see you again in the fall.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+UNIVERSITY OF NEW ORLEANS</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Employees: Virtual Commencement Reminder and Summer Priorities – May 28, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Colleagues,</p>
+
+<p>As a reminder, we will be holding virtual commencement ceremonies on Sunday, May 31 at 2 p.m. for our spring 2020 graduates. There will be six different YouTube streams for the six ceremonies, divided into: Graduate School, the four academic colleges and Interdisciplinary Studies. The link to each ceremony will be posted on <a href="/commencement">commencement.uno.edu</a> by Sunday morning. If you’re able, please watch and support our graduates wherever you may be. You all certainly played a vital role in their success, and we want to celebrate with them.</p>
+
+<p>We are currently in Phase A of our Return to Campus, and we hope to move to Phase B sometime in June, pending the necessary permission from the State and City. I would like to point out that, even when are in Phase B, many employees will still be expected to telework. I encourage you to familiarize yourself with the <a href="https://myuno.sharepoint.com/:w:/r/sites/UNOCloudShare/_layouts/15/doc2.aspx?sourcedoc=%7BA23DBD20-8326-459A-83F6-207D36CD3D07%7D&amp;file=UNO%20Return-to-Campus%20Guide.docx&amp;action=default&amp;mobileredirect=true&amp;CID=d82fa2fd-8692-3ede-4b43-76eb38be56a1">Return to Campus Guide</a>. As we continue our operations throughout the summer, our chief priority is the safety and health of our faculty, staff and students. If you do plan to come to campus, we ask that you fill out this <a href="https://neworleans.co1.qualtrics.com/jfe/form/SV_3qKudYGtIoV0WEZ">Workplace COVID-19 Self-Assessment</a> before each visit. The form is also accessible on the University’s website by clicking on COVID-19 Information. You will enter campus through the Elysian Fields Ave. checkpoint and record your name with a UNOPD officer, who will ask you if you’ve completed the assessment.</p>
+
+<p>Finally, we are working hard to prepare campus for the fall semester: We are installing high visibility signage with reminders about sound health practices. We are adding plexiglass shields and floor markings that emphasize social distancing to key areas across campus. We will have hand sanitizer dispensers in all of our buildings. We are in the process of adding new technology to about 80 classrooms to support hybrid and flexible instruction. We are both cleaning and rearranging seating in our classrooms. We are updating Codes of Conduct to support expectations around the use of face coverings and social distancing. We will also offer professional development opportunities for faculty to increase their proficiency in technology-enhanced delivery of course content. Stay tuned for more details. And we are considering some minor adjustments to our fall calendar in order to support the safety of our campus community. I intend to communicate with you throughout the summer about these and other changes you can expect to see in the fall.</p>
+
+<p>Thank you for everything you did to help the University of New Orleans persevere through one of its most challenging semesters ever. I feel fortunate to be on your team. And I look forward to preparing for the future alongside each of you.</p>
+
+<p>UNO Proud,</p>
+
+<p>John</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+UNIVERSITY OF NEW ORLEANS</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Return to Campus: Phase A Begins Monday, May 18</div>
+      
+             <div class="collapsible-body"><p>Dear Colleagues,</p>
+
+<p>This week Louisiana Governor John Bel Edwards and New Orleans Mayor LaToya Cantrell announced the first phase of reopening. The city’s comparable but more restrictive guidelines will take effect Saturday, May 16. Those guidelines can be found at <a href="https://ready.nola.gov">https://ready.nola.gov</a>. As a result of these decisions, the University will move to Phase A of our <a href="https://myuno.sharepoint.com/:w:/r/sites/UNOCloudShare/_layouts/15/Doc.aspx?sourcedoc=%7BA23DBD20-8326-459A-83F6-207D36CD3D07%7D&amp;file=UNO%20Return-to-Campus%20Guide.docx&amp;action=default&amp;mobileredirect=true&amp;CID=d82fa2fd-8692-3ede-4b43-76eb38be56a1">Return-to-Campus Guide</a> beginning on Monday, May 18 at 6 a.m. Please take a moment to review the Guide and familiarize yourself with its associated requirements, including those necessary to restart specific types of onsite research.</p>
+
+<p>Phase A allows for a return to campus for employees with responsibilities for animals, sensitive laboratory equipment and urgent research after completion of the appropriate checklist(s). To be clear, this is relevant to a very small number of people. In reality, the vast majority of employees who have been teleworking during the pandemic will continue to telework during Phase A. We expect few additional onsite employees and the majority of campus operations will remain unchanged. Individuals accessing campus are expected to complete a daily self-assessment, outlined in the Guide, and must wear a mask or face covering in all shared spaces. The library and Recreation &amp; Fitness Center will remain closed. UNOPD will continue to request University identification and take names of those coming to campus at a single entrance point.</p>
+
+<p>We appreciate your patience, understanding and respect for members of the University community. Our return to campus will be a phased, methodical process that prioritizes employee and student safety. Each of us plays an important role in that, and I am grateful for your teamwork. When the University is positioned to move to a different phase, we will communicate that promptly.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Return-to-Campus Guide – May 7, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Colleagues,</p>
+
+<p>I realize many of you have questions about what our return to campus will look like after the Stay Home Mandate is lifted in New Orleans, and I’d like to begin addressing those questions. The University’s COVID-19 Task Force has spent considerable time and energy on assembling a draft of our Return-to-Campus Guide, which will help shape our actions in the coming weeks and months. You can view it by clicking on <a href="https://myuno.sharepoint.com/sites/UNOCloudShare/_layouts/15/Doc.aspx?sourcedoc=%7BA23DBD20-8326-459A-83F6-207D36CD3D07%7D&amp;file=UNO%20Return-to-Campus%20Guide.docx&amp;action=default&amp;mobileredirect=true">this link</a>. The document prioritizes safety, amid business continuity, and is supported by science-based recommendations from multiple authorities.</p>
+
+<p>To be clear, this is a working document that will change frequently as we receive new information and direction from state and city public health officials. We expect to hear important updates from the Mayor of New Orleans and the Governor of Louisiana over the next week, and those will be woven into our guide. The document is intended to provide a preliminary path for how we might begin resuming on-campus operations, in a phased approach, while working within their guidance.</p>
+
+<p>I hope this plan further demonstrates that our primary focus continues to be the safety and health of our students, faculty and staff. I want to thank each of you for your role in that.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Plans for Fall 2020 Semester – April 30, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>Understandably, you likely have questions about whether and how the University will resume operations for the fall 2020 semester. I have heard from many of you and, in the spirit of transparency, I want to share our overarching approach to the next academic year.</p>
+
+<p>First and foremost, our university will be open and operational. Yes, we will be here, better and more focused than ever. We are truly excited to welcome the Class of 2024 to campus and, happily, it is looking to be a large group of new Privateers—including first-year, transfer and graduate students—that will be joining us.</p>
+
+<p>Our current plan is to operate on a face-to-face basis in August 2020, with a strict set of guidelines that will prioritize the safety of our students, faculty and staff. The University’s COVID-19 Task Force is currently finalizing those guidelines. Given the fluidity of the Coronavirus pandemic, however, we are also engaged in scenario planning that will comply with local, state and federal guidelines that might exist in the future. It is prudent that we be ready to pivot to whichever path is best suited to a specific scenario, and that pivot may happen more than once. These are the different scenarios for which we are planning.</p>
+
+<ul>
+	<li><strong>Green Flag:</strong> a face-to-face, on-campus operation with appropriate precautions, including social distancing, use of masks or face coverings, and reduced classroom numbers. We plan on starting and continuing the semester in this mode.</li>
+	<li><strong>Yellow Flag:</strong> a multi-modal operation with more remote and hybrid (i.e., both online and face-to-face components) classes that support teaching and learning in a flexible and agile manner.</li>
+	<li><strong>Red Flag:</strong> a temporary remote operation, with focus on supporting technology needs and training for our students, faculty and staff.</li>
+</ul>
+
+<p>There is much we do not know about what the next few months will bring. To say otherwise would be disingenuous. Instead, we are spending our time and energy on what we can control. In this case, we can control how we plan for the various scenarios that we may encounter so that we can be ready for anything. We emphatically choose to focus on campus safety and continuity of meaningful student learning.</p>
+
+<p>Since its founding, the University of New Orleans has been a resilient and determined institution with a fighting spirit. Those attributes will carry us through these new challenges. More than ever, a college education is the key to a bright future and a thriving economy. So to answer those who have asked about fall, I will simply respond by saying: I can’t wait to see you all then.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Stay Home Mandate, Summer School, Fall Enrollment and Financial Aid - April 17, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>Earlier this week, Mayor Cantrell extended the city’s stay-home mandate until May 16, meaning the University of New Orleans will continue its current remote working arrangement for faculty and staff until at least that time. Only essential personnel in critical areas are permitted to work on campus. We have heard it endlessly, but it bears repeating: social distancing is the only certain way to reduce the spread of the coronavirus. Now is not the time to let up!</p>
+
+<p>In planning for the immediate future, all full-term summer school and summer session A courses will be held completely online. At this point, some summer session B courses are scheduled to be held face-to-face, particularly labs and studio courses, but that is subject to change if needed. We are providing additional scholarships and grants to students enrolled in summer courses to help cover some of the tuition and fees and reduce the financial burden on our students.</p>
+
+<p>I also encourage all students to register now for the fall semester. This will ensure that you get the classes you need to stay on track and complete your degree. Thanks to the federal government’s CARES (Coronavirus Aid, Relief and Economic Security) Act, there is even more financial support available to our registered students. Register for your courses now so that you are able to receive that aid. More information about the CARES Act, along with an application for financial support, will be posted on our Financial Aid website by Monday, April 20. The pandemic has obviously caused tremendous upheaval in so many parts of our lives, but the University is doing everything it can to try to limit financial disruptions for our students.</p>
+
+<p>Thank you for your commitment to the University of New Orleans. Our sense of community will help sustain us during this time of uncertainty. We will persevere … together!</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus Community – March 30, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>As you may have seen, there are now nearly 1,500 confirmed cases of COVID-19 in Orleans Parish alone. Clearly the virus is continuing to spread throughout the community, which underscores just how important it is that we ALL stay home as much as possible and practice social distancing. To limit the possibility of community spread on campus, we have made the decision to keep the Earl K. Long Library closed until further notice. Library faculty and staff are available to remotely assist students and employees, and all electronic resources continue to be available. We also have a limited amount of laptop computers that students can check out from another location on campus. If you are interested, email <a href="mailto:libref@uno.edu">libref@uno.edu</a>.</p>
+
+<p>We have instituted new access protocol intended to reduce the number of people on campus. Students who live off-campus should not come to campus. Employees who have not been instructed by their supervisors to report to work on campus should not come to campus. Students who have remained in the residence halls and essential personnel in the areas of Public Safety, Facilities, Housing and Campus Dining are now required to show their UNO ID, sign in and state their business to a University police officer when they attempt to enter campus. By now, employees have had ample time to collect important items from their offices. That time is over.</p>
+
+<p>In addition to supporting our own campus community, the University remains committed to assisting our larger community in the effort to respond to the pandemic. I am in contact with city and other local higher education leaders to determine what other assets and capabilities we might deploy to help metro New Orleans overcome this challenge.</p>
+
+<p>As always, I encourage you to check on our <a href="/covid-19/faqs">FAQ page</a>, which is updated often. I continue to be both proud of and grateful for our students, faculty and staff, and how we continue to support each other—from a distance.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+The University of New Orleans</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Student Tests Positive for COVID-19 – March 26, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>Late this afternoon, we became aware that one of our students has tested positive for the novel coronavirus (COVID-19). Given the spread across metro New Orleans and the entire state—with more than 2,300 positive cases in Louisiana—this is not surprising. It is also no reason to panic. The student, who lives off-campus, is in self-quarantine, at their home. Due to the fact that this student visited the library yesterday, we are immediately closing the library so that the first floor, which is the only floor that has remained open, can be fully disinfected. The library will reopen as soon as it is safe to do so.</p>
+
+<p>As a reminder, if you are experiencing any flu-like symptoms, do not leave your home. Self-isolation is the best way to reduce the spread of the virus. Additionally, only essential personnel and students who have decided to remain in their residence halls should be on campus. Everyone else should stay home, per the instructions of city and state health officials.</p>
+
+<p>Sincerely,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+The University of New Orleans</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus Community – March 26, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear UNO Community,</p>
+
+<p>We have not made any changes to the University’s operational status in the past few days, but I thought it important to provide you with general updates and convey my deepest thanks to you for your role—whether as faculty, staff or student—in helping to sustain our institution during this extraordinary time.</p>
+
+<p>The state remains under a Stay Home Mandate, which means each of us should be staying home under all circumstances except for essential needs like obtaining food, medication or health care. Even if you don’t have any symptoms, it is possible that you are carrying the virus and could transmit it to your family and friends. Please practice social distancing, and don’t go out unless absolutely necessary. A short-term inconvenience will unquestionably save lives in the long term.</p>
+
+<p>As a reminder, only essential personnel in areas including Campus Safety, Housing, Campus Dining and Facilities should report to campus. A number of students have moved out of the residence halls, particularly since the decision to postpone our May commencement. The first floor of the library is still open at this time, with limited hours and restrictions on occupancy, to allow our students to access computers and other resources. We are going to begin temperature checks on those who enter the library, as well. Our <a href="/covid-19/faqs">COVID-19 FAQs</a> are updated daily.</p>
+
+<p>UNO’s administration is working closely the Mayor of New Orleans, the UL System and the State in our collective response to COVID-19. As you may know, the parking lot outside of the UNO Lakefront Arena is one of several coronavirus testing sites in New Orleans. We continue to explore ways in which UNO and other higher education institutions can assist in improving public health and curbing the spread of the virus.</p>
+
+<p>The work that continues to be done, through remote instruction and virtual student support services, is a testament to the resilience, creativity and grit of our faculty and staff. While there have been hiccups, I am encouraged that meaningful learning is still happening. I am equally grateful to our students for their patience and flexibility. We recognize that this pandemic has been traumatic for all members of our community; we will persevere only through a spirit of cooperation and compassion.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+The University of New Orleans</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Stay Home Mandate from City of New Orleans - March 20, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>This afternoon, the City of New Orleans issued a stay-home mandate, meaning everyone should stay at home except for essential needs. Those needs include buying food, accessing health care or performing essential jobs. If you do need to leave your home to fulfill any of those needs, it’s important that you continue to practice social distancing and avoid gathering in groups. As I’ve said several times previously, limiting physical interaction is the only way to reduce the spread of the Coronavirus in our campus community and our larger community. This newest mandate from the city represents a decidedly more aggressive approach in attempting to curb the problem.</p>
+
+<p>The University of New Orleans has been in existence for nearly six and a half decades. This week, however, has been unlike any other in its history. We are all trying to manage the anxiety and uncertainty that these unprecedented events have provoked. Just because we need to practice social distancing doesn’t mean we need to be socially distant from our friends and family. I encourage you to connect with your support network in whichever way you can safely do that—preferably using technology. As human beings, we need to give and receive compassion, empathy and kindness. This weekend, I hope you will find occasion to do both.</p>
+
+<p>Please take the necessary time and effort to take care of yourself. This has been a grueling week that has taken a toll on all of us. It is essential that we pay attention to our own mental health. The Louisiana Department of Health has set up a 24/7 Keep Calm During COVID-19 Hotline. You can speak to a trained counselor by calling 1-866-310-7977.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+The University of New Orleans</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus Community - March 18, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>The unprecedented nature of this outbreak has created significant uncertainty around nearly aspect of our lives. This is challenging because we understand how important it is to plan for the future. With that in mind, and knowing that safety continues to be our top priority, I have made a very difficult decision about spring 2020 commencement. The ceremony will not be held on May 15. It is my intention to celebrate our graduates and their families at a later date when it is once again safe for people to gather in large groups.</p>
+
+<p>I share the profound disappointment of this development with our graduating seniors. I treasure each and every commencement, as it celebrates our graduates, ushers in the next phase of their lives and recognizes the people who helped them get there. This postponement, in no way, diminishes the impressiveness of your accomplishments and the pride we feel for your achievements. It is simply the only responsible choice in current circumstances. We hope the decision, painful as it might be, will also give our graduates and their families some rare certainty in these uncertain times.</p>
+
+<p>On a different subject, I would like to reiterate that only ESSENTIAL on-campus personnel in areas such as Public Safety, Housing, Campus Dining and Facilities should come to campus. With the exception of the UC (for mail and food pick-up) and the Library, all buildings will be locked. The key to stopping community spread of the virus is limiting interaction among members of our campus community.</p>
+
+<p>We have updated our <a href="/covid-19/faqs">COVID-19 FAQs</a> today so please check the page for the latest updates.</p>
+
+<p>UNO Proud,</p>
+
+<p><br />
+John Nicklow, PhD, PE, PH, DWRE<br />
+President<br />
+The University of New Orleans</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus- March 17, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>Given the constantly evolving situation, I want to provide you with updates, as I will on most days. I ask that you continue to stay abreast of the latest developments by checking our <a href="/covid-19/faqs">COVID-19 Frequently Asked Questions web page</a>. Today’s posts cover topics including student housing and student workers.</p>
+
+<p>The City of New Orleans has not announced any new citywide restrictions today. However, I want to reiterate that only ESSENTIAL personnel in areas such as Public Safety, Housing, Campus Dining and Facilities should report to work on-campus. Understanding that some faculty and staff needed to retrieve important materials from their offices today, we were flexible in allowing them to do so. This will not continue.</p>
+
+<p>The reason we are restricting access is to reduce the number of people on campus, limit physical interaction and halt the spread of the coronavirus through social distancing. I recognize that this is an inconvenience, but I ask for your patience and understanding. It is the only way the situation in our city will improve. Employees who come to campus should be prepared to explain to the UNOPD why their presence on campus is absolutely essential. It is foreseeable that, in the future, the City might further reinforce the directive about the presence of ONLY-ESSENTIAL personnel. We want to be ready when this happens.</p>
+
+<p>Thank you for your hard work, your patience and your commitment.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Only Essential Personnel to Report to Campus Tomorrow – March 16, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>This afternoon, Louisiana Governor John Bel Edwards issued a new round of statewide restrictions for the next month, closing bars, casinos and movie theaters and limiting restaurants to delivery, take-out and drive-through only. Additionally, the City of New Orleans has directed local colleges and universities to scale down operations.</p>
+
+<p>The University of New Orleans is now taking additional deliberate steps to safeguard its campus community. Your safety continues to be our top priority. <strong>Effective tomorrow morning (March 17), only essential University employees in areas such as Public Safety, Housing, Campus Dining, and Facilities should report to work on-campus.</strong> All other employees should telework or work remotely as laid out in the updated <a href="/covid-19/operations-plan">University’s Alternative Operations Plan</a>. If you have questions about whether your physical presence is essential and required on campus, check with your supervisor.</p>
+
+<p>We are committed to our students’ continuity of learning; remote instruction will proceed for the rest of the semester. At this time, students who choose to remain in their residence halls will be permitted to do so. Reduced food service will be offered to those students, but most other on-campus services will be discontinued until further notice. For students who remain on campus, the first floor of the Earl K. Long Library will be open with abbreviated hours: Monday-Friday, 8 a.m.-5 p.m. and Saturday-Sunday, 12-5 p.m.</p>
+
+<p>In order to discourage visitors to campus, the UNO Police Department will implement our overnight access plan around the clock. Alumni Drive at Elysian Fields will be the only entrance/exit on campus beginning this evening.</p>
+
+<p>We have heard the instructions over and over again, but they bear repeating. Wash your hands regularly, cover your cough with your elbow, practice social distancing, and do not gather in groups. These measures are the only things that will slow the spread of the novel coronavirus. Please continue to monitor the latest information on our <a href="https://www.uno.edu/covid-19">COVID-19 web page</a> and the <a href="https://www.uno.edu/covid-19/faqs">updated FAQs</a>. If there are changes in the University’s status, we will promptly communicate those.</p>
+
+<p>UNO Proud,</p>
+
+<p>John Nicklow, PhD, PE, PH, DWRE<br />
+President</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Remote Instruction Will Continue for the Rest of the Spring Semester</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>To call these past few days turbulent would be an understatement. The lives of our students, faculty and staff have been disrupted, and it is not clear to any of us when those disruptions will cease. I appreciate the hard work of our faculty and staff, as well as their creativity and innovation as we move to remote instruction. I am also grateful to our students for their patience and understanding. We are trying to serve you to the best of our ability. It will not be seamless. We will make mistakes. But my belief is that our spirit of cooperation, support and determination will get us through successfully.</p>
+
+<p><strong>To assist our students with their planning, we have decided to continue remote instruction for the remainder of the spring semester.</strong> We hope this information will allow you to make more informed decisions about your personal circumstances over the next two months. I feel a tremendous sense of sadness for our graduating seniors whose final semester at UNO has been so tumultuous. We have not made any decisions about the status of spring commencement but will do so in the coming weeks. It is important to us that we celebrate your achievement, whenever and however that may be possible.</p>
+
+<p>For students choosing to leave the residence halls, we support your decision and will continue to keep you informed of campus decisions. Students who are unable to return home or wish to remain in their residence halls, may do so. For current information on campus dining and other campus services, click on our <a href="https://www.uno.edu/covid-19/faqs">COVID-19 Frequently Asked Questions</a>. Be aware that information continues to change as the situation rapidly evolves. Please pay attention to our campus messages.</p>
+
+<p>The guidance that we have received from state and federal health officials is clear: the only way to reduce the spread of the coronavirus is through isolation and social distancing. <strong>To help facilitate that, we are implementing new measures effective immediately. On-campus gatherings will now be restricted to 25 people or fewer. No guests are allowed in the residence halls and in the Earl K. Long Library, which will remain open, at this point, to only UNO students and employees. Additionally, I ask that all of the campus community limit physical interaction and maximize social distancing.</strong> We all have an individual role to play in reducing the spread of the virus. By taking the necessary precautions right now, you will help protect yourself, your loved ones, your friends, and your community.</p>
+
+<p>I recently read the following insight online: “You won’t ever know if what you did personally helped … When the best way to save lives is to prevent a disease rather than treat it, success often looks like an overreaction.” Do your part now, even if some say it is an overreaction.</p>
+
+<p>Please bookmark our <a href="https://www.uno.edu/covid-19">COVID-19 website</a> and check back for updates. Employees should consult with their supervisors and consider taking advantage of our telework policy explained in our <a href="https://www.uno.edu/covid-19/operations-plan">Alternative Operations Plan</a>. These are extraordinary times that will test our capacity as an institution. But I know we have the right people to meet these challenges and support our students during this crisis.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus Community: COVID-19 Developments – March 13, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Campus Community,</p>
+
+<p>This afternoon, Louisiana Governor John Bel Edwards signed a proclamation aimed at slowing the spread of COVID-19 in Louisiana. All public K-12 schools across the state will be closed for 30 days, starting on Monday, March 16, unless they are able to move to remote instruction, and all gatherings of more than 250 people will be halted immediately.</p>
+
+<p>These announcements do not change the University’s plans that we announced earlier this week. We are proceeding with remote course delivery for all classes beginning on Monday, March 16. Our ban on large campus events is obviously in compliance with the Governor’s new restrictions. All other universities in the UL System, of which UNO is a member, followed suit with restrictions that match our own.</p>
+
+<p>To be clear, the University is still open and operating. We have students to serve, and we will do that to the very best of our ability. At this point, students who wish to remain in their on-campus residence halls are free to do so. Students may also return home to continue their coursework if they so choose. We will continue to serve meals, although dining services may be scaled back. The Earl K. Long Library, which now plays an even more vital role to our students, will remain open.</p>
+
+<p>In light of the statewide K-12 school closures and the effect it will have on our employees, we have developed an Alternative Operations Plan for Employees. This is a work plan that gives employees, who receive permission from their supervisors, the option to telework—or work remotely—in order to fulfill the duties of their jobs. Our goal is to be both understanding and flexible with our employees while continuing to serve our students and support them in their learning. All employees should review the plan posted <a href="https://www.uno.edu/covid-19/operations-plan">here</a>.</p>
+
+<p>I encourage all students and employees to regularly visit the <a href="https://www.uno.edu/covid-19/faqs">COVID-19 FAQs</a> posted on our <a href="https://www.uno.edu/covid-19">COVID-19 web page</a>. The FAQs are revised we get new information. As always, I will communicate with you again when updates are warranted. Thank you for your patience, understanding and commitment to the University of New Orleans.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">University to Transition to Remote Course Delivery on Monday, March 16 - March 11, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear UNO Community,</p>
+
+<p>As the developments with the coronavirus disease (COVID-19) continue to unfold, it is my goal to provide you with calm and reassuring guidance on how we will both protect members of our community and continue to deliver high quality education to our students. In consultation with UNO’s COVID-19 Task Force, state and local health officials, and local government and higher education leaders, we have made several important decisions.</p>
+
+<p><strong>Tomorrow’s course continuity readiness drill will proceed as planned.</strong> All scheduled classes on Thursday, March 12 will be conducted remotely. This is to prepare us for what’s to come.</p>
+
+<p><strong>Beginning on Monday, March 16, and until further notice, all in-person classes will be delivered remotely.</strong> Instructors will communicate relevant information to their students on how the course will be conducted. <strong>Also starting on March 16, all University-sponsored events held on campus with more than 50 attendees will be canceled and prohibited until further notice.</strong></p>
+
+<p>There are currently six presumptive positive cases of COVID-19 in New Orleans. While none is connected to our campus—as far as we know—it is imperative that we take decisive action before the outbreak becomes more widespread in our area. Health care officials are adamant that frequent handwashing and “social distancing,” or reducing the probability of contact between people who may be infected, are the best ways to stop the spread of the virus. It is true that COVID-19 has not yet had a significant impact on our campus community. We are implementing these reasonable, science-based safeguards in an effort to prevent that from happening.</p>
+
+<p><strong>In spite of the changes to course delivery, campus will remain open and employees are expected to report to work as usual.</strong> Students who live in residence halls may choose to either remain there or return home if it is more convenient to continue their remote learning.</p>
+
+<p>Campus Dining will have modified offerings and hours of operation. The Earl K. Long Library will remain open with adjusted hours. For details on both, visit our <a href="https://www.uno.edu/covid-19/faqs">COVID-19 FAQ page</a>. A few select campus buildings will close to discourage large communal gatherings. The Cove will close starting on Thursday and the Recreation and Fitness Center will close beginning on Monday.</p>
+
+<p>We continue to accumulate valuable information on the virus as well as all of our previous communications on the University’s <a href="https://www.uno.edu/covid-19">COVID-19 web page</a>.</p>
+
+<p>The University of New Orleans has a long history of confronting and overcoming challenges. Through the determination and teamwork of our campus community, I am confident that we will pull closer together and persevere through this uncertain time. Quite simply, it’s the UNO way.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">President’s Message to Faculty and Staff: Course Continuity and One-Day Drill - March 10, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Colleagues,</p>
+
+<p>As I am sure you have seen, the coronavirus (COVID-19) outbreak has prompted a number of prominent universities across the country to pivot from face-to-face classes to online instruction. There are obviously many factors that contribute to such a significant decision, including the impacts of the virus on the campus community, the guidance of local and state health officials, and the readiness of the institution. Fortunately, our annual hurricane planning means that we should be better positioned to teach courses remotely than some other universities.</p>
+
+<p><strong>In order for the University to test its course continuity readiness, we will hold a one-day drill on Thursday, March 12. All scheduled in-person classes on that date will be conducted remotely. There will be no face-to-face classes on campus. All faculty members are expected to communicate with their students and follow through with course instruction.</strong> In all other ways, campus will operate as usual on March 12.</p>
+
+<p>The Center for Teaching Innovation (CTI) has developed guidelines for ensuring course continuity in the event that in-person classes cannot be conducted. This is critical because of the spread of COVID-19 but it is also relevant to a hurricane or any other emergency event. If your course is not already online, there is valuable, easy-to-follow information on how to move it there in the <a href="https://www.uno.edu/cti/keep-teaching">Teaching Continuity Plan</a>. All faculty members are expected to review these resources as they prepare to teach remotely.</p>
+
+<p><strong>CTI will offer a pre-drill workshop using Zoom web conferencing software on Wednesday, March 11 from 1-2 p.m.</strong> The online meeting will allow faculty members to ask questions and share their plans for remote teaching in the event of in-person class cancelations. To attend, <a href="https://uno.zoom.us/j/951665597?status=success">click here</a>.</p>
+
+<p>Thank you for your dedication to your students and our university. By participating in the drill, you will help the institution judge its readiness to deliver instruction, regardless of the obstacles.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">President’s Message to Students: All Classes on Thursday, March 12 To Be Held Online As Part of Readiness Drill - March 10, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Students,</p>
+
+<p>As you may be aware, the coronavirus (COVID-19) has prompted a growing number of universities across the country to pivot from face-to-face classes to online instruction. There are obviously many factors that contribute to such a significant decision, including the impacts of the virus on the campus community, the guidance of local and state health officials, and the readiness of the institution.</p>
+
+<p>The Louisiana Department of Health continues to test people for COVID-19. At this point, there is only one presumptive positive case in the state; that person is receiving treatment at a hospital in New Orleans. As of now, the University has not canceled any in-person classes and moved them online. In fact, no college or university in the state has deviated from its normal instructional procedures. However, this is a fluid situation and it is important that we judge our readiness to deliver courses online, in the event that we need to.</p>
+
+<p><strong>Accordingly, the University will hold a one-day drill on Thursday, March 12. All scheduled in-person classes on that date will be conducted remotely. There will be no face-to-face classes on campus.</strong> If you have a class that typically meets on campus this Thursday, your instructor will communicate with you about how the course will continue remotely. In all other ways, campus will operate as usual on March 12.</p>
+
+<p>More information about COVID-19 and the University’s planning is available <a href="https://www.uno.edu/covid-19">here</a>. The University is focused on fulfilling our educational mission, which means we must be prepared to deliver instruction to our students, regardless of the obstacles.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: New Coronavirus Travel Guidelines - March 4, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear UNO Community,</p>
+
+<p>The University of Louisiana System has issued guidelines on the 2019 Novel Coronavirus (COVID-19) to its member institutions, including the University of New Orleans. Firstly, the system discourages all foreign travel by students and employees while the outbreak of COVID-19 remains a dynamic situation.</p>
+
+<p>Any University-sponsored travel to countries that are designated by the Centers for Disease Control as Level 1 or higher must be approved by the Office of the President. The countries with COVID-19 travel health notices are listed on the <a href="https://wwwnc.cdc.gov/travel/notices">CDC’s website</a>. They are subject to change but, as of today, they are:</p>
+
+<p><strong>Level 1: Hong Kong</strong></p>
+
+<p><strong>Level 2: Japan</strong></p>
+
+<p><strong>Level 3: China, South Korea, Italy, Iran</strong></p>
+
+<p>The System is encouraging all students and employees to return from Level 1 or higher risk countries as soon as possible. A quarantine period may be necessary for travelers before returning to campus.</p>
+
+<p>The UL System is also directing all students, faculty and staff to report to the University any personal travel to a country identified by the CDC as Level 1 or greater risk. If you are a student, please report relevant travel by filling out this <a href="https://neworleans.co1.qualtrics.com/jfe/form/SV_6utSvNKHcFMTofX">brief survey</a>. If you are an employee, please report it to Human Resources at <a href="mailto:hrm@uno.edu">hrm@uno.edu</a>.</p>
+
+<p>There are currently no confirmed cases of COVID-19 in Louisiana. However, it is important that we educate our community members on prevention, planning and protocol around the virus. The University has updated its communicable disease plan with an appendix on COVID-19. You may <a href="https://www.uno.edu/media/20561">review it here</a>. You can also get the latest updates on the virus <a href="http://ldh.la.gov/index.cfm/page/3835">here</a> from the <a href="http://ldh.la.gov/index.cfm/page/3835">Louisiana Department of Health</a>.</p>
+
+<p>Please continue to follow the healthy living guidelines of frequent hand washing; covering coughs; avoiding touching eyes, nose or mouth with unwashed hands; and staying home when ill. As we get more information, we will communicate it when warranted.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: Coronavirus Update and Tips on Maintaining Good Health – March 2, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear UNO Community,</p>
+
+<p>We are paying close attention to the latest developments on the coronavirus (COVID-19) and have been in touch with local health officials. <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">The Centers for Disease Control (CDC)</a> continues to emphasize that the immediate risk of this virus is low in our community—there are currently no reported cases in Louisiana. It is, however, still flu season. We encourage all members of our community to follow these health tips to reduce the risk of spreading infections.</p>
+
+<p>In general, the best way to maintain good health includes:</p>
+
+<ul>
+	<li>regular hand washing (at least 20 seconds with soap and hot water),</li>
+	<li>covering your cough with your elbow or a tissue rather than your hands (and then throwing the tissue away),</li>
+	<li>not eating or drinking from the same container as someone else,</li>
+	<li>routinely cleaning touched surfaces and objects, and</li>
+	<li>voluntary home isolation if you develop a fever or are sick with respiratory disease symptoms.</li>
+</ul>
+
+<p>The above tips can help prevent the spread of the flu, and they are effective against the spread of COVID-19, as well.<strong> It’s also not too late to get the flu shot.</strong></p>
+
+<p>If you have traveled out of the country during Spring Break in <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200224-sitrep-35-covid-19.pdf">areas where COVID-19 infection rates are high</a> (including parts of Asia and Europe), please screen yourself for risk of infection.</p>
+
+<ul>
+	<li>During your travels, were you in close contact with anyone who was ill? Or are you sick or showing symptoms of being sick (fever, headache, coughing or sneezing)? <strong>If you answer yes to either of these questions,</strong> please contact your primary care provider or the <a href="https://www.uno.edu/campus-health">Ochsner Health Clinic-UNO</a>.</li>
+</ul>
+
+<p>We will continue to monitor CDC updates, consult with local public health officials and provide additional information as necessary.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Students: Good Health Practices from Students Affairs – February 11, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear Students,</p>
+
+<p>You may have heard the news about recent confirmed cases of the mumps at LSU. While we have no reason to expect that any of our students will contract mumps, the risk of the flu remains high in Louisiana. I’m writing today with some general information that can help you stay healthy during the semester.</p>
+
+<p>In general, the best way to maintain good health includes:</p>
+
+<ul>
+	<li>regular hand washing (at least 20 seconds with soap and hot water),</li>
+	<li>covering your cough with your elbow or a tissue rather than your hands,</li>
+	<li>not eating or drinking from the same container as someone else, and</li>
+	<li>self-isolating if you develop a fever.</li>
+</ul>
+
+<p>The above tips can help prevent spread of the flu, and they are also effective against the spread of coronavirus (Covid-19) and mumps. It’s also not too late to get the flu shot.</p>
+
+<p>Though the risk remains low, it’s important to be aware of signs and symptoms of mumps:</p>
+
+<ul>
+	<li>painful swelling of one or both salivary glands</li>
+	<li>fever</li>
+	<li>muscle pain</li>
+	<li>headache</li>
+</ul>
+
+<p>Two doses of the measles, mumps, and rubella (MMR) vaccine is the best prevention, but the vaccine is not 100% effective. If you experience swelling of your salivary glands, seek treatment at the <a href="https://www.uno.edu/campus-health">Ochsner Health Clinic – UNO</a> or from your primary care physician. Lastly, if you’ve been thinking about enrolling in the <a href="https://www.uno.edu/campus-health/insurance">student health insurance plan</a>, the deadline to enroll for spring is February 13.</p>
+</div>
+      
+    
+</li>
+              <li role="presentation">
+          
+             <div class="collapsible-header">Message to Campus: University Travel to China – January 31, 2020</div>
+      
+             <div class="collapsible-body"><p>Dear UNO Community,</p>
+
+<p>The U.S. State Department has upgraded its <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/china-travel-advisory.html">warning against travel to China</a> to the highest level, advising Americans not to travel there due to the novel coronavirus first identified in Wuhan, China. The World Health Organization has also declared the coronavirus outbreak a global health emergency.</p>
+
+<p>Accordingly, the University is prohibiting all UNO students, faculty and staff from traveling to China for university business or university academic purposes, until further notice. Requests for exceptions should be made to the Office of the President. Travel to China for personal reasons is also strongly discouraged.</p>
+
+<p>There have been no confirmed cases of the coronavirus in Louisiana, and we have no reason to believe that the UNO community is at an elevated risk here in New Orleans. However, we have made this decision in order to ensure that our community members remain safe and healthy as they travel abroad.</p>
+
+<p>More information on the coronavirus is available <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/index.html">here</a> from the Centers for Disease Control and Prevention.</p>
+
+<p>The University administration, in consultation with public health officials, will continue to monitor the situation and provide additional updates as needed.</p>
+</div>
+      
+    
+</li>
+          </ul>
+  
+      </div>
+
+                    
+  
+  <div class="paragraph paragraph--type--basic-text-content paragraph--view-mode--default mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+          
+            <div><p><img alt="Prevent the Spread Privateers" data-entity-type="file" data-entity-uuid="e7fe9cd3-9804-4f8f-9b9d-6b6161e88bf3" src="/sites/default/files/inline-images/stopspread_1.png" /></p>
+
+<div style="border-left-style: solid; border-width: 10px; border-color:#ccc ; padding: 25px; background-color:#ecebed;"><strong>RESOURCES</strong>
+
+<hr /><p><a href="/experiential-learning/covid-19">UNO Community Engagement</a></p>
+
+<p><a href="/media/20561">Communicable Disease Emergency Plan</a><br /><br /><a href="/cti/keep-teaching">Teaching Continuity Plan</a><br /><br /><a href="/covid-19/operations-plan">Alternative Operations Plan for Employees</a><br /><br /><a href="https://ready.nola.gov/home/">City of New Orleans Health Department</a><br /><br /><a href="http://ldh.la.gov/index.cfm/page/3835">Louisiana Department of Health</a><br /><br /><a href="https://www.osha.gov/Publications/OSHA3990.pdf">Guidance on Preparing Workplaces for COVID-19</a></p>
+
+<p><a href="  https://www.dol.gov/sites/dolgov/files/WHD/posters/FFCRA_Poster_WH1422_Non-Federal.pdf">Employee Rights<br />
+Families First Coronavirus Response Act</a></p>
+</div>
+
+<h4 style="border-left: 10px solid rgb(255, 191, 63); border-width: 10px; border-color: rgb(255, 191, 63); padding: 25px; background-color: rgb(0, 48, 86);"><a href="/covid-19/faqs">COVID-19 FAQs</a></h4>
+</div>
+      
+      </div>
+
+        
+        </div>
+
+  </div>
+
+  </div>
+
+        
+        <footer role="contentinfo">
+            <section class="footer-top">
+                <div class="mdl-grid">
+                                              <div class="mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid footer-primary" role="navigation">
+    <div aria-labelledby="block-footercontactinfo-menu" id="block-footercontactinfo" data-block-plugin-id="system_menu_block:footer-contact-info" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                <ul role="menu">
+                      <li class="footer-logo">
+          <a href="https://www.google.com/maps/place/University+Center,+2000+Lakeshore+Dr,+New+Orleans,+LA+70148/@30.0292864,-90.066919,17z/data=!3m2!4b1!5s0x8620a925776887ff:0x64dca853dc0afbf0!4m5!3m4!1s0x8620a9257756b6e7:0x9b2909635820d4a!8m2!3d30.0292771!4d-90.0647134">
+            <img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" class="img-responsive" alt="University of New Orleans Logo" />
+          </a>
+        </li>
+            <li role="presentation">
+        <a href="https://www.google.com/maps/place/University+Center,+2000+Lakeshore+Dr,+New+Orleans,+LA+70148/@30.0292864,-90.066919,17z/data=!3m2!4b1!5s0x8620a925776887ff:0x64dca853dc0afbf0!4m5!3m4!1s0x8620a9257756b6e7:0x9b2909635820d4a!8m2!3d30.0292771!4d-90.0647134">2000 Lakeshore Drive New Orleans, LA 70148</a>
+              </li>
+                      <li role="presentation">
+        <a href="tel:8885144275">888-514-4275</a>
+              </li>
+                      <li role="presentation">
+        <a href="/about-uno/contact" data-drupal-link-system-path="node/5121">Additional Contacts</a>
+              </li>
+              </ul>
+  
+
+
+  </div>
+<div aria-labelledby="block-footerlearnmenu-menu" id="block-footerlearnmenu" data-block-plugin-id="system_menu_block:footer-learn-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                        <h2 aria-label="Learn"><a href="/academics" data-drupal-link-system-path="node/140">Learn</a></h2>
+<ul role="menu">
+                          <li role="presentation">
+        <a href="/admissions" data-drupal-link-system-path="node/224">Admission Information</a>
+              </li>
+                        <li role="presentation">
+        <a href="/academics" data-drupal-link-system-path="node/140">Programs of Study</a>
+              </li>
+                        <li role="presentation">
+        <a href="/financial-aid/types/scholarships-and-awards" data-drupal-link-system-path="node/246">Scholarships and Awards</a>
+              </li>
+                        <li role="presentation">
+        <a href="/admissions/tuition-fees" data-drupal-link-system-path="node/258">Tuition and Fees</a>
+              </li>
+              </ul>
+    
+
+
+  </div>
+<div aria-labelledby="block-footerexperiencemenu-menu" id="block-footerexperiencemenu" data-block-plugin-id="system_menu_block:footer-experience-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                        <h2 aria-label="Experience"><a href="/student-life" data-drupal-link-system-path="node/301">Experience</a></h2>
+<ul role="menu">
+                          <li role="presentation">
+        <a href="/international-center" data-drupal-link-system-path="node/5611">International Center</a>
+              </li>
+                        <li role="presentation">
+        <a href="/signature-events" data-drupal-link-system-path="node/302">Our Campus</a>
+              </li>
+                        <li role="presentation">
+        <a href="/student-life" data-drupal-link-system-path="node/301">Student Life</a>
+              </li>
+              </ul>
+    
+
+
+  </div>
+<div aria-labelledby="block-footersocialmenu-menu" id="block-footersocialmenu" data-block-plugin-id="system_menu_block:footer-social-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                                  <h2 aria-label="Connect"><a href="/student-life/uno-social-media" data-drupal-link-system-path="node/300">Connect</a></h2>
+          <ul role="menu">
+                        <li class="footer-social" role="presentation">
+              <div class="flex">
+                                  <a href="https://www.instagram.com/universityofneworleans/" rel="me" class="instagram social-icon" role="menuitem"></a>
+                                                  <a href="https://www.facebook.com/UniversityOfNewOrleans" rel="me" class="facebook social-icon" role="menuitem"></a>
+                                                  <a href="http://www.youtube.com/unovideo" rel="me" class="youtube social-icon" role="menuitem"></a>
+                                                  <a href="https://twitter.com/UofNO" rel="me" class="twitter social-icon" role="menuitem"></a>
+                              </div>
+            </li>
+                                                  <li role="presentation">
+          <a href="/student-life/uno-social-media" data-drupal-link-system-path="node/300">All Social</a>
+                  </li>
+                              <li role="presentation">
+          <a href="/calendar" data-drupal-link-system-path="node/24156">University Calendar</a>
+                  </li>
+                    </ul>
+  
+
+
+  </div>
+
+  </div>
+
+
+                                                                  <div class="mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid post-primary">
+    
+  
+                <div class="mdl-cell mdl-cell--3-col">
+        <a href="https://uno.tfaforms.net/217741">Request Info</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="/admissions/apply" data-drupal-link-system-path="node/245">Apply</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="/admissions/visit-us" data-drupal-link-system-path="node/247">Visit</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="http://www.unoalumni.com/donate">Give</a>
+      </div>
+    
+  
+
+
+
+
+  </div>
+
+
+                                    </div>
+            </section>
+                            <section class="footer-details">
+                      <div>
+        
+        
+              <section>
+              <small>
+        <a href="/user/login?destination=/covid-19" data-drupal-link-system-path="user/login">Copyright 2020 University of New Orleans</a>
+              </small>
+          <small>
+        <a href="/ehso/emergency-preparedness" data-drupal-link-system-path="node/7281">Emergency Preparedness</a>
+              </small>
+          <small>
+        <a href="https://www.ulsystem.edu/our-universities/university-of-new-orleans/">Member of the UL System</a>
+              </small>
+          <small>
+        <a href="https://www.uno.edu/non-discrimination">Non-Discrimination Statement</a>
+              </small>
+          <small>
+        <a href="/SACS" data-drupal-link-system-path="node/5126">SACSCOC Accreditation</a>
+              </small>
+          <small>
+        <a href="/compliance" data-drupal-link-system-path="node/7221">Title IX</a>
+              </small>
+        </section>
+  
+
+
+  
+
+  </div>
+
+                </section>
+                    </footer>
+    </div>
+    </div>
+
+  </div>
+
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/24961","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"parallax_bg":[{"selector":".parallax_bg","position":"50%","speed":"0.5"}],"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-out\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-secondary-button\u0022\u003E \u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EI AGREE\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-out\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-secondary-button\u0022\u003E \u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EI AGREE\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"opt_out","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"ajax":[],"user":{"uid":0,"permissionsHash":"74f3655759c78d6396c70972d79e2f14dcd31b65866035d9a329baefc523fc8f"}}</script>
+<script src="/sites/default/files/js/js_BZNsmom6hD5MdsQPs604zvJimS4dDNOmmLX5mEsDljc.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_8O_hVocNvZ9g1WhzqxmC5LcLw63wd4ZImRywWz-_wWc.js"></script>
+<script src="//code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="/sites/default/files/js/js_wmY5J_H028TyVUzLXUyaoPdKjTboNR0IwlY2REhIzok.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.9/dialog-polyfill.min.js"></script>
+<script src="/sites/default/files/js/js_eJRscvPHIfS1WaYWLvx8-6miwYKxFoe-v1isG0rvTTg.js"></script>
+
+
+
+
+    <script>
+        
+        (function($){
+
+            //Pushes the header down because the top bar is position:fixed and covers part of the header
+            function applyHeaderPadding(){
+                var margin  = $('.mobile-trigger').height() - 5;
+
+                //apply to the alert bar if present, the header image otherwise.
+                if($('.alert-bar').length){
+                    $('.alert-bar').css('margin-top', margin + 'px');
+                    console.log($('.alert-bar').length);
+                } else {
+                    //$('.header-image').css('margin-top', margin + 'px');
+                }
+
+            }
+
+            $(window).on('load', function() {
+
+                //Prepend an activation button to twirl down the menus.
+                // TODO: Render the activation links using Drupal.
+                // DISABLING the twirldowns on the secondary-nav menu because it is only one level
+                //            $('.secondary-nav ul li a').siblings("ul").parent().prepend('<a href="#" class="twirlDown"><i class="material-icons">add</i></a>');
+
+                //Twirl down the nearest nested UL when the .twirlDown is clicked
+                //            $('.secondary-nav ul li a').on('click', function(e){
+                //              e.preventDefault();
+                //              if($(this).siblings("ul").first().hasClass('expanded')){
+                //                $(this).siblings("ul").first().removeClass('expanded');
+                //                $(this).parent().children("a").first().empty();
+                //                $(this).parent().children("a").first().prepend('<i class="material-icons">add</i>');
+                //              } else {
+                //                $(this).siblings("ul").first().addClass('expanded');
+                //                $(this).parent().children("a").first().empty();
+                //                $(this).parent().children("a").first().prepend('<i class="material-icons">remove</i>');
+                //              }
+                //            });
+
+                //Trigger scroll to breadcrumbs waypoint
+                var heroHeight = ($('#header-logo').height()) + ($('.mobile-trigger').height());
+                var waypoint = new Waypoint({
+                    element: $('.layout-content'),
+                    handler: function(){
+                        $(".header-logo").toggleClass("revealed");
+                    },
+                    offset:  heroHeight - 3
+                });
+
+                setTimeout(function(){
+                  $('li.closeNav > a').on('click', function () {
+                    $('.hideMainNav').sideNav('hide');
+                  });
+                }, 10);
+
+                //The red X on the main fly-out navigation menu
+                $('.hideMainNav').click(function(e){
+                    e.preventDefault();
+                    $('.hideMainNav').sideNav('hide');
+                });
+
+                // Initialize collapse button
+                $(".triggerMainNav").sideNav({
+                    onOpen: function(el) {
+                        //Changing curser image based on position
+                        $("body").mousemove(function(e){
+                            if (e.pageX > 300)
+                                $("body").css("cursor", "not-allowed");
+                            else
+                                $("body").css("cursor", "default");
+                        });
+                    },
+                    onClose: function(el) {
+                        //Changing cursor image based on position
+                        $("body").mousemove(function(e){
+                            $("body").css("cursor", "default");
+                        });
+                    }
+                });
+
+                //Menu toggle for drilldowns
+                $(".offCanvasNav .expandable").click(function(e){
+                    e.preventDefault();
+                    $(this).toggleClass("expanded");
+                    e.stopPropagation();
+                });
+
+                //Menu toggle for drilldowns
+                $(".expandable").click(function(e){
+
+                    if($(this).parent().attr("aria-expanded") === "false"){
+                        $(this).parent().attr("aria-expanded", "true");
+                    }
+                    else if($(this).parent().attr("aria-expanded") === "true"){
+                        $(this).parent().attr("aria-expanded", "false");
+                    }
+                });
+
+            });
+
+            $(document).ready(function(){
+
+                applyHeaderPadding();
+
+                //Apply aria role to last breadcrumb
+                $( "#breadcrumbs li a" ).last().attr("aria-current", "page");
+
+                //Materialize parallax
+                $('.parallax').parallax();
+
+                //Append the aux menu to the main menu
+                $('.hamburger-aux-menu').contents().appendTo($('#slide-out'));
+                $('.hamburger-aux-menu').remove();
+                $("#slide-out li a:contains('Future Students Start Here')").addClass("green-accent");
+
+                //adding close menu button to main nav
+                $('#slide-out').append('<li class="closeNav"><a href="#" class="hideMainNav"><i class="material-icons">close</i></a></li>');
+            });
+
+            $(window).on('resize', function(){
+                applyHeaderPadding();
+            });
+
+        })(jQuery);
+
+
+
+    </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0836a9720d","applicationID":"46833939","transactionName":"YARaZRNTVkJVWkdaWVlOeVIVW1dfG31BRkZWDWRfDlZdbXdWXUdEWA1UVBNudl5QXGVaU0AiV18VQFddWFxBHghBCF1G","queueTime":0,"applicationTime":965,"atts":"TENZE1tJRUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

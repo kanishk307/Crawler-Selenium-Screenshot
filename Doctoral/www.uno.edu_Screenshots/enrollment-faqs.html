@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+
+
+
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"0836a9720d",applicationID:"46833939"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="twitter:card" content="photo" />
+<meta property="og:site_name" content="The University of New Orleans" />
+<link rel="canonical" href="https://www.uno.edu/covid-19/enrollment-faqs" />
+<meta name="twitter:description" content="The University of New Orleans is a place for those who know the future is not something you wait for... it is something you build." />
+<meta name="twitter:title" content="COVID-19 Enrollment Services FAQs" />
+<meta property="og:url" content="https://www.uno.edu/covid-19/enrollment-faqs" />
+<meta property="og:title" content="COVID-19 Enrollment Services FAQs" />
+<meta property="og:description" content="The University of New Orleans is a place for those who know the future is not something you wait for... it is something you build." />
+<meta name="twitter:image" content="https://www.uno.edu/og-image.jpg" />
+<meta property="og:image" content="https://www.uno.edu/og-image.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/sites/default/files/favicons/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/sites/default/files/favicons/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/sites/default/files/favicons/favicon-16x16.png"/>
+<link rel="manifest" href="/sites/default/files/favicons/site.webmanifest"/>
+<link rel="mask-icon" href="/sites/default/files/favicons/safari-pinned-tab.svg" color="#646569"/>
+<meta name="msapplication-TileColor" content="#2b5797"/>
+<meta name="theme-color" content="#646569"/>
+<meta name="favicon-generator" content="Drupal responsive_favicons + realfavicongenerator.net" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #003056} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="revision" href="https://www.uno.edu/covid-19/enrollment-faqs" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qcuqsp" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+        <title>COVID-19 Enrollment Services FAQs | The University of New Orleans</title> <!-- testing deployment flow -->
+        <link rel="stylesheet" media="all" href="/sites/default/files/css/css_PEf_tfjRoE7cXwda5sasFsSyGPL7XBxIklppjJmXB6o.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_jLIj4vquty5bVQpj5fC6wz3Zy6EfVGPoCNq9MYXd-E8.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.9/dialog-polyfill.min.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMontserrat:700" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:700" />
+
+            
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+    <script async src="https://tag.simpli.fi/sifitag/8a58ce50-7b46-0137-60e2-067f653fa718"></script>
+
+                </head>
+<body>
+
+<a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+</a>
+<!--[if lte IE 9]>
+<div class="unsupported">
+    <div class="absolute-center">
+        <h1 class="center">This page uses technologies your browser does not support.</h1>
+        <p>Many of our new website's features will not function and basic layout will appear broken.</p>
+        <p>Visit <a href="https://browsehappy.com/">browsehappy.com</a> to learn how to upgrade your browser.</p>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGB5PXW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+    <div class="content-wrapper">
+        <header>
+                                            <div id="headerStripe"></div>
+<div class="mobile-trigger stuck">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+            <a href="#" data-activates="slide-out" class="triggerMainNav" role="button" aria-label="Open Menu"><i class="material-icons">menu</i></a>
+        </div>
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--order-10-desktop" role="search">
+          <!--search box-->
+          <form action="/search" method="get" id="search" accept-charset="UTF-8">
+            <input data-drupal-selector="edit-keywords" size="30" maxlength="128" class="form-text" type="text" type="text" name="keywords" id="query">
+          </form>
+
+        </div>
+        <div class="mdl-cell mdl-cell--8-col" id="header-logo">
+            <img src="https://www.uno.edu/sites/default/files/img/uno-line.png" class="header-logo" alt="University of New Orleans Logo" />
+        </div>
+    </div>
+</div>
+
+                                        
+
+                <nav role="navigation" aria-labelledby="block-hamburgerauxmenu-menu" id="block-hamburgerauxmenu" data-block-plugin-id="system_menu_block:hamburger-aux-menu" class="settings-tray-editable" data-drupal-settingstray="editable">
+            
+  <p class="visually-hidden" id="block-hamburgerauxmenu-menu">Hamburger Aux Menu</p>
+  
+
+        
+              <ul class="hamburger-aux-menu">
+                                  <li class="aux-entry">
+                <a href="http://www.uno.edu/about-uno/campus-map/">Maps &amp; Directions</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/dock" data-drupal-link-system-path="node/2306">For Current Students</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/quick" data-drupal-link-system-path="node/328">For Faculty &amp; Staff</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="http://www.unoalumni.com/">For Alumni</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/parents" data-drupal-link-system-path="node/14946">For Parents</a>
+              </li>
+                              <li class="aux-entry">
+                <a href="/jobs/">Employment Opportunities</a>
+              </li>
+                              <li class="aux-entry last">
+                <a href="http://www.unoalumni.com/donate">Give Now</a>
+              </li>
+          <li class="aux-entry" style="display: flex;align-items: center; margin-top: 10px; margin-left: 30px;">
+          <img src="/sites/default/files/add/2019-05/privateer-menu-logo.png">
+          <a href="http://www.unoprivateers.com" style="padding-left: 10px;">Privateer Sports</a>
+      </li>
+    </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-hamburgermenu-menu" id="block-hamburgermenu" data-block-plugin-id="system_menu_block:hamburger-menu" class="settings-tray-editable offCanvasNav" data-drupal-settingstray="editable">
+            
+  <p class="visually-hidden" id="block-hamburgermenu-menu">Hamburger Menu</p>
+  
+
+        
+  
+            <ul class="side-nav" role="tree" id="slide-out" aria-label="main navigation">
+                            <li id="navlogo" role="treeitem">
+            <a href="https://www.uno.edu/"><img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" class="img-responsive" alt="University of New Orleans Logo" aria-roledescription="logo" /></a>
+          </li>
+        
+              <li role="presentation" aria-expanded="false">
+                  <a href="/nse">Accepted Students</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/future-students">Future Students</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Admissions</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/virtual-tour">Take a Virtual Tour</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions">Office of Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions/apply-freshman">Undergraduate Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad/admission-requirements">Graduate Admissions</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://uno.tfaforms.net/217741">Request Information</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/admissions/tuition-fees">Tuition and Fees</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/financial-aid/types/scholarships-and-awards">Scholarships and Awards</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/financial-aid">Financial Aid</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Academics</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/academics">Academics Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/undergraduate-programs">Undergraduate Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad/programs">Graduate Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/general-education">General Education</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://extended.uno.edu/">Professional and Continuing Education (PaCE)</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/online-programs">Online Degree Programs</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/service-learning">Service Learning</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/study-abroad">Study Abroad</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Colleges</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coba">Business Administration</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coe">Engineering</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/colaehd">Liberal Arts, Education &amp; Human Development</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/cos">College of Sciences</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/colaehd/sota">School of the Arts</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coba/hrt">Hotel, Restaurant &amp; Tourism</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/coe/name">School of Naval Architecture</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/ids">Interdisciplinary Studies</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/academics/grad">The Graduate School</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">About UNO</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno">About UNO</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/at-a-glance">At A Glance</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/office-of-the-president">Office of the President</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/administration">Administrative Offices</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/mission">Mission &amp; Vision</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/about-uno/history">History</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/advancement">University Advancement</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.unoalumni.com/">Alumni</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Research</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/research">Research Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/funding">Faculty &amp; Staff Research</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/student">Student Research</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/collaborate">Collaborate with UNO</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/research/office">Office of Research</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://www.uno.edu/" class="expandable"  role="treeitem" aria-expanded="false">Student Life</a>
+            
+            <ul role="group">
+              <li role="presentation" aria-expanded="false">
+                  <a href="/student-life">Student Life Home</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/upd">Campus Safety</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/housing">On Campus Housing</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="https://dineoncampus.com/nola/">Campus Dining</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/recreation-intramural-sports">Recreation &amp; Fitness</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-health">Student Health</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-life">Campus Hangouts</a>
+              </li>
+          <li role="presentation" aria-expanded="false">
+                  <a href="/student-involvement-leadership/orgs">Get Involved</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+            
+            
+                
+                                        
+                
+                                                                        <div class="header-image">
+    <div id="block-bannerplaceholder" data-block-plugin-id="block_content:96a0b7ce-7a59-468c-b44c-bdc9714f7b0c" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+  </div>
+
+    <div class="logo-banner" id="hero-logo">
+        <img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" alt="UNO Logo" class="img-responsive-vertical logo" />
+    </div>
+</div>
+
+                                                                                                                                                                                                                           <div>
+    <div id="block-covid19banner-2" data-block-plugin-id="block_content:9e60e8f9-8a50-4895-9402-67ff67811527" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+
+            <div><style type="text/css">#covid-19-banner{
+    background-color: #c4d600;
+    color: #292929;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 3px solid #0c3056;
+    position: relative;
+}
+
+#covid-left, #covid-right {
+  width: 50%;
+  padding: 1.5rem 3rem;
+ display:flex;
+     align-items: center;
+}
+
+#covid-left {
+  background-color: #7ecbed; 
+  justify-content: flex-end;
+}
+
+.covid-19-text {
+  margin: 0 1rem;
+}
+
+ #covid-19-banner a { 
+   min-width: 11rem;
+ }
+
+@media only screen and (max-width: 600px) {
+ #featured-grid{
+  padding-top: 4rem !important;
+ } 
+
+ #covid-19-banner {
+  font-size: 1.3rem;
+  flex-direction: column;
+}
+
+#covid-left, #covid-right {
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#covid-right{
+   flex-flow: column-reverse;
+}
+
+.covid-19-text{
+  margin: 0;
+  text-align: center;
+ line-height: 2rem;
+}
+}
+</style>
+<div id="covid-19-banner">
+<div id="covid-left"><span class="covid-19-text">COVID-19 INFORMATION</span> <a class="btn btn-blue" href="/covid-19">Learn More</a></div>
+
+<div id="covid-right"><a class="btn btn-blue" href="https://app.mobilecause.com/e/_68AKw?vid=66a4c">Please Give</a><span class="covid-19-text"> UNO FIRST Student Support Fund</span></div>
+</div>
+</div>
+      
+  </div>
+<div id="block-breadcrumbs-2" data-block-plugin-id="system_breadcrumb_block" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+          <ul class="breadcrumbs" id="breadcrumbs" aria-label="breadcrumbs">
+                            <li class="crumb">
+                            <a href="/">university of new orleans</a>
+                    </li>
+                            <li class="crumb">
+                            <a href="/covid-19">covid-19 information</a>
+                    </li>
+                            <li class="crumb">
+                            covid-19 enrollment services faqs
+                    </li>
+        </ul>
+
+  </div>
+
+  </div>
+
+                                                                        </header>
+        <a id="main-content" tabindex="-1"></a>
+
+                        
+
+        <div class="layout-content">
+            
+            <section class="mdl-grid container-wide" id="featured-grid">
+
+                        
+                                    <div class="mdl-cell mdl-cell--12-col">
+                          <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-mainregionwidgets" data-block-plugin-id="entity_field:node:field_main_content_paragraphs" class="settings-tray-editable" data-drupal-settingstray="editable">
+  
+    
+      
+      <div class="mdl-grid">
+              
+  
+  <div class="paragraph paragraph--type--basic-text-content paragraph--view-mode--default mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+          
+            <div><h1>COVID-19 FAQs for Enrollment Services</h1>
+
+<h5>Can I be admitted as a freshman for Summer 2020 or Fall 2020 without test scores?</h5>
+
+<p>Due to the COVID-19 pandemic, the University of New Orleans will admit in-state first time freshman, who apply on or after April 1st, 2020, based solely on the Louisiana Core 4 GPA. For the Summer and Fall 2020 terms, applicants with a 2.5+ core GPA who do not meet test score requirements, or do not submit test scores will be admitted based on core GPA alone. For any questions please contact the Privateer Enrollment Center at <a href="mailto:pec@uno.edu">pec@uno.edu</a>. Students who are admitted in this manner will need to sit for the Accuplacer exam prior to enrollment, and can email <a href="mailto:testing@uno.edu">testing@uno.edu</a> to register.</p>
+
+<h5>Are campus tours still available?</h5>
+
+<p>While in-person tours are temporarily paused, we do have a virtual tour page where you can experience our lakefront campus here: <a href="/virtual-tour">https://www.uno.edu/virtual-tour</a></p>
+
+<h5>How do I receive my UNO login/where can I find my UNO ID number?</h5>
+
+<p>When you were admitted, you should have received an email from Access Services that said “Welcome to the UNO Community”. In that email, there is information on how to set up your UNO username and password. If you have not received it, please email our Information Technology department at <a href="mailto:helpdesk@uno.edu">helpdesk@uno.edu</a>. Your UNO ID number is listed on your acceptance letter. If you can’t find it, please email the Privateer Enrollment Center at <a href="mailto:pec@uno.edu">pec@uno.edu</a> with your first and last name and date of birth. Our staff&nbsp;can look it up for you.</p>
+
+<h5>If I get new ACT/SAT scores, can I be considered for a higher freshman scholarship?</h5>
+
+<p>Yes, if your new scores are received before the priority scholarship deadline and if funding remains available.</p>
+
+<h5>Can I receive&nbsp;a freshman scholarship without ACT or SAT test scores?</h5>
+
+<p>Yes, but only for in state students and for those who applied on or after April 1, 2020.</p>
+
+<h5>I have a hold on my account. What is it? What do I do?</h5>
+
+<p>This hold on your WebSTAR account could pertain to many different things – it could be a hold for advising, immunization records, etc. There should be a description listed on your account that explains what it is. For more information, please email the Privateer Enrollment Center at <a href="mailto:pec@uno.edu">pec@uno.edu</a>&nbsp;with your first and last name, date of birth, and UNO ID number if you know it.</p>
+
+<h5>How do I receive credit for my AP or dual enrollment courses?</h5>
+
+<p>Please submit your AP score report and college transcript (from the college that you took Dual Enrollment courses at) to <a href="mailto:transcripts@uno.edu">transcripts@uno.edu</a>. If you took Dual enrollment courses at UNO, then no need to request a transcript. We can access those grades within our system. At this time, we are accepting unofficial copies of AP test scores and dual enrollment transcripts.</p>
+
+<h5>Are Summer 2020 classes still being offered? Are they offered online?</h5>
+
+<p>Full Summer Session and Summer Session A courses will be conducted completely online. Some Summer Session B courses are tentatively scheduled to be held in person, but that is subject to change.</p>
+
+<h5>Can I take the AccuPlacer online?</h5>
+
+<p>Currently, there is not an option to take the Accuplacer online but College Board is working on a plan for this. More information about this option will be known soon.</p>
+
+<h5>Are unofficial transcripts/ scores accepted? My school can't send the official ones right now.</h5>
+
+<p>Currently, we are accepting any unofficial transcript –whether it is college or high school. As well as unofficial test scores – whether it is ACT, SAT, AP, etc. for the semester that you are applying for. We will need the official document by the end of your first semester here at UNO (so if it’s Fall 2020, we will need it by December 2020). This is only applicable for Summer 2020 and Fall 2020.</p>
+
+<h5>Where can I send my application materials since offices are working remotely?</h5>
+
+<p>All documents – official or unofficial, can be sent to <a href="mailto:transcripts@uno.edu">transcripts@uno.edu</a>.</p>
+
+<h5>Can my application fee be waived?</h5>
+
+<p>Yes! As of April 9th, we will be temporarily waiving all application fees for our undergraduate and graduate students who are applying to UNO for Summer 2020 and Fall 2020.</p>
+
+<h5>What do international students need to apply to UNO?</h5>
+
+<p>For first-time freshman applicants - we require transcripts, ACT/SAT results. For transfer applicants – we require transcript/evaluation and test scores. For graduate applicants, we require transcript/evaluation and test scores. If you would like more information about the application process, please email <a href="mailto:internationaladmit@uno.edu">internationaladmit@uno.edu</a>.</p>
+
+<h5>What are the requirements for the graduate programs at UNO?</h5>
+
+<p>Each graduate program have their own specific requirements for admissions. More information can be found here: <a href="/academics/grad/programs">https://www.uno.edu/academics/grad/programs</a></p>
+
+<h5>My application says that the transcript hasn't been received, but I already sent it/got a confirmation email from my last school. What do I do now?</h5>
+
+<p>Please email the Privateer Enrollment Center at <a href="mailto:pec@uno.edu">pec@uno.edu</a> with your first and last name, date of birth, UNO ID number if you know it, and the confirmation email that your transcript was sent. Our Data Management team can check for you.</p>
+
+<h5>What is the status of my application/Have I been accepted yet?</h5>
+
+<p>You can login to your application portal with the username and password that you created. You can also email the Privateer Enrollment Center at <a href="mailto:pec@uno.edu">pec@uno.edu</a> with your first and last name and date of birth. They will be able to check your application status for you.</p>
+
+<h5>What are&nbsp;the costs of tuition and fees at UNO?</h5>
+
+<p>For more information,&nbsp;click here: <a href="/bursar/tuition-fees">https://www.uno.edu/bursar/tuition-fees</a>.<br />
+Please note that Summer 2020 and Fall 2020 tuition and fees have not been created yet. This information will be updated by our Bursars office later in the Spring.</p>
+
+<h5>Is UNO&nbsp;extending undergraduate admissions/financial aid deadlines due to COVID-19?</h5>
+
+<ul>
+	<li>Priority deadline for scholarship and grant consideration for incoming Freshmen students for Fall 2020 has been extended to June 5th.</li>
+	<li>Summer 2020 Freshman app deadline: June 4th.</li>
+	<li>Transfer Summer app deadline: May 20th.</li>
+	<li>Fall 2020 Freshman app deadline: August 1.</li>
+	<li>Transfer Fall app deadline: August 3.</li>
+</ul>
+
+<h5>Where do I order my UNO transcript to send to another school?</h5>
+
+<p>This is through the Office of the Registrar. More information can be found here: <a href="/registrar/transcript">https://www.uno.edu/registrar/transcript</a>. Please note that UNO transcripts can be ordered online only. All in-person pickups of transcripts have been suspended due to Covid-19.</p>
+
+<h5>I cannot get a copy of my immunization records to send to UNO. What should I do?</h5>
+
+<p>You do not need to worry about sending these right now. Please fill out the immunization waiver online. More information can be found here: <a href="/campus-health/immunization-information">https://www.uno.edu/campus-health/immunization-information</a>. Student Health services will be processing these waivers as they come in.</p>
+</div>
+      
+      </div>
+          </div>
+  
+  </div>
+<article role="article" about="/covid-19/enrollment-faqs">
+
+  
+    
+
+  
+  <div>
+    
+  </div>
+
+</article>
+
+  </div>
+
+                    </div>
+
+                                                    </section>
+
+        
+        <footer role="contentinfo">
+            <section class="footer-top">
+                <div class="mdl-grid">
+                                              <div class="mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid footer-primary" role="navigation">
+    <div aria-labelledby="block-footercontactinfo-menu" id="block-footercontactinfo" data-block-plugin-id="system_menu_block:footer-contact-info" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                <ul role="menu">
+                      <li class="footer-logo">
+          <a href="https://www.google.com/maps/place/University+Center,+2000+Lakeshore+Dr,+New+Orleans,+LA+70148/@30.0292864,-90.066919,17z/data=!3m2!4b1!5s0x8620a925776887ff:0x64dca853dc0afbf0!4m5!3m4!1s0x8620a9257756b6e7:0x9b2909635820d4a!8m2!3d30.0292771!4d-90.0647134">
+            <img src="/sites/default/files/UNOLogo-horiz-web-reverse-Large.png" class="img-responsive" alt="University of New Orleans Logo" />
+          </a>
+        </li>
+            <li role="presentation">
+        <a href="https://www.google.com/maps/place/University+Center,+2000+Lakeshore+Dr,+New+Orleans,+LA+70148/@30.0292864,-90.066919,17z/data=!3m2!4b1!5s0x8620a925776887ff:0x64dca853dc0afbf0!4m5!3m4!1s0x8620a9257756b6e7:0x9b2909635820d4a!8m2!3d30.0292771!4d-90.0647134">2000 Lakeshore Drive New Orleans, LA 70148</a>
+              </li>
+                      <li role="presentation">
+        <a href="tel:8885144275">888-514-4275</a>
+              </li>
+                      <li role="presentation">
+        <a href="/about-uno/contact" data-drupal-link-system-path="node/5121">Additional Contacts</a>
+              </li>
+              </ul>
+  
+
+
+  </div>
+<div aria-labelledby="block-footerlearnmenu-menu" id="block-footerlearnmenu" data-block-plugin-id="system_menu_block:footer-learn-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                        <h2 aria-label="Learn"><a href="/academics" data-drupal-link-system-path="node/140">Learn</a></h2>
+<ul role="menu">
+                          <li role="presentation">
+        <a href="/admissions" data-drupal-link-system-path="node/224">Admission Information</a>
+              </li>
+                        <li role="presentation">
+        <a href="/academics" data-drupal-link-system-path="node/140">Programs of Study</a>
+              </li>
+                        <li role="presentation">
+        <a href="/financial-aid/types/scholarships-and-awards" data-drupal-link-system-path="node/246">Scholarships and Awards</a>
+              </li>
+                        <li role="presentation">
+        <a href="/admissions/tuition-fees" data-drupal-link-system-path="node/258">Tuition and Fees</a>
+              </li>
+              </ul>
+    
+
+
+  </div>
+<div aria-labelledby="block-footerexperiencemenu-menu" id="block-footerexperiencemenu" data-block-plugin-id="system_menu_block:footer-experience-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                        <h2 aria-label="Experience"><a href="/student-life" data-drupal-link-system-path="node/301">Experience</a></h2>
+<ul role="menu">
+                          <li role="presentation">
+        <a href="/international-center" data-drupal-link-system-path="node/5611">International Center</a>
+              </li>
+                        <li role="presentation">
+        <a href="/signature-events" data-drupal-link-system-path="node/302">Our Campus</a>
+              </li>
+                        <li role="presentation">
+        <a href="/student-life" data-drupal-link-system-path="node/301">Student Life</a>
+              </li>
+              </ul>
+    
+
+
+  </div>
+<div aria-labelledby="block-footersocialmenu-menu" id="block-footersocialmenu" data-block-plugin-id="system_menu_block:footer-social-menu" class="settings-tray-editable mdl-cell mdl-cell--3-col" data-drupal-settingstray="editable">
+    
+        
+                                  <h2 aria-label="Connect"><a href="/student-life/uno-social-media" data-drupal-link-system-path="node/300">Connect</a></h2>
+          <ul role="menu">
+                        <li class="footer-social" role="presentation">
+              <div class="flex">
+                                  <a href="https://www.instagram.com/universityofneworleans/" rel="me" class="instagram social-icon" role="menuitem"></a>
+                                                  <a href="https://www.facebook.com/UniversityOfNewOrleans" rel="me" class="facebook social-icon" role="menuitem"></a>
+                                                  <a href="http://www.youtube.com/unovideo" rel="me" class="youtube social-icon" role="menuitem"></a>
+                                                  <a href="https://twitter.com/UofNO" rel="me" class="twitter social-icon" role="menuitem"></a>
+                              </div>
+            </li>
+                                                  <li role="presentation">
+          <a href="/student-life/uno-social-media" data-drupal-link-system-path="node/300">All Social</a>
+                  </li>
+                              <li role="presentation">
+          <a href="/calendar" data-drupal-link-system-path="node/24156">University Calendar</a>
+                  </li>
+                    </ul>
+  
+
+
+  </div>
+
+  </div>
+
+
+                                                                  <div class="mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid post-primary">
+    
+  
+                <div class="mdl-cell mdl-cell--3-col">
+        <a href="https://uno.tfaforms.net/217741">Request Info</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="/admissions/apply" data-drupal-link-system-path="node/245">Apply</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="/admissions/visit-us" data-drupal-link-system-path="node/247">Visit</a>
+      </div>
+          <div class="mdl-cell mdl-cell--3-col">
+        <a href="http://www.unoalumni.com/donate">Give</a>
+      </div>
+    
+  
+
+
+
+
+  </div>
+
+
+                                    </div>
+            </section>
+                            <section class="footer-details">
+                      <div>
+        
+        
+              <section>
+              <small>
+        <a href="/user/login?destination=/covid-19/enrollment-faqs" data-drupal-link-system-path="user/login">Copyright 2020 University of New Orleans</a>
+              </small>
+          <small>
+        <a href="/ehso/emergency-preparedness" data-drupal-link-system-path="node/7281">Emergency Preparedness</a>
+              </small>
+          <small>
+        <a href="https://www.ulsystem.edu/our-universities/university-of-new-orleans/">Member of the UL System</a>
+              </small>
+          <small>
+        <a href="https://www.uno.edu/non-discrimination">Non-Discrimination Statement</a>
+              </small>
+          <small>
+        <a href="/SACS" data-drupal-link-system-path="node/5126">SACSCOC Accreditation</a>
+              </small>
+          <small>
+        <a href="/compliance" data-drupal-link-system-path="node/7221">Title IX</a>
+              </small>
+        </section>
+  
+
+
+  
+
+  </div>
+
+                </section>
+                    </footer>
+    </div>
+    </div>
+
+  </div>
+
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/25641","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"parallax_bg":[{"selector":".parallax_bg","position":"50%","speed":"0.5"}],"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-out\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-secondary-button\u0022\u003E \u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EI AGREE\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-out\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-secondary-button\u0022\u003E \u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EI AGREE\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"opt_out","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"ajax":[],"user":{"uid":0,"permissionsHash":"74f3655759c78d6396c70972d79e2f14dcd31b65866035d9a329baefc523fc8f"}}</script>
+<script src="/sites/default/files/js/js_BZNsmom6hD5MdsQPs604zvJimS4dDNOmmLX5mEsDljc.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_8O_hVocNvZ9g1WhzqxmC5LcLw63wd4ZImRywWz-_wWc.js"></script>
+<script src="//code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="/sites/default/files/js/js_wmY5J_H028TyVUzLXUyaoPdKjTboNR0IwlY2REhIzok.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.9/dialog-polyfill.min.js"></script>
+<script src="/sites/default/files/js/js_eJRscvPHIfS1WaYWLvx8-6miwYKxFoe-v1isG0rvTTg.js"></script>
+
+
+
+
+    <script>
+        
+        (function($){
+
+            //Pushes the header down because the top bar is position:fixed and covers part of the header
+            function applyHeaderPadding(){
+                var margin  = $('.mobile-trigger').height() - 5;
+
+                //apply to the alert bar if present, the header image otherwise.
+                if($('.alert-bar').length){
+                    $('.alert-bar').css('margin-top', margin + 'px');
+                    console.log($('.alert-bar').length);
+                } else {
+                    //$('.header-image').css('margin-top', margin + 'px');
+                }
+
+            }
+
+            $(window).on('load', function() {
+
+                //Prepend an activation button to twirl down the menus.
+                // TODO: Render the activation links using Drupal.
+                // DISABLING the twirldowns on the secondary-nav menu because it is only one level
+                //            $('.secondary-nav ul li a').siblings("ul").parent().prepend('<a href="#" class="twirlDown"><i class="material-icons">add</i></a>');
+
+                //Twirl down the nearest nested UL when the .twirlDown is clicked
+                //            $('.secondary-nav ul li a').on('click', function(e){
+                //              e.preventDefault();
+                //              if($(this).siblings("ul").first().hasClass('expanded')){
+                //                $(this).siblings("ul").first().removeClass('expanded');
+                //                $(this).parent().children("a").first().empty();
+                //                $(this).parent().children("a").first().prepend('<i class="material-icons">add</i>');
+                //              } else {
+                //                $(this).siblings("ul").first().addClass('expanded');
+                //                $(this).parent().children("a").first().empty();
+                //                $(this).parent().children("a").first().prepend('<i class="material-icons">remove</i>');
+                //              }
+                //            });
+
+                //Trigger scroll to breadcrumbs waypoint
+                var heroHeight = ($('#header-logo').height()) + ($('.mobile-trigger').height());
+                var waypoint = new Waypoint({
+                    element: $('.layout-content'),
+                    handler: function(){
+                        $(".header-logo").toggleClass("revealed");
+                    },
+                    offset:  heroHeight - 3
+                });
+
+                setTimeout(function(){
+                  $('li.closeNav > a').on('click', function () {
+                    $('.hideMainNav').sideNav('hide');
+                  });
+                }, 10);
+
+                //The red X on the main fly-out navigation menu
+                $('.hideMainNav').click(function(e){
+                    e.preventDefault();
+                    $('.hideMainNav').sideNav('hide');
+                });
+
+                // Initialize collapse button
+                $(".triggerMainNav").sideNav({
+                    onOpen: function(el) {
+                        //Changing curser image based on position
+                        $("body").mousemove(function(e){
+                            if (e.pageX > 300)
+                                $("body").css("cursor", "not-allowed");
+                            else
+                                $("body").css("cursor", "default");
+                        });
+                    },
+                    onClose: function(el) {
+                        //Changing cursor image based on position
+                        $("body").mousemove(function(e){
+                            $("body").css("cursor", "default");
+                        });
+                    }
+                });
+
+                //Menu toggle for drilldowns
+                $(".offCanvasNav .expandable").click(function(e){
+                    e.preventDefault();
+                    $(this).toggleClass("expanded");
+                    e.stopPropagation();
+                });
+
+                //Menu toggle for drilldowns
+                $(".expandable").click(function(e){
+
+                    if($(this).parent().attr("aria-expanded") === "false"){
+                        $(this).parent().attr("aria-expanded", "true");
+                    }
+                    else if($(this).parent().attr("aria-expanded") === "true"){
+                        $(this).parent().attr("aria-expanded", "false");
+                    }
+                });
+
+            });
+
+            $(document).ready(function(){
+
+                applyHeaderPadding();
+
+                //Apply aria role to last breadcrumb
+                $( "#breadcrumbs li a" ).last().attr("aria-current", "page");
+
+                //Materialize parallax
+                $('.parallax').parallax();
+
+                //Append the aux menu to the main menu
+                $('.hamburger-aux-menu').contents().appendTo($('#slide-out'));
+                $('.hamburger-aux-menu').remove();
+                $("#slide-out li a:contains('Future Students Start Here')").addClass("green-accent");
+
+                //adding close menu button to main nav
+                $('#slide-out').append('<li class="closeNav"><a href="#" class="hideMainNav"><i class="material-icons">close</i></a></li>');
+            });
+
+            $(window).on('resize', function(){
+                applyHeaderPadding();
+            });
+
+        })(jQuery);
+
+
+
+    </script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0836a9720d","applicationID":"46833939","transactionName":"YARaZRNTVkJVWkdaWVlOeVIVW1dfG31BRkZWDWRfDlZdbXdWXUdEWA1UVBNudl5QXGVaU0AiV18VQFddWFxBHghBCF1G","queueTime":0,"applicationTime":601,"atts":"TENZE1tJRUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
