@@ -1,0 +1,192 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Login - CAS &#8211; Central Authentication Service</title>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" href="/cas/webjars/font-awesome/5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"/><link type="text/css" rel="stylesheet" href="/cas/webjars/lato/0.3.0/css/lato.min.css"/><link rel="stylesheet" href="/cas/css/cas.css"/><link rel="icon" href="/cas/favicon.ico" type="image/x-icon"/><script type="text/javascript" src="/cas/webjars/jquery/3.3.1/jquery.min.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/></head>
+
+<body class="login">
+<header role="banner">
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="header-inner">
+                <img src="https://cdn1.bethel.edu/images/logo-dark.png" alt="www.bethel.edu" style="height:50px;border:0;"></div>
+        </nav>
+    </header>
+
+<main role="main" class="container mt-3 mb-3">
+    <div id="content" class="row">
+        <div class="col-md">
+            <div id="cookiesDisabled" class="card" style="display: none;">
+    <div class="card-body">
+        <h5 class="card-title">Browser cookies disabled</h5>
+        <p class="card-text">Your browser does not accept cookies. Single Sign On WILL NOT WORK.</p>
+    </div>
+</div>
+            <div id="serviceui" class="alert alert-info">
+    <div>
+        <h2>Bethel WWW</h2>
+    </div>
+</div>
+            <script>
+            var redirectTo = $( "a[autoRedirect=true]" ).attr("href");
+            if (redirectTo != null && redirectTo != undefined) {
+                window.location.href = redirectTo;
+            }
+        </script>
+
+    <div class="card">
+                <div class="card-header text-center">
+                    <h2>Login</h2>
+                    <span class="fa-stack fa-2x hidden-xs">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="fm1" action="login">
+                        <h3>Enter your Username and Password</h3>
+
+                        <section class="form-group">
+                            <label for="username"><span class="accesskey">U</span>sername:</label>
+                            <input type="hidden" id="serviceId" name="serviceId" value="https://www.bethel.edu/covid-19/health-screening/"/><input type="hidden" id="separator" name="separator" value=":"/><div>
+                                <input class="form-control required"
+                                       id="username"
+                                       size="25"
+                                       tabindex="1"
+                                       type="text"
+                                       accesskey="u"
+                                       autocomplete="off" name="username" value=""/></div>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="password"><span class="accesskey">P</span>assword:</label>
+
+                            <div>
+                                <input class="form-control required"
+                                       type="password"
+                                       id="password"
+                                       size="25"
+                                       tabindex="2"
+                                       accesskey="p"
+                                       autocomplete="off" name="password" value=""/><span id="capslock-on" style="display:none;">
+                                <p>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <span>CAPSLOCK key is turned on!</span>
+                                </p>
+                            </span>
+                            </div>
+                        </section>
+
+                        <input type="hidden" name="execution" value="97cadb94-f0da-4fed-959a-e8e4ea0b2ec9_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuY0FyVWQxVTh3akFUVmRTYStIR21VRldNeVJleDNVOGMyWms0b0VJT1d3ejlLb0FpcXhQa2RJSDg2M3JWSFRaZURpVC8wR2xuWFBqQVlGRlNUSldQdXpmRHM5SitjM0xDRG5qckNTbXVaaGtqcHlDaVJFQzljNUhHU01SMDVrNnZMOEtjNDVUVFVoaXp2SURyb3laUC9tQW53dDhRdUxmdUFzS2VBOG5wTXdyZkVvSFZvaWRodCtGZmV5S3ZZWjAxMVR0UmpWY3BXZ3ZiT3p3SWYyczhrWDRjdWdOVVZNMm5BWThQZktsUDdFM1ZZOGEwVjdRVjlEeEhBcEorWUhMR2RHek9NQmRZQTFFOVhyb2RMcGUyanpOQVMrdTJGNkdCTmt6Yk00cVduU1pJT2dqRFpvNXh2dDVadktHTXY1cE44clNwMEJPQ3pzRzRxZ2ppMzFJV09NNytkbEtrTmdicUI5M1ZSVDVHK1VIQW5yTTV2a2JHYUFrM1ljQkw4b2lzNFVvK2VJRVAyT2o2eXd0Q0p5bUZ6Wkh1S1VadC8xUnlGU25CQ3dEUFJhM2Z6RVBIQ25tazlVS0drcndOQ054NVcxOVFLb0FBZXZFOU1Oc0NCSnlLc1IrM0hYdXFZekdWeVAxcm1oQWZjMmxJVk10eUdkcDdHN1cvcndzZDZyalk0NEI4d2grQ084YzI5UTNMV2xTOHEzUG9tR3p0M0lTeGhDemd1cVA4cC9ZcmptTEJKNzUvMGtmNGtOWnBPUDdVNHdlbzRLcE52V1FaQnQxR3J4WHdUbzZZMzBZNVNzRFM1S2s3TE1ydVRnVDhOUVF6ek50WlNQUWY1UWFDMWRJbTllam40R29FRDVnazVWN1c1VWE3aXVHd2F0SjVJZWNRN3J4TWZnY1ZSMEJkdDZvbWNNUzEyUTdMWm5sODFzVGdiN01oTXlDUkQyanIzWFVCVjIwMk9sUllwN0V3c1k1UURNZm5ITGdXVElBUW01R053cFB0bXJsVjdHMFVTUFNINkhNOWpCb2M1YlpXVlVmVURhUnVyQ1RNYzdpM0R2N1U3WlA3aWk0R3Q3ZWFRNitKeVZHUHZwSlcrMHFWUEdEcWtuT080dFBKRWZTaUpFb1E4OERYSmYzdFJpNm5NaUtnQy9OeFRUUDZCQzR4SVBIZ3NVTEpDZGtnTkxFbzlsRDN5cmJXdVQzRzRtZWlmZGtSdHYvdlV1YUpRd2oxL0g5RVYwZUJsU2FGVkk5Y2NtVVBrM3U1WUdDRlhzMTUvYXVwSEhWRm4rUy81SlhITFVWNFFreU1pTk5GS2lmbTVqZWptUExmUkhyclFxVnJHMDVmTUlUTmdJWG1Ha2RqMUwvQnhqMk9lQnRBYlBBbHBNYnhEZDVYdW5XcTM3U0lmUk9uZ28xRFFvZjZZaW9iMTR6UUNaZ3hYdEdrTGNUeU54Wm9EUitWekNDUDl0UHRRSytDV2xKNVpZZXRiVTA4YTRGU3V5eWsrZHlRNUNKb1lQQXN6Kzg4OVQ5QXBSZ3p2MjZKb2RQbmh0UWZ4ZkVQdDBvMS8vUTBXLzMvamdjSDdZd0M1eXgxZ29KWUo3aHhDVEhoY2lGK25QcXNrUE5BVXF0LzBmRjNpakJtRDJTanVRODNPRHIwOXgyL3lDYUxybk9wTWVXL0p4dmM3c3hpa2xsM1VFaElBVHdzbWtuYy9mNGNWVUl3SEhtY0dWNjVyeERJZU0rYytZbytIa2Z2ZUFoMW1MdHFON1Y1d0VyNFFSOTJpOWphUG1sbjdJUklSSGNXZzJvcnZXcy9CbHlOUTV0RktkclRxVFA4c3VHNTRBeFZZOEgrMC9GaDF2dCtVTm95NWN6aE9yOFRsZFcxUWlxb1hvdEJrUXdnTmlrUktPeDM1bTVFeUo0WUk1b0E4S0NiMzZ5ckswb2EzVEdQRGg5U2d1bGtHQjdQcUdaVjFnVUdia0krc1VEVFZuSFN5cmg0SkhSTjBMOGJEUi9OVm9Fa3BZUTVQYTM3eXBlYU03VnVMOGZ4bFFRMlFrdDMwcStYa0Y5RVdBOENRKzBLcTN1YUpubkxqVkhOcmthRFVvK1FSZGtzRi8yU0RLUlVkMlZaWTVxdFRObDZ1b2VqNko3eXJ3N29LRmFqRm1icDRFYXdMSk94dTcrb1QvTmE4YlR0NlJUUmxtcDRGTm1MTmpWSjU0VWIvOG8ySWlYT05HTWM4RkNEekZBS2EwZ3NNNllCbm1DS2VvNWhkRlN2VWIzWWdBVkhrY3ZXNmY0Z2s5YmRwaXlKaCswMHRkTG0yeTZ4THZLUUVVWFNYR3NuY1pWOCtsZjRMV0R3Wk94RElwbFNlM3NCRUxEK2JWVk0xblZPVUxaaXJJcEJFSjF0WEJjVnVEZ2RkcmFwTU1uaEpBWkFodTZZTG9xOUxxTzc1ZFRDeGZlbWc1UEFTYXNabUdOS1Yra0M2YVZwdlFFVXBQbkxhNjNyeVY3cHQvMC9SOVFsRG45ZHJzV3A0UGZlUTZtNjdRQUR6SVFlOVU4MllmRGswK1RyS3NnSjF4VU1MMzN0ckdaWVNJRTlkVDZWdnpGekIxSnJHNFEwU2xRcFUyTjJCSXpUanFiOTFPRmtsQmttenlCc2lNVXNTZk1VVW5mRW4vclpHdnh4ZmVsNnR1WlU3SnpWd2kvcm1LajMyazhwTUpmRWNyQmlYYk9aaUJKK212OXBrZGF2UXNlblJwNThtbkV2cytnUlEyeElTcjZtdW9IMDY5ZXE5eVZTRzU3bURLckcyY3owdndWL0ZWbTFkSW5YUk1UekZoYnp4K25YVjRQL2c1S2s1NVJJbVgwT05Vd2xTNWg5N1k0YXNoek5HZlFKTUlFeEUxOFJ6NVN3L1JTc01mUTE5UEhVVXBwRG1TOUgzUjFxWFpyaEFnK2t0aW5iYVVBS2NBTFJlUDdaajY2cnFuQUQwWDdnU0hqWXlXU3hiUXgxMkdnTUIyOUZHb0hCNldib0hmbTA1ZTJPc1ZSby8vOTV3Mjh6bnRrU1FxNWI3QitaeWE1OElOUE9MK2N1MUlGVGFwV2JNdGRuOUlwc2xJdXpEQWM0WUx6Vy9pRU4vRDltL1VkMkkvU0o1UWord201eEpxVUZKQVc0K082bVQwRDNJUkFKcUUyQ3Rlc3orVk1aOVlyN1NjQUVEWEVucFNLZUtVUit1bHZ4L1JVZkFnbTlHMDZRZ3F1bmU1U1J0eGZ0WllyeThTbWNNZlRWQkt0QUNUMEkzUmpJU0pqUm5hMDV2anBPTnFjbDRXUXV1dlhaRTl6VmFkV21lRmc5OUo2Wk1JZVoxSmdZSWFLYVo2SlZySEN0QU9SN0VkUXFmdWlRbmFjSGZERnBhWkxVSTQ5cnR6ZHhib2VGTUVqRmJzS2czNjV4dCtkdGJYTkNpKzE1QTlhcmR4bkN2cjRCak1MejRxS21UaTRDcHNWbnpPaDdiMkVqU1RJS0NxdWdvTXBraUMydXJVbFl1bkllbzN4Qm4xMGxZdThTemk0TjVqdWxqaFBhd1F5RVBzWm12MmROOW9iZkUxY0N6OHZ6VTA2WjQzN2YxRGFpeW1mVmhPbjArMWdnMTcxMlhtTGl2UWoyeWRud09qaC8yNFphZUdVQTN1NzU5d045NjB2Ly9ESmdyZFk5N1NEdlRCTHAyeGMwV1YvWUM4UmMxYzIrMGJaL1R2R2MyTDhYakZUTWJ5VkdjaGswaFhxK2FmNjZwVXVzQjJhZHNBcGhHTzM3WGdqNXdPNjFxVEw5ZnVObmx1ais1VTFoeWN1MWR1UnBEZ2Zta3VmeGNUWnh1QVhqZ21IaU5oZDkrMkFnN09aZkZmbmZSYnh5QVZQSG9LQzllYlg1K3NvL3RiM1YzdUd2ZG5kOGQrbm84NE1pbFJoNjc4QVA4ekw3YVRWNXJZOVNtWnVYMEh3SzJMM05RS3VIZnF6dVgzRm5mdFYxYWprSHpycnN5NERVc0lmOGdYWWVXRys5S2hVOG82Slk3U2V4ZTd5aVllTWZFY1M5MG5GMjF3RnNab2trbTFTaVljbUlXQ08xbVpQV2hVTllidTFBU3ZiOXRoc1dGNWpYMkt4ellSMEZzWlI5OG9vaEsxc2gzZ3grK3F2c2JkaUJzS3E1QjZtSkQyWXk1NXVySWdMcWdPZFMxNU91dGNkNVM0WExUMGhncnJObThHRlZQeWhoZk02NlpBSG4rSHVaSG5reDZkOVl6WU9BeDFnUXdsRXdCZ3lQME91S2drekZZeFRlMDVTaGJxQlNOaWpkNnRHbllqSXRFTzUrRm05anRkZWNDSkZ5YXpDS3FhZGwzWkU5bmhKREJyVjRORVUrNms3WUtYdTBVbTVOWDdSZGl2Wk53TUg4SVk1WENUM2dYRWJLRitLVmI4dTIzRHRRL1JjOXM3SlVWMVMrRlJETWY5K0k0elBkOHlOU2cwU1I0b2JhZXc9PS51ek9NVkw4VTJTcUdqam9ZTDVKam5IN0ZDOEFxNWVnX2JsclZrM2xoTFhQNUR5TkRNSnMzdzlrcXpHVkdVZ3JuaGJoS0dyOTEzTnJ2NEpCdXQtNWFtdw=="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input class="btn btn-block btn-submit"
+                               name="submit"
+                               accesskey="l"
+                               tabindex="6"
+                               type="submit"
+                               value="Sign in"
+                        /></form>
+
+                    <div>
+                        <span class="fa fa-question-circle"></span>
+                        <span><a href="https://iam.bethel.edu/IDMProv/portal/cn/GuestContainerPage/ProblemsLoggingIn" target="_blank">Problems Logging In? </a></span>
+                        <p/></div>
+
+                    <script type="text/javascript">
+                        var i = "One moment please..."
+                        $( document ).ready(function() {
+                            $("#fm1").submit(function () {
+                                var service = document.getElementById('serviceId').value
+                                if ( /^https:\/\/www.google.com\/a\/.*\/acs$/.test(service) ) {
+                                    var separator = document.getElementById('separator').value;
+                                    var username = document.getElementById('username').value;
+                                    if ( ! (/^:.*$/.test(username)) ) {
+                                        document.getElementById('username').value = separator+username;
+                                    }
+                                }
+                                $(":submit").attr("disabled", true);
+                                $(":submit").attr("value", i);
+                                console.log(i);
+                                return true;
+                            });
+                        });
+                    </script>
+
+                    <div id="sidebar">
+        <div class="sidebar-content">
+            <p>For security reasons, please <a href="logout">log out</a> and exit your web browser when you are done accessing services that require authentication!</p>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+        <div class="container">
+            <span id="copyright">Copyright &copy; 2005&ndash;2018 Apereo, Inc.</span>
+            <span>Powered by <a href="http://www.apereo.org/cas">
+                Apereo Central Authentication Service
+                <span>5.3.9</span>
+                <span>2020-04-20T16:44:43Z</span> </a>
+            </span>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="/cas/webjars/zxcvbn/4.3.0/zxcvbn.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js"></script>
+<script src="/cas/webjars/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="/cas/webjars/headjs/1.0.3/head.min.js"></script>
+<script src="/cas/webjars/store.js/1.3.17/store.min.js"></script>
+<script type="text/javascript" src="/cas/js/cas.js"></script>
+
+<script>
+head.ready(document, function () {
+    if (!window.jQuery) {
+    	var jqueryUrl = "\/cas\/webjars\/jquery\/3.3.1\/jquery.min.js"; 
+        head.load(jqueryUrl, loadjQueryUI);
+    } else {
+        notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+    }
+});
+
+function loadjQueryUI() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js"; 
+	head.load(jqueryUrl, loadjQueryCookies);
+}
+
+function loadjQueryCookies() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js"; 
+	head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+}
+
+function notifyResourcesAreLoaded(callback) {
+    if (typeof callback === "function") {
+        callback();
+    }
+}
+</script>
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false;
+
+    var googleAnalyticsTrackingId = null;
+
+    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+
+</body>
+</html>

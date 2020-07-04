@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://covid-19.bellevue.edu/xmlrpc.php">
+
+<title>Novel Coronavirus (COVID-19) Information and Resources</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Roboto+Slab:r:latin,latin-ext","Open+Sans:r,i,b,bi:latin,latin-ext"]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://s0.wp.com/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active samp{font-family:"Open Sans",sans-serif}.wf-active body, .wf-active button, .wf-active input, .wf-active select, .wf-active textarea{font-family:"Open Sans",sans-serif}.wf-active .comment-list .reply, .wf-active .comment-metadata, .wf-active .entry-footer, .wf-active .entry-meta, .wf-active .widget_recent_entries .post-date, .wf-active .widget_rss .rss-date{font-family:"Open Sans",sans-serif}.wf-active .search-form ::-webkit-input-body-text{font-family:"Open Sans",sans-serif}.wf-active .site-info{font-family:"Open Sans",sans-serif}.wf-active .main-navigation .nav-menu > li > a{font-family:"Open Sans",sans-serif}.wf-active h1{font-style:normal;font-weight:400}.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6{font-family:"Roboto Slab",serif;font-weight:400;font-style:normal}.wf-active h1{font-style:normal;font-weight:400}.wf-active h2{font-style:normal;font-weight:400}.wf-active h3{font-style:normal;font-weight:400}.wf-active h4{font-style:normal;font-weight:400}.wf-active h5{font-style:normal;font-weight:400}.wf-active h6{font-style:normal;font-weight:400}.wf-active .entry-title{font-style:normal;font-weight:400}.wf-active .singular .entry-title{font-style:normal;font-weight:400}.wf-active .author-title{font-family:"Roboto Slab",serif;font-style:normal;font-weight:400}.wf-active .author-name{font-weight:400;font-style:normal}.wf-active .front-testimonials .entry-title{font-style:normal;font-weight:400}.wf-active .recent-posts-title, .wf-active .page-title{font-style:normal;font-weight:400}.wf-active #respond h3, .wf-active .comments-title{font-style:normal;font-weight:400}.wf-active .widget-title{font-style:normal;font-weight:400}.wf-active .footer-widgets .widget-title{font-style:normal;font-weight:400}.wf-active .site-title{font-family:"Roboto Slab",serif;font-weight:400;font-style:normal}.wf-active .site-description{font-weight:400;font-family:"Roboto Slab",serif;font-style:normal}.wf-active .featured-content .hentry .entry-title{font-style:normal;font-weight:400}@media screen and (min-width: 37.5em){.wf-active .site-description{font-style:normal;font-weight:400}}@media screen and (min-width: 37.5em){.wf-active .site-title{font-style:normal;font-weight:400}}</style>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3ZpZC0xOS5iZWxsZXZ1ZS5lZHU%3D"
+		+ "&wpcomid=175044276"
+		+ "&time=1593841730";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//covid19bellevue.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Novel Coronavirus (COVID-19) Information and Resources &raquo; Feed" href="https://covid-19.bellevue.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Novel Coronavirus (COVID-19) Information and Resources &raquo; Comments Feed" href="https://covid-19.bellevue.edu/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJydkV1OwzAQhC+EswlREnhAnMV2FrPFji3vWlVuj13aqkKoIB735xuNZuCYlI2b4CYQikq+ONoYjsnGoDiQx/3b1FnmB7jBLowrdTSYXb1khKdu7HowhfwKxkf7oTyZrPMOLLvHP8icKIYDStIN13ssolym9b8SWQttjn/B34r3iklQ4UoNOMcCwzT1yzQuM6SMgUq4ovcFbTz7GLrHFspKLNel+pm9KaPFWfchaWkfobrS6DHUt3vYV2vGVK/M6uJY3it4KvE1vAzT87j0w7zMh0+x5MGv?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<style id='global-styles-inline-css'>
+:root {
+	--wp--preset--color--black: #192930;
+	--wp--preset--color--dark-gray: #474f53;
+	--wp--preset--color--medium-gray: #a5a29d;
+	--wp--preset--color--light-gray: #eeece8;
+	--wp--preset--color--white: #ffffff;
+	--wp--preset--color--yellow: #d7b221;
+	--wp--preset--color--dark-yellow: #9c8012;
+	--wp--preset--font-size--small: 13;
+	--wp--preset--font-size--normal: 16;
+	--wp--preset--font-size--medium: 20;
+	--wp--preset--font-size--large: 36;
+	--wp--preset--font-size--huge: 48;
+	--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+	--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+	--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+	--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+	--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+	--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+	--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+	--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+	--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+	--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+	--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+	--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+}
+
+</style>
+<link rel='stylesheet' id='all-css-2-1' href='https://s1.wp.com/_static/??-eJyFjN0KgzAMhV/IGkT344X4LpayZW2SQlN0b78wQYY3u8v5zskHa3ZeWAMrUHU51QdyAS9EhlzCGCyVE2mNNIDAomjf5Tj24sepz0BmyHUB3FAYir5T+D9bkvj41c00dZexu/e34Tq8PgcMQOM=?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='ixion-fonts-archivo-css'  href='//fonts.googleapis.com/css?family=Archivo+Narrow%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s1.wp.com/_static/??-eJx9jUsKwzAMRC9UV6Skv0XpWRyjOCq2ZSyFpLevszOEZjePmcfAko3jpJgUdMKIAnkegFbiBFYEVWCsvYBjzlgmXEj17ERO0KhxNjnMnpKAx4SFavEn7tzdLSUHot+AZsmO4/EZm8DO6ua1YMZgqRypBYfAvkYPddXgJr3jq+vvj2t/eXa3zw92gm4m?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-5-1' href='https://s2.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?m=1560469195h&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link rel='stylesheet' id='all-css-8-1' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423h&cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJx9zd0KwjAMBeAXsuvG6IoX4rPMLSsZTVqbdsO3t+LPhYgQyMX5TqL3qJAnX2YQvda5Fki312pWOeh/QBG6NGZoCPmNp8AZOD9sDJIJREYHP1IKF/SgikCqgHN9s4RvF31xyKKX4r0SzKBgxozs1DPRnTGtNb0ddExAWOhT3RD2eu5Mp84ce9t2gx3WO255V4c='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19bellevue.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://covid-19.bellevue.edu/" />
+<link rel='shortlink' href='https://wp.me/PbQt0M-1t' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fcovid-19.bellevue.edu%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fcovid-19.bellevue.edu%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Novel Coronavirus (COVID-19) Information and Resources" />
+<meta property="og:url" content="https://covid-19.bellevue.edu/" />
+<meta property="og:site_name" content="Novel Coronavirus (COVID-19) Information and Resources" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Home" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Visit the post for more." />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s2.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://covid-19.bellevue.edu/osd.xml" title="Novel Coronavirus (COVID-19) Information and Resources" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Novel Coronavirus (COVID-19) Information and Resources" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://covid-19.bellevue.edu/feed/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Novel Coronavirus (COVID-19) Information and Resources › Bellevue University is making adjustments on a daily basis during the ongoing COVID-19 disease outbreak. If students are experiencing anxiety or need support during this time, Bellevue University provides students with free crisis counseling services in-person on the main Bellevue University campus. Bellevue University also provides the free&hellip;" />
+	<style type="text/css">
+			.site-title a,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+			<link rel="stylesheet" id="custom-css-css" type="text/css" href="https://s0.wp.com/?custom-css=1&#038;csblog=bQt0M&#038;cscache=6&#038;csrev=19" />
+		</head>
+
+<body class="home page-template-default page page-id-91 wp-custom-logo wp-embed-responsive customizer-styles-applied no-sidebar page-template-front-page header-text-hidden no-featured-posts highlander-enabled highlander-light">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<div class="utility-container">
+						
+<form role="search" method="get" class="search-form" action="https://covid-19.bellevue.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field"
+		placeholder="Search &hellip;"
+		value="" name="s"
+		title="Search for:" />
+		<span class="search-form-icon"></span>
+	</label>
+	<input type="submit" class="search-submit"
+		value="Search" />
+</form>
+		</div>
+
+		<div class="branding-container">
+					<div class="site-branding">
+			<a href="https://covid-19.bellevue.edu/" class="custom-logo-link" rel="home"><img width="225" height="44" src="https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png" class="custom-logo" alt="Novel Coronavirus (COVID-19) Information and Resources" srcset="https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png 225w, https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png?w=150&amp;h=29 150w" sizes="(max-width: 225px) 100vw, 225px" data-attachment-id="71" data-permalink="https://covid-19.bellevue.edu/bu-logo-white-horizontal/" data-orig-file="https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png" data-orig-size="225,44" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="bu-logo-white-horizontal" data-image-description="" data-medium-file="https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png?w=225" data-large-file="https://covid19bellevue.files.wordpress.com/2020/04/bu-logo-white-horizontal.png?w=225" /></a>
+								<p class="site-title"><a href="https://covid-19.bellevue.edu/" rel="home">Novel Coronavirus (COVID-19) Information and Resources</a></p>
+					</div><!-- .site-branding -->
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Menu</button>
+	<div class="menu-primary-container"><ul id="top-menu" class="menu"><li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a href="https://covid-19.bellevue.edu/updates-for-residential-students/">Students</a></li>
+<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="https://covid-19.bellevue.edu/updates-for-faculty-and-staff/">Faculty and Staff</a></li>
+<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="https://covid-19.bellevue.edu/faqs/">FAQs</a></li>
+<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="https://covid-19.bellevue.edu/general-info/">General Info</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-176"><a href="https://covid19bellevue.wordpress.com">Home</a></li>
+</ul></div></nav>
+		</div>
+
+	</header>
+
+			<div class="front-page-wrapper">
+			<div class="header-overlay">
+								<div class="site-description-wrapper">
+					
+									</div><!-- .site-description-wrapper -->
+			</div><!-- .header-overlay -->
+					</div><!-- .front-page-wrapper -->
+	
+	<div id="content" class="site-content">
+
+ 	<div id="primary" class="content-area">
+ 		<main id="main" class="site-main" role="main">
+
+ 		
+<article id="post-91" class="post-91 page type-page status-publish hentry no-featured-image">
+	<div class="entry-content">
+		
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-7 column1-desktop-grid__row-1 column2-desktop-grid__span-4 column2-desktop-grid__start-9 column2-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h2>Novel Coronavirus (COVID-19) Information and Resources ›</h2>
+
+
+
+<p>Bellevue University is making adjustments on a daily basis during the ongoing COVID-19 disease outbreak.</p>
+
+
+
+<p>If students are experiencing anxiety or need support during this time, Bellevue University provides students with free crisis counseling services in-person on the main Bellevue University campus.</p>
+
+
+
+<p>Bellevue University also provides the free TalkCampus app for all local and distance students.TalkCampus offers services in multiple languages.&nbsp;<a rel="noreferrer noopener" href="https://www.bellevue.edu/student-support/center-for-health-and-safety/counseling-services/" target="_blank">Click here for more information about both of these services</a>.</p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<p>COVID-19 SPECIFIC QUESTIONS?</p>
+
+
+
+<div class="wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="mailto:dso@bellevue.edu" rel="mailto:dso@bellevue.edu">EMAIL DSO@BELLEVUE.EDU</a></div>
+</div>
+
+
+
+<p></p>
+</div>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none"></div>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-7 column1-desktop-grid__row-1 column2-desktop-grid__span-4 column2-desktop-grid__start-9 column2-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 wp-block-jetpack-layout-gutter__medium">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large has-background has-dark-gray-background-color">				<div
+			class="wp-block-newspack-blocks-homepage-articles is-style-default wpnbha show-image image-alignbehind ts-6 is-3 is-landscape is-style-default has-text-color has-white-color"
+			style=""
+			>
+			<div data-posts>
+									<h2 class="article-section-title">
+						<span>LATEST UPDATE</span>
+					</h2>
+								
+	<article data-post-id="301"
+		class="category-uncategorized"
+				>
+		
+		<div class="entry-wrapper">
+			<h3 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/06/19/june-19-2020/" rel="bookmark">June 19, 2020</a></h3>						<p>Watch this website for updates and information related to Bellevue University&#8217;s continuing response to the COVID-19 pandemic. If you have any questions please get in touch with us at dso@bellevue.edu &#8212; Campus visits have been authorized for prospective students. Visits are limited to individual visitors; not groups. Everyone must wear a mask on campus and &hellip; <a href="https://covid-19.bellevue.edu/2020/06/19/june-19-2020/" class="more-link">Continue reading <span class="screen-reader-text">June 19, 2020</span></a></p>
+		</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+			
+		</div>
+				</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<p class="has-medium-font-size"> RECENT UPDATES</p>
+
+
+<ul class="wp-block-latest-posts wp-block-latest-posts__list has-dates"><li><a href="https://covid-19.bellevue.edu/2020/06/19/june-19-2020/">June 19, 2020</a><time datetime="2020-06-19T12:14:57-05:00" class="wp-block-latest-posts__post-date">June 19, 2020</time></li>
+<li><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020-2/">May 5, 2020</a><time datetime="2020-05-05T12:36:36-05:00" class="wp-block-latest-posts__post-date">May 5, 2020</time></li>
+<li><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020/">May 5, 2020</a><time datetime="2020-05-05T12:33:14-05:00" class="wp-block-latest-posts__post-date">May 5, 2020</time></li>
+<li><a href="https://covid-19.bellevue.edu/2020/05/04/may-4-2020/">May 4, 2020</a><time datetime="2020-05-04T13:04:25-05:00" class="wp-block-latest-posts__post-date">May 4, 2020</time></li>
+<li><a href="https://covid-19.bellevue.edu/2020/04/16/april-15-updates/">April 15 Updates</a><time datetime="2020-04-16T08:51:29-05:00" class="wp-block-latest-posts__post-date">April 16, 2020</time></li>
+</ul>
+
+
+<p></p>
+</div>
+</div>
+
+
+
+<div style="height:25px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large has-background has-white-background-color">
+<h2>Building Hours &amp; Virtual Services Access</h2>
+
+
+
+<p>We are here for you! ALL online classes continue as scheduled. Residential classes are now online. Faculty and staff are available to support students nationally and locally. All student services are available virtually. Some campus buildings are closed to walk in traffic or have limited access.</p>
+
+
+
+<h2 class="building-open">OPEN</h2>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-6 column1-desktop-grid__row-1 column2-desktop-grid__span-6 column2-desktop-grid__start-7 column2-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>Freeman Lozier Library / Computer Lab</h3>
+
+
+
+<p><strong>Building hours:</strong><br><strong>Monday &#8211; Friday:</strong>&nbsp;8am – 6pm<br><strong>Saturday &#8211; Sunday:</strong>&nbsp;1pm &#8211; 5pm</p>
+
+
+
+<p><strong>Phone:</strong>&nbsp;1.402.293.2000&nbsp;or&nbsp;1.800.756.7920<br><strong>Email:</strong>&nbsp;<a href="mailto:Library@Bellevue.edu">Library@Bellevue.edu</a></p>
+
+
+
+<p><strong>Service hours (online, phone and chat):</strong><br><strong>Monday &#8211; Friday:</strong>&nbsp;8am &#8211; 10:30pm<br><strong>Saturday &#8211; Sunday:</strong>&nbsp;8am &#8211; 5pm</p>
+
+
+
+<p><strong>24/7 Librarian:</strong>&nbsp;available 24 hours a day, 7 days a week</p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>Margre H. Durham Student Center</h3>
+
+
+
+<p><strong>Building and Computer Lab Hours:</strong><br><strong>Monday &#8211; Friday:</strong>&nbsp;8am &#8211; 6pm<br><strong>Saturday &#8211; Sunday:</strong>&nbsp;1pm &#8211; 5pm</p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<h3>Lozier Professional Center</h3>
+
+
+
+<p><strong>Building and Computer Lab Hours:</strong><br><strong>Monday &#8211; Friday:</strong>&nbsp;8am &#8211; 6pm<br><strong>Saturday &#8211; Sunday:</strong>&nbsp;1pm &#8211; 5pm</p>
+</div>
+</div>
+
+
+
+<h2 class="building-walk-in">CLOSED TO WALK IN TRAFFIC</h2>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-6 column1-desktop-grid__row-1 column2-desktop-grid__span-6 column2-desktop-grid__start-7 column2-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>OneStop Welcome Center</h3>
+
+
+
+<p><strong>Email:</strong>&nbsp;<a href="mailto:BruinSupportServices@Bellevue.edu">BruinSupportServices@Bellevue.edu</a><br><strong>Phone:</strong>&nbsp;1.402.293.2000&nbsp;or&nbsp;1.800.756.7920</p>
+
+
+
+<p><strong>Service hours:</strong><br><strong>Monday &#8211; Friday:</strong>&nbsp;7am &#8211; 7pm<br><strong>Saturday:</strong>&nbsp;8am &#8211; 5pm</p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<h3>Writing Center</h3>
+
+
+
+<p><strong>Online reviews available via WCONLINE:</strong>&nbsp;<a href="https://bellevue.mywconline.com/index.php" target="_blank" rel="noreferrer noopener">https://bellevue.mywconline.com/index.php</a></p>
+
+
+
+<p><strong>Email:</strong>&nbsp;<a href="mailto:Writing@Bellevue.edu">Writing@Bellevue.edu</a></p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<h3>Test Center</h3>
+
+
+
+<p><strong><em>Available online.</em></strong></p>
+
+
+
+<ul><li><strong>Monday &#8211; Friday:</strong>&nbsp;8am &#8211; 5pm</li></ul>
+
+
+
+<p><strong>Email:</strong>&nbsp;<a href="mailto:Testing@Bellevue.edu">Testing@Bellevue.edu</a></p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>Military Veteran Services Center (MVSC)</h3>
+
+
+
+<p><strong><em>Assistance available by appointment.</em></strong></p>
+
+
+
+<p><strong>Email:</strong>&nbsp;<a href="mailto:MVSC@Bellevue.edu">MVSC@Bellevue.edu</a><br><strong>Phone:</strong>&nbsp;1.866.676.3614</p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<h3>Bellevue University Bookstore</h3>
+
+
+
+<p><strong>Order online:</strong>&nbsp;<a rel="noreferrer noopener" href="https://www.bkstr.com/bellevuestore" target="_blank">https://www.bkstr.com/bellevuestore</a>&nbsp;(free shipping)<br><strong>Phone:</strong>&nbsp;1.402.557.7070<br><strong>Email:</strong>&nbsp;<a href="mailto:Bellevue@bkstr.com">Bellevue@bkstr.com</a></p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<h3>Tutoring Center</h3>
+
+
+
+<p><em><strong>Available via Zoom.</strong></em></p>
+
+
+
+<p><strong>Email:</strong>&nbsp;<a href="mailto:RDavis@Bellevue.edu">RDavis@Bellevue.edu</a></p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color is-style-wide" />
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+</div>
+</div>
+
+
+
+<h2 class="building-closed">CLOSED</h2>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-6 column1-desktop-grid__row-1 column2-desktop-grid__span-6 column2-desktop-grid__start-7 column2-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>Riley Technology Center</h3>
+
+
+
+<p>Building and Computer Lab closed until further notice.</p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-medium-gray-background-color has-medium-gray-color is-style-wide" />
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-large">
+<h3>Hitchcock Humanities Center</h3>
+
+
+
+<p>Building closed until further notice.</p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-medium-gray-background-color has-medium-gray-color is-style-wide" />
+</div>
+</div>
+
+
+
+<p></p>
+</div>
+</div>
+	</div>
+	<footer class="entry-footer">
+			</footer>
+</article><!-- #post-## -->
+
+	<div id="front-page-recent-posts" class="recent-posts">
+		<div class="recent-posts-header">
+			<h2 class="recent-posts-title">Recent Posts</h2>
+		</div><!--.recent-posts-header-->
+		
+<article id="post-301" class="post-301 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://covid-19.bellevue.edu/2020/06/19/june-19-2020/" rel="bookmark"><time class="entry-date published" datetime="2020-06-19T12:14:57-05:00">June 19, 2020</time><time class="updated" datetime="2020-06-23T11:42:44-05:00">June 23, 2020</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://covid-19.bellevue.edu/author/busocial/">Bellevue University</a></span></span> 					</div><!-- .entry-meta -->
+<h2 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/06/19/june-19-2020/" rel="bookmark">June 19, 2020</a></h2>	</header>
+
+</article><!-- #post-## -->
+
+<article id="post-295" class="post-295 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020-2/" rel="bookmark"><time class="entry-date published" datetime="2020-05-05T12:36:36-05:00">May 5, 2020</time><time class="updated" datetime="2020-05-05T12:59:25-05:00">May 5, 2020</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://covid-19.bellevue.edu/author/busocial/">Bellevue University</a></span></span> 					</div><!-- .entry-meta -->
+<h2 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020-2/" rel="bookmark">May 5, 2020</a></h2>	</header>
+
+</article><!-- #post-## -->
+
+<article id="post-292" class="post-292 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020/" rel="bookmark"><time class="entry-date published updated" datetime="2020-05-05T12:33:14-05:00">May 5, 2020</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://covid-19.bellevue.edu/author/busocial/">Bellevue University</a></span></span> 					</div><!-- .entry-meta -->
+<h2 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/05/05/may-5-2020/" rel="bookmark">May 5, 2020</a></h2>	</header>
+
+</article><!-- #post-## -->
+
+<article id="post-289" class="post-289 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://covid-19.bellevue.edu/2020/05/04/may-4-2020/" rel="bookmark"><time class="entry-date published updated" datetime="2020-05-04T13:04:25-05:00">May 4, 2020</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://covid-19.bellevue.edu/author/busocial/">Bellevue University</a></span></span> 					</div><!-- .entry-meta -->
+<h2 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/05/04/may-4-2020/" rel="bookmark">May 4, 2020</a></h2>	</header>
+
+</article><!-- #post-## -->
+
+<article id="post-282" class="post-282 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://covid-19.bellevue.edu/2020/04/16/april-15-updates/" rel="bookmark"><time class="entry-date published updated" datetime="2020-04-16T08:51:29-05:00">April 16, 2020</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://covid-19.bellevue.edu/author/busocial/">Bellevue University</a></span></span> 					</div><!-- .entry-meta -->
+<h2 class="entry-title"><a href="https://covid-19.bellevue.edu/2020/04/16/april-15-updates/" rel="bookmark">April 15 Updates</a></h2>	</header>
+
+</article><!-- #post-## -->
+		<a class="more-recent-posts" href="https://covid-19.bellevue.edu/blog-2/">
+			More Posts<span class="meta-nav">&rarr;</span>
+		</a>
+	</div><!--.recent-posts-->
+
+ 		</main>
+ 	</div>
+ <script type='text/javascript'>
+								var _gaq = _gaq || [];
+								_gaq.push(['_setAccount', 'UA-3015403-36']);
+_gaq.push(['_trackPageview']);
+
+								(function() {
+									var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+									ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+									var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+								})();
+							</script>
+
+	</div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+	<a href="https://wordpress.com/?ref=footer_custom_powered" rel="nofollow">Powered by WordPress.com</a>.
+	
+	</div><!-- .site-info -->	</footer>
+</div>
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202027y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-d91cd60a88d074593db7ace5bc6b270e">
+	</div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s1.wp.com/_static/??-eJxtjUsOgzAMRC9U1yCURF1UPQsEExnSBGEH1NsXCssu5/cGtxl8TkpJcY4lcBIMZZcdLQG6mP0kOJLOrZ8gtp9cFMLCPV7RsOzjuxe54R/SUGIEYSWgnpVTgDPB2pjKmcZZTLTJD34BexY94Hs1i8ppw8q0HS+v97M2j8ZVtXV2/AJo/ESz?cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"175044276","siteName":"Novel Coronavirus (COVID-19) Information and Resources","siteURL":"https:\/\/covid-19.bellevue.edu","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/ixion","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid-19.bellevue.edu%2F&signup_flow=account&domain=covid-19.bellevue.edu","themeURL":"https:\/\/wordpress.com\/theme\/ixion\/","xhrURL":"https:\/\/covid-19.bellevue.edu\/wp-admin\/admin-ajax.php","nonce":"11acbc1012","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2c64a67844\" \/>","referer":"https:\/\/covid-19.bellevue.edu\/","canFollow":"1","feedID":"104863767","statusMessage":"","customizeLink":"https:\/\/covid19bellevue.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcovid19bellevue.wordpress.com%2F","postID":"91","shortlink":"https:\/\/wp.me\/PbQt0M-1t","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/covid-19.bellevue.edu\/91","statsLink":"https:\/\/wordpress.com\/stats\/post\/91\/covid-19.bellevue.edu","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Ixion","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid-19.bellevue.edu%2F&signup_flow=account&domain=covid-19.bellevue.edu\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyVkN1ugzAMhV9oqYsqQLuY9iwhMcyQP+EEurefGWvVddIk7qxjf+fYhjUpE0PGkGFksLiQwXQ9jfwCDy1fVHJloMBgovciKUcT8sY46oBXSngE+iU8g/kDvYyl0gFdKQbQzJi/uaAXGnQW8QDEEyVJCpPqoymsevrvQG09BdXpGbzmjLNUKi44z2TF/64ddMizNtOfSx8hs121QffqNk3BuGL3x1niDAsGG+etlaL77Mm5kyQ+m9+c++KcYsqo0FKmMPxkQlXX57a+tA0EXDnJgqpzUdbcU6SW0ciZd1kthKuEvPu3qn69tOeqaZvxC0sm1wI='></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?m=1585663916h&#038;ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?m=1585663916h&#038;ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://s2.wp.com/wp-content/plugins/gutenberg-core/8.3.0/vendor/wp-polyfill-url.min.7490158b.js?m=1591889108h&#038;ver=3.6.4"></scr' + 'ipt>' );
+( window.DOMRect ) || document.write( '<script src="https://s1.wp.com/wp-content/plugins/gutenberg-core/8.3.0/vendor/wp-polyfill-dom-rect.7e21c103.js?m=1591889108h&#038;ver=3.42.0"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'175044276','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'175044276','v':'wpcom','tz':'-5','user_id':'0','post':'91','subd':'covid19bellevue'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGNrd29+Smw0TDhnZmRTK0hlRi9QSGh6bi9GXVhBJWIlZlR5U1JMLU8/MkNtblkvY1dleD8/c09WQWQuaHBWcytGZzBYX2hsV1kuaERSaiYuVnRTNVVGbmwwP1FtSnkwOSVrbWNuX3BwdkxlTmN6SEYxTHxiM1ZvdWR+SDVTW2NiLGgwSGFZfEIwZGJVejFiRUVMZkRzMklPX3wldHkxTTkyNG5LeVtXPUZnUVFlfGJoYVpYWVtDVVRaYVlyaVh5cGlqQmFqX3RmdHpsWG8yZVJjM2EwfHZXM1olbkksS35NaDBbUUtzbysuX2M='}]);
+_stq.push([ 'clickTrackerInit', '175044276', '91' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated 3 seconds ago
+	generated in 0.158 seconds
+	served from batcache in 0.001 seconds
+	expires in 297 seconds
+-->

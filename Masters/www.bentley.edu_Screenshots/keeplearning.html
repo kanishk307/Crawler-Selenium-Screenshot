@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bca08de886",applicationID:"466171163"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.bentley.edu/coronavirus/keeplearning" />
+<meta name="description" content="Keep Learning" />
+<meta name="Generator" content="Drupal 8 (Thunder | http://www.thunder.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.bentley.edu/coronavirus/keeplearning" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qcvz5n" defer></script>
+
+    <title>Keep Learning | Bentley University</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_4SoX5CJNRkdxsCem0NHIyGApUDgdL6v93mNQPsUF5e0.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_DeHy3Nt2DD3HOA1zkAs2a9zvXEkVzNLjIxIQNa4xeBU.css" />
+<link rel="stylesheet" media="all" href="//use.typekit.net/egy1uaj.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_QHqjxhGPGgZFwOfW92tmrVpssmC1sbO0zDG4TgLmaEI.js"></script>
+
+  </head>
+  <body  class="path-node page-node-type-bentley-home">
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH6MTP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+
+  
+<div  class="layout-container layout-container--page-keep-learning">
+            
+<header  class="header" >
+  <div class="header-wrapper">
+        
+
+<a
+   id="block-bentley-branding" class="link"
+      title="Home"
+      rel="home"
+    href="/"
+>
+    
+<img
+   class="logo"
+      src="/themes/custom/bentley/images/logo.svg"
+      alt="Bentley Home"
+    />
+</a>
+
+      <div class="header__inner">
+          <nav role="navigation" class="cta-links block-headerctamenu-menu">
+        
+    
+                                  
+<ul  class="menu">
+                                    
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/admission"
+>
+      Apply
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/undergraduate/visit"
+>
+      Visit
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="http://www.alumni.bentley.edu/s/1696/giving18/interior.aspx?sid=1696&amp;gid=2&amp;pgid=2513"
+>
+      Give
+  </a>
+      </li>
+                        </ul>
+  
+
+
+  </nav>
+
+            
+
+  
+
+<div  class="search-bar views-exposed-form" id="search-bar">
+        <form action="/search" method="get" id="views-exposed-form-solr-search-page-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item">
+      <label for="edit-term" class="form-item__label">Search</label>
+        <input placeholder="What are you looking for?" data-drupal-selector="edit-term" type="text" id="edit-term" name="term" value="" size="30" maxlength="128" class="form-text form-item__textfield" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-solr-search" type="submit" id="edit-submit-solr-search" value="Search" class="button js-form-submit form-submit form-item__textfield" />
+</div>
+
+
+</form>
+
+      <a href="#" class="toggler search-toggler" data-togglee="search-bar">
+    <span class="search-toggle__search">
+      
+
+<svg  class="search-toggle__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#search"></use>
+</svg>
+      <span class="toggle-expand__text">Search</span>
+    </span>
+    <span class="search-toggle__close">
+      
+
+<svg  class="search-toggle__icon-close">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#close"></use>
+</svg>
+      <span class="toggle-expand__text">Close <span>Search</span></span>
+    </span>
+  </a>
+  <div  class="search-bar__guide">
+    <ul  class="search-bar__departments">
+      <li>
+        <a href="/directory/departments"  class="search-bar__academic">
+          
+
+<svg  class="icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#building"></use>
+</svg>
+          Departments
+        </a>
+      </li>
+      <li>
+        <a href="https://catalog.bentley.edu/"  class="search-bar__academic" target="_blank">
+          
+
+<svg  class="icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#book"></use>
+</svg>
+          Catalogue
+        </a>
+      </li>
+      <li>
+        <a href="/directory"  class="search-bar__people">
+          
+
+<svg  class="icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#people"></use>
+</svg>
+          People<span> (Faculty & Staff)</span>
+        </a>
+      </li>
+    </ul>
+    <div  class="search-bar__popular">
+      <h3>Popular Searches</h3>
+      <ul  class="search-bar__popular-items">
+        <li><a href="https://blackboard.bentley.edu" target="_blank">Blackboard</a></li>
+        <li><a href="https://events.bentley.edu" target="_blank">Calendar</a></li>
+        <li><a href="/offices/human-resources/careers">Jobs at Bentley</a></li>
+        <li><a href="http://library.bentley.edu" target="_blank">Library</a></li>
+        <li><a href="/academics/undergraduate-programs/majors">Undergraduate Majors</a></li>
+        <li><a href="/offices/campus-map">Maps and Directions</a></li>
+        <li><a href="/offices/registrar">Registrar</a></li>
+        <li><a href="/offices/shuttle-parking-safety/shuttle-routes-and-schedules">Shuttle Schedule</a></li>
+        <li><a href="https://my.bentley.edu/" target="_blank">MyBentley</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+            
+
+<div class="main-nav-outer">
+  <a href="#" class="toggler main-nav-toggle" data-togglee="main-nav-wrap">
+    <span class="toggle-expand__open">
+      
+
+<svg  class="toggle-expand__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#bars"></use>
+</svg>
+      <span class="toggle-expand__text">Menu</span>
+    </span>
+    <span class="toggle-expand__close">
+      
+
+<svg  class="toggle-expand__icon-close">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#close"></use>
+</svg>
+      <span class="toggle-expand__text">Close <span>Menu</span></span>
+    </span>
+  </a>
+  <div  class="main-nav-wrap" id="main-nav-wrap">
+            
+  
+
+
+  <nav class="main-nav">
+  
+    
+                                  
+<ul  class="main-menu">
+                                      
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/about/bentley-education"
+>
+      About
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/about/bentley-education"
+>
+      A Bentley Education
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/about/board-of-trustees"
+>
+      Board of Trustees
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/about/cabinet-members-bentley-university"
+>
+      President&#039;s Cabinet
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/about/mission-and-values"
+>
+      Mission and Values
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/about/the-strategic-plan"
+>
+      The Strategic Plan
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                                              
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/academics"
+>
+      Academics
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/academics/undergraduate-programs"
+>
+      Undergraduate Programs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/academics/graduate-programs"
+>
+      Graduate Programs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/academics/phd-programs"
+>
+      PhD Programs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/academics/research-centers"
+>
+      Research, Centers &amp; Labs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/centers/executive-education"
+>
+      Executive Education
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/academics/departments"
+>
+      Departments
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                                              
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/undergraduate"
+>
+      Undergraduate Admission
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/why-bentley"
+>
+      Why Bentley
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/visiting"
+>
+      Visit
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/applying"
+>
+      Apply
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/tuition-financial-aid"
+>
+      Tuition &amp; Financial Aid
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/special-programs"
+>
+      Special Programs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/undergraduate/connect-with-us"
+>
+      Connect
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                                              
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/university-life"
+>
+      University Life
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/campus-life"
+>
+      Campus Life
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/diversity-equity-inclusion"
+>
+      Diversity, Equity &amp; Inclusion
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/offices/disability-services"
+>
+      Disability Services
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/housing-dining"
+>
+      Housing &amp; Dining
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/student-health"
+>
+      Student Health
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/athletics-recreation"
+>
+      Athletics &amp; Recreation
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/university-life/career-development"
+>
+      Career Development
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                                              
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/graduate"
+>
+      Graduate Admission
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/why-bentley"
+>
+      Why Bentley
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/tuition-aid"
+>
+      Tuition &amp; Aid
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/programs"
+>
+      MBA &amp; MS Programs
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/degree-skills"
+>
+      Skills &amp; Outcomes
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/events"
+>
+      Events
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/connect"
+>
+      Connect
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/graduate/apply"
+>
+      Apply
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                                              
+
+<li  class="main-menu__item main-menu__item--level-0 main-menu__item--with-sub">
+                          
+<a
+   class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub"
+      class=" class="main-menu__link main-menu__link--level-0 main-menu__link--with-sub""
+      target=""
+    href="/alumni"
+>
+      Alumni
+  </a>
+          <span class="expand-sub">
+        <span class="expand-sub-open">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#down"></use>
+</svg>
+        </span>
+        <span class="expand-sub-close">
+          
+
+<svg  class="expand-sub__icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#up"></use>
+</svg>
+        </span>
+      </span>
+          
+                                            
+<ul  class="main-menu main-menu--sub main-menu--sub-1">
+                                    
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/alumni/events"
+>
+      Events
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/alumni/connect"
+>
+      Connect
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/alumni/career"
+>
+      Career
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/alumni/news"
+>
+      News
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/alumni/leadership-groups"
+>
+      Leadership Groups
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="https://www.bentley.edu/alumni/faqs-benefits"
+>
+      FAQs &amp; Benefits
+  </a>
+      </li>
+                                            
+
+<li  class="main-menu__item main-menu__item--sub main-menu__item--sub-1">
+                          
+<a
+   class="main-menu__link main-menu__link--sub main-menu__link--sub-1"
+      class=" class="main-menu__link main-menu__link--sub main-menu__link--sub-1""
+      target=""
+    href="/support"
+>
+      Support Bentley
+  </a>
+      </li>
+                        </ul>
+  
+      </li>
+                        </ul>
+  
+
+</nav>
+
+
+          <nav class="cta-nav show-mobile">
+              <nav role="navigation" class="cta-links block-headerctamenu-menu">
+        
+    
+                                  
+<ul  class="menu">
+                                    
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/admission"
+>
+      Apply
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/undergraduate/visit"
+>
+      Visit
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="http://www.alumni.bentley.edu/s/1696/giving18/interior.aspx?sid=1696&amp;gid=2&amp;pgid=2513"
+>
+      Give
+  </a>
+      </li>
+                        </ul>
+  
+
+
+  </nav>
+
+          </nav>
+    <div  class="main-nav-wrap__secondary">
+      <nav class="action-nav">
+                
+    
+                                  
+<ul  class="action-menu">
+                                    
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#directory"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="/directory"
+>
+      Directory
+  </a>
+      </li>
+                                            
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#pin"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="/offices/campus-map"
+>
+      Map &amp; Directions
+  </a>
+      </li>
+                                            
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#donate"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="https://falconnet.bentley.edu/s/1696/giving18/interior.aspx?sid=1696&amp;gid=2&amp;pgid=2513"
+>
+      Give to Bentley
+  </a>
+      </li>
+                                            
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#calendar"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="https://events.bentley.edu"
+>
+      Campus Events
+  </a>
+      </li>
+                                            
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#clipboard"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="/offices/human-resources/careers"
+>
+      Jobs at Bentley
+  </a>
+      </li>
+                                            
+
+<li  class="action-menu__item action-menu__item--level-0">
+                            
+
+<svg  class="action-menu__link-icon">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#tour"></use>
+</svg>
+        
+<a
+   class="action-menu__link action-menu__link--level-0"
+      class=" class="action-menu__link action-menu__link--level-0""
+      target=""
+    href="https://www.youvisit.com/tour/bentley?pl=v"
+>
+      Virtual Tour
+  </a>
+      </li>
+                        </ul>
+  
+
+            </nav>
+      <nav class="persona-nav">
+        
+
+<h2  class="persona-nav__title">
+      Information for:
+  </h2>
+                <nav role="navigation" aria-labelledby="block-persona-menu" id="block-persona">
+            
+  <h2 class="visually-hidden" id="block-persona-menu">Persona</h2>
+  
+
+        
+    
+                                  
+<ul  class="persona-menu">
+                                    
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/role/prospective-student"
+>
+      Prospective Students
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/role/current-student"
+>
+      Current Students
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/role/parents"
+>
+      Parents &amp; Families
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/role/faculty-staff"
+>
+      Faculty &amp; Staff
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/alumni"
+>
+      Alumni
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/support"
+>
+      Donors
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/undergraduate/school-counselors"
+>
+      School Counselors
+  </a>
+      </li>
+                                            
+
+<li  class="persona-menu__item persona-menu__item--level-0">
+                          
+<a
+   class="persona-menu__link persona-menu__link--level-0"
+      class=" class="persona-menu__link persona-menu__link--level-0""
+      target=""
+    href="/role/company"
+>
+      Companies/Corporate Partners
+  </a>
+      </li>
+                        </ul>
+  
+
+
+  </nav>
+
+            </nav>
+      <div class="menu-special-content">
+        
+
+<h2  class="newsroom-nav__title">
+      
+<a
+   class="title__link"
+    href="/news"
+>
+      Newsroom
+  </a>
+  </h2>
+                
+
+<div  id="block-views-block-articles-block-1" class="block views-element-container">
+  
+    
+      <div><div class="js-view-dom-id-c46fb8068f46eff07002af1e07932133aafce2ebdf22a283a20c4294adff5e5e">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+<div  class="article-preview">
+      <a href="/news/black-lives-matter-campus" >
+      <div class="hero">
+        <img src="/sites/default/files/styles/main_menu_news_image/public/2020-06/Bentley%20Vigil%20for%20Black%20Lives%2006092020%20v4.jpg?itok=gOPzjRnf" alt="Composite image of panelists who spoke during Vigil for Black Lives" />
+      </div>
+      
+
+<h6  class="h6">
+      ‘Black Lives Matter on this Campus’
+  </h6>
+    </a>
+  </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+            </div>
+    </div><!--main-nav-wrap-secondary-->
+  </div><!--main-nav-wrap-->
+</div><!--main-nav-outer-->
+
+
+
+      </div>
+  </div>
+</header>
+
+      
+              <div>
+    
+
+  <div class="alert-bar">
+    <div class="wrapper">
+      <div><div class="js-view-dom-id-b48bc8995490e69a3ffd932f6816e7afd21efa8dfa74e4f25085960b8d7d3761">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-title"><h2 class="field-content h1">Back to Bentley</h2></div><div class="views-field views-field-body"><div class="field-content"><p>The university will return to campus this fall. Read our plan at <a href="/backtobentley">www.bentley.edu/BacktoBentley</a> </p></div></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      
+  <div class="content-wrapper">
+                <div>
+    
+
+<div  id="block-entityviewcontent" class="block">
+  
+    
+      
+
+
+            <div class="hero-container" >
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+
+<div data-variation="standard"  class="hero hero--">
+  <div  class="hero__image">
+        
+    </div>
+  </div>
+
+</div>
+      
+
+  </div>
+
+  </div>
+
+      
+        
+    
+    
+    
+  
+        <div class="wrapper">
+      
+<div class="m-top">
+  <div data-drupal-messages-fallback class="hidden"></div>
+
+</div>
+
+    </div>
+  
+    <main role="main"  class="full__main">
+      <a id="main-content" tabindex="-1"></a>
+      
+      <div  class="main-content">
+              <div>
+    
+
+<div  id="block-bentley-content" class="block">
+  
+    
+      
+<div  data-history-node-id="333631" role="article" >
+<article  data-history-node-id="333631" role="article" class="node">
+
+  
+    
+
+  
+  <div>
+    
+
+
+            
+
+
+<div  class="inner">
+  <div class="content-with-header__inner  ">
+      	    <div class="content-with-header__content">
+      
+
+            <div class="text-long"><!-- Global site tag (gtag.js) - Google Analytics --><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-162570271-1"></script><script>
+<!--//--><![CDATA[// ><!--
+
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162570271-1');
+
+
+//--><!]]>
+</script></div>
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+          
+
+
+<div  class="inner">
+  <div class="content-with-header__inner  ">
+      	
+	    
+
+<h1  class="h1 h1--margin">
+      
+
+
+            Keep Learning
+      
+  </h1>
+        <div class="content-with-header__content">
+      
+
+            <div class="text-long"><p><span><img alt="Remote in Control" src="/sites/default/files/inline-images/SAF.454.20%20Remote%20Learning%20Logo_final.png" /></span>This page contains resources to support students during a period of remote learning. These are intended to help students adapt their habits and learning styles to an online format and adjust things such as study skills and communication with your groups to continue to complete assignments and achieve your goals as learners.</p>
+
+<p>Please check back often: This page will be updated as additional information and resources become available.</p>
+
+<p><strong>Reminders:</strong></p>
+
+<ul><li>
+	<p>There is no perfect solution for this situation and perfection is not expected. However, please try your best to be adaptable and focus on the key learning objectives for your courses.</p>
+	</li>
+	<li>
+	<p>Although learning online may be new and intimidating to you, it will be okay. You will be better than you think. The keys are to focus on best practices and maintain communications with your professors. </p>
+	</li>
+</ul><ul><li>
+	<p>You are not alone! Bentley will do its best to provide you the support and resources you need during these unusual circumstances. Don’t be afraid to ask for help. In addition to your professors, the Office of Academic Services and the Academic Learning Centers, consider reaching out to your friends and family who are experienced in online learning and ask for helpful tips.</p>
+	</li>
+</ul></div>
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+          
+
+<div id="" name=""  class="section-divider">
+	
+
+
+            <div>Get Ready for Finals</div>
+      
+	<div class="green_bar"></div>
+</div>
+          
+
+
+<div  class="inner">
+  <div class="content-with-header__inner  ">
+      	
+	    
+
+<h2  class="h2 h2--margin">
+      
+
+
+            Learning Labs
+      
+  </h2>
+        <div class="content-with-header__content">
+      
+
+            <div class="text-long"><p>Please see resources below to learn how to use Bentley's Learning Labs remotely to help you prepare for your exams.</p>
+
+<p><a href="https://cis.bentley.edu/sandbox/index.php/2020/04/14/get-your-laptop-ready-for-online-finals/">Laptop Preparation</a></p>
+
+<p><a href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Lab%20Resources%203-20-20_0.pdf">Remote Learning Lab Access</a></p>
+
+<p> </p></div>
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+          
+
+
+<div  class="inner">
+  <div class="content-with-header__inner  ">
+      	
+	    
+
+<h2  class="h2 h2--margin">
+      
+
+
+            Getting Focused
+      
+  </h2>
+        <div class="content-with-header__content">
+      
+
+            <div class="text-long"><p>Time to kick it into gear and get motivated for the last push of the semester. Here are some resources that will help you get focused and ready to finish strong!</p>
+
+<p><a href="https://prezi.com/view/mtgrurasMwNYtrAPR85Z/">Motivation Menu</a></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1rxE6vYIodDe38Kxu-OxxIvV0DeayjyW_xHxcowtMDd8/edit#gid=0">Reading Day Study Retreat Registration</a></p>
+
+<p><a href="https://www.youtube.com/channel/UClTq-DCChtHE3ybJOBiPoPg/videos?view=0&amp;sort=dd&amp;shelf_id=0">Mindfulness</a></p>
+
+<p><a href="https://videos.bentley.edu/media/Don%27t+Do+This%21++Remote+classroom+behavior/1_tea4c14g">Remote Classroom Etiquette</a></p></div>
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+          
+
+
+<div  class="inner">
+  <div class="content-with-header__inner  ">
+      	    <div class="content-with-header__content">
+      
+
+            <div class="text-long"><p>Help Desk call center hours (Eastern Time): Monday -- Thursday 7:30 a.m. -- 8:00 p.m., Friday 7:30 a.m. -- 5:00 p.m.</p>
+
+<p>Students can seek IT help in two ways during business hours (Eastern Time):</p>
+
+<ul><li>Call the Help Desk at <a href="tel:781-891-3122">781-891-3122</a></li>
+	<li>Email <a href="mailto:helpdesk@bentley.edu">helpdesk@bentley.edu</a></li>
+</ul><p>Emails should include:</p>
+
+<ol><li>Student phone # and location.</li>
+	<li>Describe specific question/problem/request and urgency of IT support need.</li>
+	<li>Course and section number of class (if applicable).</li>
+</ol></div>
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+          <div class="wrapper">
+  
+  
+  
+   <div class="grid-no-title-space"></div>
+<div  class="card__grid">
+    <div  class="grid__top">
+            
+          </div>
+  
+    <div  class="grid__btm">
+        
+
+
+            
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Study Skills &amp; Time Management
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p><a data-entity-type="file" data-entity-uuid="eb6c5bd0-9b3a-4f81-95ad-b4a4144225e1" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/TipsforOnlineLearning.docx">Tips for Online Learning</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="82063484-6180-4c29-a132-fb15e5fad373" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/synchronouslearningtips.docx">Synchronous Learning Tips</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="b9a37575-e873-4943-9462-8969a635535b" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/asynchronouslearningtips.docx">Asynchronous Learning Tips</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="20cbe7e3-9cc0-49f2-bd88-d9d3fc1b9a60" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/TimemanagementforOnlinelearning.docx">Time Management for Online Learning</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="4c97c834-24bb-4460-a471-152c45f93af4" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/HowIManageMySchedule.docx">How I Manage my Schedule</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="3afdac1b-e3cd-4cdf-b7cc-d83f6c85f5fd" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/ProjectedvActualTimelogs.docx">Projected vs. Actual Time Logs</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="643f1dc6-b422-4001-b0f0-da1b1acea0f5" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Time%20Management%20Worksheet.docx">Time Management Worksheet</a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="714067b3-7863-4f5b-af36-9acf7654d02b" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Time%20Management%20Self%20Assessment.docx">Time Management Self Assessment</a></p>
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+          
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Communication Skills &amp; Setting Boundaries
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p><a data-entity-type="file" data-entity-uuid="028a1131-0e4d-409f-bf75-c60652eefc83" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/SettingBoundariesforSuccess.docx"><span><span><span>Setting Boundaries</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="a135859d-facc-4a50-93e7-3e7d288526bd" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/StrengthsforOnlineLearning.pptx"><span><span><span>Strengths for Online Learning</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="6253d3af-50f9-4bf8-8f77-2fafbeeb1f25" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/TroubleshootingwithGroups.docx"><span><span><span>Troubleshooting for Groups</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="9a6464dd-d1a4-42e7-bf1b-32b3b2ad8b89" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Tipsfordifficultconversations.docx"><span><span><span>Difficult Conversations</span></span></span></a></p>
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+          
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Stress Management &amp; Coping Skills
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p><a data-entity-type="file" data-entity-uuid="81988b0c-5d1d-495f-846c-0ed18b00b8ea" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/SelfCare.docx"><span><span><span>Self Care</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="4b5af662-195f-49db-8d27-df1ef212b166" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/SleepforSuccess.docx"><span><span><span>Sleep for Success</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="37a396a1-3968-4bc1-adf9-1c60d7ba0c1c" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/BreathingforBalance.docx"><span><span><span>Breathing</span></span></span></a></p>
+
+<p><a data-entity-type="file" data-entity-uuid="83ff16b5-ca67-496a-bdea-81572b91e7a9" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/MindfulnessforLearning.docx"><span><span><span>Mindfulness</span></span></span></a></p>
+
+<p><a class="file file--mime-application-pdf file--application-pdf" data-entity-type="file" data-entity-uuid="612a20f7-d724-46ff-8e9f-7622a0e07573" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Spiritual%20Resources.pdf">Spiritual Resources</a></p>
+
+<p><a href="https://events.bentley.edu/event/drop_in_stress_management_coaching#.XpcKIMhKhPY)">Drop in Stress Management Coaching</a></p>
+
+<p> </p>
+
+<p><a class="button" href="https://www.bentley.edu/university-life/student-health/student-health-resources">Access more apps and resources!</a></p>
+
+<p> </p>
+
+<p>Also follow the <a href="https://www.instagram.com/bentley_health/">Wellness Instagram</a>!</p>
+
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+      
+      </div>
+  </div>
+</div>
+
+          <div class="wrapper">
+  
+  
+  
+   <div class="grid-no-title-space"></div>
+<div  class="card__grid">
+    <div  class="grid__top">
+            
+          </div>
+  
+    <div  class="grid__btm">
+        
+
+
+            
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Zoom
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p>If you have not used Zoom before, you will find everything you need on our <a href="https://atc.bentley.edu/getting-started-with-zoom-students/">Getting started with Zoom</a> page!</p>
+
+<p> </p>
+
+<p>You can also <a href="https://www.bentley.edu/offices/brand/zoom-backgrounds">download an official Bentley University Zoom Background</a> for extra pizzazz.</p>
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+          
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Access to Technology
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p><a data-entity-type="file" data-entity-uuid="4e12b62c-59a1-4890-862d-fcf2cd293ff0" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Internetaccess_1.docx">Internet Access</a></p>
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+          
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+    
+                  
+
+
+
+<div  class="card card-- card--stripe card--grid-item card--blue card--no-pad">
+              
+      
+
+<h2  class="card__title card__title--standard card__title--stripe card__title--stripe-title-only">
+      
+
+
+            Staying Socially Connected
+      
+  </h2>
+      
+          <div  class="card__copy card__copy--padding card__copy--stripe">
+    <div class="inner-wrapper">
+      
+      <div  class="card__body card__body--stripe">
+              
+
+
+            <p><a data-entity-type="file" data-entity-uuid="81509f0a-0a3a-4cc5-b31a-42aad3d725c4" href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/SocialConnectedness.docx">Social Connectedness</a></p>
+      
+          </div>
+          </div>
+  </div><!-- copy -->
+  </div>
+
+      
+      </div>
+  </div>
+</div>
+
+          
+
+<div id="" name=""  class="section-divider">
+	
+
+
+            <div>Other Resources</div>
+      
+	<div class="green_bar"></div>
+</div>
+          
+
+
+      <div>
+              <div>
+<div class="accordion">
+
+
+
+<dt  class="accordion-term">
+  	  
+
+<svg  class="dt__icon dt__icon--one">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#plus"></use>
+</svg>
+    	  
+
+<svg  class="dt__icon dt__icon--two">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#minus"></use>
+</svg>
+    
+
+
+            Learning Labs
+      
+</dt>
+<dd  class="accordion-def">
+
+
+            <p><a href="https://d2f5upgbvkx8pz.cloudfront.net/sites/default/files/inline-files/Lab%20Resources%203-20-20_0.pdf">Here are the updates to procedures for Learning Labs and Centers due to our shift to online learning. </a></p>
+      </dd>
+</div>	</div>
+              <div>
+<div class="accordion">
+
+
+
+<dt  class="accordion-term">
+  	  
+
+<svg  class="dt__icon dt__icon--one">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#plus"></use>
+</svg>
+    	  
+
+<svg  class="dt__icon dt__icon--two">
+  <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#minus"></use>
+</svg>
+    
+
+
+            Library Resources
+      
+</dt>
+<dd  class="accordion-def">
+
+
+            <p><a href="https://libguides.bentley.edu/coronavirus">https://libguides.bentley.edu/coronavirus</a></p>
+      </dd>
+</div>	</div>
+          </div>
+  
+
+      
+  </div>
+
+</article>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+        </div>
+
+         
+
+    </main>
+  </div>
+            <footer class="footer">
+    	  <div class="footer-upper">
+  	    <div class="footer-content">
+  	      <div class="branding">
+  	  	    		      		        
+<img
+   class="logo"
+      src="/themes/custom/bentley/images/logo_white.svg"
+      alt="Bentley Home"
+    />
+		        		        <div  class="footer-info">
+	175 Forest Street <span class="separator">|</span> Waltham, MA 02452 <span class="separator">|</span> 781-891-2000
+</div>		    		    <div class="social-links">
+  
+
+<a
+    href="https://www.facebook.com/bentleyuniversity"
+  title="Facebook"
+  target=""
+>
+  <svg  class="social_facebook__icon">
+    <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#social_facebook"></use>
+  </svg>
+</a>
+  
+
+<a
+    href="https://twitter.com/bentleyu"
+  title="Twitter"
+  target=""
+>
+  <svg  class="social_twitter__icon">
+    <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#social_twitter"></use>
+  </svg>
+</a>
+  
+
+<a
+    href="https://www.instagram.com/bentleyu/"
+  title="Instagram"
+  target=""
+>
+  <svg  class="social_instagram__icon">
+    <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#social_instagram"></use>
+  </svg>
+</a>
+  
+
+<a
+    href="https://www.linkedin.com/school/bentley-university/"
+  title="LinkedIn"
+  target=""
+>
+  <svg  class="social_linkedin__icon">
+    <use xlink:href="/themes/custom/bentley/dist/img/sprite/sprite.svg#social_linkedin"></use>
+  </svg>
+</a>
+</div>  	      </div>
+  	    </div>
+  	  </div>
+  	  <div class="footer-lower">
+  	    <div class="footer-content">
+  	      <span class="copyright">&#169; 2020 Bentley University. All rights reserved.</span>
+          <span class="align-right"><nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
+            
+  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+  
+
+        
+    
+                                  
+<ul  class="menu">
+                                    
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/offices/privacy"
+>
+      Privacy Policy
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target="_blank"
+    href="/offices/university-police/emergency-info"
+>
+      Emergency Info
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/offices/disability-services"
+>
+      Disability Services
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/offices/student-affairs/title-ix-resources"
+>
+      Title IX
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target="_blank"
+    href="/mybentley"
+>
+      MyBentley
+  </a>
+      </li>
+                                            
+
+<li  class="menu__item menu__item--level-0">
+                          
+<a
+   class="menu__link menu__link--level-0"
+      class=" class="menu__link menu__link--level-0""
+      target=""
+    href="/directory"
+>
+      Directory
+  </a>
+      </li>
+                        </ul>
+  
+
+
+  </nav>
+</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+              </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/333631","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"5de586c85c9877769cb611e6173a560ce0d935d715dfdaebcd9a7e6a038a9d86"}}</script>
+<script src="/sites/default/files/js/js_Qejv3IwynnLDr6Ln5Xr4JMK_ndVvwJOSvgjZWyG1rms.js"></script>
+<script src="/themes/custom/bentley/components/js/svgxuse.min.js?qcvz5n" defer></script>
+<script src="/sites/default/files/js/js_DIeOStTnL89W73a7BqlwsoN5tLcR_7dDa9LCyYwGhOo.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bca08de886","applicationID":"466171163","transactionName":"NFFVbEtTXBAEUUAKVg0bdltNW10NSnZGFkkCWGtWVlZXPyZdWhdLDFhbXUtufAwBV2IKXBR3WFZNQF0PCVdGTgcVXVJP","queueTime":0,"applicationTime":971,"atts":"GBZWGgNJTx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

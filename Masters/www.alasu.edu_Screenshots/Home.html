@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"042b4ac8ab",applicationID:"203399495"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/1920px-Alabama_State_University_seal.svg.png" type="image/png" />
+<link rel="alternate" hreflang="en" href="https://www.alasu.edu/coronavirus-covid-19-updates" />
+<link rel="canonical" href="https://www.alasu.edu/coronavirus-covid-19-updates" />
+<link rel="shortlink" href="https://www.alasu.edu/node/5118" />
+<link rel="revision" href="https://www.alasu.edu/coronavirus-covid-19-updates" />
+
+    <title>Coronavirus (COVID 19) Updates | Alabama State University</title>
+    <link rel="stylesheet" media="all" href="/libraries/superfish/css/superfish.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/progress.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/sticky-header.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tree-child.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/core/modules/views/css/views.module.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/modules/views_slideshow/modules/views_slideshow_cycle/css/views_slideshow_cycle.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/modules/simple_popup_blocks/css/simple_popup_blocks.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/modules/webform/modules/webform_bootstrap/css/webform_bootstrap.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/modules/paragraphs/css/paragraphs.formatter.css?qctt3n" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.css" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/styles.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/responsive.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/font-awesome.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/owl.carousel.min.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/owl.theme.default.min.css?qctt3n" />
+<link rel="stylesheet" media="all" href="/themes/asu/css/flipclock.css?qctt3n" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-coronavirus-covid-19-updates path-node page-node-type-page has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <div class="alert bs-site-alert alert-info" role="alert" style="display:none;"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="text-align-center"><font color="#000000"><b>Latest Updates on COVID-19 <a href="https://www.alasu.edu/coronavirus-covid-19-updates">Click Here</a></b></font></h3>
+</div>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="inner-page-wrapper" id="nodeid-5118">
+    <div class="top-con">
+  <div class="container">
+  <div class="row">
+
+    <div class="col-sm-12 col-md-10 fullwidth-mob">
+      <div class="top-header-left con-center">
+          <div class="region region-top-header-left">
+    <section id="block-topheadermenu" class="top-list block block-superfish block-superfishtop-header-menu clearfix">
+  
+    
+
+      
+<ul id="superfish-top-header-menu" class="menu sf-menu sf-top-header-menu sf-horizontal sf-style-none">
+  
+<li id="top-header-menu-menu-link-content47c8b812-3a92-42de-a8d9-2acd17fae485" class="sf-depth-1 sf-no-children"><a href="/directory" class="asu-directory sf-depth-1" target="_self">ASU directory</a></li><li id="top-header-menu-menu-link-content550ed510-401d-4fe0-b382-b593dd967e77" class="sf-depth-1 sf-no-children"><a href="http://asuonline.alasu.edu" class="header-blackboard sf-depth-1 sf-external" target="_blank">Blackboard</a></li><li id="top-header-menu-menu-link-contentcba01fa9-f531-491b-8712-6108d5429346" class="sf-depth-1 sf-no-children"><a href="https://hornetsnest.alasu.edu/psp/pa91prd/EMPLOYEE/EMPL/h/?tab=PAPP_GUEST&amp;pslnkid=ASU_GUEST_HOME" class="header-hornest sf-depth-1 sf-external" target="_blank">Hornets Web</a></li><li id="top-header-menu-menu-link-content56ebed52-180e-41ac-9408-63afd4f3afe9" class="sf-depth-1 sf-no-children"><a href="/student-life/student-well-being/emergencies-alerts" class="header-alerts sf-depth-1">Alerts</a></li><li id="top-header-menu-menu-link-contentdf9902a2-8636-43f6-a216-8ae9a6ee0fbd" class="sf-depth-1 sf-no-children"><a href="http://www.lib.alasu.edu/" class="header-library sf-depth-1 sf-external" target="_blank">Library</a></li><li id="top-header-menu-menu-link-content9adaa695-bb40-4206-a65a-14f9794429bf" class="sf-depth-1 sf-no-children"><a href="https://www.bkstr.com/alabamastatestore/home" class="header-bookstore sf-depth-1 sf-external" target="_blank">Bookstore</a></li>
+</ul>
+
+  </section>
+
+
+  </div>
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-2 fullwidth-mob">
+      <div class="reginster-row float-none con-center">
+          <div class="region region-top-header-right">
+    <div class="search-block-form sform block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-asu-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+      </div>
+    </div>
+	
+  </div>
+  </div>
+</div>
+
+<div class="header">
+  <div class="nav-section menu wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 left-mt">
+          <div class="navbar-header">
+                                                                  <div class="col-sm-12" role="heading">
+                        <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+      <img src="/sites/default/files/logo.png" alt="Home" />
+    </a>
+      
+  </div>
+
+                    </div>
+                                              </div>
+        </div> 
+        
+        <div class="col-sm-9 right-mt mob-nav">
+          <div class="small-menu main-menu">  
+                                                            <header class="navbar navbar-default" id="navbar" role="banner">
+                                  <div class="">
+                                <div class="">
+                    <div class="region region-navigation">
+    <section id="block-mainmenu" class="navbar-nav navbar-right sfmenu block block-superfish block-superfishmain-menu clearfix">
+  
+    
+
+      
+<ul id="superfish-main-menu" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none">
+  
+<li id="main-menu-menu-link-content1be10990-fa29-4905-9bb8-c7025dc70abb" class="sf-depth-1 menuparent"><a href="/academics/academics" class="sf-depth-1 menuparent">Academics</a><ul><li id="main-menu-menu-link-content764ff10e-57d9-46b8-9020-e9fc49cc5fca" class="sf-depth-2 sf-no-children"><a href="/colleges-and-department-list" class="sf-depth-2">Undergraduate</a></li><li id="main-menu-menu-link-content7e805fc9-11d7-4c89-867a-c3d662b92fec" class="sf-depth-2 sf-no-children"><a href="/academics/murphygraduateschool/harold-lloyd-murphy-graduate-school2" class="sf-depth-2">Graduate</a></li><li id="main-menu-menu-link-contentb97dd110-c97a-4e91-a03e-7c602b239d9e" class="sf-depth-2 sf-no-children"><a href="/academics/colleges_departments" class="sf-depth-2">Colleges</a></li><li id="main-menu-menu-link-content63a7e493-8e1c-4dd7-8ddb-605b918b5eac" class="sf-depth-2 sf-no-children"><a href="http://www.alasu.edu//sites/default/files/2019-05/Summer%202019%20Academic%20Calendar_1.pdf" target="_blank" class="sf-depth-2 sf-external">Summer Academic Calendar</a></li><li id="main-menu-menu-link-contentf076ad8b-a3c9-4722-8a23-4ff571380da7" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/sites/default/files/2020-05/Fall%202020%20Academic%20Calendar%20%281%29.pdf" class="sf-depth-2 sf-external">Fall 2020 Academic Calendar</a></li><li id="main-menu-menu-link-contentf8c5bc82-4988-4187-b88f-e05380e0f7d6" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/sites/default/files/2020-05/Spring%202021%20Academic%20Calendar%20%281%29.pdf" class="sf-depth-2 sf-external">Spring 2021 Academic Calendar</a></li><li id="main-menu-menu-link-contentc1349a95-0aa5-4ada-9a36-d06298d41db4" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/sites/default/files/2020-05/Summer%202021%20Academic%20Calendar%20%281%29.pdf" class="sf-depth-2 sf-external">Summer 2021 Academic Calendar</a></li><li id="main-menu-menu-link-content0d78655a-d5b6-4e24-ba42-234ebe039dda" class="sf-depth-2 sf-no-children"><a href="/academics/research-centers" class="sf-depth-2">Research </a></li><li id="main-menu-menu-link-contentba04cfcf-fa9c-46fa-a2bb-6b28352641b1" class="sf-depth-2 sf-no-children"><a href="https://www.asucontinuinged.com/" target="_blank" class="sf-depth-2 sf-external">Continuing Education</a></li><li id="main-menu-menu-link-contentad1a5f2e-93ef-4c29-8ba5-c51b2f4e6f55" class="sf-depth-2 sf-no-children"><a href="/academics/international-programs" class="sf-depth-2">International</a></li><li id="main-menu-menu-link-content310b3c05-0102-47c4-a94c-8eae7bccc175" class="sf-depth-2 sf-no-children"><a href="/academics/trio-programs" class="sf-depth-2">TRIO</a></li><li id="main-menu-menu-link-contentb0a5b378-2296-4291-bb0f-1d88f4cca768" class="sf-depth-2 sf-no-children"><a href="/academics/division-extended-learning-online-programs" class="sf-depth-2">Online Programs </a></li><li id="main-menu-menu-link-contentab1aaf78-ddbe-4c01-ae8d-3d54f1a17a66" class="sf-depth-2 sf-no-children"><a href="/undergraduate/generalinformation/general-information" class="sf-depth-2">Digital Catalog</a></li><li id="main-menu-menu-link-contentc8e08199-7240-45aa-a5b0-f357cf79efb9" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/current-students/records-registration/official-catalog" class="sf-depth-2 sf-external">Official Catalog</a></li></ul></li><li id="main-menu-menu-link-content9dfe5ac4-d2f9-413d-b223-e12e73d3be81" class="sf-depth-1 menuparent"><a href="/current-students" class="sf-depth-1 menuparent">Students</a><ul><li id="main-menu-menu-link-content197ccb78-1bd1-4355-89ee-3858fcd13234" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/cost-aid/hornetq" class="sf-depth-2 sf-external">HornetQ</a></li><li id="main-menu-menu-link-content8f48fd11-301c-4224-be01-af1bd0d3ab81" class="sf-depth-2 sf-no-children"><a href="/admissions/undergraduate-admissions" class="sf-depth-2">Undergraduate Admissions</a></li><li id="main-menu-menu-link-content1d29123f-0d35-4392-af57-fab2f91a8dbd" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/current-students/new-student-orientation-2018" class="sf-depth-2 sf-external">New Student Orientation</a></li><li id="main-menu-menu-link-content4eb4a5ef-5824-4760-a967-48a474549737" class="sf-depth-2 sf-no-children"><a href="/admissions/graduate-admissions" class="sf-depth-2">Graduate Admissions</a></li><li id="main-menu-menu-link-content4f98abbd-301f-4c19-afe0-3e96fed417d5" class="sf-depth-2 sf-no-children"><a href="/cost-aid/financial-aid" class="sf-depth-2">Financial Aid</a></li><li id="main-menu-menu-link-contentdd6ca2a9-1b17-4b7a-825e-367ca45aee0a" class="sf-depth-2 sf-no-children"><a href="/student-life/housingresidence-life/housing" class="sf-depth-2">Housing &amp; Residence Life</a></li><li id="main-menu-menu-link-content336ae59c-e636-411c-8509-b6df521c4c0e" class="sf-depth-2 sf-no-children"><a href="/current-students/records-registration/office-records-registration" class="sf-depth-2">Records &amp; Registration</a></li><li id="main-menu-menu-link-contenta01dd4ae-21ad-40d6-af63-22308b52e622" class="sf-depth-2 sf-no-children"><a href="/student-life" class="sf-depth-2">Student Life</a></li><li id="main-menu-menu-link-content9cf33e5c-cea3-4c5a-80ce-d377082e2247" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/student-life/activities/student-organizations/candidates-rules" class="sf-depth-2 sf-external">Student Elections</a></li><li id="main-menu-menu-link-contenta3f3aa63-0676-4571-8b28-82b3051ea9fa" class="sf-depth-2 sf-no-children"><a href="/cost-aid/student-accounts" class="sf-depth-2">Student Accounts</a></li><li id="main-menu-menu-link-contentfea8ddfe-bcb9-4157-b368-ebf65b49e51e" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/current-students/wellness-safety/ucc-services" class="sf-depth-2 sf-external">Counseling Center</a></li><li id="main-menu-menu-link-content348a8962-01e9-4daa-b38b-15d06aa72e68" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/current-students/office-disability-services" class="sf-depth-2 sf-external">Office of Disability Services</a></li><li id="main-menu-menu-link-contentc85c036b-d1ec-47a6-a318-5539c0f4ea56" class="sf-depth-2 sf-no-children"><a href="/student-life/activities/student-organizations" class="sf-depth-2">Student Organizations</a></li><li id="main-menu-menu-link-contente721772d-74e0-4f8d-a19a-d633e15dc16b" class="sf-depth-2 sf-no-children"><a href="/admissions/auxiliary-services" class="sf-depth-2">Services</a></li><li id="main-menu-menu-link-content01d54439-8fbb-4328-9185-a022dbec0c9a" class="sf-depth-2 sf-no-children"><a href="/student-life/diversity-and-international-affairs" class="sf-depth-2">Diversity and International Affairs</a></li><li id="main-menu-menu-link-contentb2eac52e-7af5-45b8-9aad-103964a024e2" class="sf-depth-2 sf-no-children"><a href="/current-students/office-judicial-affairs" class="sf-depth-2">Office of Judicial Affairs</a></li></ul></li><li id="main-menu-menu-link-content6b5ec255-e404-49c4-b4cd-f7d1a34d8aff" class="sf-depth-1 menuparent"><a href="https://www.alasu.edu/about-asu/administration" class="sf-depth-1 sf-external menuparent">Administration</a><ul><li id="main-menu-menu-link-contentd50474ce-0a38-4dbf-90c8-5bcf9912bb06" class="sf-depth-2 sf-no-children"><a href="/presidents" class="sf-depth-2">President&#039;s Office</a></li><li id="main-menu-menu-link-content8d5ccd9f-f3e3-4776-adb1-d4b4bbf925bb" class="sf-depth-2 sf-no-children"><a href="/about-asu/administration/boardoftrustees/about-board" class="sf-depth-2">Board Of Trustees</a></li><li id="main-menu-menu-link-contentfddd57d7-5b4f-49c9-8c59-b4f4d21690bb" class="sf-depth-2 sf-no-children"><a href="/academics/academics" class="sf-depth-2">Provost</a></li><li id="main-menu-menu-link-content75e7078d-6612-407b-ad2d-b993be2935da" class="sf-depth-2 sf-no-children"><a href="/faculty-staff/faculty-staff" class="sf-depth-2">Faculty</a></li><li id="main-menu-menu-link-content62076b63-edef-41f0-8142-885fc7eb398c" class="sf-depth-2 sf-no-children"><a href="/faculty-staff/human-resources/human-resources" class="sf-depth-2">Human Resources</a></li><li id="main-menu-menu-link-content8ff747d4-9007-4657-a7fc-22427d51c7b7" class="sf-depth-2 sf-no-children"><a href="/administration/technology-services/division-technology-services-and-innovation" class="sf-depth-2">Technology</a></li><li id="main-menu-menu-link-content9d5a21e3-eba4-4931-bd50-de3e765b7358" class="sf-depth-2 sf-no-children"><a href="/administration/finance/business-and-finance" class="sf-depth-2">Finance</a></li><li id="main-menu-menu-link-content80877c7e-728e-4604-85a7-389aa7ce5cef" class="sf-depth-2 sf-no-children"><a href="/student-life/student-well-being/campus-police" class="sf-depth-2">Campus Police</a></li><li id="main-menu-menu-link-contentaaa8c551-96ef-4b99-8d89-f88ce4c6b677" class="sf-depth-2 sf-no-children"><a href="/administration/institutional-effectiveness" class="sf-depth-2">Institutional Effectiveness</a></li><li id="main-menu-menu-link-contenta34e08e6-a23c-496b-9a59-8e0d6c822d9b" class="sf-depth-2 sf-no-children"><a href="/faculty-staff/physical-plant" class="sf-depth-2">Facilities</a></li><li id="main-menu-menu-link-content674699e0-62e5-41fb-b355-c2750546c079" class="sf-depth-2 sf-no-children"><a href="/administration/procurement-department" class="sf-depth-2">Procurement</a></li><li id="main-menu-menu-link-content8e62fecc-424a-4028-87e9-c5ac161e5227" class="sf-depth-2 sf-no-children"><a href="/administration/events-management" target="_blank" class="sf-depth-2">Events Management</a></li><li id="main-menu-menu-link-contenta7cc6118-02bb-468a-a22d-332d68b802a9" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/about-asu/administration/titleiii/title-iii" class="sf-depth-2 sf-external">Title III</a></li></ul></li><li id="main-menu-menu-link-contentfe202d9d-7d0c-4742-853a-c1627ef183f9" class="sf-depth-1 menuparent"><a href="/alumni/alumni" class="sf-depth-1 menuparent">Alumni</a><ul><li id="main-menu-menu-link-contente78c0885-c5c9-48ad-b91d-df2cb0f32ede" class="sf-depth-2 sf-no-children"><a href="/alumni-chapters" class="sf-depth-2">National Alumni Association</a></li><li id="main-menu-menu-link-content6f95faba-9a60-4cd0-af89-7d2487fd06ed" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/alumni/national-alumni-association-membership-form" class="sf-depth-2 sf-external">Join the NAA</a></li><li id="main-menu-menu-link-contentde058198-c6b4-4ae1-b9b3-230da22f7da3" class="sf-depth-2 sf-no-children"><a href="http://formbuilder.alasu.edu/forms/AlumniRelations/Update_Your_Info.aspx" target="_blank" class="sf-depth-2 sf-external">Update your Contact Information</a></li><li id="main-menu-menu-link-content39608470-2d1b-4e8a-8d5e-8d3fc240489d" class="sf-depth-2 sf-no-children"><a href="/about-asu/50-under-50" title="50 Under 50 Alumni Awards" class="sf-depth-2">50 Under 50 Alumni Awards</a></li><li id="main-menu-menu-link-content10c450fb-7dab-466b-8078-c1580bb35bf6" class="sf-depth-2 sf-no-children"><a href="/alumni/spirit-awards" class="sf-depth-2">Spirit Awards</a></li><li id="main-menu-menu-link-content150d45a5-d310-4434-935b-75af9e1abdaf" class="sf-depth-2 sf-no-children"><a href="/alumni/alumni-reconnect" class="sf-depth-2"> Alumni Reconnect </a></li><li id="main-menu-menu-link-contentcb4b81b8-cdad-492c-9a2e-319177ed6a5e" class="sf-depth-2 sf-no-children"><a href="https://secure.qgiv.com/for/alastauni/event/793587/" target="_blank" class="sf-depth-2 sf-external">Brick Campaign</a></li><li id="main-menu-menu-link-contentcf57687a-92b3-4037-b210-6a1224634458" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/golden-class-1970" class="sf-depth-2 sf-external">Golden Class of 1970</a></li></ul></li><li id="main-menu-menu-link-contentaadc314b-140d-48e9-a92a-22d8c552aadc" class="sf-depth-1 menuparent"><a href="/student-life/asu-community" class="sf-depth-1 menuparent">Community</a><ul><li id="main-menu-menu-link-content663f734a-8f7c-453f-bd04-8b63dbdf122f" class="sf-depth-2 sf-no-children"><a href="/community-relations-department" class="sf-depth-2">Community Relations Department</a></li><li id="main-menu-menu-link-content37c220f9-b9f8-4538-942c-16092047cc4e" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/open-records-request" class="sf-depth-2 sf-external">Open Records Request</a></li><li id="main-menu-menu-link-content78e08dd6-b156-431c-ac78-1c1feeab9ea7" class="sf-depth-2 sf-no-children"><a href="/media" class="sf-depth-2">Media Relations</a></li><li id="main-menu-menu-link-content4ad7655f-c41f-4b4e-8f6a-7f3417ee3596" class="sf-depth-2 sf-no-children"><a href="/about-asu/wvas" class="sf-depth-2">WVAS</a></li><li id="main-menu-menu-link-contente8881b1d-3830-4b77-a357-6e4098f6c6ab" class="sf-depth-2 sf-no-children"><a href="https://www.asucontinuinged.com/" class="sf-depth-2 sf-external">Continuing Education</a></li><li id="main-menu-menu-link-content0f7c697e-0f58-4888-9473-ae9928a476d4" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/alumni/labor-day-classic" class="sf-depth-2 sf-external">Labor Day Classic</a></li><li id="main-menu-menu-link-content86784e99-5003-4a62-94ab-6c2dba75def4" class="sf-depth-2 sf-no-children"><a href="/cba/small-business-development-center" class="sf-depth-2">Small Business Development Center</a></li><li id="main-menu-menu-link-contentceb5d6ee-2372-4f89-9ab5-124b5cdb2e01" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/campus-camps-programs" class="sf-depth-2 sf-external">Campus Camps &amp; Programs</a></li><li id="main-menu-menu-link-content3e0e98a8-36fc-4175-a538-cb107d6d6770" class="sf-depth-2 sf-no-children"><a href="https://www.alasu.edu/put-ring-it" class="sf-depth-2 sf-external">Put a Ring on It</a></li></ul></li><li id="main-menu-menu-link-contentf0b1ee05-242b-4730-8cea-8f85f943c89f" class="sf-depth-1 menuparent"><a href="/about-asu/about-asu" class="sf-depth-1 menuparent">About</a><ul><li id="main-menu-menu-link-contentd45b8b72-db0b-4f00-8eab-46ff85b70cb2" class="sf-depth-2 sf-no-children"><a href="/about-asu/our-campus" class="sf-depth-2">Our Campus</a></li><li id="main-menu-menu-link-content9f0eae6e-241f-4cee-8a5c-40df7321f94f" class="sf-depth-2 sf-no-children"><a href="/about-asu/history-tradition" class="sf-depth-2">History and Tradition</a></li><li id="main-menu-menu-link-contentdccdaebd-c0b8-4994-9459-3362dbec80d3" class="sf-depth-2 sf-no-children"><a href="/all-events" class="sf-depth-2">Events</a></li><li id="main-menu-menu-link-content603d1ced-0865-43d4-905e-deb999dc743f" class="sf-depth-2 sf-no-children"><a href="/all-news" class="sf-depth-2">News</a></li><li id="main-menu-menu-link-content068d9344-3029-440a-bb85-70dfbba5ef6d" class="sf-depth-2 sf-no-children"><a href="/mainphoto" class="sf-depth-2">Photos</a></li><li id="main-menu-menu-link-contentc3e6e61e-42a0-44c4-bdb5-bf93b9770113" class="sf-depth-2 sf-no-children"><a href="/video-gallery" class="sf-depth-2">Videos</a></li></ul></li>
+</ul>
+
+  </section>
+
+
+  </div>
+
+                                                    </div>
+
+                                                                  </div>
+                              </header>
+                                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+                    <div class="big-page-banner clearfix">
+          <div class="col-sm-12">
+            <div class="row">
+              
+            </div>
+          </div>
+        </div>
+            
+<div class="main-content-wrap inner-page-content">
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row main-row">
+
+           
+                  
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-first">
+    <section id="block-sidebarmenutwo" class="xpanel block block-superfish block-superfishsidebar-menu-two clearfix">
+  
+    
+
+      
+<ul id="superfish-sidebar-menu-two" class="menu sf-menu sf-sidebar-menu-two sf-vertical sf-style-none list-unstyled xpanel-list">
+  
+<li id="sidebar-menu-two-menu-link-content9481d413-1ef6-4775-8b40-57d3f2f113e9" class="sf-depth-1 sf-no-children"><a href="https://goo.gl/6RgDVe" class="sf-depth-1 sf-external">Apply</a></li><li id="sidebar-menu-two-menu-link-content2ddd3c25-68e9-4ddc-8649-a566892d0cc4" class="sf-depth-1 sf-no-children"><a href="https://docs.google.com/forms/d/19qGw-Tb1snC83pj1FtKEbJGbF5gwxveFkKSux9y6e-4/viewform?edit_requested=true" class="sf-depth-1 sf-external">Visit</a></li><li id="sidebar-menu-two-menu-link-content40d52df8-cfc2-4a1b-a283-c8b7392d10ce" class="sf-depth-1 sf-no-children"><a href="/giving" class="sf-depth-1">Giving</a></li><li id="sidebar-menu-two-menu-link-contentdc27595c-9b30-439f-85f9-b55f5102e917" class="sf-depth-1 sf-no-children"><a href="/all-events" class="sf-depth-1">Events</a></li><li id="sidebar-menu-two-menu-link-content7587f460-9be6-4912-ae28-b951e4de2e1a" class="sf-depth-1 sf-no-children"><a href="https://bamastatesports.com/" class="sf-depth-1 sf-external">Athletics</a></li>
+</ul>
+
+  </section>
+
+
+  </div>
+
+          </aside>
+                    
+
+                  <section class="col-sm-9">
+
+                
+                
+       
+                        <div class="page-banner">
+              <div class="region region-page-banner">
+    <section class="views-element-container block block-views block-views-blockheader-image-of-about-asu-block-1 clearfix" id="block-views-block-header-image-of-about-asu-block-1">
+  
+    
+
+      <div class="form-group"><div class="view view-header-image-of-about-asu view-id-header_image_of_about_asu view-display-id-block_1 js-view-dom-id-40dc06cf7db494af18d342777c4488af5716e5faef980b3d0e8993216071ca02">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container inner-header-image block block-views block-views-blockinner-page-header-banner-block-1 clearfix" id="block-views-block-inner-page-header-banner-block-1">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_1 js-view-dom-id-87e815a9200bdf923c2385c1786a29408fe48cc0dcc142d43544f24382b8a14b">
+  
+    
+      
+      <div class="view-content">
+        <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_inner_page_header_banner-block_1" class="views_slideshow_cycle_main views_slideshow_main">
+    <div id="views_slideshow_cycle_teaser_section_inner_page_header_banner-block_1"  class="views_slideshow_cycle_teaser_section">
+     <div id="views_slideshow_cycle_div_inner_page_header_banner-block_1_0"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+      <div  class="views-row views-row-0 views-row-odd views-row-first">
+  <div class="views-field views-field-field-header-image"><div class="field-content">  <img src="/sites/default/files/styles/inner_page_header_banner/public/2020-03/outbreak-coronavirus-world-1024x506px%20%281%29.jpg?itok=PpH0busK" width="850" height="365" alt="coronavirus" typeof="foaf:Image" class="img-responsive" />
+
+
+</div></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-2 clearfix" id="block-views-block-inner-page-header-banner-block-2">
+  
+    
+
+      <div class="form-group"><div class="view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_2 js-view-dom-id-100fb1ac91afe1ae50b4b08aa641a7b6861143ce23bcb19a17764dada0eef35c">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-4 clearfix" id="block-views-block-inner-page-header-banner-block-4">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_4 js-view-dom-id-33ba38bff04339450ab874df23c91b3fa6646fa21c865947d5e4c3e28cce42f5">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-3 clearfix" id="block-views-block-inner-page-header-banner-block-3">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_3 js-view-dom-id-95cc001f6a0bfb205bc84fa36bdbc69ee589d93625191664b4ed1ac7a69f1856">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-5 clearfix" id="block-views-block-inner-page-header-banner-block-5">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_5 js-view-dom-id-021ff13551cf0493275d405143b4e26025fc292063a727c3b69d919ee9d733d9">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-6 clearfix" id="block-views-block-inner-page-header-banner-block-6">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_6 js-view-dom-id-8cf924d34943a3e351d5e4552e0e46388205a34f138c669fe5f5c79fcec58691">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-7 clearfix" id="block-views-block-inner-page-header-banner-block-7">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_7 js-view-dom-id-136f4b9236bd894a8cfb126e6e3db26fbd2b2e66880e25096d0f68bb92722245">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-8 clearfix" id="block-views-block-inner-page-header-banner-block-8">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_8 js-view-dom-id-e3312c015d42a92b4132cf6a6db3e811b85d9bf38c350726cdd595b36465d9ba">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockinner-page-header-banner-block-9 clearfix" id="block-views-block-inner-page-header-banner-block-9">
+  
+    
+
+      <div class="form-group"><div class="student-app-img view view-inner-page-header-banner view-id-inner_page_header_banner view-display-id-block_9 js-view-dom-id-117256cd8d22bd7e296a1aee2c35a7f2ab1edbeab1ba35914f48662d0cde722d">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+
+  </div>
+
+        </div>
+                      
+                          <a id="main-content"></a>
+
+    		      		      <div class="region region-inner-title-h">
+        <h1 class="page-header"><span property="schema:name">Coronavirus (COVID 19) Updates</span>
+</h1>
+
+
+  </div>
+
+    		                <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>  <article data-history-node-id="5118" role="article" about="/coronavirus-covid-19-updates" typeof="schema:WebPage" class="page full clearfix">
+
+  
+      <span property="schema:name" content="Coronavirus (COVID 19) Updates" class="hidden"></span>
+
+
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h2>LATEST UPDATES FROM THE UNIVERSITY</h2>
+
+<div class="president-quicktab-video">
+<p> </p>
+
+<p>Greetings ASU Students:</p>
+
+<p>We are excited to report that the University has issued emergency financial aid grants as part of the CARES Act to all of those students who were initially identified as eligible to receive the payments under the guidelines established by the federal government. That means that the large majority of our students have already received their payments. We hope that these funds will be of assistance to you as you face whatever challenges that may have been presented due to the Coronavirus pandemic.</p>
+
+<p>For those students who have not received a CARES emergency financial aid grant payment from ASU and you feel that you are eligible, please visit <a href="https://www.alasu.edu/caresgrantform">www.alasu.edu/caresgrantform </a>and complete the form that you will find there. Please follow the instructions as given and allow time for your submission to be processed. We will work diligently to avoid any delays in notifying you whether or not you are eligible and to process payments for those who are to receive them.</p>
+
+<p>Please know that the University is committed to distributing the funds to every student who meets the federal requirements as quickly as possible.</p>
+
+<p>Stay safe!</p>
+
+<p>Sincerely,</p>
+
+<p>William F. Hopper</p>
+
+<p>Interim Vice President for Business and Finance</p>
+</div>
+
+<hr />
+<div class="row">
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/updates" target="_blank"><img alt="updates" data-entity-type="file" data-entity-uuid="b7035a88-9f04-4062-9527-ab523c7ccaa8" height="127" src="/sites/default/files/inline-images/icons%20%281%29.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/student" target="_blank"><img alt="Academics" data-entity-type="file" data-entity-uuid="bb808213-49fa-446b-b7e4-13e1dfa9c561" height="127" src="/sites/default/files/inline-images/icons2.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/about-coronavirus" target="_blank"><img alt="about cornovirus" data-entity-type="file" data-entity-uuid="00600759-8e7a-4d58-ae2a-5e1329afc6e0" height="127" src="/sites/default/files/inline-images/icons3.png" width="226" class="align-center" /></a></div>
+</div>
+
+<div class="row">
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/student-updates" target="_blank"><img alt="students" data-entity-type="file" data-entity-uuid="c113db7e-eed5-4023-9ffb-26ab213ca3d1" height="127" src="/sites/default/files/inline-images/icons4.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/faculty-0" target="_blank"><img alt="faculty &amp; staff" data-entity-type="file" data-entity-uuid="fb2c8958-abd2-4032-a001-ff7b4b00a6e5" height="127" src="/sites/default/files/inline-images/icons5.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/may-1-2020-commencement" id="" rel="" target="_blank" title=""><img alt="commencement" data-entity-type="file" data-entity-uuid="cd8a1d92-2b4e-4713-9dd7-becc8b8d7a79" height="127" src="/sites/default/files/inline-images/icons6.png" width="226" class="align-center" /></a></div>
+</div>
+
+<div class="row">
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/additional-resources" target="_blank"><img alt="resources" data-entity-type="file" data-entity-uuid="72edf4c2-cbb5-41b2-9671-709603d8edb5" height="127" src="/sites/default/files/inline-images/icons7.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://www.alasu.edu/coronavirus-covid-faqs" target="_blank"><img alt="FAQs" data-entity-type="file" data-entity-uuid="99db7688-e59d-4285-a59f-ec17f23beae0" height="127" src="/sites/default/files/inline-images/icons8.png" width="226" class="align-center" /></a></div>
+
+<div class="col-sm-4" style="margin-bottom: 30px;"><a href="https://app.mobilecause.com/form/vnJtqg?vid=6toin" target="_blank"><img alt="protect the nest" data-entity-type="file" data-entity-uuid="2c750ab9-a333-48d3-bd73-380b2aa59f5e" height="127" src="/sites/default/files/inline-images/icons9.png" width="226" class="align-center" /></a></div>
+</div>
+
+<div class="row">
+<div class="col-sm-3"><img alt="social media icons" data-entity-type="file" data-entity-uuid="925928b3-80d7-4a59-9ec3-1f673d0b8e03" src="/sites/default/files/inline-images/sm_icons.png" width="100%" /></div>
+
+<div class="col-sm-9">
+<h3><strong>STAY CONNECTED!     </strong></h3>
+
+<h3><strong>#HornetStrong #myASU #ProtectheNest</strong></h3>
+</div>
+</div>
+</div>
+      
+      <div class="field field--name-field-paragraph field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item"><div class="paragraph-formatter form-group"><div class="paragraph-info form-group"></div>
+<div class="paragraph-summary form-group"></div>
+</div>
+</div>
+          </div>
+  
+  </div>
+
+</article>
+
+
+  </div>
+
+        
+      </section>
+
+            
+                  
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="footer-wrapper clearfix">
+<div class="footer">
+<footer class="container" role="contentinfo">
+<div class="row">
+  <div class="footer-parent">
+  
+     <div class="col-md-3 footer-block">
+        <div class="region region-footer-block1">
+    <nav role="navigation" aria-labelledby="block-footerblockone-menu" id="block-footerblockone" class="footer-box">
+      
+  <h2 id="block-footerblockone-menu">Category</h2>
+  
+
+        
+      <ul class="menu menu--footer-block-one nav">
+                        <li>
+        <a href="/faculty-staff/human-resources/human-resources" data-drupal-link-system-path="node/581">Employment</a>
+                  </li>
+                        <li>
+        <a href="/accessibility" data-drupal-link-system-path="node/1590">Accessibility</a>
+                  </li>
+                        <li>
+        <a href="/website-accessibility-alabama-state-university" data-drupal-link-system-path="node/3135">Web Accessibility</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </div>
+ 
+ 
+
+  
+   <div class="col-md-3 footer-block">
+        <div class="region region-footer-block2">
+    <nav role="navigation" aria-labelledby="block-footerblocksecond-menu" id="block-footerblocksecond" class="footer-box">
+      
+  <h2 id="block-footerblocksecond-menu">My Account</h2>
+  
+
+        
+      <ul class="menu menu--footer-block-second nav">
+                        <li>
+        <a href="/about-asu/wvas" data-drupal-link-system-path="node/812">WVAS-FM 90.7</a>
+                  </li>
+                        <li>
+        <a href="/media" data-drupal-link-system-path="node/778">For the Media</a>
+                  </li>
+                        <li>
+        <a href="https://visitor.constantcontact.com/manage/optin/ea?v=001QSVz3SN0NaqMwZRnHtVc3g%3D%3D" target="_blank">Email Newsletter</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+   </div>
+ 
+
+ 
+    <div class="col-md-3 footer-block">
+        <div class="region region-footer-block3">
+    <section id="block-myaccount" class="footer-box block block-block-content block-block-content8fda8dfb-5706-4b0c-bfac-64d9506889df clearfix">
+  
+      <h2 class="block-title">Location</h2>
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><ul>
+	<li><strong>Alabama State University</strong><br />
+	915 S. Jackson Street<br />
+	Montgomery, AL 36104<br />
+	 </li>
+</ul>
+</div>
+      
+  </section>
+
+
+  </div>
+
+    </div>
+  
+
+ 
+    <div class="col-md-3 footer-block">
+        <div class="region region-footer-block4">
+    <nav role="navigation" aria-labelledby="block-footerblockfourth-menu" id="block-footerblockfourth" class="footer-box">
+      
+  <h2 id="block-footerblockfourth-menu">Quick Links</h2>
+  
+
+        
+      <ul class="menu menu--footer-block-fourth nav">
+                        <li>
+        <a href="/directory" data-drupal-link-system-path="directory">Directory</a>
+                  </li>
+                        <li>
+        <a href="/faculty-staff/physical-plant" data-drupal-link-system-path="node/687">Facilities Request</a>
+                  </li>
+                        <li>
+        <a href="/faculty-staff/physical-plant" data-drupal-link-system-path="node/687">Work Order Request</a>
+                  </li>
+                        <li>
+        <a href="https://mail.google.com" target="_blank">Campus Email</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </div>
+  
+</div>
+</div>
+</footer>
+</div>
+</div>
+<div class="copyright-section">
+  <div class="container">
+      <div class="region region-copyright-section">
+    <section id="block-footerinvestmentrecoveryblock" class="block block-block-content block-block-content0ffda369-b61f-4b25-aedc-30c17af98db0 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="investment-recovery"><a href="/about-asu/recovery-reinvestment-act-information"><img src="/themes/asu/images/investment.png" alt="recovery act information" /></a></div>
+</div>
+      
+  </section>
+
+<section id="block-footercopyrightsection" class="footer-copyright-section block block-block-content block-block-content457a63bc-3e71-4d5b-8abc-b6e1e1ded5cc clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="row">
+<div class="col-md-3">
+<p><a data-entity-type="file" data-entity-uuid="0233a0f1-b3b3-487a-a91d-40a1048c3026" href="/sites/default/files/inline-files/HIA-Press-Release-2018-ASU_0.pdf" id="" rel="" target="_blank" title="Horizon Press Release"><img alt="horizon award" data-entity-type="file" data-entity-uuid="6ff53d8f-475a-4718-9f6b-b4dca7f0d124" height="71" src="/sites/default/files/inline-images/hia-logo-onwhite.jpg" width="210" /> </a></p>
+</div>
+
+<div class="col-md-9">
+<p>Copyright © 2018 Alabama State University. All Rights Reserved. Developed by <img alt="DT" height="25" src="/themes/asu/images/dt-logo-e1499792765579.png" width="23" />. Powered by <a href="https://divtechllc.com/" target="_blank"><img alt="Dt Gov Link" height="25" src="/themes/asu/images/dt-gov-link-logo.png" width="76" /></a></p>
+</div>
+</div>
+</div>
+      
+  </section>
+
+<section id="block-gtranslate" class="asu-lang block block-gtranslate block-gtranslate-block clearfix">
+  
+    
+
+      
+<div class="gtranslate">
+<script type="text/javascript">
+/* <![CDATA[ */
+eval(unescape("eval%28function%28p%2Ca%2Cc%2Ck%2Ce%2Cr%29%7Be%3Dfunction%28c%29%7Breturn%28c%3Ca%3F%27%27%3Ae%28parseInt%28c/a%29%29%29+%28%28c%3Dc%25a%29%3E35%3FString.fromCharCode%28c+29%29%3Ac.toString%2836%29%29%7D%3Bif%28%21%27%27.replace%28/%5E/%2CString%29%29%7Bwhile%28c--%29r%5Be%28c%29%5D%3Dk%5Bc%5D%7C%7Ce%28c%29%3Bk%3D%5Bfunction%28e%29%7Breturn%20r%5Be%5D%7D%5D%3Be%3Dfunction%28%29%7Breturn%27%5C%5Cw+%27%7D%3Bc%3D1%7D%3Bwhile%28c--%29if%28k%5Bc%5D%29p%3Dp.replace%28new%20RegExp%28%27%5C%5Cb%27+e%28c%29+%27%5C%5Cb%27%2C%27g%27%29%2Ck%5Bc%5D%29%3Breturn%20p%7D%28%276%207%28a%2Cb%29%7Bn%7B4%282.9%29%7B3%20c%3D2.9%28%22o%22%29%3Bc.p%28b%2Cf%2Cf%29%3Ba.q%28c%29%7Dg%7B3%20c%3D2.r%28%29%3Ba.s%28%5C%27t%5C%27+b%2Cc%29%7D%7Du%28e%29%7B%7D%7D6%20h%28a%29%7B4%28a.8%29a%3Da.8%3B4%28a%3D%3D%5C%27%5C%27%29v%3B3%20b%3Da.w%28%5C%27%7C%5C%27%29%5B1%5D%3B3%20c%3B3%20d%3D2.x%28%5C%27y%5C%27%29%3Bz%283%20i%3D0%3Bi%3Cd.5%3Bi++%294%28d%5Bi%5D.A%3D%3D%5C%27B-C-D%5C%27%29c%3Dd%5Bi%5D%3B4%282.j%28%5C%27k%5C%27%29%3D%3DE%7C%7C2.j%28%5C%27k%5C%27%29.l.5%3D%3D0%7C%7Cc.5%3D%3D0%7C%7Cc.l.5%3D%3D0%29%7BF%286%28%29%7Bh%28a%29%7D%2CG%29%7Dg%7Bc.8%3Db%3B7%28c%2C%5C%27m%5C%27%29%3B7%28c%2C%5C%27m%5C%27%29%7D%7D%27%2C43%2C43%2C%27%7C%7Cdocument%7Cvar%7Cif%7Clength%7Cfunction%7CGTranslateFireEvent%7Cvalue%7CcreateEvent%7C%7C%7C%7C%7C%7Ctrue%7Celse%7CdoGTranslate%7C%7CgetElementById%7Cgoogle_translate_element2%7CinnerHTML%7Cchange%7Ctry%7CHTMLEvents%7CinitEvent%7CdispatchEvent%7CcreateEventObject%7CfireEvent%7Con%7Ccatch%7Creturn%7Csplit%7CgetElementsByTagName%7Cselect%7Cfor%7CclassName%7Cgoog%7Cte%7Ccombo%7Cnull%7CsetTimeout%7C500%27.split%28%27%7C%27%29%2C0%2C%7B%7D%29%29"))
+/* ]]> */
+</script><style type="text/css">
+<!--
+#goog-gt-tt {display:none !important;}
+
+.goog-te-banner-frame {display:none !important;}
+
+.goog-te-menu-value:hover {text-decoration:none !important;}
+
+body {top:0 !important;}
+
+#google_translate_element2 {display:none!important;}
+-->
+</style><div id="google_translate_element2"></div>
+<script type="text/javascript">function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element2');}</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script><label for="language" class="visuallyhidden">Select Language<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" style="font-weight:bold;background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -0px;padding-left:18px;">English</option><option value="en|af" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -688px;padding-left:18px;">Afrikaans</option><option value="en|sq" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -560px;padding-left:18px;">Albanian</option><option value="en|ar" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -16px;padding-left:18px;">Arabic</option><option value="en|hy" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -832px;padding-left:18px;">Armenian</option><option value="en|az" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -848px;padding-left:18px;">Azerbaijani</option><option value="en|eu" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -864px;padding-left:18px;">Basque</option><option value="en|be" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -768px;padding-left:18px;">Belarusian</option><option value="en|bn" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -928px;padding-left:18px;">Bengali</option><option value="en|bs" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -944px;padding-left:18px;">Bosnian</option><option value="en|bg" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -32px;padding-left:18px;">Bulgarian</option><option value="en|ca" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -384px;padding-left:18px;">Catalan</option><option value="en|ceb" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -960px;padding-left:18px;">Cebuano</option><option value="en|zh-CN" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -48px;padding-left:18px;">Chinese (Simplified)</option><option value="en|zh-TW" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -64px;padding-left:18px;">Chinese (Traditional)</option><option value="en|hr" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -80px;padding-left:18px;">Croatian</option><option value="en|cs" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -96px;padding-left:18px;">Czech</option><option value="en|da" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -112px;padding-left:18px;">Danish</option><option value="en|nl" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -128px;padding-left:18px;">Dutch</option><option value="en|eo" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -976px;padding-left:18px;">Esperanto</option><option value="en|et" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -576px;padding-left:18px;">Estonian</option><option value="en|tl" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -400px;padding-left:18px;">Filipino</option><option value="en|fi" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -144px;padding-left:18px;">Finnish</option><option value="en|fr" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -160px;padding-left:18px;">French</option><option value="en|gl" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -592px;padding-left:18px;">Galician</option><option value="en|ka" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -880px;padding-left:18px;">Georgian</option><option value="en|de" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -176px;padding-left:18px;">German</option><option value="en|el" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -192px;padding-left:18px;">Greek</option><option value="en|gu" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -992px;padding-left:18px;">Gujarati</option><option value="en|ht" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -896px;padding-left:18px;">Haitian Creole</option><option value="en|ha" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1008px;padding-left:18px;">Hausa</option><option value="en|iw" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -416px;padding-left:18px;">Hebrew</option><option value="en|hi" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -208px;padding-left:18px;">Hindi</option><option value="en|hmn" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1024px;padding-left:18px;">Hmong</option><option value="en|hu" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -608px;padding-left:18px;">Hungarian</option><option value="en|is" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -784px;padding-left:18px;">Icelandic</option><option value="en|ig" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1040px;padding-left:18px;">Igbo</option><option value="en|id" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -432px;padding-left:18px;">Indonesian</option><option value="en|ga" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -736px;padding-left:18px;">Irish</option><option value="en|it" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -224px;padding-left:18px;">Italian</option><option value="en|ja" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -240px;padding-left:18px;">Japanese</option><option value="en|jw" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1056px;padding-left:18px;">Javanese</option><option value="en|kn" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1072px;padding-left:18px;">Kannada</option><option value="en|km" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1088px;padding-left:18px;">Khmer</option><option value="en|ko" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -256px;padding-left:18px;">Korean</option><option value="en|lo" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1104px;padding-left:18px;">Lao</option><option value="en|la" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1120px;padding-left:18px;">Latin</option><option value="en|lv" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -448px;padding-left:18px;">Latvian</option><option value="en|lt" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -464px;padding-left:18px;">Lithuanian</option><option value="en|mk" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -800px;padding-left:18px;">Macedonian</option><option value="en|ms" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -704px;padding-left:18px;">Malay</option><option value="en|mt" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -624px;padding-left:18px;">Maltese</option><option value="en|mi" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1136px;padding-left:18px;">Maori</option><option value="en|mr" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1152px;padding-left:18px;">Marathi</option><option value="en|mn" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1168px;padding-left:18px;">Mongolian</option><option value="en|ne" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1184px;padding-left:18px;">Nepali</option><option value="en|no" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -272px;padding-left:18px;">Norwegian</option><option value="en|fa" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -672px;padding-left:18px;">Persian</option><option value="en|pl" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -288px;padding-left:18px;">Polish</option><option value="en|pt" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -304px;padding-left:18px;">Portuguese</option><option value="en|pa" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1200px;padding-left:18px;">Punjabi</option><option value="en|ro" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -320px;padding-left:18px;">Romanian</option><option value="en|ru" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -336px;padding-left:18px;">Russian</option><option value="en|sr" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -480px;padding-left:18px;">Serbian</option><option value="en|sk" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -496px;padding-left:18px;">Slovak</option><option value="en|sl" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -512px;padding-left:18px;">Slovenian</option><option value="en|so" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1216px;padding-left:18px;">Somali</option><option value="en|es" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -352px;padding-left:18px;">Spanish</option><option value="en|sw" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -720px;padding-left:18px;">Swahili</option><option value="en|sv" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -368px;padding-left:18px;">Swedish</option><option value="en|ta" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1232px;padding-left:18px;">Tamil</option><option value="en|te" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1248px;padding-left:18px;">Telugu</option><option value="en|th" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -640px;padding-left:18px;">Thai</option><option value="en|tr" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -656px;padding-left:18px;">Turkish</option><option value="en|uk" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -528px;padding-left:18px;">Ukrainian</option><option value="en|ur" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -912px;padding-left:18px;">Urdu</option><option value="en|vi" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -544px;padding-left:18px;">Vietnamese</option><option value="en|cy" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -752px;padding-left:18px;">Welsh</option><option value="en|yi" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -816px;padding-left:18px;">Yiddish</option><option value="en|yo" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1264px;padding-left:18px;">Yoruba</option><option value="en|zu" style="background:url('/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -1280px;padding-left:18px;">Zulu</option></select></label>
+</div>
+  </section>
+
+
+  </div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5118","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"simple_popup_blocks":{"settings":[{"pid":"3","identifier":"print-dialog","type":"1","css_selector":"1","layout":"4","visit_counts":"0","overlay":"1","escape":"1","trigger_method":"1","trigger_selector":".print-options","delay":"0","minimize":"1","close":"1","width":"450","status":"1"}]},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_inner_page_header_banner-block_1":{"num_divs":1,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"inner_page_header_banner-block_1","effect":"fade","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"items_per_slide_first":0,"items_per_slide_first_number":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"viewsSlideshow":{"inner_page_header_banner-block_1":{"methods":{"goToSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowSlideCounter","viewsSlideshowPager"],"transitionEnd":[]},"paused":0}},"superfish":{"superfish-sidebar-menu-two":{"id":"superfish-sidebar-menu-two","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"smallscreen":{"mode":"window_width","breakpoint":320,"title":"Quick Links"},"supposition":true,"supersubs":true}},"superfish-main-menu":{"id":"superfish-main-menu","sf":{"animation":{"opacity":"show","width":"show"},"speed":"fast","disableHI":true},"plugins":{"smallscreen":{"mode":"window_width","breakpoint":992,"title":"Main menu"},"supposition":true,"supersubs":true}},"superfish-top-header-menu":{"id":"superfish-top-header-menu","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"smallscreen":{"mode":"window_width","title":"Top Header Menu"},"supposition":true,"supersubs":true}}},"ajaxTrustedUrl":{"\/search\/node":true},"bootstrap_site_alert":{"dismissedCookie":{"key":"v9pIsL*XsUj{Vm*T"}},"user":{"uid":0,"permissionsHash":"ba7355adf3feba93b747819a4e9b47d479b6b196807930a0a4b79c642eb68439"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.4.1"></script>
+<script src="/core/assets/vendor/underscore/underscore-min.js?v=1.8.3"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.8.5"></script>
+<script src="/core/misc/drupal.js?v=8.8.5"></script>
+<script src="/core/misc/drupal.init.js?v=8.8.5"></script>
+<script src="/modules/simple_popup_blocks/js/simple_popup_blocks.js?v=8.8.5"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js" integrity="sha256-29KjXnLtx9a95INIGpEvHDiqV/qydH2bBx0xcznuA6I=" crossorigin="anonymous"></script>
+<script src="/themes/bootstrap/js/drupal.bootstrap.js?qctt3n"></script>
+<script src="/themes/bootstrap/js/attributes.js?qctt3n"></script>
+<script src="/themes/bootstrap/js/theme.js?qctt3n"></script>
+<script src="/themes/asu/js/owl.carousel.js?qctt3n"></script>
+<script src="/themes/asu/js/flipclock.js?qctt3n"></script>
+<script src="/themes/asu/js/custom.js?qctt3n"></script>
+<script src="/core/misc/states.js?v=8.8.5"></script>
+<script src="/themes/bootstrap/js/misc/states.js?qctt3n"></script>
+<script src="/modules/webform/js/webform.states.js?v=8.8.5"></script>
+<script src="/modules/webform/modules/webform_bootstrap/js/webform_bootstrap.states.js?v=8.8.5"></script>
+<script src="/themes/bootstrap/js/popover.js?qctt3n"></script>
+<script src="/themes/bootstrap/js/tooltip.js?qctt3n"></script>
+<script src="/libraries/json2/json2.js?v=2"></script>
+<script src="/libraries/jquery.cycle/jquery.cycle.all.js?v=3.0.3"></script>
+<script src="/modules/views_slideshow/modules/views_slideshow_cycle/js/views_slideshow_cycle.js?qctt3n"></script>
+<script src="/libraries/jquery.hoverIntent/jquery.hoverIntent.js?v=1.9"></script>
+<script src="/modules/views_slideshow/js/views_slideshow.js?v=8.8.5"></script>
+<script src="/libraries/superfish/superfish.js?qctt3n"></script>
+<script src="/libraries/superfish/jquery.hoverIntent.minified.js?qctt3n"></script>
+<script src="/libraries/superfish/sfsmallscreen.js?qctt3n"></script>
+<script src="/libraries/superfish/supposition.js?qctt3n"></script>
+<script src="/libraries/superfish/supersubs.js?qctt3n"></script>
+<script src="/modules/superfish/js/superfish.js?v=2.0"></script>
+<script src="/core/assets/vendor/jquery.cookie/jquery.cookie.min.js?v=1.4.1"></script>
+<script src="/modules/bootstrap_site_alert/js/dismissed-cookie.js?v=8.8.5"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"042b4ac8ab","applicationID":"203399495","transactionName":"ZgdXMRBQVhAFVBZbC19NdAYWWFcNS0cDVQFuAVQGClQ=","queueTime":0,"applicationTime":11,"atts":"SkBUR1hKRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

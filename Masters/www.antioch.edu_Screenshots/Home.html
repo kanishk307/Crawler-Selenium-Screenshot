@@ -1,0 +1,737 @@
+ <!doctype html>
+<!--[if lt IE 7]><html lang="en-US" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+
+				<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3fa52e4e3e",applicationID:"41022606"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+
+				<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+				<link rel="icon" href="https://www.antioch.edu/wp-content/themes/antioch/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="https://www.antioch.edu/wp-content/themes/antioch/favicon.ico">
+		<![endif]-->
+				<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="https://www.antioch.edu/wp-content/themes/antioch/library/images/win8-tile-icon.png">
+            <meta name="theme-color" content="#121212">
+
+		<link rel="pingback" href="https://www.antioch.edu/xmlrpc.php">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- iframe script -->
+		<script language="javascript">
+		$(function() {
+		var search = window.location.search;
+		$("#myiframe").attr("src", $("#myiframe").attr("src")+search);
+		});
+		</script>
+		<!-- end iframe script -->
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/fonts.css" type="text/css" media="all">
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/styles.css" type="text/css" media="all">
+
+		<!--[if IE 9]>
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/ie9styles.css" type="text/css" media="all">
+		<![endif]-->
+		<link rel="stylesheet" id="js_composer_front-css" href="//www.antioch.edu/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.12.1" type="text/css" media="all">
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/toggles-full.css" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="//www.antioch.edu/wp-content/themes/antioch/lib/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="//www.antioch.edu/wp-content/themes/antioch/lib/slick/slick-theme.css"/>
+		
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/jquery.fancybox.min.css" type="text/css" media="all">
+
+		<!-- Custom Antioch CSS -->
+		<link rel="stylesheet" href="//www.antioch.edu/wp-content/themes/antioch/css/overrides.css" type="text/css" media="all">
+
+				<title>Coronavirus Update | Antioch University</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v12.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.antioch.edu/resources/students/coronavirus/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Coronavirus Update | Antioch University" />
+<meta property="og:url" content="https://www.antioch.edu/resources/students/coronavirus/" />
+<meta property="og:site_name" content="Antioch University" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Coronavirus Update | Antioch University" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.antioch.edu/#website","url":"https://www.antioch.edu/","name":"Antioch University","potentialAction":{"@type":"SearchAction","target":"https://www.antioch.edu/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.antioch.edu/resources/students/coronavirus/#webpage","url":"https://www.antioch.edu/resources/students/coronavirus/","inLanguage":"en-US","name":"Coronavirus Update | Antioch University","isPartOf":{"@id":"https://www.antioch.edu/#website"},"datePublished":"2020-03-03T02:31:02+00:00","dateModified":"2020-06-08T02:00:50+00:00"}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.antioch.edu' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Antioch University &raquo; Feed" href="https://www.antioch.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Antioch University &raquo; Comments Feed" href="https://www.antioch.edu/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="Antioch University &raquo; iCal Feed" href="https://www.antioch.edu/events-for-testing-sept-2018/?ical=1" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.antioch.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='tribe-common-skeleton-style-css'  href='https://www.antioch.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-tooltip-css'  href='https://www.antioch.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.antioch.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='https://www.antioch.edu/wp-content/plugins/cookie-notice/css/front.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css'  href='https://www.antioch.edu/wp-content/uploads/maxmegamenu/style.css?ver=8138c7' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.antioch.edu/wp-includes/css/dashicons.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-genericons-css'  href='https://www.antioch.edu/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-fontawesome-css'  href='https://www.antioch.edu/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-fontawesome5-css'  href='https://www.antioch.edu/wp-content/plugins/megamenu-pro/icons/fontawesome5/css/all.min.css?ver=2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.antioch.edu/wp-content/plugins/tablepress/css/default.min.css?ver=1.11' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='https://www.antioch.edu/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.antioch.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.antioch.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.antioch.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.antioch.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<link rel='shortlink' href='https://www.antioch.edu/?p=62662' />
+<link rel="alternate" type="application/json+oembed" href="https://www.antioch.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.antioch.edu%2Fresources%2Fstudents%2Fcoronavirus%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.antioch.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.antioch.edu%2Fresources%2Fstudents%2Fcoronavirus%2F&#038;format=xml" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.antioch.edu"><link rel="https://theeventscalendar.com/" href="https://www.antioch.edu/wp-json/tribe/events/v1/" /><!-- Custom Antioch Head Scripts --><!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TX272W');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Hotjar Tracking Code for https://www.antioch.edu/ -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {hjid: 1301757, hjsv: 6};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+<!-- End Hotjar Tracking Code -->
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2579056055509136');
+    fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '505378540085287');
+    fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+
+<script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10093247'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script><!-- End Custom Antioch Head Scripts --><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+		<style type="text/css" id="wp-custom-css">
+			body .stickynavbar a.link {
+      color: #4f7b60;
+font-weight: 700;
+}
+body .jobblock .right p {
+    font-size: .95em;
+}
+body .feed_page .related_box p.desc {
+	font-size:.95em;
+}
+p.abstract {
+	font-size:.95em;
+}
+a.btn.solid {
+	color:#fff !important;
+}
+.tribe-mini-calendar-event .list-date {
+    float: left;
+    overflow: hidden;
+    font-weight: bold;
+    margin: 10px 5% 10px 0;
+    padding: 3px;
+    width: 15%;
+    text-align: center;
+    display: inline;
+    background: #4e7a62 !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#tribe-bar-views .tribe-bar-views-list {
+
+    z-index: 2;
+}
+#tribe_events_filters_reset {
+    color: #528b69;
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px 0;
+    padding: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.tribe-mini-calendar-event .list-date .list-dayname {
+    background: #fff;
+    color: #4e7a62;
+    display: block;
+    font-size: 11px;
+    letter-spacing: .5px;
+    padding: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+    background-color: #4e7a62 !important;
+}
+#tribe-events-pg-template, .tribe-events-pg-template {
+    margin: 0 5% 0 5%;
+    max-width: 1200px;
+}
+@media only screen and (max-width: 768px) {
+.tribe-events-sub-nav li a {
+    background: #FFF;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    white-space: normal;
+}
+	#tribe-events-footer:after, #tribe-events-footer:before, #tribe-events-header:after, #tribe-events-header:before {
+    background-color: none !important;
+    content: "";
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 1;
+}
+	#tribe_events_filter_control #tribe_events_filters_toggle {
+    background: #4e7a61;
+    color: #fff;
+    border-width: 0px;
+}
+body .jobblock .right p {
+    font-size: 1.1em;
+}
+body .feed_page .related_box p.desc {
+	font-size:1.1em;
+}
+p.abstract {
+	font-size:1.1em;
+}
+	/*this is to modify the look for the green alert*/
+body .site_alert.greenalert .text-container p {
+    color: #528b69;
+}
+body .site_alert .text-container p {
+    line-height: .8em;
+    font-size: .9em;
+	font-weight:500;
+	text-align: center;
+}
+body .site_alert .text-container {
+    padding: .6em 0;
+}
+body .site_alert.greenalert {
+    background-color: #f2ecd6;
+	    border: 0px;
+}
+}
+	/*this is to modify the look for the green alert*/
+body .site_alert.greenalert .text-container p {
+    color: #528b69;
+}
+body .site_alert.greenalert .text-container p {
+    line-height: .8em;
+    font-size: .9em;
+	font-weight:500;
+	text-align: center;
+}
+body .site_alert.greenalert .text-container {
+    padding: .6em 0;
+}
+body .site_alert.greenalert {
+    background-color: #f2ecd6;
+	    border: 0px;
+}
+body .site_alert.greenalert .text-container p a {
+    color: #528b69;
+    text-decoration: underline;
+}
+	/*this is to modify the look for the white alert*/
+body .site_alert .text-container p {
+    line-height: 1em;
+    font-size: 1.2em;
+	font-weight:500;
+	text-align: center;
+}
+body .site_alert .text-container {
+    padding: 1em 0;
+}
+body .site_alert {
+    background-color: #ffff66;
+	    border: 0px;
+}
+body .site_alert .text-container p a {
+    color: #528b69;
+    text-decoration: underline;
+}
+/*MJW 4-1-20 jumplist for on-page nav Ex: AUNE Psychoanalytic Studies Group Library page */
+.jumplist {
+    font-size:1rem;
+    border:1px solid #000000;
+    padding:.5em;
+    margin-top:.5em;
+    display:inline-block;
+}
+.jumplist a {
+    font-weight:bolder;
+}
+/* end .jumplist*/		</style>
+		<style type="text/css" data-type="vc_custom-css">body a.btn.solid {
+    background-color: #4e7a62;
+    color: black;
+}
+a.btn.solid {
+    color: #333 !important;
+}
+body #content.breadcrumb_page {
+    padding-top: 10em;
+}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1588735159180{background-color: #ededc7 !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css">/** Mega Menu CSS: fs **/</style>
+		
+						
+		    	
+    		</head>
+
+	<body class="page-template-default page page-id-62662 page-child parent-pageid-712 wp-custom-logo site-root cookies-not-set tribe-no-js tribe-events-filter-view tribe-filters-open tribe-filters-vertical mega-menu-main-nav mega-menu-audience-nav mega-menu-max-mega-menu-1 antioch wpb-js-composer js-comp-ver-6.1 vc_responsive has-mega-menus" id="page_coronavirus" data-siteid="1" itemscope itemtype="http://schema.org/WebPage">
+		<!-- Custom Antioch Body Scripts --><!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX272W"
+	        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Facebook Pixel Code -->
+<noscript><img alt="" height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=2579056055509136&ev=PageView&noscript=1"
+	/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Facebook Pixel Code -->
+<noscript><img alt="" height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=505378540085287&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- End Custom Antioch Body Scripts -->		<div class="site_alert " data-alertid="62684"><div class="text-container"><p><a href="https://www.antioch.edu/resources/students/coronavirus/">Click here for more information on Coronavirus (COVID-19)</a></p>
+</div><a href="#" class="close_alert noanchor"></a></div>		
+		<header>
+<a class="skip-main screen-reader" href="#content">Skip to main content</a>
+			<div id="header_top">
+				<div id="mega-menu-wrap-audience_nav" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"><div class='mega-toggle-block mega-html-block mega-toggle-block-1' id='mega-toggle-block-1'><span class="mobile-logo">Antioch University</span></div></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-2' id='mega-toggle-block-2' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-audience_nav" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="click" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true" data-hover-intent-timeout="300" data-hover-intent-interval="100" data-sticky-enabled="true" data-sticky-desktop="true" data-sticky-mobile="false" data-sticky-offset="0" data-sticky-expand="true" data-sticky-expand-mobile="true" data-sticky-transition="false"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-56147' id='mega-menu-item-56147'><a class="mega-menu-link" href="https://www.antioch.edu/apply-to-au/" tabindex="0">Apply</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-56148' id='mega-menu-item-56148'><a class="mega-menu-link" href="https://www.antioch.edu/request-information/" tabindex="0">Request Info</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-56072' id='mega-menu-item-56072'><a class="mega-menu-link" href="https://www.antioch.edu/resources/general-information/advancement/" tabindex="0">Give</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-page-ancestor mega-align-bottom-left mega-menu-flyout mega-menu-item-56069' id='mega-menu-item-56069'><a class="mega-menu-link" href="https://www.antioch.edu/resources/students/" tabindex="0">Students</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-56070' id='mega-menu-item-56070'><a class="mega-menu-link" href="https://www.antioch.edu/resources/#Faculty-Staff" tabindex="0">Faculty & Staff</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-56071' id='mega-menu-item-56071'><a class="mega-menu-link" href="https://www.antioch.edu/resources/alumni" tabindex="0">Alumni</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-page-ancestor mega-align-bottom-left mega-menu-flyout mega-menu-item-56073' id='mega-menu-item-56073'><a class="mega-menu-link" href="https://www.antioch.edu/resources/" tabindex="0">Resources</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-61673' id='mega-menu-item-61673'><a class="mega-menu-link" href="https://www.antioch.edu/resources/community/employment-antioch-university/" tabindex="0">Jobs</a></li><li class='mega-mega-search-expand mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-56074 mega-search-expand' id='mega-menu-item-56074'><div class='mega-search-wrap'><form class='mega-search expand-to-left mega-search-closed' role='search' action='https://www.antioch.edu/'>
+						<span class='dashicons dashicons-search search-icon'></span>
+						<input type='submit' value='Search'>
+						<input type='text' aria-label='Search...' data-placeholder='Search...' name='s'>
+						
+					</form></div></li><li class='mega-mega-search-expand mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-56075 mega-search-expand' id='mega-menu-item-56075'><a href="https://audirect.antioch.edu/" id="au_direct"></a></li></ul></div>			</div>
+			<div id="header_bottom">
+				<a href='https://www.antioch.edu' class='logo' style='background-image: url(https://www.antioch.edu/wp-content/uploads/2016/10/aulogo-1.png)'></a>				<div id="mega-menu-wrap-main_nav" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-main_nav" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="click" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="600" data-unbind="true" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-56065' id='mega-menu-item-56065'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Degrees & Programs<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-56065-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-6-of-12' id='mega-menu-56065-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-6' id='mega-menu-item-nav_menu-6'><h4 class="mega-block-title">Focus Area</h4><div class="menu-au-focus-area-container"><ul id="menu-au-focus-area" class="menu"><li id="menu-item-55872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55872"><a href="https://www.antioch.edu/degrees-programs/counseling-wellness/">Counseling, Therapy &#038; Wellness</a></li>
+<li id="menu-item-55867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55867"><a href="https://www.antioch.edu/degrees-programs/creative-writing-communication-studies/">Creative Writing &#038; Communication Studies</a></li>
+<li id="menu-item-55868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55868"><a href="https://www.antioch.edu/degrees-programs/education-degree/">Education</a></li>
+<li id="menu-item-55869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55869"><a href="https://www.antioch.edu/degrees-programs/environmental-community-studies/">Environmental Studies &#038; Sustainability</a></li>
+<li id="menu-item-63137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63137"><a href="https://www.antioch.edu/degrees-programs/interdisciplinary-studies/">Interdisciplinary Studies</a></li>
+<li id="menu-item-55866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55866"><a href="https://www.antioch.edu/degrees-programs/business-management-leadership/">Leadership, Management &#038; Business</a></li>
+<li id="menu-item-55871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55871"><a href="https://www.antioch.edu/degrees-programs/psychology-degree/">Psychology</a></li>
+<li id="menu-item-55870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55870"><a href="https://www.antioch.edu/degrees-programs/undergraduate-studies/">Undergraduate Studies</a></li>
+</ul></div></li><li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-7' id='mega-menu-item-nav_menu-7'><h4 class="mega-block-title">Degrees to Fit Your Schedule</h4><div class="menu-au-degrees-to-fit-your-schedule-container"><ul id="menu-au-degrees-to-fit-your-schedule" class="menu"><li id="menu-item-55972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55972"><a href="https://www.antioch.edu/degrees-programs/online-programs/">Online</a></li>
+<li id="menu-item-56055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56055"><a href="https://www.antioch.edu/degrees-programs/on-campus-programs/">On-Campus</a></li>
+<li id="menu-item-55971" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55971"><a href="https://www.antioch.edu/degrees-programs/low-residency-programs/">Low-Residency</a></li>
+</ul></div></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-6-of-12' id='mega-menu-56065-0-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-8' id='mega-menu-item-nav_menu-8'><h4 class="mega-block-title">Browse by Degree Level</h4><div class="menu-au-browse-by-program-level-container"><ul id="menu-au-browse-by-program-level" class="menu"><li id="menu-item-56061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56061"><a href="https://www.antioch.edu/degrees-programs/undergraduate-programs/">Undergraduate</a></li>
+<li id="menu-item-56063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56063"><a href="https://www.antioch.edu/degrees-programs/masters-degree-programs/">Graduate</a></li>
+<li id="menu-item-56062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56062"><a href="https://www.antioch.edu/degrees-programs/doctoral-programs/">Doctoral</a></li>
+<li id="menu-item-56059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56059"><a href="https://www.antioch.edu/degrees-programs/certificate-programs/">Certificate</a></li>
+<li id="menu-item-56060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56060"><a href="https://www.antioch.edu/degrees-programs/credential-endorsement-programs/">Credential/Endorsement</a></li>
+<li id="menu-item-62889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62889"><a href="https://www.antioch.edu/continuing-education">Continuing Education</a></li>
+</ul></div></li><li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-7' id='mega-menu-item-custom_html-7'><div class="textwidget custom-html-widget"><a href="https://www.antioch.edu/resources/students/library/" class="button"><span class="fa fa-leanpub" style=""></span> Library</a></div></li><li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-8' id='mega-menu-item-custom_html-8'><div class="textwidget custom-html-widget"><a href="https://www.antioch.edu/resources/" class="button"><span class="fa fa-leanpub" style=""></span> Resources</a></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-56064' id='mega-menu-item-56064'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Admissions<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-56064-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-8-of-12' id='mega-menu-56064-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-2' id='mega-menu-item-nav_menu-2'><h4 class="mega-block-title">Admissions by Location</h4><div class="menu-au-admissions-container"><ul id="menu-au-admissions" class="menu"><li id="menu-item-55855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55855"><a href="https://www.antioch.edu/gslc/admissions-aid/admissions/">Graduate School of Leadership and Change Admissions</a></li>
+<li id="menu-item-55856" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55856"><a href="https://www.antioch.edu/los-angeles/admissions-aid/admissions/">Los Angeles Admissions</a></li>
+<li id="menu-item-55857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55857"><a href="https://www.antioch.edu/auonline/admissions-aid/admissions/">Online Admissions</a></li>
+<li id="menu-item-55858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55858"><a href="https://www.antioch.edu/midwest/admissions-aid/admissions/">Midwest Admissions</a></li>
+<li id="menu-item-55859" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55859"><a href="https://www.antioch.edu/new-england/admissions-aid/admissions/">New England Admissions</a></li>
+<li id="menu-item-55860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55860"><a href="https://www.antioch.edu/santa-barbara/admissions-aid/admissions/">Santa Barbara Admissions</a></li>
+<li id="menu-item-55861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55861"><a href="https://www.antioch.edu/seattle/admissions-aid/admissions/">Seattle Admissions</a></li>
+</ul></div></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-56064-0-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-14' id='mega-menu-item-nav_menu-14'><h4 class="mega-block-title">Financial Aid</h4><div class="menu-au-financial-aid-container"><ul id="menu-au-financial-aid" class="menu"><li id="menu-item-63266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63266"><a href="https://www.antioch.edu/admissions-aid/financial-aid/">Financial Aid at Antioch University</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li><li class='mega-menu-row' id='mega-menu-56064-1'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-56064-1-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-2' id='mega-menu-item-custom_html-2'><div class="textwidget custom-html-widget"><a href="https://www.antioch.edu/apply-to-au/" class="button"><span class="dashicons dashicons-welcome-learn-more" style=""></span> Apply</a></div></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-56064-1-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-9' id='mega-menu-item-custom_html-9'><div class="textwidget custom-html-widget"><a href="https://www.antioch.edu/request-information/" class="button"><span class="dashicons dashicons-edit" style=""></span> Request Info</a></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-61696' id='mega-menu-item-61696'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Why AU<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-61696-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-61696-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-12' id='mega-menu-item-nav_menu-12'><div class="menu-au-why-au-container"><ul id="menu-au-why-au" class="menu"><li id="menu-item-56159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56159"><a href="https://www.antioch.edu/why-au/au-history/">History</a></li>
+<li id="menu-item-56160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56160"><a href="https://www.antioch.edu/why-au/mission-values/">Mission and Values</a></li>
+<li id="menu-item-56161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56161"><a href="https://www.antioch.edu/why-au/the-au-difference/">Why Antioch is Different</a></li>
+<li id="menu-item-56162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56162"><a href="https://www.antioch.edu/why-au/core-attributes/">Core Attributes</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-56068' id='mega-menu-item-56068'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">About Antioch University<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-56068-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-56068-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-10' id='mega-menu-item-nav_menu-10'><h4 class="mega-block-title">About Antioch University</h4><div class="menu-au-why-au-container"><ul id="menu-au-why-au-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56159"><a href="https://www.antioch.edu/why-au/au-history/">History</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56160"><a href="https://www.antioch.edu/why-au/mission-values/">Mission and Values</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56161"><a href="https://www.antioch.edu/why-au/the-au-difference/">Why Antioch is Different</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56162"><a href="https://www.antioch.edu/why-au/core-attributes/">Core Attributes</a></li>
+</ul></div></li><li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-13' id='mega-menu-item-nav_menu-13'><h4 class="mega-block-title">AU Leadership</h4><div class="menu-leadership-office-of-chancellor-container"><ul id="menu-leadership-office-of-chancellor" class="menu"><li id="menu-item-61820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61820"><a href="https://www.antioch.edu/about-antioch-university/office-of-the-chancellor/">Office of the Chancellor</a></li>
+<li id="menu-item-61823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61823"><a href="https://www.antioch.edu/about-antioch-university/executive-leadership/">Executive Leadership</a></li>
+<li id="menu-item-61822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61822"><a href="https://www.antioch.edu/about-antioch-university/antioch-university-board-of-governors/">Antioch University Board of Governors</a></li>
+</ul></div></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-56068-0-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-3' id='mega-menu-item-nav_menu-3'><h4 class="mega-block-title">Learn more</h4><div class="menu-au-antioch-university-why-au-container"><ul id="menu-au-antioch-university-why-au" class="menu"><li id="menu-item-56112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56112"><a href="https://www.antioch.edu/au-news/">News</a></li>
+<li id="menu-item-56113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56113"><a href="https://www.antioch.edu/au-events/">Events</a></li>
+<li id="menu-item-55885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55885"><a href="https://www.antioch.edu/resources/general-information/accreditation/">Accreditation</a></li>
+<li id="menu-item-58550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58550"><a href="https://www.antioch.edu/resources/students/ca-disclosures/">CA Disclosures</a></li>
+<li id="menu-item-56114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56114"><a href="https://www.antioch.edu/resources/faculty-staff/employee-directory/">Employee Directory</a></li>
+<li id="menu-item-56226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56226"><a href="https://www.antioch.edu/contact/">Contact Us</a></li>
+</ul></div></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-56068-0-2'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-4' id='mega-menu-item-nav_menu-4'><h4 class="mega-block-title">Campuses</h4><div class="menu-au-antioch-university-campuses-container"><ul id="menu-au-antioch-university-campuses" class="menu"><li id="menu-item-56043" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56043"><a href="https://www.antioch.edu/los-angeles/">Los Angeles</a></li>
+<li id="menu-item-56044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56044"><a href="https://www.antioch.edu/gslc/">Graduate School of Leadership &#038; Change</a></li>
+<li id="menu-item-56045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56045"><a href="https://www.antioch.edu/midwest/">Midwest</a></li>
+<li id="menu-item-56046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56046"><a href="https://www.antioch.edu/new-england/">New England</a></li>
+<li id="menu-item-56047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56047"><a href="https://www.antioch.edu/auonline/">Online</a></li>
+<li id="menu-item-56048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56048"><a href="https://www.antioch.edu/santa-barbara/">Santa Barbara</a></li>
+<li id="menu-item-56049" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56049"><a href="https://www.antioch.edu/seattle/">Seattle</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li><li class='mega-menu-row' id='mega-menu-56068-1'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-8-of-12' id='mega-menu-56068-1-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-5' id='mega-menu-item-custom_html-5'><div class="textwidget custom-html-widget"><a href="https://www.antioch.edu" class="button"><span class="dashicons dashicons-admin-home" style=""></span> Visit Antioch.edu</a></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li></ul></div>		</header>
+<div id="hero" class="smallerhero" style="background-color: #">				<div class="container">
+			<span></span>
+			<h1>
+				Coronavirus Update			</h1>
+					</div>
+	</div>
+<div id="breadcrumbs">
+	<div class="container">
+		<ul id="breadcrumb" class="breadcrumb"><li class="item-home"><a class="bread-link bread-home" href="https://www.antioch.edu" title="Home">Home</a></li><li class="separator separator-home"> &gt; </li><li class="item-parent item-parent-707"><a class="bread-parent bread-parent-707" href="https://www.antioch.edu/resources/" title="Resources">Resources</a></li><li class="separator separator-707"> &gt; </li><li class="item-parent item-parent-712"><a class="bread-parent bread-parent-712" href="https://www.antioch.edu/resources/students/" title="Student Success Resources">Student Success Resources</a></li><li class="separator separator-712"> &gt; </li><li class="item-current item-62662"><strong title="Coronavirus Update"> Coronavirus Update</strong></li></ul><!--
+		-->
+						<div class="stickynavbar">			<div class="textwidget"></div>
+		</div>				
+	</div>
+</div>
+
+<div id="content" class="pageContent breadcrumb_page smallermargin  ">
+     <!--Because the_content() works only inside a WP Loop -->
+        <div class="entry-content-page"><a id="main">&nbsp;</a>
+            <div class="vc_row wpb_row vc_row-fluid container"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h2>Coronavirus (COVID-19)</h2>
+<p>The Centers for Disease Control and Prevention (CDC) is closely monitoring an outbreak of a respiratory illness called Coronavirus, or COVID-19, first identified in China. Additional cases have been identified in a growing number of countries and the United States.</p>
+<p>This webpage contains resources intended to provide you with accurate and up to date about this evolving situation, including general information about COVID-19, a virus tracker developed by Johns Hopkins University, concrete steps you can take to protect yourself and others and finally, Antioch University communications.</p>
+<p>This page will be updated on a regular basis, as new information becomes available.</p>
+
+		</div>
+	</div>
+<div  class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md vc_toggle_active"><div class="vc_toggle_title"><h4>Communications</h4><i class="vc_toggle_icon"></i></div><div class="vc_toggle_content"><p><strong>University-wide</strong></p>
+<ul>
+<li>May 24, 2020 &#8211; <strong><a href="https://www.antioch.edu/admissions-aid/cares-heerf-reporting/">CARES HEERF Reporting</a></strong></li>
+<li>May 15, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/05/15/summer-2020-tuition-discount/">Summer 2020 Tuition Discount</a></strong></li>
+<li>Apr 30, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/04/30/antioch-university-cares-relief-fund/">Antioch University CARES Relief Fund</a></strong></li>
+<li>Apr 19, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/04/19/in-difficult-times-dont-write-alone/">In Difficult Times, Don&#8217;t Write Alone! Virtual Writing Center Information</a></strong></li>
+<li>Apr 2, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/04/03/student-success-at-antioch-university-and-covid-19-update/">Student Success at Antioch University and COVID-19 Update</a></strong></li>
+<li>Mar 24, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/03/24/current-students-zoom-accounts/">Current Students: Zoom Accounts</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/18/campus-facility-closure-through-april-30th-antioch-university-los-angeles/">Temporary closure of Antioch campus facilities through April 30, 2020 </a></strong></li>
+<li>Mar 12, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/03/12/covid-19-announcement-communication-from-the-chancellor/">COVID-19 Announcement &#8211; Communication from the Chancellor </a></strong></li>
+<li>Mar 7, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/03/07/covid-19-update-message-from-the-chancellor/">COVID-19 Update | Message from the Chancellor</a></strong></li>
+<li>Feb. 28, 2020 &#8211; <strong><a href="https://www.antioch.edu/blog/2020/02/28/message-to-the-antioch-community-regarding-coronavirus-covid-19/">Antioch University Chancellor’s Message to the Community Regarding Coronavirus (COVID-19)</a></strong></li>
+</ul>
+<p><strong>Antioch University Los Angeles</strong></p>
+<ul>
+<li>Mar 26, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/26/required-course-texts/">Required Course Texts</a></strong></li>
+<li>Mar 26, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/26/preparations-and-support-for-remote-learning/">Preparations and Support for Remote Learning</a></strong></li>
+<li>Mar 26, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/26/zoom-how-to-workshops-for-students-on-friday-march-27/">Zoom How-To Workshops for Students on Friday, March 27</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/18/campus-facility-closure-through-april-30th-antioch-university-los-angeles/">Campus Facility Closure Through April 30th – Antioch University Los Angeles</a></strong></li>
+<li>Mar 5, 2020 &#8211; <strong><a href="https://www.antioch.edu/los-angeles/2020/03/05/provost-update-to-aula-students-re-coronavirus-mar-5-2020/" target="_blank" rel="noopener noreferrer">Provost Update to AULA Students Regarding Coronavirus</a></strong></li>
+</ul>
+<p><strong>Antioch University New England</strong></p>
+<ul>
+<li>Jun 3, 2020 &#8211; <a href="https://www.antioch.edu/new-england/2020/06/03/campus-update-the-fall-semester/"><strong>AUNE Campus Update &#8211; Fall 2020 Semester </strong></a></li>
+<li>May 18, 2020 &#8211; <a href="https://www.antioch.edu/new-england/2020/05/18/may-update-for-aune-students/"><strong>May Update for AUNE Students</strong></a></li>
+<li>Apr 1, 2020 &#8211; <strong><a href="https://www.antioch.edu/new-england/2020/04/01/aune-campus-update/" target="_blank" rel="noopener noreferrer">AUNE Campus Update</a></strong></li>
+<li>Mar 24, 2020 &#8211; <strong><a href="https://www.antioch.edu/new-england/2020/03/24/aune-library-services-information/">Library Services Information</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/new-england/2020/03/18/temporary-closure-of-antioch-campus-facilities-through-april-30-2020-antioch-university-new-england/">Temporary closure of Antioch campus facilities through April 30, 2020 &#8211; Antioch University New England </a></strong></li>
+<li>Mar 12, 2020 &#8211; <strong><a href="https://www.antioch.edu/new-england/2020/03/12/urgent-announcement-to-antioch-university-new-england-community/">Urgent Announcement to Antioch University New England Community</a></strong></li>
+<li>Mar 4, 2020 &#8211; <strong><a href="https://www.antioch.edu/new-england/2020/03/04/provosts-update-to-students-regarding-coronavirus-3-4-2020/" target="_blank" rel="noopener noreferrer">Provost&#8217;s Update to Students Regarding Coronavirus &#8211; 3/4/2020</a></strong></li>
+</ul>
+<p><strong>Antioch University Santa Barbara</strong></p>
+<ul>
+<li>Jun 3, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/06/03/standing-in-solidarity-a-message-from-ausbs-provost/">Standing in Solidarity | A Message from AUSB&#8217;s Provost</a></strong></li>
+<li>Apr 30, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/04/30/ausb-campus-update/">AUSB Campus Update</a></strong></li>
+<li>Apr 3, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/04/03/provost-update-to-ausb-students-4-3-20/">Provost Update to AUSB Students &#8211; 4/3/20</a></strong></li>
+<li>Mar 26, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/03/26/important-updates-from-the-ausb-library/">Important Updates From the AUSB Library</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/03/18/temporary-closure-of-antioch-campus-facilities-antioch-santa-barbara/">Temporary closure of Antioch campus facilities – Antioch Santa Barbara</a></strong></li>
+<li>Mar 4, 2020 &#8211; <strong><a href="https://www.antioch.edu/santa-barbara/2020/03/04/university-monitoring-of-the-coronavirus-situation-ausbs-provost-office/">University Monitoring of the Coronavirus Situation | AUSB&#8217;s Provost Office</a></strong></li>
+</ul>
+<p><strong>Antioch University Seattle</strong></p>
+<ul>
+<li>May 5, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/05/05/cares-funds-aus-students/">CARES Funding &#8211; AUS Students</a></strong></li>
+<li>Apr 29, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/04/29/au-seattle-campus-update/">AU Seattle Campus Update</a></strong></li>
+<li>Mar 25, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/25/seattle-student-life-update/">Student Life Update</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/18/antioch-campus-facilities-closure-through-april-30-2020-antioch-university-seattle/">Antioch Campus Facilities Closure Through April 30, 2020 &#8211; Antioch University Seattle</a></strong></li>
+<li>Mar 18, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/18/antioch-university-seattle-library-service-update-3-18-2020/">Antioch University Seattle Library Service Update</a></strong></li>
+<li>Mar 10, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/10/campus-services-at-aus-provost-update/" target="_blank" rel="noopener noreferrer">Campus Services at AUS &#8211; Provost Update</a></strong></li>
+<li>Mar 8, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/08/covid-19-update-antioch-seattle-3-8-20/">COVID-19 Update, Antioch Seattle, 3/8/20</a></strong></li>
+<li>Mar 5, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/05/covid-19-and-antioch-seattle-student-update-3-5-20/">COVID-19 and Antioch Seattle: Student Update, 3.5.20</a></strong></li>
+<li>Mar 2, 2020 &#8211; <strong><a href="https://www.antioch.edu/seattle/2020/03/02/aus-update-coronavirus-and-the-aus-campus/">AUS Update: Coronavirus and the AUS Campus</a></strong></li>
+</ul>
+</div></div><div  class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md"><div class="vc_toggle_title"><h4>What is a Coronavirus?</h4><i class="vc_toggle_icon"></i></div><div class="vc_toggle_content"><p>Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Severe Acute Respiratory Syndrome (SARS-CoV-2). A novel coronavirus is one that has not been previously discovered in humans. The most recently discovered novel coronavirus has been named COVID-19.</p>
+</div></div><div  class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md"><div class="vc_toggle_title"><h4>What are the symptoms of COVID-19?</h4><i class="vc_toggle_icon"></i></div><div class="vc_toggle_content"><p>According to the Center for Disease Control (CDC), patients with COVID-19 have had mild to severe respiratory illness with symptoms of:</p>
+<ul>
+<li>Fever</li>
+<li>Cough</li>
+<li>Shortness of breath</li>
+</ul>
+<p>Symptoms may appear 2-14 days after exposure</p>
+</div></div><div  class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md"><div class="vc_toggle_title"><h4>How Can I Protect Myself?</h4><i class="vc_toggle_icon"></i></div><div class="vc_toggle_content"><p>Please practice general flu prevention measures, including these suggestions from the Center for Disease Control (CDC) and World Health Organization (WHO):</p>
+<ul>
+<li>Cover your cough or sneeze with a tissue or sleeve</li>
+<li>Wash your hands regularly with soap and water for at least 20 seconds. If soap and water are not available, use an alcohol-based (at least 60% alcohol) hand sanitizer.</li>
+<li>Avoid touching your face, especially your eyes, nose, and mouth, with unwashed hands</li>
+<li>Avoid close contact with people who are sick</li>
+<li>Get your flu shot – it’s never too late</li>
+<li>Clean and disinfect frequently touched objects and surfaces</li>
+<li>Stay home if you’re feeling sick. Call your health care provider and let them know your symptoms and travel history</li>
+<li>Familiarize yourself with guidance from the Department of Homeland Security on Coronavirus readiness @ <strong><a href="https://www.ready.gov/pandemic" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.ready.gov/pandemic&amp;source=gmail&amp;ust=1583360000056000&amp;usg=AFQjCNGaIpkC_CDzJY8Hz0dhJPM9B7bidQ">https://www.ready.gov/pandemic</a></strong>
+<div dir="ltr">
+<div class="gmail_default"></div>
+</div>
+</li>
+</ul>
+</div></div><div  class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md"><div class="vc_toggle_title"><h4>Additional Resources</h4><i class="vc_toggle_icon"></i></div><div class="vc_toggle_content"><ul>
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/about/index.html"><strong>About Coronavirus (COVID-19)</strong></a> from the Center for Disease Control (CDC)</li>
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html"><strong>Frequently Asked Questions and Answers</strong></a> About Coronavirus (COVID-19)</li>
+<li><a href="https://www.apha.org/topics-and-issues/communicable-disease"><strong>The 2019 Novel Coronavirus</strong></a> (American Public Health Association)</li>
+<li><strong><a href="https://www.acha.org/documents/Resources/2019_Novel_Coronavirus_Brief_January.28.2020.pdf">2019 Novel Coronavirus: What Campuses Need to Know</a></strong> (American College Health Association)</li>
+<li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"><strong>Coronavirus Tracker</strong></a> (Johns Hopkins University)</li>
+<li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/"><strong>US Department of State Travel Advisories</strong></a></li>
+<li><strong><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">Coronavirus disease (COVID-19) outbreak information</a></strong> (World Health Organization)</li>
+<li><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/summary.html">Center for Disease Control (CDC) Updates &amp; Current Summary</a></strong></li>
+</ul>
+<p><strong>Articles:</strong></p>
+<ul>
+<li><strong><a href="https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca" target="_blank" rel="noopener noreferrer">Coronavirus: Why You Must Act Now</a></strong> (Medium, Tomas Pueyo)</li>
+<li><strong><a href="https://blog.oldtrail.org/2020/03/16/helping-children-manage-stress-during-anxious-times/" target="_blank" rel="noopener noreferrer">Helping Children Manage Stress During Anxious Times</a></strong> (Old Trail School, Katherine B. Howard, MA,NCSP, LPC)</li>
+</ul>
+</div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h6><a class="btn solid goldbtn" href="https://www.antioch.edu/resources/students/">Click Here for Student Success Resources</a></h6>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><section class="vc_cta3-container vc_cta3-size-lg"><div class="vc_general vc_cta3 vc_cta3-style-classic vc_cta3-shape-square vc_cta3-align-left vc_cta3-color-black vc_cta3-icon-size-md vc_custom_1588735159180"><div class="vc_cta3_content-container"><div class="vc_cta3-content"><header class="vc_cta3-content-header"><h2 style="font-size: 2em" class="vc_custom_heading" >Students: Questions about assistance?</h2></header><h5>Read more about the <strong><a href="https://www.antioch.edu/blog/2020/04/30/antioch-university-cares-relief-fund/">Antioch University CARES Relief Fund</a></strong></h5>
+</div></div></div></section>
+	<div  class="wpb_single_image wpb_content_element vc_align_right">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="284" src="https://www.antioch.edu/wp-content/uploads/2020/03/Coronavirus-image-from-CDC-300x284.gif" class="vc_single_image-img attachment-medium" alt="Close up image of coronavirus, courtesy of CDC" /></div>
+		</figure>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_raw_js" >
+		<div class="wpb_wrapper">
+			<!-- DO NOT EDIT BELOW THIS LINE -->
+<!-- AdmitHub Web Chat -->
+<script>window.admitHubBot = {botToken: "52c8c5e0553945e58" };</script>
+<script src="https://webbot.admithub.com/static/js/webchat.js"></script>
+<link rel="stylesheet" type="text/css" href="https://webbot.admithub.com/static/css/webchat.css">
+<!-- DO NOT EDIT ABOVE THIS LINE -->
+		</div>
+	</div>
+</div></div></div></div>
+ <!-- Page Content -->
+        </div><!-- .entry-content-page -->
+
+    
+</div><!-- #content -->     
+
+
+<a href="#" class="totop noanchor"><em class="fa fa-arrow-up" aria-hidden="true"></em></a>
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+	<div class="top">
+		<div class="container">		
+			<form class="searchsubmission_desktop" method="post" action="https://www.antioch.edu/search">
+				<input type="text" id="footer_search" name="search" class="searchfield" placeholder="Can we help you find something?">
+				<input type="submit" name="submit" id="submit" value="&#xf002;">
+			</form>
+							<div id="footer_social" role="complementary">
+					<div>			<div class="textwidget"><ul >
+<li><a title="Facebook" href="https://www.facebook.com/AntiochUniversity/" class="social" id="fb"></a></li>
+<li><a title="LinkedIn" href="https://www.linkedin.com/school/15251157/" class="social" id="li"></a></li>
+</ul>
+</div>
+		</div>				</div><!-- #primary-sidebar -->
+										<div id="footer_cta">
+					<div>			<div class="textwidget"><a href="/apply-to-au/" class="btn">APPLY NOW</a>
+<p>or call us at 937-769-1340</p></div>
+		</div>				</div><!-- #primary-sidebar -->
+					</div>
+	</div>
+	<div class="bottom">
+		<div class="container">	
+			<ul id="menu-footer-navigation" class="footer_nav cf"><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="https://www.antioch.edu/resources/">Resources</a></li>
+<li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="https://www.antioch.edu/resources/general-information/accreditation/">Accreditation</a></li>
+<li id="menu-item-53495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53495"><a href="https://www.antioch.edu/resources/general-information/sitemap/">Sitemap</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-94"><a href="https://www.antioch.edu/resources/university-information/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95"><a href="https://www.antioch.edu/resources/university-information/terms-conditions/">Terms &#038; Conditions</a></li>
+<li id="menu-item-55293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55293"><a href="https://www.antioch.edu/resources/students/ca-disclosures/">CA Disclosures</a></li>
+</ul>			<p class="copyright">&copy; Antioch University 2020. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+</div>
+
+				<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type='text/javascript'>
+/* <![CDATA[ */
+var cnArgs = {"ajaxUrl":"https:\/\/www.antioch.edu\/wp-admin\/admin-ajax.php","nonce":"0b929bbff7","hideEffect":"fade","position":"bottom","onScroll":"1","onScrollOffset":"1000","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"7862400","cookieTimeRejected":"7862400","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-content/plugins/cookie-notice/js/front.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-content/themes/antioch/lib/js/antioch-menu.min.js?ver=2018.1'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var megamenu = {"timeout":"300","interval":"100"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.8'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-content/plugins/megamenu-pro/assets/public.js?ver=2.1'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.antioch.edu/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.1'></script>
+<!-- Custom Antioch Footer Scripts --><script type="text/javascript"> _linkedin_partner_id = "490617";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script>
+<script type="text/javascript"> (function () {
+        var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";
+        b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);
+    })(); </script>
+<noscript><img height="1" width="1" style="display:none;" alt=""
+               src="https://dc.ads.linkedin.com/collect/?pid=490617&fmt=gif"/></noscript>
+<!-- End Custom Antioch Footer Scripts -->
+		<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(34,41,33,0.95);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to help deliver the best experience and allow us, and third parties, to optimize content for you. By continuing, you agree to our <a href="https://www.antioch.edu/resources/general-information/privacy-policy/">privacy policy</a>.
+
+</span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button wp-default btn" aria-label="Ok">Ok</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Ok"></a></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin --><!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+		<script src="https://www.antioch.edu/wp-content/themes/antioch/js/isotope.js"></script>
+		<script src="https://www.antioch.edu/wp-content/themes/antioch/js/toggles.min.js"></script>
+		<script src="https://www.antioch.edu/wp-content/themes/antioch/js/jquery.fancybox.min.js"></script>
+		<script src="https://www.antioch.edu/wp-content/themes/antioch/js/custom.js"></script>
+		<script src="https://www.antioch.edu/wp-content/themes/antioch/js/fontsmoothie.min.js"></script>
+		<script type="text/javascript" src="https://www.antioch.edu/wp-content/themes/antioch/lib/slick/slick.min.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3fa52e4e3e","applicationID":"41022606","transactionName":"M11aMkBRDBIAWhcIDAoXeQVGWQ0PTlANBQYc","queueTime":0,"applicationTime":982,"atts":"HxpZRAhLHxw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html> <!-- end of site. what a ride! -->
