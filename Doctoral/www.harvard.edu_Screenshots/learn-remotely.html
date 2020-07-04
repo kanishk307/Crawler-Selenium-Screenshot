@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie-8"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="2no-js no-jss" dir="ltr" lang="en" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"> <!--<![endif]--><head itemscope itemtype="http://schema.org/WebSite">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TK7H6Z');</script>
+  <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b4d6d73517",applicationID:"236355350"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized"  content="320" />
+    <meta name="viewport"         content="width=device-width, minimum-scale=1, initial-scale=1" />
+    <link rel="canonical" href="https://www.harvard.edu/coronavirus/learn-remotely" itemprop="url"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico"  href="/sites/all/themes/hedu2015/assets/img/favicon.ico?v=2018" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Apple Touch Icon / Startup Screen -->
+    <link rel="apple-touch-icon-precomposed"    href="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" />
+    <!--link rel="apple-touch-startup-image"       href="/sites/all/themes/hedu2015/assets/img/startup.png" /> -->
+    
+
+    <!-- Tile icon for Win8 (144x144 + tile color) __doesn't validate__-->
+    <meta name="msapplication-TileImage" content="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#222222" />
+    
+        <title itemprop="name">Learn Remotely | Harvard University</title>
+
+    <meta name="robots" content="index,follow,NOODP" />
+    <meta name="description" Content="Best practices, available tools, and how to get support for online classes at Harvard" />
+    <meta name="keywords" Content="Coronavirus, COVID-19" />
+
+    <meta name="node_id" Content="12371841" />
+
+      <meta property="fb:admins" content="593072576,599799799,662979311,613602264"/>
+    <meta property="fb:page_id" content="105930651606" />
+    <meta property="fb:app_id" content="135898969862440" />
+    <meta property="twitter:account_id" content="1491443782" />
+    <meta name="twitter:site" content="@harvard">
+    <meta name="twitter:creator" content="@harvard">    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Harvard University"/>
+    <meta property="og:type" content="university"/>
+
+    <meta property="og:title" content="Learn Remotely | Harvard University"/>
+    <meta property="og:url" content="https://www.harvard.edu/coronavirus/learn-remotely"/>
+    <meta property="og:description" content="Best practices, available tools, and how to get support for online classes at Harvard"/>
+    <meta property="og:image" content="https://www.harvard.edu/sites/default/files/default_images/harvard-social1200.jpg"/>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/sites/all/themes/hedu2015/assets/css/harvard.min.css?v=20180820" />
+	<link rel="stylesheet" href="/sites/all/themes/hedu2015/addtl.css?v=20200316" />
+    <!--link rel="stylesheet" href="/sites/all/themes/hedu2015/addtl.css" /-->
+    <link href="/sites/all/themes/hedu2015/assets/css/print.css" rel="stylesheet" media="print" type="text/css" />
+
+    <script async="true">
+      var fontCSS = '/sites/all/themes/hedu2015/assets/css/fonts.min.css';
+
+      (function() {
+        var wf = document.createElement('link');
+        wf.href = fontCSS;
+        wf.rel = 'stylesheet';
+
+        var s = document.getElementsByTagName('link')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+
+    
+  
+<noscript>
+      <link href="/sites/all/themes/hedu2015/assets/css/fonts.min.css" rel="stylesheet">
+    </noscript>
+    
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <link href="/sites/all/themes/hedu2015/assets/css/ie.min.css" rel="stylesheet">
+    <![endif]-->
+            <style>
+        .header-base--has-photo {background-image: url("https://www.harvard.edu/sites/default/files/page/coronavirus_CDCx_26.jpg")!important; }        </style>
+        
+		
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Harvard",
+  "alternateName": "Harvard University",
+  "url": "http://www.harvard.edu",
+  "logo": "http://www.harvard.edu/sites/default/files/content/harvard-university-logo-151.png",
+  "sameAs": [
+		"https://www.facebook.com/Harvard",
+		"https://twitter.com/harvard",
+		"https://www.instagram.com/harvard/",
+		"https://www.youtube.com/harvard",
+		"https://soundcloud.com/harvard",
+		"https://www.linkedin.com/edu/school?id=18483"
+  ]
+}
+</script>
+
+  </head>
+
+  <body id="body" class="body-header-base--has-photo">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK7H6Z"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <div id="page" class="page">
+
+	<!-- include keyboard jump links -->
+<ul class="jump-links">
+  <li>
+    <a href="#mainArea" id="jumpToMain">
+      Jump to main content
+    </a>
+  </li>
+  <li>
+    <a href="#searchArea" id="jumpToSearch">
+      Jump to search
+    </a>
+  </li>
+  <li>
+    <a href="#footerArea">
+      Jump to the footer
+    </a>
+  </li>
+</ul>    
+
+
+  <!--
+
+    Header Area
+
+  -->
+
+  <header role="banner" id="headerArea" class="header-base header-base--has-photo">
+
+  <!-- include h1 > link > text combo -->
+  <h1 class="harvard-heading">
+    <a href="/" class="harvard-heading__link">
+      <span class="is-visually-hidden">
+        Harvard University
+      </span>
+    </a>
+  </h1>
+
+  <!-- include main navigation component -->
+  <a href="#siteNavigation"
+      class="btn--menu"
+      id="btn_menu"
+      data-state="off"
+      data-id="nav"
+      aria-label="Reveal Navigation">
+    <span class="btn--menu__icon"></span>
+    Menu
+  </a>
+
+<nav role="navigation" class="main-nav" id="siteNavigation">
+
+  <div class="nav-drawer">
+
+    <div class="nav-group nav-group--consistent">
+      <ul class="clearfix">
+        <li class="nav-left-half">
+          <ul role="presentation" class="clearfix">
+            <li class="has-drop-nav">
+              <a href="/about-harvard" class="">
+                About
+                <span class="lg-nav-txt">
+                  Harvard
+                </span>
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/about-harvard/harvard-glance" class="first">Harvard at a Glance</a></li>
+		<li class=""><a href="/president" class="">Harvard's President</a></li>
+		<li class=""><a href="/about-harvard/harvards-president-leadership" class="">Harvard's Leadership</a></li>
+		<li class=""><a href="/about-harvard/academic-experience" class="">Academic Experience</a></li>
+		<li class=""><a href="/about-harvard/administrative-offices" class="">Administrative Offices</a></li>
+		<li class=""><a href="/about-harvard/directories" class="">Directories</a></li>
+		<li class=""><a href="http://community.harvard.edu/" class="">Harvard in the Community</a></li>
+		<li class=""><a href="http://news.harvard.edu/gazette/" class="">News</a></li>
+  </ul>
+              </li>
+            <li class="has-drop-nav">
+              <a href="/admissions-aid">
+                Admissions
+                <span class="lg-nav-txt">
+                  &amp; Aid
+                </span>
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/admissions-aid#titletop" class="first">Undergraduate</a></li>
+		<li class=""><a href="/admissions-aid#grad" class="">Graduate & Professional Schools</a></li>
+		<li class=""><a href="/admissions-aid#continue" class="">Continuing Education</a></li>
+		<li class="last"><a href="/admissions-aid#summer" class="last">Summer Programs</a></li>
+  </ul>
+              </li>
+          </ul>
+        </li>
+
+        <li class="nav-right-half">
+          <ul role="presentation" class="clearfix">
+            <li class="has-drop-nav">
+              <a href="/schools">
+                Schools
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="http://www.hbs.edu/" class="first">Business</a></li>
+		<li class=""><a href="http://college.harvard.edu" class="">College</a></li>
+		<li class=""><a href="http://www.dce.harvard.edu/" class="">Continuing Education</a></li>
+		<li class=""><a href="http://www.hsdm.harvard.edu/" class="">Dental</a></li>
+		<li class=""><a href="http://www.gsd.harvard.edu/" class="">Design</a></li>
+		<li class=""><a href="http://www.hds.harvard.edu/" class="">Divinity</a></li>
+		<li class=""><a href="http://www.gse.harvard.edu/" class="">Education</a></li>
+		<li class=""><a href="http://seas.harvard.edu/" class="">Engineering</a></li>
+		<li class=""><a href="http://www.fas.harvard.edu/" class="">Faculty of Arts & Sciences</a></li>
+		<li class=""><a href="http://www.hks.harvard.edu/" class="">Government</a></li>
+		<li class=""><a href="http://www.gsas.harvard.edu/" class="">Graduate School</a></li>
+		<li class=""><a href="http://www.law.harvard.edu/index.html" class="">Law</a></li>
+		<li class=""><a href="http://hms.harvard.edu/" class="">Medical</a></li>
+		<li class=""><a href="http://www.hsph.harvard.edu/" class="">Public Health</a></li>
+		<li class="last"><a href="http://www.radcliffe.edu/" class="last">Radcliffe Institute</a></li>
+  </ul>
+              </li>
+            <li class="has-drop-nav">
+              <a href="/on-campus">
+                On Campus
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/on-campus/arts-and-humanities" class="first">Arts and Humanities</a></li>
+		<li class=""><a href="https://www.gocrimson.com/" class="">Athletics</a></li>
+		<li class=""><a href="/on-campus/commencement" class="">Commencement</a></li>
+		<li class=""><a href="http://hr.harvard.edu/jobs/" class="">Employment</a></li>
+		<li class=""><a href="/events" class="">Events</a></li>
+		<li class=""><a href="http://harvardx.harvard.edu/" class="">HarvardX</a></li>
+		<li class=""><a href="http://library.harvard.edu/" class="">Library</a></li>
+		<li class=""><a href="/on-campus/museums" class="">Museums</a></li>
+		<li class=""><a href="/on-campus/research" class="">Research</a></li>
+		<li class=""><a href="/science" class="">Science</a></li>
+		<li class="last"><a href="/on-campus/visit-harvard" class="last">Visit Harvard</a></li>
+  </ul>
+              </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-group nav-group--callouts">
+      <ul class="clearfix">
+        <li class="nav-left-half">
+          <ul role="presentation" class="clearfix">
+            <li>
+              <a href="http://news.harvard.edu/gazette/">
+                Gazette News
+              </a>
+            </li>
+            <li>
+              <a href="/events">
+                Events
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-right-half">
+          <ul role="presentation" class="clearfix">
+            <li>
+              <a href="/on-campus/visit-harvard" class="">
+                Visit
+              </a>
+            </li>
+            <li>
+              <a href="http://alumni.harvard.edu/givenow">
+                Give
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    
+			<div class="list-clean">
+				
+  <ul  class="nav-group nav-group--top-bar">
+  
+		<li class="first"><a href="/faculty" class="first">Faculty</a></li>
+		<li class=""><a href="/staff" class="">Staff</a></li>
+		<li class=""><a href="/students" class="">Students</a></li>
+		<li class=""><a href="http://alumni.harvard.edu" class="">Alumni</a></li>
+		<li class=""><a href="/parents" class="">Parents</a></li>
+		<li class=""><a href="/on-campus/visit-harvard" class="">Visitors</a></li>
+		<li class="last"><a href="/media-relations" class="last">Media</a></li>
+  </ul>
+  
+			</div>
+			
+  </div> <!-- end .nav-drawer -->
+
+</nav>
+
+<form role="search" id="searchArea" class="search-area" method="get" action="/searches/">
+  <label for="siteSearch">
+    <span class="is-visually-hidden">
+      Search:
+    </span>
+  </label>
+
+  <input type="search"
+         name="searchtext"
+         id="searchSite"
+         class="input-search"
+         aria-label="search"
+         placeholder="What can we help you find?" />
+  <button type="button" class="btn--mobile-site-search">
+    <span class="is-visually-hidden">
+      Open Search
+    </span>
+  </button>
+</form>
+
+
+  </header>
+  <!-- end Header Area --> <!--
+
+    Main Content Area
+
+  -->
+
+  <main role="main" id="mainArea" class="main-base">
+
+    <!--
+
+      main content header area
+
+      page level title, breadcrumbs and additional
+      page controls should go here
+    -->
+    <header class="main-base__header">
+      <div class="wrapper wrapper--1-down">
+      
+      	
+		<!-- include breadcrumbs component -->
+				<nav role="navigation" class="nav-crumbs">
+	
+					<ol class="nav-crumbs__list" aria-label="Bread Crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+		
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			 		<a itemprop="item" href="/coronavirus"><span itemprop="name">Coronavirus Main</span></a>
+					<meta itemprop="position" content="1" />
+				</li>
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			 		<a itemprop="item" href="/coronavirus/remote-resources"><span itemprop="name">Remote Resources</span></a>
+					<meta itemprop="position" content="2" />
+				</li>
+					</ol>
+			
+			</nav>
+			
+
+				
+        <h1 id="current_page_title"><a name="titletop"></a>
+          Learn Remotely        </h1>
+
+
+                <!--
+
+          This button controls the sub nav open/close on small screens.
+
+        -->
+        <a href="#subNav" id="subnavBtn" class="btn btn--small btn--subnav">
+          <span aria-label="Open Sub Navigation"></span>
+        </a>
+
+      </div>
+    </header>
+
+    
+    <div class="wrapper wrapper--1-down content">
+      <div class="clearfix  grid-fixed-side">
+
+			        <div class="fixed-side-col">
+    
+          <nav class="sub-nav sub-nav-normal" role="navigation" id="subNav">
+        
+             
+                <div class="list-clean">
+                  
+  <ul >
+  
+		<li class="first active-trail"><a href="/coronavirus" class="first active-trail">Coronavirus Main </a>
+  <ul >
+  
+		<li class="first"><a href="/coronavirus/planning-2020-21" class="first">Planning for 2020-21</a></li>
+		<li class=""><a href="/coronavirus/school-program-information" class="">School & Program Information</a></li>
+		<li class=" active-trail"><a href="/coronavirus/remote-resources" class=" active-trail">Remote Resources</a>
+  <ul >
+  
+  </ul>
+  </li>
+		<li class=""><a href="/coronavirus/community-notifications" class="">Health & Safety Notices</a></li>
+		<li class=""><a href="/coronavirus/updates-community-messages" class="">Updates & Community Messages</a></li>
+		<li class=""><a href="/coronavirus/health-wellbeing" class="">Health & Wellbeing</a></li>
+		<li class=""><a href="/coronavirus/travel-guidance" class="">Travel Guidance </a></li>
+		<li class=""><a href="/coronavirus/faq" class="">FAQs</a></li>
+  </ul>
+  </li>
+  </ul>
+  
+                </div>
+                        
+          </nav>
+        
+        </div>
+        
+    	
+
+        <article role="article" class="w-100" id="mainContent">
+        	  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+
+<div id="node-12371841" class="node node-page clearfix 11" about="/coronavirus/learn-remotely" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Learn Remotely" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>We appreciate our students' understanding and willingness to adapt to remote learning for their spring and summer courses. The decision to switch to online classes—with some limited exceptions for clinicals—and plan for a phased reopening align with our goal to reduce the number of interactions on campus, slow the rate of transmission, and protect our community. Each School will make a decision about the fall semester based on its unique considerations. We understand there are personal, logistical, and financial challenges to these extraordinary measures. University leadership and your Schools are here to support you.</p>
+<p>The <strong><a href="https://learnremotely.harvard.edu/">Learn Remotely</a></strong> website, created by the Office of the Vice Provost for Advances in Learning (VPAL) and Harvard University Information Technology (HUIT), contains best practices, tools, and support for learning online.</p>
+<p>The resources and information on this page can also help you adjust to remote learning and inform you of the latest University guidance and policies for student workers, dining and housing, financial matters, health and wellbeing, and more.</p>
+<h2 class="txt-h3">Remote Class and Coursework Support</h2>
+<p>We understand the challenges of adjusting to online classes, imperfect remote learning environments, and maintaining meaningful engagement. Learn about best practices, available tools, and how to get help.</p>
+<div class="accordion"><strong>Online learning practices</strong></div>
+<div class="panel">
+<p>The <a href="https://learnremotely.harvard.edu/">Learn Remotely</a> website can help you:</p>
+<ul>
+<li>Review tips to <a href="https://learnremotely.harvard.edu/get-started">get started</a>, including setting a schedule and advocating for yourself.</li>
+<li>Understand what's different about online classes and what's the same to <a href="https://learnremotely.harvard.edu/maximize-your-learning">maximize your learning</a>.</li>
+</ul>
+<p>Also see the Academic Resource Center’s detailed <a href="https://academicresourcecenter.harvard.edu/learning-remotely">advice and help for learning remotely</a>.</p>
+</div>
+<div class="accordion"><strong>Library resources</strong></div>
+<div class="panel">
+<p>In addition to the specific resources listed below, there are many ways in which Harvard Library can <a href="https://library.harvard.edu/how-to/get-help-library-student-online">help you learn remotely</a>.</p>
+<ul>
+<li>Find your <a href="https://library.harvard.edu/services-tools/course-reserves">required and recommended course materials</a>.</li>
+<li>Schedule a <a href="https://library.harvard.edu/services-tools/research-consultations">research consultation</a> or <a href="https://library.harvard.edu/services-tools/library-liaisons">appointment with a library liaison</a> to get personalized guidance.</li>
+<li><a href="https://ask.library.harvard.edu/index.php">Ask a librarian</a>: get immediate help during live chat hours or submit a question during off-hours and they'll get back to you.</li>
+<li>Search Harvard Library's <a href="https://library.harvard.edu/digital-collections">digital collections</a>.</li>
+<li>Access <a href="https://library.harvard.edu/services-tools/lean-library">Harvard Library subscriptions</a> from anywhere on the web.</li>
+</ul>
+</div>
+<div class="accordion"><strong>Technology and tools</strong></div>
+<div class="panel">
+<ul>
+<li>Find <a href="https://huit.harvard.edu/remote-online">options for accessing the internet remotely</a>, including free and reduced-rate plans, and review&nbsp;<a href="https://huit.harvard.edu/files/huit/files/network_tips.pdf">network troubleshooting</a>&nbsp;tips.</li>
+<li>Learn <a href="https://learnremotely.harvard.edu/technology-and-tools">how to use Zoom</a>, a web conferencing tool that integrates with Canvas, including how to sign up for your Harvard Zoom account, <a href="https://harvard.service-now.com/ithelp?id=kb_article&amp;sys_id=0aa5cf7bdbab001030ed1dca48961922">increasing Zoom privacy</a>, and reviewing&nbsp;<a href="https://huit.harvard.edu/files/huit/files/zoom_security.pdf">Zoom troubleshooting</a>&nbsp;tips.</li>
+<li>Check HUIT's&nbsp;<a href="https://status.huit.harvard.edu/">service status dashboard</a>&nbsp;to see if there are any outages reported and sign up for alerts.</li>
+<li>For support with these technologies or to learn what other tools are available, contact the <a href="https://harvard.service-now.com/ithelp?id=submit_ticket&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9">HUIT Service Desk</a>, your School's <a href="https://harvard.service-now.com/ithelp?id=kb_article&amp;sys_id=a3d3d53637a9b2809aa163d2b3990e89#scenarios">local academic support staff</a>, or your School's <a href="https://harvard.service-now.com/harvard-it-services">local IT services</a>.</li>
+</ul>
+</div>
+<div class="accordion"><strong>International students' immigration status</strong></div>
+<div class="panel">
+<p>The Harvard International Office (HIO) received U.S. government guidance that they intend to be flexible with temporary adaptations to classes. Provided you continue to make normal progress in a full course of study as required by federal regulations, your legal immigration status should not be affected. Contact <a href="https://hio.harvard.edu/talk-advisor">your HIO advisor</a> with any questions or concerns.</p>
+</div>
+<h2 class="txt-h3"><br>Dining and Housing</h2>
+<p>We recognize there are difficult and extenuating circumstances for students who cannot leave campus or do not have another place to go. Harvard will provide you the help you need to stay safe and secure and to continue with your academic work.</p>
+<div class="accordion"><strong>On-campus housing</strong></div>
+<div class="panel">
+<p>If you remain on campus, your instruction will also be remote. Students must work with their Schools to make appropriate on-campus accommodations, which may include relocating to a different room or unit to ensure a one-to-one bedroom to bathroom ratio for residence halls. Current Harvard University Housing (HUH) residents should contact the HUH leasing team at <a href="mailto:leasing@harvard.edu">leasing@harvard.edu</a> with questions.</p>
+</div>
+<div class="accordion"><strong>Dining halls and cafes</strong></div>
+<div class="panel">
+<p>Select Harvard University Dining Services' (HUDS) and School-specific dining halls and cafes will be open for students who remain on campus. Beginning March 17 and effective until further notice, however, students can only take food to go. This policy is in accordance with social distancing protocols and local legislation announced by Governor Baker and the Department of Public Health. Note that hours will be reduced and access will be limited to individuals with an approved dining plan or School-specific Harvard ID</p>
+<ul>
+<li>HUDS <a href="https://dining.harvard.edu/campus-dining/undergraduate-dining/openings-closings">undergraduate dining hall hours and openings/closings</a></li>
+<li>HUDS <a href="https://dining.harvard.edu/cafes">retail cafe hours and openings/closing</a></li>
+<li>Check School-specific cafe websites for more information.</li>
+</ul>
+</div>
+<div class="accordion"><strong>Campus life</strong></div>
+<div class="panel">
+<p>We understand the importance of maintaining a sense of community and social connections during these difficult times, even if conducted remotely. Students who remain on campus must continue <a href="https://harvard.edu/sites/default/files/content/Coronavirus_HUHS_social_distancing_A%5B3%5D.pdf">practicing universal social distancing measures</a>. In-person activities and social interactions will be severely limited in order to protect the entire community of students and staff who remain on campus.</p>
+<ul>
+<li>We strongly discourage any in-person non-essential meetings or events of 10 people or more.</li>
+<li>Many in-person events and activities have been cancelled or moved online, if possible.</li>
+<li>Check with <a href="https://www.harvard.edu/coronavirus/school-program-information">your School</a> for details on remote programming and activities.</li>
+</ul>
+</div>
+<h2 class="txt-h3"><br>Financial Matters</h2>
+<p>We know there are financial hardships due to the transition to remote learning. Just as we seek to protect the most vulnerable populations from coronavirus, we seek to protect those most financially vulnerable from these extraordinary shifts to online learning.</p>
+<div class="accordion"><strong>Refunds and pro-rated costs</strong></div>
+<div class="panel">
+<ul>
+<li>Our goal is to ensure that instruction continues throughout the spring semester. In that case, as long as instruction continues, tuition will not be refunded.</li>
+<li>Room and board costs will be pro-rated for the remainder of the academic year 2019-20 for all students leaving campus and completely vacating their housing.</li>
+<li>For HUH residents who wish to terminate their current lease or housing contract, rent will be pro-rated if you vacate the apartment and leave campus.</li>
+<li>Activity and student fees will be reviewed on a school-by-school basis.</li>
+</ul>
+</div>
+<div class="accordion"><strong>Financial aid recipients</strong></div>
+<div class="panel">
+<p>If you find that you need additional emergency financial assistance, contact your School's financial aid office.</p>
+<p>We are always open to discussing changes in student circumstances and needs they may have. Consistent with prior years, you should contact your local financial aid office to discuss any material changes to your individual or family financial status given the emerging economic changes.</p>
+</div>
+<div class="accordion"><strong>Undergraduate student workers</strong></div>
+<div class="panel">
+<p>If you can continue to perform your job in a remote setting, you will continue to be paid without changes or interruptions. Talk with your supervisor about the tasks that you can continue to do safely from a distance, and be clear about how to report your time.</p>
+<p>If you held a position that you are unable to continue in a remote setting, we encourage you to visit the <a href="https://seo.harvard.edu/">Harvard College Student Employment Office website</a> and review other opportunities for the remainder of the term. Consult with the Student Employment Office about how to apply for and be hired into a new job.</p>
+<p>As indicated in the Harvard College Dean of Students Office <a href="https://dso.college.harvard.edu/coronavirusfaq">Coronavirus FAQs</a>, all undergraduate students who had a term-time work expectation as part of their financial aid packages for this semester will have one half of that expectation removed from their financial aid packages. For example, a spring term-time work expectation of $1,750 will be reduced to $875 and the corresponding amount replaced with additional Harvard scholarship. Undergraduate students will see this as an increase of Harvard scholarship aid on their student account.</p>
+</div>
+<div class="accordion"><strong>Graduate student workers</strong></div>
+<div class="panel">
+<p>The University continues to evaluate the shifting administrative landscape during the coronavirus pandemic. Graduate student work, as part of that landscape, is an essential driver of the University’s mission. Where possible, the University expectation is that the work that graduate students are compensated for should continue. If work assignments are not possible to complete using online or distance learning technologies, supervisors are encouraged to find other opportunities for graduate student workers to complete their work commitments, including shifting jobs and job descriptions to alternate assignments in order to fulfill their employment obligations. If this is not possible, graduate student workers who are unable to work due to the pandemic will still be compensated to the end of work expectation within the spring 2020 semester.</p>
+</div>
+<h2 class="txt-h3"><br>Health and Wellbeing</h2>
+<p>The health and wellbeing of our students is of utmost priority. We recognize the abrupt transition to remote learning has been difficult and that universal social distancing measures have drastically altered our social lives. Visit the <strong><a href="https://www.harvard.edu/coronavirus/health-wellbeing">Health and Wellbeing page</a></strong> for information on preventative measures, resources on <strong>managing stress</strong>, anxiety, and fear; and more.</p>
+<h2 class="txt-h3">Socialize Remotely</h2>
+<p>Although we are all practicing universal social distancing, we can still laugh, play, learn, and grow closer outside of class and work. Explore the many free virtual events and resources on our <strong><a href="https://www.harvard.edu/coronavirus/socialize-remotely">Socialize Remotely page</a></strong>—including arts and culture, exercise and games, movies and music, and mindfulness and spirituality.</p>
+<h2 class="txt-h3">Technology Support</h2>
+<p>Contact <a href="https://harvard.service-now.com/ithelp">HUIT's help desk</a> or your <a href="https://harvard.service-now.com/harvard-it-services">Schools' local IT</a>.</p>
+<h2 class="txt-h3">School- and Department-Specific Resources</h2>
+<p>In addition to the University-wide advice and resources above, see the following School and Department student-specific FAQs for more information:</p>
+<p><a href="https://www.hbs.edu/about/Pages/coronavirus-critical-information.aspx">Business</a>&nbsp;|&nbsp;<a href="https://dso.college.harvard.edu/coronavirusfaq">College</a>&nbsp;|&nbsp;<a href="https://hsdm.harvard.edu/news/flu-and-coronavirus-awareness-campus">Dental</a>&nbsp;|&nbsp;<a href="https://www.gsd.harvard.edu/resources/draft-covid-19-information-for-students/">Design</a>&nbsp;|&nbsp;<a href="https://hds.harvard.edu/about/hds-coronavirus-update">Divinity</a>&nbsp;|&nbsp;<a href="https://www.gse.harvard.edu/coronavirus/faq">Education</a>&nbsp;|&nbsp;<a href="https://www.extension.harvard.edu/covid-19-updates">Extension</a>&nbsp;|&nbsp;<a href="https://www.fas.harvard.edu/fas-coronavirus-updates">FAS</a>&nbsp;|&nbsp;<a href="https://www.hks.harvard.edu/coronavirus-information">Government</a>&nbsp;|&nbsp;<br><a href="https://gsas.harvard.edu/coronavirus">GSAS</a>&nbsp;|&nbsp;<a href="https://hscrb.harvard.edu/coronavirus">HSCRB</a>&nbsp;|&nbsp;<a href="https://hls.harvard.edu/dept/communications/coronavirus-covid-19-faqs-for-hls-students-faculty-and-staff/">Law</a>&nbsp;|&nbsp;<a href="https://hms.harvard.edu/coronavirus">Medical</a>&nbsp;|&nbsp;<a href="https://www.hsph.harvard.edu/coronavirus/">Public Health</a>&nbsp;|&nbsp;<a href="https://www.radcliffe.harvard.edu/coronavirus">Radcliffe</a>&nbsp;|&nbsp;<a href="https://projects.iq.harvard.edu/coronavirus">SEAS &amp; FAS Division of Science</a></p>
+<h2 class="txt-h3">Frequently Asked Questions</h2>
+<ul>
+<li><a href="https://www.harvard.edu/coronavirus/faq#dining-housing">Dining and housing</a></li>
+<li><a href="http://harvard.edu/coronavirus/faq#events-meetings">Events and meetings</a></li>
+<li><a href="https://www.harvard.edu/coronavirus/faq#financial-students">Financial matters for students</a></li>
+<li><a href="http://harvard.edu/coronavirus/faq#health">Health</a></li>
+<li><a href="https://www.harvard.edu/coronavirus/faq#international">International students and scholars</a></li>
+<li><a href="https://www.harvard.edu/coronavirus/faq#transportation">Parking and transportation</a></li>
+<li><a href="http://harvard.edu/coronavirus/faq#tech">Technology</a></li>
+<li><a href="https://www.harvard.edu/coronavirus/faq#travel">Travel</a></li>
+</ul></div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+
+        </article>
+        
+        
+      </div> <!-- end .grid -->
+    </div>
+    
+  </main>
+  <!-- end Main Content Area -->
+  
+
+		<!--
+	
+			Secondary (aside) Content Area
+	
+		-->
+
+		<aside role="complementary" id="secondaryArea" class="aside-base">
+			    <section class="stitle-learn remotely news  updates c-bg-crimson c-txt-white padding-sm" data-moduletitle="learn remotely news  updates">
+      
+		<header>
+		<h2 class="txt-h1-alt txt-center  c-txt-white">Learn Remotely News &amp; Updates</h2>
+		</header>
+		    	<div class="wrapper">
+        <div class="grid grid--4a">
+          <div class="w-50">
+            <div class="grid">
+              <div class="w-50">
+                
+	<div class="card card--nid-12383468 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Grading_600.jpg" alt="A person writing in a notebook with a laptop nearby" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Grading_300.jpg" alt="A person writing in a notebook with a laptop nearby" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/">Grading policy changes</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard College will adopt an Emergency Satisfactory/ Emergency Unsatisfactory grading policy for the spring semester</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/" class="">
+						Learn more
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+              <div class="w-50">
+                
+	<div class="card card--nid-12383011 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/04/harvard-graduate-schools-transition-to-online/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/042806_Features_JI_001.jpg" alt="empty chairs" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/042806_Features_JI_001wide.jpg" alt="empty chairs" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/harvard-graduate-schools-transition-to-online/">Grad Schools evolve</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard's graduate schools are finding helpful ways to adapt to distance learning and teaching</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/harvard-graduate-schools-transition-to-online/" class="">
+						Read story
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="grid">
+              <div class="w-50">
+                
+	<div class="card card--nid-12383803 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/04/seas-students-develop-customized-videoconferencing-platform/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/congregate_team_hires.jpg" alt="A group of six pictures of Harvard students" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/congregate_team_hireswide.jpg" alt="A group of six pictures of Harvard students" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/seas-students-develop-customized-videoconferencing-platform/">Students create Congregate</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard students created a new online platform that allows for better conversations</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/seas-students-develop-customized-videoconferencing-platform/" class="">
+						Read story
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+              <div class="w-50">
+                
+	<div class="card card--nid-12383647 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/04/one-student-adjusts-to-life-on-campus-another-to-being-home/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Andrew_Perez_600.jpg" alt="A student works on an art project on the floor in his living room " class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Andrew_Perez_300.jpg" alt="A student works on an art project on the floor in his living room " class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/one-student-adjusts-to-life-on-campus-another-to-being-home/">The way we live now</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>One undergraduate adjusts to life on the deserted campus while another gets acclimated back at home&nbsp;</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/one-student-adjusts-to-life-on-campus-another-to-being-home/" class="">
+						Read story
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+            </div>
+          </div> <!-- end .w-50 -->
+        </div>
+				      </div><!--/.wrapper-->
+    </section>
+    
+  	</aside>
+  	<!-- end Secondary Content Area -->
+			 <!--
+
+    Footer Area
+
+  -->
+
+  <footer role="contentinfo" id="footerArea" class="footer-base">
+  <div class="wrapper wrapper--1-down content-area">
+
+    <!--
+
+  Visually hidden jump to navigation link to go at the bottom of long content areas,
+  especially those with many focusable areas.
+
+  Remove the hidden helper class to make this link visible to all users.
+
+-->
+<a href="#page" class="jump-to-nav jump-to-nav--hidden">
+  Jump to Top
+</a>
+
+    <div class="grid grid--footer">
+
+      <div class="w-20 w-33--m">
+        <h1 class="footer__heading txt-h5">
+          Website
+        </h1>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-449 first"><a href="https://accessibility.harvard.edu" title="Accessibility@0">Accessibility</a></li>
+<li class="menu-11714"><a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy" title="DigitalAccessibility@0">Digital Accessibility</a></li>
+<li class="menu-683 last"><a href="/sitemap" title="Sitemap@0">Sitemap</a></li>
+</ul>      </div>
+
+      <div class="w-20 w-33--m">
+        <h2 class="footer__heading txt-h5">
+          Get in Touch
+        </h2>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-660 first"><a href="/contact-harvard" title="Contact@2">Contact Harvard</a></li>
+<li class="menu-2078"><a href="/about-harvard/maps-directions" title="">Maps &amp; Directions</a></li>
+<li class="menu-2383"><a href="http://hr.harvard.edu/jobs" title="">Jobs</a></li>
+<li class="menu-2384 last"><a href="/about-harvard/social-media-and-newsletter-directory" title="">Social Media</a></li>
+</ul>      </div>
+
+      <div class="w-20 w-33--m">
+        <h3 class="footer__heading txt-h5">
+          Security &amp; Brand
+        </h3>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-448 first"><a href="/privacy-statement" title="Privacy@0">Privacy Statement</a></li>
+<li class="menu-447"><a href="/copyright-issue" title="Infringement@0">Report Copyright Infringement</a></li>
+<li class="menu-861"><a href="/security-issue" title="Report Security Issue">Report Security Issue</a></li>
+<li class="menu-446 last"><a href="http://trademark.harvard.edu/pages/trademark-notice" title="TrademarkNotice@0">Trademark Notice</a></li>
+</ul>      </div>
+
+      <div class="w-footer-last">
+        <h4 class="footer__heading txt-h5 is-visually-hidden">
+          Social Media &amp; other Application Links
+        </h4>
+
+          <ul class="list-social-links list-clean">
+            <li>
+              <a href="http://facebook.com/harvard" class="social-link social-link--facebook">
+                <span class="is-visually-hidden">
+                  Facebook
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/harvard" class="social-link social-link--twitter">
+                <span class="is-visually-hidden">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com/harvard" class="social-link social-link--instagram">
+                <span class="is-visually-hidden">
+                  Instagram
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://youtube.com/harvard" class="social-link social-link--youtube">
+                <span class="is-visually-hidden">
+                  YouTube
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/harvard" class="social-link social-link--soundcloud">
+                <span class="is-visually-hidden">
+                  SoundCloud
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/edu/school?id=18483" class="social-link social-link--linkedin">
+                <span class="is-visually-hidden">
+                  LinkedIn
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.harvard.edu/itunes" class="social-link social-link--itunes">
+                <span class="is-visually-hidden">
+                  iTunes
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="w-60 other-apps">
+            &nbsp;
+          </p>
+
+      </div>
+
+
+    </div> <!-- end footer grid -->
+
+    <p class="footer__outro">
+      &copy; 2020 The President and Fellows of Harvard College
+    </p>
+
+  </div>
+</footer>
+	<!-- include ending file tags and JavaScript inclusions -->
+  </div> <!-- end #page -->
+
+        <!--
+
+      JavaScripts
+
+    -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/sites/all/themes/hedu2015/assets/js/script.js?v=20200311"></script>
+
+    <!-- element queries -->
+    <script src="/sites/all/themes/hedu2015/assets/js-element-queries/ResizeSensor.js"></script>
+    <script src="/sites/all/themes/hedu2015/assets/js-element-queries/ElementQueries.js"></script>
+    
+    <script src="/sites/all/themes/hedu2015/assets/slick/slick.js"></script>
+<script>
+$('.grid--3a.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+$('.grid--full.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+$('.grid--full-w-view.carousel .view .view-content').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+</script>
+
+
+		<!-- Start of Survicate (www.survicate.com) code -->
+<script type="text/javascript">
+ (function(w) {
+   w._sv = w._sv || {};
+   w._sv.trackingCode = 'FfgooJjBjzhBdGbpsXIHyvlzrdrimWab'; 
+   var s = document.createElement('script');
+   s.src = '//api.survicate.com/assets/survicate.js';
+   s.async = true;
+   var e = document.getElementsByTagName('script')[0];
+   e.parentNode.insertBefore(s, e);
+ })(window);
+</script>
+<!-- End of Survicate code -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b4d6d73517","applicationID":"236355350","transactionName":"NAFUZEAHV0NYVkYIWA1LY0JbSRZZV1FXGRkTDEY=","queueTime":0,"applicationTime":10,"atts":"GEZXEggdRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

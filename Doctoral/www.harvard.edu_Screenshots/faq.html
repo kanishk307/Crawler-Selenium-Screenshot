@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie-8"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="2no-js no-jss" dir="ltr" lang="en" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"> <!--<![endif]--><head itemscope itemtype="http://schema.org/WebSite">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TK7H6Z');</script>
+  <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b4d6d73517",applicationID:"236355350"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized"  content="320" />
+    <meta name="viewport"         content="width=device-width, minimum-scale=1, initial-scale=1" />
+    <link rel="canonical" href="https://www.harvard.edu/coronavirus/faq" itemprop="url"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico"  href="/sites/all/themes/hedu2015/assets/img/favicon.ico?v=2018" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Apple Touch Icon / Startup Screen -->
+    <link rel="apple-touch-icon-precomposed"    href="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" />
+    <!--link rel="apple-touch-startup-image"       href="/sites/all/themes/hedu2015/assets/img/startup.png" /> -->
+    
+
+    <!-- Tile icon for Win8 (144x144 + tile color) __doesn't validate__-->
+    <meta name="msapplication-TileImage" content="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#222222" />
+    
+        <title itemprop="name">Frequently Asked Questions | Harvard University</title>
+
+    <meta name="robots" content="index,follow,NOODP" />
+    <meta name="description" Content="FAQs regarding Harvard&#039;s current coronavirus policies and resources. We will continue to update our guidance and add to these FAQs as needed. " />
+    <meta name="keywords" Content="Coronavirus, COVID-19" />
+
+    <meta name="node_id" Content="12368580" />
+
+      <meta property="fb:admins" content="593072576,599799799,662979311,613602264"/>
+    <meta property="fb:page_id" content="105930651606" />
+    <meta property="fb:app_id" content="135898969862440" />
+    <meta property="twitter:account_id" content="1491443782" />
+    <meta name="twitter:site" content="@harvard">
+    <meta name="twitter:creator" content="@harvard">    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Harvard University"/>
+    <meta property="og:type" content="university"/>
+
+    <meta property="og:title" content="Frequently Asked Questions | Harvard University"/>
+    <meta property="og:url" content="https://www.harvard.edu/coronavirus/faq"/>
+    <meta property="og:description" content="FAQs regarding Harvard&#039;s current coronavirus policies and resources. We will continue to update our guidance and add to these FAQs as needed. "/>
+    <meta property="og:image" content="https://www.harvard.edu/sites/default/files/pages/social_imgs/coronavirus_CDCx_4.jpg"/>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/sites/all/themes/hedu2015/assets/css/harvard.min.css?v=20180820" />
+	<link rel="stylesheet" href="/sites/all/themes/hedu2015/addtl.css?v=20200316" />
+    <!--link rel="stylesheet" href="/sites/all/themes/hedu2015/addtl.css" /-->
+    <link href="/sites/all/themes/hedu2015/assets/css/print.css" rel="stylesheet" media="print" type="text/css" />
+
+    <script async="true">
+      var fontCSS = '/sites/all/themes/hedu2015/assets/css/fonts.min.css';
+
+      (function() {
+        var wf = document.createElement('link');
+        wf.href = fontCSS;
+        wf.rel = 'stylesheet';
+
+        var s = document.getElementsByTagName('link')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+
+    
+  
+<noscript>
+      <link href="/sites/all/themes/hedu2015/assets/css/fonts.min.css" rel="stylesheet">
+    </noscript>
+    
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <link href="/sites/all/themes/hedu2015/assets/css/ie.min.css" rel="stylesheet">
+    <![endif]-->
+            <style>
+        .header-base--has-photo {background-image: url("https://www.harvard.edu/sites/default/files/page/coronavirus_CDCx_4.jpg")!important; }        </style>
+        
+		
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Harvard",
+  "alternateName": "Harvard University",
+  "url": "http://www.harvard.edu",
+  "logo": "http://www.harvard.edu/sites/default/files/content/harvard-university-logo-151.png",
+  "sameAs": [
+		"https://www.facebook.com/Harvard",
+		"https://twitter.com/harvard",
+		"https://www.instagram.com/harvard/",
+		"https://www.youtube.com/harvard",
+		"https://soundcloud.com/harvard",
+		"https://www.linkedin.com/edu/school?id=18483"
+  ]
+}
+</script>
+
+  </head>
+
+  <body id="body" class="body-header-base--has-photo">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK7H6Z"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <div id="page" class="page">
+
+	<!-- include keyboard jump links -->
+<ul class="jump-links">
+  <li>
+    <a href="#mainArea" id="jumpToMain">
+      Jump to main content
+    </a>
+  </li>
+  <li>
+    <a href="#searchArea" id="jumpToSearch">
+      Jump to search
+    </a>
+  </li>
+  <li>
+    <a href="#footerArea">
+      Jump to the footer
+    </a>
+  </li>
+</ul>    
+
+
+  <!--
+
+    Header Area
+
+  -->
+
+  <header role="banner" id="headerArea" class="header-base header-base--has-photo">
+
+  <!-- include h1 > link > text combo -->
+  <h1 class="harvard-heading">
+    <a href="/" class="harvard-heading__link">
+      <span class="is-visually-hidden">
+        Harvard University
+      </span>
+    </a>
+  </h1>
+
+  <!-- include main navigation component -->
+  <a href="#siteNavigation"
+      class="btn--menu"
+      id="btn_menu"
+      data-state="off"
+      data-id="nav"
+      aria-label="Reveal Navigation">
+    <span class="btn--menu__icon"></span>
+    Menu
+  </a>
+
+<nav role="navigation" class="main-nav" id="siteNavigation">
+
+  <div class="nav-drawer">
+
+    <div class="nav-group nav-group--consistent">
+      <ul class="clearfix">
+        <li class="nav-left-half">
+          <ul role="presentation" class="clearfix">
+            <li class="has-drop-nav">
+              <a href="/about-harvard" class="">
+                About
+                <span class="lg-nav-txt">
+                  Harvard
+                </span>
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/about-harvard/harvard-glance" class="first">Harvard at a Glance</a></li>
+		<li class=""><a href="/president" class="">Harvard's President</a></li>
+		<li class=""><a href="/about-harvard/harvards-president-leadership" class="">Harvard's Leadership</a></li>
+		<li class=""><a href="/about-harvard/academic-experience" class="">Academic Experience</a></li>
+		<li class=""><a href="/about-harvard/administrative-offices" class="">Administrative Offices</a></li>
+		<li class=""><a href="/about-harvard/directories" class="">Directories</a></li>
+		<li class=""><a href="http://community.harvard.edu/" class="">Harvard in the Community</a></li>
+		<li class=""><a href="http://news.harvard.edu/gazette/" class="">News</a></li>
+  </ul>
+              </li>
+            <li class="has-drop-nav">
+              <a href="/admissions-aid">
+                Admissions
+                <span class="lg-nav-txt">
+                  &amp; Aid
+                </span>
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/admissions-aid#titletop" class="first">Undergraduate</a></li>
+		<li class=""><a href="/admissions-aid#grad" class="">Graduate & Professional Schools</a></li>
+		<li class=""><a href="/admissions-aid#continue" class="">Continuing Education</a></li>
+		<li class="last"><a href="/admissions-aid#summer" class="last">Summer Programs</a></li>
+  </ul>
+              </li>
+          </ul>
+        </li>
+
+        <li class="nav-right-half">
+          <ul role="presentation" class="clearfix">
+            <li class="has-drop-nav">
+              <a href="/schools">
+                Schools
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="http://www.hbs.edu/" class="first">Business</a></li>
+		<li class=""><a href="http://college.harvard.edu" class="">College</a></li>
+		<li class=""><a href="http://www.dce.harvard.edu/" class="">Continuing Education</a></li>
+		<li class=""><a href="http://www.hsdm.harvard.edu/" class="">Dental</a></li>
+		<li class=""><a href="http://www.gsd.harvard.edu/" class="">Design</a></li>
+		<li class=""><a href="http://www.hds.harvard.edu/" class="">Divinity</a></li>
+		<li class=""><a href="http://www.gse.harvard.edu/" class="">Education</a></li>
+		<li class=""><a href="http://seas.harvard.edu/" class="">Engineering</a></li>
+		<li class=""><a href="http://www.fas.harvard.edu/" class="">Faculty of Arts & Sciences</a></li>
+		<li class=""><a href="http://www.hks.harvard.edu/" class="">Government</a></li>
+		<li class=""><a href="http://www.gsas.harvard.edu/" class="">Graduate School</a></li>
+		<li class=""><a href="http://www.law.harvard.edu/index.html" class="">Law</a></li>
+		<li class=""><a href="http://hms.harvard.edu/" class="">Medical</a></li>
+		<li class=""><a href="http://www.hsph.harvard.edu/" class="">Public Health</a></li>
+		<li class="last"><a href="http://www.radcliffe.edu/" class="last">Radcliffe Institute</a></li>
+  </ul>
+              </li>
+            <li class="has-drop-nav">
+              <a href="/on-campus">
+                On Campus
+              </a>
+              
+  <ul  class="list--drop-nav">
+  
+		<li class="first"><a href="/on-campus/arts-and-humanities" class="first">Arts and Humanities</a></li>
+		<li class=""><a href="https://www.gocrimson.com/" class="">Athletics</a></li>
+		<li class=""><a href="/on-campus/commencement" class="">Commencement</a></li>
+		<li class=""><a href="http://hr.harvard.edu/jobs/" class="">Employment</a></li>
+		<li class=""><a href="/events" class="">Events</a></li>
+		<li class=""><a href="http://harvardx.harvard.edu/" class="">HarvardX</a></li>
+		<li class=""><a href="http://library.harvard.edu/" class="">Library</a></li>
+		<li class=""><a href="/on-campus/museums" class="">Museums</a></li>
+		<li class=""><a href="/on-campus/research" class="">Research</a></li>
+		<li class=""><a href="/science" class="">Science</a></li>
+		<li class="last"><a href="/on-campus/visit-harvard" class="last">Visit Harvard</a></li>
+  </ul>
+              </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-group nav-group--callouts">
+      <ul class="clearfix">
+        <li class="nav-left-half">
+          <ul role="presentation" class="clearfix">
+            <li>
+              <a href="http://news.harvard.edu/gazette/">
+                Gazette News
+              </a>
+            </li>
+            <li>
+              <a href="/events">
+                Events
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-right-half">
+          <ul role="presentation" class="clearfix">
+            <li>
+              <a href="/on-campus/visit-harvard" class="">
+                Visit
+              </a>
+            </li>
+            <li>
+              <a href="http://alumni.harvard.edu/givenow">
+                Give
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    
+			<div class="list-clean">
+				
+  <ul  class="nav-group nav-group--top-bar">
+  
+		<li class="first"><a href="/faculty" class="first">Faculty</a></li>
+		<li class=""><a href="/staff" class="">Staff</a></li>
+		<li class=""><a href="/students" class="">Students</a></li>
+		<li class=""><a href="http://alumni.harvard.edu" class="">Alumni</a></li>
+		<li class=""><a href="/parents" class="">Parents</a></li>
+		<li class=""><a href="/on-campus/visit-harvard" class="">Visitors</a></li>
+		<li class="last"><a href="/media-relations" class="last">Media</a></li>
+  </ul>
+  
+			</div>
+			
+  </div> <!-- end .nav-drawer -->
+
+</nav>
+
+<form role="search" id="searchArea" class="search-area" method="get" action="/searches/">
+  <label for="siteSearch">
+    <span class="is-visually-hidden">
+      Search:
+    </span>
+  </label>
+
+  <input type="search"
+         name="searchtext"
+         id="searchSite"
+         class="input-search"
+         aria-label="search"
+         placeholder="What can we help you find?" />
+  <button type="button" class="btn--mobile-site-search">
+    <span class="is-visually-hidden">
+      Open Search
+    </span>
+  </button>
+</form>
+
+
+  </header>
+  <!-- end Header Area --> <!--
+
+    Main Content Area
+
+  -->
+
+  <main role="main" id="mainArea" class="main-base">
+
+    <!--
+
+      main content header area
+
+      page level title, breadcrumbs and additional
+      page controls should go here
+    -->
+    <header class="main-base__header">
+      <div class="wrapper wrapper--1-down">
+      
+      	
+		<!-- include breadcrumbs component -->
+				<nav role="navigation" class="nav-crumbs">
+	
+					<ol class="nav-crumbs__list" aria-label="Bread Crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+		
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			 		<a itemprop="item" href="/coronavirus"><span itemprop="name">Coronavirus Main</span></a>
+					<meta itemprop="position" content="1" />
+				</li>
+					</ol>
+			
+			</nav>
+			
+
+				
+        <h1 id="current_page_title"><a name="titletop"></a>
+          Frequently Asked Questions        </h1>
+
+
+                <!--
+
+          This button controls the sub nav open/close on small screens.
+
+        -->
+        <a href="#subNav" id="subnavBtn" class="btn btn--small btn--subnav">
+          <span aria-label="Open Sub Navigation"></span>
+        </a>
+
+      </div>
+    </header>
+
+    
+    <div class="wrapper wrapper--1-down content">
+      <div class="clearfix  grid-fixed-side">
+
+			        <div class="fixed-side-col">
+    
+          <nav class="sub-nav sub-nav-normal" role="navigation" id="subNav">
+        
+             
+                <div class="list-clean">
+                  
+  <ul >
+  
+		<li class="first active-trail"><a href="/coronavirus" class="first active-trail">Coronavirus Main </a>
+  <ul >
+  
+		<li class="first"><a href="/coronavirus/planning-2020-21" class="first">Planning for 2020-21</a></li>
+		<li class=""><a href="/coronavirus/school-program-information" class="">School & Program Information</a></li>
+		<li class=""><a href="/coronavirus/remote-resources" class="">Remote Resources</a></li>
+		<li class=""><a href="/coronavirus/community-notifications" class="">Health & Safety Notices</a></li>
+		<li class=""><a href="/coronavirus/updates-community-messages" class="">Updates & Community Messages</a></li>
+		<li class=""><a href="/coronavirus/health-wellbeing" class="">Health & Wellbeing</a></li>
+		<li class=""><a href="/coronavirus/travel-guidance" class="">Travel Guidance </a></li>
+		<li class=" active-trail active"><a href="/coronavirus/faq" class=" active-trail active">FAQs</a></li>
+  </ul>
+  </li>
+  </ul>
+  
+                </div>
+                        
+          </nav>
+        
+        </div>
+        
+    	
+
+        <article role="article" class="w-100" id="mainContent">
+        	  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+
+<div id="node-12368580" class="node node-page clearfix 11" about="/coronavirus/faq" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Frequently Asked Questions" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>The FAQs on this page reflect the University’s current coronavirus policies and resources. We will continue to update our guidance and add to these FAQs as needed. In addition to the University-wide information, you should also review your School and Department-specific FAQs for local guidance:</p>
+<p class="max-100"><a href="https://www.arboretum.harvard.edu/visit/covid-19-emergency/">Arboretum</a> | <a href="https://americanrepertorytheater.org/public-health-update/">A.R.T.</a> | <a href="https://www.hbs.edu/about/Pages/coronavirus-critical-information.aspx">Business</a> | <a href="https://dso.college.harvard.edu/coronavirusfaq">College</a> | <a href="https://hsdm.harvard.edu/coronavirus-updates">Dental</a> | <a href="https://www.gsd.harvard.edu/2020/03/covid-19-guidance-for-the-harvard-graduate-school-of-design-community/">Design</a> | <a href="https://hds.harvard.edu/about/hds-coronavirus-update">Divinity</a> | <a href="https://www.gse.harvard.edu/coronavirus/faq">Education</a> | <a href="https://www.extension.harvard.edu/covid-19-updates">Extension</a> | <a href="https://www.fas.harvard.edu/fas-coronavirus-updates">FAS</a> | <a href="https://www.hks.harvard.edu/coronavirus-faq">Government</a> | <a href="https://gsas.harvard.edu/coronavirus">GSAS</a> | <a href="https://hio.harvard.edu/news/hio-faq-coronavirus">HIO</a> | <a href="http://huhousing.harvard.edu/covid-19-faqs">HUH</a> | <a href="https://huit.harvard.edu/frequently-asked-questions">HUIT</a> | <a href="https://hscrb.harvard.edu/coronavirus">HSCRB</a> | <a href="https://hls.harvard.edu/dept/communications/coronavirus-covid-19-faqs-for-hls-students-faculty-and-staff/">Law</a> | <a href="https://library.harvard.edu/coronavirus">Library</a> | <a href="https://hms.harvard.edu/coronavirus">Medical</a> | <a href="https://ofa.fas.harvard.edu/ofa-coronavirus">OFA</a> | <a href="https://www.hsph.harvard.edu/coronavirus/harvard-chan-school-faqs-for-coronavirus-covid-19/">Public Health</a> | <a href="https://www.radcliffe.harvard.edu/coronavirus">Radcliffe</a> | <a href="https://projects.iq.harvard.edu/coronavirus">SEAS &amp; FAS Division of Science</a></p>
+<h2 class="txt-h3"><a name="campus-ops"></a>Campus Operations and Contingency Planning</h2>
+<div class="accordion">Is the University closed?</div>
+<div class="panel">
+<p>The University remains open and operational with appropriate measures to protect the health of the community.</p>
+<p>In mid-March, Harvard transitioned to remote instruction, work, and research to the greatest extent possible until further notice, and the majority of students moved off campus. Certain critical staff remain on campus to sustain research and labs, support the residential population still on campus, and keep the University healthy and secure. See <a href="https://www.harvard.edu/coronavirus/teach-remotely">Teach Remotely</a>, <a href="https://www.harvard.edu/coronavirus/learn-remotely">Learn Remotely</a>, <a href="https://www.harvard.edu/coronavirus/work-remotely">Work Remotely</a>, and <a href="https://www.harvard.edu/coronavirus/research-remotely">Research Remotely</a> for more information.</p>
+<p><a href="https://www.harvard.edu/coronavirus/updates-community-messages/planning-for-fall-2020">Harvard will be open for fall 2020</a>, and contingency planning for a range of scenarios is underway. Our goal is to sustain our teaching and research mission during this global pandemic, while also ensuring the health and safety of our community. <a href="https://www.harvard.edu/coronavirus/school-program-information">Each School will communicate its plans</a> for fall 2020 based on its unique considerations.</p>
+<p>In line with Massachusetts' phased re-opening of the state, the University, as well as individual Schools and Units, are developing plans to gradually and safely bring students, faculty, other academic personnel, and staff back to campus as conditions allow. See <a href="https://www.harvard.edu/coronavirus/planning-2020-21">Planning for 2020-21</a> for more information.</p>
+</div>
+<div class="accordion">What is the University doing to protect the community?</div>
+<div class="panel">
+<p>The health and success of our community, on and off campus, is at the forefront of our decision making. Our goal in transitioning to remote teaching, learning, researching, and working is to protect the broader community. By reducing the number of people and opportunities for transmission of the virus on campus, we also make it possible for those who must work on campus to effectively employ social distancing strategies. These are not decisions we made lightly, but ones that we felt were right to slow the potential transmission of the virus and protect vulnerable populations from exposure. All members of the Harvard community are asked to help in these social distancing efforts.</p>
+<p>Please know that we are actively contingency planning across our Schools and Units for a range of operational scenarios. We will continue to make informed decisions based on the latest science and what is best to protect the health of all members of our community while sustaining the University's central operations in support of our teaching and research mission.</p>
+<p>In line with Massachusetts' phased re-opening of the state, the University, as well as individual Schools and Units, are developing plans to gradually and safely bring students, faculty, other academic personnel, and staff back to campus as conditions allow. See <a href="https://www.harvard.edu/coronavirus/planning-2020-21">Planning for 2020-21</a> for more information.</p>
+</div>
+<div class="accordion">Have any decisions been made about summer programs or travel?</div>
+<div class="panel">
+<p>We encourage you to check with your specific <a href="https://www.harvard.edu/coronavirus/school-program-information">School or program</a> about the status of summer programming.</p>
+<p>University-related travel, both international and domestic, is prohibited until further notice. Personal travel, both domestic and international, is strongly discouraged and should not be planned or scheduled at this time. This guidance pertains to all community members—students, faculty, staff, postdoctoral fellows, and other academics. For more information, read the <a href="https://www.harvard.edu/coronavirus/updates-community-messages/update-international-domestic-travel-guidance">May 11 community email</a>.</p>
+<p>Harvard-organized and Harvard-funded international travel for all students that is scheduled to start and end between April and August 31 is prohibited. For more information, review the <a href="https://www.harvard.edu/coronavirus/update-travel-prohibitions-summer-programs-visas">April 6 community message</a> on travel prohibitions, summer programs, and visas.</p>
+</div>
+<div class="accordion">Have any decisions been made about fall programs or travel?</div>
+<div class="panel">
+<p>As Provost Alan Garber indicated in his <a href="https://www.harvard.edu/coronavirus/updates-community-messages/planning-for-fall-2020">April 27 message to the community</a>, Harvard's undergraduate, graduate, and professional Schools will be making determinations and announcements about their plans for fall 2020 based on their own unique considerations. See <a href="https://www.harvard.edu/coronavirus/school-program-information">School &amp; Program Information</a> for each announcement.</p>
+</div>
+<div class="accordion">How can I donate personal protective equipment (PPE) and supplies?</div>
+<div class="panel">
+<p>The global Harvard University community has united in its response to the unprecedented challenges of the COVID-19 pandemic—including offers of assistance and donations of supplies and personal protective equipment (PPE) from faculty, researchers, staff, students, alumni, and friends. See <a href="https://www.harvard.edu/coronavirus/personal-protective-equipment-and-supply-donations">PPE and Supply Donations</a> for the latest guidance on how you can support these efforts.</p>
+</div>
+<h2 class="txt-h3"><a name="classes"></a>Classes, Coursework, and Clinicals</h2>
+<div class="accordion">How long will classes be online?</div>
+<div class="panel">
+<p>Our goal is to bring our students, faculty, postdoctoral fellows, and staff back to campus gradually and safely, and many complexities and uncertainties remain. Based on current data and projections for COVID-19, many summer courses and programs have moved online, and <a href="https://www.harvard.edu/coronavirus/updates-community-messages/planning-for-fall-2020">a range of contingency plans are underway for Fall 2020</a>. Given the hands-on nature of certain classes and clinical requirements for degree completion, <a href="https://www.harvard.edu/coronavirus/school-program-information">individual Schools</a> are working closely with their faculty and will communicate their specific instruction plans to students. </p>
+</div>
+<div class="accordion">Can I attend classes in person if I live nearby?</div>
+<div class="panel">
+<p>No. Effective March 10, Harvard began transitioning to online instruction for all graduate and undergraduate classes, to the greatest extent possible, until further notice. Given the hands-on nature of certain classes and clinical requirements for degree completion, <a href="https://www.harvard.edu/coronavirus/school-program-information">individual Schools</a> will communicate their specific instruction plans to students and faculty. Although there may be extenuating circumstances for some students to remain on campus, their instruction will be remote, and they will need to be prepared for severely limited on-campus activities and interactions. See <a href="https://www.harvard.edu/coronavirus/teach-remotely">Teach Remotely</a> and <a href="https://www.harvard.edu/coronavirus/learn-remotely">Learn Remotely</a> for more information.</p>
+</div>
+<div class="accordion">What if I don't have reliable internet access at home, or my connection is slow?</div>
+<div class="panel">
+<p>Check out Harvard University Information Technology's (HUIT) <a href="https://huit.harvard.edu/remote-online">tips for getting online</a> during the COVID-19 period, including providers who are offering <strong>free or discounted internet and increased data allowances</strong>. If you have internet at home, review the tips for <strong>improving connection problems</strong>.</p>
+</div>
+<div class="accordion">How will time zone differences be handled?</div>
+<div class="panel">
+<p>If you know you will be in a time zone that will make the regular class time difficult for you to attend, we advise you let the faculty and teaching staff know as soon as possible. This will help them to make alterations to the teaching plan that will best accommodate the geographic spread of the students.</p>
+<p>If class meetings are scheduled at a time that you cannot attend, write directly to the faculty and teaching staff to ask about expectations for attendance and alternative options.</p>
+</div>
+<div class="accordion">How will clinicals and in-person requirements be handled?</div>
+<div class="panel">
+<p>Schools are working closely with faculty to determine how courses can be meaningfully completed remotely. Should there be components of the class that simply cannot be done that way, Schools are working with faculty on alternate arrangements. Given the hands-on nature of certain classes and clinical requirements for degree completion, <a href="https://www.harvard.edu/coronavirus/school-program-information">individual Schools</a> will communication their specific instruction plans to students and faculty. For questions about specific courses, students should contact the instructor of the course.</p>
+</div>
+<h2 class="txt-h3"><a name="dining-housing"></a>Dining and Housing</h2>
+<p>Also see: <a href="http://huhousing.harvard.edu/covid-19-faqs">Harvard University Housing FAQs</a></p>
+<div class="accordion">I can’t move home. Can I stay on campus?</div>
+<div class="panel">
+<p>We know there will be difficult and extenuating circumstances for students who cannot leave campus or do not have another place to go. Harvard will provide you the help you need to stay safe, secure, and continue with your academic work. We ask you to <strong>communicate with your School</strong> to make appropriate on-campus accommodations. Current Harvard University Housing (HUH) residents should contact the HUH leasing team at <a href="mailto:leasing@harvard.edu">leasing@harvard.edu</a> with questions. If you're not a current HUH resident, you may also wish to visit <a href="https://www.harvardhousingoffcampus.com/">Off Campus Housing Partners</a> to explore options in the area. Please note that these listing are not inspected, verified, or endorsed by HUH.</p>
+<p>Students who need to remain on campus may need to relocate to a different room or unit. Although you may remain on campus, your instruction will be remote, and you will need to be prepared for severely limited on-campus activities and interactions. We encourage you to review your <a href="https://www.harvard.edu/coronavirus/school-program-information">School-specific coronavirus page</a> for more information.</p>
+</div>
+<div class="accordion">I live in HUH with a signed lease. Can I break the lease and stop paying rent if I leave campus?</div>
+<div class="panel">
+<p>Yes. For residents who wish to terminate their current HUH lease or housing contract, rent will be pro-rated if you vacate the apartment and leave campus. All obligations under the lease will end on your vacate date. Contact <a href="mailto:leasing@harvard.edu">leasing@harvard.edu</a> with questions.</p>
+</div>
+<div class="accordion">Will the cafes and dining halls remain open?</div>
+<div class="panel">
+<p>On March 15, 2020, Massachusetts Governor Baker announced that beginning on March 17, <a href="https://www.mass.gov/doc/march-15-2020-large-gatherings-25-and-restaurants-order/download">all food and drink must be taken to go and may not be consumed on-premise</a> in support of the social distancing protocols set forth by the Department of Public Health. This includes our dining halls. All students remaining on campus will be asked to utilize the dining halls for takeout only until further notice.</p>
+<p>For retail cafes operated by Harvard University Dining Services (HUDS), updates regarding openings, closings and altered hours will be posted on the <a href="https://dining.harvard.edu/cafes">HUDS website</a>.</p>
+</div>
+<div class="accordion">How do I forward my mail?</div>
+<div class="panel">
+<p>See Harvard Mail and Print Services for instructions on <a href="http://hums.harvard.edu/mail-delivery/student-mail-forwarding">how to forward your campus mail</a>.</p>
+</div>
+<h2 class="txt-h3"><a name="employees"></a>Employees and Workforce</h2>
+<p>Also see: <a href="https://hr.harvard.edu/corona-virus-workplace-policies">HR's coronavirus workplace policies</a> | <a href="https://hr.harvard.edu/medical">HR's updated health plan enhancements</a>&nbsp;| <a href="https://oc.finance.harvard.edu/services/central-payroll">FAD interim payroll, I-9, and NRA processes</a></p>
+<div class="accordion">Can employees work remotely?</div>
+<div class="panel">
+<p>Yes. Although approaches and timelines varied across the Schools and Units, most staff already began working remotely the week of March 16 and will continue to do so through at least the end of the summer, unless directed otherwise by your local leadership and managers.</p>
+<p>In accordance with <a href="https://www.mass.gov/news/safer-at-home-advisory">Massachusetts' safer at home advisory</a>, only those staff who are designated as critical personnel in the context of this public health crisis should come to work if they are well. Certain critical staff must be on campus to sustain research and labs, support the residential population still on campus, and keep the University healthy and secure. As of June 8, additional workers have begun to return to campus under the state’s re-opening plan, including those participating in the re-opening of&nbsp;<a href="https://provost.harvard.edu/research-laboratory-reentry">laboratory facilities</a>. Employees returning to campus as well those who will continue to work remotely should review the&nbsp;<a href="https://hr.harvard.edu/corona-virus-workplace-policies/return-campus">updated University workplace policies</a>&nbsp;on HARVie.</p>
+<p>For new employees (including graduate student workers), refer to the <a href="https://oc.finance.harvard.edu/services/central-payroll">FAD interim payroll processes</a>.</p>
+<p>Because the situation is constantly evolving, all employees should follow the guidance of their local School or department. See <a href="https://www.harvard.edu/coronavirus/work-remotely">Work Remotely</a> for more information.</p>
+</div>
+<div class="accordion">If I can’t work remotely, will I still be paid?</div>
+<div class="panel">
+<p>Yes. As a general principle, Harvard is committed to sustaining the pay continuity for our dedicated and talented workforce. The University continues to place its highest priority on the health, safety and wellbeing of the Harvard community. Toward that end, and effective immediately, Harvard's workplace policies have been enhanced.</p>
+<ul>
+<li>People who continue working (remotely or on campus) will be paid as they are normally.</li>
+<li>For <strong>Harvard employees</strong> (core staff including administrative/professional, support staff, and service and trade workers) who are well and available to work, but their duties cannot be performed remotely or because of the shifts in population on campus they no longer have work to perform, the University will guarantee their regular pay and benefits beyond June 28, 2020.</li>
+<ul>
+<li>Additionally, we will expand eligibility for this guarantee of pay and benefits to part-time contingent employees who are less than half time (LHT).</li>
+</ul>
+<li>For <strong>contract employees</strong> of Harvard’s 14 major suppliers working in dining, custodial, and security roles, the University will provide financial relief in the form of pay and benefits beginning March 10 and beyond June 28, 2020, if they are well and available for work but displaced from their contract assignments due to the COVID-19 public health emergency and unable to obtain new assignments. The University is working with these suppliers to ensure its financial support will be used for the direct benefit and financial relief of contract food service workers, custodians, and security guards.</li>
+</ul>
+<p>See additional <a href="https://hr.harvard.edu/corona-virus-workplace-policies">enhanced workplace policies</a> on the HR website for full details. Given the rapid changes concerning COVID-19, HR will continue to review and revise the policies as the situation evolves.</p>
+</div>
+<div class="accordion">Does the guarantee of salary beyond June 28, 2020 cover Harvard paid research assistants, postdocs, fellows, PhD students and research associates?</div>
+<div class="panel">
+<p>Yes, all research scholars, including, but not limited to fellows, postdoctoral fellows, research fellows, PhD students, and research associates (referred to as non-faculty academic appointees), who receive payments from Harvard, whether stipend or salary, also are included.</p>
+</div>
+<div class="accordion">How long will pay and benefits (if applicable) be guaranteed for eligible Harvard-paid non-faculty academic appointees?</div>
+<div class="panel">
+<p>Beyond June 28, except for those who were scheduled to terminate, or whose appointments end, sooner. A paid excused absence may be used to ensure pay continuity if work is unable to be performed remotely, up to the regular or standard workweek for the position. The excused absence option will end on the day of a previously scheduled termination or other appointment end date if it is earlier than June 28.</p>
+</div>
+<div class="accordion">When an hourly staff member is getting a paid, emergency excused absence, are they entitled to a shift differential on that pay, when they normally work hours that entitle them to one?</div>
+<div class="panel">
+<p>Yes. If staff members are well and available to work, but are <strong>not working</strong> because their work cannot be done remotely or because of a curtailment in Harvard operations, then they are eligible for a paid, emergency excused absence. The emergency excused absence pay will include a shift differential if their regular Harvard job was during hours that always or usually entitled them to a shift differential.</p>
+<p>Staff members who <strong>continue to work</strong> hours that entitle them to a shift differential (on-campus or remotely) should continue to be paid a shift differential. However, staff members who continue to work, on campus or remotely, but <strong>not during hours that entitle them to a shift differential</strong>, will get regular pay. This is true even if, before the COVID-19 emergency, they were working hours that paid a shift differential.</p>
+</div>
+<div class="accordion">If students are no longer on campus, shouldn’t all employees work from home?</div>
+<div class="panel">
+<p>Not necessarily. The work of certain critical staff requires them to be on campus to support the academic mission and activities of the University, including assisting the residential population that remains on campus and keeping the University healthy and secure.</p>
+<p>For critical staff who must remain on campus, Harvard is focused on measures that will be most effective, including promoting <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/stop-the-spread-of-germs.pdf" target="_blank">good hygiene practices</a>, extra surface cleaning, social distancing, and restrictions on travel, meetings, events, and visitors. See <a href="https://www.harvard.edu/coronavirus/work-remotely">Work Remotely</a> for more information.</p>
+</div>
+<div class="accordion">Can job interviews for open positions be conducted in person?</div>
+<div class="panel">
+<p>No. Job interviews for open positions should be conducted remotely via video- or teleconferencing tools like Zoom, or by telephone. Whatever approach you take, use it consistently with all applicants to the same job, so none are disadvantaged. Using fair hiring practices remains important.</p>
+<p>Note that as of April 13, Harvard announced a University-wide hiring freeze. The provost and the executive vice president, in consultation with the deans and the vice presidents, will ensure appropriate processes are in place for considering exceptions.</p>
+</div>
+<div class="accordion">Should I come to work if I’ve had direct or indirect contact with a person diagnosed with or under investigation for COVID-19?</div>
+<div class="panel">
+<p>Review Harvard University Health Services' (HUHS) guide to <a href="https://huhs.harvard.edu/sites/default/files/Self-Isolation_Guidance.pdf" target="_blank">determine whether you should self-isolate</a>.  If you're unsure whether to come to work, we encourage you to email HUHS, <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>, for additional guidance. HUHS clinical staff and medical professionals are best equipped to offer advice based on factors such as how direct or indirect the contact was, travel or exposure to travelers, health history, and symptoms.</p>
+<p><strong>For employees who do not receive their care at HUHS:</strong> If you’re being tested for COVID-19, or if you’ve received a positive test result for COVID-19, please immediately notify HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>. We appreciate your help in protecting our entire community. </p>
+<p><strong>If you're concerned about potential exposure to individuals who have been tested or tested positive</strong>: Contact investigation and notification is overseen by the local Department of Public Health. Any persons who have had close contact with those individuals in question have been notified by the Department of Public Health in accordance with standard public health principles. If you have not been notified, then you are not deemed to have an increased risk because of exposure to these individuals.</p>
+</div>
+<div class="accordion">How do I know if I’m an essential or critical employee?</div>
+<div class="panel">
+<p>Your manager will communicate with you about defining the list of critical personnel—those who absolutely must remain on campus—in the context of this public health crisis. Because Harvard is a 24/7 residential university, many employees must work on campus to provide essential services for residential life, campus health and safety, critical research, the protection of physical and intellectual assets, or the continuity or resumption of academic programs and operations. Note that the definition of “essential” under <a href="https://www.harvard.edu/coronavirus/essential-personnel-protocol">Massachusetts' emergency order</a> may differ from past University essential personnel lists. Please contact your manager if you have any questions about your role, and heed additional guidance from your School or Unit leadership.</p>
+<p>HR is working on enhanced measures and policies to support all employees. Review the <a href="https://hr.harvard.edu/corona-virus-workplace-policies">HR coronavirus workforce policies</a>, talk with your manager about your concerns, and consult with your local HR office.</p>
+</div>
+<div class="accordion">Can I be refunded for a cancelled trip or event?</div>
+<div class="panel">
+<p>We understand the University's coronavirus-related policies have financial implications. Some transit providers are offering travel waivers or waiving cancellation fees in light of the coronavirus pandemic.</p>
+<p>For staff and faculty travelling on University business, the <a href="https://policies.fad.harvard.edu/pages/travel-0">Harvard Travel Policy</a> allows for reimbursement of cancellation or change fees with a valid reason. The current Coronavirus pandemic meets this requirement. Review FAD’s <a href="https://travel.harvard.edu/coronavirus-reimbursement-faqs">travel cancellation and reimbursement</a> FAQs for more information, including for sponsored and non-sponsored funds.</p>
+</div>
+<div class="accordion">Can I have department mail delivered off campus?</div>
+<div class="panel">
+<p>Since so many University staff are working remotely and there's a strong desire to reduce close contact on campus, Harvard University Mail Services (HUMS) is offering the following:</p>
+<ul>
+<li>Each department can have departmental mail sent to a <em><strong>single</strong></em> home address of its choosing.</li>
+<ul>
+<li>This <strong>will</strong> include USPS Parcels, First Class mail, or mail with endorsements requiring forwarding.</li>
+<li>This <strong>will not</strong> include standard/marketing mail, periodicals, or non-profit pieces.</li>
+</ul>
+</ul>
+<p>Mail will be bundled and shipped USPS First Class/Priority mail unless otherwise requested. We can also provide a tracking number so you can monitor the progress of your package. Again, each department can select <strong>ONE</strong> off-campus address to have this material sent. To learn more, visit the <a href="http://hums.harvard.edu/mail-delivery-services">HUMS website</a>.</p>
+</div>
+<div class="accordion">How can I apply for the Harvard COVID-19 Employee Emergency Relief Fund?</div>
+<div class="panel">
+<p>The Harvard COVID-19 Employee Emergency Relief Fund was established to support members of the Harvard University community who are experiencing unanticipated or emergency situations due to the COVID-19 pandemic. <a href="https://hr.harvard.edu/covid19-employee-emergency-relief-fund">Learn more about the fund</a> and how to apply.</p>
+<p>If you are interested in supporting this Fund, please visit the <a href="https://alumni.harvard.edu/giving/givenow/covid">University Giving Page</a>, see “University-Wide Response,” and select “Employee Emergency Relief Fund.”</p>
+</div>
+<div class="accordion">How is the Harvard University Employees Credit Union (HUECU) helping staff, faculty and students during COVID-19?</div>
+<div class="panel">
+<p>HUECU is committed to meeting the needs of its members and the Harvard community during this challenging time. For HUECU members with current HUECU loans, there are <a href="https://huecu.org/covid-19-help/financial-support/">payment relief options</a> available, including up to three-month payment deferment for some loans and credit cards. For individuals looking for additional funds, HUECU is offering a 0% emergency loan for HUCTW members. Depending on your unique situation, there may be other options available if you submit a <a href="https://huecu.org/covid-19-help/financial-support/">Request for Assistance form</a>.</p>
+</div>
+<div class="accordion">Can I take advantage of the Harvard University Employees Credit Union (HUECU) emergency loan if I am not an HUECU member?</div>
+<div class="panel">
+<p>In order to take advantage of the emergency loan, you must be a HUECU member. However, all Harvard University employees, students and alumni are eligible to become members. Memberships can be <a href="http://www.huecu.org/join">opened online</a>, and <a href="https://huecu.org/covid-19-help/">tutorial videos for using online and mobile banking</a> are available as well. Membership benefits and eligibility extend to member’s families, even if they are not Harvard University employees or students.</p>
+</div>
+<div class="accordion">I am an HUECU member. Who can I speak with if I have concerns about my finances?</div>
+<div class="panel">
+<p>If your concerns are specific to your HUECU account or loans, please contact HUECU Support Center at 617-495-4460 or huecu@harvard.edu.</p>
+<p>If you have general concerns, HUECU provides free financial budgeting, credit and COVID-19 counseling to the Harvard University community through their partners at <a href="http://www.huecu.org/GreenPath">GreenPath Financial Wellness</a>. The call is confidential; help is available in 150 languages and during nights and weekends.</p>
+</div>
+<h2 class="txt-h3"><a name="events-meetings"></a>Events and Meetings</h2>
+<p>Also see: <a href="https://www.harvard.edu/coronavirus/event-information">Meeting &amp; Event Guidance</a></p>
+<div class="accordion">Should I cancel my on-campus event or meeting?</div>
+<div class="panel">
+<p>We strongly urge canceling non-essential events or meetings of 10 people or more. This social distancing measure will limit the spread of illness. For gatherings of any size, <a href="https://www.harvard.edu/coronavirus/event-information">take steps to lower risk</a>: use video- and teleconferencing options such as Zoom; and remind attendees to <a href="https://harvard.edu/sites/default/files/content/Coronavirus_HUHS_social_distancing_A%5B3%5D.pdf" target="_blank">practice social distancing</a> and avoid shaking hands. Ensure easy access to handwashing facilities and have alcohol-based sanitizers readily available.</p>
+<p>Events with speakers invited from off campus—whether the speakers are international or domestic—should be cancelled, postponed, or conducted remotely. The purpose of this guidance is to reduce the chance of transmitting illness into or out of the Harvard community.</p>
+</div>
+<div class="accordion">When and how can employees use Zoom for meetings?</div>
+<div class="panel">
+<p>Given the extraordinary additional demand anticipated, and our need to prioritize academic use, below are some basic guidelines for employees using Zoom sensibly:</p>
+<ul>
+<li>Consider whether you need to hold a meeting.</li>
+<li><strong>Use alternative means to communicate when possible</strong> (telephone, Slack, Microsoft Teams, email).</li>
+<li>If you hold a Zoom meeting, <strong>keep it short</strong>.</li>
+<li>Video calls are most effective when they are 45-min or less.</li>
+<li>Consider adopting a 10-min “stand-up” approach—a meeting not long enough to sit down—and focus on priorities of the day</li>
+<li>Close out of your Zoom session when you are done. <strong>Do not host a persistent Zoom session</strong>.</li>
+</ul>
+</div>
+<h2 class="txt-h3"><a name="financial-students"></a>Financial Matters for Students</h2>
+<p>Also see: <a href="https://hushp.harvard.edu/coronavirus-disease-covid-19-health-insurance-faqs">Student Health Insurance FAQs</a></p>
+<div class="accordion">Will my tuition be refunded or discounted for the Spring semester?</div>
+<div class="panel">
+<p>Our goal is to ensure that instruction continues throughout the semester. In that case, as long as instruction continues, tuition will not be refunded.</p>
+</div>
+<div class="accordion">What about Spring semester room and board costs?</div>
+<div class="panel">
+<p>Room and board costs will be pro-rated for the remainder of the year for all students leaving campus and completely vacating their housing. Additional information on calculating and processing refunds will be forthcoming.</p>
+</div>
+<div class="accordion">What about Spring semester activity and/or student fees?</div>
+<div class="panel">
+<p>Activity and student fees will be reviewed on a school-by-school basis.</p>
+</div>
+<div class="accordion">Will my Student Health Insurance Plan (SHIP) work if I am away from the University?</div>
+<div class="panel">
+<p>The Student Health Insurance Plan provides coverage for hospitalizations, specialty care, mental health, and prescription medications throughout the United States and abroad. For more information on the Student Health Insurance Plan benefits and coverage, you can view the <a href="https://hushp.harvard.edu/student-health-insurance-plan">Harvard University Student Health Program (HUSHP) website</a> or contact HUSHP Member Services at 617-495-2008.</p>
+<p>The Harvard Student Health Insurance Plan provides coverage for mental health inpatient and outpatient services outside of Harvard University Health Services (HUHS). Students can find a participating in-network provider by searching the <a href="https://myblue.bluecrossma.com/health-plan/find-doctor">Blue Cross Blue Shield of MA (BCBSMA) Find-A-Doctor website</a> (the network is PPO or EPO) or by calling the BCBSMA Behavioral Health Coordination Line at 877-566-2583. The representatives answering these calls are trained to help you find the right provider based on your concerns and the location where you wish to receive care. Students who waived the Harvard Student Health Insurance Plan should check with their private insurance for questions about their provider network, coverage rules, and potential out-of-pocket costs.</p>
+</div>
+<div class="accordion">Do I still have to pay the Student Health Fee?</div>
+<div class="panel">
+<p>Harvard University Health Services (HUHS) will remain open, and services that can be provided by a telephone call will shift to remote delivery for the continuation of many medical services that students can continue to use while away from campus. In-person Urgent Care hours are from 8 a.m. to 6 p.m., seven days a week. Visit the <a href="https://huhs.harvard.edu/about-us/announcements-events/coronavirus-information-and-updates">HUHS website</a> for details on this temporary new model of care. We have no current plans to rebate the Student Health Fee at this time.</p>
+</div>
+<div class="accordion">I cannot afford a plane, bus, or train ticket. Will my moving/transportation/local storage costs be reimbursed?</div>
+<div class="panel">
+<p>We recognize that our efforts to ensure the safety of the entire community have raised unanticipated challenges. We are fully committed to ensuring that we help students who need support with unanticipated costs. If you are currently receiving financial aid, please reach out to your local School’s financial aid office for guidance.</p>
+</div>
+<div class="accordion">I live in Harvard University housing (HUH) with a signed lease; can I break the lease and stop paying rent if I leave campus?</div>
+<div class="panel">
+<p>Yes. For those residents who wish to terminate their current lease or housing contract, rent will be pro-rated if you vacate the apartment and leave campus.</p>
+</div>
+<div class="accordion">I am an undergraduate student and have a job on campus. Will I continue to be paid if I’m not at work?</div>
+<div class="panel">
+<p>If you can continue to perform your job in a remote setting, you will continue to be paid without changes or interruptions. Talk with your supervisor about the tasks that you can continue to do safely from a distance, and be clear about how to report your time.</p>
+<p>If you held a position that you are unable to continue in a remote setting, we encourage you to visit the <a href="https://seo.harvard.edu/">Harvard College Student Employment Office website</a> and review other opportunities for the remainder of the term. Consult with the Student Employment Office about how to apply for and be hired into a new job.</p>
+<p>As indicated in the Harvard College Dean of Students Office <a href="https://dso.college.harvard.edu/coronavirusfaq">Coronavirus FAQs</a>, all undergraduate students who had a term-time work expectation as part of their financial aid packages for this semester will have one half of that expectation removed from their financial aid packages. For example, a spring term-time work expectation of $1,750 will be reduced to $875 and the corresponding amount replaced with additional Harvard scholarship. Undergraduate students will see this as an increase of Harvard scholarship aid on their student account.</p>
+</div>
+<div class="accordion">Will financial aid decisions be reconsidered for Spring 2020 or Fall 2020 given the emerging economic changes?</div>
+<div class="panel">
+<p>We are always open to discussing changes in student circumstances and needs they may have. Consistent with prior years, students should be in touch with their local financial aid offices to discuss any material changes to their individual or family financial status.</p>
+</div>
+<div class="accordion">I am a graduate student. Will I still receive my stipend?</div>
+<div class="panel">
+<p>Yes.</p>
+</div>
+<div class="accordion">I am a graduate student worker. Will I continue to be paid?</div>
+<div class="panel">
+<p>The University continues to evaluate the shifting administrative landscape during the coronavirus pandemic. Graduate student work, as part of that landscape, is an essential driver of the University’s mission. Where possible, the University expectation is that the work that graduate students are compensated for should continue. If work assignments are not possible to complete using online or distance learning technologies, supervisors are encouraged to find other opportunities for graduate student workers to complete their work commitments, including shifting jobs and job descriptions to alternate assignments in order to fulfill their employment obligations. If this is not possible, graduate student workers who are unable to work due to the pandemic will still be compensated to the end of work expectation within the spring 2020 semester.</p>
+</div>
+<h2 class="txt-h3"><a name="health"></a>Health</h2>
+<p>Also see: <a href="https://hushp.harvard.edu/coronavirus-disease-covid-19-health-insurance-faqs">Student Health Insurance FAQs</a> | <a href="https://hr.harvard.edu/medical">HR's updated health plan enhancements</a></p>
+<div class="accordion">How can I protect myself and others?</div>
+<div class="panel">
+<ul>
+<li>Practice universal <a href="https://harvard.edu/sites/default/files/content/Coronavirus_HUHS_social_distancing_A%5B3%5D.pdf" target="_blank">social distancing</a> measures, including maintaining a six-foot distance from others, respectively staying away from sick people, limiting your movements, and avoiding public spaces and large, crowded gatherings. Universal social distancing is critical to protecting everyone.</li>
+<li>Promote <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/stop-the-spread-of-germs.pdf" target="_blank">good, basic hygiene</a>, including washing your hands often with soap and warm water for at least 20 seconds; avoiding touching your eyes, nose, and mouth; coughing/sneezing into a tissue or your sleeve; avoiding close contact with those who are sick; and staying home when you are sick. </li>
+<li>Know <a href="https://www.cdc.gov/handwashing/when-how-handwashing.html">when and how to wash your hands and use sanitizer</a>.</li>
+<li>Wear a <a href="https://www.harvard.edu/sites/default/files/content/06022020_coronavirus_facecoverings_A.pdf">cloth face covering</a> in public settings.</li>
+<li>Take steps to <a href="https://www.harvard.edu/coronavirus/event-information">lower your risk at meetings and events</a>, including holding video- or teleconference meetings, modifying in-person interactions, and maintaining a 6-foot distance.</li>
+<li>Review Harvard University Health Services' (HUHS) <a href="https://huhs.harvard.edu/sites/default/files/Self-Isolation_Guidance.pdf" target="_blank">guide to determine whether you should self-isolate</a>.</li>
+</ul>
+<p><strong>For employees who do not receive their care at Harvard University Health Services (HUHS)</strong>: If you’re being tested for COVID-19, or if you’ve received a positive test result for COVID-19, please immediately notify HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>. We appreciate your help in protecting our entire community. </p>
+<p><strong>If you're concerned about potential exposure to individuals who have been tested or tested positive</strong>: Contact investigation and notification is overseen by the local Department of Public Health. Any persons who have had close contact with those individuals in question have been notified by the Department of Public Health in accordance with standard public health principles. If you have not been notified, then you are not deemed to have an increased risk because of exposure to these individuals.</p>
+</div>
+<div class="accordion">Should I cover my face or wear a mask in public?</div>
+<div class="panel">
+<p>Massachusetts issued <a href="https://www.mass.gov/news/wear-a-mask-in-public" target="_blank">an order requiring face coverings</a> be worn in all public places, businesses, and common areas—both indoors and outdoors—where social distancing is not possible. The order takes effect at 12:01 a.m. on Wednesday, May 6, and applies to everyone, with exceptions for those under the age of 2 and those unable to wear a mask or face covering due to a medical condition.</p>
+<p>The CDC also recommends cloth face coverings for the general public, especially in public settings. Review Harvard's guidance on <a href="https://www.harvard.edu/sites/default/files/content/06022020_coronavirus_facecoverings_A.pdf" target="_blank">face coverings and masks</a>.</p>
+</div>
+<div class="accordion">How do I practice social distancing?</div>
+<div class="panel">
+<p>Social distancing is a way to reduce exposure, slow the spread, and minimize transmission of contagious diseases. We must <a href="https://harvard.edu/sites/default/files/content/Coronavirus_HUHS_social_distancing_A%5B3%5D.pdf" target="_blank">practice universal social distancing</a> to protect everyone. Limit your movements outside of your home. Avoid public spaces, large gatherings, and proximity in confined spaces. Maintain at least a 6-foot distance between yourself and others when you go out. Avoid shaking hands with anyone and close physical contact with individuals displaying symptoms. Use collaboration, video conferencing, and teleconferencing tools instead of holding in-person meetings when possible. All members of the Harvard community are asked to help in these social distancing efforts.</p>
+</div>
+<div class="accordion">My parents are over 60 years old and want me to come home and stay with them during the COVID-19 crisis. How do I explain to them that it’s better for me to stay away?</div>
+<div class="panel">
+<p>The CDC has advised that everyone practice social distancing to prevent vulnerable people - including people over 60 - from getting sick. Symptoms take between 2 and 14 days to manifest so to be as cautious as possible, consider the possibility that you might be a carrier. Stress that staying away is one way to avoid passing on any potential infection. You could point them to <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications/older-adults.html">these statistics about infection in people over 65</a>. Talk with them about different ways to stay connected remotely.</p>
+</div>
+<div class="accordion">What should I do if I feel sick?</div>
+<div class="panel">
+<p><a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">COVID-19 symptoms</a> include fever, cough, difficulty breathing, chills, muscle pain, headache, sore throat, and loss of taste or smell. The wide range of reported symptoms range from mild to severe and appear 2-14 days after exposure.</p>
+<ul>
+<li>If you have symptoms or need further advice, contact your Primary Care Provider or email HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>.</li>
+<li>If you do not have symptoms but you're concerned that you may have been exposed to COVID-19, review Harvard University Health Services' (HUHS) <a href="https://huhs.harvard.edu/sites/default/files/Self-Isolation_Guidance.pdf" target="_blank">guide for self-isolation/quarantine</a>.</li>
+</ul>
+<p>Anyone with flu-like symptoms should contact their Primary Care Provider or HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a> for advice. Your Primary Care Provider or HUHS will help you determine whether to get assessment or treatment. Medical professionals are best equipped to offer advice based on factors such as how direct or indirect an individual’s contact with coronavirus was, recent travel history, an individual’s personal health history, and any symptoms that person may be experiencing.</p>
+<p><strong>For employees who do not receive their care at HUHS</strong>: If you’re being tested for COVID-19, or if you’ve received a positive test result for COVID-19, please immediately notify HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>. We appreciate your help in protecting our entire community. </p>
+<p><strong>If you're concerned about potential exposure to individuals who have been tested or tested positive</strong>: Contact investigation and notification is overseen by the local Department of Public Health. Any persons who have had close contact with those individuals in question have been notified by the Department of Public Health in accordance with standard public health principles. If you have not been notified, then you are not deemed to have an increased risk because of exposure to these individuals.</p>
+</div>
+<div class="accordion">Should I self isolate if I've been in contact with someone being tested for COVID-19 or who has tested positive?</div>
+<div class="panel">
+<p>Review Harvard University Health Services' (HUHS) guide to <a href="https://huhs.harvard.edu/sites/default/files/Self-Isolation_Guidance.pdf" target="_blank">determine whether you should self-isolate</a>.  Then contact your Primary Care Provider or email HUHS, <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>, for additional guidance. Medical professionals are best equipped to offer advice based on factors such as how direct or indirect an individual’s contact with coronavirus was, recent travel history, an individual’s personal health history, and any symptoms that person may be experiencing.</p>
+<p><strong>For employees who do not receive their care at HUHS</strong>: If you’re being tested for COVID-19, or if you’ve received a positive test result for COVID-19, please immediately notify HUHS at <a href="mailto:healthservices@huhs.harvard.edu">healthservices@huhs.harvard.edu</a>. We appreciate your help in protecting our entire community. </p>
+<p><strong>If you're concerned about potential exposure to individuals who have been tested or tested positive</strong>: Contact investigation and notification is overseen by the local Department of Public Health. Any persons who have had close contact with those individuals in question have been notified by the Department of Public Health in accordance with standard public health principles. If you have not been notified, then you are not deemed to have an increased risk because of exposure to these individuals.</p>
+</div>
+<div class="accordion">I’m feeling anxious. Who can I talk to?</div>
+<div class="panel">
+<p>We recognize the anxiety and emotional strain that these circumstances may place on all of us. As information about Coronavirus unfolds and response plans are implemented, there can be a wide range of thoughts, feelings and reactions. Review Harvard University Health Services' (HUHS) <a href="https://www.harvard.edu/sites/default/files/content/coronavirus_HUHS_managing_fears_A2%5B5%5D.pdf" target="_blank">resources for managing anxiety and fear</a>.</p>
+<p>Remember that Harvard’s student and employee health plans offer comprehensive coverage for both physical and mental health care. If you'd like to speak with a counselor or a mental health professional, contact <a href="https://camhs.huhs.harvard.edu/">Counseling and Mental Health Services</a> (for students) or <a href="https://my.kgalifeservices.com/?org_code=harvard">Harvard’s Employee Assistance Program</a>.</p>
+<p>We also support and encourage self-care during these stressful times. Remember that sleep and exercise promote immune system capacity.</p>
+</div>
+<div class="accordion">Is Harvard University Health Services still open?</div>
+<div class="panel">
+<p>HUHS is open, however it temporarily shifted its operating model on Wednesday, March 18 until further notice. Services that can be provided by a telephone or video conference call will shift to remote delivery. <strong>Urgent Care and Internal Medicine will be open</strong> for urgent or essential visits that require in-person exams. Counseling and Mental Health Services and Behavioral Health will continue to operate, but visits will be by telephone or video conference. Mt. Auburn's Ob/gyn practice at Smith Campus Center will continue to see obstetrics patients, and GYN emergencies as needed. All other clinical services will be available for phone and video consultations, and in-person visits as needed.</p>
+<p>This temporary shift will enable HUHS to reduce the density of patients in the waiting rooms, minimize the spread of COVID-19, and focus resources and support on patients who need it most.</p>
+<p>Regardless of your location, HUHS is available to:</p>
+<ul>
+<li>Answer your questions</li>
+<li>Provide care and triage over the phone</li>
+<li>Order tests</li>
+<li>Help with referrals</li>
+<li>Send medical records as needed</li>
+<li>Provide refills</li>
+<li>Assist you with other aspects of your healthcare</li>
+</ul>
+<p>Visit the <a href="https://huhs.harvard.edu/">HUHS website</a> for updates on clinical services. </p>
+</div>
+<div class="accordion">Is the Harvard Dental Center still open?</div>
+<div class="panel">
+<p>Effective March 23, the Harvard Dental Center is triaging all emergency consultations through tele-dentistry. Emergency calls will be directed to an on-call doctor who will help patients via teleconference communication. All elective appointments will be rescheduled until further notice. Visit the <a href="https://hsdm.harvard.edu/harvard-dental-center">Dental Center website</a> for more information. </p>
+</div>
+<h2 class="txt-h3"><a name="international"></a>International Students and Scholars</h2>
+<p>Also see: <a href="https://hio.harvard.edu/news/hio-faq-coronavirus">Harvard International Office's FAQs</a></p>
+<div class="accordion">How will online classes affect international students’ I-20 and visa status?</div>
+<div class="panel">
+<p>The U.S. government recognizes there are extenuating circumstances because these classes were not intended to be online. The Harvard International Office (HIO) received guidance from the government that they intend to be flexible with temporary adaptations to classes. Provided international students can continue to make normal progress in a full course of study as required by federal regulations, students’ legal immigration status are not in jeopardy. International students and scholars should contact their <a href="https://hio.harvard.edu/talk-advisor">HIO advisor</a> with any questions or concerns.</p>
+</div>
+<div class="accordion">What should I do to prepare to travel home?</div>
+<div class="panel">
+<p>International students who have decided to travel home or to another location should refer to the <a href="https://hio.harvard.edu/international-travel">HIO website travel page</a> for information about the proper documents you will need for your return to the United States. Before you leave, make sure you have a valid travel signature. Contact your HIO advisor with additional questions or concerns</p>
+</div>
+<div class="accordion">Instead of traveling back to my home country, may I go elsewhere in the U.S.?</div>
+<div class="panel">
+<p>Yes, as long as you maintain your student visa status while taking your full-time on-line classes, you can go somewhere else in the U.S. You must provide the address where you are residing using the HIO <a href="https://hio.harvard.edu/report-change-address">change of address form</a>.</p>
+</div>
+<div class="accordion">What if I can’t leave campus or go home?</div>
+<div class="panel">
+<p>We realize that leaving campus on short notice will be difficult and challenging, and there will be extenuating circumstances for some international students. Examples include, but are not limited to, if your home is in a location with a Centers for Disease Control and Prevention level 3 warning for COVID-19 or in a country subject to the federal government’s travel ban. Harvard will provide you the help you need to stay safe, secure, and continue with your academic work. If you cannot leave campus or go home, you should consult with your resident dean or the office in charge of your housing as soon as possible to discuss potential delays, waivers, and accommodations. Any students who need to remain on campus for extenuating circumstances will receive their instruction online and must prepare for severely limited on-campus activities and interactions. Rest assured that we are actively contingency planning to support your academic continuity and well-being even though we have reduced the on-campus workforce. We encourage you to review <a href="https://www.harvard.edu/coronavirus/school-program-information">your School-specific coronavirus page</a> for more information. </p>
+</div>
+<div class="accordion">I am an international scholar, and I’m concerned my work is affected by the University’s announcement. What should I do?</div>
+<div class="panel">
+<p>Scholars should work with their departments regarding any accommodations that need to be made to allow them to continue teaching and researching.</p>
+</div>
+<div class="accordion">I am an international scholar, and I have been invited to start a program at Harvard soon. Should I still come?</div>
+<div class="panel">
+<p>You should contact the Harvard department that invited you for more guidance.</p>
+</div>
+<h2 class="txt-h3"><a name="libraries-museums"></a>Libraries, Museums, and Theaters</h2>
+<p>Also see: <a href="https://www.arboretum.harvard.edu/visit/covid-19-emergency/">Arnold Arboretum</a> | <a href="https://americanrepertorytheater.org/public-health-update/">A.R.T.</a> | <a href="https://communications.library.harvard.edu/coronavirus-planning">Harvard Library</a> | <a href="https://www.harvard.edu/on-campus/museums">Harvard Museums</a> | <a href="https://ofa.fas.harvard.edu/ofa-coronavirus">Office for the Arts</a></p>
+<div class="accordion">Are the libraries open?</div>
+<div class="panel">
+<p>Harvard Library buildings are closed and many services have moved online. See the <a href="https://library.harvard.edu/coronavirus">Harvard Library website</a> for more information, including how to access a wide range of online services and resources and the Library's plan for a <a href="https://library.harvard.edu/smart-restart-for-research">phased re-opening to support research</a>.</p>
+</div>
+<div class="accordion">Are the museums open?</div>
+<div class="panel">
+<p>The University's museums, including the Harvard Art Museums and the Harvard Museums of Science and Culture, are currently closed to the public until further notice. We encourage you to explore and utilize the Harvard Art Museums' <a href="https://www.harvardartmuseums.org/collections">collections online</a>. Refer to <a href="https://www.harvard.edu/on-campus/museums">each museum's website</a> for more information on when the museums may be able to re-open.</p>
+</div>
+<h2 class="txt-h3"><a name="transportation"></a>Parking and Transportation</h2>
+<div class="accordion">I extended my annual parking permit this spring but was notified recently that I will be working remotely until the fall. Will I still receive a credit?</div>
+<div class="panel">
+<p>If you extended your permit, you have paid for parking through the end of June. You will receive a 3.5 months credit (March 15th through June 30th) on a new permit. You should continue to display your FY20 hang tag when on campus. Your parking facility access is still valid. You will be able to utilize the annual parking permit renewal system when it opens later this year (dates are still tentative).</p>
+<p>Extended permit holders who don’t expect to return to campus in September should fill out this <a href="https://harvard.az1.qualtrics.com/jfe/form/SV_bx5s7ivl0ybICrP">online form</a>. Your permit and access will be placed on hold until you let us know when you will be back. Credits will be applied when you resume parking. Please hold onto your current hang tag in case your return to campus changes. If you have limited internet access you can contact the Campus Service Center at (617) 496-7827.</p>
+</div>
+<div class="accordion">I'm an employee and would like to start driving to work instead of taking public transit. Can I cancel my MBTA pass and get a parking permit?</div>
+<div class="panel">
+<p>Annual parking permit holders should continue using their current hang tag and designated parking locations. Parking access, using your current hang tag, will be extended into the fall. Please continue to properly display your hang tag.</p>
+<p>Employees who typically commute via transit but are now hesitant to do so because of coronavirus are now eligible for <strong>no charge</strong> daily parking through July 31, 2020 at select Harvard facilities in Cambridge and Allston. The program will be periodically reviewed and any extension will be based on future University occupancy.&nbsp;<span>All Harvard I.D. holders will have access to the HBS Surface Lot, the Webster Lot (Athletics area), the Observatory Lot, 52 Oxford Street Garage, Littauer Lot, SEAS Lot, and William James Lot. No permit pre-ordering is required. Show your Harvard I.D. for garage access. Annual permit holders will be given priority access to facilities and availability may be limited at select locations.</span></p>
+<p>Parking rules continue to apply and signage regarding reserved spaces, fire lanes, and disability parking must be observed. View a map of Harvard parking locations: <a href="http://www.transportation.harvard.edu/sites/transportation.harvard.edu/files/Parking%20Lot%20Map%20for%20Web.pdf">printable map</a> or <a href="https://map.harvard.edu/?ctrx=759881&amp;ctry=2961624.5&amp;level=7&amp;layers=Campus%20Base%20and%20Buildings,Parking,Map%20Text">interactive map</a>.</p>
+</div>
+<div class="accordion">For the temporary no charge parking, do I need to purchase a daily permit online ahead of time?</div>
+<div class="panel">
+<p>No. You will only be required to present your Harvard I.D. to enter the parking facility.</p>
+</div>
+<div class="accordion">What happens if I'm a transit pass holder and these temporary no charge facilities are full?</div>
+<div class="panel">
+<p>Annual parking permit holders will be guaranteed a space in their designated facilities. Transit pass holders will be instructed by Parking Service monitors to proceed to the closest available facility.</p>
+</div>
+<div class="accordion">What if I want to park in another lot or garage that isn't included in the no charge parking?</div>
+<div class="panel">
+<p>You can continue to <a href="http://www.transportation.harvard.edu/parking/visitors/online-daily-permits">purchase a day pass online</a>. <strong>Typical permit fees will apply.</strong></p>
+</div>
+<div class="accordion">When is the deadline to update my July transit order?</div>
+<div class="panel">
+<p>The June transit pass ordering deadline has temporarily been extended to June 10. You have until June 10 to order, opt out, or cancel your July transit election. Visit Harvard's <a href="http://www.commuterchoice.harvard.edu/mbta">Commuter Choice website</a> to do so, and review their <a href="http://www.transportation.harvard.edu/sites/transportation.harvard.edu/files/ChangeCancelOrders_ECBS.pdf">guide to update your order</a>.</p>
+</div>
+<div class="accordion">I don't know when I'll be returning to work. How should I manage my transit elections?</div>
+<div class="panel">
+<p>Undoubtedly the situation is constantly evolving. In accordance with <a href="https://www.harvard.edu/coronavirus/work-remotely">University Coronavirus policies</a>, employees should refer to the guidance of their local school or department regarding remote work to assess future transit needs.</p>
+</div>
+<div class="accordion">Can I cancel my Harvard parking permit?</div>
+<div class="panel">
+<p>Parking Services is currently offering two options for those who have had their commute and/or daily driving routine disrupted by coronavirus (COVID-19). <strong>Both options will ultimately result in the same refund or credit amount.</strong></p>
+<p><strong>Option 1: Extend your parking permit</strong></p>
+<ul>
+<li>This is the easiest option as it requires no action on your part, you do not need to contact us, and your permit dates will automatically be extended. For example, if Harvard’s current remote work policy is in place for two months, a permit with the expiration date of June 30, 2020 would automatically be extended until August 31, 2020. In this scenario, permit holders would not be charged for the months of July and August. The actual dates are still unknown, but Parking Services will communicate with you once they are determined.</li>
+<li>Essential personnel who must continue to drive to campus during this time will automatically have their permits extended.</li>
+<li>If you choose to extend your permit, which again requires no action on your part, you can continue to park in your current location(s). Please display your existing permit through the new extended date.</li>
+</ul>
+<p><strong>Option 2: Cancel your parking</strong></p>
+<ul>
+<li>This option is recommended for people leaving the University or those who typically suspend parking during summer months. When the University resumes normal operations and begins charging again for daily parking, you will need to repurchase a permit. You will be charged prevailing rates based on the permit start date. We will make every attempt to process the new permit for your current parking location. Visit the <a href="http://www.transportation.harvard.edu/covidparking">Transportation website</a> for more information on how to cancel your parking.</li>
+</ul>
+</div>
+<div class="accordion">Is the Harvard Shuttle still running?</div>
+<div class="panel">
+<p>The University is currently offering on-demand shuttle service which can be accessed through <a href="http://transportation.harvard.edu/shuttle-van-services/demand-van-service">Harvard's van service</a> app during the weekday hours of 10am to 4pm. All riders are required to wear a face covering and maintain appropriate distances while onboard.</p>
+</div>
+<h2 class="txt-h3"><a name="research-labs"></a>Research and Labs</h2>
+<p>Also see: <a href="https://projects.iq.harvard.edu/coronavirus/research-programs-lab-operations">SEAS &amp; FAS Division of Science FAQs</a> <span>|</span> <a href="https://hms.harvard.edu/coronavirus">HMS FAQs</a>&nbsp;| <a href="https://hscrb.harvard.edu/coronavirus">HSCRB FAQs</a></p>
+<div class="accordion">Can graduate students and postdocs return to labs?</div>
+<div class="panel">
+<p>Graduate students and postdocs should consult with their supervisors for specifics on lab operations, continuity of research activities, the&nbsp;<a href="https://provost.harvard.edu/research-laboratory-reentry">re-entry plan for science labs</a>, and the&nbsp;<a href="https://www.harvard.edu/coronavirus/planning-2020-21/checklist-for-safe-return-to-labs">checklist for a safe return to labs</a>.</p>
+<p>Effective March 10, all graduate students began transitioning to remote work wherever possible, and many labs began to ramp down operations the week of March 16 to sustain only essential operations. Some lab access was permitted only for the most critical needs, including for those working on research directly related to the COVID-19 pandemic. Our <a href="https://www.harvard.edu/covid-19-moving-classes-online-other-updates">March 10 email</a> about reducing the on-campus population was not a decision we took lightly, but one that we felt was right to slow the potential transmission of the virus and protect vulnerable populations from exposure. All members of the Harvard community are asked to help in this effort.&nbsp;</p>
+</div>
+<div class="accordion">How is the University preparing for disruptions to critical research operations?</div>
+<div class="panel">
+<p>The University has identified ways to protect critical research and permit only essential operations to continue. Our objectives included compiling an inventory of sensitive research that requires continued support during a disruption; preparing a plan to provide that support with limited staff, resources, and vendor provisions; and implementing existing plans for continued care of sensitive research specimens.</p>
+</div>
+<div class="accordion">My job is mainly bench-based work and requires me to be in the lab. Will I get paid, even though I have to do work that isn’t in my job description?</div>
+<div class="panel">
+<p>Please see the <a href="https://www.harvard.edu/coronavirus/work-remotely">Work Remotely</a> page for information about pay.</p>
+</div>
+<div class="accordion">How are we dealing with issues of compliance with federal funding and other sponsored research concerns?</div>
+<div class="panel">
+<p>University personnel are in touch with the major funding agencies and have posted FAQs on the University <a href="https://osp.finance.harvard.edu/">Office for Sponsored Programs website</a>. If you need more information or assistance, contact your School or unit’s sponsored research team.</p>
+</div>
+<div class="accordion">Can I conduct research that involves physical experimentation at home?</div>
+<div class="panel">
+<p>Remote research using computers for data driven analytics, social behavior type studies that can be conducted by audio/video conferencing, etc. is allowable. <strong>The University cannot approve the use of private residence for research purposes.</strong> Such work at home raises a number of health and safety, and potential building and fire code related concerns that are subject to routine health and safety inspections and mitigation measure at the university laboratories and cannot be verified in a residential setting. These potential hazards include but are not limited to occupancy rating of the building (e.g. residential vs. research), electrical hazard associated with the use of the equipment (e.g. personnel safety, overload of circuitry, etc.), presence of untrained individuals in the research area, etc., none of which have been assessed by university.</p>
+</div>
+<div class="accordion">Can I visit my lab if I am not designated “essential personnel”?</div>
+<div class="panel">
+<p>No. Unless you are designated as "essential personnel" and have a written letter/document to that effect from Environmental Health &amp; Safety (EH&amp;S), you cannot travel to work.</p>
+</div>
+<h2 class="txt-h3"><a name="tech"></a>Technology Support</h2>
+<p>Also see: <a href="https://huit.harvard.edu/remote">Work Remotely</a> | <a href="https://teachremotely.harvard.edu/">Teach Remotely</a> | <a href="https://learnremotely.harvard.edu/">Learn Remotely</a>&nbsp;<span>|</span> <a href="https://library.harvard.edu/how-to/use-library-resources-remote-teaching">Library remote teaching resources</a></p>
+<div class="accordion">What if I don't have reliable internet access at home, or my connection is slow?</div>
+<div class="panel">
+<p>Check out Harvard University Information Technology's (HUIT) <a href="https://huit.harvard.edu/remote-online">tips for getting online</a> during the COVID-19 period, including providers who are offering <strong>free or discounted internet and increased data allowances</strong>. If you have internet at home, review the tips for <strong>improving connection problems</strong>.</p>
+</div>
+<div class="accordion">Can Harvard's network and IT systems support the increased demand of online courses?</div>
+<div class="panel">
+<p>Harvard University's Information Technology (HUIT) staff have been working around the clock to prepare the tools and resources necessary to support remote teaching and learning. HUIT is working closely with key vendors, including Zoom, to support continuity and stability of services throughout this period of exceptionally high demand from the Harvard community. HUIT is also closely monitoring network infrastructure and is prepared to quickly expand capacity of their support services to meet increased demand.</p>
+</div>
+<div class="accordion">When and how can employees use Zoom for meetings?</div>
+<div class="panel">
+<p>Given the extraordinary additional demand anticipated, and our need to prioritize academic use, below are some basic guidelines for employees using Zoom sensibly:</p>
+<ul>
+<li>Consider whether you need to hold a meeting.</li>
+<li><strong>Use alternative means to communicate when possible</strong> (telephone, Slack, Microsoft Teams, email).</li>
+<li>If you hold a Zoom meeting, <strong>keep it short</strong>.</li>
+<li>Video calls are most effective when they are 45-min or less.</li>
+<li>Consider adopting a 10-min “stand-up” approach—a meeting not long enough to sit down—and focus on priorities of the day</li>
+<li>Close out of your Zoom session when you are done. <strong>Do not host a persistent Zoom session</strong>.</li>
+</ul>
+</div>
+<div class="accordion">Where can I get technology help?</div>
+<div class="panel">
+<p>If you have any questions, contact the <a href="https://harvard.service-now.com/ithelp?id=submit_ticket&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9">HUIT Service Desk</a> or your <a href="https://harvard.service-now.com/harvard-it-services">local IT support</a>.</p>
+</div>
+<h2 class="txt-h3"><a name="travel"></a>Travel</h2>
+<div class="accordion">Can I travel internationally on a Harvard-related trip?</div>
+<div class="panel">
+<p>No. All University-related international travel is prohibited until further notice and should not be planned or scheduled at this time. This policy applies to all community members—students, faculty, staff, postdoctoral fellows, and other academics.</p>
+<p>Additionally, there should be no Harvard-organized or Harvard-funded international travel for students that is scheduled to start and end between April and August 31. Review the Vice Provost for International Affairs' memo for detailed information on <a href="https://www.harvard.edu/coronavirus/summer-international-travel-guidance-students">students' international summer travel funding</a>, and see Harvard Global Support Services’ (GSS) <a href="https://globalsupport.harvard.edu/news-advice/coronavirus-advice-travelers">international travel guidance</a> for more information.</p>
+</div>
+<div class="accordion">Should I travel abroad for a personal trip?</div>
+<div class="panel">
+<p>Harvard strongly discourages personal international travel until further notice (with the exception of individuals who remained in on-campus housing after Spring Recess and who will be traveling home by the end of the spring semester). Travel increases your chances of getting and spreading COVID-19. Review Harvard Global Support Services’ (GSS) <a href="https://globalsupport.harvard.edu/news-advice/coronavirus-advice-travelers">international travel guidance</a> for more information<span>.</span></p>
+</div>
+<div class="accordion">I’m currently abroad. Should I leave?</div>
+<div class="panel">
+<p>Harvard is not currently asking any affiliates abroad to leave—however, if you’re in a location where you can leave, now is the time to decide whether you stay or return home. Governments are enacting varying levels of border and travel restrictions without advance notice. Review Harvard Global Support Services’ (GSS) <a href="https://globalsupport.harvard.edu/news-advice/coronavirus-advice-travelers">international travel guidance</a> for more information.</p>
+</div>
+<div class="accordion">I'm an employee in one of Harvard's international offices abroad. Can I travel for business?</div>
+<div class="panel">
+<p>Harvard's offices abroad are part of our campus community. Staff in those offices should follow the <a href="https://globalsupport.harvard.edu/news-advice/coronavirus-advice-travelers">same guidance on international travel</a> that all members of the University are asked to follow: no international travel for University business until further notice. For domestic travel, office staff should follow local health and government travel advisories in the countries where they are based.</p>
+<p>The reason that Harvard's guidance applies to staff in offices abroad is, first and foremost, to protect the health and safety of all staff and those in our communities. In addition, the University's effort to reduce travel is part of a broad effort to slow the rate of transmission and be part of the solution to this global pandemic. All members of the Harvard community in the U.S. and abroad are asked to help in this effort.</p>
+</div>
+<div class="accordion">Is it ok to travel within the U.S.?</div>
+<div class="panel">
+<p>All University-related domestic travel is prohibited until further notice and should not be planned or scheduled at this time.</p>
+<p>We also strongly discourage personal travel within the United States. Travel increases your chances of getting and spreading COVID-19, and the CDC continues to <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-in-the-us.html">discourage domestic travel</a>. Government restrictions and public health measures are changing rapidly.</p>
+<p>If you have essential travel within the U.S., check the <a href="https://www.cdc.gov/publichealthgateway/healthdirectories/healthdepartments.html">state and territorial health department websites</a> for the latest information and restrictions. Take precautions to protect yourself and others during your trip: wash your hands often or use hand sanitizer if you cannot wash them; avoid touching your eyes, nose, and mouth; remain at least six feet from others; and wear a <a href="https://www.harvard.edu/sites/default/files/content/06022020_coronavirus_facecoverings_A.pdf">cloth face covering</a>. Per Massachusetts law, anyone arriving or returning to the Commonwealth from elsewhere must quarantine for 14 days.</p>
+</div>
+<div class="accordion">What is University-related travel?</div>
+<div class="panel">
+<p>University-related international trips include activities that are part of academic or professional work at Harvard, including research, study abroad, attendance at a conference, academic study, travel with a student organization or trek, or a summer or January internship (or similar volunteer or work experience) if registered at Harvard the following term. An international trip is also University-related if Harvard is funding the trip or if it's at the request of a supervisor.</p>
+<p>Harvard-related international travel does <strong>not</strong> include personal travel, such as vacations or trips home (for international students and scholars).</p>
+</div>
+<div class="accordion">Who determines essential travel?</div>
+<div class="panel">
+<p>As applicable, consult with your Harvard School, program, or department leaders and funding sources to determine whether your Harvard-related domestic travel is essential. There will be variance within the Schools and Units, but we strongly encourage you to consider alternative communication and collaboration methods, if possible. For individuals, you may have family or individual obligations that make your personal travel essential.</p>
+</div>
+<h2 class="txt-h3"><a name="visitors"></a>Visitors</h2>
+<div class="accordion">Are visitors allowed on campus?</div>
+<div class="panel">
+<p>Harvard’s goal is to reduce the number of people on campus—including visitors—in order to slow the potential transmission of the virus and protect vulnerable populations from exposure. All members of the Harvard community are asked to help in this effort.</p>
+<p>Events with speakers invited from off campus—whether the speakers are international or domestic—should be cancelled, postponed, or conducted remotely.</p>
+<p>Job interviews for open positions should be conducted remotely via video- or teleconferencing tools, like Zoom, or by telephone. Note that as of April 13, Harvard announced a University-wide hiring freeze. The provost and the executive vice president, in consultation with the deans and the vice presidents, will ensure appropriate processes are in place for considering exceptions.</p>
+<p>Individuals, programs, and groups are responsible for informing their guests about Harvard’s coronavirus policies. Review the <a href="https://www.harvard.edu/coronavirus/event-information">meeting and event guidance</a>. Any visitor arriving to campus from a location with a <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">CDC Level 3 Warning for COVID-19</a> must follow the same guidance as Harvard affiliates: <a href="https://www.harvard.edu/sites/default/files/content/coronavirus_CDC_HUHS_posters_2_Accessibile.pdf" target="_blank">self-quarantine</a> for 14 days in another location upon arrival/return. The CDC designation can change quickly, and anyone welcoming a visitor should confirm the location’s CDC travel designation. There is widespread, ongoing transmission of COVID-19 worldwide. This includes international locations and locations in the United States.</p>
+</div>
+<div class="accordion">Are campus tours still offered?</div>
+<div class="panel">
+<p>No. Effective March 10, all public and private in-person tours of Harvard University have been discontinued until further notice. Harvard is taking steps to minimize the need to gather in large groups and spend prolonged time in close proximity with each other. Our actions are consistent with the recommendations of leading health officials on how to limit the spread of COVID-19. We have an <a href="https://college.harvard.edu/admissions/explore-harvard/virtual-tour">online tour</a> available for anyone who would like to explore Harvard from home.</p>
+</div></div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+
+        </article>
+        
+        
+      </div> <!-- end .grid -->
+    </div>
+    
+  </main>
+  <!-- end Main Content Area -->
+  
+
+		<!--
+	
+			Secondary (aside) Content Area
+	
+		-->
+
+		<aside role="complementary" id="secondaryArea" class="aside-base">
+			    <section class="stitle-news  resources  c-bg-crimson c-txt-white padding-sm" data-moduletitle="news  resources ">
+      
+		<header>
+		<h2 class="txt-h1-alt txt-center  c-txt-white">News &amp; Resources </h2>
+		</header>
+		    	<div class="wrapper">
+        <div class="grid grid--4a">
+          <div class="w-50">
+            <div class="grid">
+              <div class="w-50">
+                
+	<div class="card card--nid-12383468 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Grading_600.jpg" alt="A person writing in a notebook with a laptop nearby" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/Grading_300.jpg" alt="A person writing in a notebook with a laptop nearby" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/">Grading policy changes</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard College will adopt an Emergency Satisfactory/ Emergency Unsatisfactory grading policy for the spring semester</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/" class="">
+						Learn more
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+              <div class="w-50">
+                
+	<div class="card card--nid-12383469 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-to-guarantee-workers-pay-benefits-through-may-28/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/031020_features_RL_600_0.jpg" alt="A worker moves boxes across campus" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/031020_features_RL_300_0.jpg" alt="A worker moves boxes across campus" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-to-guarantee-workers-pay-benefits-through-may-28/">Guaranteed pay and benefits </a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard guarantees pay and benefits through May 28 to employees and contract workers with job disruptions</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/03/harvard-to-guarantee-workers-pay-benefits-through-may-28/" class="">
+						Read story 
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="grid">
+              <div class="w-50">
+                
+	<div class="card card--nid-12383642 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/04/how-buildings-masks-can-be-barriers-to-coronavirus/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/facemask_600.jpg" alt="A woman wearing a face mask" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/facemask_300.jpg" alt="A woman wearing a face mask" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/how-buildings-masks-can-be-barriers-to-coronavirus/">Protecting yourself</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Harvard's Joe Allen discusses ways to stay safe during the pandemic, including creating and wearing masks</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/how-buildings-masks-can-be-barriers-to-coronavirus/" class="">
+						Read Q&amp;A 
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+              <div class="w-50">
+                
+	<div class="card card--nid-12384022 card--news c-txt-dark card--media-top ">
+	
+						<div class="card__media card__media--img">
+							<a href="https://news.harvard.edu/gazette/story/2020/04/health-services-director-talks-about-adding-remote-resources/">
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/012820_Nguyen_600.jpg" alt="Giang Nguyen" class="img-sm" />
+								<img src="https://www.harvard.edu/sites/default/files/feature_item_media/012820_Nguyen_300.jpg" alt="Giang Nguyen" class="img-lg" />
+							</a>
+						</div>	
+					
+	
+			<div class="card__content">
+	
+			
+	
+			<div class="card__content__source">
+				<h3 class="card__title">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/health-services-director-talks-about-adding-remote-resources/">Health Services Q&amp;A</a>
+				</h3>
+	
+				<p class="txt-h6">
+					
+				</p>
+	
+				<div class="card__text">
+					<p>Health Services director Giang Nguyen discusses new protocols and resources for the Harvard community</p>
+				</div>
+			</div>
+	
+			
+			<div class="card__outro">
+				<div class="card__outro__cta-1">
+					<a href="https://news.harvard.edu/gazette/story/2020/04/health-services-director-talks-about-adding-remote-resources/" class="">
+						Read Q&amp;A 
+					</a>
+				</div>
+				
+			</div>
+		
+		</div><!--/.card__content-->
+		
+  </div><!--/.card-->
+	              </div>
+            </div>
+          </div> <!-- end .w-50 -->
+        </div>
+				      </div><!--/.wrapper-->
+    </section>
+    
+  	</aside>
+  	<!-- end Secondary Content Area -->
+			 <!--
+
+    Footer Area
+
+  -->
+
+  <footer role="contentinfo" id="footerArea" class="footer-base">
+  <div class="wrapper wrapper--1-down content-area">
+
+    <!--
+
+  Visually hidden jump to navigation link to go at the bottom of long content areas,
+  especially those with many focusable areas.
+
+  Remove the hidden helper class to make this link visible to all users.
+
+-->
+<a href="#page" class="jump-to-nav jump-to-nav--hidden">
+  Jump to Top
+</a>
+
+    <div class="grid grid--footer">
+
+      <div class="w-20 w-33--m">
+        <h1 class="footer__heading txt-h5">
+          Website
+        </h1>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-449 first"><a href="https://accessibility.harvard.edu" title="Accessibility@0">Accessibility</a></li>
+<li class="menu-11714"><a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy" title="DigitalAccessibility@0">Digital Accessibility</a></li>
+<li class="menu-683 last"><a href="/sitemap" title="Sitemap@0">Sitemap</a></li>
+</ul>      </div>
+
+      <div class="w-20 w-33--m">
+        <h2 class="footer__heading txt-h5">
+          Get in Touch
+        </h2>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-660 first"><a href="/contact-harvard" title="Contact@2">Contact Harvard</a></li>
+<li class="menu-2078"><a href="/about-harvard/maps-directions" title="">Maps &amp; Directions</a></li>
+<li class="menu-2383"><a href="http://hr.harvard.edu/jobs" title="">Jobs</a></li>
+<li class="menu-2384 last"><a href="/about-harvard/social-media-and-newsletter-directory" title="">Social Media</a></li>
+</ul>      </div>
+
+      <div class="w-20 w-33--m">
+        <h3 class="footer__heading txt-h5">
+          Security &amp; Brand
+        </h3>
+        <ul ul_attributes="nav-group nav-group--top-bar" display_stickynav="yes" class="list-clean"><li class="menu-448 first"><a href="/privacy-statement" title="Privacy@0">Privacy Statement</a></li>
+<li class="menu-447"><a href="/copyright-issue" title="Infringement@0">Report Copyright Infringement</a></li>
+<li class="menu-861"><a href="/security-issue" title="Report Security Issue">Report Security Issue</a></li>
+<li class="menu-446 last"><a href="http://trademark.harvard.edu/pages/trademark-notice" title="TrademarkNotice@0">Trademark Notice</a></li>
+</ul>      </div>
+
+      <div class="w-footer-last">
+        <h4 class="footer__heading txt-h5 is-visually-hidden">
+          Social Media &amp; other Application Links
+        </h4>
+
+          <ul class="list-social-links list-clean">
+            <li>
+              <a href="http://facebook.com/harvard" class="social-link social-link--facebook">
+                <span class="is-visually-hidden">
+                  Facebook
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/harvard" class="social-link social-link--twitter">
+                <span class="is-visually-hidden">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com/harvard" class="social-link social-link--instagram">
+                <span class="is-visually-hidden">
+                  Instagram
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://youtube.com/harvard" class="social-link social-link--youtube">
+                <span class="is-visually-hidden">
+                  YouTube
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/harvard" class="social-link social-link--soundcloud">
+                <span class="is-visually-hidden">
+                  SoundCloud
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/edu/school?id=18483" class="social-link social-link--linkedin">
+                <span class="is-visually-hidden">
+                  LinkedIn
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.harvard.edu/itunes" class="social-link social-link--itunes">
+                <span class="is-visually-hidden">
+                  iTunes
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="w-60 other-apps">
+            &nbsp;
+          </p>
+
+      </div>
+
+
+    </div> <!-- end footer grid -->
+
+    <p class="footer__outro">
+      &copy; 2020 The President and Fellows of Harvard College
+    </p>
+
+  </div>
+</footer>
+	<!-- include ending file tags and JavaScript inclusions -->
+  </div> <!-- end #page -->
+
+        <!--
+
+      JavaScripts
+
+    -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/sites/all/themes/hedu2015/assets/js/script.js?v=20200311"></script>
+
+    <!-- element queries -->
+    <script src="/sites/all/themes/hedu2015/assets/js-element-queries/ResizeSensor.js"></script>
+    <script src="/sites/all/themes/hedu2015/assets/js-element-queries/ElementQueries.js"></script>
+    
+    <script src="/sites/all/themes/hedu2015/assets/slick/slick.js"></script>
+<script>
+$('.grid--3a.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+$('.grid--full.carousel').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+$('.grid--full-w-view.carousel .view .view-content').slick( {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+		autoplay: true,
+  	autoplaySpeed: 4000,
+  });
+</script>
+
+
+		<!-- Start of Survicate (www.survicate.com) code -->
+<script type="text/javascript">
+ (function(w) {
+   w._sv = w._sv || {};
+   w._sv.trackingCode = 'FfgooJjBjzhBdGbpsXIHyvlzrdrimWab'; 
+   var s = document.createElement('script');
+   s.src = '//api.survicate.com/assets/survicate.js';
+   s.async = true;
+   var e = document.getElementsByTagName('script')[0];
+   e.parentNode.insertBefore(s, e);
+ })(window);
+</script>
+<!-- End of Survicate code -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b4d6d73517","applicationID":"236355350","transactionName":"NAFUZEAHV0NYVkYIWA1LY0JbSRZZV1FXGRkTDEY=","queueTime":0,"applicationTime":9,"atts":"GEZXEggdRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

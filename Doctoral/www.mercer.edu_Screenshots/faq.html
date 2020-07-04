@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8 no-js" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 no-js" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"50c08683e1",applicationID:"261436544"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="preload" as="font" type="font/woff2" href="/wp-content/themes/mercer/assets/fonts/390D70_0_0.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/wp-content/themes/mercer/assets/fonts/390D70_1_0.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/wp-content/themes/mercer/assets/fonts/390D70_2_0.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/wp-content/themes/mercer/assets/fonts/390D70_3_0.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/wp-content/themes/mercer/assets/fonts/crimson-text-v8-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="/wp-content/themes/mercer/assets/fonts/ikes4.woff" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f76800">
+    <meta name="msapplication-TileColor" content="#3f3f41">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMLQ2X');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>FAQ | Mercer University</title>
+
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta property="og:image" content="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FAQ | Mercer University" />
+<meta property="og:url" content="https://www.mercer.edu/coronavirus/faq/" />
+<meta property="og:site_name" content="Mercer University" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FAQ | Mercer University" />
+<meta name="twitter:image" content="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512.png" />
+<meta name="twitter:image:width" content="512" />
+<meta name="twitter:image:height" content="512" />
+<link rel="canonical" href="https://www.mercer.edu/coronavirus/faq/" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mercer.edu/","name":"Mercer University"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mercer.edu/coronavirus/","name":"Coronavirus"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mercer.edu/coronavirus/faq/","name":"FAQ"}}]}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 9.41ms meta | 0.90ms boot -->
+
+<link rel='dns-prefetch' href='//www.mercer.edu' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//polyfill.io' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Mercer University &raquo; Feed" href="https://www.mercer.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mercer University &raquo; Comments Feed" href="https://www.mercer.edu/comments/feed/" />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://www.mercer.edu/wp-content/plugins/instagram-feed/css/sb-instagram-2-2.min.css?ver=2.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mercer-style-css'  href='https://www.mercer.edu/wp-content/themes/mercer/style.css?ver=1593788593' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='https://www.mercer.edu/wp-content/themes/www-mercer-child/style.css?ver=1593788593' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.mercer.edu/wp-includes/css/dashicons.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gravityview-field-approval-css'  href='https://www.mercer.edu/wp-content/plugins/gravityview/templates/css/field-approval.css?ver=2.8.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='gravityview-field-approval-tippy-css'  href='https://www.mercer.edu/wp-content/plugins/gravityview/assets/lib/tippy/tippy.css?ver=2.8.1' type='text/css' media='screen' />
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.4.18'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.mercer.edu\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.mercer.edu\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.4.18'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.4.18'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/www.mercer.edu\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/www.mercer.edu\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/instagram-feed/js/sb-instagram-2-2.min.js?ver=2.4.4'></script>
+<script type='text/javascript' src='https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/themes/mercer/assets/js/yall.min.js?ver=1593788593'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/themes/mercer/assets/js/hdr.min.js?ver=1593788593'></script>
+<link rel='https://api.w.org/' href='https://www.mercer.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mercer.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.mercer.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel="alternate" type="application/json+oembed" href="https://www.mercer.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mercer.edu%2Fcoronavirus%2Ffaq%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.mercer.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mercer.edu%2Fcoronavirus%2Ffaq%2F&#038;format=xml" />
+<link rel="icon" href="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.mercer.edu/wp-content/uploads/2019/04/cropped-android-chrome-512x512-270x270.png" />
+</head>
+<body class="page-template-default page page-id-9093 page-parent page-child parent-pageid-8741 not-home page-faq secondary-menu-active">
+        <script>document.addEventListener("DOMContentLoaded",function(){yall({idleLoadTimeout:0,threshold:250});});</script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMLQ2X"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <div id="mcu-alert" class="website-alert severe" role="alert" aria-live="assertive" aria-hidden="true">
+    <div class="content-wrap">
+        <p id="mcu-alert-title" class="alert-title"></p>
+        <p id="mcu-alert-text" class="alert-text"></p>
+
+        <div id="mcu-alert-link-wrap" class="link-wrap link-wrap-hidden">
+            <a id="mcu-alert-link" class="alert-link" href=""></a>
+        </div>
+    </div>
+    <button id="mcu-close-alert" class="close-alert" title="Close alert"><span class="ikes-cross" aria-hidden="true"></span> <span class="sr-only">Close the alert banner.</span></button>
+</div>
+    <a class="skip-content" href="#primary-wrap" title="Skip to main content of page" tabindex="0">Skip to Content</a>
+            <a class="skip-content" href="#tier3-nav-button" title="Skip to main content of page" tabindex="0">Skip to Coronavirus Menu</a>
+        <a class="skip-content" href="#primary-nav-button" title="Skip to primary menu" tabindex="0">Skip to Mercer Menu</a>
+
+    <div id="main">
+        <header id="header" role="banner">
+            <div class="header-first">
+                <div class="site-title">
+                    <a href="https://www.mercer.edu/">
+                        <svg class="header-logo" aria-labelledby="header-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 49.533">
+                            <title id="header-title">Mercer University</title>
+                            <desc>Mercer University logo displaying the words "Mercer University" in large white font on a dark background, all underlined in orange</desc>
+                            <defs><style>.a {fill: #f76800;} .b {fill: #fff;}</style></defs>
+                            <g>
+                                <path class="a" d="M0,49.53H260v-2H0Z" transform="translate(0 0)"/>
+                                <g>
+                                    <path class="b" d="M97.15,31.39c3.17-.06,5.74-.12,8.49-.12,2.39.06,6.4.12,11.47.12.06-.18.42.3.61-.6.11-1.91.53-3.64.71-5.85.06-.41-.84-1.19-.84,0-1,4.78-3.94,5.25-9.44,5.31-4.19-.06-4.6-.41-4.6-3.7V17.49h4.18c3.41,0,4.55,0,4.73,2.15a.57.57,0,0,0,.6.53.55.55,0,0,0,.53-.53c-.06-1.49,0-2.09,0-3.16,0-.84-.06-1.37,0-2.87-.18-1.07-1.13-.6-1.13-.12.12,2.27-1.62,2.81-5.62,2.87-.78-.06-2.39-.06-3.29-.12V5h3.16c6.1,0,8.61.47,8.61,4.41.06.66,1,.42,1,0,.06-2.09-.12-2.74-.12-4.41a11.53,11.53,0,0,0,0-1.44c-4.79.18-9.15.18-11.48.12s-4.43,0-7.18-.12a.66.66,0,0,0,0,1.31c1.92-.06,2.69.78,2.75,3V26.21c-.06,3-.23,4.23-2.87,4.3-.9-.06-.77.95-.3.89Z" transform="translate(0 0)"/>
+                                    <path class="b" d="M133.56,4.37a12.24,12.24,0,0,0-4.67-.9c-1.85.06-3.94.36-6.33.3a31.54,31.54,0,0,1-3.89-.12c-.36.12-.66,1.2.12,1.31,2,0,2.75.42,2.75,2.75V27c0,2.92-.12,3.16-2.45,3.46-1,.12-1,1,0,1,2,0,2.87-.06,4.18,0,1.14-.06,2.45-.06,4.43,0,.66,0,1.13-.89,0-1-2.69-.12-2.81-1.26-2.87-4.3V18.45a24.35,24.35,0,0,1,4.18.3c.54.24,1,1.37,1.73,2.74l3.59,5.85c2,3.34,4.31,4.53,7.77,4.59.72-.06.42-.06,1.32-.12.71,0,.47-.95,0-.83-3-.06-4.55-2-6.34-5.43L132.36,18a7.24,7.24,0,0,0,5.44-6.86,7,7,0,0,0-4.24-6.74l-1.08,1.9a6.14,6.14,0,0,1,2.09,5.25c.06,3.76-2.15,5.73-6.33,5.73a22.37,22.37,0,0,1-3.47-.3V5c1.13-.06,2.57-.11,3.17-.11a6.79,6.79,0,0,1,4.48,1.36Z" transform="translate(0 0)"/>
+                                    <path class="b" d="M73.4,42.2a.6.6,0,0,1-.52-.3L55.78,7.41,55.66,35c.06,3.61,1.54,5.55,4.3,5.61h0a.81.81,0,0,1,.69.78.46.46,0,0,1-.16.38A1,1,0,0,1,60,42c-3.23-.12-4.81-.12-5.86-.12H48.25a.5.5,0,0,1-.38-.15.51.51,0,0,1-.11-.43.6.6,0,0,1,.52-.57h.08c3,0,3.74-1.25,4.3-3.88.39-1.76.47-6.45.58-12.39,0-.42,0-.84,0-1.26v-.25c0-2.05,0-4.43,0-6.52v-.85c0-4.3,0-8,0-8.08,0-2.07-.19-3.65-.9-4.63s-1.89-1.37-4-1.4c-.57,0-.77-.4-.76-.7A.76.76,0,0,1,48.36,0l1.37,0C51,.1,52,.13,53.27.13a4,4,0,0,0,.49,0c.45,0,1.13,0,2.25-.1h.12l.28,0L57,0h.14a.62.62,0,0,1,.58.43l17,35L89.44.61l0-.08h0A.74.74,0,0,1,90.15,0c1,0,1.84,0,2.66.07s1.39.05,2.06.05c.49,0,1,0,1.48,0,1.21,0,2.53,0,4.14-.15.4,0,.59.24.59.47a.4.4,0,0,1-.36.42h0a.46.46,0,0,1-.21-.05c-4.4.79-5.08,2.18-5.14,6.56a3.57,3.57,0,0,1,0,1.13L96,32.89c0,5.31,1.31,7.58,4.39,7.58h.21c.68,0,.91.36.9.67a.85.85,0,0,1-.9.76c-2.56-.1-4.67-.14-6.25-.14-.63,0-1.18,0-1.64,0s-.87,0-1.3,0c-.9,0-1.78,0-3.39.09l-.66,0h0l-.65,0a.6.6,0,0,1-.65-.55v0a.53.53,0,0,1,.16-.38.74.74,0,0,1,.49-.18c1.62,0,2.62-.37,3.26-1.12s.93-1.91.93-3.77L90.39,3.36,74.49,41.6l-.06.1c-.09.17-.26.5-.54.5H73.4Zm67.21-.06h-.3l-2.51-6.45c-.35-.65-.59-1-1.32-1v-.42l.71.05a7,7,0,0,1,.73.07q.72,0,1.44-.12v.42h-.2c-.37,0-.58.14-.64.42a.79.79,0,0,0,.12.3l2.15,5.31,2.15-5.13a2,2,0,0,0,0-.6.17.17,0,0,0,0-.18c-.06-.09-.22-.12-.58-.12v-.42l.57.06.57.06a7.35,7.35,0,0,0,1.14-.12v.42c-.73,0-.91.39-1.14,1l-2.87,6.44Zm31.39,0h0c-.64-.07-1.33-.2-1.85-.3V39.93h.3a1.87,1.87,0,0,0,1.85,1.73h.1a1.5,1.5,0,0,0,1.46-1.54h0c0-1-.69-1.27-1.73-1.73-1.23-.56-2.1-1-2-2.15a1.86,1.86,0,0,1,.5-1.38,2.51,2.51,0,0,1,1.77-.77,11.16,11.16,0,0,1,1.14.16h.07a6.2,6.2,0,0,0,.82.12,3.63,3.63,0,0,0,0,1.14,1.42,1.42,0,0,0,0,.71H174c0-1.1-.57-1.67-1.73-1.73a1.52,1.52,0,0,0-1.05.52,1.12,1.12,0,0,0-.27.8,1.15,1.15,0,0,0,.6,1.13,9.48,9.48,0,0,0,1.1.56h.05l0,0h.07a6.43,6.43,0,0,1,.79.39,1.83,1.83,0,0,1,1,1.73,2.21,2.21,0,0,1-.54,1.67,2.82,2.82,0,0,1-2,.79Zm-64.27-.06c-1.81-.07-2.93-1.29-3-3.29V35.51a.86.86,0,0,0-.12-.68.69.69,0,0,0-.52-.16h-.2s0,0,0,0h0a.14.14,0,0,0-.08,0v-.42l.62.05h.09c.26,0,.49,0,.72.06a10,10,0,0,0,1.06-.09h0l.23,0v.41c-.8,0-.84.34-.84,1.32v3.28c0,1.42.76,2.27,2,2.27H108a2.23,2.23,0,0,0,1.63-.63,3,3,0,0,0,.7-2.23V37.24c0-1.41,0-2.1-.24-2.4a.67.67,0,0,0-.49-.17h-.11v-.41l.48.05h0a4,4,0,0,1,.5.06,7.35,7.35,0,0,0,1.14-.12v.42c-.66,0-.72.3-.72,1.14v2c0,.08,0,.16,0,.25v0a5.15,5.15,0,0,1-.59,2.69A3.22,3.22,0,0,1,107.73,42.08Zm16.2-.13h-.42l-5.14-6.44a16.62,16.62,0,0,1-.18,1.73c0,1.4.08,2.48.1,2.93v.14c0,.34,0,.54,0,.63.12.47.29.6.84.6v.3l-.57,0-.57,0-.57,0-.57,0v-.3c.59-.06.78-.29.84-1v0c0-.47.07-2.22.12-5.11,0-.54-.17-.72-.79-.72h-.35v-.42l.47.05h0a4.51,4.51,0,0,1,.53.07,4.51,4.51,0,0,1,.72-.12l5,6.14V39a28.6,28.6,0,0,0-.12-3.7c-.06-.5-.32-.6-.71-.6v-.42a5.3,5.3,0,0,0,.56.07c.17,0,.36,0,.57,0a8.08,8.08,0,0,0,.86-.08h.06l.22,0v.42h0a.67.67,0,0,0-.83.83c0,.44-.12,2.39-.12,6.45Zm42.51,0h-.72c-.85,0-1.29-.3-1.85-1.31l-1-1.55h0c-.18-.35-.3-.59-.42-.59a1,1,0,0,0-.39-.07l-.44,0v2c0,.84.06,1.13.71,1.13h.12v.3l-.65,0a6.12,6.12,0,0,1-.66,0q-.33,0-.72,0t-.72,0v-.3h0a.82.82,0,0,0,.67-.19c.15-.15.19-.43.16-.94V35.51a.91.91,0,0,0-.12-.7.58.58,0,0,0-.43-.15h-.17a0,0,0,0,0,0,0h0a.13.13,0,0,0-.09,0v-.42a11,11,0,0,1,1.14.12,8.22,8.22,0,0,0,1-.06h.05c.23,0,.46,0,.69-.05h.16a2.9,2.9,0,0,1,1.16.24l-.15.2.15-.2A1.73,1.73,0,0,1,165,36.23a1.61,1.61,0,0,1-1.35,1.84h-.2l1.14,2.15c.46.86.76,1.43,1.85,1.43V42Zm-4.9-7.27V38l.36,0,.35,0h.17a1.64,1.64,0,0,0,1.23-.43A1.49,1.49,0,0,0,164,36.4a1.69,1.69,0,0,0-.54-1.37,1.84,1.84,0,0,0-1.11-.36h-.8Zm19.79,7.18-.66,0-.72,0-.72,0v-.3h.12a.75.75,0,0,0,.56-.17c.15-.16.2-.45.16-1V35.51a.91.91,0,0,0-.12-.7.54.54,0,0,0-.43-.14h-.17a0,0,0,0,0,0,0h0l-.09,0v-.41l.72.05h.11l.61.06c.34,0,.67,0,1-.08h.12l.19,0v.42c-.8,0-.83.34-.83,1.31V40.4c0,.84.06,1.13.71,1.13H182v.3a6.18,6.18,0,0,1-.65,0Zm-49.74,0-.72,0-.66,0-.66,0v-.3h0c.65,0,.83-.25.83-1.14V35.51c0-.61-.16-.84-.57-.84h-.15a.1.1,0,0,0-.08,0,0,0,0,0,0,0,0h0v-.41l.63.05h0c.22,0,.43,0,.64.06a8.4,8.4,0,0,0,1-.07h.07l.36,0v.42h0a.89.89,0,0,0-.68.18c-.17.18-.18.51-.14,1.13V40.4c0,.51,0,.8.12,1a.79.79,0,0,0,.59.16h.12v.3q-.33,0-.72,0Zm69.4,0-.65,0-.66,0-.66,0h.18v-.3c.6,0,.78-.25.84-1.14V39.09l-2.15-3.87a1.17,1.17,0,0,0-1-.72v-.3c.22,0,.44,0,.65,0l.67.07c.44,0,.88-.06,1.31-.12v.3c-.4.07-.6.2-.6.42s0,.24.12.3l1.73,3.16,1.56-3.16a1.34,1.34,0,0,1,.07-.18h0a.19.19,0,0,0,0-.1c0-.24-.17-.3-.71-.42v-.3c.14,0,.31,0,.52,0h.05a3.43,3.43,0,0,1,.56.07l1-.12v.3a1.13,1.13,0,0,0-1,.71l-2,3.58V40.4c0,.84.07,1.13.84,1.13v.3q-.33,0-.66,0Zm-10.87,0-.72,0-.72,0-.72,0v-.3h0a1.11,1.11,0,0,0,.79-.2,1.3,1.3,0,0,0,.22-.93V34.68h-.72c-1.38,0-1.8.34-1.85,1.55h-.3v-2h6.57v2h-.3c-.06-1.36-.5-1.49-1.85-1.55h-.72v5.77c.06.79.08,1.08,1,1.08v.3q-.3,0-.72,0Zm-35.34,0h-5.32v-.3h0a.9.9,0,0,0,.67-.19c.14-.16.19-.43.16-1V35.51a.91.91,0,0,0-.13-.7.52.52,0,0,0-.43-.14h-.16s0,0,0,0h0l-.07,0h0v-.42c.3,0,.65,0,1.06.06s.74,0,1.09.06h.24c.88,0,1.77,0,2.63-.12a.27.27,0,0,1,0,.3,13.65,13.65,0,0,1,.12,1.55h-.3c-.06-1.13-.62-1.32-1.85-1.32h-1.2v2.87H152c.63,0,1.12,0,1.32-.24a.6.6,0,0,0,.12-.48s0,0,0,0,0-.06,0-.1h.3a2.91,2.91,0,0,1,0,1,2.86,2.86,0,0,1,0,1h-.3a.73.73,0,0,0-.16-.53,1.06,1.06,0,0,0-.77-.2h-.39a.4.4,0,0,0-.21,0,6,6,0,0,0-.62,0V40.4c0,.45,0,.7.11.84s.49.17,1,.17c1.61,0,2.15-.11,2.45-1.43h.24v.12h0v0c-.1.53-.21,1.19-.27,1.69ZM152.64,31.4h-.32a15.06,15.06,0,0,1-10.09-3.67,12.54,12.54,0,0,1-3.1-4.25A13.48,13.48,0,0,1,138,17.92a15.13,15.13,0,0,1,4.07-10.6,13.85,13.85,0,0,1,4.63-3.15A15.77,15.77,0,0,1,152.63,3a44,44,0,0,1,10.76,1.55,13.84,13.84,0,0,1-.06,1.82c0,.46-.06.94-.06,1.34V9h0a.45.45,0,0,1-.35.31c-.13,0-.25-.1-.37-.3-2.76-3.57-5.17-4.72-9.92-4.72h-.12a10.92,10.92,0,0,0-7.8,3.21,12.56,12.56,0,0,0-3.44,9.08c-.06,7.57,5.16,13.54,11.9,13.6,4.24-.06,8.06-2.36,11.36-6.86V26.5A14.26,14.26,0,0,1,159.34,30,17.93,17.93,0,0,1,152.64,31.4Z" transform="translate(0 0)"/>
+                                    <path class="b" d="M164.59,31.39c3.17-.06,5.68-.12,8.49-.12,2.33.06,6.33.12,11.47.12.06-.18.42.3.6-.6.06-1.91.48-3.64.6-5.85.18-.41-.71-1.19-.71,0-1,4.78-4,5.25-9.63,5.31-4.06-.06-4.48-.41-4.42-3.7V17.49h4.18c3.41,0,4.49,0,4.73,2.15a.57.57,0,0,0,1.13,0,27.76,27.76,0,0,1,0-3.16,22.9,22.9,0,0,1,0-2.87c-.18-1.07-1.13-.6-1.13-.12.11,2.27-1.68,2.81-5.62,2.87-.78-.06-2.4-.06-3.29-.12V5h3.16c6,0,8.55.47,8.61,4.41.06.66,1,.42,1,0,0-2.09-.12-2.74-.12-4.41V3.59c-4.85.18-9.21.18-11.48.12s-4.48,0-7.3-.12c-.53-.06-.83,1.2,0,1.32,2-.06,2.75.77,2.75,3V26.21c.06,3-.12,4.23-2.75,4.3-.95-.06-.77.95-.3.89Z" transform="translate(0 0)"/>
+                                    <path class="b" d="M200.22,4.07a13.23,13.23,0,0,0-3.95-.6c-1.91.06-4,.36-6.46.3a28.6,28.6,0,0,1-3.7-.12c-.42.12-.72,1.19.12,1.31,2,0,2.69.42,2.75,2.75V27c0,2.92-.12,3.16-2.57,3.46-.9.12-.9,1,.12,1,2,0,2.87-.06,4,0s2.51-.06,4.6,0c.66,0,1.08-.89,0-1-2.75-.12-2.87-1.26-2.87-4.3V18.45a24.54,24.54,0,0,1,4.19.3c.47.24.9,1.37,1.73,2.74l3.59,5.85c2,3.34,4.24,4.54,7.77,4.6.72-.06.42-.06,1.31-.12.66,0,.48-1,0-.84-3-.06-4.54-2-6.45-5.43L199.79,18a7.31,7.31,0,0,0,5.44-6.86c-.12-3.52-1.79-6-5-7l-.83,1.85C201.11,7,202,8.9,202,11.53c0,3.76-2.22,5.73-6.34,5.73a25.26,25.26,0,0,1-3.47-.3V5c1.08-.06,2.57-.11,3.17-.11a7.45,7.45,0,0,1,4,1Z" transform="translate(0 0)"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="screen-reader-text">Mercer University</span>
+                    </a>
+                </div>
+
+                <div class="header-right-wrap">
+                    <nav id="header-menu-wrap">
+                        <span class="screen-reader-text">
+                            Secondary Menu
+                        </span>
+                        <ul id="menu-header-menu" class="header-menu"><li id="menu-item-5925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5925"><a href="https://www.mercer.edu/academics/program-finder/">Programs</a></li>
+<li id="menu-item-5923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5923"><a href="https://www.mercer.edu/admissions/">Admissions</a></li>
+<li id="menu-item-5924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5924"><a href="https://www.mercer.edu/give/">Give</a></li>
+</ul>                    </nav>
+
+                    <button type="button" id="search-open-button" aria-haspopup="true" aria-expanded="false">
+                        <span class="screen-reader-text">
+                            Site Search
+                        </span>
+                        <span class="ikes-search-alt"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-info">
+                                <nav id="primary-nav" role="navigation">
+                    <button type="button" href="#primary-menu" id="primary-nav-button" class="primary-menu-toggle" aria-haspopup="true" aria-expanded="false">
+                        <span class="screen-reader-text">
+                            Primary Menu
+                        </span>
+                        <span class="nav-button-icon"></span>
+                    </button>
+                    <div id="primary-menu-wrap">
+                        <div class="inner-container">
+                            <div class="menu-proper">
+                                <ul id="primary-menu" class="primary-menu"><li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-332"><a href="https://www.mercer.edu/academics/">Academics</a>
+<ul class="sub-menu">
+	<li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="https://www.mercer.edu/academics/program-finder/">Program Finder</a></li>
+	<li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341"><a href="https://www.mercer.edu/academics/traditional-undergraduate-program/">Traditional Undergraduate Program</a></li>
+	<li id="menu-item-6576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6576"><a href="https://www.mercer.edu/academics/bachelors-degrees-for-working-adults/">Degrees for Working Adults</a></li>
+	<li id="menu-item-347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-347"><a href="https://www.mercer.edu/academics/graduate-professional-study/">Graduate and Professional Study</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="https://www.mercer.edu/academics/online-distance-learning/">Online Programs and Distance Learning</a></li>
+	<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-339"><a href="https://www.mercer.edu/academics/schools-colleges/">Schools and Colleges</a></li>
+	<li id="menu-item-1291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1291"><a href="https://www.mercerabroad.com/">Study Abroad</a></li>
+	<li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355"><a href="https://www.mercer.edu/academics/centers-and-institutes/">Academic Centers and Institutes</a></li>
+	<li id="menu-item-4943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4943"><a href="https://www.mupress.org/">Mercer University Press</a></li>
+	<li id="menu-item-1292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1292"><a href="http://registrar.mercer.edu/">Office of the Registrar</a></li>
+	<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="https://www.mercer.edu/academics/libraries/">Libraries</a></li>
+	<li id="menu-item-1294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1294"><a href="http://provost.mercer.edu/">Office of the Provost</a></li>
+</ul>
+</li>
+<li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-333"><a href="https://www.mercer.edu/admissions/">Admissions</a>
+<ul class="sub-menu">
+	<li id="menu-item-428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-428"><a href="https://undergrad.mercer.edu">Traditional Undergraduate Admissions</a></li>
+	<li id="menu-item-429" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-429"><a href="https://mercerforyou.com/">Working Adults Undergraduate Admissions</a></li>
+	<li id="menu-item-364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364"><a href="https://www.mercer.edu/admissions/graduate-professional/">Graduate and Professional Admissions</a></li>
+	<li id="menu-item-367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="https://www.mercer.edu/admissions/online-programs-admission/">Online Programs Admissions</a></li>
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="https://www.mercer.edu/admissions/certificate-non-degree-programs/">Certificate and Non-Degree Programs</a></li>
+	<li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="https://www.mercer.edu/admissions/military/">Military Alliance</a></li>
+	<li id="menu-item-430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-430"><a href="http://financialaid.mercer.edu/">Financial Planning</a></li>
+	<li id="menu-item-8587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8587"><a href="https://www.mercer.edu/mercer-next/">Mercer Next</a></li>
+</ul>
+</li>
+<li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-337"><a href="https://www.mercer.edu/life-at-mercer/">Life at Mercer</a>
+<ul class="sub-menu">
+	<li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="https://www.mercer.edu/life-at-mercer/activities-organizations/">Activities and Organizations</a></li>
+	<li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="https://www.mercer.edu/life-at-mercer/diversity-and-inclusion/">Diversity and Inclusion</a></li>
+	<li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="https://www.mercer.edu/life-at-mercer/health-safety/">Health and Safety</a></li>
+	<li id="menu-item-375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-375"><a href="https://www.mercer.edu/life-at-mercer/sports-and-recreation/">Sports and Recreation</a></li>
+	<li id="menu-item-377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-377"><a href="https://www.mercer.edu/life-at-mercer/life-in-macon/">Life in Macon</a></li>
+	<li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-379"><a href="https://www.mercer.edu/life-at-mercer/life-in-atlanta/">Life in Atlanta</a></li>
+	<li id="menu-item-376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="https://www.mercer.edu/life-at-mercer/life-in-savannah/">Life in Savannah</a></li>
+	<li id="menu-item-378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378"><a href="https://www.mercer.edu/life-at-mercer/life-in-columbus/">Life in Columbus</a></li>
+	<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380"><a href="https://www.mercer.edu/life-at-mercer/housing-dining/">Housing and Dining</a></li>
+</ul>
+</li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-331"><a href="https://www.mercer.edu/about-mercer/">About Mercer</a>
+<ul class="sub-menu">
+	<li id="menu-item-381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-381"><a href="https://www.mercer.edu/about-mercer/mission-and-vision/">Mission and Vision</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="https://www.mercer.edu/about-mercer/traditions/">Traditions</a></li>
+	<li id="menu-item-383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-383"><a href="https://www.mercer.edu/about-mercer/history/">History</a></li>
+	<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="https://www.mercer.edu/about-mercer/facts-and-figures/">Facts and Figures</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-386"><a href="https://www.mercer.edu/about-mercer/office-of-the-president/">Office of the President</a></li>
+	<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="https://www.mercer.edu/about-mercer/office-of-the-chancellor/">Office of the Chancellor</a></li>
+	<li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="https://www.mercer.edu/about-mercer/board-of-trustees/">Board of Trustees</a></li>
+	<li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-390"><a href="https://www.mercer.edu/about-mercer/deans/">Deans</a></li>
+	<li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"><a href="https://www.mercer.edu/about-mercer/awards-recognitions/">Awards and Recognitions</a></li>
+	<li id="menu-item-392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392"><a href="https://www.mercer.edu/about-mercer/locations/">Locations</a></li>
+	<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://www.mercer.edu/about-mercer/notable-alumni/">Notable Alumni</a></li>
+	<li id="menu-item-394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"><a href="https://www.mercer.edu/about-mercer/organizational-leadership/">Organizational Leadership</a></li>
+</ul>
+</li>
+<li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-334"><a href="https://www.mercer.edu/discovery-and-innovation/">Discovery and Innovation</a>
+<ul class="sub-menu">
+	<li id="menu-item-6633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6633"><a href="https://www.mercer.edu/discovery-and-innovation/research-that-reaches-out/">Research that Reaches Out</a></li>
+	<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396"><a href="https://www.mercer.edu/discovery-and-innovation/undergraduate-research/">Undergraduate Research</a></li>
+	<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-397"><a href="https://www.mercer.edu/discovery-and-innovation/graduate-and-professional-research/">Graduate and Professional Research</a></li>
+	<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://www.mercer.edu/discovery-and-innovation/goldwater-scholars/">Goldwater Scholars</a></li>
+	<li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"><a href="https://www.mercer.edu/discovery-and-innovation/bear-day/">BEAR Day</a></li>
+	<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="https://www.mercer.edu/discovery-and-innovation/atlanta-research-conference/">Atlanta Research Conference</a></li>
+	<li id="menu-item-5471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5471"><a href="http://mic.mercer.edu/">Mercer Innovation Center</a></li>
+	<li id="menu-item-5472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5472"><a href="https://arts.mercer.edu/">The Arts at Mercer</a></li>
+</ul>
+</li>
+<li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-336"><a href="https://www.mercer.edu/global-impact/">Global Impact</a>
+<ul class="sub-menu">
+	<li id="menu-item-414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"><a href="https://www.mercer.edu/global-impact/mercer-on-mission/">Mercer On Mission</a></li>
+	<li id="menu-item-415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-415"><a href="https://www.mercer.edu/global-impact/strengthening-communities/">Strengthening Communities</a></li>
+	<li id="menu-item-5221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5221"><a href="https://www.mercerabroad.com/">Study Abroad</a></li>
+	<li id="menu-item-420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-420"><a href="https://www.mercer.edu/global-impact/international-students/">International Students</a></li>
+	<li id="menu-item-1339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1339"><a href="https://www.mercer.edu/global-impact/eli/">English Language Institute</a></li>
+	<li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="https://www.mercer.edu/global-impact/peace-corps/">Peace Corps</a></li>
+</ul>
+</li>
+<li id="menu-item-5476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5476"><a href="https://www.mercer.edu/athletics/">Athletics</a></li>
+</ul>                            </div>
+                            <div class="menu-extras">
+                                <div class="header-menu-bring-in">
+                                    <h4>Info For</h4>
+                                    <ul id="header-menu-bring-in" class="header-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5925"><a href="https://www.mercer.edu/academics/program-finder/">Programs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5923"><a href="https://www.mercer.edu/admissions/">Admissions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5924"><a href="https://www.mercer.edu/give/">Give</a></li>
+</ul>                                </div>
+                                <div class="menu-quick-links">
+                                    <h4>Quick Links</h4>
+                                    <ul id="menu-header-quick-links" class="quick-links"><li id="menu-item-615" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-615"><a href="https://news.mercer.edu">News</a></li>
+<li id="menu-item-614" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-614"><a href="https://events.mercer.edu/">Events</a></li>
+<li id="menu-item-9137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9137"><a href="https://den.mercer.edu">The Den</a></li>
+<li id="menu-item-5211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5211"><a href="http://alumni.mercer.edu/">Alumni</a></li>
+<li id="menu-item-7562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7562"><a href="https://outlook.office365.com">Email</a></li>
+<li id="menu-item-7524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7524"><a href="https://merceru.instructure.com/">Canvas</a></li>
+<li id="menu-item-616" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="https://my.mercer.edu">MyMercer</a></li>
+<li id="menu-item-617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-617"><a href="http://alert.mercer.edu/">Mercer Alerts</a></li>
+</ul>                                </div>
+                                <div class="menu-connect-with-us">
+                                    <h4>Connect With Us</h4>
+                                    <ul>
+<li><a href="https://www.google.com/maps/place/1501+Mercer+University+Dr,+Macon,+GA+31207" target="_blank" rel="noopener">1501 Mercer University Drive<br />
+Macon, GA 31207</a></li>
+<li><a href="https://www.google.com/maps/place/3001+Mercer+University+Dr,+Atlanta,+GA+30341" target="_blank" rel="noopener">3001 Mercer University Drive<br />
+Atlanta, GA 30341</a></li>
+<li><a href="https://www.google.com/maps/place/Mercer+School+of+Medicine+Savannah+Campus,+1250+E+66th+St,+Savannah,+GA+31404" target="_blank" rel="noopener">1250 East 66th Street<br />
+Savannah, GA 31404</a></li>
+<li><a href="tel:18006372378">1-800-MERCER-U</a></li>
+</ul>
+
+                                    <div class="menu-social-links">
+                                        
+<div class="social-links">
+			<a target="_blank" href="https://www.facebook.com/MercerUniversity/" class="facebook-link" title="Like us on Facebook!">
+			<p class="sr-only">Open Facebook page in new window</p>
+			<span class="ikes-facebook" aria-hidden="true"></span>
+		</a>
+				<a target="_blank" href="https://twitter.com/MercerYou" class="twitter-link" title="Follow us on Twtter!">
+			<p class="sr-only">Open Twitter page in new window</p>
+			<span class="ikes-twitter" aria-hidden="true"></span>
+		</a>
+    			<a target="_blank" href="https://www.instagram.com/merceryou" class="instagram-link" title="Follow us on Instagram!">
+			<p class="sr-only">Open Instagram page in new window</p>
+			<span class="ikes-instagram" aria-hidden="true"></span>
+		</a>
+					<a target="_blank" href="http://www.youtube.com/user/MercerUniversity/" class="youtube-link" title="Follow our Youtube channel!"> 
+			<p class="sr-only">Open YouTube page in new window</p>
+			<span class="ikes-youtube" aria-hidden="true"></span>
+		</a>
+	</div>                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                                <div id="search-box" hidden aria-hidden="true">
+                    <div class="outer-container">
+                        <div class="container">
+                            <div class="search-tabs-wrapper tabs-wrapper">
+    <div class="tab-content-wrapper">
+        <div id="search-website" class="tab-content tab-current" role="tabpanel" aria-labelledby="tab_1">
+            <form autocomplete="off" role="search" method="get" class="search-form" action="https://search.mercer.edu/">
+                <div class="search-form-row">
+                    <label for="merc-web-search" class="screen-reader-text">Search the website</label>
+                    <input id="merc-web-search" type="search" class="search-field" placeholder="Search" value="" name="q">
+                    <button id="merc-web-btn" type="submit" class="search-button" value="Search">&rarr;</button>
+                </div>
+            </form>
+        </div>
+        <div id="search-directory" class="tab-content" role="tabpanel" aria-labelledby="tab_2">
+            <form autocomplete="off" role="search" method="post" class="search-form" action="https://directory.mercer.edu/">
+                <div class="search-form-row">
+                    <label for="merc-dir-search" class="screen-reader-text">Search directory</label>
+                    <input id="merc-dir-search" type="search" class="search-field" placeholder="Search" value="" name="txtSearch">
+                    <button id="merc-dir-btn" type="submit" class="search-button" value="Search">&rarr;</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="tab-menu-wrapper tabs">
+        <input type="checkbox" id="tab_1" class="tab-link tab-current" data-tab="search-website" role="tab" aria-selected="true" aria-controls="search-website" name="search-tab-group">
+        <label class="tab-link-label" for="tab_1"><span class='screen-reader-text'>Search the</span> Website</label>
+
+        <input type="checkbox" id="tab_2" class="tab-link" data-tab="search-directory" role="tab" aria-selected="false" aria-controls="search-directory" name="search-tab-group">
+        <label class="tab-link-label" for="tab_2"><span class='screen-reader-text'>Search the</span> Directory</label>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <nav id="tier3-nav">
+                    <div class="tier3-menu-toggle-wrap">
+                        <a class="tier3-menu-home-link" href="https://www.mercer.edu/coronavirus/">
+                            <span class="tier3-menu-home-link-text">
+                                <span class="sr-only">Go back to </span>
+                                Coronavirus                            </span>
+                        </a>
+                        <button type="button" href="#tier3-menu" id="tier3-nav-button" class="tier3-menu-toggle" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Coronavirus Menu Toggle</span>
+                            <span class="button-icon ikes-chevron-down"></span>
+                            <span class="button-icon ikes-chevron-up"></span>
+                        </button>
+                    </div>
+
+                    <div id="tier3-menu-wrap">
+                        <ul id="tier3-menu" class="menu single-tier"><li id="menu-item-8970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8970"><a href="https://www.mercer.edu/coronavirus/student-information-by-school-college/">Student Information by School/College</a></li>
+<li id="menu-item-8806" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8806"><a href="https://www.mercer.edu/coronavirus/university-communications/">University Communications</a></li>
+<li id="menu-item-9118" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9093 current_page_item menu-item-9118"><a href="https://www.mercer.edu/coronavirus/faq/" aria-current="page">Frequently Asked Questions</a></li>
+<li id="menu-item-9056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9056"><a href="https://www.mercer.edu/coronavirus/facilities-and-services/">Facilities and Services</a></li>
+<li id="menu-item-9526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9526"><a href="https://www.mercer.edu/coronavirus/cares-act/">Emergency Financial Aid Grants to Students under the CARES Act</a></li>
+<li id="menu-item-8807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8807"><a href="https://international.mercer.edu/study-abroad/register-my-travel/">International Travel Registration</a></li>
+</ul>                    </div>
+                </nav>
+                <script>
+                    jQuery(document).ready(function() {
+                        MRNav.init({
+                            'mobile-start': 99999,
+                            'hover-disable': true,
+                            'nav-id': 'tier3-nav',
+                            'nav-button-id': 'tier3-nav-button',
+                            'menu-wrap-id': 'tier3-menu-wrap',
+                            'menu-id': 'tier3-menu',
+                            'overlay-id': 'mr-navigation-overlay',
+                        });
+                    });
+                </script>
+                        </header><main id="primary-wrap" class="primary_content_wrap" role="main">
+	                                <article id="post-9093" class="page main-article post-9093 type-page status-publish hentry">
+                <section class="hero hero-interior-page has-diamond ">
+    <div class="module-wrap">
+        <div class="outer-container">
+            <div class="container">
+                <div class="content-wrap">
+                    <h1 class="title">Frequently Asked Questions</h1>
+                    
+                                            <div class="excerpt"><p><span style="font-weight: 400;">Last Update:  7/1/20 | 1 p.m.</span></p>
+</div>
+                                        </div>
+            </div>
+        </div>
+
+        <div class="hero-bkgr-container" aria-hidden="true">
+            <div class="hero-bkgr-pattern dark-pattern"></div>
+        </div>
+    </div>
+</section>    <div  class="module module-related-links rmv-bot">
+        <div class="outer-container">
+            <div class="container">
+                                    <div class="link-container">
+                     
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-cares-act" class="related-link" >
+                                                                <div class="text-wrap">
+                                    CARES Act Student Emergency Relief Grants                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-exposure-health-wellness" class="related-link" >
+                                                                <div class="text-wrap">
+                                    COVID-19 Exposure, Health and Wellness                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-campus-operations" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Campus Operations and General Questions                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-academic-information" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Academic Information                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-housing" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Housing                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-financial-matters" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Financial Matters                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-event-information" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Event Information                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-counseling" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Counseling                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-online-learning" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Online Teaching and Learning                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-advising-registration" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Advising and Registration                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-library-resources" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Library Resources                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-access-accommodations" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Access and Accommodations                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-tutoring" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Tutoring                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle ">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-travel" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Travel                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  odd">
+                                                                    <a href="/coronavirus/faq/#module-standard-content-faculty-staff" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Faculty and Staff                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap  ">
+                                                                    <a href="https://undergrad.mercer.edu/covid-19-faqs/" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Traditional Undergraduate Admissions                                </div>
+                                                                    </a>
+                                                            </div>
+                             
+                            <div class="related-link-wrap middle odd">
+                                                                    <a href="https://workingadults.mercer.edu/covid-19-frequently-asked-questions/" class="related-link" >
+                                                                <div class="text-wrap">
+                                    Working Adults Undergraduate Admissions                                </div>
+                                                                    </a>
+                                                            </div>
+                                                </div>
+                                </div>
+        </div>
+    </div>
+        <section id="module-standard-content-cares-act" class="module content standard-content none">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>CARES Act Student Emergency Relief Grants</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What is the CARES Act/HEERF?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Coronavirus Aid, Relief, and Economic Security Act (CARES Act) is one of several acts passed by the US Congress and signed into law by President Donald J. Trump in the spring of 2020 for the purpose of providing relief to Americans and American businesses during the onset of the COVID-19 pandemic.  Institutions of higher education were supported by the Higher Education Emergency Relief Fund (HEERF) as part the CARES Act.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Am I eligible to receive an Emergency Financial Aid Grant under the CARES Act?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Students who were enrolled for the spring 2020 semester as of March 13, 2020, and based on U.S. Department of Education guidance, meet <strong>all</strong> of the following criteria can apply:</p>
+<ul>
+<li>The student incurred <strong>expenses directly related to the disruption of campus operations</strong> due to Covid-19;</li>
+<li>The student is <strong>Title IV eligible as determined by the 2019-20 Free Application for Federal Student Aid (FAFSA).</strong></li>
+<li>The student was <strong>NOT exclusively enrolled in distance education or online</strong> courses as of March 13, 2020.</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I am a graduate student, can I apply for a CARES Act Emergency Financial Aid Grant?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, graduate students may apply.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I receive an application to apply for the CARES Act Emergency Financial Aid Grant?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>All students who meet eligibility requirements for the CARES Act Emergency Financial Aid Grant will have an application link sent to their <b>Mercer email account</b> on May 19, 2020. Students must submit their application by 5:00 p.m. on June 1, 2020, to be considered for funding.  Title IV eligible students that have not completed a 2019-20 FASFA must also have their <a href="file:///C:/Users/mitchell_em/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/2X1TOOJ6/studentaid.gov">FAFSA</a> processed and received at Mercer by June 1, 2020, 5:00 p.m. deadline.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are eligible expenses for CARES Act Emergency Financial Aid Grants?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Eligible expenses are those expenses included in Cost of Attendance and include, but are not limited to the following expenses: food, housing, course materials, technology, health care, and child care.  Applicants are required to confirm that they incurred eligible expenses related to the disruption of campus operations due to COVID-19 by submitting a CARES Act Application.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can I apply for a CARES Act Emergency Grant if I don’t have documentation for my expenses?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, you may apply without receipts. There is no documentation required.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are the criteria to determine Title IV eligibility?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Section 484 of the HEA states that <a href="https://financialaid.mercer.edu/application-guidelines.cfm">Title IV eligible</a> students must:</p>
+<ul>
+<li>Be enrolled or accepted for enrollment in a degree or certificate program.</li>
+<li>Not be enrolled in elementary or secondary school.</li>
+<li>For currently enrolled students, be making satisfactory academic progress.</li>
+<li>Not owe an overpayment on Title IV grants or loans.</li>
+<li>Not be in default on a Title IV loan.</li>
+<li>File “as part of the original financial aid application process” a certification that includes: a statement of educational purpose and student’s SSN.</li>
+<li>Be a U.S. citizen or national, permanent resident, or other eligible noncitizen.</li>
+<li>Have returned fraudulently obtained Title IV funds if convicted of or pled guilty or no contest to charges.</li>
+<li>Not have fraudulently received Title IV loans in excess of annual or aggregate limits.</li>
+<li>Have repaid Title IV loan amounts in excess of annual or aggregate limits if obtained inadvertently.</li>
+<li>Have Selective Service registration verified.</li>
+<li>Have Social Security Number verified.</li>
+<li>Not have a federal or state conviction for drug possession or sale, with certain time limitations.</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I didn’t file a 2019-20 Free Application for Federal Student Aid (FAFSA). Can I apply for a CARES Act Emergency Financial Aid Grant?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, you may submit a CARES Act Application. However, you must be eligible for Title IV funding as determined by having completed and filed the <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstudentaid.gov%2Fh%2Fapply-for-aid%2Ffafsa&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7Caa0f85386acd459c219b08d7fc0bfc82%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637255000811140665&amp;sdata=BmybWb%2FMQFx0E1V1SR4vgqPC%2B4NSIS9%2BvjBE5IHejfo%3D&amp;reserved=0">2019-20 FAFSA</a>.  If you submit a CARES Act Application, the application will not be reviewed until your Title IV eligibility has been determined based on the 2019-20 FAFSA.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can undocumented students and International students receive funds under the CARES Act?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>No, unfortunately, under Department of Education’s new guidance, undocumented students, Deferred Action for Childhood Arrivals (DACA) students, and international students are not eligible for CARES Act funding.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How much will eligible students receive through the CARES Act?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The CARES Act allocation will be divided between eligible undergraduate and graduate/professional students based on the percentage of enrollment at Mercer. Payments will be distributed to eligible undergraduate and graduate students based on need as determined by the 2019-20 FAFSA with an emphasis on providing additional support to the neediest populations. Funding for eligible students will range from $200 to $600.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">When will eligible students begin to receive CARES Act Emergency Financial Aid Grant Payments?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The distribution of funds to eligible students will begin the week of June 1, 2020. If you meet the eligibility criteria and submitted your CARES Act Application, please contact <a href="mailto:FinancialPlanning@Mercer.edu">Financial Planning</a> if you have not received a CARES Act payment by June 15, 2020.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Am I eligible to receive any additional assistance from the CARES Act?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The CARES Act does provide some relief to students, borrowers and parents. Each student’s specific situation may be different. Additional information can be found at <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstudentaid.gov%2Fannouncements-events%2Fcoronavirus&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7Caa0f85386acd459c219b08d7fc0bfc82%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637255000811145655&amp;sdata=f1utXdWkr2QYRhv0PUdtl%2B%2BZKttlgFFGRpR8pqVaRog%3D&amp;reserved=0">https://studentaid.gov/announcements-events/coronavirus</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How will CARES Act Emergency Financial Aid Grant payments be released to students?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Funds will be released through your student account based on your previously selected refund method.  We recommend you review your <a href="https://bursar.mercer.edu/atlanta/refund-checks/">refund options</a> on the Bursar’s website.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I receive a CARES Act Emergency Financial Aid Grant and have an outstanding balance, will the Grant be applied to those charges?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>No, balances owed on student accounts will not be deducted from the CARES Act emergency grant funds.  Any balance on the account is still the responsibility of the student.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">COVID-19 has impacted my personal financial situation (e.g., I am worried about my financial ability to continue my education at Mercer University, etc.) – can the university help?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The University’s Financial Planning Office is always available to look at each student’s unique situation and evaluate all financial aid options. Please contact your Financial Planning Counselor for any special circumstances.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I receive a CARES Act Emergency Financial Aid Grant, will the payment be included in my gross income?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Internal Revenue Services has issued the following guidance: <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.irs.gov%2Fnewsroom%2Ffaqs-higher-education-emergency-relief-fund-and-emergency-financial-aid-grants-under-the-cares-act&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7Caa0f85386acd459c219b08d7fc0bfc82%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637255000811150644&amp;sdata=snDGGFGMHGhTa0st3Ag9kf3PrHbmzD6f%2Fc0T3NlRUjU%3D&amp;reserved=0" target="_blank" rel="noopener">Higher Education Emergency Relief Fund and Emergency Financial Aid Grants under the CARES Act</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I receive a CARES Act Emergency Financial Aid Grant, is it considered financial aid?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>No, CARES Act funding is not considered financial aid awarded to you and will not impact your current financial aid package.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-exposure-health-wellness" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>COVID-19 Exposure, Health and Wellness</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What is COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Coronavirus disease 2019 (COVID-19) is a respiratory illness that can spread from person to person. The virus that causes COVID-19 is a novel coronavirus that was first identified during an investigation into an outbreak in Wuhan, China.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How does COVID-19 spread?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">COVID-19 is a new disease, and the CDC is learning more about how the virus spreads. Please refer to the </span><a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/transmission.html"><span style="font-weight: 400;">CDC website</span> </a><span style="font-weight: 400;">for the most current information.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are the symptoms of COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Patients with COVID-19 have mild to severe respiratory illness with symptoms of fever, cough and shortness of breath. In severe cases, patients with COVID-19 have developed pneumonia in both lungs.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Is there a vaccine for COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>There is currently no vaccine to protect against COVID-19. The best way to prevent infection is to avoid being exposed to the virus that causes COVID-19.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How can I help protect myself from COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The same measures that are urged to prevent the spread of any respiratory virus are increasingly important:</p>
+<ul>
+<li>Avoid close contact with people who are sick.</li>
+<li>Cover your mouth and nose with a tissue or your sleeve (not your hands) when coughing or sneezing.</li>
+<li>Wash your hands often with soap and warm water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at least 60% alcohol if soap and water are not available.</li>
+<li>Avoid touching your eyes, nose, and mouth.</li>
+<li>Frequently clean and disinfect high touch surfaces with household cleaning spray or wipes.</li>
+<li>Practice social distancing (avoid shaking hands, maintain a 6-foot distance from individuals who are symptomatic and consider using teleconferencing instead of face-to-face meetings).</li>
+</ul>
+<p>Practice other good health habits, including getting plenty of sleep, being physically active, managing your stress, drinking plenty of fluids, and eating nutritious food.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What should I do if I think I may have COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">If you are a student and develop a cough or shortness of breath accompanied by a fever, immediately call the Student Health Center phone line at (478) 301-7425. The line is monitored 24 hours a day, seven days a week. Employees should call their health care provider. It is critical that employees do not report to work while experiencing symptoms including fever, cough, shortness of breath, runny or stuffy nose, body aches, headache, and chills. Faculty, staff, and students can also access a </span><a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"><span style="font-weight: 400;">coronavirus self-checker on the CDC’s website</span></a><span style="font-weight: 400;">.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What travel restrictions has Mercer put in place?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>If you recently traveled to countries that are listed as a <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/after-travel-precautions.html">CDC Warning Level 3 Travel Health Notice for COVID-19</a>, students should contact Mercer University Vice President for Student Affairs Dr. Doug Pearson by email at <a href="mailto:pearson_dr@mercer.edu">pearson_dr@mercer.edu</a> or by phone at (478) 301-2685 and employees should contact Human Resources by phone at (478) 301-2786, as soon as possible. If you traveled internationally to other locations, it is recommended that you conduct a self-observation period and remain alert for subjective fever, cough, or difficulty breathing for 14 days as a precaution.</p>
+<p>Faculty and staff who anticipate traveling abroad through Aug. 31, 2020, should <a href="https://international.mercer.edu/study-abroad/register-my-travel/">register that travel online</a>. While this registry is typically reserved for University-sponsored travel abroad, we are now asking that all international travel either for University business or for personal reasons be registered using this site.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false"><strong class='flag'>NEW</strong>What additional precautions have been taken by the University?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Mercer University places a priority on the safety and well-being of its students, faculty, staff and visitors. To mitigate the risks of spreading the novel coronavirus, Mercer is emphasizing personal responsibility through the “Bears Care” initiative and implementing the following measures:</p>
+<ul>
+<li>Providing every student, faculty and staff member with a “Bears Care Kit” that includes:
+<ul>
+<li>Mercer cloth mask</li>
+<li>Two-ounce bottle of hand sanitizer</li>
+<li>Digital thermometer</li>
+<li>Bears Care lapel pin</li>
+<li>Sticker with Student Health Center hotline number and list of COVID-19 symptoms</li>
+<li>Information card on proper mask usage and personal hygiene tips</li>
+<li>“Bears Care” pledge card to promote personal responsibility</li>
+</ul>
+</li>
+<li>A modified fall calendar to reduce travel-associated breaks</li>
+<li>A screening process by Mercer Medicine for all returning students, faculty and staff</li>
+<li>An on-campus COVID-19 testing facility</li>
+<li>Special accommodations for students who need to be isolated or quarantined</li>
+<li>An on-campus Student Health Center with a 24/7 hotline and access to leading infectious disease experts in the School of Medicine</li>
+<li>Enhanced sanitizing and disinfecting protocols in all facilities</li>
+<li>Classes have been adjusted to allow proper social distancing</li>
+<li>Mandatory masks in all classrooms and laboratories</li>
+<li>Temperature checks at entry points to high-traffic areas</li>
+<li>Hand sanitizing stations throughout our campuses</li>
+<li>Modified food service to incorporate additional safety protocols</li>
+<li>Reconfigured extracurricular activities that promote healthy practices</li>
+<li>Signage and posters across all campuses with reminders about social distancing and healthy practices</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How is the University keeping students, parents, faculty, and staff informed?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>As warranted, the University is sending e-mails to students, faculty and staff to keep them apprised of developments that impact the Mercer community. These communications are also being posted on the University’s coronavirus website: <a href="http://www.mercer.edu/coronavirus/">www.mercer.edu/coronavirus/</a>.</p>
+<p>As our students, faculty, and staff transition to online learning, remember that your Mercer family is always here for you. An important way that we support each other is through the spirit of community — whether that’s in person or virtually — and there’s no other community anywhere in the world like Mercer. We invite you to join<span class="apple-converted-space"> </span><a href="https://den.mercer.edu/">The Den</a><span class="apple-converted-space"> </span>— a new online gathering spot where you can follow the many good things that are happening across the University.<span class="apple-converted-space"> </span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false"><strong class='flag'>NEW</strong>What protocols have the university employed for testing and isolation?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Download the <a href="https://www.mercer.edu/wp-content/uploads/2020/06/Mercer20_Protocols-SHORT_FNL.pdf">Mercer University COVID-19 Protocols Flyer</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-campus-operations" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Campus Operations and General Questions</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false"><strong class='flag'>NEW</strong>Are students returning to campus for the Fall 2020 Semester?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes! We continue to plan for fall semester classes <strong>on campus</strong> with reasonable and deliberate safeguards to protect students, faculty, staff, and guests. Classes will begin as originally scheduled, but a modified calendar will be in place that will end most classes prior to the Thanksgiving break. The University will, nonetheless, remain open after Thanksgiving break and will continue to provide regular campus operations and student services such as dining, housing, recreational facilities, and the Student Health Center.</p>
+<p>Please refer to the University <a href="https://registrar.mercer.edu/">Registrar’s Office</a> for the revised 2020-21 academic calendars for all campuses.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Is the University Center (UC) on the Macon campus open?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, the University Center is currently open Monday – Friday from 9 a.m. – 7 p.m. and Saturday &#8212; Sunday from noon until 6 p.m. The fitness center is closed. Please check their website for additional information, <a href="https://uc.mercer.edu/hours">https://uc.mercer.edu/hours</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Are Mercer’s libraries open?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">In-person Library services/main floors are closed until further notice. 24/7 spaces continue to be accessible by Bear Card. To access cloud-based services, including research help, eBooks, eJournals, and electronic database access, visit </span><a href="https://libraries.mercer.edu/"><span style="font-weight: 400;">the Library&#8217;s website</span></a><span style="font-weight: 400;">.</span></p>
+<h4>Law School Library</h4>
+<p>For updated library hours and access information, <a href="https://law.mercer.edu/library/information/">click here.</a></p>
+<h4>Medical School Library</h4>
+<p>For updated library hours and access information, <a href="https://med.mercer.edu/library/library-resources.htm">click here</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Does the University send me emails to my personal email account?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>All official email communication from the University will be sent to your Mercer email account. You may also check your Mercer email via Office 365 online. Enter your Mercer University ID number followed by @live.mercer.edu (e.g. 12345678@live.mercer.edu) and enter the same password used to access your MyMercer account.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Will the Mercer Bus be running in downtown Macon?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Mercer Bus has suspended operations until further notice.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Are there dining options available on campus during the summer?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Fresh Food Company (“The Caf”) on the Macon campus will be open beginning June 22 for Summer Session 2.</p>
+<p><strong>Monday &#8211; Friday</strong></p>
+<ul>
+<li>Breakfast 7:30 – 8:30 a.m.</li>
+<li>Lunch 11:30 a.m. – 1 p.m.</li>
+<li>Dinner 5 – 6 pm..</li>
+</ul>
+<p><strong>Saturday and Sunday </strong></p>
+<ul>
+<li>Brunch 11 a.m. – 1 p.m.</li>
+</ul>
+<p>Atlanta food service is currently closed.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-academic-information" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Academic Information</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Has the University academic calendar been revised for the 2020-21 academic year?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes.  We continue to plan for fall with reasonable and deliberate safeguards to protect students, faculty, staff, and guests. As such, important changes have been made to the 2020-21 academic calendar.</p>
+<p>The revised calendar will minimize travel-associated breaks, meet accreditation-mandated contact hours per credit hour requirements, preserve the general University calendar, and minimize online instruction for face-to-face courses.</p>
+<p>Changes for the <strong>Macon residential campus</strong> include the following:</p>
+<ul>
+<li>Most classes will begin on Tuesday, August 18.</li>
+<li>The Labor Day holiday (September 7) and Fall Break (October 1-2) will not be observed, and classes will be held on those days.</li>
+<li>The last day of classes for fall term will be held on Tuesday, November 24. Students will not return to campus until the start of the spring semester as scheduled on January 7, 2021.</li>
+<li>Final exams will be administered online only on December 3-4 and 7-9.</li>
+</ul>
+<p>The first day of classes for the <strong>Atlanta campus</strong> and the <strong>Regional Academic Centers</strong> is Monday, August 17. The Labor Day holiday (September 7) will not be observed, and classes will be held on that day. Revised calendars for those programs, schools, and colleges are posted on the <a href="https://registrar.mercer.edu/">Registrar’s Office</a> website.</p>
+<p>The <strong>School of Medicine</strong>,<strong> School of Law</strong>, and <strong>programs offered entirely online</strong> will have slightly different calendars that will be communicated to students enrolled in those programs.</p>
+<p>Please refer to the University <a href="https://registrar.mercer.edu/">Registrar’s Office</a> for the revised 2020-21 academic calendars for all campuses.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Are summer classes online?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>All University courses for Summer Sessions I, II, and III (full semester) will be delivered online with the exception of some Macon traditional undergraduate Session II courses and some professional school programs. It is our intent to open the Macon Campus with some face-to-face instruction in Summer Session II, beginning in late June or July. Students enrolled in the colleges of Health Professions, Nursing, and Pharmacy will receive information from their respective deans regarding summer formats. All others will follow the schedule outlined above.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Is the bookstore open? How can I purchase textbooks?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The bookstore is open Monday-Friday, 10 a.m. – 4 p.m.</p>
+<h3>Online Delivery Available with Free Shipping</h3>
+<p>All textbooks can be purchased online through the campus bookstore website, <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer-macon.bncollege.com%2F&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C0a47561c7e924545591008d7f75b5a3a%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637249844040748205&amp;sdata=m7dGv95WerUAIbDTZ%2BmnYLCPSXwdcN67wPI%2FduZS0w8%3D&amp;reserved=0">https://mercer-macon.bncollege.com</a>.</p>
+<p><strong>Free ground shipping</strong> is available on all orders of course materials and general merchandise.</p>
+<p>Please remember that you may experience significantly longer shipping times than usual based on local conditions. To avoid any shipping delays that may occur with printed course materials, we recommend that you select available digital formats for any course materials you choose to purchase so that you have immediate access and are ready for the start of class.</p>
+<h3>Questions? Let us know!</h3>
+<ul>
+<li>Chris Blackwell, Store Manager, <a href="mailto:bksmercer@mercer.edu">bksmercer@mercer.edu</a></li>
+<li>Sophia Pope, Assistant Manager &#8211; Macon, <a href="mailto:am576@bncollege.com">am576@bncollege.com</a></li>
+<li>Kelsie Carayas, Assistant Manager &#8211; Atlanta, <a href="mailto:sm577@bncollege.com">sm577@bncollege.com</a></li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How should faculty order textbooks fall semester?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">Please continue to submit your summer or fall textbooks orders </span><a href="https://www.facultyenlight.com/?storeNbr=576"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">For questions about your textbook order, please email Chris Blackwell at </span><a href="mailto:SM576@bncollege.com"><span style="font-weight: 400;">SM576@bncollege.com</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">For current information on bookstore operations, please follow us on </span><a href="https://www.facebook.com/MercerBooks"><span style="font-weight: 400;">our social media channels</span></a><b>.</b></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I’m interested in a fellowship or merit scholarship program. What do I do?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Office of Fellowships and Scholarships will be available for advising sessions through Zoom, and students can <a href="https://ckfs.youcanbook.me/">make an appointment</a>. Many international study and internship programs have been suspended for this summer, but now is a good time for students to begin thinking about programs to consider for next year. Now is also time to begin work on applications for the <a href="https://us.fulbrightonline.org/">Fulbright U.S. Student Program</a>. Please contact Dr. David Davis at <a href="mailto:davis_da@mercer.edu">davis_da@mercer.edu</a> with additional questions.</p>
+<p>The Office of Fellowships and Scholarships assists students applying for nationally and internationally competitive merit scholarship programs that support undergraduate or graduate study, research, or work experiences, here or abroad. Fellowships support students in their efforts to do great work in the world and open doors to mentoring, graduate schools, and careers.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">GRADUATE STUDENTS: How will Mercer accommodate students who are defending their proposals/theses/dissertations while we’re having virtual classes?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Please consult with your committee chair and program director. The University has approved the use of video conferencing for the defense. Conferencing via Zoom is recommended.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">GRADUATE STUDENTS: How do I obtain signatures for my Approvals page?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>In the event that your committee member is unable to sign your Approvals page, the committee member may authorize another faculty member or administrator to sign on their behalf.  A document (typically an email or letter) indicating such signing permission should be submitted with the Approvals page. If no such signing designee is available, the committee member may email the approval to <a href="mailto:howard_ke@mercer.edu">howard_ke@mercer.edu</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">GRADUATE STUDENTS: May I submit my forms electronically?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, scanned copies of forms may be emailed directly to <a href="mailto:snow_la@mercer.edu">snow_la@mercer.edu</a> or <a href="mailto:howard_ke@mercer.edu">howard_ke@mercer.edu</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-housing" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Housing</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Is campus housing available for students over the summer?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Students with extenuating circumstances who may need campus housing over the summer may apply for housing by filling out a request on their <a href="https://studentsts-prod.mercer.edu/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.mercer.edu%252f%26wct%3d2020-05-08T14%253a54%253a59Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.mercer.edu%2f&amp;wct=2020-05-08T14%3a54%3a59Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;AppType=Portal&amp;Role=STUDENT">MyMercer</a> account.  Decisions will be made on a case-by-case basis.  Please note that student services will be extremely limited over the summer, and on-campus dining options may not be available.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Will students return to campus housing for the Fall 2020 Semester?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>At this time the University is anticipating the return of students in campus housing for the Fall 2020 Semester. Any updates will be communicated to you via your official Mercer email.  Students with questions or issues related to obtaining fall housing should call the <a href="https://residencelife.mercer.edu/">Office of Housing and Residence Life</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-financial-matters" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Financial Matters</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I have financial aid questions. Whom should I contact?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Students can continue to contact their Financial Aid Advisors via email or telephone. Students may also contact the <a href="https://financialaid.mercer.edu/">Office of Student Financial Planning</a> through our main line 478.301.2670. The Office of Student Financial Planning will return all messages left before 4 p.m. each day on the same day; messages after 4 p.m. will be returned on the next day.</p>
+<p>Students may schedule meetings with their Financial Aid Advisors through Starfish. Meetings will be held via Zoom or phone conference.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-event-information" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Event Information</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false"><strong class='flag'>NEW</strong>What is the plan for commencement?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Mercer University will hold the 2020 Commencement ceremonies to recognize and celebrate the remarkable achievements and diligent work of our newest graduates. The revised schedule is as follows:</p>
+<h4>2020 Commencement Schedule</h4>
+<h5>School of Law</h5>
+<p>Friday, August 7, 1 p.m.<br />
+Hawkins Arena, Macon Campus</p>
+<h5>Macon</h5>
+<p>Saturday, August 8, 9 a.m. and 3 p.m.<br />
+Hawkins Arena, Macon Campus</p>
+<h6>9 a.m. Ceremony</h6>
+<ul>
+<li>Stetson-Hatcher School of Business</li>
+<li>School of Engineering</li>
+<li>College of Education</li>
+<li>College of Professional Advancement</li>
+</ul>
+<h6>3 p.m. Ceremony</h6>
+<ul>
+<li>College of Liberal Arts and Sciences</li>
+<li>School of Music</li>
+<li>College of Health Professions</li>
+</ul>
+<h5>Atlanta</h5>
+<p>Sunday, August 9, 10 a.m and 5 p.m.<br />
+Infinite Energy Center, Gwinnett County</p>
+<h6>10 a.m. Ceremony</h6>
+<ul>
+<li>School of Business</li>
+<li>College of Education</li>
+<li>College of Professional Advancement</li>
+</ul>
+<h6>5 p.m. Ceremony</h6>
+<ul>
+<li>College of Health Professions</li>
+<li>College of Nursing</li>
+<li>College of Pharmacy</li>
+<li>School of Theology</li>
+</ul>
+<p>The <a href="https://www.mercer.edu/commencement/">Mercer Commencement website</a> contains detailed information for graduates and guests. Commencement ceremonies will also be livestreamed on the Mercer website. The traditional <strong>baccalaureate service</strong> will be held on Friday, August 7, at 6 p.m. in Willingham Auditorium on the Macon campus.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Will Mercer be hosting summer camps?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Mercer University is hosting a series of day camps in the month of July in compliance with government authorities, health officials and Governor Kemp’s executive orders regarding summer camps. We encourage you to check directly with the individual camp contact for announcements regarding any modifications of the program.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-counseling" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Counseling</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What if I’m in a crisis, what do I do?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>If you are experiencing a mental health crisis, please call:</p>
+<ul>
+<li>9-1-1</li>
+<li>Georgia Crisis and Access Line at 1-800-715-4225 (Georgia only)</li>
+<li>Mercer Police &#8211; MERPO (478-301-4357 for Macon-campus residents)</li>
+<li>Mercer Police &#8211; MERPO (678-547-6358 for Atlanta-campus residents)</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I contact a mental health counselor?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Mercer’s Counseling &amp; Psychological Services (CAPS) staff continue to support actively-enrolled Mercer students via telemental health services:</p>
+<ul>
+<li>Macon-based students, including all School of Medicine students, may contact CAPS Macon by calling 478-301-2862 or visiting <a href="https://counseling.mercer.edu/macon/">https://counseling.mercer.edu/macon/</a> for additional updates and information.</li>
+<li>Atlanta-based students and Atlanta-area Regional Academic Centers students may contact CAPS-ATL by calling 678-547-6060 or visiting <a href="https://counseling.mercer.edu/atlanta/">https://counseling.mercer.edu/atlanta/</a> for additional updates and information.</li>
+<li>Due to licensing laws and knowledge of resources, students continuing their studies online who are now residing out of Georgia are encouraged to visit the CAPS website for help in locating referrals or resources in your area and call CAPS if additional assistance is needed.</li>
+</ul>
+<p>Please consult each individual CAPS website for additional resources and information.</p>
+<ul>
+<li><a href="https://counseling.mercer.edu/macon/">https://counseling.mercer.edu/macon/</a></li>
+<li><a href="https://counseling.mercer.edu/atlanta/">https://counseling.mercer.edu/atlanta/</a></li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are other resources related to mental health and coping during the coronavirus outbreak?<span></span></button><div class="box" aria-hidden="true"></p>
+<ul>
+<li>The <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fdaily-life-coping%2Fmanaging-stress-anxiety.html%3FCDC_AA_refVal%3Dhttps%253A%252F%252Fwww.cdc.gov%252Fcoronavirus%252F2019-ncov%252Fprepare%252Fmanaging-stress-anxiety.html&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7Cd8f92ef597fc4a9b35d508d7d57ef23c%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637212613516921594&amp;sdata=S2UBdmnQvkxYC1e3bn4LB53Edc5xakn%2FZAI91MIgqd0%3D&amp;reserved=0">CDC</a> provides multiple resources on taking care of your emotional health.</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-online-learning" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Online Teaching and Learning</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I get technology help?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Visit the<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/">IT website</a><span class="apple-converted-space"> </span>and use the Search feature to search any topic you do not find on the home page. Contact the IT Help Desk via phone (478) 301-7000 or via their<span class="apple-converted-space"> </span><a href="http://ithelp.mercer.edu/">IT Service Portal</a><span class="apple-converted-space"> </span>for further assistance. In-person support may be available by appointment, if needed. Visit our<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/student/contact_us.htm">Contact Us</a><span class="apple-converted-space"> </span>page frequently for our current hours of operation.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are suggestions if I don’t have stable internet access?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The student should first contact the instructor to explain the connectivity situation. If connectivity remains an issue, the instructor can accommodate the student by providing alternate activities and communicating regularly with the student.</p>
+<p><a href="https://policies.mercer.edu/www/mu-policies/upload/MU-Credit-Hour-Policy.pdf">Mercer’s credit hour policy</a> provides guidelines for compliance and activities that count toward direct instructional time, many of which are asynchronous.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Should I log in to Canvas every day?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, student success in an online course includes regularly logging into your course and staying connected. Check your course announcements and communications to ensure that you stay up to date on assignments, exams, and other course requirements.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What resources are available to help students with using Canvas?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Visit the <a href="http://it.mercer.edu/student/academic_technology/canvas.htm">IT website</a> for information on accessing and using Canvas.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I get help with Canvas?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Contact the IT Help Desk via phone (478) 301-7000 or via their <a href="http://ithelp.mercer.edu/">IT Service Portal</a> for assistance with Canvas.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What is Zoom?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Zoom Video Conferencing is a simple-to-use, cloud-based video communications tool that is available to all Mercer students. This software solution offers many features including integration with Canvas, online meetings, video conferencing, webinars, questionnaires within meetings, and much more. Zoom allows you to conduct a video meeting or webinar directly from your computer, mobile device, or Zoom Configured Classrooms. Check out this <a href="https://www.youtube.com/watch?v=BGH1y70zSkg&amp;feature=youtu.be">quick video</a> for an overview of Zoom Video Conferencing.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I access my Zoom account?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>All students have Zoom accounts that can be used for classes or personal meetings/study sessions.</p>
+<ul>
+<li>Visit Zoom: <a href="http://mercer.zoom.us">http://mercer.zoom.us</a></li>
+<li>Click the Sign in button.</li>
+<li>Enter the same username and password used to access your computer, Mercer email, or MyMercer.</li>
+</ul>
+<p>Once you have used the link above to log in and complete your Zoom account setup, you may also access Zoom from any Canvas course menu. Visit the <a href="http://it.mercer.edu/student/collaboration_tools/zoom.htm">IT website</a> for additional Zoom resources.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I install Zoom on my computer and mobile device?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Visit the <a href="http://it.mercer.edu/student/collaboration_tools/zoom.htm">IT website</a> for instructions on how to install Zoom on your computer or mobile device.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How can I test my Zoom access and equipment?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.zoom.us%2Fhc%2Fen-us%2Farticles%2F115002262083-How-Do-I-Test-Prior-to-Joining-a-Meeting-&amp;data=02%7C01%7CREFFITT_KE%40mercer.edu%7Cf064063376234b22fbaf08d7d2886b18%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637209355660016872&amp;sdata=V0j4vFAPkoxz0Yj9eDFJalEPTCiMqYeA%2F0x8I5Ufbrc%3D&amp;reserved=0"><span style="font-weight: 400;">Click here</span></a> <span style="font-weight: 400;">to test your audio and video equipment at your convenience. If you have problems accessing or using Zoom, contact the</span><a href="http://it.mercer.edu/student/academic_technology/contact_us.htm"> <span style="font-weight: 400;">IT Help Desk</span></a><span style="font-weight: 400;"> or visit the</span><a href="http://it.mercer.edu/student/collaboration_tools/zoom.htm"> <span style="font-weight: 400;">IT website</span></a><span style="font-weight: 400;"> for information and tutorials about Zoom.</span></p>
+<p><span style="font-weight: 400;">If you have problems accessing or using Zoom, contact the</span><a href="http://it.mercer.edu/student/academic_technology/contact_us.htm"> <span style="font-weight: 400;">IT Help Desk</span></a><span style="font-weight: 400;"> or visit the</span><a href="http://it.mercer.edu/student/collaboration_tools/zoom.htm"> <span style="font-weight: 400;">IT website</span></a><span style="font-weight: 400;"> for information and tutorials about Zoom.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I don't have a webcam or microphone. Can I still join or host Zoom meetings?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, you can still join and host meetings, and you&#8217;ll be able to see and hear the video and audio from the other participants. Zoom also provides a telephone number to call in to a meeting. Zoom meetings include a chat feature, so even without audio or video, you can still communicate with the participants by typing. Visit the <a href="http://it.mercer.edu/student/collaboration_tools/common_zoom_questions.htm">IT website</a> for answers to <a href="http://it.mercer.edu/student/collaboration_tools/common_zoom_questions.htm">Common Zoom Questions</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can I install Microsoft Office applications on my computer?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Yes, visit the <a href="http://it.mercer.edu/student/hardware_software/office365.htm">IT website</a> for instructions on how to install Microsoft Office on your computer or mobile devices.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY: What if my students need access to specific lab software (e.g., SPSS, JMP, Matlab, etc.) to complete course assignments and/or program requirements?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">Mercer IT has created the following online software portal to accommodate specialty software needs</span><span style="font-weight: 400;">:</span> <a href="https://onlineapps.mercer.edu/"><span style="font-weight: 400;">https://onlineapps.mercer.edu</span></a><span style="font-weight: 400;">. Check </span><a href="https://onlineapps.mercer.edu/"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;"> first to see if the software your students need is already available. You will log in with your Mercer credentials. </span></p>
+<p><span style="font-weight: 400;">If you do not see what you need, contact the IT Help Desk via phone (478) 301-7000 or via their </span><a href="http://ithelp.mercer.edu/"><span style="font-weight: 400;">IT Service Portal</span></a><span style="font-weight: 400;"> for assistance. The IT staff will work with you to assess specific software needs.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY: How can I get help with Zoom and Canvas?<span></span></button><div class="box" aria-hidden="true"></p>
+<p class="xmsonormal">For common questions and on-demand tutorials, visit Mercer IT’s<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/faculty/collaboration_tools/zoom.htm">Zoom informational site</a><span class="apple-converted-space"> </span>and/or<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/faculty/academic_technology/canvas.htm">Canvas informational site</a>.</p>
+<p class="xmsonormal">For technical assistance, contact the IT Help Desk at 478-301-7000 or via the<span class="apple-converted-space"> </span><a href="http://ithelp.mercer.edu/">IT Service Portal</a>. Visit the<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/faculty/contact_us.htm">Contact Us</a><span class="apple-converted-space"> </span>page for hours of operation.</p>
+<p class="xmsonormal">For instructional questions, contact Dr. Susan Codone (<a href="mailto:codone_s@mercer.edu">codone_s@mercer.edu</a>), 478-301-4185 to schedule an online session.</p>
+<p class="xmsonormal">To schedule a training session, contact Jerome Gratigny (<a href="mailto:gratigny_ja@mercer.edu">gratigny_ja@mercer.edu</a>).</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY/STAFF: I need to access Mercer resources, like CampusNexus Student, CampusVue Finance, HR &amp; Payroll, and/or personal and departmental network drives. How can I get access at home?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>View Mercer IT’s<span class="apple-converted-space"> </span><a href="http://it.mercer.edu/faculty/announcements/important_information.htm">Working &amp; Teaching from Home</a><span class="apple-converted-space"> </span>site for instructions.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-advising-registration" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Advising and Registration</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I schedule an appointment through Starfish?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Starfish is a web-based platform used for the Macon undergraduate campus and post-traditional programs. Many faculty and staff in these programs use Starfish as a tool for scheduling appointments. Students can find instructions for using Starfish <a href="http://studentsuccess.mercer.edu/students/starfish/">here</a>. Note that you will only be able to use this scheduling tool for faculty and staff who have enabled booking on Starfish.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I get special permission to register for a course?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>You must email your permission request to the instructor prior to your registration date as instructors must grant permission electronically in the registration system. You will then be able to register for the course via MyMercer when your registration window opens.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What if I want to elect to take a fall 2020 course as pass/fail?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>After you register for the course, email <a href="mailto:registrar@mercer.edu">registrar@mercer.edu</a>, the instructor, and your advisor to request this option.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">During registration, what if I am unable to register for or drop a class via MyMercer?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Complete the ‘Schedule Drop/Add’ form that can be found on the Online Registration screen in MyMercer.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY: How can I configure Starfish to use for students to schedule appointments with me?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Starfish is a web-based platform used for the Macon undergraduate campus and post-traditional programs. You can find instructions for setting up appointments <a href="http://studentsuccess.mercer.edu/faculty-staff/starfish/">here</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY: I need to advise students but don’t have access to CampusNexus at home. How can I get access at home?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Certain Mercer resources require a Virtual Private Network (VPN) connection to access from home or other remote locations. Virtual Private Network (VPN) access typically requires approval from the Human Resources department. However, to expedite the process for all of those who may need to work remotely during this uncertain time, IT has temporarily enabled VPN access for <em><strong>all</strong></em> faculty and staff. Visit the <a href="http://it.mercer.edu/faculty/internet_network/vpn_access_temp.htm">IT website</a> for information on <a href="http://it.mercer.edu/Faculty/internet_network/vpn_access_temp.htm">installing and accessing VPN</a>. If you have trouble, contact the <a href="http://it.mercer.edu/faculty/contact_us.htm">IT Help Desk</a>.</p>
+<p>Virtual Private Network (VPN) access is <em><strong>NOT</strong></em> required for all remote work. Only use a VPN if you really need it. VPN is <em><strong>NOT</strong></em> needed for Canvas, Zoom, Office 365, Outlook, Teams, or OneDrive.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-travel" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Travel</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What travel restrictions has Mercer put in place?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>If you recently traveled to countries that are listed as a <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/after-travel-precautions.html">CDC Warning Level 3 Travel Health Notice for COVID-19</a>, students should contact Mercer University Vice President for Student Affairs Dr. Doug Pearson by email at <a href="mailto:pearson_dr@mercer.edu">pearson_dr@mercer.edu</a> or by phone at (478) 301-2685 and employees should contact Human Resources by phone at (478) 301-2786, as soon as possible. If you traveled internationally to other locations, it is recommended that you conduct a self-observation period and remain alert for subjective fever, cough, or difficulty breathing for 14 days as a precaution.</p>
+<p>Faculty and staff who anticipate traveling abroad through Aug. 31, 2020, should <a href="https://international.mercer.edu/study-abroad/register-my-travel/">register that travel online</a>. While this registry is typically reserved for University-sponsored travel abroad, we are now asking that all international travel either for University business or for personal reasons be registered using this site.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Will students be going on Mercer On Mission trips this summer?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Mercer on Mission office continues to monitor the evolving situation and remains in regular consultation with other University offices and relevant authorities. All Mercer on Mission programs are currently suspended, but not cancelled, at this time. If circumstances dramatically improve and safe travel can be assured in the later part of the summer or fall, we will attempt to launch MoM programs.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can I still participate in my study abroad program?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>At this time, no new international study abroad programs are being approved. If you have committed to a study abroad summer program, you will be notified if the program is cancelled. We are taking every precaution possible in determining whether and when to decide on canceling summer programs.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I withdraw from my study abroad program, will that affect my financial aid?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Many of our study abroad partners are allowing students to complete their terms online. If you are unable to complete your program either in-country, or online from the U.S., please contact <a href="mailto:studyabroad@mercer.edu">studyabroad@mercer.edu</a> and we will connect you with your financial aid counselor to determine how your aid  might be impacted by a decision to withdraw.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can I still study abroad for the 2020-21 academic year?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>At this time, we are unsure about whether we will be able to support study abroad programs for the upcoming academic year; however, we are still advising students on options for study abroad experiences. If you are interested in spending a semester in another country at one of our exchange partners, please contact <a href="mailto:studyabroad@mercer.edu">studyabroad@mercer.edu</a> and we will set up an advising appointment with you via Zoom.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What do faculty and staff need to do when planning to travel abroad?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Faculty and staff who anticipate traveling abroad through August 31, 2020, can register that travel using the following link: <a href="https://international.mercer.edu/study-abroad/register-my-travel/">https://international.mercer.edu/study-abroad/register-my-travel/</a>.</p>
+<p>While this registry is typically reserved for University-sponsored travel abroad, we are now asking that all international travel either for University business or for personal reasons be registered using this site. If you have already registered your anticipated travel, you do not need to re-enter your travel.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-library-resources" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Library Resources</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What cloud-based or virtual resources and services does the Library have to assist with online courses?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The Mercer Libraries offer 24/7, cloud-based eResources along with robust collections of eBooks, eJournals, eDatabases, digitized materials, and virtual Library assistance. “Cloud-based” means that these resources are always available online and <b>do not require in-person Library access</b>.</p>
+<p>For any questions or concerns, contact the Librarians at <a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a>. You may leave a message for the Tarver Circulation Desk at 478-301-2961 or a message for the Swilley Circulation Desk at 678-547-6284.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What resources are available?<span></span></button><div class="box" aria-hidden="true"></p>
+<ul>
+<li>eBooks: 481,011</li>
+<li>eJournal Titles: 171,958</li>
+<li>Electronic Research Databases: 217</li>
+<li>Library Research Guides (LibGuides): 77</li>
+<li>Digitized Resources from the Archives: 10,000+</li>
+</ul>
+<p>For any questions or concerns, contact the Librarians at <a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a>. You may leave a message for the Tarver Circulation Desk at 478-301-2961 or a message for the Swilley Circulation Desk at 678-547-6284.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How are these resources accessed?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>There are a number of ways to access the Library’s electronic resources and virtual research assistance. The best place to start is on the Library’s <a href="https://libraries.mercer.edu/">website</a>.</p>
+<p>The Library has created a page with a comprehensive set of links and resources specifically designed for online users along with other useful information about the Library. Go to the Library homepage and click on the COVID-19 link at the top of the page or <a href="https://libraries.mercer.edu/covid-19-updates">click here</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What are some helpful links on the Library’s website?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Here are a few places to start:</p>
+<ul>
+<li><a href="https://mercer.libguides.com/OffCampus">“Using Library Resources Off-Campus”</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLo8eWlWUEB6zAdfDEKtznvxpq7X5h7x5f">“Mercer University Library How-to Videos”</a></li>
+<li><a href="https://mercer.libguides.com/?b=s">“Online Research Guides and Links”</a> (LibGuides) by Subject or Group link</li>
+<li><a href="https://mercer.zoom.us/j/94406312105">“Ask a Librarian”</a> (Chat, Zoom, Email, or Phone)</li>
+</ul>
+<p>The Research Librarians and Archivists are happy to continue offering support and research help for both students and faculty.</p>
+<ul>
+<li>Creation of short YouTube Videos: They can assist  with creating short videos that demonstrate how to access resources specific to different courses. Examples of these videos can be found on the <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC6zt-eMZ3_OSmP1iSBGcVlg&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999489919&amp;sdata=jjwvHlM1W7yrsXwYZG2BOu4NS9mDzzxGlD1N7Bphz4o%3D&amp;reserved=0">Mercer University Library YouTube page</a>.</li>
+<li>Online Research Guides: Library faculty and staff have created <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer.libguides.com%2F%3Fb%3Ds&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999489919&amp;sdata=0FfC3klEcRyqNl%2FMCs%2BNa7X%2FdJPcra3Ux7EqHaOLsEA%3D&amp;reserved=0">research guides</a> that can help identify relevant resources for students. Additionally, faculty can always reach out to library staff to create a subject specific guide for your class, e.g., <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer.libguides.com%2Feducation&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999499906&amp;sdata=RS5TG80eg2JnvmYPLKK8OWfNjO5Pq7tvZT9uBnf7YWk%3D&amp;reserved=0">for Education</a> or <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer.libguides.com%2FREL150_McMahan&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999499906&amp;sdata=Z0qdSbUTnMLI07jD0DDg%2F7ig6VzyD1CfOnl1zQc4GQM%3D&amp;reserved=0">Religion</a> or <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer.libguides.com%2Fmusic&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999509899&amp;sdata=klzHkK0Ca1zxUrJ%2F1Ob2hgutPTplI34JECkYM08li2U%3D&amp;reserved=0">Music</a>, etc.</li>
+<li>Embedded Librarians: Librarians can also be embedded directly into faculty Canvas course shells in order to add content about library research and provide contact information.</li>
+<li>Zoom Instruction Sessions: Additionally, faculty can schedule a library instruction session, both synchronously and asynchronously, through Zoom.</li>
+</ul>
+<p>The Library has also created an <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmercer.zoom.us%2Fj%2F324822899&amp;data=02%7C01%7CSMITH_M%40mercer.edu%7C50e5808626594a65da1808d7d1c73faa%7C4fb34d2889b247109bcc30824d17fc30%7C0%7C0%7C637208525999509899&amp;sdata=5CDPpF1fkIYrXlZoXAfhQ%2F7dZypJ2yiEolMi15FYm2o%3D&amp;reserved=0">Ask a Librarian Zoom Room</a> that is monitored by librarians during their regular reference hours, so that students and faculty can receive face-to-face assistance.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Tarver Library (Macon)<span></span></button><div class="box" aria-hidden="true"></p>
+<p>In-person Library services/main floors are closed until further notice. 24/7 spaces continue to be accessible by Bear Card. Check the <a href="https://libraries.mercer.edu/about-us/library-hours">Library Hours website</a> for changes.</p>
+<p>You may contact Tarver Library staff in the following ways:</p>
+<ul>
+<li>Chat: Ask a Librarian link: <a href="https://libraries.mercer.edu/research-tools-help/ask-a-librarian">https://libraries.mercer.edu/research-tools-help/ask-a-librarian</a></li>
+<li>Library Reference email: <u><a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a></u></li>
+<li>By phone: Please leave a message for Tarver Reference at 478-301-2055, Tarver Circulation at 478-301-2961, and Tarver Archives at 478-301-2968.</li>
+</ul>
+<p>For any questions or concerns, please contact the librarians at <a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a> or 478-301-2961.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Swilley Library (Atlanta)<span></span></button><div class="box" aria-hidden="true"></p>
+<p>In-person Library services/main floors are closed until further notice. 24/7 spaces continue to be accessible by Bear Card. Check the <a href="https://libraries.mercer.edu/about-us/library-hours">Library Hours website</a> for changes.</p>
+<p>You may contact Swilley Library staff in the following ways:</p>
+<ul>
+<li>Chat: Ask a Librarian link:<a href="https://libraries.mercer.edu/research-tools-help/ask-a-librarian"> https://libraries.mercer.edu/research-tools-help/ask-a-librarian</a></li>
+<li>Library Reference email: <a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a></li>
+<li>By phone: Please leave a message for Swilley Reference at 678-547-6282 and Swilley Circulation at 678-547-6284.</li>
+</ul>
+<p>For any questions or concerns, please contact the librarians at <a href="mailto:library_reference@mercer.edu">library_reference@mercer.edu</a> or 678-547-6284.<br />
+</div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">How do I return books and other materials to the library?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Mercer University faculty, students, and staff are encouraged to keep library materials until you are back on campus.  If you are local, you may return items using external book drops at the Swilley Library (Atlanta) or the Tarver Library (Macon).  Internal book drops are available at the Douglas County Center (Lithia Springs) and the Henry County Library (McDonough).  If you are in a different location, please mail items to this address:</p>
+<p>Jack Tarver Library<br />
+Mercer University<br />
+1501 Mercer University Drive<br />
+Macon, GA  31207</p>
+<p>If you need help paying for shipping, we can send you a mailing label for return via UPS or USPS.  If you are interested in this option, please email your name, your home address including zip code, your MUID, and the total weight of your packaged items to <a href="mailto:rhodes_tp@mercer.edu">Theresa Rhodes</a>.  We will send you a pre-paid mailing label by email.</p>
+<p>Please send all questions to <a href="mailto:rhodes_tp@mercer.edu">Theresa Rhodes</a> (<a href="mailto:rhodes_tp@mercer.edu">rhodes_tp@mercer.edu</a>) or call her at (478)301-2031.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-access-accommodations" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Access and Accommodations</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I need accommodations, how do I register and receive my accommodations?<span></span></button><div class="box" aria-hidden="true"></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Students already receiving accommodations with The Access Office can</span><a href="https://access.mercer.edu/students/registered"> <span style="font-weight: 400;">log into Accommodate</span></a><span style="font-weight: 400;"> to request new accommodations.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Registered students are requested to communicate with their instructors about the accommodation and implementation in the online environment.</span></li>
+<li style="font-weight: 400;">Students not yet receiving accommodations will need to complete the process to become approved for accommodations. Please go to<a href="https://access.mercer.edu/students/new/"> https://access.mercer.edu/students/new/</a> and follow the procedures.</li>
+</ul>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">If I have questions or concerns related to the transition to a virtual format, what should I do?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">Please contact the Access and Accommodation Office. Office hours are 8:30 a.m. to 5:00 p.m. Staff can be reached at 478-301-2810 or by email at <a href="mailto:access@mercer.edu">access@mercer.edu</a>.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">FACULTY: How do I implement remote accommodations for students?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Access and accommodations can be implemented in the online environment. Canvas training can provide guidance on how to change settings to provide extended time on tests, exams, and quizzes. Many classroom accommodations will be managed by the student and in coordination with the <a href="https://access.mercer.edu/">Office Access and Accommodations</a> if needed.</p>
+<p>Accessible materials will need to be used in course development including text-based documents, description of images that are content related, videos with captioning/transcripts, and websites.</p>
+<ul>
+<li>To check a website, use <a href="https://www.Wave.webaim.org">www.Wave.webaim.org</a>.</li>
+<li>Captioning: Visit <a href="http://easi.cc/mmedia/week3/captiontools.html">EASI</a> for programs that will assist in adding captions to your own videos.  For videos produced by others, be sure that there are captions or a transcript (double check the captions for accuracy).</li>
+<li>You can produce transcripts of Zoom recordings. <a href="https://support.zoom.us/hc/en-us/articles/115004794983-Automatically-Transcribe-Cloud-Recordings-">See this website</a> for directions. Please use this feature to have a transcript with each of your videos.</li>
+</ul>
+<p>Faculty intending to use Zoom for live meetings and are aware of a student with hearing impairment should contact <a href="https://access.mercer.edu/contact/">Katie Johnson</a> in the Access Office to discuss.</p>
+<p>The Access Office is contacting individual faculty regarding specific student needs with tips and resources.</p>
+<p>The Access Office has information on remote accommodation implementation as well as information on how to ensure your online content is accessible, including applying extra time for exams. Contact Katie Johnson for any questions or concerns at access@mercer.edu or 478-301-2810.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-tutoring" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Tutoring</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I still need tutoring support. Is the Academic Resource Center offering tutoring support?<span></span></button><div class="box" aria-hidden="true"></p>
+<p><span style="font-weight: 400;">All in-person tutoring at the Academic Resource Center has been suspended. Online tutoring in writing, math, and science is available through Canvas. </span><span style="font-weight: 400;">Appointments are not required. To obtain access to the service, you must self-enroll in the appropriate Canvas course for your campus or Regional Academic Center. </span></p>
+<p><span style="font-weight: 400;">Additional information, including tutoring schedules and instructions for self-enrolling, can be found on the </span><a href="https://arc.mercer.edu/tutoring-programs/"><span style="font-weight: 400;">ARC’s website</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;">You may contact the Academic Resource Center at </span><a href="mailto:arc@mercer.edu"><span style="font-weight: 400;">arc@mercer.edu</span></a><span style="font-weight: 400;"> or 478-301-2669 with any questions or concerns.</span></p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section id="module-standard-content-faculty-staff" class="module content standard-content rmv-top">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Faculty and Staff</h2>
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Are employees permitted to work remotely?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Employees who have underlying health conditions as outlined in Governor Kemp’s Executive Order and who wish to submit a request to work remotely, or do a combination of work from home and their office, should submit the request by email to their supervisor and copy Candace Whaley in Human Resources (<a href="mailto:whaley_ce@mercer.edu">whaley_ce@mercer.edu</a>). Each request will be reviewed by HR and the employee’s supervisor(s) for final approval by the appropriate Senior Vice President. Human Resources will notify the employee whether the request has been approved once it has been fully reviewed.</p>
+<p>Employees who have minor children at home requiring adult supervision because their childcare facilities/camps are not yet operational may also request to work remotely. Employees should discuss their individual situations with their supervisors, who will consult with the Provost or relevant Senior Vice President to seek approval, as long as the employee can continue to effectively work remotely. If approved, employees will be permitted to work remotely through July 2, or until such time as their childcare facility/camp reopens, whichever is sooner.</p>
+<p>Currently, remote work approvals will extend through Thursday, July 2nd. Employees approved to telework are reminded that all teleworking arrangements are subject to change in response to the evolving situation and essential work of the University. As such, some employees may be asked by their supervisor to come to campus as needed.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">STAFF: What if my job cannot be completed remotely?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Employees who do not work their full schedule must take leave in accordance with the University <a href="http://benefitspayroll.mercer.edu/benefits/upload/LeavePolicy.pdf">Sick/Vacation Leave policy</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">STAFF: Do I need to take sick or vacation leave?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Employees who do not work their full schedule <strong><u>must</u></strong> take leave.  The prior authorization to use any form of accrued leave and the advancement of up to 2 weeks of sick leave for those with insufficient leave accruals ended as of <strong>Friday, April 17th</strong>.  Beginning <strong>Monday, April 20th</strong>, employees who need to take leave must do so in accordance with the University’s <a href="http://benefitspayroll.mercer.edu/benefits/upload/LeavePolicy.pdf">Sick/Vacation Leave policy</a>.</p>
+<p>Employees must communicate with their supervisor when they will need to be absent from work for qualifying reasons under the sick leave policy or request vacation leave in advance.  Also, employees should continue to use the appropriate leave code to track their leave usage on their timesheet or Bear Time report.</p>
+<h3>Non-exempt (hourly) employees</h3>
+<p>It is critical that non-exempt employees track all hours worked on their timesheet.  Timesheets may be submitted electronically to <a href="mailto:edwards_g@mercer.edu">Gina Edwards</a> in Payroll and must be done so according to the established deadlines.  See the <a href="http://benefitspayroll.mercer.edu/payroll/timekeeping.cfm">Payroll website</a> for deadlines and copies of timesheets, if needed.</p>
+<h3>Exempt (salaried) employees</h3>
+<p>Exempt employees should continue to submit their Bear Time report as usual via email at the end of the month.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">STAFF: Will I be paid during this time?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Employees will be paid for time worked and for any available leave accruals used in accordance with the University’s <a href="http://benefitspayroll.mercer.edu/benefits/upload/LeavePolicy.pdf">Sick/Vacation leave policy</a>.  Employees should use the appropriate leave code to track their leave usage on their timesheet or Bear Time report.</p>
+<p>Employees who are unable to perform any of their responsibilities remotely or who do not have sufficient leave accruals will be required to take unpaid leave.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Can I bring a guest or family member to campus with me?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>No. In order to ensure the safety of those employees who are working on campus on a part-time or full-time basis, employees must not bring guests or children to campus during this time.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">I need to access Mercer resources, like CampusNexus Student, CampusVue Finance, HR &amp; Payroll, and/or personal and departmental network drives. How can I get access at home?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>View Mercer IT’s <a href="http://it.mercer.edu/faculty/announcements/important_information.htm">Working &amp; Teaching from Home</a> site for instructions.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Are there other online resources available for employees and supervisors?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>Human Resources has shared some helpful hints designed to support employees and supervisors in the areas of remote working, staying engaged, health/wellness ideas and other similar initiatives on their website: <a href="https://hr.mercer.edu/work/covid19.cfm">Working Through COVID-19</a>.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false"> What should I do if I test positive for COVID-19 and have been told to self-isolate?<span></span></button><div class="box" aria-hidden="true"></p>
+<ol>
+<li>Immediately call the Mercer Medicine Hotline (301-SICK / 301-7425) to report your positive test for COVID-19 and speak to a health care professional.</li>
+<li>Mercer Medicine will inform Human Resources of your positive test and the length of self-isolation.</li>
+<li>Mercer Medicine will trace all contacts and notify Human Resources regarding those employees and locations that have been sufficiently exposed to warrant quarantine.</li>
+<li>Human Resources will contact you to discuss leave options available.</li>
+</ol>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What should I do if I have been told by my doctor or another health care provider to self-isolate or quarantine?<span></span></button><div class="box" aria-hidden="true"></p>
+<ol>
+<li>Immediately call the Mercer Medicine Hotline (301-SICK) to report the health care provider’s recommendations.</li>
+<li>Mercer Medicine will inform Human Resources of the recommended self-isolation or quarantine.</li>
+<li>Mercer Medicine will trace all contacts and notify Human Resources regarding those employees and locations that have been sufficiently exposed to warrant quarantine.</li>
+</ol>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What should I do if I am symptomatic and think I may have COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<ol>
+<li>Contact the Mercer Medicine Hotline (301-SICK) to speak to a health care professional that will evaluate your situation and determine if self-isolation or quarantine is recommended OR consult with your primary care physician. If your primary care physician recommends self-isolation or quarantine please follow the steps in #2.</li>
+<li>If Mercer Medicine recommends that you self-isolate or quarantine they will inform Human Resources of the recommended self-isolation or quarantine.</li>
+<li>If self-isolation is recommended, Mercer Medicine will trace all contacts and notify Human Resources regarding those employees and locations that have been sufficiently exposed to warrant quarantine.</li>
+</ol>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">What should I do if I am feeling at risk of contracting COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<ol>
+<li>Visit Mercer University’s COVID-19 web page, and scroll down to locate the link to the Coronavirus Self Checker Tool provided on the CDC website.</li>
+<li>If you still feel that you may be at risk, contact Mercer Medicine Hotline (301-SICK) for a health care professional to evaluate your situation and determine if self-isolation or quarantine is recommended OR consult with your primary care physician.</li>
+<li>If Mercer Medicine recommends that you self-isolate or quarantine they will inform Human Resources of the recommended self-isolation or quarantine.</li>
+<li>If self-isolation is recommended, Mercer Medicine will trace all contacts and notify Human Resources regarding those employees and locations that have been sufficiently exposed.</li>
+</ol>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+<div class="toggle"><button type="button" class="trigger" aria-expanded="false">Will I be notified if one of my coworkers tests positive for COVID-19?<span></span></button><div class="box" aria-hidden="true"></p>
+<p>The University will release information regarding confirmed cases to the extent privacy laws allow.</p>
+<p></div><!-- .box (end) --></div><!-- .toggle (end) -->
+                            </div>
+        </div>
+    </section>
+        <section  class="module content standard-content none">
+        <div class="outer-container">
+            <div class="container">
+                                    <h2>Still have questions? Please contact us.</h2>
+
+                <div class='gf_browser_unknown gform_wrapper' id='gform_wrapper_6' ><div id='gf_6' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_6' id='gform_6'  action='/coronavirus/faq/#gf_6'>
+                        <div class='gform_body'><ul id='gform_fields_6' class='gform_fields top_label form_sublabel_below description_below'><li id='field_6_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_1' >First Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_6_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false" /></div></li><li id='field_6_2'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_2' >Last Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_6_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false" /></div></li><li id='field_6_4'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_4' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_6_4' type='email' value='' class='large'    aria-required="true" aria-invalid="false" />
+                        </div></li><li id='field_6_3'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_3' >Mercer Affiliation<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_select'><select name='input_3' id='input_6_3' class='large gfield_select'   aria-required="true" aria-invalid="false"><option value='' selected='selected' class='gf_placeholder'>Choose one</option><option value='Faculty' >Faculty</option><option value='Staff' >Staff</option><option value='Undergraduate Student' >Undergraduate Student</option><option value='Graduate Student' >Graduate Student</option><option value='Parent' >Parent</option><option value='Alumni' >Alumni</option><option value='Community Member' >Community Member</option></select></div></li><li id='field_6_5'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_5' >I have a question about:<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_select'><select name='input_5' id='input_6_5' class='large gfield_select'   aria-required="true" aria-invalid="false"><option value='' selected='selected' class='gf_placeholder'>Choose one</option><option value='Admissions' >Admissions</option><option value='Advising and/or Registration' >Advising and/or Registration</option><option value='Classes' >Classes</option><option value='Events' >Events</option><option value='Financial Aid' >Financial Aid</option><option value='Technology' >Technology</option><option value='Travel' >Travel</option><option value='Other' >Other</option></select></div></li><li id='field_6_6'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible' ><label class='gfield_label' for='input_6_6' >Question<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_6' id='input_6_6' class='textarea medium'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></li>
+                            </ul></div>
+        <div class='gform_footer top_label'> <button type="submit" id="gform_submit_button_6" class="gform_button button" onclick='if(window["gf_submitting_6"]){return false;}  if( !jQuery("#gform_6")[0].checkValidity || jQuery("#gform_6")[0].checkValidity()){window["gf_submitting_6"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_6"]){return false;} if( !jQuery("#gform_6")[0].checkValidity || jQuery("#gform_6")[0].checkValidity()){window["gf_submitting_6"]=true;}  jQuery("#gform_6").trigger("submit",[true]); }'>Submit</button> <input type='hidden' name='gform_ajax' value='form_id=6&amp;title=&amp;description=&amp;tabindex=0' />
+            <input type='hidden' class='gform_hidden' name='is_submit_6' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='6' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_6' value='WyJbXSIsImIxODVmNGY5NjdjMTg1ZTY3MWMxNzhmYWNjMTIwMWNhIl0=' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_6' id='gform_target_page_number_6' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_6' id='gform_source_page_number_6' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_6' id='gform_ajax_frame_6' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+                <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 6, 'https://www.mercer.edu/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_6').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_6');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_6').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_6').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_6').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_6').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_6').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_6').val();gformInitSpinner( 6, 'https://www.mercer.edu/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [6, current_page]);window['gf_submitting_6'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_6').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_6').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [6]);window['gf_submitting_6'] = false;}, 50);}else{jQuery('#gform_6').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [6, current_page]);} );} );</script><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 6) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [6, 1]) } ); </script>
+                            </div>
+        </div>
+    </section>
+                </article>
+            </main>
+</div>
+<footer id="footer" role="contentinfo">
+    	<div class="footer-inner">     
+		<div class="footer-logo">
+            <svg class="header-logo" aria-labelledby="footer-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 49.533">
+                <title id="footer-title">Mercer University</title>
+                <desc>Mercer University logo displaying the words Mercer University in large white font on a dark background, all underlined in orange</desc>
+                <defs><style>.a {fill: #f76800;} .b {fill: #fff;}</style></defs>
+                <g>
+                    <path class="a" d="M0,49.53H260v-2H0Z" transform="translate(0 0)"/>
+                    <g>
+                        <path class="b" d="M97.15,31.39c3.17-.06,5.74-.12,8.49-.12,2.39.06,6.4.12,11.47.12.06-.18.42.3.61-.6.11-1.91.53-3.64.71-5.85.06-.41-.84-1.19-.84,0-1,4.78-3.94,5.25-9.44,5.31-4.19-.06-4.6-.41-4.6-3.7V17.49h4.18c3.41,0,4.55,0,4.73,2.15a.57.57,0,0,0,.6.53.55.55,0,0,0,.53-.53c-.06-1.49,0-2.09,0-3.16,0-.84-.06-1.37,0-2.87-.18-1.07-1.13-.6-1.13-.12.12,2.27-1.62,2.81-5.62,2.87-.78-.06-2.39-.06-3.29-.12V5h3.16c6.1,0,8.61.47,8.61,4.41.06.66,1,.42,1,0,.06-2.09-.12-2.74-.12-4.41a11.53,11.53,0,0,0,0-1.44c-4.79.18-9.15.18-11.48.12s-4.43,0-7.18-.12a.66.66,0,0,0,0,1.31c1.92-.06,2.69.78,2.75,3V26.21c-.06,3-.23,4.23-2.87,4.3-.9-.06-.77.95-.3.89Z" transform="translate(0 0)"/>
+                        <path class="b" d="M133.56,4.37a12.24,12.24,0,0,0-4.67-.9c-1.85.06-3.94.36-6.33.3a31.54,31.54,0,0,1-3.89-.12c-.36.12-.66,1.2.12,1.31,2,0,2.75.42,2.75,2.75V27c0,2.92-.12,3.16-2.45,3.46-1,.12-1,1,0,1,2,0,2.87-.06,4.18,0,1.14-.06,2.45-.06,4.43,0,.66,0,1.13-.89,0-1-2.69-.12-2.81-1.26-2.87-4.3V18.45a24.35,24.35,0,0,1,4.18.3c.54.24,1,1.37,1.73,2.74l3.59,5.85c2,3.34,4.31,4.53,7.77,4.59.72-.06.42-.06,1.32-.12.71,0,.47-.95,0-.83-3-.06-4.55-2-6.34-5.43L132.36,18a7.24,7.24,0,0,0,5.44-6.86,7,7,0,0,0-4.24-6.74l-1.08,1.9a6.14,6.14,0,0,1,2.09,5.25c.06,3.76-2.15,5.73-6.33,5.73a22.37,22.37,0,0,1-3.47-.3V5c1.13-.06,2.57-.11,3.17-.11a6.79,6.79,0,0,1,4.48,1.36Z" transform="translate(0 0)"/>
+                        <path class="b" d="M73.4,42.2a.6.6,0,0,1-.52-.3L55.78,7.41,55.66,35c.06,3.61,1.54,5.55,4.3,5.61h0a.81.81,0,0,1,.69.78.46.46,0,0,1-.16.38A1,1,0,0,1,60,42c-3.23-.12-4.81-.12-5.86-.12H48.25a.5.5,0,0,1-.38-.15.51.51,0,0,1-.11-.43.6.6,0,0,1,.52-.57h.08c3,0,3.74-1.25,4.3-3.88.39-1.76.47-6.45.58-12.39,0-.42,0-.84,0-1.26v-.25c0-2.05,0-4.43,0-6.52v-.85c0-4.3,0-8,0-8.08,0-2.07-.19-3.65-.9-4.63s-1.89-1.37-4-1.4c-.57,0-.77-.4-.76-.7A.76.76,0,0,1,48.36,0l1.37,0C51,.1,52,.13,53.27.13a4,4,0,0,0,.49,0c.45,0,1.13,0,2.25-.1h.12l.28,0L57,0h.14a.62.62,0,0,1,.58.43l17,35L89.44.61l0-.08h0A.74.74,0,0,1,90.15,0c1,0,1.84,0,2.66.07s1.39.05,2.06.05c.49,0,1,0,1.48,0,1.21,0,2.53,0,4.14-.15.4,0,.59.24.59.47a.4.4,0,0,1-.36.42h0a.46.46,0,0,1-.21-.05c-4.4.79-5.08,2.18-5.14,6.56a3.57,3.57,0,0,1,0,1.13L96,32.89c0,5.31,1.31,7.58,4.39,7.58h.21c.68,0,.91.36.9.67a.85.85,0,0,1-.9.76c-2.56-.1-4.67-.14-6.25-.14-.63,0-1.18,0-1.64,0s-.87,0-1.3,0c-.9,0-1.78,0-3.39.09l-.66,0h0l-.65,0a.6.6,0,0,1-.65-.55v0a.53.53,0,0,1,.16-.38.74.74,0,0,1,.49-.18c1.62,0,2.62-.37,3.26-1.12s.93-1.91.93-3.77L90.39,3.36,74.49,41.6l-.06.1c-.09.17-.26.5-.54.5H73.4Zm67.21-.06h-.3l-2.51-6.45c-.35-.65-.59-1-1.32-1v-.42l.71.05a7,7,0,0,1,.73.07q.72,0,1.44-.12v.42h-.2c-.37,0-.58.14-.64.42a.79.79,0,0,0,.12.3l2.15,5.31,2.15-5.13a2,2,0,0,0,0-.6.17.17,0,0,0,0-.18c-.06-.09-.22-.12-.58-.12v-.42l.57.06.57.06a7.35,7.35,0,0,0,1.14-.12v.42c-.73,0-.91.39-1.14,1l-2.87,6.44Zm31.39,0h0c-.64-.07-1.33-.2-1.85-.3V39.93h.3a1.87,1.87,0,0,0,1.85,1.73h.1a1.5,1.5,0,0,0,1.46-1.54h0c0-1-.69-1.27-1.73-1.73-1.23-.56-2.1-1-2-2.15a1.86,1.86,0,0,1,.5-1.38,2.51,2.51,0,0,1,1.77-.77,11.16,11.16,0,0,1,1.14.16h.07a6.2,6.2,0,0,0,.82.12,3.63,3.63,0,0,0,0,1.14,1.42,1.42,0,0,0,0,.71H174c0-1.1-.57-1.67-1.73-1.73a1.52,1.52,0,0,0-1.05.52,1.12,1.12,0,0,0-.27.8,1.15,1.15,0,0,0,.6,1.13,9.48,9.48,0,0,0,1.1.56h.05l0,0h.07a6.43,6.43,0,0,1,.79.39,1.83,1.83,0,0,1,1,1.73,2.21,2.21,0,0,1-.54,1.67,2.82,2.82,0,0,1-2,.79Zm-64.27-.06c-1.81-.07-2.93-1.29-3-3.29V35.51a.86.86,0,0,0-.12-.68.69.69,0,0,0-.52-.16h-.2s0,0,0,0h0a.14.14,0,0,0-.08,0v-.42l.62.05h.09c.26,0,.49,0,.72.06a10,10,0,0,0,1.06-.09h0l.23,0v.41c-.8,0-.84.34-.84,1.32v3.28c0,1.42.76,2.27,2,2.27H108a2.23,2.23,0,0,0,1.63-.63,3,3,0,0,0,.7-2.23V37.24c0-1.41,0-2.1-.24-2.4a.67.67,0,0,0-.49-.17h-.11v-.41l.48.05h0a4,4,0,0,1,.5.06,7.35,7.35,0,0,0,1.14-.12v.42c-.66,0-.72.3-.72,1.14v2c0,.08,0,.16,0,.25v0a5.15,5.15,0,0,1-.59,2.69A3.22,3.22,0,0,1,107.73,42.08Zm16.2-.13h-.42l-5.14-6.44a16.62,16.62,0,0,1-.18,1.73c0,1.4.08,2.48.1,2.93v.14c0,.34,0,.54,0,.63.12.47.29.6.84.6v.3l-.57,0-.57,0-.57,0-.57,0v-.3c.59-.06.78-.29.84-1v0c0-.47.07-2.22.12-5.11,0-.54-.17-.72-.79-.72h-.35v-.42l.47.05h0a4.51,4.51,0,0,1,.53.07,4.51,4.51,0,0,1,.72-.12l5,6.14V39a28.6,28.6,0,0,0-.12-3.7c-.06-.5-.32-.6-.71-.6v-.42a5.3,5.3,0,0,0,.56.07c.17,0,.36,0,.57,0a8.08,8.08,0,0,0,.86-.08h.06l.22,0v.42h0a.67.67,0,0,0-.83.83c0,.44-.12,2.39-.12,6.45Zm42.51,0h-.72c-.85,0-1.29-.3-1.85-1.31l-1-1.55h0c-.18-.35-.3-.59-.42-.59a1,1,0,0,0-.39-.07l-.44,0v2c0,.84.06,1.13.71,1.13h.12v.3l-.65,0a6.12,6.12,0,0,1-.66,0q-.33,0-.72,0t-.72,0v-.3h0a.82.82,0,0,0,.67-.19c.15-.15.19-.43.16-.94V35.51a.91.91,0,0,0-.12-.7.58.58,0,0,0-.43-.15h-.17a0,0,0,0,0,0,0h0a.13.13,0,0,0-.09,0v-.42a11,11,0,0,1,1.14.12,8.22,8.22,0,0,0,1-.06h.05c.23,0,.46,0,.69-.05h.16a2.9,2.9,0,0,1,1.16.24l-.15.2.15-.2A1.73,1.73,0,0,1,165,36.23a1.61,1.61,0,0,1-1.35,1.84h-.2l1.14,2.15c.46.86.76,1.43,1.85,1.43V42Zm-4.9-7.27V38l.36,0,.35,0h.17a1.64,1.64,0,0,0,1.23-.43A1.49,1.49,0,0,0,164,36.4a1.69,1.69,0,0,0-.54-1.37,1.84,1.84,0,0,0-1.11-.36h-.8Zm19.79,7.18-.66,0-.72,0-.72,0v-.3h.12a.75.75,0,0,0,.56-.17c.15-.16.2-.45.16-1V35.51a.91.91,0,0,0-.12-.7.54.54,0,0,0-.43-.14h-.17a0,0,0,0,0,0,0h0l-.09,0v-.41l.72.05h.11l.61.06c.34,0,.67,0,1-.08h.12l.19,0v.42c-.8,0-.83.34-.83,1.31V40.4c0,.84.06,1.13.71,1.13H182v.3a6.18,6.18,0,0,1-.65,0Zm-49.74,0-.72,0-.66,0-.66,0v-.3h0c.65,0,.83-.25.83-1.14V35.51c0-.61-.16-.84-.57-.84h-.15a.1.1,0,0,0-.08,0,0,0,0,0,0,0,0h0v-.41l.63.05h0c.22,0,.43,0,.64.06a8.4,8.4,0,0,0,1-.07h.07l.36,0v.42h0a.89.89,0,0,0-.68.18c-.17.18-.18.51-.14,1.13V40.4c0,.51,0,.8.12,1a.79.79,0,0,0,.59.16h.12v.3q-.33,0-.72,0Zm69.4,0-.65,0-.66,0-.66,0h.18v-.3c.6,0,.78-.25.84-1.14V39.09l-2.15-3.87a1.17,1.17,0,0,0-1-.72v-.3c.22,0,.44,0,.65,0l.67.07c.44,0,.88-.06,1.31-.12v.3c-.4.07-.6.2-.6.42s0,.24.12.3l1.73,3.16,1.56-3.16a1.34,1.34,0,0,1,.07-.18h0a.19.19,0,0,0,0-.1c0-.24-.17-.3-.71-.42v-.3c.14,0,.31,0,.52,0h.05a3.43,3.43,0,0,1,.56.07l1-.12v.3a1.13,1.13,0,0,0-1,.71l-2,3.58V40.4c0,.84.07,1.13.84,1.13v.3q-.33,0-.66,0Zm-10.87,0-.72,0-.72,0-.72,0v-.3h0a1.11,1.11,0,0,0,.79-.2,1.3,1.3,0,0,0,.22-.93V34.68h-.72c-1.38,0-1.8.34-1.85,1.55h-.3v-2h6.57v2h-.3c-.06-1.36-.5-1.49-1.85-1.55h-.72v5.77c.06.79.08,1.08,1,1.08v.3q-.3,0-.72,0Zm-35.34,0h-5.32v-.3h0a.9.9,0,0,0,.67-.19c.14-.16.19-.43.16-1V35.51a.91.91,0,0,0-.13-.7.52.52,0,0,0-.43-.14h-.16s0,0,0,0h0l-.07,0h0v-.42c.3,0,.65,0,1.06.06s.74,0,1.09.06h.24c.88,0,1.77,0,2.63-.12a.27.27,0,0,1,0,.3,13.65,13.65,0,0,1,.12,1.55h-.3c-.06-1.13-.62-1.32-1.85-1.32h-1.2v2.87H152c.63,0,1.12,0,1.32-.24a.6.6,0,0,0,.12-.48s0,0,0,0,0-.06,0-.1h.3a2.91,2.91,0,0,1,0,1,2.86,2.86,0,0,1,0,1h-.3a.73.73,0,0,0-.16-.53,1.06,1.06,0,0,0-.77-.2h-.39a.4.4,0,0,0-.21,0,6,6,0,0,0-.62,0V40.4c0,.45,0,.7.11.84s.49.17,1,.17c1.61,0,2.15-.11,2.45-1.43h.24v.12h0v0c-.1.53-.21,1.19-.27,1.69ZM152.64,31.4h-.32a15.06,15.06,0,0,1-10.09-3.67,12.54,12.54,0,0,1-3.1-4.25A13.48,13.48,0,0,1,138,17.92a15.13,15.13,0,0,1,4.07-10.6,13.85,13.85,0,0,1,4.63-3.15A15.77,15.77,0,0,1,152.63,3a44,44,0,0,1,10.76,1.55,13.84,13.84,0,0,1-.06,1.82c0,.46-.06.94-.06,1.34V9h0a.45.45,0,0,1-.35.31c-.13,0-.25-.1-.37-.3-2.76-3.57-5.17-4.72-9.92-4.72h-.12a10.92,10.92,0,0,0-7.8,3.21,12.56,12.56,0,0,0-3.44,9.08c-.06,7.57,5.16,13.54,11.9,13.6,4.24-.06,8.06-2.36,11.36-6.86V26.5A14.26,14.26,0,0,1,159.34,30,17.93,17.93,0,0,1,152.64,31.4Z" transform="translate(0 0)"/>
+                        <path class="b" d="M164.59,31.39c3.17-.06,5.68-.12,8.49-.12,2.33.06,6.33.12,11.47.12.06-.18.42.3.6-.6.06-1.91.48-3.64.6-5.85.18-.41-.71-1.19-.71,0-1,4.78-4,5.25-9.63,5.31-4.06-.06-4.48-.41-4.42-3.7V17.49h4.18c3.41,0,4.49,0,4.73,2.15a.57.57,0,0,0,1.13,0,27.76,27.76,0,0,1,0-3.16,22.9,22.9,0,0,1,0-2.87c-.18-1.07-1.13-.6-1.13-.12.11,2.27-1.68,2.81-5.62,2.87-.78-.06-2.4-.06-3.29-.12V5h3.16c6,0,8.55.47,8.61,4.41.06.66,1,.42,1,0,0-2.09-.12-2.74-.12-4.41V3.59c-4.85.18-9.21.18-11.48.12s-4.48,0-7.3-.12c-.53-.06-.83,1.2,0,1.32,2-.06,2.75.77,2.75,3V26.21c.06,3-.12,4.23-2.75,4.3-.95-.06-.77.95-.3.89Z" transform="translate(0 0)"/>
+                        <path class="b" d="M200.22,4.07a13.23,13.23,0,0,0-3.95-.6c-1.91.06-4,.36-6.46.3a28.6,28.6,0,0,1-3.7-.12c-.42.12-.72,1.19.12,1.31,2,0,2.69.42,2.75,2.75V27c0,2.92-.12,3.16-2.57,3.46-.9.12-.9,1,.12,1,2,0,2.87-.06,4,0s2.51-.06,4.6,0c.66,0,1.08-.89,0-1-2.75-.12-2.87-1.26-2.87-4.3V18.45a24.54,24.54,0,0,1,4.19.3c.47.24.9,1.37,1.73,2.74l3.59,5.85c2,3.34,4.24,4.54,7.77,4.6.72-.06.42-.06,1.31-.12.66,0,.48-1,0-.84-3-.06-4.54-2-6.45-5.43L199.79,18a7.31,7.31,0,0,0,5.44-6.86c-.12-3.52-1.79-6-5-7l-.83,1.85C201.11,7,202,8.9,202,11.53c0,3.76-2.22,5.73-6.34,5.73a25.26,25.26,0,0,1-3.47-.3V5c1.08-.06,2.57-.11,3.17-.11a7.45,7.45,0,0,1,4,1Z" transform="translate(0 0)"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="footer-row">
+            <div class="footer-contact-us">
+                <h4>Contact Us</h4>
+                <ul>
+<li><a href="https://www.google.com/maps/place/1501+Mercer+University+Dr,+Macon,+GA+31207" target="_blank" rel="noopener">1501 Mercer University Drive • Macon, GA 31207</a></li>
+<li><a href="https://www.google.com/maps/place/3001+Mercer+University+Dr,+Atlanta,+GA+30341" target="_blank" rel="noopener">3001 Mercer University Drive • Atlanta, GA 30341</a></li>
+<li><a href="https://www.google.com/maps/place/Mercer+School+of+Medicine+Savannah+Campus,+1250+E+66th+St,+Savannah,+GA+31404" target="_blank" rel="noopener">1250 East 66th Street • Savannah, GA 31404</a></li>
+<li><a href="https://www.google.com/maps/place/33+W+11th+St,+Columbus,+GA+31901/data=!4m2!3m1!1s0x888ccdbb9b71ad35:0x2ddca71a73ed0ca0?sa=X&amp;ved=2ahUKEwjs8bS-rdnnAhWCmuAKHRTRCUsQ8gEwAHoECAsQAQ">33 West 11th Street • Columbus, GA 31901</a></li>
+<li><a href="tel:18006372378">1-800-MERCER-U</a></li>
+</ul>
+            </div>
+
+            <div class="footer-quick-links">
+                <h4>Quick Links</h4>
+                <ul id="menu-footer-quick-links" class="quick-links"><li id="menu-item-1195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a href="http://alert.mercer.edu/">Mercer Alerts</a></li>
+<li id="menu-item-1196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196"><a href="http://hr.mercer.edu">Employment</a></li>
+<li id="menu-item-1193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1193"><a href="https://www.mercer.edu/academics/libraries/">Libraries</a></li>
+<li id="menu-item-7523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7523"><a href="https://merceru.instructure.com/">Canvas</a></li>
+<li id="menu-item-1198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1198"><a href="https://my.mercer.edu">MyMercer</a></li>
+<li id="menu-item-1194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194"><a href="https://www.mercer.edu/marketing-communications/">Marketing Communications</a></li>
+<li id="menu-item-1199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="http://it.mercer.edu/">Information Technology</a></li>
+<li id="menu-item-7499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7499"><a href="https://www.mercer.edu/contacts/">Contacts</a></li>
+</ul>            </div>
+            
+            <div class="footer-social-links">
+                <h4>Connect With Us</h4>
+                
+<div class="social-links">
+			<a target="_blank" href="https://www.facebook.com/MercerUniversity/" class="facebook-link" title="Like us on Facebook!">
+			<p class="sr-only">Open Facebook page in new window</p>
+			<span class="ikes-facebook" aria-hidden="true"></span>
+		</a>
+				<a target="_blank" href="https://twitter.com/MercerYou" class="twitter-link" title="Follow us on Twtter!">
+			<p class="sr-only">Open Twitter page in new window</p>
+			<span class="ikes-twitter" aria-hidden="true"></span>
+		</a>
+    			<a target="_blank" href="https://www.instagram.com/merceryou" class="instagram-link" title="Follow us on Instagram!">
+			<p class="sr-only">Open Instagram page in new window</p>
+			<span class="ikes-instagram" aria-hidden="true"></span>
+		</a>
+					<a target="_blank" href="http://www.youtube.com/user/MercerUniversity/" class="youtube-link" title="Follow our Youtube channel!"> 
+			<p class="sr-only">Open YouTube page in new window</p>
+			<span class="ikes-youtube" aria-hidden="true"></span>
+		</a>
+	</div>            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p class="left-copyright">&copy; 2020 Mercer University. All rights reserved.</p>
+        <div class="right-copyright">
+                            <ul class="footer-more-links">
+                                            <li>
+                            <a href="https://disclosure.mercer.edu/">Federal Disclosure</a>
+                        </li>
+                                                <li>
+                            <a href="http://access.mercer.edu">Accessibility</a>
+                        </li>
+                                                <li>
+                            <a href="https://secure.ethicspoint.com/domain/media/en/gui/62627/index.html">Fraud and Abuse Hotline</a>
+                        </li>
+                                                <li>
+                            <a href="https://mercer.edu/privacy-policy">Privacy Policy</a>
+                        </li>
+                                        </ul>
+                    </div>    
+	</div>
+    </footer>
+
+<span id="mr-navigation-overlay" title="Close navigation menu"></span>
+<!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.mercer.edu/wp-admin/admin-ajax.php";
+</script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/themes/mercer/assets/js/ftr.min.js?ver=1593788593'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var alert_rest = {"rest_url":"https:\/\/wp.mercer.edu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/themes/mercer/assets/js/mercer-alerts.min.js?ver=1593788593'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityview-datatables/assets/datatables/media/js/jquery.dataTables.min.js?ver=2.4.5'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityview-datatables/assets/js/datatables-views.min.js?ver=2.4.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gvApproval = {"ajaxurl":"https:\/\/www.mercer.edu\/wp-admin\/admin-ajax.php","nonce":"8688737cd0","status":{"disapproved":{"value":2,"label":"Disapproved","action":"Disapprove","title":"Entry not approved for directory viewing. Click to approve this entry."},"approved":{"value":1,"label":"Approved","action":"Approve","title":"Entry approved for directory viewing. Click to disapprove this entry.","title_popover":"Entry approved for directory viewing. Click to disapprove this entry."},"unapproved":{"value":3,"label":"Unapproved","action":"Reset Approval","title":"Entry not yet reviewed. Click to approve this entry."}},"status_popover_template":"<a href=\"#\" data-approved=\"1\" aria-role=\"button\"  aria-live=\"polite\" class=\"gv-approval-toggle gv-approval-approved popover\" title=\"Approve\"><span class=\"screen-reader-text\">Approve<\/span><\/a>\n<a href=\"#\" data-approved=\"2\" aria-role=\"button\"  aria-live=\"polite\" class=\"gv-approval-toggle gv-approval-disapproved popover\" title=\"Disapprove\"><span class=\"screen-reader-text\">Disapprove<\/span><\/a>\n<a href=\"#\" data-approved=\"3\" aria-role=\"button\"  aria-live=\"polite\" class=\"gv-approval-toggle gv-approval-unapproved popover\" title=\"Reset Approval\"><span class=\"screen-reader-text\">Reset Approval<\/span><\/a>","status_popover_placement":"right"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityview/assets/js/field-approval.min.js?ver=2.8.1'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityview/assets/lib/tippy/tippy.min.js?ver=2.8.1'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-content/plugins/gravityview/assets/lib/tippy/popper.min.js?ver=2.8.1'></script>
+<script type='text/javascript' src='https://www.mercer.edu/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+<!-- 15,0.621,1593810076 --><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"50c08683e1","applicationID":"261436544","transactionName":"NAZUZRFRCxUHWkVRDg1Md1IXWQoISUlQXwQ=","queueTime":0,"applicationTime":622,"atts":"GEFXE1lLGBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

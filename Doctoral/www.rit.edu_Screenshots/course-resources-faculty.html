@@ -1,0 +1,70 @@
+	<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta charset="utf-8">
+    	<title>RIT Login - Stale Request</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#F36E21">
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+      <link rel='stylesheet' href='/css/combined.css'>
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="/js/html5shiv.js"></script>
+        <script src="/js/respond.min.js"></script>
+      <![endif]-->
+
+      <style id="antiClickjack">body{display:none !important;}</style>
+      <script type="text/javascript">
+         if (self === top) {
+             var antiClickjack = document.getElementById("antiClickjack");
+             antiClickjack.parentNode.removeChild(antiClickjack);
+         } else {
+             top.location = self.location;
+         }
+      </script>
+  	</head>
+  	
+  	<body>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+
+    <div id="metanav">
+        <ul>
+            <li id="metarithome"><a href="http://www.rit.edu/" title="RIT Home"><img src="/images/idbar-white.png" style="position: relative;top: 5px;"></a></li>
+            <li id="metaritsearch">
+                <div id="metaritsearchdiv">
+                    <form id="metasearchform" method="get" action="https://www.rit.edu/search/">
+                        <div>
+                            <input id="metaritsearchbox" class="faded" name="q" type="text" value="Search RIT" maxlength="250" alt="Search box" onfocus="focusSearch(this)" onblur="blurSearch(this)" />
+                            <button title="Submit Search">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li id="metaritdirectories"><a href="http://www.rit.edu/directories/">Directories</a></li>
+        </ul>
+        <script type="text/javascript">
+        function focusSearch(formfield){ if (formfield.defaultValue==formfield.value) formfield.value = ""; formfield.className = "focused"; }
+        function blurSearch(formfield){ if (formfield.value==""){ formfield.value = formfield.defaultValue; formfield.className = "faded";} }
+        </script>
+    </div>
+
+   <div class='container'>
+	   <div class='well' align="center">
+
+	   <h2>RIT Login</h2>
+
+	   <div class='alert alert-danger'>
+         <p>
+	      <p>You may be seeing this page because you used the Back button while browsing a secure web site or application. Alternatively, you may have mistakenly bookmarked the web login form instead of the actual web site you wanted to bookmark or used a link created by somebody else who made the same mistake.</p> <br/> <p>Left unchecked, this can cause errors on some browsers or result in you returning to the web site you tried to leave, so this page is presented instead.</p>         </p>
+	   </div>
+	   <br>
+      <p><a href="https://start.rit.edu/ForgotUsername?source=shib">Forgot Username?</a> | <a href="https://start.rit.edu/ForgotPassword?source=shib">Forgot Password?</a></p>
+      <p>Need assistance? Please contact the ITS Service Desk at<p /><a href="tel:15854754357">585-475-HELP [4357]</a> or visit <a href="https://help.rit.edu" target="_blank">help.rit.edu</a>.</p>
+	 </div>
+    </body>
+</html>

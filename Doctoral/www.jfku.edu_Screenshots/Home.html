@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4c98807ce5",applicationID:"62430737"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.jfku.edu/xmlrpc.php">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBJRGVX');</script>
+<!-- End Google Tag Manager -->
+<title>Frequently Asked Questions About Covid-19/Coronavirus - John F. Kennedy University</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v12.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.jfku.edu/frequently-asked-questions-about-covid-19-coronavirus/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Frequently Asked Questions About Covid-19/Coronavirus - John F. Kennedy University" />
+<meta property="og:url" content="https://www.jfku.edu/frequently-asked-questions-about-covid-19-coronavirus/" />
+<meta property="og:site_name" content="John F. Kennedy University" />
+<meta property="og:image" content="https://www.jfku.edu/wp-content/uploads/2018/05/yoastimage.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Frequently Asked Questions About Covid-19/Coronavirus - John F. Kennedy University" />
+<meta name="twitter:image" content="https://www.jfku.edu/wp-content/uploads/2018/05/yoastimage.jpg" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.jfku.edu/#website","url":"https://www.jfku.edu/","name":"John F. Kennedy University","potentialAction":{"@type":"SearchAction","target":"https://www.jfku.edu/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.jfku.edu/frequently-asked-questions-about-covid-19-coronavirus/#webpage","url":"https://www.jfku.edu/frequently-asked-questions-about-covid-19-coronavirus/","inLanguage":"en-US","name":"Frequently Asked Questions About Covid-19/Coronavirus - John F. Kennedy University","isPartOf":{"@id":"https://www.jfku.edu/#website"},"datePublished":"2020-03-13T19:18:39-07:00","dateModified":"2020-04-02T15:46:57-07:00"}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.jfku.edu' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="John F. Kennedy University &raquo; Feed" href="https://www.jfku.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="John F. Kennedy University &raquo; Comments Feed" href="https://www.jfku.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.jfku.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='featherlight-style-css'  href='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/featherlight/featherlight.min.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C500%2C600%2C700%7CPT+Serif%3A400%2C400i%2C700&#038;ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-style-css'  href='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/slick/slick.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-style-css'  href='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/slick/slick-theme.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mCustom-scrollbar-style-css'  href='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/custom-scrollbar/jquery.mCustomScrollbar.min.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jfku-style-css'  href='https://www.jfku.edu/wp-content/themes/jfku/style.css?ver=5.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js?ver=20180606'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/modernizr-custom.js?ver=20180430'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=3.4.1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/featherlight/featherlight.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/scrollmagic/ScrollMagic.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/jquery.matchHeight.js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAF-zPqRIAY5VgRhgs48NQjEWzL5KGPmuk&#038;ver=5.4'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/slick/slick.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/truncate.js?ver=1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/built.min.js?ver=1'></script>
+<link rel='https://api.w.org/' href='https://www.jfku.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.jfku.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.jfku.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4" />
+<link rel='shortlink' href='https://www.jfku.edu/?p=13430' />
+<link rel="alternate" type="application/json+oembed" href="https://www.jfku.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.jfku.edu%2Ffrequently-asked-questions-about-covid-19-coronavirus%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.jfku.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.jfku.edu%2Ffrequently-asked-questions-about-covid-19-coronavirus%2F&#038;format=xml" />
+<!-- Stream WordPress user activity plugin v3.4.3 -->
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><!--[if IE 9]> <script>var _fusionParallaxIE9 = true;</script> <![endif]--><link rel="icon" href="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-JFKU_Favicon_512x512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-JFKU_Favicon_512x512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-JFKU_Favicon_512x512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-JFKU_Favicon_512x512-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			#gform_wrapper_19 fieldset {
+	block-size: 20px;
+}
+
+#gform_wrapper_19 .ginput_container_checkbox  {
+	margin-top: 5px;
+}
+
+#gform_wrapper_19 .ginput_container_checkbox  {
+	margin-top: 0;
+}
+
+#gform_wrapper_19 input[type="checkbox"]  {
+	margin-top: 0;
+}
+
+
+
+.page-id-13430 .large-accordion-section {
+	padding: 0;
+}
+
+.jfku-hero-section.home .hero-content h2 {
+    font-size: 3.000rem;
+    line-height: 1;
+}		</style>
+		</head>
+
+<body class="page-template-default page page-id-13430 wp-custom-logo group-blog" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBJRGVX"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<main id="page" class="site">
+	<a class="skip-link screen-reader-text" title="Skip To Content" href="#main">Skip to content</a>
+
+	<header class="site-header" role="banner">
+		<div class="container">
+			<div class="main-header">
+				<div class="ham-icon-wrapper">
+					<button title="Expand Menu" class="mobile-menu-icon"  id="header-ham-menu-btn">
+						<span class="sr-only">
+							Expand Menu
+						</span>
+					</button>
+				</div>
+				<div class="header-left-container">
+					<div class="header-left-top">
+						<div class="header-left">
+															<div class="header-logo d-header-log">
+									<a href="https://www.jfku.edu/" class="custom-logo-link" rel="home" itemprop="url" title="Visit John F. Kennedy University Homepage"><img width="314" height="45" src="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-Logo_BlackGold.png" class="custom-logo" alt="John F. Kennedy University" itemprop="logo" srcset="https://www.jfku.edu/wp-content/uploads/2018/05/cropped-Logo_BlackGold.png 314w, https://www.jfku.edu/wp-content/uploads/2018/05/cropped-Logo_BlackGold-300x43.png 300w" sizes="(max-width: 314px) 100vw, 314px" /></a>								</div>
+							
+															<div class="header-logo m-header-logo">
+									<a href="https://www.jfku.edu" title="Link to Homepage"><img src="https://www.jfku.edu/wp-content/uploads/2018/05/mobile-logo.png " alt="John F. Kennedy University" /></a>
+								</div>
+													</div>
+
+						<div class="header-center">
+							<a href="#" title="Display Online Programs Menu Items" class="dropdown-menu header-link header-link-1" id="header-dropdown-link">Online Programs</a>
+							<a href="#" title="Display Campus Programs Menu Items" class="dropdown-menu header-link header-link-2" id="header-dropdown-link-2">Campus Programs</a>
+						</div>
+					</div>
+					<div class="header-left-bottom">
+													<a href="https://www.jfku.edu" title="Link back to homepage" class="site-small-logo"><img src="https://www.jfku.edu/wp-content/uploads/2018/04/Logo_BlackGold-icon.png" alt="John F. Kennedy University" /></a>
+												<h1 class="header-page-title">Frequently Asked Questions About Covid-19/Coronavirus</h1>
+					</div>
+				</div>
+
+				<div class="header-right">
+											<a class="header-link apply-link" title="Apply to JFKU" href="https://www.jfku.edu/apply/" target="">Apply</a>
+					
+											<a class="header-link request-btn" title="Request More Information from JFKU" href="https://www.jfku.edu/request-info/" target="">Request Info</a>
+					
+					<button title="Open Search Window" class="header-search-btn" id="header-search-btn">
+						<span class="sr-only">
+							Open Search Window
+						</span>
+					</button>
+				</div>
+
+				<div class="m-header-right">
+					<a href="#" class="m-header-dropdown-btn">I Want To</a>
+				</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<header id="masthead" class="site-header jfk-ham-site-header" role="banner">
+		<div class="container">
+			<div class="main-header">
+				<div class="ham-icon-wrapper">
+					<button title="Expand Menu" class="mobile-menu-icon"  title="Close Menu" id="header-ham-close-menu-btn">
+							<span class="sr-only">
+								Close Menu
+							</span>
+					</button>
+				</div>
+				<div class="header-left-container"></div>
+
+				<div class="header-right">
+											<a class="header-link apply-link" title="Apply to JFKU" href="https://www.jfku.edu/apply/" target="">Apply</a>
+					
+											<a class="header-link request-btn" title="Request More Information from JFKU" href="https://www.jfku.edu/request-info/" target="">Request Info</a>
+									</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div class="header-background"></div>
+
+	<!-- dropdown menu -->
+	<div class="explore-program-menu header-dropdown-menu-section mCustomScrollbar" id="header-dropdown-menu-section">
+		<div class="container">
+			<div class="hdropdown-container">
+				<div class="hdropdown_menu_container">
+					<div class="menu-online-programs-container"><ul id="menu-online-programs" class="header_dropdown_menu"><li id="menu-item-5155" class="column_one menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5155"><a href="#">Column One</a>
+<ul class="sub-menu">
+	<li id="menu-item-5110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5110"><a title="JFKu Online FlexCourse℠ Programs" href="https://www.jfku.edu/online/">JFKu Online FlexCourse℠ Programs</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5793" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5793"><a title="Master of Business Administration" href="https://www.jfku.edu/program/mba/">Master of Business Administration</a></li>
+		<li id="menu-item-5794" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5794"><a title="Bachelor of Arts in Management" href="https://www.jfku.edu/program/ba-management/">Bachelor of Arts in Management</a></li>
+		<li id="menu-item-5795" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5795"><a title="Bachelor of Arts in Psychology" href="https://www.jfku.edu/program/clinical-psychology/ba-psychology/">Bachelor of Arts in Psychology</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-10010" class="column_two menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10010"><a href="#">Column Two</a>
+<ul class="sub-menu">
+	<li id="menu-item-10011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10011"><a title="Traditional Online" href="https://www.jfku.edu/online/">Traditional Online</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5801" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5801"><a title="MA in Consciousness and Transformative Studies" href="https://www.jfku.edu/program/ma-consciousness-and-transformative-studies/">MA in Consciousness and Transformative Studies</a></li>
+		<li id="menu-item-5796" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5796"><a title="MA in Sport Psychology" href="https://www.jfku.edu/program/sport-psychology/ma-sport-psychology/">MA in Sport Psychology</a></li>
+		<li id="menu-item-10012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10012"><a title="Academic Certificate in Human Resources" href="https://www.jfku.edu/program/academic-certificate-in-human-resources/">Academic Certificate in Human Resources</a></li>
+	</ul>
+</li>
+	<li id="menu-item-9203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9203"><a title="Continuing Education" href="https://www.jfku.edu/college/continuing-education/">Continuing Education</a></li>
+</ul>
+</li>
+</ul></div>				</div>
+									<div class="hdropdown-footer">
+						<a class="hdropdown-btn" href="https://www.jfku.edu/program-finder/" target="">Browse Program Finder</a>
+					</div>
+							</div>
+		</div>
+	</div>
+
+	<div class="explore-program-menu header-dropdown-menu-section mCustomScrollbar" id="header-dropdown-menu-section-2">
+		<div class="container">
+			<div class="hdropdown-container">
+				<div class="hdropdown_menu_container">
+					<div class="menu-campus-programs-container"><ul id="menu-campus-programs" class="header_dropdown_menu"><li id="menu-item-76" class="column_one menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a href="#">Column One</a>
+<ul class="sub-menu">
+	<li id="menu-item-6295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6295"><a title="On Campus Programs" href="https://www.jfku.edu/on-campus/">JFKu On Campus Programs</a></li>
+	<li id="menu-item-5809" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5809"><a title="Business and Professional Studies" href="https://www.jfku.edu/college/business-professional-studies/">Business &#038; Professional Studies</a></li>
+	<li id="menu-item-5806" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-has-children menu-item-5806"><a title="College of Law" href="https://www.jfku.edu/college/law/">College of Law</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5814" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5814"><a title="Juris Doctor Program" href="https://www.jfku.edu/program/juris-doctor-2/">Juris Doctor Online</a></li>
+		<li id="menu-item-5815" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5815"><a title="BA Completion in Legal Studies" href="https://www.jfku.edu/program/ba-completion-in-legal-studies/">BA Completion in Legal Studies</a></li>
+		<li id="menu-item-5816" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5816"><a title="Paralegal Certificate" href="https://www.jfku.edu/program/paralegal-certificate/">Paralegal Certificate</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5808" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5808"><a title="Continuing Education" href="https://www.jfku.edu/college/continuing-education/">Continuing Education</a></li>
+	<li id="menu-item-5807" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5807"><a title="Sanford Institute of Philanthropy" href="https://www.jfku.edu/college/sanford-institute-of-philanthropy/">Sanford Institute of Philanthropy</a></li>
+</ul>
+</li>
+<li id="menu-item-92" class="column_two menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-92"><a href="#">Column Two</a>
+<ul class="sub-menu">
+	<li id="menu-item-93" class="has_sub_sub_menu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-93"><a title="Psychology" href="https://www.jfku.edu/college/psychology/">Psychology</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5833" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-has-children menu-item-5833"><a title="Clinical Psychology" href="https://www.jfku.edu/program/clinical-psychology/">Clinical Psychology</a>
+		<ul class="sub-menu">
+			<li id="menu-item-5825" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5825"><a title="Doctorate of Psychology" href="https://www.jfku.edu/program/clinical-psychology/doctor-of-psychology/">Doctorate of Psychology</a></li>
+			<li id="menu-item-5823" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5823"><a title="Dual MA in Sport Psychology &#038; PsyD Psychology" href="https://www.jfku.edu/program/sport-psychology/dual-ma-sport-psychology-and-psyd-psychology/">Dual MA in Sport Psychology &#038; PsyD Psychology</a></li>
+			<li id="menu-item-10015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10015"><a title="Academic Certificate in  Human Resources" href="https://www.jfku.edu/program/academic-certificate-in-human-resources/">Academic Certificate in  Human Resources</a></li>
+		</ul>
+</li>
+		<li id="menu-item-5826" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5826"><a title="Consciousness and Transformative Studies" href="https://www.jfku.edu/program/ma-consciousness-and-transformative-studies/">Consciousness and Transformative Studies</a></li>
+		<li id="menu-item-5820" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-has-children menu-item-5820"><a title="Counseling Psychology" href="https://www.jfku.edu/program/counseling-psychology/">Counseling Psychology</a>
+		<ul class="sub-menu">
+			<li id="menu-item-5828" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5828"><a title="MA in Counseling Psychology" href="https://www.jfku.edu/program/counseling-psychology/ma-counseling-psychology/">MA in Counseling Psychology</a></li>
+			<li id="menu-item-5824" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5824"><a title="MA Holistic Psychology (Specializations: Depth, Expressive Arts, Holistic Studies, Somatic, Transpersonal)" href="https://www.jfku.edu/program/counseling-psychology/ma-counseling-psychology/ma-holistic-psychology-2/">MA Holistic Psychology (Specializations: Depth, Expressive Arts, Holistic Studies, Somatic, Transpersonal)</a></li>
+			<li id="menu-item-5827" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5827"><a title="Academic Certificate in Trauma Studies" href="https://www.jfku.edu/program/counseling-psychology/academic-certificate-trauma-studies/">Academic Certificate in Trauma Studies</a></li>
+		</ul>
+</li>
+		<li id="menu-item-5819" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-has-children menu-item-5819"><a title="Sport Psychology" href="https://www.jfku.edu/program/sport-psychology/">Sport Psychology</a>
+		<ul class="sub-menu">
+			<li id="menu-item-5831" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5831"><a title="Dual MA in Sport Psychology &#038; PsyD Psychology" href="https://www.jfku.edu/program/sport-psychology/dual-ma-sport-psychology-and-psyd-psychology/">Dual MA in Sport Psychology &#038; PsyD Psychology</a></li>
+			<li id="menu-item-5829" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5829"><a title="MA in Sport Psychology" href="https://www.jfku.edu/program/sport-psychology/ma-sport-psychology/">MA in Sport Psychology</a></li>
+			<li id="menu-item-5822" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-5822"><a title="Graduate Certificate in Sport Psychology" href="https://www.jfku.edu/program/sport-psychology/graduate-certificate-in-sport-psychology/">Graduate Certificate in Sport Psychology</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></div>				</div>
+									<div class="hdropdown-footer">
+						<a class="hdropdown-btn" href="https://www.jfku.edu/program-finder/" target="">Browse Program Finder</a>
+					</div>
+							</div>
+		</div>
+	</div>
+
+	<!-- Hamburger Menu -->
+	<div class="header-ham-menu">
+				<div class="ham-left-container" style="background-image: linear-gradient(rgba(243, 199, 39, .87), rgba(243, 199, 39, .87)), url('https://www.jfku.edu/wp-content/uploads/2018/05/JFKU_blank_yellow.jpg') ;">
+			<div class="ham-left-content">
+				<div class="ham_left_menu_container">
+					<div class="menu-hamburger-left-menu-container"><ul id="menu-hamburger-left-menu" class="ham_left_menu"><li id="menu-item-45" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-45"><a>Information For</a>
+<ul class="sub-menu">
+	<li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2058"><a title="Prospective Students" href="https://www.jfku.edu/prospective-students/">Prospective Students</a></li>
+	<li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a title="Current Students" href="https://www.jfku.edu/current-students/">Current Students</a></li>
+	<li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059"><a title="Alumni" href="https://www.jfku.edu/alumni-2/">Alumni</a></li>
+	<li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a title="Donors" href="https://www.jfku.edu/donors/">Donors</a></li>
+</ul>
+</li>
+</ul></div>				</div>
+			</div>
+		</div>
+		<div class="ham-right-container jfk-m-hidden" >
+			<div class="ham-right-content mCustomScrollbar">
+				<div class="ham_right_menu_container">
+					<div class="menu-hamburger-right-menu-container"><ul id="menu-hamburger-right-menu" class="ham_right_menu"><li id="menu-item-452" class="column_one menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-452"><a href="#">Column One</a>
+<ul class="sub-menu">
+	<li id="menu-item-50" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50"><a>Academics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2065"><a title="Degrees" href="https://www.jfku.edu/degrees/">Degrees</a></li>
+		<li id="menu-item-2062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2062"><a title="Programs" href="https://www.jfku.edu/program-finder-2/">Programs</a></li>
+		<li id="menu-item-2063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2063"><a title="Online" href="https://www.jfku.edu/online/">Online</a></li>
+		<li id="menu-item-8217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8217"><a title="On Campus" href="https://www.jfku.edu/on-campus/">On Campus</a></li>
+		<li id="menu-item-2814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2814"><a title="Continuing Education" href="https://www.jfku.edu/college/continuing-education/">Continuing Education</a></li>
+	</ul>
+</li>
+	<li id="menu-item-62" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62"><a>Student Life</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1595"><a title="Ways to Learn" href="https://www.jfku.edu/student-experience/ways-to-learn/">Ways to Learn</a></li>
+		<li id="menu-item-1583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1583"><a title="Our Service Learning Model" href="https://www.jfku.edu/student-experience/service-learning-model/">Our Service Learning Model</a></li>
+		<li id="menu-item-2066" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2066"><a title="Student Experience" href="https://www.jfku.edu/student-experience/">Student Experience</a></li>
+		<li id="menu-item-1580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1580"><a title="Support for Working Adults" href="https://www.jfku.edu/student-experience/support-for-working-adults/">Support for Working Adults</a></li>
+		<li id="menu-item-1587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1587"><a title="Support for Military/Veterans" href="https://www.jfku.edu/student-experience/support-for-military-veterans/">Support for Military/Veterans</a></li>
+		<li id="menu-item-1582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1582"><a title="Support for Underserved Students" href="https://www.jfku.edu/student-experience/support-for-underserved-students/">Support for Underserved Students</a></li>
+		<li id="menu-item-2067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2067"><a title="Locations and Libraries" href="https://www.jfku.edu/student-experience/locations/">Locations and Libraries</a></li>
+		<li id="menu-item-4465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4465"><a title="Blog" href="https://www.jfku.edu/blog/">Blog</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-453" class="column_two menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-453"><a>Column Two</a>
+<ul class="sub-menu">
+	<li id="menu-item-926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-926"><a href="https://www.jfku.edu/about-us/">About JFKU</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2068" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2068"><a title="Admissions" href="https://www.jfku.edu/admissions/">Admissions</a></li>
+		<li id="menu-item-2070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2070"><a title="Tuition &#038; Financial Aid" href="https://www.jfku.edu/admissions/financial-aid/">Tuition &#038; Financial Aid</a></li>
+		<li id="menu-item-3453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3453"><a title="Open Houses" href="https://www.jfku.edu/events/open-houses/">Open Houses</a></li>
+		<li id="menu-item-2069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2069"><a title="Faculty" href="https://www.jfku.edu/faculty/">Faculty</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5602"><a href="https://www.jfku.edu/community/">In the Community</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5877"><a title="Event Calendar" href="https://www.jfku.edu/events/">Event Calendar</a></li>
+		<li id="menu-item-5608" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5608"><a title="Sanford Institute of Philanthropy" href="https://www.jfku.edu/college/sanford-institute-of-philanthropy/">Sanford Institute of Philanthropy</a></li>
+		<li id="menu-item-8219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8219"><a title="VALOR Center" href="https://www.jfku.edu/student-experience/valor-center/">VALOR Center</a></li>
+		<li id="menu-item-4436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4436"><a title="The LEAP Program" href="https://www.jfku.edu/community/leap-program/">The LEAP Program</a></li>
+		<li id="menu-item-4435" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4435"><a title="JFKU Legal Clinics" href="https://www.jfku.edu/community/jfku-law-clinics/">JFKU Legal Clinics</a></li>
+		<li id="menu-item-4434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4434"><a title="Office of Clinical Training" href="https://www.jfku.edu/community/office-of-clinical-training/">Office of Clinical Training</a></li>
+		<li id="menu-item-4437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4437"><a title="Holistic Research Center" href="https://www.jfku.edu/community/hrc/">Holistic Research Center</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></div>				</div>
+
+				<div class="ham_right_sec_menu_container">
+					<div class="menu-hamburger-footer-menu-container"><ul id="menu-hamburger-footer-menu" class="ham_right_sec_menu"><li id="menu-item-2071" class="event-link m-hidden menu-item menu-item-type-post_type menu-item-object-page menu-item-2071"><a title="Event Calendar" href="https://www.jfku.edu/events/">Event Calendar</a></li>
+<li id="menu-item-2072" class="faculty-link menu-item menu-item-type-post_type menu-item-object-page menu-item-2072"><a title="Faculty Finder" href="https://www.jfku.edu/faculty/">Faculty Finder</a></li>
+<li id="menu-item-2073" class="location-link menu-item menu-item-type-post_type menu-item-object-page menu-item-2073"><a title="Campus Locations" href="https://www.jfku.edu/student-experience/locations/">Campus Locations</a></li>
+</ul></div>				</div>
+			</div>
+		</div>
+
+		<div class="ham-right-container jfk-m-visible jfk-l-hidden m-ham-right-container">
+			<div class="ham-right-content mCustomScrollbar">
+				<div class="ham_right_menu_container">
+					<div class="menu-hamburger-right-menu-container"><ul id="menu-hamburger-right-menu-1" class="ham_right_menu"><li class="column_one menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-452"><a href="#">Column One</a>
+<ul class="sub-menu">
+	<li class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50"><a>Academics</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2065"><a title="Degrees" href="https://www.jfku.edu/degrees/">Degrees</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2062"><a title="Programs" href="https://www.jfku.edu/program-finder-2/">Programs</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2063"><a title="Online" href="https://www.jfku.edu/online/">Online</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8217"><a title="On Campus" href="https://www.jfku.edu/on-campus/">On Campus</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2814"><a title="Continuing Education" href="https://www.jfku.edu/college/continuing-education/">Continuing Education</a></li>
+	</ul>
+</li>
+	<li class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62"><a>Student Life</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1595"><a title="Ways to Learn" href="https://www.jfku.edu/student-experience/ways-to-learn/">Ways to Learn</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1583"><a title="Our Service Learning Model" href="https://www.jfku.edu/student-experience/service-learning-model/">Our Service Learning Model</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2066"><a title="Student Experience" href="https://www.jfku.edu/student-experience/">Student Experience</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1580"><a title="Support for Working Adults" href="https://www.jfku.edu/student-experience/support-for-working-adults/">Support for Working Adults</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1587"><a title="Support for Military/Veterans" href="https://www.jfku.edu/student-experience/support-for-military-veterans/">Support for Military/Veterans</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1582"><a title="Support for Underserved Students" href="https://www.jfku.edu/student-experience/support-for-underserved-students/">Support for Underserved Students</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2067"><a title="Locations and Libraries" href="https://www.jfku.edu/student-experience/locations/">Locations and Libraries</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4465"><a title="Blog" href="https://www.jfku.edu/blog/">Blog</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="column_two menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-453"><a>Column Two</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-926"><a href="https://www.jfku.edu/about-us/">About JFKU</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2068"><a title="Admissions" href="https://www.jfku.edu/admissions/">Admissions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2070"><a title="Tuition &#038; Financial Aid" href="https://www.jfku.edu/admissions/financial-aid/">Tuition &#038; Financial Aid</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3453"><a title="Open Houses" href="https://www.jfku.edu/events/open-houses/">Open Houses</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2069"><a title="Faculty" href="https://www.jfku.edu/faculty/">Faculty</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5602"><a href="https://www.jfku.edu/community/">In the Community</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5877"><a title="Event Calendar" href="https://www.jfku.edu/events/">Event Calendar</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5608"><a title="Sanford Institute of Philanthropy" href="https://www.jfku.edu/college/sanford-institute-of-philanthropy/">Sanford Institute of Philanthropy</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8219"><a title="VALOR Center" href="https://www.jfku.edu/student-experience/valor-center/">VALOR Center</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4436"><a title="The LEAP Program" href="https://www.jfku.edu/community/leap-program/">The LEAP Program</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4435"><a title="JFKU Legal Clinics" href="https://www.jfku.edu/community/jfku-law-clinics/">JFKU Legal Clinics</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4434"><a title="Office of Clinical Training" href="https://www.jfku.edu/community/office-of-clinical-training/">Office of Clinical Training</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4437"><a title="Holistic Research Center" href="https://www.jfku.edu/community/hrc/">Holistic Research Center</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></div>				</div>
+
+				<div class="ham_right_sec_menu_container">
+					<div class="menu-hamburger-footer-menu-container"><ul id="menu-hamburger-footer-menu-1" class="ham_right_sec_menu"><li class="event-link m-hidden menu-item menu-item-type-post_type menu-item-object-page menu-item-2071"><a title="Event Calendar" href="https://www.jfku.edu/events/">Event Calendar</a></li>
+<li class="faculty-link menu-item menu-item-type-post_type menu-item-object-page menu-item-2072"><a title="Faculty Finder" href="https://www.jfku.edu/faculty/">Faculty Finder</a></li>
+<li class="location-link menu-item menu-item-type-post_type menu-item-object-page menu-item-2073"><a title="Campus Locations" href="https://www.jfku.edu/student-experience/locations/">Campus Locations</a></li>
+</ul></div>				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-search-section">
+		<div class="container">
+			<div class="search-close-main-header">
+				<div class="hsc-right">
+					<a class="header-search-close" id="header-search-close"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<form role="search" method="get" class="search-form header-searchform" name="searchform" action="https://www.jfku.edu/">
+				<label class="search-field-box">
+					<h3 class="search-label">Search</h3>
+					<input type="search" class="search-field" placeholder="Programs, Colleges, People or Events"
+						value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>
+		</div>
+	</div>
+
+		<div class="m-dropdown-section mCustomScrollbar" data-mcs-theme="dark" style="background-image: linear-gradient(rgba(233, 208, 142, .87), rgba(233, 208, 142, .87)), url('https://www.jfku.edu/wp-content/uploads/2018/05/JFKU_blank_yellow.jpg'); ">
+				<ul class="m-dd-buttons">
+								<li>
+						<a class="button" href="https://www.jfku.edu/request-info/" target="">Request Info</a>
+					</li>
+										<li>
+						<a class="button" href="https://www.nu.edu/applynow/?filterAppGroup=JFK&#038;filterAppGroup=JFK" target="_blank">Apply</a>
+					</li>
+										<li>
+						<a class="button" href="https://www.jfku.edu/program-finder/" target="">Explore Programs</a>
+					</li>
+										<li>
+						<a class="button" href="https://www.jfku.edu/online/" target="">Explore JFKu Online</a>
+					</li>
+					
+			<li>
+				<a class="button" href="#" id="m-header-search-btn">Search</a>
+			</li>
+		</ul>
+			</div>
+
+	<div class="header-freespace"></div>
+
+	<div id="content" class="site-content">
+
+	
+
+	<div class="jfku-hero-section hero-bg-yellow  shortened-hero" style="background-color: #F3C727;">
+						<div class="hero-content white">
+			<div class="container">
+				<div class="hero-content-container">
+											
+		<ul class="jfk-breadcrumbs jfk-breadcrumbs--white">
+			<li><a href="https://www.jfku.edu">Home</a></li>
+
+			
+			<li><a title="Visit Frequently Asked Questions About Covid-19/Coronavirus" href="https://www.jfku.edu/frequently-asked-questions-about-covid-19-coronavirus/">Frequently Asked Questions About Covid-19/Coronavirus</a></li>
+		</ul>
+
+						
+										<h2>Frequently Asked Questions About Covid-19/Coronavirus</h2>
+									</div>
+			</div>
+		</div>
+
+		
+							
+			</div>
+
+	
+
+<div id="inline-nav-trigger"></div>
+<div class="jfku-inline-nav-container">
+    <div class="jfku-inline-nav-section" id="jfku-inline-nav-section">
+        <div class="container">
+            <div class="inline-nav-wrapper">
+            <a href="#" class="inline-nav-jfk-button prev-col" title="Previous Section" data-direction="prev">prev</a>
+            <ul class="inline-nav-items">
+                                <li class="inline-nav-item">
+                    <a href="#Health-and-Wellness" title="View Health and Wellness"  id="trigger-Health-and-Wellness" data-trigger-el="Health-and-Wellness" class="inline-nav-link">
+                        Health and Wellness                    </a>
+                </li>
+                                <li class="inline-nav-item">
+                    <a href="#Prevention" title="View Prevention"  id="trigger-Prevention" data-trigger-el="Prevention" class="inline-nav-link">
+                        Prevention                    </a>
+                </li>
+                                <li class="inline-nav-item">
+                    <a href="#University-Operations" title="View University Operations"  id="trigger-University-Operations" data-trigger-el="University-Operations" class="inline-nav-link">
+                        University Operations                    </a>
+                </li>
+                                <li class="inline-nav-item">
+                    <a href="#Travel" title="View Travel"  id="trigger-Travel" data-trigger-el="Travel" class="inline-nav-link">
+                        Travel                    </a>
+                </li>
+                                <li class="inline-nav-item">
+                    <a href="#JFKU-HR-Information-for-Faculty-and-Staff" title="View JFKU HR Information for Faculty and Staff"  id="trigger-JFKU-HR-Information-for-Faculty-and-Staff" data-trigger-el="JFKU-HR-Information-for-Faculty-and-Staff" class="inline-nav-link">
+                        JFKU HR Information for Faculty and Staff                    </a>
+                </li>
+                
+            </ul>
+            <a href="#" class="inline-nav-jfk-button next-col" title="Next Section" data-direction="next">next</a>
+            </div><!-- .inline-nav-wrapper -->
+        </div>
+    </div>
+</div>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			        <style media="screen">
+            .info-block-section-0.info-blocks-section.info-simple-section { background-color: #FFFFFF; }
+            /*.info-block-section-.info-blocks-section.info-simple-section .info-simple-content-box { border-color: #cccccc; }*/
+            /* .info-block-section-0.info-blocks-section.info-simple-section .info-simple-content-area:after { background-color: #cccccc; } */
+            .info-block-section-0.info-blocks-section.info-simple-section .isb-content-area,
+            /* .info-block-section-0.info-blocks-section.info-simple-section .info-simple-content-left { border-color: #cccccc;} */
+            /* .info-blocks-section.info-simple-section.info-block-section-0 .info-simple-content-area.has-highlight .info-simple-content-box:before { background-color: #cccccc; } */
+        </style>
+        <div class="info-blocks-section info-simple-section info-block-section-0" id="">
+            <div class="container">
+                <div class="info-simple-content-area ">
+                    <div class="info-simple-content-full">
+                    
+                        <div class="isb-content-area">
+                            <div class="isb-main-content-area">
+                                <div class="info-simple-content-box">
+                                                                            <div class="info_simple_content jfku-medium-font">
+                                            <div style="text-align: left">
+<p><strong>Page last updated at <em>3:45 PM PST, March 13, 2020</em></strong></p>
+<p>John F. Kennedy University is closely monitoring recommendations from the <a href="https://www.cdc.gov/coronavirus/2019-ncov/summary.html?elqTrackId=81FD47843D725F8B51C35219F2215E9E&amp;elq=fb262b098bf34f25b841db7f73a198f2&amp;elqaid=4550&amp;elqat=1&amp;elqCampaignId=1741">Centers for Disease Control and Prevention (CDC)</a>, as well as State and County Public Health Departments to proactively respond to novel coronavirus (COVID-19) and protect the health and well-being of our campus community.</p>
+</div>
+<p><!--more--></p>
+                                        </div>
+                                    
+                                    
+                                                                    </div>
+
+                                
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+
+    <div class="accordion-section large-accordion-section" id="Health-and-Wellness" >
+        <div class="container">
+
+                Health and Wellness
+
+                                                                        <div class="large-accordions">
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What is novel coronavirus?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>According to the U.S. Centers for Disease Control and Prevention (CDC), a novel coronavirus is a new coronavirus that has not been previously identified. The novel coronavirus known as COVID-19, is a virus strain that has only spread in people since December 2019. COVID-19 is a new disease, and there is more to learn about how it spreads, the severity of illness it causes, and to what extent it may spread. For more information please visit the websites for the <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC</a> and <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/nCOV2019.aspx">California Department of Public Health</a>.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What are the symptoms of COVID-19?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>Patients with COVID-19 have reported mild to severe respiratory illness with symptoms including fever, cough, and shortness of breath. Symptoms may appear 2-14 days after exposure. Information suggests that older people and those with certain underlying health conditions like heart disease or lung disease, for example, seem to be at greater risk of serious illness.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">How does COVID-19 spread?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>COVID-19 is thought to spread mainly from person to person. This includes being within approximately 6 feet of an individual with COVID-19 for a prolonged period of time and through respiratory droplets produced when an infected person coughs or sneezes. It may also be possible that a person can get COVID-19 by touching a surface or object that has the virus on it, then touching their own mouth, nose, or possibly their eyes</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What should I do if I suspect I have COVID-19?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>If you are experiencing fever and symptoms of respiratory illness, such as cough or difficulty breathing, and have been in close contact with a person known to have COVID-19 or if you live in or have recently traveled to an area with ongoing spread, tell your health care professional about your recent travel or contact. Your health care professional will work with your state’s public health department and the <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC</a> to determine if you need to be tested for COVID-19. Of course, if you feel like you need immediate help, call 911.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                    </div>
+                                                        </div>
+    </div>
+
+    <div class="accordion-section large-accordion-section" id="Prevention" >
+        <div class="container">
+
+                Prevention
+
+                                                                        <div class="large-accordions">
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What can I do to avoid getting sick? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>Take the <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html">CDC-recommended precautions</a> to reduce your risk of exposure, including <a href="https://www.cdc.gov/handwashing/">proper handwashing</a>; avoiding touching your eyes, nose, and mouth; covering your cough or sneeze with a tissue, then throwing the tissue in a trash receptacle; cleaning and disinfecting frequently touched objects and surfaces; and avoiding close contact with people who are sick.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Do I need to wear a facemask? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>The CDC does not recommend that people who are well wear a facemask to protect themselves from respiratory diseases, including COVID-19. Facemasks should be used by people who show symptoms of COVID-19 to help prevent the spread of the disease to others. The use of facemasks is crucial for <a href="https://www.cdc.gov/coronavirus/2019-ncov/infection-control/control-recommendations.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fhcp%2Finfection-control.html">health workers</a> and <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-home-care.html">people who are taking care of someone in close settings</a> (at home or in a health care facility).</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                    </div>
+                                                        </div>
+    </div>
+
+    <div class="accordion-section large-accordion-section" id="University-Operations" >
+        <div class="container">
+
+                University Operations
+
+                                                                        <div class="large-accordions">
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Are University events and activities being cancelled?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>The University has determined to limit on-site events and community gatherings at JFKU facilities.  All events that are able will be moved online. Events that are unable to be presented online will be cancelled or postponed. Please visit <a href="http://jfku.edu/events">our events page</a> for further details about the specific event you are interested in.</p>
+<p>For those students approaching graduation, we are currently meeting with administrators and formulating a plan of action.  Stay tuned to your University issued email for further information.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Will JFKU campuses be shut down? What happens if JFKU campuses are shut down because of the coronavirus?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>JFKU is closely monitoring recommendations from the CDC, as well as state and county public health departments. No confirmed cases of the virus exist among members of the JFKU community.  However, in an abundance of caution we have  determined the best course of action is to cease in-person classes starting Monday, March 16 through March 27.  Classes are not in session March 30 through April 3 for Spring Break</p>
+<p>Faculty and students are strongly encouraged to minimize their physical presence on campus over the two weeks prior to spring break.</p>
+<p><span style="font-weight: 400">During this time, we do expect staff to continue to report to work, unless you are sick or caring for someone who is sick . If that is the case, please stay home.  </span></p>
+<p><span style="font-weight: 400">We want to ensure the health and safety of everyone at JFKU, and each manager will work with individuals on their own specific needs and determine what works best for any given situation. Please speak to your manager about your individual situation.</span></p>
+<p>There is no set end date to this new arrangement, and we will continue to monitor the situation. As with all communities, our hope is to return to normalcy as soon as possible, but we must plan and prepare for the longer term.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                    </div>
+                                                        </div>
+    </div>
+
+    <div class="accordion-section large-accordion-section" id="Travel" >
+        <div class="container">
+
+                Travel
+
+                                                                        <div class="large-accordions">
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What are the risks of traveling outside of the U.S. at this time? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>Risk varies greatly depending on location. Travelers should consult the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">CDC’s Travel Notices</a> page prior to traveling. In addition, given the extraordinary coronavirus situation, you should consider the risks of (i) not being allowed to leave if a quarantine were issued by the authorities of that country; (ii) not being allowed to enter into a another country by the authorities of that country, because you had been in a country with widespread sustained (ongoing) transmission, that may be considered “at risk”; (iii) being placed into mandatory quarantine, upon arrival in the United States or another location, because you were in a country with widespread sustained (ongoing) transmission. The university cannot guarantee the level of care you will receive while abroad. When the CDC warning rises to Level 3: avoid nonessential travel in a country or region.</p>
+<p>Based on recommendations from the CDC and U.S. Department of State travel advisories, we are suspending university-sponsored travel to countries outside of the United States until further notice, this specifically includes study abroad. NU also recommends limiting university-sponsored travel within the United States.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">I have personal travel planned. Should I cancel it? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>The University is not able to make individual recommendations for personal travel. We recommend that travelers review the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">CDC travel warnings</a> and <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/faqs.html">frequently asked questions for travelers</a> before going on a trip.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                    </div>
+                                                        </div>
+    </div>
+
+    <div class="accordion-section large-accordion-section" id="JFKU-HR-Information-for-Faculty-and-Staff" >
+        <div class="container">
+
+                JFKU HR Information for Faculty and Staff
+
+                                                                        <div class="large-accordions">
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Am I required to come into work during a coronavirus (COVID-19) outbreak?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>The University is closely monitoring developing reports and new incidents of the coronavirus and at this time has decided to transition all courses online for the month of March. Otherwise, these campuses/facilities are operating under normal schedules, and all staff are expected to report to work as usual. This may change at any time, and a timely message will be disseminated to the University campus and community if it does.  Staff with specific concerns regarding reporting to work are encouraged to contact Benefits at <a href="mailto:benefits@nu.edu">benefits@nu.edu</a> or call 858-642-8199 to discuss their situation.</p>
+<p>In the event that operations, not just classes, are temporarily converted online, your manager will work with Human Resources (HR) and Information Technology (IT) to assist you with remote access to University information systems. Strict adherence to current University policy including, but not limited to, timekeeping, performance, and information security is expected. If you’re feeling sick, please utilize your sick time to rest and recuperate.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What is the University doing to protect the university community?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>The health and well-being of the university community is our top priority, and a variety of university officials are continually monitoring reports from the CDC and World Health Organization (WHO) to stay up to date. The University has proactively decided to move all March classes online to limit the exposure and interaction at all campuses. Specifically, the university has also:</p>
+<ul class="circle-lists">
+<li>Advised employees of the World Health Organization’s (WHO) currently recommended health and safety precautions. These include:
+<ul class="circle-lists">
+<li>Wash hands often, with soap and water, for at least 20 seconds.</li>
+<li>Avoid touching eyes, nose, or mouth with unwashed hands.</li>
+<li>Avoid close contact with people who are sick.</li>
+<li>Cover your coughs or sneezes with a tissue, then throw the tissue in the trash.</li>
+</ul>
+</li>
+<li>Encouraged sick employees to stay home (<em>please use your sick time</em>) or work remotely.</li>
+<li>Limited work-related travel – if you can do the work remotely then please do not travel.
+<ul class="circle-lists">
+<li>The CDC has established geographic risk-stratification criteria for the purpose of issuing travel health notices for countries with COVID-19 transmission and guiding public health management decisions for people with potential travel-related exposures to COVID-19. Check the <a href="http://www.cdc.gov/travel">CDC’s Traveler’s Health Notices</a> for the latest guidance and recommendations for each country to which you will travel. We encourage employees to work with their immediate supervisors to review and follow the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">CDC’s travel recommendations</a><u>.</u></li>
+</ul>
+</li>
+<li>Increased the rate/frequency of cleaning at our facilities. We have added Day Porters to continuously wipe/disinfect doors, elevators, restrooms, and stair handrails.</li>
+<li>Adding additional hand sanitizer dispensers – please note we are expecting the dispensers/sanitizer during the first week of April due to high demand and shortages.</li>
+<li>Increased the approval of sick time for those who have reached their annual limit.</li>
+</ul>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">I am feeling ill, but I don't have any sick time available. I am afraid that if I stay home, I might be financially impacted.  Can I show up to work?  </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>Your health and safety are the University’s number one priority. If you feel ill and show up to work, you risk the health and safety of the rest of the community. If you do not have sick time available and staying home may cause you a financial burden, you are encouraged to contact Benefits at <a href="mailto:benefits@nu.edu">benefits@nu.edu</a> or call 858-642-8199 to discuss your specific situation. Employees may also choose to take vacation time in this circumstance.</p>
+<p>If you are experiencing fever and symptoms of respiratory illness, such as cough or difficulty breathing, and have been in close contact with a person known to have COVID-19 or if you live in or have recently traveled to an area with ongoing spread, tell your health care professional about your recent travel or contact. Your health care professional will work with your state’s public health department and CDC to determine if you need to be tested for COVID-19. Of course, if you feel like you need immediate help, call 911.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Does the Family and Medical Leave Act (FMLA) or California Family Rights Act (CFRA) entitle an employee to take leave to avoid contracting COVID-19?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>No. FLMA is provided as job-protected medical leave to care for your current serious medical condition or that of a family member. It is the University’s policy to require medical documentation for FMLA, which typically results in five (5) or more days out from work.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Can I use sick time if I am diagnosed with COVID-19 or if I need to care for a diagnosed family member?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>Yes. Sick leave allows an employee to take days off due to illness, the diagnosis, care or treatment of an existing health condition or preventative care for the employee or the employee’s family member. If employees have exhausted sick leave, then PTO can be leveraged in this circumstance.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">When is it safe to return to work after having a fever, flu, or other contagious illness? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <p>CDC guidelines recommend that all employees should stay home if they are sick until at least 24 hours after their fever is gone. Note: Not everyone who is sick will have a fever. Individuals with suspected or confirmed flu-like symptoms who do not have a fever should stay home from work at least 4-5 days after the onset of symptoms.</p>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Can I just avoid certain people who I think have COVID-19 and be OK?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <header class="site-header">
+<div id="js-sticky-header" class="site-header__nav site-header__nav--primary site-header__nav--sticky">
+<div class="site-header__nav-container"></div>
+</div>
+</header>
+<div class="site-content">
+<div class="container">
+<div class="row">
+<div class="col-12 col-lg-8">
+<div id="accordion-hr" class="panel-group" role="tablist">
+<div class="panel panel-default">
+<div id="hr-accordion-heading7" class="panel-heading" role="tab">
+<p class="panel-title"><span style="font-size: 16px">We understand that everyone wants to protect themselves from getting ill, but we want to remind our community that we also want to protect ourselves from any actions based on unsubstantiated fear or uncertainty, which can lead to individuals acting out of character or against our </span><a style="font-size: 16px" href="https://www.jfku.edu/about-us/mission-and-values/">Core Values</a><span style="font-size: 16px">. The university empathizes with anyone who has been a victim of this virus and for those affected by ancillary actions related to its spread. We support those who are affected by these circumstances.</span></p>
+</div>
+<div id="hr-collapse7" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading7" data-parent="#accordion-hr">
+<p>Most importantly, as this situation continues to evolve, we understand that individuals may be fearful about catching the disease based on inaccurate or incomplete information. It is important for the University community to remember that the coronavirus does not discriminate. While the origins of the virus are from specific geographical regions, it is now on nearly every continent and is not exclusive to any one national origin. Discrimination against any group associated with an infectious disease is unacceptable and goes against the <a href="https://www.jfku.edu/about-us/mission-and-values/">University’s Core Values</a>. Treating fellow staff, faculty, and/or students adversely because of their race, religion, national origin, medical condition, or other protected characteristic is against policy and will not be tolerated. Instead, community members are encouraged to refer to and utilize resources to better inform themselves of the signs and symptoms of the coronavirus. It is moments such as these in which it is incumbent on us as a community to work, support, and help each member of our community.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Do I have options for remote access to health care through my health insurance plan so I can speak with a medical professional without visiting a medical clinic? </h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading8" class="panel-heading" role="tab"></div>
+<div id="hr-collapse8" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading8" data-parent="#accordion-hr">Yes, employees can leverage the Teledoc option, which allows employees to virtually contact (by phone or video) and connect with Board-certified, licensed doctors available 24/7 to treat non-emergency medical issues and get prescriptions when needed.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Will short-term disability insurance benefits be paid for absences related to COVID-19?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading9" class="panel-heading" role="tab"></div>
+<div id="hr-collapse9" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading9" data-parent="#accordion-hr">
+<p>If you are located in California, you are eligible for benefits under the State Disability Insurance Plan (SDI). SDI will pay up to 60% of your weekly earnings to a weekly maximum. SDI will pay benefits for:</p>
+<ul class="circle-lists">
+<li>The quarantine period for yourself. It will not cover time off to care for a family member who must be quarantined.</li>
+<li>Should you be diagnosed with COVID-19, SDI will pay for the period of time you are unable to work.</li>
+</ul>
+</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What resources are available to help me and my family navigate concerns regarding coronavirus?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading10" class="panel-heading" role="tab"></div>
+<div id="hr-collapse10" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading10" data-parent="#accordion-hr">Everyone is encouraged to follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC</a>, <a href="https://www.who.int/health-topics/coronavirus">WHO</a>, and <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx">California Department of Public Health</a> websites for updated information, resources, and guidance from public health authorities.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Can managers and staff telecommute if they are required to self-isolate due to exposure to COVID-19</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading11" class="panel-heading" role="tab"></div>
+<div id="hr-collapse11" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading11" data-parent="#accordion-hr">Per the CDC, any employee who is sick with COVID-19 or suspect they may have been infected with the virus should stay home except to get medical care. Separate yourself from other people and animals in your home, wash your hands regularly, clean common areas often, and contact your health care provider. For additional guidance, please visit <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html.">https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html.</a></div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">What steps should be taken if an employee becomes ill with fever, cough, or other concerning symptoms?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading12" class="panel-heading" role="tab"></div>
+<div id="hr-collapse12" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading12" data-parent="#accordion-hr">Our #1 priority is to ensure the safety and well-being of our University community; however, it is important to acknowledge that we are not health care professionals. Therefore, no university employee is able or qualified to diagnose an illness. If you or one of your employees are feeling unwell, please ensure that they contact their health care provider so they can see a professional who can help diagnose and treat whatever ails them. Any employee who feels sick should contact a health care professional and ensure that they are staying out of contact with others to help limit the spread of any potentially contagious disease. If you feel that there is a legitimate risk to the university community’s health and safety, contact <a href="mailto:safety@nu.edu">safety@nu.edu</a> or <a href="mailto:benefits@nu.edu">benefits@nu.edu</a> immediately.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Can managers require a staff member who is using sick time (regardless of whether it is COVID-19 related or not) to provide a health care provider's note?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading13" class="panel-heading" role="tab"></div>
+<div id="hr-collapse13" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading13" data-parent="#accordion-hr">Not at this time based on current University policy and practice.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Can managers prohibit staff from coming to work if the staff is known to have contracted COVID-19 themselves or to have had close contact with someone who has?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading14" class="panel-heading" role="tab"></div>
+<div id="hr-collapse14" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading14" data-parent="#accordion-hr">Managers should never make unilateral decisions regarding excluding any employee from the workplace. National University values and strictly abides by our nondiscrimination policy. If you have a case where a staff member is known to have come in contact with someone who has COVID-19 or any other significant infectious disease, please contact <a href="mailto:safety@nu.edu">safety@nu.edu</a> or <a href="mailto:benefits@nu.edu">benefits@nu.edu</a> immediately.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                                                            <div class="large-accordion">
+                                    <div class="lg-acc-title">
+                                        <h3 class="">Do employees get paid if the campus is closed? For how long?</h3>
+                                    </div>
+                                    <div class="lg-acc-content-area">
+                                        <div class="lg-acc-content">
+                                            <div id="hr-accordion-heading15" class="panel-heading" role="tab"></div>
+<div id="hr-collapse15" class="collapse show" role="tabpanel" aria-labelledby="hr-accordion-heading15" data-parent="#accordion-hr">If a campus is closed, most faculty and staff will be able to work remotely. The University is still evaluating the impact of campus closure on faculty and staff who may not work remotely and will make appropriate determinations on a case-by-case basis.</div>
+                                        </div>
+
+                                                                            </div>
+                                </div>
+                                                    </div>
+                                                        </div>
+    </div>
+        <style media="screen">
+            .info-block-section-6.info-blocks-section.info-simple-section { background-color: #FFFFFF; }
+            /*.info-block-section-.info-blocks-section.info-simple-section .info-simple-content-box { border-color: #cccccc; }*/
+            /* .info-block-section-6.info-blocks-section.info-simple-section .info-simple-content-area:after { background-color: #cccccc; } */
+            .info-block-section-6.info-blocks-section.info-simple-section .isb-content-area,
+            /* .info-block-section-6.info-blocks-section.info-simple-section .info-simple-content-left { border-color: #cccccc;} */
+            /* .info-blocks-section.info-simple-section.info-block-section-6 .info-simple-content-area.has-highlight .info-simple-content-box:before { background-color: #cccccc; } */
+        </style>
+        <div class="info-blocks-section info-simple-section info-block-section-6" id="">
+            <div class="container">
+                <div class="info-simple-content-area ">
+                    <div class="info-simple-content-full">
+                    
+                        <div class="isb-content-area">
+                            <div class="isb-main-content-area">
+                                <div class="info-simple-content-box">
+                                                                            <div class="info_simple_content jfku-medium-font">
+                                            <h2>Quick Links</h2>
+<ul class="circle-lists list list--reset list--gold">
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">Centers for Disease Control and Prevention: Coronavirus Disease 2019</a></li>
+<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health Organization: Coronavirus Disease Outbreak</a></li>
+<li><a href="https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/Coronavirus+Colleges+Guidance+2_11_20.pdf">California Department of Public Health – Guidance for Colleges and Universities</a></li>
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities.html">CDC: Resources for Institutes of Higher Education</a></li>
+</ul>
+<h2 class="heading heading--leituranews heading--three">Communications</h2>
+<ul class="circle-lists list list--reset list--gold">
+<li><a href="https://www.jfku.edu/wp-content/uploads/2018/05/Urgent-Communication-Regarding-COVID-19-fs03122020.pdf">March 12 Faculty and Staff Communication</a></li>
+<li><a href="https://www.jfku.edu/wp-content/uploads/2018/05/Urgent-Communication-Regarding-COVID-19-s03122020.pdf">March 12 Student Communication</a></li>
+<li><a href="https://www.jfku.edu/wp-content/uploads/2018/05/COVID-19-Update-3.10.2020.pdf">March 10 JFKU Community Communication</a></li>
+<li><a href="https://www.jfku.edu/wp-content/uploads/2018/05/Coronavirus-Communication.pdf">March 2 Faculty and Staff Communication from the Office of the Chancellor</a></li>
+</ul>
+                                        </div>
+                                    
+                                    
+                                                                    </div>
+
+                                
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+
+		<div class="footer_top">
+			<div class="container">
+				<div class="footer_top_top">
+
+											<div class="footer_logo_wrapper">
+							<img class="footer_logo" src="https://www.jfku.edu/wp-content/uploads/2018/05/footer-Logo.png" alt="John F. Kennedy University">
+						</div>
+					
+					<ul class="customizer_social_links">
+
+					    					        <li class="facebook_link"><a title="Visit our Facebook page" href="https://www.facebook.com/JFKUniv" target="_blank">
+								<span class="sr-only">
+									Facebook
+								</span>
+							</a></li>
+					    
+					    					        <li class="linkedin_link"><a title="Visit our LinkedIn page" href="https://www.linkedin.com/school/john-f.-kennedy-university/" target="_blank">
+								<span class="sr-only">
+									LinkedIn
+								</span>
+							</a></li>
+					    
+					    					        <li class="twitter_link"><a title="Visit our Twitter page" href="https://twitter.com/jfkuniv" target="_blank">
+								<span class="sr-only">
+									Twitter
+								</span>
+							</a></li>
+					    
+					</ul>
+
+				</div>
+				<div class="footer_main_menu_container">
+					<div class="menu-main-footer-menu-container"><ul id="menu-main-footer-menu" class="footer_menu"><li id="menu-item-17" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17"><a>Information for</a>
+<ul class="sub-menu">
+	<li id="menu-item-2035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2035"><a title="Prospective Students" href="https://www.jfku.edu/prospective-students/">Prospective Students</a></li>
+	<li id="menu-item-2036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2036"><a title="Current Students" href="https://www.jfku.edu/current-students/">Current Students</a></li>
+	<li id="menu-item-2037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2037"><a title="Alumni" href="https://www.jfku.edu/alumni-2/">Alumni</a></li>
+	<li id="menu-item-2038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2038"><a title="Donors" href="https://www.jfku.edu/donors/">Donors</a></li>
+</ul>
+</li>
+<li id="menu-item-22" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22"><a>ACADEMICS</a>
+<ul class="sub-menu">
+	<li id="menu-item-4447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4447"><a title="Degrees" href="https://www.jfku.edu/degrees/">Degrees</a></li>
+	<li id="menu-item-4448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4448"><a title="Programs" href="https://www.jfku.edu/program-finder-2/">Programs</a></li>
+	<li id="menu-item-4449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4449"><a title="JFKu Online" href="https://www.jfku.edu/online/">JFKu Online</a></li>
+	<li id="menu-item-4450" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4450"><a title="Continuing Education" href="https://www.jfku.edu/college/continuing-education/">Continuing Education</a></li>
+</ul>
+</li>
+<li id="menu-item-28" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28"><a>STUDENT LIFE</a>
+<ul class="sub-menu">
+	<li id="menu-item-2039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2039"><a title="Our Service Learning Model" href="https://www.jfku.edu/student-experience/service-learning-model/">Our Service Learning Model</a></li>
+	<li id="menu-item-2040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2040"><a title="Ways to Learn" href="https://www.jfku.edu/student-experience/ways-to-learn/">Ways to Learn</a></li>
+	<li id="menu-item-2041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2041"><a title="Student Experience" href="https://www.jfku.edu/student-experience/">Student Experience</a></li>
+	<li id="menu-item-2044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2044"><a title="Support for Working Adults" href="https://www.jfku.edu/student-experience/support-for-working-adults/">Support for Working Adults</a></li>
+	<li id="menu-item-2042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2042"><a title="Support for Military/Veterans" href="https://www.jfku.edu/student-experience/support-for-military-veterans/">Support for Military/Veterans</a></li>
+	<li id="menu-item-2043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2043"><a title="Support for Underserved Students" href="https://www.jfku.edu/student-experience/support-for-underserved-students/">Support for Underserved Students</a></li>
+	<li id="menu-item-2045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2045"><a title="Locations" href="https://www.jfku.edu/student-experience/locations/">Locations</a></li>
+	<li id="menu-item-4464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4464"><a title="Blog" href="https://www.jfku.edu/blog/">Blog</a></li>
+</ul>
+</li>
+<li id="menu-item-2048" class="no_link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2048"><a>ABOUT</a>
+<ul class="sub-menu">
+	<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a title="About JFKU" href="https://www.jfku.edu/about-us/">About JFKU</a></li>
+	<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a title="Admissions" href="https://www.jfku.edu/admissions/">Admissions</a></li>
+	<li id="menu-item-2049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2049"><a title="Tuition &#038; Financial Aid" href="https://www.jfku.edu/admissions/financial-aid/">Tuition &#038; Financial Aid</a></li>
+	<li id="menu-item-4451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4451"><a title="Academic Freedom" href="https://www.jfku.edu/academic-freedom/">Academic Freedom</a></li>
+	<li id="menu-item-4453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4453"><a title="Open Houses" href="https://www.jfku.edu/events/open-houses/">Open Houses</a></li>
+	<li id="menu-item-4452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4452"><a title="Faculty" href="https://www.jfku.edu/faculty/">Faculty</a></li>
+	<li id="menu-item-2083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2083"><a title="Accreditation" href="https://www.jfku.edu/accreditations/">Accreditation</a></li>
+</ul>
+</li>
+<li id="menu-item-5605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5605"><a href="https://www.jfku.edu/community/">IN THE COMMUNITY</a>
+<ul class="sub-menu">
+	<li id="menu-item-5606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5606"><a title="Event Calendar" href="https://www.jfku.edu/events/">Event Calendar</a></li>
+	<li id="menu-item-5610" class="menu-item menu-item-type-post_type menu-item-object-college menu-item-5610"><a title="Sanford Institute of Philanthropy" href="https://www.jfku.edu/college/sanford-institute-of-philanthropy/">Sanford Institute of Philanthropy</a></li>
+	<li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a title="Holistic Research Center" href="https://www.jfku.edu/community/hrc/">Holistic Research Center</a></li>
+	<li id="menu-item-2056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056"><a title="The LEAP Program" href="https://www.jfku.edu/community/leap-program/">The LEAP Program</a></li>
+	<li id="menu-item-2053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2053"><a title="JFKU Legal Clinics" href="https://www.jfku.edu/community/jfku-law-clinics/">JFKU Legal Clinics</a></li>
+	<li id="menu-item-2054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2054"><a title="Office of Clinical Training" href="https://www.jfku.edu/community/office-of-clinical-training/">Office of Clinical Training</a></li>
+</ul>
+</li>
+</ul></div>				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="footer_sec_menu_container">
+					<div class="menu-secondary-footer-menu-container"><ul id="menu-secondary-footer-menu" class="sec_footer_menu"><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a title="Careers" href="https://www.nu.edu/jobs.cfm?affiliate=John%20F.%20Kennedy%20University#jobs">Careers</a></li>
+<li id="menu-item-2032" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2032"><a title="Merchandise" href="https://www.jfkustore.com/default.asp">Merchandise</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a title="Request a Transcript" href="https://secure.studentclearinghouse.org/tsorder/faces/TranscriptOrder">Request a Transcript</a></li>
+<li id="menu-item-2033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2033"><a title="Terms &#038; Conditions" href="https://www.jfku.edu/terms-and-conditions/">Terms &#038; Conditions</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a title="MyJFKU" href="https://login.jfku.edu/">MyJFKU</a></li>
+<li id="menu-item-8224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8224"><a title="FlexCourse℠ Login" href="https://online.jfku.edu/sign_in">FlexCourse℠ Login</a></li>
+<li id="menu-item-2031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2031"><a title="Privacy Policy" href="https://www.jfku.edu/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-2034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2034"><a title="About The National University System" href="https://www.jfku.edu/about-us/about-the-national-university-system/">About The National University System</a></li>
+</ul></div>				</div>
+				<div class="copyright">
+					<p class="copyright_content"> &copy; 2020 <span class="copyright_name">John F. Kennedy University, All Rights Reserved</span>
+				</div>
+			</div>
+		</div>
+
+					<div id="terms-and-conditions" class="copy-overlay"><p>By submitting this form, I confirm that the information provided on this form is accurate and complete and I agree to receive email communications, phone calls, and SMS/Text Messages about Educational opportunities from National University System and/or it&#8217;s affiliates. I understand that I may withdraw my consent at any time. I understand that if I am submitting my personal data from outside of the United States, I am consenting to the transfer of my personal data to, and it&#8217;s storage in, the United States, and I understand that my personal data will be subject to processing in accordance with U.S. laws. Please review our <a href="https://www.jfku.edu/privacy-policy/" target="_blank" rel="noopener">privacy policy</a> or contact us for more details at <a href="mailto:dataprotection@nu.edu">dataprotection@nu.edu</a>.</p>
+</div>
+		
+	</footer><!-- #colophon -->
+</main>
+
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/jquery.ddslick.min.js?ver=20180430'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/vendor/ofi.min.js?ver=20180507'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/navigation.js?ver=20151215'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/skip-link-focus-fix.js?ver=20151215'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jfku_ajax_object = {"ajaxUrl":"https:\/\/www.jfku.edu\/wp-admin\/admin-ajax.php","theme":"https:\/\/www.jfku.edu\/wp-content\/themes\/jfku"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/themes/jfku/js/form.js?ver=5.4'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-content/plugins/bj-lazy-load/js/bj-lazy-load.min.js?ver=2'></script>
+<script type='text/javascript' src='https://www.jfku.edu/wp-includes/js/wp-embed.min.js?ver=5.4'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4c98807ce5","applicationID":"62430737","transactionName":"b1QDYxBRCEQAUxVQWFYeIFQWWQlZTkAAXlI=","queueTime":0,"applicationTime":455,"atts":"QxMAFVhLG0o=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

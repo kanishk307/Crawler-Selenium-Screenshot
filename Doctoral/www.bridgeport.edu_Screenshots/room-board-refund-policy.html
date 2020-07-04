@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c5a4f20d3c",applicationID:"126880957"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Room &amp; Board Refund Policy FAQs - COVID-19 | University of Bridgeport" />
+<link rel="canonical" href="https://www.bridgeport.edu/covid-19/room-board-refund-policy" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsArticle",
+            "name": "Room \u0026 Board Refund Policy FAQs - COVID-19",
+            "headline": "Room \u0026 Board Refund Policy FAQs - COVID-19",
+            "image": {
+                "@type": "ImageObject",
+                "representativeOfPage": "True"
+            },
+            "datePublished": "Mon, 04/06/2020 - 13:14",
+            "dateModified": "Tue, 04/07/2020 - 09:55",
+            "isAccessibleForFree": "True",
+            "author": {
+                "@type": "Organization",
+                "@id": "https://www.bridgeport.edu",
+                "name": "University of Bridgeport",
+                "url": "https://www.bridgeport.edu/covid-19/room-board-refund-policy",
+                "sameAs": [
+                    "https://www.facebook.com/ubridgeport",
+                    "https://twitter.com/ubridgeport"
+                ],
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.bridgeport.edu/sites/default/files/2018-06/footer-logo.png"
+                }
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.bridgeport.edu",
+                "name": "University of Bridgeport",
+                "url": "https://www.bridgeport.edu/covid-19/room-board-refund-policy",
+                "sameAs": [
+                    "https://www.facebook.com/ubridgeport",
+                    "https://twitter.com/ubridgeport"
+                ],
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.bridgeport.edu/sites/default/files/2018-06/footer-logo.png"
+                }
+            },
+            "mainEntityOfPage": "https://www.bridgeport.edu/covid-19/room-board-refund-policy"
+        },
+        {
+            "@type": "Event",
+            "url": "https://www.bridgeport.edu/covid-19/room-board-refund-policy",
+            "name": "Room \u0026 Board Refund Policy FAQs - COVID-19",
+            "image": {
+                "@type": "ImageObject",
+                "representativeOfPage": "True",
+                "url": "https://www.bridgeport.edu/sites/default/files/2018-07/aerial-small.jpg",
+                "width": "351",
+                "height": "250"
+            },
+            "@id": "https://www.bridgeport.edu/covid-19/room-board-refund-policy",
+            "location": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "CT",
+                    "postalCode": "06606",
+                    "addressCountry": "USA"
+                }
+            }
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/themes/custom/ubridgeport/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.bridgeport.edu/covid-19/room-board-refund-policy" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Room &amp; Board Refund Policy FAQs - COVID-19 | University of Bridgeport</title>
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_hiMev88li5pRL49kE8ij_wkNbOM7D0ffn8T92aAt19M.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_0vH5JKOOzy5khDJ0YWVmcacnphNXgadLzCKoQvYd8tw.css" />
+
+      
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+        <!-- Global site tag (gtag.js) - Google Ads: 988158596 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-988158596"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+
+          gtag('config', 'AW-988158596');
+      </script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body class="path-node page-node-type-page has-glyphicons">
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+
+<div id="rfiSideNav" class="rfi-sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div class="rfi-content">
+    <div class="rfi-header">
+        <h3 class="rfi-header-title">Get more information</h3>
+        <p>Complete the form below to receive additional information about this program.</p>
+    </div>
+    <div class="rfi-from-container">
+
+        <form id="rfi-form" action="?" onsubmit="rfiSendData()">
+            <label id="rfi-fname-label" for="rfi-fname"> First Name </label>
+            <input type="text" name="rfi-fname" id="rfi-fname" placeholder="First Name *" aria-labelledby="rfi-fname-label" required>
+
+            <label id="rfi-lname-label" for="rfi-lname"> Last Name </label>
+            <input type="text" name="rfi-lname" id="rfi-lname" placeholder="Last Name *" aria-labelledby="rfi-lname-label" required>
+
+            <label id="rfi-email-label" for="rfi-email"> Email </label>
+            <input type="email" name="rfi-email" id="rfi-email" placeholder="Email *" aria-labelledby="rfi-email-label" required>
+
+            <label id="rfi-phone-label" for="rfi-phone">Phone</label>
+            <input type="tel" name="rfi-phone" id="rfi-phone" placeholder="Phone" aria-labelledby="rfi-phone-label">
+
+            <input type="hidden" name="rfi-program" id="rfi-program" value="N/A">
+            <input type="hidden" name="rfi-sterm" id="rfi-sterm" value="N/A">
+            <input type="hidden" name="rfi-acad-level" id="rfi-acad-level" value="N/A">
+            <input type="hidden" name="rfi-inqsource" id="rfi-inqsource" value="IWUXX">
+
+            <h4 class="rfi-student-choice-text">I'm a</h4>
+            <span class="visually-hidden" id="rfi-admit-type-label" style="transition: none 0s ease 0s;">Admit Type</span>
+            <select class="rfi-select-type" name="rfi-admit-type" id="rfi-admit-type" aria-labelledby="rfi-admit-type-label" required>
+                <option value="" selected disabled hidden>Please select</option>
+            </select>
+            <span class="visually-hidden" id="rfi-student-type-label" style="transition: none 0s ease 0s;">Student Type</span>
+            <select class="rfi-select-type" name="rfi-student-type" id="rfi-student-type" aria-labelledby="rfi-student-type-label" required>
+                <option value="" selected disabled hidden>Please select</option>
+            </select>
+
+            <br>
+            <div class="g-recaptcha"
+                 data-sitekey="6LdZK6cUAAAAAImc9jvqHwb6IiD-vfaQscczcisW"
+                 data-callback="rfiFormSubmitAction"
+                 data-size="invisible">
+            </div>
+
+            <label id="rfi-submit-label" for="rfi-submit-label">Submit</label>
+            <input type="submit" value="Submit" aria-labelledby="rfi-submit-label" id="rfi-submit" class="rfi-submit">
+           </form>
+
+        <p class="rfi-privacy">By submitting this information you agree to the University of Bridgeport's <a href="/privacy" target="_blank" style="text-decoration: underline">Privacy Policy.</a> </p>
+    </div>
+
+        <div class="rfi-confirmation">
+            <h4>Thank you for submitting the form. You will receive an email shortly. </h4>
+        </div>
+
+    </div>
+    <!-- Use any element to open the sidenav -->
+</div>
+
+<div class="rfi-float-container">
+    <a href="#" onclick="openNav()">Request Info</a>
+</div>
+
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+                          <div class="region region-alert">
+    <section class="views-element-container block block-views block-views-blockglobal-notification-block-1 clearfix" id="block-views-block-global-notification-block-1">
+  
+    
+
+      <div class="form-group"><div class="view view-global-notification view-id-global_notification view-display-id-block_1 js-view-dom-id-0d1817683ecb30c7df8c93964bebb81e995c2ac1d72b7b5d70a6190c6dcb2a11">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><article data-history-node-id="15881" role="article" about="/notifications/information/2020-06-02/university-response-covid-19" class="notification teaser clearfix">
+    <div class="notification-container information moderate">
+        <div class="notification-content">
+            <p class="notification-title"><span>UNIVERSITY RESPONSE TO COVID-19</span>
+: </p>
+            <div class="notification-body">
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">Classes are conducted through virtual instruction methods for spring/summer 2020. UB is planning to resume on-campus operations and conduct in-person instruction, learning, and residential life for the fall 2020 semester.</div>
+      </div>
+            <p class="notification-link"><a href="/notifications/information/2020-06-02/university-response-covid-19">Read More</a></p>
+        </div>
+
+    </div>
+
+</article>
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+
+  </div>
+
+            
+<div class="top-logins">
+    <div class="container">
+        <div class="row">
+            <div class="top-login-box col-sm-12">
+                                                                              <div class="region region-main-navigation-logins">
+    <nav role="navigation" aria-labelledby="block-logins-menu" id="block-logins">
+            
+  <h2 class="visually-hidden" id="block-logins-menu">Logins</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--logins nav">
+                                                            <li class="first">
+                                                                                                    <a href="https://bridgeport.instructure.com/">Canvas</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://mail.google.com/a/my.bridgeport.edu">Student Email</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://myub.bridgeport.edu/">My UB Portal</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://outlook.office365.com/owa/ad.bridgeport.edu">Staff Email</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://webadvisor.bridgeport.edu/WA2/WA2?TYPE=M&amp;PID=CORE-WBMAIN&amp;TOKENIDX=844121728">Webadvisor</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                                                </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-menu-desktop">
+    <div class="container main-menu-container">
+        <div class="col col-md-3 site-logo-box">
+            <a class="navbar-brand" href="/" title="University of Bridgeport - UB">
+                <object type="image/svg+xml" data="/themes/custom/ubridgeport/images/mobile-logo-full.svg"
+                        class="logo">
+                    <img src="/themes/custom/ubridgeport/images/mobile-logo-full.svg" alt="University of Bridgeport"
+                         class="logo img-responsive">
+                </object>
+            </a>
+        </div>
+        <div class="col col-md-9 site-navigation-area hidden-xs hidden-sm">
+            <div class="row">
+                <div class="top-nav-container">
+                    <div class="top-menu col col-sm-11">
+                                                                                                              <div class="region region-top-navigation">
+    <nav role="navigation" aria-labelledby="block-globaltopnavigation-menu" id="block-globaltopnavigation">
+            
+  <h2 class="visually-hidden" id="block-globaltopnavigation-menu">Global Top Navigation</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--global-top-navigation nav">
+                                                            <li class="first">
+                                                                                                    <a href="/apply" data-drupal-link-system-path="node/5846">Apply</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/request-information" data-drupal-link-system-path="node/5891">Request Info</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/visit" data-drupal-link-system-path="node/4976">Visit</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/alumni" data-drupal-link-system-path="node/4581">Alumni</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://www.ubknights.com">Athletics</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://give.bridgeport.edu/">Give</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/login" data-drupal-link-system-path="node/7446">Login</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                                                                        </div>
+                    <div class="top-search col col-sm-1">
+                        <button type="button" id="search_btn" class="search_btn btn-link pull-right">
+                            <object type="image/svg+xml" data="/themes/custom/ubridgeport/images/search.svg"
+                                    class="search_btn__img desktop-search hidden-sm">
+                                <img src="/themes/custom/ubridgeport/images/search.png" alt="Search"
+                                     class="search img-responsive">
+                            </object>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row site-main-navigation">
+
+                
+                                                    <nav class="navbar global-main-navbar">
+                        <div class="navbar-header">
+                                                                                                                              <div class="region region-main-navigation-header">
+    <nav role="navigation" aria-labelledby="block-globalheadernavigation-menu" id="block-globalheadernavigation">
+            
+  <h2 class="visually-hidden" id="block-globalheadernavigation-menu">Global Header Navigation</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--global-header-navigation nav">
+                                                            <li class="expanded dropdown first">
+                                                                                                                                                                        <a href="/about" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/5896">About <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/about/fast-facts" data-drupal-link-system-path="node/3876">Fast Facts</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/campus-map-directions" data-drupal-link-system-path="node/216">Campus Map</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/ub-history" data-drupal-link-system-path="node/31">History</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/office-of-president/leadership-team" data-drupal-link-system-path="node/6791">Leadership</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/about/awards-recognition" data-drupal-link-system-path="node/13221">Awards and Recognition</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown">
+                                                                                                                                                                        <a href="/admissions" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4911">Admissions &amp; Aid <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/apply" data-drupal-link-system-path="node/5846">Apply</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/visit" data-drupal-link-system-path="node/4976">Visit</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://secure.touchnet.net/C21641_ustores/web/classic/store_main.jsp?STOREID=1&amp;SINGLESTORE=true">Submit Deposit</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/undergraduate" data-drupal-link-system-path="node/5571">Undergraduate</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/graduate" data-drupal-link-system-path="node/5641">Graduate</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/online" data-drupal-link-system-path="node/5601">Online</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://www.bridgeport.edu/admissions/international/admissions-requirements">International Admissions</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/node/4116" data-drupal-link-system-path="node/4116">Financial Aid</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/cost-financial-aid/tuition-fees" data-drupal-link-system-path="node/5756">Tuition and Fees</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/admissions/request-information" data-drupal-link-system-path="node/5891">Request Information</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown">
+                                                                                                                                                                        <a href="/academics" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4921">Academics <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/academics/programs" data-drupal-link-system-path="node/6396">Programs and Majors</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/academic-calendar" data-drupal-link-system-path="node/5041">Academic Calendar</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-arts-sciences" data-drupal-link-system-path="node/6546">Arts and Sciences</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-engineering-business-education" data-drupal-link-system-path="node/6541">Engineering, Business, and Education</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-health-sciences" data-drupal-link-system-path="node/6551">Health Sciences</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/online" data-drupal-link-system-path="node/3911">UB Online</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/research" data-drupal-link-system-path="node/4556">Research and Grants</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/the-bridgeport-plan/study-abroad" data-drupal-link-system-path="node/4721">Study Abroad</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown last">
+                                                                                                                                                                        <a href="/student-experience" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4846">Student Experience <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/student-experience/campus-life" data-drupal-link-system-path="node/15071">Campus Life</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-experience/career-preparation" data-drupal-link-system-path="node/15066">Career Preparation</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-experience/student-success" data-drupal-link-system-path="node/14961">Student Success</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/campus-activities/clubs-organizations" data-drupal-link-system-path="node/4521">Clubs &amp; Organizations</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/residential-life" data-drupal-link-system-path="node/4606">Housing and Dining</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://events.bridgeport.edu">Campus Events</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                                                            
+                            <button type="button" id="search_btn" class="search_btn btn-link pull-right">
+                                <object type="image/svg+xml" data="/themes/custom/ubridgeport/images/SearchIcon.svg"
+                                        class="search_btn__img mobile-search visible-xs visible-sm">
+                                    <img src="/themes/custom/ubridgeport/images/SearchIcon.svg" alt="Search"
+                                         class="search img-responsive">
+                                </object>
+                            </button>
+                        </div>
+                    </nav>
+
+                
+            </div>
+        </div>
+        <div class="col hidden-md visible-xs visible-sm">
+
+
+            <button type="button" id="menu_btn" class="menu_btn btn-link pull-right" role="dialog"
+                    aria-label="MainMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <button type="button" id="search_btn" class="search_btn btn-link pull-right">
+                <object type="image/svg+xml" data="/themes/custom/ubridgeport/images/mobile-search.svg"
+                        class="search_btn__img mobile-search visible-xs visible-sm">
+                    <img src="/themes/custom/ubridgeport/images/mobile-search.svg" alt="Search"
+                         class="search img-responsive">
+                </object>
+            </button>
+
+        </div>
+    </div>
+</div>
+<div id="site-search">
+    <a href="#" class="search-close">Close <span>×</span></a>
+    <div class="gcse-searchbox-only" data-resultsUrl="/search" data-enableAutoComplete="true"
+         data-queryParameterName="q"></div>
+</div>
+
+
+    
+<div class="modal fade main_nav" id="mainNavigation" role="dialog" tabindex="-1">
+  <div class="nav_container">
+                                      <div class="region region-main-navigation-header-mobile">
+    <nav role="navigation" aria-labelledby="block-globalheadernavigation-2-menu" id="block-globalheadernavigation-2">
+            
+  <h2 class="visually-hidden" id="block-globalheadernavigation-2-menu">Global Header Navigation</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--global-header-navigation nav">
+                                                            <li class="expanded dropdown first">
+                                                                                                                                                                        <a href="/about" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/5896">About <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/about/fast-facts" data-drupal-link-system-path="node/3876">Fast Facts</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/campus-map-directions" data-drupal-link-system-path="node/216">Campus Map</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/ub-history" data-drupal-link-system-path="node/31">History</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/office-of-president/leadership-team" data-drupal-link-system-path="node/6791">Leadership</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/about/awards-recognition" data-drupal-link-system-path="node/13221">Awards and Recognition</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown">
+                                                                                                                                                                        <a href="/admissions" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4911">Admissions &amp; Aid <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/apply" data-drupal-link-system-path="node/5846">Apply</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/visit" data-drupal-link-system-path="node/4976">Visit</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://secure.touchnet.net/C21641_ustores/web/classic/store_main.jsp?STOREID=1&amp;SINGLESTORE=true">Submit Deposit</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/undergraduate" data-drupal-link-system-path="node/5571">Undergraduate</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/graduate" data-drupal-link-system-path="node/5641">Graduate</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/online" data-drupal-link-system-path="node/5601">Online</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://www.bridgeport.edu/admissions/international/admissions-requirements">International Admissions</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/node/4116" data-drupal-link-system-path="node/4116">Financial Aid</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/cost-financial-aid/tuition-fees" data-drupal-link-system-path="node/5756">Tuition and Fees</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/admissions/request-information" data-drupal-link-system-path="node/5891">Request Information</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown">
+                                                                                                                                                                        <a href="/academics" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4921">Academics <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/academics/programs" data-drupal-link-system-path="node/6396">Programs and Majors</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/academic-calendar" data-drupal-link-system-path="node/5041">Academic Calendar</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-arts-sciences" data-drupal-link-system-path="node/6546">Arts and Sciences</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-engineering-business-education" data-drupal-link-system-path="node/6541">Engineering, Business, and Education</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/college-health-sciences" data-drupal-link-system-path="node/6551">Health Sciences</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/online" data-drupal-link-system-path="node/3911">UB Online</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/research" data-drupal-link-system-path="node/4556">Research and Grants</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="/the-bridgeport-plan/study-abroad" data-drupal-link-system-path="node/4721">Study Abroad</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                                                            <li class="expanded dropdown last">
+                                                                                                                                                                        <a href="/student-experience" class="dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/4846">Student Experience <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="first">
+                                                                                                    <a href="/student-experience/campus-life" data-drupal-link-system-path="node/15071">Campus Life</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-experience/career-preparation" data-drupal-link-system-path="node/15066">Career Preparation</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-experience/student-success" data-drupal-link-system-path="node/14961">Student Success</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/campus-activities/clubs-organizations" data-drupal-link-system-path="node/4521">Clubs &amp; Organizations</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/residential-life" data-drupal-link-system-path="node/4606">Housing and Dining</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://events.bridgeport.edu">Campus Events</a>
+                                    </li>
+                    </ul>
+    
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                
+    <div class="row">
+      <div class="col col-xs-6 mobile-secondary-links">
+                                <div class="region region-mobile-menu-secondary-links">
+    <nav role="navigation" aria-labelledby="block-mobilemenusecondarylinks-menu" id="block-mobilemenusecondarylinks">
+            
+  <h2 class="visually-hidden" id="block-mobilemenusecondarylinks-menu">Mobile Menu Secondary Links</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--mobile-menu-secondary-links nav">
+                                                            <li class="first">
+                                                                                                    <a href="/news" data-drupal-link-system-path="node/6171">News</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/events" data-drupal-link-system-path="node/6216">Events</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://www.ubknights.com/landing/index">Athletics</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/alumni" data-drupal-link-system-path="node/4581">Alumni</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://give.bridgeport.edu">Give</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                        </div>
+      <div class="col col-xs-6 cta-button-area">
+
+        <div class="row menu-cta-button">
+          <a href="/visit" class="visit-button">Visit</a>
+        </div>
+        <div class="row menu-cta-button">
+          <a href="/admissions/request-information" class="request-button">Request Info</a>
+        </div>
+        <div class="row menu-cta-button">
+          <a href="/apply" class="apply-button">Apply</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="row mobile-logins-area">
+      <div class="col col-xs-12">
+                                <div class="region region-mobile-menu-logins">
+    <nav role="navigation" aria-labelledby="block-logins-2-menu" id="block-logins-2">
+            
+  <h2 class="visually-hidden" id="block-logins-2-menu">Logins</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--logins nav">
+                                                            <li class="first">
+                                                                                                    <a href="https://bridgeport.instructure.com/">Canvas</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://mail.google.com/a/my.bridgeport.edu">Student Email</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://myub.bridgeport.edu/">My UB Portal</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://outlook.office365.com/owa/ad.bridgeport.edu">Staff Email</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://webadvisor.bridgeport.edu/WA2/WA2?TYPE=M&amp;PID=CORE-WBMAIN&amp;TOKENIDX=844121728">Webadvisor</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+                        </div>
+    </div>
+  </div>
+</div>
+
+    <div role="main" class="main-container container js-quickedit-main-content">
+        <div class="row">
+
+                        
+                        
+                                    <section class="col-sm-12 fullwidth-column">
+
+                                
+                                
+                                                    <a id="main-content"></a>
+                      <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div><section class="views-element-container block block-views block-views-blocksection-header-block-1 clearfix" id="block-views-block-section-header-block-1">
+  
+    
+
+      <div class="form-group"><div class="container view view-section-header view-id-section_header view-display-id-block_1 js-view-dom-id-6cf2c46509c6bc5bbd61a30318c319777cbd30154b04c4ce21abe98d30a458fc">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/student-affairs/health-services" hreflang="en">Health Services</a></span></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockprogram-header-block-1 clearfix" id="block-views-block-program-header-block-1">
+  
+    
+
+      <div class="form-group"><div class="view view-program-header view-id-program_header view-display-id-block_1 js-view-dom-id-8cf636f5e613e0620a57e25d7672bf1616c098a733bdb94cd4aec03986b3f7b8">
+  
+    
+      
+      <div class="view-empty">
+      
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockschool-header-block-1 clearfix" id="block-views-block-school-header-block-1">
+  
+    
+
+      <div class="form-group"><div class="container view view-school-header view-id-school_header view-display-id-block_1 js-view-dom-id-4d7f94f7e747f785296aeedff0d84be99c0534e8578c9683db3a900eaa08b862">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockcollege-header-block-1 clearfix" id="block-views-block-college-header-block-1-2">
+  
+    
+
+      <div class="form-group"><div class="container view view-college-header view-id-college_header view-display-id-block_1 js-view-dom-id-4845e827d6774e770653efdca957af1462b1af6c1c023b636bda85fe6dff4d99">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockcollege-header-block-2 clearfix" id="block-views-block-college-header-block-2">
+  
+    
+
+      <div class="form-group"><div class="container view view-college-header view-id-college_header view-display-id-block_2 js-view-dom-id-a0a76de27d6762b06006609fcc0944ddde199ca1337f313c8262315afd293cb0">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<nav role="navigation" aria-labelledby="block-my-custom-theme-main-menu-menu" id="block-my-custom-theme-main-menu">
+            <h2 class="sr-only" id="block-my-custom-theme-main-menu-menu">Main navigation</h2>
+
+      <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--main nav navbar-nav mobile-menu-state">
+                                                            <li class="first">
+                                                                                                    <a href="/student-affairs/health-services/health-insurance" data-drupal-link-system-path="node/5056">Health Insurance</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/health-services/health-requirements" data-drupal-link-system-path="node/5061">Health Requirements</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-affairs/health-services/contact" data-drupal-link-system-path="node/5066">Contact Us</a>
+                                    </li>
+                                                            <li class="active active-trail last">
+                                                                                                    <a href="/covid-19" class="active-trail" data-drupal-link-system-path="node/15701">COVID-19</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+<article data-history-node-id="15991" role="article" about="/covid-19/room-board-refund-policy" typeof="schema:WebPage" class="page full clearfix">
+
+  
+      <span property="schema:name" content="Room &amp; Board Refund Policy FAQs - COVID-19" class="hidden"></span>
+
+
+  
+  <div class="content">
+    
+      <div class="field field--name-field-page-content-modules field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">
+<div class="paragraph paragraph--structure-container structure-container--default">
+	<div class="container-wrapper default">
+		<div class="container default">
+			<div class="row">
+		   		
+      <div class="field field--name-field-container-elements field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--content-page-title paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-cpt-title field--type-string field--label-hidden field--item"><h1>Room &amp; Board Refund Policy FAQs</h1></div>
+            
+            <div class="field field--name-field-cpt-page-summary field--type-text-long field--label-hidden field--item"><p class="intro">&nbsp;</p></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--content-accordion paragraph--view-mode--default">
+          
+
+
+<div class="panel-group accordion" id="accordion-field_ca_content-42" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-0">
+          <h4 class="panel-title">
+              <a role="button" class="item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-0" aria-expanded="true" aria-controls="content-field_ca_content-42-0">
+                  <i class="fas fa-angle-down"></i>
+                  How much is UB’s room and board refund?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-field_ca_content-42-0">
+          <div class="panel-body">
+                          <p>The refund is pro-rated for eight weeks, beginning with UB’s spring break. It will be $300 a week for a possible maximum of $2,400.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-1">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-1" aria-expanded="true" aria-controls="content-field_ca_content-42-1">
+                  <i class="fas fa-angle-down"></i>
+                  How will I receive my refund? Do I have to apply for it?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-1">
+          <div class="panel-body">
+                          <p>Students who are eligible for room and board refunds will have it automatically applied to their financial account. Student Financial Services will be reviewing graduating students’ accounts to issue the refund to minimize the need for students to make a refund request.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-2">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-2" aria-expanded="true" aria-controls="content-field_ca_content-42-2">
+                  <i class="fas fa-angle-down"></i>
+                  How will this work if the student currently has an outstanding balance or is on a payment plan?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-2">
+          <div class="panel-body">
+                          <p>The room and board refund will apply to an outstanding balance on the student’s financial account, first. Any remaining payment plan installments will be adjusted once the room and board refund is processed. If there is still a balance remaining after the adjustment, the student can then pay the difference.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-3">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-3" aria-expanded="true" aria-controls="content-field_ca_content-42-3">
+                  <i class="fas fa-angle-down"></i>
+                  Will the room and board refunds be pro-rated when students had to leave the residence halls in mid-March? 
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-3">
+          <div class="panel-body">
+                          <p>Yes. The refund is pro-rated back to the week following spring break when students were asked to leave the residence halls.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-4">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-4" aria-expanded="true" aria-controls="content-field_ca_content-42-4">
+                  <i class="fas fa-angle-down"></i>
+                  When will we receive our room and board refund?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-4">
+          <div class="panel-body">
+                          <p>As soon as possible, within the next several weeks.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-5">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-5" aria-expanded="true" aria-controls="content-field_ca_content-42-5">
+                  <i class="fas fa-angle-down"></i>
+                  Will dining dollars be credited for the next semester?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-5">
+          <div class="panel-body">
+                          <p>No. Since dining is included in the cost of room and board for undergraduates, this is included in the refund that students will be receiving.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-6">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-6" aria-expanded="true" aria-controls="content-field_ca_content-42-6">
+                  <i class="fas fa-angle-down"></i>
+                  How do I sign up for direct deposit instead of getting a check for my refund?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-6">
+          <div class="panel-body">
+                          <ol type="a"><li>Students can sign up for eRefund through the UB Portal → Webadvisor for Students → Financial Information → View Account and Make Payment → Electronic Refund.</li>
+	<li>If no eRefund information is set up on student’s account, a check will be mailed to home address.</li>
+</ol>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-7">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-7" aria-expanded="true" aria-controls="content-field_ca_content-42-7">
+                  <i class="fas fa-angle-down"></i>
+                  If I used a loan to pay for housing, will those funds be returned instead of getting a credit?
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-7">
+          <div class="panel-body">
+                          <p>If you used a Federal Loan (Parent Plus, Graduate Plus, Subsidized or Unsubsidized loans) to pay towards the balance on your account, federal regulations require that a refund is given to the student and or parent. If you would prefer that we send the funds back to the loan servicer, please email Student Financial Services at <a href="mailto:sfs@bridgeport.edu"><strong>sfs@bridgeport.edu</strong></a> as soon as possible to confirm.</p>
+
+<p>If you used a private educational loan through a bank, those funds are treated as cash payment and will be issued as a credit towards future tuition, room and board.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-8">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-8" aria-expanded="true" aria-controls="content-field_ca_content-42-8">
+                  <i class="fas fa-angle-down"></i>
+                  How will refunds effect graduate students? 
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-8">
+          <div class="panel-body">
+                          <p>Graduate students who have not returned to their on-campus rooms will receive a 50 percent refund of monthly rent since March 17, 2020. To make arrangements to check out of your room/apartment completely, please contact <a href="mailto:reslife@bridgeport.edu"><strong>reslife@bridgeport.edu</strong></a>.</p>
+          </div>
+      </div>
+  </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading-field_ca_content-42-9">
+          <h4 class="panel-title">
+              <a role="button" class="collapsed item" data-toggle="collapse" data-parent="#accordion-field_ca_content-42" href="#content-field_ca_content-42-9" aria-expanded="true" aria-controls="content-field_ca_content-42-9">
+                  <i class="fas fa-angle-down"></i>
+                  How do I collect my belongings from my residence hall? 
+              </a>
+          </h4>
+      </div>
+      <div id="content-field_ca_content-42-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-field_ca_content-42-9">
+          <div class="panel-body">
+                          <p>Students living in Barnum Hall can sign up to return to campus to retrieve items beginning April 11, 2020. <a href="https://ubhousing.wufoo.com/forms/p193x9q51lbqoan/"><strong>To sign up for a time, please click here</strong></a>.</p>
+
+<ol type="a"><li>Students in other areas are not eligible to return to campus at this time.</li>
+	<li>For questions, please contact <a href="mailto:reslife@bridgeport.edu"><strong>reslife@bridgeport.edu</strong></a></li>
+</ol>
+          </div>
+      </div>
+  </div>
+  
+</div><!-- panel-group -->
+
+      </div>
+</div>
+          </div>
+  		
+	  		</div>
+	  	</div>
+	 </div>
+</div></div>
+          </div>
+  
+            <div class="field field--name-field-custom-html field--type-text-long field--label-hidden field--item"><!-- Paste/Type your HTML code below -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".intro").parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("margin-top-80");
+});
+</script>
+<style>
+    .margin-top-80 {margin-top:80px !important;}
+    td, th {padding:10px !important;}
+</style></div>
+      
+  </div>
+
+</article>
+
+  </div>
+
+                            </section>
+
+                                </div>
+    </div>
+
+<div class="footer-menu-area">
+    <div class="container-fluid footer-desktop">
+    <div class="row">
+        <div class="col col-md-7">
+            <div class="col col-md-4 footer-logo-container">
+                <img src="/themes/custom/ubridgeport/images/UniversityFooterLogo.svg" width="125" alt="University of Bridgeport Logo">
+            </div>
+            <div class="col col-md-8">
+                  <div class="region region-footer-menu">
+    <nav role="navigation" aria-labelledby="block-globalfootermenu-menu" id="block-globalfootermenu">
+            
+  <h2 class="visually-hidden" id="block-globalfootermenu-menu">Global Footer Menu</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--global-footer-menu nav">
+                                                            <li class="first">
+                                                                                                    <a href="/academics" data-drupal-link-system-path="node/4921">Academics</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/accreditation-memberships" data-drupal-link-system-path="node/196">Accreditation</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions" data-drupal-link-system-path="node/4911">Admissions</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/alumni" data-drupal-link-system-path="node/4581">Alumni</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/academic-calendar" data-drupal-link-system-path="node/5041">Calendar</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/contact" data-drupal-link-system-path="node/5951">Contact us</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/directory" data-drupal-link-system-path="node/56">Directory</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/employment" data-drupal-link-system-path="node/96">Employment</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://library.bridgeport.edu">Library</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/privacy" data-drupal-link-system-path="node/6156">Privacy Policy</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/campus-safety" data-drupal-link-system-path="node/5321">Security</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-life/title-ix" data-drupal-link-system-path="node/5371">Title IX</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://files.bridgeport.edu/public/Security/Security_Protocol_Plan.pdf">Security Protocol Plan</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://files.bridgeport.edu/public/Security/Annual_Security_Report.pdf">Annual Security &amp; Fire Report</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+            </div>
+        </div>
+        <div class="col col-md-5 pull-right">
+            <div class="col col-md-8 footer-social-icons">
+                <p class="social-tag">Get social with #UBRIDGEPORT</p>
+                <ul class="social-icons-list">
+    <li><a href="https://facebook.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/FacebookIcon.svg"
+                 class="footer-icon facebook-icon" alt="Facebook Icon"></a></li>
+    <li><a href="https://instagram.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/InstagramIcon.svg"
+                 class="footer-icon instagram-icon" alt="Instagram Icon"></a></li>
+    <li><a href="https://www.linkedin.com/school/ubridgeport/">
+            <img src="/themes/custom/ubridgeport/images/LinkedinIcon.svg"
+                 class="footer-icon linkedin-icon" alt="Linkedin Icon"></a></li>
+    <li><a href="https://twitter.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/TwitterIcon.svg"
+                 class="footer-icon twitter-icon" alt="Twitter Icon"></a></li>
+    <li><a href="https://www.snapchat.com/add/UBridgeport">
+            <img src="/themes/custom/ubridgeport/images/SnapchatIcon.svg"
+                 class="footer-icon snapchat-icon" alt="Snapchat Icon"></a></li>
+    <li><a href="https://www.youtube.com/user/UofBridgeport">
+            <img src="/themes/custom/ubridgeport/images/YouTubeIcon.svg"
+                 class="footer-icon youtube-icon" alt="Youtube Icon"></a></li>
+</ul>            </div>
+
+            <div class="col col-md-4 footer-gift-icon pull-right">
+                <div class="make-gift-container">
+                    <a href="/make-a-gift" class="make-gift-link">
+                        <img src="/themes/custom/ubridgeport/images/GiftIcon.svg" alt="Make a gift"
+                             class="footer-social-icon gift-icon">
+                        <div class="gift-text">
+                            Make a Gift
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer-mobile">
+    <div class="row footer-mobile-logo-container">
+        <img src="/themes/custom/ubridgeport/images/UniversityFooterLogo.svg" width="100" alt="University of Bridgeport Logo">
+    </div>
+    <div class="row footer-mobile-menu-nav">
+          <div class="region region-footer-menu">
+    <nav role="navigation" aria-labelledby="block-globalfootermenu-menu" id="block-globalfootermenu">
+            
+  <h2 class="visually-hidden" id="block-globalfootermenu-menu">Global Footer Menu</h2>
+  
+
+        <div class="menu-toggle-icon">
+    <i class="fas fa-angle-down"></i>
+    <i class="fas fa-angle-up"></i>
+</div>
+
+
+            <ul class="menu menu--global-footer-menu nav">
+                                                            <li class="first">
+                                                                                                    <a href="/academics" data-drupal-link-system-path="node/4921">Academics</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/accreditation-memberships" data-drupal-link-system-path="node/196">Accreditation</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions" data-drupal-link-system-path="node/4911">Admissions</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/alumni" data-drupal-link-system-path="node/4581">Alumni</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/academics/academic-calendar" data-drupal-link-system-path="node/5041">Calendar</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/admissions/contact" data-drupal-link-system-path="node/5951">Contact us</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/directory" data-drupal-link-system-path="node/56">Directory</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/about/employment" data-drupal-link-system-path="node/96">Employment</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://library.bridgeport.edu">Library</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/privacy" data-drupal-link-system-path="node/6156">Privacy Policy</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/campus-safety" data-drupal-link-system-path="node/5321">Security</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="/student-life/title-ix" data-drupal-link-system-path="node/5371">Title IX</a>
+                                    </li>
+                                                            <li>
+                                                                                                    <a href="https://files.bridgeport.edu/public/Security/Security_Protocol_Plan.pdf">Security Protocol Plan</a>
+                                    </li>
+                                                            <li class="last">
+                                                                                                    <a href="https://files.bridgeport.edu/public/Security/Annual_Security_Report.pdf">Annual Security &amp; Fire Report</a>
+                                    </li>
+                    </ul>
+    
+
+  </nav>
+
+  </div>
+
+    </div>
+
+    <div class="row footer-mobile-social-icons">
+        <div class="footer-mobile-icon-container">
+            <ul class="social-icons-list">
+    <li><a href="https://facebook.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/FacebookIcon.svg"
+                 class="footer-icon facebook-icon" alt="Facebook Icon"></a></li>
+    <li><a href="https://instagram.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/InstagramIcon.svg"
+                 class="footer-icon instagram-icon" alt="Instagram Icon"></a></li>
+    <li><a href="https://www.linkedin.com/school/ubridgeport/">
+            <img src="/themes/custom/ubridgeport/images/LinkedinIcon.svg"
+                 class="footer-icon linkedin-icon" alt="Linkedin Icon"></a></li>
+    <li><a href="https://twitter.com/ubridgeport">
+            <img src="/themes/custom/ubridgeport/images/TwitterIcon.svg"
+                 class="footer-icon twitter-icon" alt="Twitter Icon"></a></li>
+    <li><a href="https://www.snapchat.com/add/UBridgeport">
+            <img src="/themes/custom/ubridgeport/images/SnapchatIcon.svg"
+                 class="footer-icon snapchat-icon" alt="Snapchat Icon"></a></li>
+    <li><a href="https://www.youtube.com/user/UofBridgeport">
+            <img src="/themes/custom/ubridgeport/images/YouTubeIcon.svg"
+                 class="footer-icon youtube-icon" alt="Youtube Icon"></a></li>
+</ul>        </div>
+    </div>
+
+    <div class="row footer-make-gift-container">
+        <a href="/make-a-gift" class="footer-mobile-make-gift-link">
+            <img src="/themes/custom/ubridgeport/images/GiftIcon.svg" alt="Make a gift"
+                 class="footer-social-icon gift-icon">
+            <span>Make a Gift</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="footer-copyright-bar ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-xs-12 copyrights-info">
+                © 2020 University of Bridgeport. All rights reserved.
+            </div>
+            <div class="col-md-7 col-xs-12 contact-address">
+                <a href="tel:+18003923582">1-800-EXCEL-UB (392-3582)</a> | 126 Park Avenue, Bridgeport, CT 06604 USA
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+      <div class="region region-footer">
+    <section id="block-quickfixestemporarycssorjs" class="block block-block-content block-block-contentccb0e065-9c6d-4ca3-8c7f-21ef88a91e8f clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><!-- use this block for quick fixes. Do Not use for permanent changes. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".footer-mobile .visually-hidden").addClass("newClass");
+});
+</script>
+<!--
+$(".footer-mobile #block-globalfootermenu").attr('aria-labelledby','block-globalfootermenu-mobile-menu');*/
+</script>
+-->
+
+<style>
+/*These styles should be moved to CSS files*/
+/* ADA COMPLIANCE FIXES MAY 2020*/
+.notification-body .field--type-text-with-summary {color:#000 !important;}
+.paragraph--type--content-image-block-navigation .item {
+padding:0px 1%;
+}
+.paragraph--type--content-image-block-navigation .item .field--name-field-cin-background-image:after {
+display: none !important;
+}
+@media only screen and (min-width: 768px) {
+.paragraph--type--content-image-block-navigation .item .field--name-field-cin-link a {
+    bottom: 0 !important;
+    top: unset;
+    left: 4% !important;
+    height: auto !important;
+    min-height:1em;
+    background-color: #220650 !important;
+    width: 92% !important;
+    padding:20px 40px !important;
+    font-size:1.1em !important;
+    -webkit-transition: min-height ease-in-out 0.5s;
+    -ms-transition: min-height ease-in-out 0.5s;
+    -o-transition: min-height ease-in-out 0.5s;
+    transition: min-height ease-in-out 0.5s;
+}
+.paragraph--type--content-image-navigation:hover .field--type-link a{
+    background:rgba(34, 6, 80, 0.7) !important;
+    padding-top:10% !important;
+    min-height:100% !important;
+}
+}
+.paragraph--type--content-image-navigation:hover .field--type-link a{
+    background:#220650;
+    color:#fff;
+}
+/*END COMPLIANCE FIXES*/
+.gsc-promotion {margin-bottom:10px !important;}
+.gs-promotion .gs-title, .gs-promotion a.gs-title, .gs-promotion a.gs-title:visited * {font-size:1.4em !important;font-family: "Museo Slab",Serif !important;}
+.gs-promotion .gs-title a b {font-size:1em !important;font-family: "Museo Slab",Serif !important;}
+.gs-promotion .gs-snippet {color:#000 !important;padding-left:0px !important;padding-top:8px !important;}
+ 
+a.anchor {display:block;position:relative;top:-200px;visibility:hidden;}
+.btn-purple-outline {
+        font-family: "proxima-nova",sans-serif;
+        font-style: normal;
+        margin:5px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    padding: 18px 27px 16px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0px;
+    border: 1px solid #440082;
+    }
+    .btn-outline {box-shadow:none !important;}
+    .btn-outline:hover, .btn-outline:active {
+        background-color:#440082 !important;
+        box-shadow:none !important;
+    }
+.video-embed {max-width: 99%;}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.embed-container iframe, .embed-container object, .embed-container embed, .embed-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.notification-container.information {
+    background: #ea772a !important;
+}
+.notification-container.information .notification-title {
+    color:#000 !important;
+}
+.region.region-alert{
+    background:#ffffff;
+}
+.notification-body{
+    padding:10px 0px;
+}
+@media only screen and (max-width:600px) {
+    .notification-body .field {display:none !important;}
+    .notification-body {height:10px !important;padding:0px !important;}
+}
+.social-media-row .field-content{
+    overflow-wrap: break-word;
+}
+.article-content .field--name-field-tags{
+    display:none;
+}
+.btn{
+    margin:5px;
+}
+.menu--global-footer-menu li a{
+    white-space:pre-wrap;
+}
+@media (max-width:768px){
+    .block-views-blocksection-header-block-1 .form-group,
+    .block-views-blockcollege-header-block-1 .form-group{
+        margin-top:0px;
+    }
+    .staff-display .attributes{
+        padding:0px;
+    }
+    .home-cta-link-name {font-size:23pt !important;line-height:27pt;}
+    .element-cta-banner {line-height:1.1em !important;}
+    .element-cta-banner .cta-link {display:inline-block;margin-top:20px;}
+}
+#block-news-2 .view-section-header .views-field-title a{
+color:#fff;
+}
+.gssb_c{
+z-index:9999;
+}
+nav#block-news-2 .navbar-nav li a {
+    color: #fff;
+}
+.float-btn {
+	position: fixed;
+	width: 100px;
+	height: 40px;
+	bottom: 47px;
+	right: 18px;
+	font-size: 13px;
+	text-decoration: none;
+	background-color: #E7C583;
+	color: #450167;
+	border-radius: 6px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 11;
+}
+body.page-node-type-school .paragraph--type--content-hero .field--name-field-ch-content .field--name-field-cta-link a{
+background-color:#fff;
+}
+.feedback-float {
+	margin-top: 14px;
+}
+
+.paragraph--content-social .twitter-post .twitter-img img {
+	display: block;
+}
+
+.paragraph--content-social .instagram-post .instagram-body {
+	display: block;
+	padding: 64px 30px 50px 30px;
+	background: #fff;
+}
+
+.news-events-homepage .title {
+	margin-bottom: 12px;
+}
+@media(max-width:992px){
+    .notification-body{
+        font-size:11pt;
+    }
+}
+
+@media(max-width: 571px) {
+	.white-circle {
+		background: rgba(255, 255, 255, 1);
+		width: 120px;
+		height: 120px;
+		padding: 2px 20px;
+	}
+	.white-circle-number {
+		height: 55px;
+	}
+	.white-circle-number img {
+		max-height: 50px;
+		max-width: 50px;
+	}
+	.college-seals img {
+		max-width: 150px;
+	}
+	.college-seals .img-padding {
+		margin: 30px auto 20px auto;
+	}
+	body.page-node-type-article h1,
+	body.page-node-type-blog-president h1 {
+		font-size: 25px;
+	}
+	body.page-node-type-article .article-content,
+	body.page-node-type-blog-president .article-content {
+		padding: 30px;
+	}
+	.white-circle-text {
+		line-height: 13px;
+		font-size: 13px;
+	}
+	.news-events-homepage .news-event-wrapper {
+		background: white;
+		margin: auto;
+	}
+}
+
+@media (min-width: 572px) {
+	.college-seals img {
+		max-width: 220px;
+	}
+	body.page-node-type-article h1,
+	body.page-node-type-blog-president h1 {
+		font-size: 25px;
+	}
+	.college-seals .no-cellphone {
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.white-circle {
+		background: rgba(255, 255, 255, 1);
+		width: 160px;
+		height: 160px;
+		padding: 2px 29px;
+	}
+	.white-circle-number {
+		margin-bottom: -5px;
+	}
+	.white-circle-number img {
+		max-height: 74px;
+		max-width: 87px;
+		top: 80%;
+	}
+.college-seals img:hover{
+    max-width: 240px;
+    transition-duration: 0.5s;
+    margin-bottom: -10px;
+    margin-top:-10px;
+}
+}
+
+@media (min-width: 768px) {
+	.news-events-homepage {
+		padding-top: 25px;
+		padding-bottom: 36px;
+	}
+	.news-events-homepage .field--name-field-cfct-bottom-links {
+		margin-top: -28px;
+	}
+	.paragraph--content-info-block.right .field--name-field-cib-content {
+		right: 3%;
+	}
+	.view-college-header .primary-section-nav,
+	.view-college-header .views-field-title-1 {
+		width: 50%;
+	}
+}
+
+.paragraph--content-general-content-block {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.path-frontpage .paragraph--type--content-hero .field--name-field-ch-content {
+	top: 65%;
+}
+
+.path-frontpage .paragraph--type--content-hero .field--name-field-ch-content .field--name-field-cta-link a {
+	margin-top: 10px;
+}
+
+@media (min-width: 980px) {
+#block-news-2{
+padding-top:20px;
+}
+	.paragraph--type--content-home-page-stories-nav .img-holder,
+	.paragraph--type--content-home-page-stories-nav .content-holder {
+		max-height: 500px;
+		min-height: 365px;
+	}
+	body.page-node-type-article h1,
+	body.page-node-type-blog-president h1 {
+		font-size: 30px;
+	}
+}
+
+.paragraph--type--content-home-page-stories-nav h2 {
+	color: #4c0086;
+	max-width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.paragraph--type--content-home-page-stories-nav h3 {
+	border-bottom: 2px solid #4c0086;
+}
+
+.col-xs-12.col-sm-6.alumni-block {
+	min-height: 230px;
+}
+
+@media (min-width: 1340px) {
+	.news-events-homepage .container {
+		width: 85%;
+	}
+	body.page-node-type-article h1,
+	body.page-node-type-blog-president h1 {
+		font-size: 50px;
+	}
+}
+
+.news-events-homepage .bottom {
+	min-height: 145px;
+}
+
+body.page-node-type-article .article-purple-wrapper,
+body.page-node-type-blog-president .article-purple-wrapper {
+	background: #220650;
+}
+
+.field.field--name-field-school-or.field--type-integer.field--label-above.quickedit-field,
+.field.field--name-field-school-or.field--type-integer.field--label-above {
+	display: none;
+}
+
+.main_nav #login_btn {
+	font-size: 23px;
+	text-transform: uppercase;
+}
+
+.directory-table {
+	width: 50%;
+	float: left;
+}
+
+.directory-table td {
+	width: 50%;
+	padding: 5px;
+}
+
+@media(max-width:768px) {
+	.directory-table {
+		width: 100%;
+		float: none;
+	}
+}
+
+.path-frontpage ul.menu.menu--header-navigation.nav li:last-child {
+	display: none;
+}
+
+.page-node-type-event .event-links .field--name-field-event-ticket-url {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.field.field--name-field-college.field--type-entity-reference.field--label-above {
+	display: none;
+}
+
+#site-search {
+	z-index: 1060;
+}
+
+div#content-2540234 div h3 {
+	display: none;
+}
+.ub-article-footer section#block-views-block-news-article-footer-block-1 ul.inline-list.social{
+display:none !important;
+}
+
+.ub-block-firstnewsitem a{
+font-weight:normal;
+letter-spacing:normal;
+}
+.page-node-type-event .social-media-sharing{
+padding:10px;
+}
+
+.view-college-header .view-content .views-row:nth-child(2){
+display:none;
+}
+
+
+.field.field--name-field-staff-headshot.field--type-image.field--label-hidden.field--item {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+@media(max-width:768px){
+.ub-article-footer ul.inline-list.boxes li{
+display:none !important;
+}
+
+.ub-article-footer .field--name-field-sc-column.field--type-entity-reference-revisions > div{
+width:100%;
+}
+.ub-article-footer .field--type-entity-reference-revisions.field--name-field-sc-column{
+display:block;
+}
+div#social-share-block{
+background:#fff;
+}
+}
+
+li.comment-forbidden{
+display:none;
+}
+
+.alumni-display img{
+max-width:150px;
+margin:auto;
+}
+
+
+.paragraph--type--content-hero .overlay{
+background:url("/themes/custom/my_custom_theme/images/inner-page-overlay.png") no-repeat !important;
+background-size:cover !important;
+opacity:inherit;
+}
+.path-frontpage .paragraph--type--content-hero .overlay{
+background:#1500003b !important;
+}
+.paragraph--type--content-hero .field--name-field-ch-content .field--name-field-cta-link a, body.path-frontpage .paragraph--type--content-hero .field--name-field-ch-content .field--name-field-cta-link a{
+    background: #fff;
+    color: #490088;
+}
+
+div#content-2732813 .panel-body h3,
+div#content-1508345 .panel-body h3{
+display:none !important;
+}
+
+#block-sitewidealert .alert{
+    height: auto;
+    white-space: inherit;    
+overflow-x: inherit;
+    -ms-overflow-style: inherit;
+}
+.paragraph.paragraph--type--element-video.paragraph--view-mode--default{
+min-height:570px;
+}
+.paragraph--structure-container .container{
+
+margin-bottom:10px;
+margin-top:10px;
+}
+
+.article img{
+max-width:100%;
+}
+body.path-frontpage .paragraph--type--content-hero .field--name-field-ch-content .field--name-field-chb-headline{
+text-shadow:2px 2px #000;
+}
+
+.paragraph--type--content-hero .field--name-field-ch-content .field--name-field-chb-message{
+    text-shadow: 2px 2px 4px #000;
+}
+
+@media(min-width:768px){
+
+.view-section-header .primary-section-nav,
+.view-section-header .views-field-title{
+width:auto;
+}
+
+.paragraph--content-info-block .field--name-field-cib-content{
+transform: translateY(-20%);
+}
+
+body.path-frontpage .paragraph--type--content-hero .field--name-field-ch-content .field--name-field-chb-headline{
+letter-spacing:7pt;
+}
+
+}
+
+.footer-logo-container{
+min-height:170px;
+}
+
+.ub-article-footer section#block-views-block-news-article-footer-block-1 .paragraph.paragraph--structure-column.structure-column--default.col-xs-12.col-sm-offset-1.col-sm-5{
+display:none;
+}
+@media (max-width: 768px){
+.rfi-float-container {
+    bottom: 25%;
+    margin-top: inherit;
+}
+
+.page-node-type-article section.col-sm-12.fullwidth-column{
+margin-top:-120px;
+}
+
+body.page-node-type-article .article-content, body.page-node-type-blog-president .article-content{
+padding:80px 30px;
+}
+}
+
+nav#block-programnavigation .menu li a{
+color:#525051;
+}
+
+#block-views-block-school-catalog-schoolcatalog .view-school-catalog .views-col{
+z-index:0;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.paragraph--element-home-title-content-box h1 {margin-right:20px;}
+.footer-copyright-bar a {font-weight:bold;}
+</style>
+
+<script type="text/javascript">
+
+ if (document.getElementById('block-sitewidealert')){
+
+var h = document.getElementById('block-sitewidealert').offsetHeight;
+navbar=document.getElementsByClassName("navbar");
+navbar[0].setAttribute("style","margin-top:"+h+"px !important");
+searchblock=document.getElementById("site-search");
+h=h+20;
+searchblock.setAttribute("style","margin-top:"+h+"px !important");
+
+}
+</script></div>
+      
+  </section>
+
+<section id="block-sitetrackinganalyticsjscode" class="block block-block-content block-block-content4c8e1639-d8d7-458d-a249-5c0e3ac2e71f clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><!-- insert tracking codes here -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '366957693468613');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=366957693468613&ev=PageView&noscript=1" alt="fb-code"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- Site Improve -->
+<!--begin multiview header code-->
+<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-23e2b886b5b4af1413d85d07412f71b0d4013a33.js"></script>
+
+<script type="text/javascript" defer>
+    /*<![CDATA[*/
+    (function () {
+        var sz = document.createElement('script');
+        sz.type = 'text/javascript';
+        sz.async = true;
+        sz.src = '//siteimproveanalytics.com/js/siteanalyze_66358612.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(sz, s);
+    })();
+    /*]]>*/
+</script>
+
+<!--Begin Multiview satelite footer code-->
+<script src="https://scripts.ninjacat.io/js.php?nt_id=6173276"></script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+
+<!-- new tracking code -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122626835-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122626835-1');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCHBTW');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCHBTW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 988158596;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988158596/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<!-- Hotjar Tracking Code for www.bridgeport.edu -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1394127,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</div>
+      
+  </section>
+
+
+  </div>
+
+
+  </div>
+
+
+<link rel="stylesheet" href="/themes/custom/ubridgeport/css/fontawesome/scss/all.css">
+<link rel="stylesheet" href="https://use.typekit.net/top8zam.css">
+<script> (function () {
+    var cx = '015987796921351493961:2hn6dqj_6_g';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function () {
+    document.getElementById('gsc-i-id1').placeholder = 'Search...';
+  }; </script>
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/15991","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"user":{"uid":0,"permissionsHash":"ea249efe8f300bf36c003909f78f2997103efef84ce4d3fd9241431f759aa8fd"}}</script>
+<script src="/sites/default/files/js/js_6GwvFFLSslSM60yOGfi0TDcY8-BR7g-yHenfI5sDWuU.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_ub51wMJa7a5s4rqOWoE6LS41MCo9CtIgrOXRfmOjgqI.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_J9dMvzRd_c9uvNVgkWFJGeoZJS9Ba_G3iNC5VzjJ0EU.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c5a4f20d3c","applicationID":"126880957","transactionName":"bgFVMktVWEBTVEELCldLdgVNXVldHUdUBQBmB1YFUVE=","queueTime":0,"applicationTime":33,"atts":"QkZWRANPS04=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

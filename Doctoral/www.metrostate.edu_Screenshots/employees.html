@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"edcad50165",applicationID:"73174278"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta property="og:site_name" content="Metropolitan State University" />
+<link rel="canonical" href="https://www.metrostate.edu/notices/covid-19/employees" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.metrostate.edu/notices/covid-19/employees" />
+<link rel="icon" sizes="16x16" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/16.png" />
+<meta property="og:title" content="COVID-19 Information for Employees" />
+<link rel="icon" sizes="32x32" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/32.png" />
+<link rel="icon" sizes="96x96" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/96.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.metrostate.edu/themes/custom/metrostate/icons/favicons/180.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:image" content="https://www.metrostate.edu/themes/custom/metrostate/img/metropolitan-state.jpg" />
+<meta name="description" content="Metropolitan State University is a public university in Minnesota that offers high-quality, flexible and affordable options in undergraduate, graduate and continuing education. We’ve earned a national reputation for innovative programs that empower students to finish what they started with the flexibility to schedule courses around their busy lifestyles - offering evening, weekend, online and combination online/classroom courses." />
+<link rel="shortcut icon" href="/themes/custom/metrostate/icons/favicons/16.png" type="image/png" />
+<link rel="revision" href="https://www.metrostate.edu/notices/covid-19/employees" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qcv1q5" defer></script>
+
+		<title>COVID-19 Information for Employees | Metropolitan State University</title>
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_JQyZ9StD4-4I5jikYtL8icbvn1b-f6xMTWUzpXDhKlc.css" />
+<link rel="stylesheet" media="all" href="https://use.typekit.net/wal0vkv.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_gRruPpRJw2nfJ7_Vm7I4l_69_qHq7ruTovnFhJvdGlI.css" />
+
+		<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/43191","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"ajax":[],"user":{"uid":0,"permissionsHash":"492b2e34de49e69e7e1fa614a080569f6175211d486dcfd48d81cc067f31d15a"}}</script>
+
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_GQDK5e8Xvf-gNkNJbkYUMISUh6aza2a0EPofVyLxvzE.js"></script>
+
+	</head>
+
+	
+	
+	<body class="metro--nid-43191 metro--pg-nt-flexp metro--context-notices-covid-19-employees">
+				<nav class="sr-only sr-only-focusable" role="navigation" aria-label="Screen reader navigation">
+			<a href="#main-content">Skip to main content</a>
+		</nav>
+		<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N52TL6S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<div class="d-none d-print-block mb-5" aria-hidden="true" role="banner" aria-label="page heading for printable view"><div class="container">
+			<div class="row">
+				<div class="col-4">
+					<img src="/themes/custom/metrostate/img/logo-blue.svg" alt="Metropolitan State University" class="img-fluid">
+				</div>
+			</div>
+		</div></div>
+		  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <header id="metro--global-header">
+          <div>
+    
+<div id="block-metromegamenublock" data-block-plugin-id="metro_mega_menu_block" class="metro--block">
+  
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="metro--navbar" aria-label="main navigation">
+	<div class="container">
+		<a class="navbar-brand" href="/"><img src="/themes/custom/metrostate/img/logo-white.svg" id="metro--navbar-brand-img" alt="Metropolitan State University (Home)"></a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fal fa-bars"></i>
+			</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+									<li class="nav-item dropdown mega-dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Future students
+				</a>
+													<div class="mega-menu dropdown-menu" aria-labelledby="navbarDropdown-0">
+    <div class="container">
+        <div class="row justify-content-center mb-lg-2 mb-xl-3 text-left text-sm-center metro--navbar-row-icon-future metro--a-reversed">
+            <div class="col-12 mb-2 col-sm-4 col-md-3 col-lg mb-lg-0 col-xl">
+			<a href="/apply/get-started">
+			   <figure class="metro--navbar-icon metro--navbar-icon-future d-none d-sm-block">
+				  <img src="/themes/custom/metrostate/img/icon-apply-01.svg" alt="cap and gown icon" class="img-fluid" aria-hidden="true">
+			   </figure>
+			   What Metro State offers&nbsp;you
+			</a>
+            </div>
+            <div class="col-12 mb-2 col-sm-4 col-md-3 col-lg mb-lg-0 col-xl">
+			<a href="/apply/programs">
+			    <figure class="metro--navbar-icon metro--navbar-icon-future d-none d-sm-block">
+			    	<img src="/themes/custom/metrostate/img/icon-apply-04.svg" alt="open book icon" class="img-fluid" aria-hidden="true">
+			    </figure>
+			    Explore majors and&nbsp;degrees
+			</a>
+            </div>
+            <div class="col-12 mb-2 col-sm-4 col-md-3 col-lg mb-lg-0 col-xl">
+			 	<a href="/apply/tuition">
+                        <figure class="metro--navbar-icon metro--navbar-icon-future  d-none d-sm-block" aria-hidden="true">
+                        <img src="/themes/custom/metrostate/img/icon-apply-03.svg" alt="money icon" class="img-fluid">
+                        </figure>
+                        An affordable, quality&nbsp;education
+                    </a>
+            </div>
+            <div class="col-12 mb-2 col-sm-4 col-md-3 col-lg mb-lg-0 col-xl">
+			 	<a href="/apply/learn-more">
+                        <figure class="metro--navbar-icon metro--navbar-icon-future  d-none d-sm-block" aria-hidden="true">
+                        <img src="/themes/custom/metrostate/img/icon-apply-02.svg" alt="lightbulb icon" class="img-fluid">
+                        </figure>
+                        Learn more or visit&nbsp;campus
+                </a>
+            </div>
+            <div class="col-12 mb-2 col-sm-4 col-md-3 col-lg mb-lg-0 col-xl">
+			 	<a href="/apply">
+                        <figure class="metro--navbar-icon metro--navbar-icon-future  d-none d-sm-block" aria-hidden="true">
+                        <img src="/themes/custom/metrostate/img/icon-apply-05.svg" alt="apply icon" class="img-fluid">
+                        </figure>
+                        Get started
+                    </a>
+            </div>
+        </div>
+
+        <div class="row metro--navbar-future-listlinks-row">
+            <div class="col text-left text-md-center">
+                <ul class="list-unstyled metro--navbar-future-listlinks metro--navbar-current-listlinks">
+				<li><a href="/apply/get-started/transfer"><strong>Transfer students</strong></a></li>
+				<li><a href="/apply/get-started/freshmen"><strong>First-time students</strong></a></li>
+				<li><a href="/apply/get-started/graduate"><strong>Graduate students</strong></a></li>
+				<li><a href="/apply/get-started/international"><strong>International students</strong></a></li>
+				<li><a href="/apply">More ways to enroll <i class="fas fa-angle-right fa-sm" aria-label="arrow"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row metro--navbar-future-listlinks-row">
+            <div class="col text-left text-md-center">
+                <ul class="list-unstyled metro--navbar-future-listlinks">
+                                            <li>
+                            <a href="/apply/path/pathways" title="" >Transfer Pathways</a>
+                        </li>
+                                            <li>
+                            <a href="/apply/path/metroconnect" title="" >MetroConnect</a>
+                        </li>
+                                            <li>
+                            <a href="/apply/partners" title="Partner institutions" >Partner institutions</a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+											</li>
+									<li class="nav-item dropdown mega-dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Current students
+				</a>
+													<!--start current students-->
+<div class="mega-menu dropdown-menu" aria-labelledby="navbarDropdown-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 order-1 col-sm-12 order-sm-1 col-md-12 order-md-1 col-lg-2 order-lg-2 col-xl-2 order-xl-2 metro--nav-current-tools">
+                <ul class="list-unstyled">
+      <li class="mb-1">
+        <a href="https://metrostate.learn.minnstate.edu/" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             D2L Brightspace
+        </a>
+    </li>
+      <li class="mb-1">
+        <a href="https://login.microsoftonline.com?whr=minnstate.edu" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             Student email
+        </a>
+    </li>
+      <li class="mb-1">
+        <a href="https://eservices.minnstate.edu/eservices/login.html?campusid=076" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             eServices
+        </a>
+    </li>
+      <li class="mb-1">
+        <a href="https://starid.minnstate.edu/" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             StarID
+        </a>
+    </li>
+      <li class="mb-1">
+        <a href="/linkedin-learning" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             LinkedIn Learning
+        </a>
+    </li>
+      <li class="mb-1">
+        <a href="https://minnstate.zoom.us/" class="btn btn-block btn-metro-tool text-left" target="_blank">
+            <i class="far fa-lock fa-xs" data-fa-transform="up-2" aria-label="authentication required"></i>
+             Zoom
+        </a>
+    </li>
+  </ul>
+
+                <!-- <div class="row">
+					<div class="col">
+						<div class="card border-warning card-compressed mt-3">
+							<div class="card-header bg-warning border-warning">
+								<h5 class="card-title"><i class="far fa-exclamation-circle" data-fa-transform="down-1"></i> Coming up…</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Summer + Fall ’18 registration opens <strong>Monday, March 19</strong></p>
+							</div>
+						</div>
+					</div>
+				</div> end alert row -->
+			</div><!--end right-hand side-->
+
+			<div class="col-12 order-2 col-sm-12 order-sm-2 col-md-12 order-md-2 col-lg-10 order-lg-1 col-xl-10 order-xl-1 text-left text-sm-center text-md-center text-lg-center text-xl-center mt-3 mt-lg-0">
+				<div class="row justify-content-center metro--navbar-row-icon-current">
+					<div class="col-12 col-sm-4 col-md col-lg col-xl">
+						<a href="/students">
+								<figure class="metro--navbar-icon metro--navbar-icon-current d-none d-sm-block">
+										<img src="/themes/custom/metrostate/img/icons/student-news2.svg" class="img-fluid" aria-hidden="true" alt="news icon">
+								</figure>
+								News and info
+								<p>Everything students need&nbsp;to&nbsp;know today</p>
+						</a>
+					</div>
+					<div class="col-12 col-sm-4 col-md col-lg col-xl">
+						<a href="/academics/success">
+								<figure class="metro--navbar-icon metro--navbar-icon-current d-none d-sm-block">
+										<img src="/themes/custom/metrostate/img/icons/student-success.svg" class="img-fluid" aria-hidden="true" alt="gear icon">
+								</figure>
+								Academic success
+								<p>Registration, tutoring, advising and more</p>
+						</a>
+					</div>
+					<div class="col-12 col-sm-4 col-md col-lg col-xl">
+						<a href="/students/support">
+								<figure class="metro--navbar-icon metro--navbar-icon-current d-none d-sm-block">
+										<img src="/themes/custom/metrostate/img/icons/student-service1.svg" class="img-fluid" aria-hidden="true" alt="service icon">
+								</figure>
+								Services + support
+								<p>Help and resources for students’ everyday lives</p>
+						</a>
+					</div>
+					<div class="col-12 col-sm-4 col-md col-lg col-xl">
+						<a href="/finances">
+								<figure class="metro--navbar-icon metro--navbar-icon-current d-none d-sm-block">
+										<img src="/themes/custom/metrostate/img/icons/student-finance.svg" class="img-fluid" aria-hidden="true" alt="finances icon">
+								</figure>
+								Finances
+								<p>Payment, tuition and options for financial aid</p>
+						</a>
+					</div>
+					<div class="col-12 col-sm-4 col-md col-lg col-xl">
+						<a href="/students/life">
+								<figure class="metro--navbar-icon metro--navbar-icon-current d-none d-sm-block">
+										<img src="/themes/custom/metrostate/img/icons/student-life.svg" class="img-fluid" aria-hidden="true" alt="student life icon">
+								</figure>
+								Student life
+								<p>Get involved in&nbsp;the campus community</p>
+						</a>
+					</div>
+				</div>
+
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <ul class="list-unstyled metro--navbar-current-listlinks text-left text-lg-center">
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/library" title="" >
+                                                                                    <i class="far fa-book" data-fa-transform="shrink-4" aria-label="book icon"></i> 
+                                                                                Library
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="https://www.bkstr.com/metropolitanstatestore" title=""  target="_blank" >
+                                                                                    <i class="far fa-shopping-cart fa-w-18" data-fa-transform="shrink-3" aria-label="shopping cart"></i> 
+                                                                                Bookstore
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/academics/calendar" title="" >
+                                                                                    <i class="far fa-calendar-alt" data-fa-transform="shrink-3" aria-label="book icon"></i> 
+                                                                                Academic calendar
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/about/locations" title="" >
+                                                                                    <i class="far fa-map-marker-alt fa-w-12" data-fa-transform="shrink-3" aria-label="map marker icon"></i> 
+                                                                                Locations
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/students/support/gateway" title="" >
+                                                                                    <i class="far fa-question-circle fa-w-16" data-fa-transform="shrink-3" aria-label="question icon"></i> 
+                                                                                Gateway
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/orientation" title="" >
+                                                                                Orientation
+                                    </a>
+                                </li>
+                                                            <li class="mb-2 mb-lg-0">
+                                    <a href="/academics/registration" title="Register for class" >
+                                                                                Registration
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end left-hand side-->
+        </div>
+    </div>
+</div>
+											</li>
+									<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Academics
+				</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+																								<a href="/academics" class="dropdown-item" title="" >Colleges, schools and departments</a>
+																																<a href="/academics/programs" class="dropdown-item" title="" >Majors and programs</a>
+																																<a href="/academics/registration" class="dropdown-item" title="" >Registration and course catalog</a>
+																																<a href="/academics/credit-transfers" class="dropdown-item" title="" >Credit transfers</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/academics/calendar" class="dropdown-item" title="" >Academic calendar</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/academics/requirements" class="dropdown-item" title="" >Academic and graduation requirements</a>
+																						</div>
+											</li>
+									<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				News + events
+				</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown-3">
+																								<a href="/news" class="dropdown-item" title="" >News@Metro</a>
+																																<a href="/calendar" class="dropdown-item" title="" >Events calendar</a>
+																																<a href="/arts" class="dropdown-item" title="" >Arts + literature</a>
+																																<a href="/notices" class="dropdown-item" title="" >Health and Weather Notices/Closings</a>
+																																<a href="https://services.metrostate.edu/TDClient/KB/ArticleDet?ID=86519" class="dropdown-item" title=""  target="_blank" >O365 Migration</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="http://themetropolitan.metrostate.edu/" class="dropdown-item" title=""  target="_blank" >The Metropolitan student newspaper</a>
+																																<a href="http://hautedish.metrostate.edu/" class="dropdown-item" title=""  target="_blank" >Haute Dish</a>
+																						</div>
+											</li>
+									<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Get involved
+				</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown-4">
+																								<a href="/students/life" class="dropdown-item" title="" >Student Life and Leadership</a>
+																																<a href="/students/life/student-organizations" class="dropdown-item" title="" >Student organizations</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/community/civic-engagement" class="dropdown-item" title="" >Civic engagement</a>
+																																<a href="/community/partnerships-and-outreach" class="dropdown-item" title="" >Community partnerships and outreach</a>
+																																<a href="/community" class="dropdown-item" title="" >Institute for Community Engagement and Scholarship</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/alumni" class="dropdown-item" title="" >Alumni</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="http://metrostateipd.org/" class="dropdown-item" title=""  target="_blank" >Institute for Professional Development</a>
+																						</div>
+											</li>
+									<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				About
+				</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown-5">
+																								<a href="/about" class="dropdown-item" title="" >About the university</a>
+																																<a href="/about/locations" class="dropdown-item" title="" >Locations</a>
+																																<a href="/about/contact" class="dropdown-item" title="" >Contact us</a>
+																																<a href="/about/directory" class="dropdown-item" title="" >Faculty and staff directory</a>
+																																<ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item"><a href="https://www.facebook.com/MetropolitanStateUniversity/" target="_blank"><i class="fab fa-facebook" aria-label="Facebook icon"></i><span class="sr-only">Metropolitan State on Facebook</span></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/metrostate/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram icon"></i><span class="sr-only">Metropolitan State on Instagram</span></a></li>
+                <li class="list-inline-item"><a href="http://www.linkedin.com/school/metropolitan-state-university" target="_blank"><i class="fab fa-linkedin-in" aria-label="LinkedinIn icon"></i><span class="sr-only">Metropolitan State on LinkedIn</span></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/choose_metro" target="_blank"><i class="fab fa-twitter" aria-label="Twitter icon"></i><span class="sr-only">Metropolitan State on Twitter</span></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCWqIRPMMnBeUe0tgJB9n1hg" target="_blank"><i class="fab fa-youtube" aria-label="Youtube icon"></i><span class="sr-only">Metropolitan State on YouTube</span></a></li>
+      </ul>
+
+																																<div class="dropdown-divider"></div>
+																																<a href="/about/president" class="dropdown-item" title="" >Office of the President</a>
+																																<a href="/about/president/leadership" class="dropdown-item" title="" >University leadership</a>
+																																<a href="/about/mission" class="dropdown-item" title="" >Mission, vision and values</a>
+																																<a href="/about/student-right-to-know" class="dropdown-item" title="" >Student Right-to-Know </a>
+																																<a href="/about/history" class="dropdown-item" title="" >History</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/about/accreditation" class="dropdown-item" title="" >Accreditation</a>
+																																<div class="dropdown-divider"></div>
+																																<a href="/about/employment" class="dropdown-item" title="" >Employment</a>
+																						</div>
+											</li>
+									<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Give
+				</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown-6">
+																								<a href="/give/how-to-give" class="dropdown-item" title="" >How to give</a>
+																																<a href="/give/your-gift-helps" class="dropdown-item" title="" >Why give</a>
+																																<a href="/give/give-now" class="dropdown-item" title="" >Give now</a>
+																						</div>
+											</li>
+							</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item nav-search">
+					<a id="searchModalTrigger" href="#" data-toggle="modal" data-target="#modalSearch" aria-label="search">
+						<i class="far fa-search fa-lg" aria-label="search icon"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+  </div>
+
+<div id="block-metrosearchblock" data-block-plugin-id="metro_search_block" class="metro--block">
+  
+    
+      <!-- Modal -->
+<div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="searchModalTrigger" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+    <div class="modal-header text-right">
+        <h5 class="modal-title">Search metrostate.edu</h5>
+        <button type="button" class="btn btn-outline-primary btn-sm btn-searchmodal" data-dismiss="modal" aria-label="Close">
+          <i class="far fa-times" aria-hidden="true"></i> Close
+        </button>
+      </div>
+                <div class="modal-body">
+                                <form  class="metro-search-form" data-drupal-selector="metro-search-form" action="/notices/covid-19/employees" method="post" id="metro-search-form" accept-charset="UTF-8">
+  
+
+<div class="form-no-label form-group">
+            
+<input class="form-control form-control-lg form-text" placeholder="Search" aria-label="Search" data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="60" maxlength="128" />
+          </div>
+<fieldset class="m-0 form-group" data-drupal-selector="edit-wrap" id="edit-wrap">
+      <legend>
+    <span class="fieldset-legend"></span>
+  </legend>
+  <div class="fieldset-wrapper">
+            <div role="radiogroup" aria-label="Search Type Radio Buttons">
+
+<div class="form-group form-check form-check-inline">
+            
+<input data-drupal-selector="edit-search-options-all" type="radio" id="edit-search-options-all" name="search-options" value="All" checked="checked" class="form-radio form-check-input" />
+
+    <label class="form-check-label option" for="edit-search-options-all">metrostate.edu</label>
+          </div>
+
+
+<div class="form-group form-check form-check-inline">
+            
+<input data-drupal-selector="edit-search-options-profile" type="radio" id="edit-search-options-profile" name="search-options" value="profile" class="form-radio form-check-input" />
+
+    <label class="form-check-label option" for="edit-search-options-profile">Faculty and staff directory</label>
+          </div>
+
+
+<div class="form-group form-check form-check-inline">
+            
+<input data-drupal-selector="edit-search-options-library" type="radio" id="edit-search-options-library" name="search-options" value="library" class="form-radio form-check-input" />
+
+    <label class="form-check-label option" for="edit-search-options-library">Library OneSearch</label>
+          </div>
+
+
+<div class="form-group form-check form-check-inline">
+            
+<input data-drupal-selector="edit-search-options-courses" type="radio" id="edit-search-options-courses" name="search-options" value="courses" class="form-radio form-check-input" />
+
+    <label class="form-check-label option" for="edit-search-options-courses">Course Catalog</label>
+          </div>
+</div>
+          </div>
+</fieldset>
+<div class="text-right mt-4">
+<input class="btn btn-lg btn-primary button button--primary js-form-submit form-submit btn-outline-primary" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" />
+</div>
+<input autocomplete="off" data-drupal-selector="form-bmiezqfzihlly0dntv13uaw43wxkg-2m5eeox9y5jx8" type="hidden" name="form_build_id" value="form-BmiezqFZiHlLY0DNtV13uaw43WxKG-2m5eeoX9Y5jx8" class="form-check-input" />
+
+<input data-drupal-selector="edit-metro-search-form" type="hidden" name="form_id" value="metro_search_form" class="form-check-input" />
+
+</form>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+  </div>
+
+    </header>
+
+
+      <div class="region-global-alert">
+    
+<div id="block-metrocontextualalertblock-8" data-block-plugin-id="metro_contextual_alert_block" class="metro--block">
+  
+    
+      <section>
+    <div class="alert alert-warning" role="alert">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 alert-icon--alert">
+                    <h3 class="mt-0">Midway location closed July 2</h3>
+
+<p class="mb-0">Metro&nbsp;State's <a href="/about/locations/midway">Midway&nbsp;location</a> will&nbsp;be&nbsp;closed Thurs.,&nbsp;July&nbsp;2. Check&nbsp;your university&nbsp;email for&nbsp;details.</p>
+
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  </div>
+
+  </div>
+
+
+      <section id="metro--region-messages" class="mt-3">
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+<div id="block-metrostate-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="metro--block">
+  
+    
+        <nav aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol class="breadcrumb metro--breadcrumb">
+            	   	<li class="breadcrumb-item metro--breadcrumb-item">
+          	<a href="/">Home</a>
+		</li>
+                    	   	<li class="breadcrumb-item metro--breadcrumb-item">
+          	<a href="/notices">Health and Weather Notices and Closings</a>
+		</li>
+                    	   	<li class="breadcrumb-item metro--breadcrumb-item">
+          	<a href="/notices/covid-19">COVID-19 (Coronavirus) Response</a>
+		</li>
+                </ol>
+  </nav>
+
+  </div>
+
+            </div>
+        </div>
+      </div>
+  </section>
+
+
+<a id="main-content" tabindex="-1"></a><main>
+            <article>
+              <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-metrostate-content" data-block-plugin-id="system_main_block" class="metro--block">
+  
+    
+      <header class="metro--article-header mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="metro--page-title">COVID-19 Information for Employees</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+                
+<section class="page-section-row">
+    <div class="container">
+                    <div class="row">
+                <div class="col-12 mb-4 col-md-6 mb-md-0">
+                    
+                
+<section class="page-section page-section--list" aria-labelledby="heading-14821">
+            <header class="page-section--list--header">
+            <h2 id="heading-14821">
+                
+            Resources from Metropolitan State
+      
+            </h2>
+        </header>
+                <div class="page-section--list--introduction">
+            
+            <p>Links for technical help, faculty resources, updates from human resources and more. <a href="https://www.metrostate.edu/notices/covid-19">Complete information about the university's COVID-19 response.</a></p>
+
+      
+        </div>
+                <ul class="page-section--list--list">
+            
+                
+<li class="page-section--list--list--item page-section--list--list--item-link">
+    <a href="https://services.metrostate.edu/TDClient/1839/Portal/KB/ArticleDet?ID=101870" target="_blank" class="page-section--list--list--item--link">
+        
+            Employee VPN Access
+      
+    </a>
+            <div class="page-section--list--list--item--description">
+            
+            <p>This article outlines steps to connect VPN (remote access) on your university computer, allowing you access data from off-campus locations. Call 651-793-1240 or chat with support if you have questions. (If you are not able to view this article on a laptop or desktop computer, try a mobile device.)</p>
+
+      
+        </div>
+    </li>
+
+              
+<li class="page-section--list--list--item page-section--list--list--item-link">
+    <a href="/notices/covid-19/employees/faculty-resources" class="page-section--list--list--item--link">
+        
+            Faculty Resources for Transitioning to Online Learning
+      
+    </a>
+            <div class="page-section--list--list--item--description">
+            
+            <p>A directory of Knowledge Base articles and online tutorials for Brightspace D2L, Zoom and other online learning tools.</p>
+
+      
+        </div>
+    </li>
+
+        
+        </ul>
+    </section>
+
+              
+<section class="page-section page-section--list" aria-labelledby="heading-14836">
+            <header class="page-section--list--header">
+            <h2 id="heading-14836">
+                
+            FAQs
+      
+            </h2>
+        </header>
+                <div class="page-section--list--introduction">
+            
+        </div>
+                <ul class="page-section--list--list">
+            
+                
+<li class="page-section--list--list--item page-section--list--list--item-link">
+    <a href="/notices/covid-19/employees/faq" class="page-section--list--list--item--link">
+        
+            Employee FAQs on COVID-19
+      
+    </a>
+            <div class="page-section--list--list--item--description">
+            
+            <p>General FAQ on health and reporting to work.</p>
+
+      
+        </div>
+    </li>
+
+              
+<li class="page-section--list--list--item page-section--list--list--item-link">
+    <a href="/notices/covid-19/students/student-employment-faq" class="page-section--list--list--item--link">
+        
+            Student Employment FAQs
+      
+    </a>
+            <div class="page-section--list--list--item--description">
+            
+            <p>Information about student workers and federal and state work study programs during the extended break.</p>
+
+      
+        </div>
+    </li>
+
+        
+        </ul>
+    </section>
+
+        
+                </div>
+                <div class="col-12 col-md-6">
+                    
+                
+<section class="page-section page-section--text" aria-labelledby="heading-14841">
+            <header class="page-section--text--header">
+            <h2 id="heading-14841">
+                
+            What Employees Need to Know
+      
+            </h2>
+        </header>
+                <div class="page-section--text--copy">
+            
+            <ul><li><strong>Classes are suspended until March 30, 2020.</strong></li>
+<li><strong>Building access and hours may have changed.</strong> <a href="https://www.metrostate.edu/notices/covid-19">Find updated building hours on the university's COVID-19 page.</a></li>
+<li><strong><a href="/notices/covid-19/students">Review the COVID-19 Information for Students page.</a></strong> Information for students about academics, university student services and outside resources. Becoming familiar with this page will help both faculty and staff answer students' questions.</li>
+</ul>
+      
+        </div>
+                
+    </section>
+        
+                </div>
+            </div>
+            </div>
+</section>
+              <section class="page-section-row">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+                <section class="page-section page-section--accordion" aria-labelledby="heading-14946">
+            <header class="page-section--accordion--header text-left">
+            <h2 id="heading-14946">
+                
+            Messages to Employees from Minnesota State and Metropolitan State University
+      
+            </h2>
+        </header>
+                <div class="page-section--accordion--introduction text-left">
+            
+            <p><em>Not all messages are archived here. Browse the full archives of <a href="/notices/covid-19/communications">communications from Metropolitan State administration</a> and <a href="https://www.minnstate.edu/coronavirus/" target="_blank">messages from the Minnesota State system office</a>.</em></p>
+
+      
+        </div>
+        <div class="page-section--accordion--accordion accordion" id="accordion-14946">
+        
+                
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14861-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14861" aria-expanded="false" aria-controls="group-14861">
+            <h3 class="m-0">
+                
+            March 25, 2020: Email from Chancellor Malhotra on Gov. Walz's stay at home order
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14861" class="collapse" aria-labelledby="group-14861-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>Dear faculty and staff,</p>
+<p>Today, Governor Walz announced an official “<a href="https://mn.gov/governor/news/executiveorders.jsp" target="_blank">stay at home</a>” order for all Minnesota residents. This means that we are to stay home and limit movements outside of our homes to only essential needs.</p>
+<p><strong>However, as part of his order, the governor has declared educational activities and services as essential, which means the 37 colleges and universities of Minnesota State are exempt from this order. </strong>Campus-based essential services needed to support our students will be staffed by a limited number of employees on campus. Instruction and services will resume, as scheduled, on either March 30 or April 6 as previously announced. All the hard work you have been doing over the past two weeks will come to fruition. It was indeed a herculean task for all of you to get ready to resume instruction in alternative modes. Your passion, commitment, and energy has been both humbling and inspiring to me as you’ve positioned yourselves to take our students across the finish line. All classes will be delivered using alternative modes, and campuses will remain closed to the public but students can access the campus, if needed, for services not accessible from home.</p>
+<p>It will be important at this time that we provide maximum flexibility for faculty and staff to do their work within a safe environment. If you need to be on campus please follow strictly all the social distancing protocols and other safety precautions. Our top two priorities remain protecting the health and safety of our faculty, staff, and students, as well as helping our students to successfully finishing the semester. </p>
+<p>I know each day brings serious news. The situation we are in is unprecedented for all of us. We will get through this together, as we are a resilient bunch! We will continue to share additional detailed information in the coming days. For now, the most important thing is to take care of yourself and your families.</p>
+<p>As you know, we can all further protect ourselves and others by:</p>
+<ul><li>Washing your hands often with soap and water; covering your cough and sneeze; avoiding touching your eyes, nose, and mouth with unwashed hands.</li>
+<li>Practicing self-care by eating a healthy diet and taking time to rest</li>
+<li>Frequently cleaning all commonly touched surfaces</li>
+<li>Avoiding large gatherings</li>
+<li>Staying home if you are sick</li>
+</ul><p>If you feel you are experiencing symptoms of COVID-19, The Minnesota Department of Health recommends:</p>
+<ol><li>Stay at home for at least 7 days, and for 3 days with no fever and improvement of respiratory symptoms – whichever is longer. (Your fever should be gone for 3 days without using fever-reducing medicine). </li>
+<li>Use the CDC website on how to <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/caring-for-yourself-at-home.html" target="_blank">Care For Yourself at Home</a> with COVID-19.</li>
+<li>If your household contacts were exposed to you while you had symptoms, they should try to stay home as much as possible for 14 days.
+<ul><li>They should closely monitor their health, and if symptoms occur, they must isolate themselves. More guidance on this can be found here: <a href="https://www.health.state.mn.us/diseases/coronavirus/basics.html" target="_blank">MDH COVID-19 Basics</a></li>
+<li>Use the CDC website for <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html" target="_blank">How to Minimize Spread</a>.</li>
+</ul></li>
+</ol><p>Thank you, stay safe, and stay strong.</p>
+<p>Devinder Malhotra <br />
+Chancellor</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14871-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14871" aria-expanded="false" aria-controls="group-14871">
+            <h3 class="m-0">
+                
+            March 23, 2020: HR and Training Information
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14871" class="collapse" aria-labelledby="group-14871-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p><a href="https://www.metrostate.edu/sites/default/files/2020-03/HR%2C%20Training%2C%20Telework%20Employee%20Email%203.23.2020.pdf" target="_blank">Email from Deb Gehrke, Chief Human Resources Officer, Metropolitan State University</a> (PDF). Includes information on:</p>
+<ul><li><a href="https://www.metrostate.edu/sites/default/files/2020-03/COVID%2019%20TELEWORK%20Agreement%20Template%203%2023%2020.docx" target="_blank">Temporary Telework Form</a> (Microsoft Word document)</li>
+<li>Employee Training, March 24-26</li>
+</ul>
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14881-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14881" aria-expanded="false" aria-controls="group-14881">
+            <h3 class="m-0">
+                
+            March 18, 2020: Executive Order 20-07, Paid COVID-19 Leave
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14881" class="collapse" aria-labelledby="group-14881-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>Executive Order 20-07, Paid COVID-19 Leave</p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"> ** PLEASE ENSURE ALL MINNESOTA STATE EMPLOYEES RECEIVE THIS MESSAGE ** </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">The COVID-19 pandemic is presenting an unprecedented challenge to Minnesota. We must continue our important work providing vital services to Minnesotans, but we must also take care of our health and take the necessary precautions to prevent the spread of COVID-19. Yesterday, Governor Walz signed Executive Order 20-07, providing paid leave for state employees who are not able to work for reasons related to COVID-19 and suspended the waiting period for insurance coverage for new employees. He also provided more flexibility for the Commissioner of Management and Budget to respond to the evolving COVID-19 situation. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>New paid COVID-19 leave policy </strong></p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Under the new policy, effective March 18, 2020, employees can use paid COVID-19 leave if they must be absent from work for reasons related to COVID-19 and cannot or are not allowed to telework. Certain employees who are assigned to provide critical services may require additional authorization before taking this leave, and should work with their supervisors. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Covered reasons include: </strong></p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>School or Day Care Closures</strong> if you cannot reasonably perform telework while also providing care for children 12 and under, or children over 12 with an ADA-covered disability </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Health Purposes</strong> if you contract COVID-19 and are too ill to work, or a health care provider determines that your presence in the workplace will jeopardize your health or the health of others, or you have been exposed to a person with a confirmed COVID-19 case and you are exhibiting the symptoms of COVID-19 </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Family Caregiving</strong> if you must care for a family member with COVID-19 </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Isolation or Quarantine</strong> if you or someone you must care for is under legal isolation or legal quarantine or your employer directs you not to report to work for COVID-19 related reasons </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Agency Closure</strong> if your workplace is closed for COVID-19-related health and safety reasons, and you are excused from your work duties and cannot be reassigned. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Contact your supervisor to discuss a telework plan or coordinate your use of COVID-19 leave. Approved use of this leave should be coded on timesheets to a new payroll earnings code: CVD. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>Employee Redeployment Center</strong> </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Employees may be redeployed to areas of greater need under this emergency. A project team is working quickly to build and test a process to redeploy employees as necessary to protect health and safety, perform or facilitate emergency response and recovery efforts, and minimize the impact of the peacetime emergency on government operations. The process will help: </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">• Identify the areas of greatest demand for staffing, particularly in our critical service areas </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">• Identify able and available employees who can help meet those needs </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">• Redeploy people to the needed service areas (and track those deployments over time) </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US"><strong>FOR ACTION: Update your info in Self Service</strong> </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Please update the following My Personal Information components in <a href="https://hub.selfservice.systems.state.mn.us/psp/hubss/SELFSERVICE/?cmd=login&amp;languageCd=ENG">Self Service</a> as soon as possible. </p>
+<ol><li lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Add or update your personal information summary so we can reach you during an emergency. This includes your address, phone numbers, and email. Indicate your preferred mode of contact. </li>
+<li lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Complete or update the pandemic availability question to indicate if you are able or unable to work during a pandemic event based on specific criteria. </li>
+<li lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Complete or update your skills profile with your license and certificate information. Identify any license or certificate information you have, even if not associated or required for your current position. We may use this information if needed to quickly find employees with the necessary skills to assist in maintaining critical services to Minnesotans. </li>
+</ol><p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">For help, go to the My Personal Information section of Self Service and select <a href="https://mn.gov/mmb-stat/self-service/mypersonal-new.pdf">Instructions</a>. Pertinent help is on pages 15-17. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Questions? </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Contact your supervisor or human resources office. Continue to check <a href="https://mn.gov/mmb/be-ready-mn/">mn.gov/bereadymn</a> and the <a href="https://www.health.state.mn.us/diseases/coronavirus/index.html">Minnesota Department of Health Coronavirus Disease 2019 (COVID-19) website</a> often for the latest information. </p>
+<p lang="EN-US" xml:lang="EN-US" xml:lang="EN-US">Thank you for your attention to these matters. As always, stay home if you are sick, cover your cough, and wash your hands regularly. </p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14891-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14891" aria-expanded="false" aria-controls="group-14891">
+            <h3 class="m-0">
+                
+            March 18, 2020: Email from President Arthur to Employees
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14891" class="collapse" aria-labelledby="group-14891-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>Dear Faculty and Staff, </p>
+<p>Yesterday afternoon Chancellor Malhotra asked all Minnesota State College &amp; University presidents to create alternatives to our current service delivery. Campuses were asked to allow for alternative work schedules for employees, including remote work where it is feasible. Employees, for instance, who have underlying conditions will be accommodated, and we may staff that functionality in an alternative manner. The Chancellor has also asked all campuses to keep libraries and essential services operational. Plans are underway to provide all student support services in a remote manner for the rest of the semester. </p>
+
+<p>This situation is changing daily, so please continue to read emails thoroughly. The Metro Pandemic Planning and Response Team met this morning and we would like to clarify the Chancellor’s memo and what this means for Metropolitan State University employees: </p>
+<ul><li>Metropolitan State University’s goal is to have as many employees work remotely as possible. There <strong>will </strong>need to be some individuals on campus. We will distribute the on-campus work so it will not fall to a small group of individuals. </li>
+<li>We are working to solidify open building hours so faculty and staff can access offices. You will receive a message about building hours and services at our locations soon. </li>
+<li>Work with your supervisor to schedule needed hours on campus. </li>
+<li>If you have concerns about not having enough work to do at home for 40 hours a week, please contact your supervisor. Human Resources and the President’s Executive Cabinet is working on a list of projects from other departments that can be done remotely. </li>
+<li>Employee work schedules and assigned duties will continue to change over the next few weeks. </li>
+<li>Governor Waltz signed a new <a href="https://mn.gov/governor/assets/EO%2020-07_tcm1055-423539.pdf" target="_blank">Executive Order</a> (PDF) that suspends, for the duration of the peacetime emergency, provisions of public employees’ collective bargaining agreements regarding work schedules, work locations, assignments, and reassignments. </li>
+</ul><p><strong>Remote working:</strong> </p>
+<ul><li>Yesterday, the Metro Pandemic Planning and Response Team, completed the review of all requests for laptops and software needs to enable employees to work remotely. We are able to fulfill all the requests we received. ITS is re-imaging the devices now and installing needed software. <strong><em>Individuals who have been approved for laptop distribution will be notified when a laptop is ready for them directly by ITS. Please do not call ITS with inquiries. </em></strong>We expect all laptops to be distributed by the end of the day on Friday, March 20. </li>
+<li>In some cases, employees working from home will have to use their own equipment. This allows us to stretch our available resources further and support more remote working arrangements. Please do not take office desktops or monitors home. </li>
+<li>Remote working or working from home, usually requires a telework agreement. Given the urgency of allowing as many people as possible to work from home, we are not requiring a written telework agreement. However, supervisors will be in contact with each employee who is working remotely over the next week, to review the requirements of work from home and will need an email acknowledgment from each employee that the supervisor has reviewed the requirements with them and that they understand their obligations. <strong><em>Please note that telework does not apply to instructional faculty (IFO).</em></strong> </li>
+</ul><p><strong>Additional notes:</strong> </p>
+<ul><li>In-person meetings of fewer than ten individuals are permitted through March 31 unless otherwise noted. However, I encourage the use of Zoom for all meetings.</li>
+<li>The Fitness Center will be closed starting March 19 until further notice. </li>
+</ul><p><strong>Our priorities are the following:</strong> </p>
+<ul><li>To safeguard the health, safety and welfare of our faculty, staff and students </li>
+<li>To enable students to complete the spring semester and progress toward their educational goals </li>
+</ul><p>
+Thank you for your continued dedication and commitment to our students and university. We are strong and we will succeed! </p>
+
+<p>Please take care of yourself and your loved ones.... </p>
+
+<p>Ginny</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14901-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14901" aria-expanded="false" aria-controls="group-14901">
+            <h3 class="m-0">
+                
+            March 15, 2020: Email from Chancellor Malhotra
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14901" class="collapse" aria-labelledby="group-14901-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>Colleagues,</p>
+<p>These unprecedented times require us to think differently about the work that we do and the services that we offer. Many aspects of this issue continue to evolve and create a fluid and challenging situation. Know that the feedback we are hearing from you, students, and the campus leadership are being taken into consideration as we identify the work ahead and make the necessary adjustments.</p>
+<p>Regardless of the changing circumstances, our priorities will always remain the same:</p>
+<ul><li><strong>To safeguard the health, safety, and welfare of our faculty, staff, and students</strong></li>
+<li><strong>To enable students to complete the spring semester and progress toward their educational goals</strong></li>
+</ul><p>To that end, it is critical that during this time of great uncertainty that we enhance all communication channels and work together on the above mentioned priorities. I also ask for your patience during this time. The information set is changing at a pace that we have not experienced before. Just this afternoon, CDC issued the recommendation that for the next 8 weeks, organizers cancel or postpone in-person events that consist of 50 people or more throughout the United States.</p>
+<p>I wanted to share with you steps we are taking to adjust to this rapidly changing environment.</p>
+<p><strong>Academic Continuity of Operations</strong><br />
+The portfolio of academic offerings our 37 colleges and universities provide is diverse not only in their focus but also in the instructional methodologies used. In light of the concerns that we have heard from campuses, <strong>we will extend the preparation time for faculty and staff by one additional week</strong>. Instruction will resume on March 30. For the five colleges currently on spring break this week, they will also receive additional time and will resume instruction for students on April 6.</p>
+<p><strong>Staffing Continuity of Operations</strong><br />
+As we continue our work towards helping our students finish the semester, we must stay focused on their health and safety and that of our faculty and staff. It is important that maximum flexibility is required of both employees and supervisors. We must look at how we can do our work differently and provide services for students while also supporting our colleagues and partners. Be cognizant of the following parameters as you work with your teams to accomplish the needed work:</p>
+<ul><li>For the duration of this outbreak, all campuses are expected to be mindful of faculty and staff health and safety needs, and make accommodations for those individuals with underlying medical conditions that may make them more vulnerable to COVID-19, as well as those who may live with and/or care for such individuals, or those with children home from school. Similarly, there will likely be some faculty and staff without these conditions who are for other reasons anxious about returning to the workplace and interacting with others, particularly those who may have recently traveled. Campuses are expected to make every effort to accommodate employees and allow them to work from home whenever feasible.</li>
+</ul><ul><li>For employees whose job responsibilities do not lend themselves to telework, options include adjusting work schedules or staggering shifts, where appropriate, to increase social distancing. </li>
+</ul><ul><li>Where possible, phone or video conferencing should be used to limit the size of meetings and to continue to engage those faculty or staff who may have alternative work options in place to remain engaged.</li>
+</ul><ul><li>We can predict increased employee absences due to an individual illness, to care for family members, or respond to the temporary closure of K-12 schools. We need to plan ahead, cross-train to cover essential tasks and work through your continuity of operations plan.</li>
+</ul><p>The State provides confidential counseling resources to employees who are struggling with life matters that impact their personal well-being. Employees who are experiencing significant stress related to this matter may choose to utilize these resources. More information is available here: <a href="https://mn.gov/mmb/segip/health-and-wellbeing/eap/eap-work-life.jsp" target="_blank">https://mn.gov/mmb/segip/health-and-wellbeing/eap/eap-work-life.jsp</a></p>
+<p>Additional resources and guidance for state employees for travel and the necessary precautions after returning from travel out of the state or the country can be found on the <strong>Minnesota Management and Budget (MMB) BeReadyMN</strong> website here: <a href="https://mn.gov/mmb/be-ready-mn/infectious-diseases/covid-19.jsp" target="_blank">https://mn.gov/mmb/be-ready-mn/infectious-diseases/covid-19.jsp</a></p>
+<p>If you have questions regarding exposure as a result of travel, Minnesota Department of Health asks you to call 651-201-5414 or 877-676-5414 for guidance.</p>
+<p>I deeply appreciate what you all do to support our students and colleges and universities each and every day. It is your creativity, passion, commitment, and energy which will enable us to overcome these challenges and provide the needed resiliency to successfully navigate our campuses through these difficult times.</p>
+<p>Best,<br />
+Devinder</p>
+<p>Devinder Malhotra<br />
+Chancellor</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14911-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14911" aria-expanded="false" aria-controls="group-14911">
+            <h3 class="m-0">
+                
+            March 15, 2020: Update to faculty, staff and students from President Arthur
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14911" class="collapse" aria-labelledby="group-14911-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>To our campus community—faculty, staff and students:</p>
+<p>The COVID-19 pandemic situation continues to evolve rapidly. Over the last two days new information and actions by the State and Federal government have emerged. Thus, I am updating information previously provided regarding actions to be taken if you have traveled at all over Spring Break.</p>
+<p>Yesterday, the Center for Disease Control and Prevention (CDC) updated their Novel Coronavirus (COVID-19) Travel Information to designate most countries in Europe, along with China, Iran, and South Korea at Level 3 (Warning, Avoid Nonessential Travel). Given that President Trump has now also issued an order restricting travel from the United Kingdom and Republic of Ireland, beginning at 11:59 pm on Monday, March 16, we expect that the UK and Ireland will be added to the Level 3 list by Tuesday.</p>
+<p>Every other part of the world, including the United States, has now been designated at Level 2 (Practice Enhanced Precautions) as a Global Outbreak Notice.</p>
+<p>These designations have implications for actions to be taken to maintain health and safety for you and others during this pandemic.</p>
+<p><strong>Travel Guidance Effective immediately</strong><br /><strong>Faculty, Staff, and Students Returning from a Level 3 Country – Self Quarantine</strong></p>
+<p>All travelers who are returning from a Level 3 country must stay home in a self-quarantine for 14 days after returning from travel, monitor their health, and practice social distancing. Social distancing means staying out of crowded places, avoiding group gatherings, and maintaining distance (approximately 6 feet or 2 meters) from others when possible. The full guidance from the CDC is located at<a href="https://wwwnc.cdc.gov/travel/notices/warning/coronavirus-europe" target="_blank">https://wwwnc.cdc.gov/travel/notices/warning/coronavirus-europe</a></p>
+<p><strong>FACULTY AND STAFF</strong><br />
+If you are faculty or a staff member who needs to self-quarantine or stay home to monitor your health after traveling to a Level 3 country, please notify your dean or supervisor. Your supervisor will ask you to fill out the reporting form developed by the University, which can be found at: <a href="https://www.metrostate.edu/COVID">https://www.metrostate.edu/COVID</a>.</p>
+<p>With your supervisor, establish the date you will be able to report to work if you do not become symptomatic after travel. If you do become symptomatic during the 14 day self-quarantine, please let your supervisor know. You will not be able to return to work until symptoms subside.</p>
+<p>If you are not symptomatic and are able to work during your period of self-quarantine, work with your supervisor to develop work tasks that you can complete from home and a working schedule. Let your supervisor know if you will need your laptop to complete your work and arrangements will be made to get it to you. Please note that Comcast, Spectrum and other internet service providers have opened their networks so that all may have access to the internet.</p>
+<p>Faculty members who must self-quarantine, should be working with their deans and department chairs to participate remotely in meetings and trainings focusing on preparing for delivery of instruction of your courses in an alternate delivery. (On the website, under messages, <a href="/notices/covid-19">March 13, 2020 Email to Faculty from Provost Gort).</a></p>
+<p><strong>STUDENTS</strong><br />
+Students who will be in self-quarantine based on their travel in or through a Level 3 country are expected to report their status by filling out the web form report located at: <a href="https://www.metrostate.edu/COVID">https://www.metrostate.edu/COVID</a>. </p>
+<p><strong>Faculty, Staff, and Students who Traveled to Other Locations—Monitor Health</strong></p>
+<p>Travelers returning from other countries or from domestic travel need to monitor their health and limit interactions with others for 14 days after returning from travel. You may come to work or be out in the community, but should practice good hygiene and maintain social distancing. The full guidance from the CDC is located at <a href="https://wwwnc.cdc.gov/travel/notices/alert/coronavirus-global" target="_blank">https://wwwnc.cdc.gov/travel/notices/alert/coronavirus-global</a></p>
+<p>If you have questions regarding exposure as a result of travel, Minnesota Department of Health asks you to call 651-201-5414 or 877-676-5414 for guidance.</p>
+<p><strong>Faculty and Staff who have been Exposed to or Diagnosed with COVID-19, or are Ill:</strong></p>
+<p>Faculty and Staff who have been exposed to COVID-19, diagnosed with COVID-19, and/or are ill, notify your dean or supervisor. We are also asking employees to report their exposure, diagnosis, or illness using the web form (<a href="https://www.metrostate.edu/COVID">https://www.metrostate.edu/COVID</a>). Your supervisor will ask you to fill out the form if you have not already done so.</p>
+<p><strong>Students who have been Exposed to or Diagnosed with COVID-19, or are Ill:</strong></p>
+<p>Students who have been exposed to COVID-19, diagnosed with COVID-19, and/or are ill should report their exposure, diagnosis, or illness using the web form (<a href="https://www.metrostate.edu/COVID">https://www.metrostate.edu/COVID</a>).Using the form will result in the notification of your academic advisor and the faculty instructors for the courses in which you are currently enrolled.</p>
+<p><strong>Suspended Instruction and Resumption of Classes:</strong></p>
+<p>You will receive updated information from your faculty members regarding how to resume instruction in an online or other alternative format by the end of the day on Friday March 20. Please continue to monitor your email and the website: <a href="https://www.metrostate.edu/notices/covid-19">https://www.metrostate.edu/notices/covid-19</a>.</p>
+<p><strong>Taking care of yourself:</strong></p>
+<p><strong>EMPLOYEES:</strong></p>
+<p>Events like a pandemic are stressful and create anxiety, to some degree, for everyone. If these anxieties are interfering with your ability to work and carry out other life activities, please remember that the Employee Assistance Program (EAP) is a free, confidential counseling service available to you. Please see more details of EAP at: <a href="https://mn.gov/mmb/segip/health-and-wellbeing/eap/eap-work-life.jsp" target="_blank">https://mn.gov/mmb/segip/health-and-wellbeing/eap/eap-work-life.jsp</a></p>
+<p><strong>STUDENTS:</strong></p>
+<ul><li>
+<p><strong>MetroCares </strong>is a 24/7 phone support offered by Counseling Services. 651-793-1568<br /><a href="https://www.metrostate.edu/metrocatalyst/24-7-support-from-counseling-services">https://www.metrostate.edu/metrocatalyst/24-7-support-from-counseling-services</a></p>
+<p>When you call the support line:</p>
+<ul><li>a licensed counselor will answer your call 24 hours a day, 7 days, a week, 365 days a year</li>
+<li>you will be offered confidential support, information, resources, and practical solutions for coping</li>
+<li>all services are free and confidential</li>
+</ul></li>
+<li><strong><a href="https://www.crisistextline.org/" target="_blank">Crisis Text Line</a></strong> is the free, 24/7, confidential text message service for people in crisis. Text HOME to 741741 in the United States to communicate with a trained Crisis Counselor</li>
+<li><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/about/coping.html" target="_blank">Managing Anxiety and Stress</a></strong> from CDC. This includes information for yourself, others, parents, responders, and those released from quarantine.</li>
+<li><strong><a href="https://store.samhsa.gov/system/files/sma14-4894.pdf" target="_blank">Taking Care of Your Behavioral Health: Tips for Social Distancing, Quarantine, and Isolation During an Infectious Disease Outbreak</a></strong></li>
+</ul><p><strong>Please remember that this virus does not discriminate on the basis of identity and neither should we. </strong>Any actions or language against anyone based on race, ethnicity, national origin, or religion in connection with the origins of COVID-19 are unacceptable. Such actions will be addressed within appropriate university procedures.</p>
+<p>Finally, please remember to check your email and the university website frequently, as information is constantly being updated. Please also share questions and concerns through the <a href="mailto:covid-19@metrostate.edu">covid-19@metrostate.edu</a> address at any time. This email is continuously monitored throughout working hours. If your situation is an emergency, then please call 9-1-1.</p>
+<p>The health and safety students and employees continue to be of the highest priority to the University. We are doing all we can to make sure you are well-informed about the COVID-19 situation and that students can continue their coursework and that employees’ needs are being met.</p>
+<p>Thank you for your attention.</p>
+<p>Ginny</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14921-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14921" aria-expanded="false" aria-controls="group-14921">
+            <h3 class="m-0">
+                
+            March 14, 2020: Email to resident faculty from Provost Gort
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14921" class="collapse" aria-labelledby="group-14921-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>Dear Resident Faculty Colleagues,</p>
+
+<p>I’ve received a number of questions about my message indicating that faculty to should report to their primary campus location on Monday, March 16. Please allow me to provide some additional context and clarify the expectation.</p>
+
+<p>In the context of making concrete plans for <em>moving all our courses</em><em> to some sort of remote instruction</em> (with the exceptions outlined in my email "Pandemic Planning for Faculty" sent on Friday, 3/13/20 at 3:05 p.m.), it is imperative that we work together, as departments, to make shared decisions about the curriculum and methods of remote instruction for the remainder of the semester. Resident faculty engagement will be critical the success of those plans and for engaging community faculty. I also know that many faculty members have ideas and expertise that will support their whole department in this important work ensuring that our students have a quality learning experience when all instruction is delivered remotely. The involvement of all faculty members is important and expected.</p>
+
+<p>Meeting and making shared decisions on Monday 3/16/20 allows for coherent movement forward. Of course, "reporting to work" can be done remotely! Several people contacted me individually about reporting to work remotely based on underlying health concerns and/or belonging to a particularly high-risk group. Faculty with these concerns should follow up with their dean and department chair. Faculty members who are not feeling well should not come to campus and find a way to participate remotely. Finally, I ask that anyone who has recently travel to a high-risk area of the country or to any international location self-quarantine for two weeks and not come to campus during that time frame.</p>
+
+<p>For those who are able to meet in person, we are encouraging everyone across campuses to increase social distancing at work. Any meetings that take place in person should occur in a room large enough to allow significant spacing. Let me reassure you that our campus cleaning personnel, at all locations, are diligently cleaning surfaces frequently and our administrative staff is working hard to help all of us in working out a feasible plan for our students to complete this semester. You should also find sanitizing wipes in the classrooms.</p>
+
+<p>The university is following guidelines from the system and the MN Department of Health, which do not suggest that we close our campuses. Until we are told otherwise, faculty, staff, administrator, and some students will be onsite at our campus locations. We are looking for ways to support students who have computer and internet needs at each location.</p>
+
+<p>Though we are still on spring break today (Saturday, 3/14/20), I understand that some deans and department chairs have already reached out with plans for meetings times and remote (Zoom) participation for those who choose that venue. Please watch for more information from your dean and/or your department chairs.</p>
+
+<p>Best regards,<br />
+Amy</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14931-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14931" aria-expanded="false" aria-controls="group-14931">
+            <h3 class="m-0">
+                
+            March 13, 2020: Email to faculty from Provost Gort
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14931" class="collapse" aria-labelledby="group-14931-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>The COVID-19 pandemic is having widespread impacts. MN State Colleges and Universities leadership has been in close communication with the MN Department of Health and state leaders in responding to the evolving situation. The Chancellor has made a number of decisions at the system level that are designed to minimize or slow the spread of the virus with the goal of supporting the health and well-being of our faculty, staff, and students. Of course, there is a great deal of uncertainty about how the illness will unfold in our community and it is very stressful time for all of us. Please know that the Pandemic Planning Team is carefully monitoring the recommendations of health professionals, and the decisions made by the system. We will be providing regular updates by email and on the website.</p>
+<p>It is critically important that you take care of your health and do not come to campus if you are ill. We are monitoring the health of our community and would appreciate it if you would report any COVID-19 exposure, symptoms, or diagnosis using this web form (<a href="https://www.metrostate.edu/COVID">https://www.metrostate.edu/COVID</a>). Reporting via the form is voluntary. However, if you are ill please notify your dean.</p>
+<p>This is going to be a long email with a number of details that are important for you. I’ve organized the information under headings to make it easier to navigate. Please read to the end to ensure that you have full information.</p>
+<p><strong>Suspension of Course Instruction through Saturday, March 21 and Resumption of Instruction</strong></p>
+<p>Chancellor Malhotra has suspended all classes at Metropolitan State University through Saturday, March 21. This suspension includes all face-to-face, hybrid, online, and independent study courses offerings. During this time, you cannot meet with or provide remote instruction to students. This does mean that our spring semester will have one less week of instruction, and it is important that all students have the same experience.</p>
+<p>The suspension does not cover internships, practica, student teaching, or clinicals at external sites. Students can report to those sites next week as long as the external site allows them to do so.</p>
+<p>When instruction resumes on Monday, March 23 we will be providing all instruction in a modified way that emphasizes remote instruction. All instruction will continue in this modified, remote mode for the rest of the spring semester. We understand that remote instruction may not be the best pedagogy for your courses and may not be your preferred way to engage students. However, this is an extraordinary situation that calls for us to do our best while supporting the health and well-being of students, faculty, staff, and the broader community.</p>
+<p><strong>Modified and Remote Instruction</strong></p>
+<p>Starting Monday, March 23 all courses will be offered using instruction methods that will allow course completion remotely or, in very limited situations, with modified class sessions that allow social distancing. The following are options for providing remote instruction:</p>
+<ul><li>Correspondence education via email;</li>
+<li>Synchronous Zoom class meetings;</li>
+<li>Lecture recordings using VoiceThread;</li>
+<li>Online learning via Brightspace D2L; or</li>
+<li>Some combination of the three.</li>
+</ul><p>In very limited situations, like for labs and studio learning experiences that depend on particular equipment for learning, I will consider approving modified course sessions that will support social distancing in those specialized spaces. In those cases, faculty can request approval to convene groups of 10 students or less at one time.</p>
+<p>Faculty teaching face-to-face or hybrid courses that have 10 or fewer students enrolled, but do not required specialized space and/or equipment, are expected to use remote instruction methods for the rest of the semester.</p>
+<p>Campus locations will remain open, for now, even though we are moving to remote instruction.</p>
+<p><strong>Faculty Planning and Preparations for Remote Instruction</strong></p>
+<p>All Resident Faculty are to report to their primary campus location starting Monday, March 16. Faculty will be engaged in course planning in their department and training activities related to remote instruction.</p>
+<p>Departments are expected to meet to plan remote instruction for their courses, engaging both Resident and Community Faculty members in that planning. Department should plan at least one Zoom meeting that will allow Community Faculty members to participate in the planning. By the end of Wednesday, each department will send a plan for remote instruction to their dean. I understand that planning for remote instruction will be an on-going effort that will likely evolve over the remainder of the semester. Deans will work with faculty to support planning over the course of the next week. However, we do need to understand the plans by the end of Friday, March 20 to facilitate communication with students.</p>
+<p>Departments are also asked to discuss approaches to increase flexibility for students who report being ill so there is a shared understanding of the approaches faculty members will take. It will be important to support students who become ill by being as flexible as possible with deadlines without negatively impacting the learning outcomes of the course.</p>
+<p><strong>Modifying Course Content and Activities</strong></p>
+<p>This spring term will have 14 weeks of instruction, compared to the normal 15 weeks. Faculty are asked to review the learning outcomes for the course and make modifications to the course content to accommodate this change. Faculty may also need to modify planned activities to adapt to remote instruction. We will not extend the spring semester beyond Monday, May 4.</p>
+<p><strong>Training Support for Faculty Members</strong></p>
+<p>I will send a separate Email with the training opportunities for faculty members that will support remote instruction. The Center for Online Learning, Center for Faculty Development, IT Services, and the MN State System all have developed training materials that will be very helpful.</p>
+<p><strong>External Learning Sites</strong></p>
+<p>Students will be allowed to continue their internships, practica, student teaching, clinical hours, and other experiential learning at external sites as long as the external sites allow them to attend. We know that many programs have minimum hours and/or competency- based assessments for these experiences. MN State and Metropolitan State University administrators are working to gather information from licensing boards and accreditation organizations to understand the impacts on students. If the external site does not allow internship students to attend, I ask that the faculty work with students to develop alternative, applied learning experiences that could take the place of the missing hours.</p>
+<p><strong>Supporting Students</strong></p>
+<p>Student support services will be offered either in-person or via remote formats. We are developing plans for the library and computer labs at Midway, MEC, and LECJEC to remain open to support students who may have limited computer and/or internet access. More details will be available next week.</p>
+<p><strong>Communication</strong></p>
+<p>Metropolitan State University is coordinating all communication through the Pandemic Planning Team to ensure that information that is communicated is accurate and consistent. This does mean that all communication is reviewed by a group of people which slows the process. Please monitor your email and the website for updated information.</p>
+<p>We will send a message to students today clarifying that we will be using remote instruction starting Monday, March 23 and they will hear from their faculty members about their plans for remote instruction by the end of Friday, March 20.</p>
+<p>Please feel free to email me with questions. I may not answer each individual email but will update all faculty with answers to the questions so you are all well-informed.</p>
+<p>Best regards,<br />
+Amy</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+              
+<div class="card page-section--accordion--accordion--panel">
+    <header class="card-header page-section--accordion--accordion--panel--header" id="group-14941-header">
+        <button class="btn btn-link btn-block text-left p-0 m-0" type="button" data-toggle="collapse" data-target="#group-14941" aria-expanded="false" aria-controls="group-14941">
+            <h3 class="m-0">
+                
+            March 12, 2020: Email from President Arthur
+      
+            </h3>
+        </button>
+    </header>
+    <div id="group-14941" class="collapse" aria-labelledby="group-14941-header" data-parent="#accordion-14946">
+        <div class="card-body page-section--accordion--accordion--panel--copy">
+                            
+                
+<section class="page-section page-section--text">
+                <div class="page-section--text--copy">
+            
+            <p>As a follow-up to today’s message from the Chancellor, I’d like to reiterate that the University’s Spring Break will be extended one week and all classes, including those which are already offered fully online or in a hybrid format, are suspended. This is to keep all academic activity on the same schedule. While classes are suspended, all university locations remain open.</p>
+<p><strong>WEEK OF MARCH 16:</strong></p>
+<p>Beginning Monday, March 16, our top priority will be to work with faculty and staff to find the best alternatives to face-to-face instruction. Administrators, faculty and staff are expected to report to work. During this week, we will focus on helping teaching faculty prepare to deliver their courses in <em>alternative </em>formats, including online and other means of delivery. The provost is working with the Center for Online Learning staff, deans and others on campus to determine how to organize and deliver these supportive activities. <strong><em>More information about this work will be forthcoming by Monday morning, at the latest.</em></strong></p>
+<p><strong>TRAVEL:</strong></p>
+<p>In addition to the suspension of classes and extension of spring break for our students, the Chancellor has suspended all out-of-state travel, beginning on or after Monday, March 16. If you have university funded travel planned on Friday, March 13 or over the weekend, please carefully weigh the risks and benefits of such travel and make a prudent decision that maintains your safety. Please check the CDC website at <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html#reporting-cases" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html#reporting-cases</a> to determine the incidence of COVID-19 cases in the locale to which you will be traveling. CFO Tracy Hatch is working on documenting a process to assist you with cancellation of your travel and for requesting exceptions to the no-travel rule. Provost Gort is developing a process so that PDG funds that are unused this spring can be carried forward to the next fiscal year for the awardees. <strong><em>Both will communicate the details of these processes early next week.</em></strong></p>
+<p><strong>GATHERINGS AND EVENTS:</strong></p>
+<p>Minnesota State has cancelled all gatherings and events that are likely to have more than 100 attendees. We are currently developing a report of all events to estimate their size and determine if they must be cancelled. Currently we know the Open House scheduled for March 31 will be cancelled.</p>
+<p>This spring’s commencement ceremonies are scheduled for April 26. We are asking the Chancellor’s office to consider allowing us to defer cancellation of this important event for our students, their families and the university until we have more information or are able to plan to move it beyond the May 1 date. <strong><em>More information will be provided next week.</em></strong></p>
+<p><strong>ADDITIONAL QUESTIONS:</strong></p>
+<p>This afternoon, college and university presidents are required to submit questions concerning their specific campuses, which will be answered during a conference call tomorrow morning with the Chancellor and Vice Chancellors. Our questions include the status of practicum, clinical and community engagement activities, graduation, and various HR related issues. <strong><em>I will report on those questions and answers in a message to faculty and staff tomorrow</em></strong>. I expect that over the next week or two there will likely be daily update messages.</p>
+<p>We will continue to share information on our website, as well, at <a href="https://www.metrostate.edu/notices/covid-19">https://www.metrostate.edu/notices/covid-19</a>. Be sure to encourage students to bookmark this page and to check it often for updates. We have developed a plan to communicate with students in multiple ways including emails, phone messaging, text messaging, the website, and D2L.</p>
+<p>We are also asking System Office IT to set up a special email account for this situation so all can submit their questions to a single source that will be continually monitored. This will be shared as soon as possible.</p>
+<p>I know this is a lot of information to take in and there is still much uncertainty. Please be assured that we are working diligently to respond in ways that protect our students and employees. We will be communicating frequently and the website <a href="https://www.metrostate.edu/notices/covid-19">https://www.metrostate.edu/notices/covid-19</a>, will be continually updated.</p>
+<p>Thank you and be well!</p>
+
+      
+        </div>
+                
+    </section>
+        
+                    </div>
+    </div>
+</div>
+        
+    </div>
+</section>
+
+
+
+
+        
+            </div>
+        </div>
+    </div>
+</section>
+        
+
+  </div>
+
+  </div>
+
+                    </article>
+</main>
+
+      <div class="d-print-none">
+    
+<div id="block-metrofooterblock" data-block-plugin-id="metro_footer_block" class="metro--block">
+  
+    
+      <footer id="metro--global-footer">
+	<section id="metro--global-footer-metro" aria-label="footer navigation section">
+		<div class="container">
+		
+			<div class="row justify-content-center metro--footer-id mb-sm-5">
+				<div class="col-7 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+					<a href="/"><img src="/themes/custom/metrostate/img/logo-white.svg" class="img-responsive" id="metro-footer-logo" alt="Metropolitan State University Logo"></a>
+				</div>					
+				<div class="col-12 mt-2 mb-3 text-center col-sm-6 col-md-8 mt-sm-0 mb-sm-0 text-sm-right col-lg-8 col-xl-9">
+					<ul class="list-unstyled list-inline metro-footer-social mt-3">
+            <li class="list-inline-item"><a href="https://www.facebook.com/MetropolitanStateUniversity/" target="_blank"><i class="fab fa-facebook fa-2x" aria-label="Facebook icon"></i><span class="sr-only">Metropolitan State on Facebook</span></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/metrostate/" target="_blank"><i class="fab fa-instagram fa-2x" aria-label="Instagram icon"></i><span class="sr-only">Metropolitan State on Instagram</span></a></li>
+                <li class="list-inline-item"><a href="http://www.linkedin.com/school/metropolitan-state-university" target="_blank"><i class="fab fa-linkedin-in fa-2x" aria-label="LinkedinIn icon"></i><span class="sr-only">Metropolitan State on LinkedIn</span></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/choose_metro" target="_blank"><i class="fab fa-twitter fa-2x" aria-label="Twitter icon"></i><span class="sr-only">Metropolitan State on Twitter</span></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCWqIRPMMnBeUe0tgJB9n1hg" target="_blank"><i class="fab fa-youtube fa-2x" aria-label="Youtube icon"></i><span class="sr-only">Metropolitan State on YouTube</span></a></li>
+      </ul>
+
+				</div>
+
+			</div>
+			<div class="row metro--footer-addresses">
+				<div class="col-12 col-sm-6 col-lg-3">
+
+					<ul class="list-unstyled">
+						<li>
+							<strong class="metro--footer-heading"><a href="/about/locations/saint-paul">Saint Paul Campus</a></strong>
+								<ul class="list-unstyled fa-ul">
+									<li>
+										<span class="fa-li"><i class="far fa-envelope" aria-label="envelope icon"></i></span> <address><a class="metro--mobilelink" href="https://goo.gl/maps/GzFJfNTgudT2" target="_blank">700 East Seventh Street<br>
+										Saint Paul, MN 55106-5000</a></address>
+									</li>
+									<li>
+										<span class="fa-li"><i class="far fa-phone-volume" aria-label="phone icon"></i></span> <a href="tel:1-651-793-1300">651-793-1300</a><br>
+										Admissions: <a href="tel:651-793-1302">651-793-1302</a>
+									</li>
+								</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3 mt-4 mt-sm-0">
+					<ul class="list-unstyled">
+						<li><strong class="metro--footer-heading"><a href="/about/locations/midway-center">Midway Center</a></strong>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="far fa-map-marker-alt" aria-label="map icon"></i></span> <address><a href="https://goo.gl/maps/FsEuRbMBsCy" target="_blank" class="metro--mobilelink">1450 Energy Park Drive<br>
+								Saint Paul</a></address></li>
+								<li><span class="fa-li"><i class="far fa-map-marker-alt" aria-label="map icon"></i></span> <address><a href="https://goo.gl/maps/A9mZGKJuN772" target="_blank" class="metro--mobilelink">1380 Energy Lane<br>
+								Saint Paul</a></address></li>
+							</ul>
+						</li>
+					</ul>				
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3 mt-4 mt-lg-0">
+					<ul class="list-unstyled">
+						<li><strong class="metro--footer-heading"><a href="/about/locations/minneapolis">Minneapolis</a></strong>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="far fa-map-marker-alt" aria-label="map icon"></i></span> <address><a href="https://goo.gl/maps/qfD5SN5FcE12" target="_blank" class="metro--mobilelink">1300 Harmon Place<br>
+								Minneapolis</a></address></li>
+								<li><span class="fa-li"><i class="far fa-envelope" aria-label="map icon"></i></span> <address><a href="https://goo.gl/maps/KzqNf9MmVPbyHyGE6" target="_blank" class="metro--mobilelink">1501 Hennepin Avenue<br>
+								Minneapolis, MN 55403-1897</a></address></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3 mt-4 mt-lg-0">
+					<ul class="list-unstyled">
+						<li><strong class="metro--footer-heading"><a href="/about/locations/law-enforcement-and-criminal">Law&nbsp;Enforcement&nbsp;and Criminal&nbsp;Justice&nbsp;Center</a></strong>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="far fa-map-marker-alt" aria-label="map icon"></i></span> <address><a href="https://goo.gl/maps/7MdgGc1MPMH2" target="_blank" class="metro--mobilelink">9110 Brooklyn Boulevard<br>
+								Brooklyn Park</a></address></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row metro--footer-links">
+													<div class="col-12 order-sm-3 col-md-6 order-md-3 col-lg-3 order-lg-1 col-xl-3 order-xl-1 mt-5 mt-lg-0">
+									<ul class="list-unstyled">
+																		<li class="acde-be-dd-a-abbcc">
+							<a href="/about/policies" title="Metropolitan State University Policies and Procedures" >
+																Policies and procedures
+							</a>
+						</li>
+												<li class="b-b-c-e-dada">
+							<a href="/academics/credit-transfers" title="Learn more about transfer agreements between Metropolitan State University and other member institutions of the Minnesota State system." >
+																Credit transfers
+							</a>
+						</li>
+												<li class="cdab-a-dc-bad-ccaec">
+							<a href="/academics/registration/policies/online" title="Metropolitan State University must comply with a state&#039;s regulations before any educational activity can occur within that state. Those regulations determine whether Metropolitan State can offer students a place in an online course or program. To meet eac" >
+																Online credit reciprocity (NC-SARA)
+							</a>
+						</li>
+												<li class="fe-da--a-acecfdb">
+							<a href="/students/support/safety" title="Metropolitan State University is to provide a safe, secure environment for all members of the community which enables students, faculty, staff and guests to pursue their educational or occupational goals." >
+																Security and preparedness
+							</a>
+						</li>
+												<li class="d-ae-d-bc-edb">
+							<a href="/academics/records/ferpa" title="Student records, including Metropolitan State University transcripts, graduation records and inactive student registration, as well as admission records are maintained and located in the Registrar&#039;s Office." >
+																Student information disclosures
+							</a>
+						</li>
+												<li class="cda-ed--d-bfb">
+							<a href="/students/rights-responsibilities" title="Metropolitan State University is committed to a policy of nondiscrimination in employment and education opportunity. " >
+																Student rights and responsibilities
+							</a>
+						</li>
+												<li class="efb-de-de-ee-ea">
+							<a href="/temp/behavioral-intervention-team-referral" title="" >
+																Concerned about a student?
+							</a>
+						</li>
+												<li class="e-acd-eb-a-ebca">
+							<a href="/students/support/student-concerns-complaints" title="Metropolitan State takes student complaints and grievances seriously. If you have a complaint about Metropolitan State, we encourage you to utilize the Institution’s Student Complaint and Grievance Process provided in Minnesota State Board Policy 3.8 and " >
+																Student concerns and complaints
+							</a>
+						</li>
+											</ul>
+				</div>
+													<div class="col-12 order-sm-4 col-md-6 order-md-4 col-lg-3 order-lg-2 col-xl-3 order-xl-2 mt-5 mt-lg-0">
+									<ul class="list-unstyled">
+																		<li class="d-b-e-ac-feb">
+							<a href="/accessibility" title="The Center for Accessibility Resources ensures that all programs, services, spaces and activities at Metropolitan State University are accessible. " >
+																Center for Accessibility Resources
+							</a>
+						</li>
+												<li class="aa-eff-dcd-bed-ddcaf">
+							<a href="/about/diversity" title="Committed to fostering a positive learning, working and living environment. Our role is to assist in the creation of an environment in which every member of the university community is valued and everyone has the opportunity to succeed." >
+																Equal Opportunity and Diversity Office
+							</a>
+						</li>
+												<li class="eafffb-cd-ba--bae">
+							<a href="/about/title-ix" title="Title IX forbids sex discrimination in all university student services and academic programs including, but not limited to, admissions, financial aid, academic advising, housing, athletics, recreational services, college residential life programs, health " >
+																Title IX: Sex discrimination and sexual violence
+							</a>
+						</li>
+												<li class="dfb-ff-afc-afb-fcfeeeb">
+							<a href="/about/diversity/nondiscrimination" title="1B.1 Equal Opportunity and Nondiscrimination in Employment and Education Policy and 1B.3 Procedure Training for all staff, faculty and student employees. " >
+																Notice of nondiscrimination
+							</a>
+						</li>
+												<li class="ecdfb-da-f-d-baa">
+							<a href="/about/employment" title="Metropolitan State University faculty and staff are employees of the State of Minnesota. Professional employment positions at Metropolitan State generally fall into two categories: unclassified and classified." >
+																Employment
+							</a>
+						</li>
+												<li class="db--db--add">
+							<a href="http://www.minnstate.edu/vendors/" title="Minnesota State is the fourth largest system of higher education in the United States, serving 375,000+ students and employing 15,600+ faculty and staff each year. "  target="_blank" >
+																Advertised bids or proposals
+							</a>
+						</li>
+												<li class="fbaf-e-d-ea-cae">
+							<a href="/about/press" title="Metropolitan State faculty and staff are available to provide knowledge, context and commentary on a wide range of issues." >
+																For the press
+							</a>
+						</li>
+											</ul>
+				</div>
+													<div class="col-12 mt-5 col-sm-12 order-sm-2 col-md-5 order-md-1 mt-md-0 col-lg-3 order-lg-3 col-xl-3 order-xl-3">
+									<ul class="list-unstyled">
+													<li><strong class="metro--footer-heading">For faculty and staff</strong></li>
+																		<li class="dc-c-aa-abab-faa">
+							<a href="http://outlook.com/owa/mnscu.onmicrosoft.com" title="Metropolitan State Faculty, Staff and Student Email (Outlook) connection."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Employee email
+							</a>
+						</li>
+												<li class="edeb-bc-ea-a-adfaae">
+							<a href="https://minnstate.zoom.us/" title=""  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Zoom
+							</a>
+						</li>
+												<li class="eac--c--ffec">
+							<a href="https://my.metrostate.edu/" title="Log in to My.Metro with your StarID"  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																My.Metro
+							</a>
+						</li>
+												<li class="ccdf--c-bfa-cfb">
+							<a href="https://eservices.minnstate.edu/employee/public/" title="Minnesota State employee dashboard (requires login with your starID)."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Minnesota State employee dashboard
+							</a>
+						</li>
+												<li class="bdecc-eee-f-c-cbbfa">
+							<a href="https://hub.selfservice.systems.state.mn.us/psp/hubss/SELFSERVICE/?cmd=login&amp;languageCd=ENG" title="Employee Self Service allows employees to access training, career opportunities, W2 and other benefit information."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																State of Minnesota employee self service
+							</a>
+						</li>
+												<li class="cebc-efe--a-eed">
+							<a href="https://starid.minnstate.edu/" title="The StarID is a username that replaces many login IDs with one ID, one password, everywhere."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																StarID
+							</a>
+						</li>
+												<li class="fa-fd-f-c-cefceeb">
+							<a href="https://metrostate.elumenapp.com/elumen/" title=""  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																eLumen
+							</a>
+						</li>
+												<li class="ba-c---caef">
+							<a href="https://services.metrostate.edu/TDClient/Home/" title="Metropolitan State University&#039;s Service portal allows for employees and staff the opportunity to request internal services."  target="_blank" >
+																Service portal
+							</a>
+						</li>
+												<li class="de-b-d--ffeace">
+							<a href="/faculty-development" title="The Center for Faculty Development provides resources and services to support Metropolitan State&#039;s Resident and Community Faculty and Staff in realizing the University&#039;s mission, vision, and values. " >
+																Center for Faculty Development
+							</a>
+						</li>
+												<li class="dec-c-b-e-efea">
+							<a href="/faculty-staff/employee-concerns-complaints" title="" >
+																Employee concerns and complaints
+							</a>
+						</li>
+											</ul>
+				</div>
+													<div class="col-12 col-sm-12 order-sm-1 col-md-7 order-md-2 col-lg-3 order-lg-4 col-xl-3 order-xl-4">
+									<ul class="list-unstyled">
+													<li><strong class="metro--footer-heading">Students’ online tools</strong></li>
+																		<li class="aac-fea--fdf-cdcbed">
+							<a href="https://metrostate.learn.minnstate.edu/" title="login to Metropolitan State University&#039;s D2L Brightspace to access your courses."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																D2L Brightspace
+							</a>
+						</li>
+												<li class="caaa-b--c-ebeeed">
+							<a href="https://login.microsoftonline.com/?whr=minnstate.edu" title="Metropolitan State University&#039;s student email access (Office 365)."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Student email
+							</a>
+						</li>
+												<li class="fd-b-e-bea-cdda">
+							<a href="https://minnstate.zoom.us/" title=""  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Zoom
+							</a>
+						</li>
+												<li class="dafb-df--b-afed">
+							<a href="https://eservices.minnstate.edu/esession/authentication.do?campusId=076&amp;postAuthUrl=http%3A//eservices.minnstate.edu/student-portal/secure/dashboard.do%3Fcampusid%3D076%26_ga%3D2.17132665.1920114652.1529329354-1005329334.1500315380" title="Institutions of the Minnesota State Colleges and Universities system maintain their own information systems. To perform some functions, you must identify which college or university&#039;s data you want to view or modify."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																eServices
+							</a>
+						</li>
+												<li class="cab-fc-ed-bb-deed">
+							<a href="https://starid.minnstate.edu/" title=""  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																StarID
+							</a>
+						</li>
+												<li class="bafca-f--bf-dfe">
+							<a href="https://engage.metrostate.edu/" title="Explore student life and leadership; search events, organizations and news articles"  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																Engage-Student Life
+							</a>
+						</li>
+												<li class="a-bebd---becda">
+							<a href="https://myapps.microsoft.com/signin/LinkedIn%20Learning/3f30d04f-22d6-45d9-ac52-93528466d453?tenantId=497daa61-9c4d-4290-87aa-2d4b5a099ef9" title="LinkedIn Learning is a leading online learning platform that helps anyone learn business, software, technology and creative skills to achieve personal and professional goals."  target="_blank" >
+																	<i class="far fa-lock fa-w-14 fa-xs" data-fa-transform="up-2" aria-label="lock icon"></i> 
+																LinkedIn Learning
+							</a>
+						</li>
+												<li class="eccf-ff-b-a-aebcdaeb">
+							<a href="/library" title="Library and Information Services exists to fulfill the information needs and foster the intellectual growth of the Metropolitan State community. " >
+																Library
+							</a>
+						</li>
+											</ul>
+				</div>
+							</div>
+		</div>
+	</section><!-- /#metro-global-footer-metro -->
+		
+	<section id="metro--global-footer-minnesotastate" aria-label="footer minnesota state section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center col-md-6 text-md-left">
+					<p>© 2020 Metropolitan State University<br>
+					<a href="/about/diversity">An equal opportunity educator and employer.</a><br>
+					<a href="http://www.minnstate.edu/privacy/index.html">Privacy statement</a></p>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="float-none float-md-right mx-auto" id="metro--minnstate-logo">
+						<a href="http://www.minnstate.edu/" target="_blank"><img src="/themes/custom/metrostate/img/minnesota-state.svg" alt="Metropolitan State Univeristy, a member of Minnesota State" class="img-fluid"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+</footer><!-- /#metro-global-footer" -->
+
+  </div>
+
+  </div>
+
+
+  </div>
+
+		
+		<script src="/sites/default/files/js/js_1usc_DNZP6ora8GcllIw1UkNj7idxEFJLRkXe96hF5I.js"></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"edcad50165","applicationID":"73174278","transactionName":"YFUBN0QCC0FXARFdXlkfIgBCCgpcGSYXQUFWXD8NWQcAbnUNC0BDWFwPBkQ\/K11SBzNdVEBzDA1CEQpeWgcXGQ9BWQYU","queueTime":0,"applicationTime":1042,"atts":"TBICQQwYGE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

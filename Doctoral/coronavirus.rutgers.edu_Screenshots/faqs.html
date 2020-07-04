@@ -1,0 +1,2325 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a852971bae",applicationID:"205519541"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TML9HWS');</script>
+<!-- End Google Tag Manager -->
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-159873833-1", 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cc0033">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
+    <title>FAQ - Universitywide COVID-19 Information</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirus.rutgers.edu/faqs/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="FAQ - Universitywide COVID-19 Information" />
+<meta property="og:description" content="Returning to Rutgers | Health/Safety | Health Care Providers | University Operations | Classroom Instruction and Academics | Remote Instruction | Housing and Student Life | Events | Faculty and Staff | Research" />
+<meta property="og:url" content="https://coronavirus.rutgers.edu/faqs/" />
+<meta property="og:site_name" content="Universitywide COVID-19 Information" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Returning to Rutgers | Health/Safety | Health Care Providers | University Operations | Classroom Instruction and Academics | Remote Instruction | Housing and Student Life | Events | Faculty and Staff | Research" />
+<meta name="twitter:title" content="FAQ - Universitywide COVID-19 Information" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronavirus.rutgers.edu/#website","url":"https://coronavirus.rutgers.edu/","name":"Universitywide COVID-19 Information","inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://coronavirus.rutgers.edu/search/{search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://coronavirus.rutgers.edu/faqs/#webpage","url":"https://coronavirus.rutgers.edu/faqs/","name":"FAQ - Universitywide COVID-19 Information","isPartOf":{"@id":"https://coronavirus.rutgers.edu/#website"},"inLanguage":"en-US","datePublished":"2020-03-04T21:21:13+00:00","dateModified":"2020-06-23T21:00:08+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//sites.rutgers.edu' />
+<link rel='dns-prefetch' href='//coronavirus.rutgers.edu' />
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.11.2.1">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.11.2.1">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2">
+<link rel="stylesheet" href="/coronavirus/wp-content/plugins/ajax-search-lite/css/style.basic.css?ver=4.8">
+<link rel="stylesheet" href="/coronavirus/wp-content/plugins/ajax-search-lite/css/style-simple-red.css?ver=4.8">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/styles/main.css?ver=1.0.0">
+<script src='https://sites.rutgers.edu/?dm=464145f44c97e5ebb6c6a6e3931babc5&amp;action=load&amp;blogid=425&amp;siteid=1&amp;t=254475412&amp;back=https%3A%2F%2Fcoronavirus.rutgers.edu%2Ffaqs%2F' type='text/javascript'></script><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://coronavirus.rutgers.edu"><link rel="https://theeventscalendar.com/" href="https://coronavirus.rutgers.edu/wp-json/tribe/events/v1/" />
+<!-- CSS Automatic Override Styles via selected Customize-specific options -->
+<style type="text/css">
+  body>header>.container:nth-child(2),
+  body>header {
+    background-color: #FFFFFF !important;
+  }
+
+  body>header>.navigation-bar {
+    background-color: #333333 !important;
+  }
+
+  #rutgers-logo g#label-rutgers .cls-2 {
+    fill: #CE0534  }
+
+  .logo h2 {
+    color: #231F20;
+    border-color: #231F20;
+  }
+
+  #rutgers-logo g#label-school .cls-3 {
+    fill: #231F20;
+  }
+
+  .pre-header {
+    background-color: #CE0534  }
+
+</style>
+                <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+                                <style type="text/css">
+                    <!--
+                    
+            @font-face {
+                font-family: 'aslsicons2';
+                src: url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot');
+                src: url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot?#iefix') format('embedded-opentype'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff2') format('woff2'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff') format('woff'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.ttf') format('truetype'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.svg#icons') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label {
+                font-size: 0px !important;
+                color: rgba(0, 0, 0, 0);
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label:after {
+                font-size: 11px !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            div[id*='ajaxsearchlite'].wpdreams_asl_container {
+                width: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {
+                font-weight: bold;
+                color: rgba(217, 49, 43, 1);
+                background-color: rgba(238, 238, 238, 1);
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results .results div.asl_image {
+                width: 70px;
+                height: 70px;
+            }
+            div.asl_r .results {
+                max-height: auto;
+            }
+                                -->
+                </style>
+                            <script type="text/javascript">
+                if ( typeof _ASL !== "undefined" && _ASL !== null && typeof _ASL.initialize !== "undefined" )
+                    _ASL.initialize();
+            </script>
+            <link rel="icon" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192-150x150.png" sizes="32x32" />
+<link rel="icon" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" />
+<meta name="msapplication-TileImage" content="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" />
+		<style type="text/css" id="wp-custom-css">
+			.home.page .stage { display: none; }
+
+.home.page .cta-wrapper {
+	display:none;
+}
+
+.home.page .cb-content.container {
+	margin-top: -40px;
+/* 		padding: 0; */
+
+}
+
+
+@media (min-width: 768px){ 
+	.home.page main .container > .row {
+		flex-direction:  row-reverse !important;
+	}
+	.home.page .cb-content.container .container {
+	padding: 0;
+}
+
+.home.page .cb-content.container .container .col-sm-12 {
+	padding-left: 0;
+}
+
+}
+
+
+@media (max-width: 768px){ 
+	.home.page main .container > .row {
+		flex-direction:  column-reverse !important;
+	}
+	.home.page .cb-content.container .container .col-sm-12 {
+	padding: 0;
+}
+	
+}
+
+
+.home.page .cb-content.container .col-md-8.col-lg-9  >.cb-content .container {
+	padding: 0;
+}
+
+
+.home.page .cb-content.container .col-md-8.col-lg-9  >.cb-content .container .col-sm-12 {
+	padding-left: 0;
+}
+
+.figure-caption, .wp-caption-text {
+	color: #444;
+}
+
+.main-footer a:hover {
+    color: #fc0;
+    text-decoration: underline;
+}		</style>
+		    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+  
+<body class="page-template page-template-template-custom page-template-template-custom-php page page-id-443 tribe-no-js faqs">
+  <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML9HWS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!--[if IE]>
+<div class="alert alert-warning">
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
+    browser</a> to improve your experience.</div>
+<![endif]-->
+  <a href="#main-content" class="screen-reader-text">Skip to main content</a>
+<div class="mobile-overlay"></div>
+<header class="banner">
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+				<nav>
+      <ul class="global-links">
+      <li><a href="http://rutgers.edu/" target="_blank">Rutgers.edu</a></li>
+      <li><a href="http://newbrunswick.rutgers.edu/" target="_blank">New Brunswick</a></li>
+      <li><a href="http://rbhs.rutgers.edu/" target="_blank">RBHS</a></li>
+      <li><a href="http://www.newark.rutgers.edu/" target="_blank">Newark</a></li>
+      <li><a href="http://www.camden.rutgers.edu/" target="_blank">Camden</a></li>
+      <li><a href="http://onlinelearning.rutgers.edu/" target="_blank">Online</a></li>
+      <li><a href="http://rutgershealth.org/" target="_blank">Rutgers Health</a></li>
+      <li><a href="https://search.rutgers.edu/" target="_blank">Rutgers Search</a></li>
+    </ul>
+  </nav>
+
+
+                <div class="social-media">
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <a class="brand" href="https://coronavirus.rutgers.edu/">
+            <div class="logo">
+                            <div class="logo-rutgers">
+					<svg id="rutgers-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474.42 128.35"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#e31837;}.cls-3{fill:#231f20;}</style></defs><g id="ru-shield"><path class="cls-1" d="M0,0V75.72C.28,88.39,4.42,99.3,12.29,108.16c14,15.76,35.24,19.67,37.61,20.06l.33.06.47.07.47-.07c.95-.14,23.36-3.58,38-20.13a47.31,47.31,0,0,0,8-12.43,52.26,52.26,0,0,0,4.25-20V0Z"/><path class="cls-2" d="M65.83,5.51H57.76l-.88,22.21.71.14Z"/><polygon class="cls-2" points="78.99 33.93 95.93 21.62 95.93 6.54 76 33.93 78.99 33.93"/><path class="cls-2" d="M69.55,33,94.91,5.51H81.43l-12.49,27Z"/><path class="cls-2" d="M63.82,29.82,78.71,5.51H68.93l-5.78,24Z"/><polygon class="cls-2" points="95.93 33.93 95.93 25.3 86.58 33.93 95.93 33.93"/><path class="cls-2" d="M50.7,27.16h.42L54.54,5.51H47L50.4,27.16Z"/><path class="cls-2" d="M44.62,27.72,43.74,5.51H35.67l8.24,22.35Z"/><polygon class="cls-2" points="25.49 33.93 5.57 6.54 5.57 21.62 22.51 33.93 25.49 33.93"/><path class="cls-2" d="M32.56,32.55l-12.49-27H6.58L32,33Z"/><path class="cls-2" d="M38.35,29.54l-5.78-24H22.79L37.68,29.82Z"/><polygon class="cls-2" points="5.57 25.3 5.57 33.93 14.91 33.93 5.57 25.3"/><path id="shield-outline" class="cls-3" d="M0,0V75.72C.28,88.39,4.42,99.3,12.29,108.16c14,15.76,35.24,19.67,37.61,20.06l.33.06.47.07.47-.07c.95-.14,23.36-3.58,38-20.13a47.31,47.31,0,0,0,8-12.43,52.26,52.26,0,0,0,4.25-20V0ZM98.83,75.66a49.88,49.88,0,0,1-4,19,45.1,45.1,0,0,1-7.55,11.76c-14.06,15.87-35.54,19.15-36.45,19.28h-.19l-.28,0c-2.28-.37-22.67-4.13-36.1-19.23C6.77,98.06,2.85,87.7,2.58,75.65V2.58H98.83Z"/><polygon class="cls-2" points="23.66 67.44 23.66 70.17 26.33 70.17 26.33 67.67 26.31 67.44 23.66 67.44"/><path class="cls-2" d="M18.6,65.52l0,.17h7.66V56.84L26,57a5.08,5.08,0,0,1-1.66.36h-.44a9.07,9.07,0,0,1-3.84-.84l-.37-.18A3.17,3.17,0,0,0,18.39,56a3.23,3.23,0,0,0-3.23,3.23c0,1,.2,1.43,1.54,2.88A8.49,8.49,0,0,1,18.6,65.52Z"/><rect class="cls-2" x="33.33" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M5.58,75.73c.26,11.3,3.92,21,10.9,28.85C27.58,117.06,44,121.4,49.27,122.51V36.85H5.58ZM19.26,85.9H15v-.32l.83-.1c.55-.06.55-.18.55-1.53v-3.3c0-1.51-.09-1.63-.34-1.63a2,2,0,0,0-.42,0l-.83.14-.1-.33c.54-.21,2.79-1,3-1l.19.14v6c0,1.35,0,1.47.55,1.53l.83.1Zm19.5-11.61v.82H16v-.82ZM16,73.46v-.81H38.76v.81Zm8.44,9.29a14.88,14.88,0,0,0-1.23,3.43l-.13.09a2.83,2.83,0,0,1-1.27-.92c.14-.87,1.69-2.56,2.78-4.3a5.65,5.65,0,0,0,.82-1.86H23c-1.4,0-1.29,0-1.66,1l-.33-.1a5.35,5.35,0,0,1,.55-2h5l.12.13C26.37,79.43,25.79,80,24.44,82.75Zm6.1,3.34c-1.51,0-2.78-1.09-2.78-3.39,0-3.39,2.23-4.87,4.25-4.87a3.32,3.32,0,0,1,1.21.22l-.1.35a2.8,2.8,0,0,0-.81-.1c-1.7,0-3,1.41-3,4.24,0,1.79.51,3.08,1.58,3.08.82,0,1.14-.86,1.14-1.64,0-1.21-.69-2.27-1.66-2.27l-.32,0L30,81.51a2,2,0,0,1,3.35,1.58A2.71,2.71,0,0,1,30.54,86.09Zm6.89,0c-1.5,0-2.77-1.09-2.77-3.39,0-3.39,2.22-4.87,4.25-4.87a3.25,3.25,0,0,1,1.2.22l-.1.35a2.67,2.67,0,0,0-.8-.1c-1.7,0-3,1.41-3,4.24,0,1.79.51,3.08,1.57,3.08.83,0,1.14-.86,1.14-1.64,0-1.21-.68-2.27-1.65-2.27l-.32,0-.05-.22a2,2,0,0,1,3.35,1.58A2.71,2.71,0,0,1,37.43,86.09Zm-10-37.81a2,2,0,1,1-2,2A2,2,0,0,1,27.41,48.28Zm-9,5.38a5.67,5.67,0,0,1,2.35.51l.33.17a6.7,6.7,0,0,0,2.82.62h.33a3.09,3.09,0,0,0,2.55-1.67h1.32A3.12,3.12,0,0,0,30.65,55H31a6.69,6.69,0,0,0,2.63-.54,4.88,4.88,0,0,1,.65-.32,5.57,5.57,0,0,1,2.17-.44,5.66,5.66,0,0,1,5.65,5.66A6.7,6.7,0,0,1,40,63.76a.43.43,0,0,0-.09.1A6,6,0,0,0,38.37,67a4.19,4.19,0,0,0-.07.63v.69a6.14,6.14,0,0,0,.47,2V71.7H16V70.43A6.13,6.13,0,0,0,16.52,68a5.86,5.86,0,0,0-.07-.94,6.07,6.07,0,0,0-1.52-3.18l-.1-.11a6.56,6.56,0,0,1-2.09-4.42A5.67,5.67,0,0,1,18.39,53.66Z"/><rect class="cls-2" x="18.82" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M36.21,65.52a8.45,8.45,0,0,1,1.9-3.36c.16-.19,1.55-1.86,1.55-2.89A3.23,3.23,0,0,0,36.43,56a3.09,3.09,0,0,0-1.24.25l-.37.18-.29.15a9.18,9.18,0,0,1-3.55.71h-.49A5.69,5.69,0,0,1,28.83,57l-.31-.12v8.86h7.64Z"/><rect class="cls-2" x="28.5" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M66.31,70.6a8.88,8.88,0,0,0,1.37-.21,5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.74,6.74,0,0,0-2.38-.43,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.46,8.46,0,0,1,64,69.49v1A9,9,0,0,0,66.31,70.6Z"/><path class="cls-2" d="M66.31,68a8.88,8.88,0,0,0,1.37-.21,5.93,5.93,0,0,1,1.26-.16,5.69,5.69,0,0,1,2.37.49v-1a6.54,6.54,0,0,0-2.38-.44,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.06,8.06,0,0,1,64,66.9v1A9,9,0,0,0,66.31,68Z"/><path class="cls-2" d="M66.31,65.42a10.53,10.53,0,0,0,1.37-.2,5.91,5.91,0,0,1,1.26-.17,5.56,5.56,0,0,1,2.37.5v-1a6.13,6.13,0,0,0-2.38-.43,6.34,6.34,0,0,0-1.44.18,7.37,7.37,0,0,1-1.25.19A7.7,7.7,0,0,1,64,64.31v1A8.56,8.56,0,0,0,66.31,65.42Z"/><path class="cls-2" d="M66.31,60.25A8.88,8.88,0,0,0,67.68,60a5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.52,6.52,0,0,0-2.38-.43,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.46,8.46,0,0,1,64,59.14v1A9,9,0,0,0,66.31,60.25Z"/><path class="cls-2" d="M66.31,62.84a10.3,10.3,0,0,0,1.37-.21,5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.32,6.32,0,0,0-2.38-.43,7.72,7.72,0,0,0-1.44.18,7.37,7.37,0,0,1-1.25.19A7.7,7.7,0,0,1,64,61.72v1A9,9,0,0,0,66.31,62.84Z"/><path class="cls-2" d="M66.31,57.66a8.88,8.88,0,0,0,1.37-.21,5.93,5.93,0,0,1,1.26-.16,5.69,5.69,0,0,1,2.37.49v-1a6.54,6.54,0,0,0-2.38-.44,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.06,8.06,0,0,1,64,56.55v1A9,9,0,0,0,66.31,57.66Z"/><path class="cls-2" d="M66.59,74.14a9.09,9.09,0,0,1,6.23.76v-.78L72.58,74A6.8,6.8,0,0,0,69,73h-.21l-.51,0a13,13,0,0,0-1.58.18,12.51,12.51,0,0,1-4.9-.25l-.32-.07V55.4l-.83-.22V73.54A13.09,13.09,0,0,0,66.59,74.14Z"/><path class="cls-2" d="M66.59,75.84a9.15,9.15,0,0,1,6.23.76v-.76l-.11-.07a.56.56,0,0,1-.13-.07,8.21,8.21,0,0,0-5.85-.76,14.24,14.24,0,0,1-6.58-.7l-.29-.09V55.91c-.27-.09-.54-.17-.81-.27V74.71C62.1,75.82,64.63,76.21,66.59,75.84Z"/><path class="cls-2" d="M80.52,67.8a8.72,8.72,0,0,0,3.68.07v-1a8.06,8.06,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.54,6.54,0,0,0-2.38.44v1a5.69,5.69,0,0,1,2.37-.49A5.93,5.93,0,0,1,80.52,67.8Z"/><path class="cls-2" d="M81.62,74.14a13.06,13.06,0,0,0,5.9-.6V55.18l-.83.22V72.91l-.32.07a12.51,12.51,0,0,1-4.9.25,13,13,0,0,0-1.58-.18l-.51,0h-.21a6.8,6.8,0,0,0-3.55.95l-.24.13v.78A9.11,9.11,0,0,1,81.62,74.14Z"/><path class="cls-2" d="M80.52,65.22a10.53,10.53,0,0,0,1.37.2,8.53,8.53,0,0,0,2.31-.14v-1a7.7,7.7,0,0,1-2.24.16,7.37,7.37,0,0,1-1.25-.19,6.34,6.34,0,0,0-1.44-.18,6.13,6.13,0,0,0-2.38.43v1a5.56,5.56,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,65.22Z"/><path class="cls-2" d="M52.18,122.51c5.26-1.11,21.69-5.45,32.79-17.93C92,96.74,95.61,87,95.87,75.73V36.85H52.18ZM67.71,83.73,66,82.85l-1.68.88.32-1.87-1.35-1.33,1.87-.27.84-1.7.84,1.7,1.88.27-1.36,1.33Zm16.14,0-1.68-.88-1.68.88.32-1.87-1.36-1.33,1.88-.27.84-1.7.84,1.7,1.88.27-1.36,1.33ZM74.57,71.36V55.24A9,9,0,0,1,76,54.4a8.27,8.27,0,0,1,3.42-.68,11.87,11.87,0,0,1,2.24.22,9.17,9.17,0,0,0,.95.11,13.35,13.35,0,0,0,3.62-.36l.5-.11v1c.36-.09.73-.19,1.12-.31l.53-.16v1l1.08-.39.55-.2V75.28l-.26.1c-3.32,1.24-6.09,1.67-8.24,1.26a8.35,8.35,0,0,0-5.73.7H74.57Zm.37,11.2,1.88.27-1.36,1.33L75.78,86l-1.68-.88L72.42,86l.32-1.87-1.36-1.33,1.88-.27.84-1.7ZM58.23,54.47l.55.2,1.08.39v-1l.53.16c.39.12.76.22,1.12.31v-1l.5.11a13.35,13.35,0,0,0,3.62.36c.33,0,.65-.06,1-.11a11.69,11.69,0,0,1,2.23-.22,8.24,8.24,0,0,1,3.42.68,8.56,8.56,0,0,1,1.39.84v22.1H72.46a8.35,8.35,0,0,0-5.73-.7c-2.15.41-4.92,0-8.23-1.26l-.27-.1Z"/><path class="cls-2" d="M81.62,75.84c1.95.37,4.48,0,7.53-1.13V55.64l-.81.27V74.15l-.29.09a14.24,14.24,0,0,1-6.58.7,8.21,8.21,0,0,0-5.85.76.56.56,0,0,1-.13.07l-.11.07v.76A9.17,9.17,0,0,1,81.62,75.84Z"/><path class="cls-2" d="M80.52,70.39a8.55,8.55,0,0,0,3.68.06v-1a8.46,8.46,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.74,6.74,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,70.39Z"/><path class="cls-2" d="M80.52,60a8.55,8.55,0,0,0,3.68.06v-1A8.46,8.46,0,0,1,82,59.3a10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.52,6.52,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,60Z"/><path class="cls-2" d="M80.52,57.45a8.72,8.72,0,0,0,3.68.07v-1a8.06,8.06,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.54,6.54,0,0,0-2.38.44v1a5.69,5.69,0,0,1,2.37-.49A5.93,5.93,0,0,1,80.52,57.45Z"/><path class="cls-2" d="M80.52,62.63a10.3,10.3,0,0,0,1.37.21,9,9,0,0,0,2.31-.15v-1a7.7,7.7,0,0,1-2.24.16,7.37,7.37,0,0,1-1.25-.19,7.72,7.72,0,0,0-1.44-.18,6.32,6.32,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,62.63Z"/></g><g id="label-rutgers"><path class="cls-2" d="M229.15,84.54l2.44-.73v-41c0-9.92,0-10.33,3.17-10.66l2.93-.24V30.15H217.93V31.9l2.93.24c3.17.33,3.17.74,3.17,10.66v33a19.55,19.55,0,0,1-14.72,6.51c-12.59,0-14.55-7.73-14.55-19.36V42.8c0-9.92,0-10.33,3.18-10.66l2.92-.24V30.15H181.1V31.9l2.93.24c3.17.33,3.17.74,3.17,10.66V64.28c0,11.06,1.38,20.74,18.21,20.74,10.82,0,17.56-5.12,18.7-5.12s1.87,1.14,3,2.28Z"/><path class="cls-2" d="M250.93,83.81h22.52V82.05l-2.93-.24C266,81.48,266,81.08,266,71.15V32.43h4.22c11.47,0,11.63,1.22,13.42,10.65h1.95c0-.32-.41-11.14-.73-12.93H239.54c-.32,1.79-.73,12.61-.73,12.93h1.95c1.79-9.43,2-10.65,13.42-10.65h4.23V71.15c0,9.93,0,10.33-4.47,10.66l-3,.24Z"/><path class="cls-2" d="M335.61,73.1c0-7.91,0-8.32,1.54-8.64l2.93-.25V62.46H319.42v1.75l2.93.25c5.69.32,5.69.73,5.69,10.68v6.14a41.09,41.09,0,0,1-9.51,1.06c-15.93,0-23-12.88-23-26.74,0-15.2,8.37-24,21.7-24,13.9,0,15,9.91,15.77,13.16l2.2-.48c-.36-4-.79-8.56-1.3-12-2.12-1.29-8.29-3.33-16.59-3.33-12.84,0-30.32,6.51-30.32,28.21C287,77.86,301.62,85,318,85a53.65,53.65,0,0,0,17.79-3.24s-.15-6.23-.15-8.68"/><path class="cls-2" d="M345.07,83.81h37.24A134.91,134.91,0,0,0,385,70.31L383,70c-1.63,6.67-2.44,11.55-15.39,11.55a46.79,46.79,0,0,1-8.84-1.06V57.06H366c6.32,0,7.79.08,8.27,3.41l.41,2.76h2.15V48.61h-2.15l-.41,2.76c-.48,3.33-2,3.41-8.27,3.41h-7.22V32.43h6.73c11.48,0,11.64,1.21,13.43,9.92l1.95-.33c0-.73-.4-10.08-.73-11.87h-35V31.9l2.93.24c3.17.33,3.17.74,3.17,10.67V71.14c0,9.94,0,10.34-3.17,10.67l-2.93.24Z"/><path class="cls-2" d="M405,33.48a26.23,26.23,0,0,1,5-.65c6.34,0,12.59,2.93,12.59,12.44,0,9.19-6.17,12.85-13,12.85H405ZM391.36,83.81H411V82.05l-2.93-.24C405,81.48,405,81.08,405,71.15V60.39h3c1.7,0,3.73,0,5,1.06,1.05.9,2.92,4,5,8l3.25,6.28c2.44,4.47,6.18,8.1,11.54,8.1h6.26V82.05a8.44,8.44,0,0,1-4.06-.8c-2-1.15-5.61-6-9-12.06-2.2-3.91-4.89-9.12-6.11-11.4,4.48-2.11,11.23-6.59,11.23-14.17,0-12.36-10.9-13.47-18.61-13.47H391.36V31.9l2.93.24c3.17.33,3.17.74,3.17,10.67V71.15c0,9.93,0,10.33-3.17,10.66l-2.93.24Z"/><path class="cls-2" d="M456.87,50.47c-4.39-2.59-7.89-5.2-7.89-10a8.62,8.62,0,0,1,8.86-8.86c9.19,0,10.49,7.07,11.3,11.13h2c-.19-2.36-.39-8.32-.81-11.22a22.79,22.79,0,0,0-11.22-2.6c-8.61,0-16.91,4.15-16.91,14.07,0,6.09,4.31,11.13,8.95,13.65l5.2,2.85c6.34,2.84,11.3,6.91,11.3,12.84,0,6.34-4.15,10-9.76,10-11.14,0-14.14-9.67-15-15.53l-2.6.66c.92,5.57,1.83,11.23,2.6,14.3C445.4,83.32,449.3,85,455.65,85c8.61,0,18.77-4.23,18.77-15.2,0-9.76-6.66-13.18-13.09-16.84Z"/><path class="cls-2" d="M141.66,52.85c2.49.13,5.16-.08,7.65-.08,9.62,0,15.5-5.16,15.5-14.78,0-10.46-6-16.88-16.63-16.88a34.05,34.05,0,0,0-6.51.85Zm20.76,0c.92,5.15,8.1,18.38,10.85,23.3,6.23,11.49,22.18,34.71,34.12,34h1.38l0,1.88-2.09.08c-16.87.66-31.95-18.14-40.72-33.21-3.57-6.13-7-13.24-10.11-19.63a7.4,7.4,0,0,0-2.8-3.36c-1.67-.88-3.84-.86-5.63-.86h-5.74V68.54c0,2.49-.19,8.66.48,11.09.54,1.91,1.7,2.16,3.61,2.36l3.3.27v1.53H126V82.26l3.31-.27c2-.2,3.15-.45,3.69-2.36.69-2.4.5-8.61.5-11.09V33.7c0-2.47.19-8.68-.5-11.08-.54-1.92-1.73-2.16-3.69-2.36L126,20V18.45h15.71c13.83,0,32.5-2,32.5,17.48,0,7.87-5.35,13-11.89,16.21a5.48,5.48,0,0,0,.1.69"/></g></svg>                </div>
+				                <h2>Universitywide COVID-19 Information</h2>
+            </div>
+        </a>
+    </div>
+    <div class="navigation-bar">
+        <div class="container">
+
+            <div class="mobile-menu">Menu</div>
+            <nav class="nav-primary">
+				<ul id="menu-header-menu" class="nav"><li class="menu-item menu-home"><a href="https://coronavirus.rutgers.edu/">Home</a></li>
+<li class="menu-item menu-item-has-children menu-health-safety"><a href="https://coronavirus.rutgers.edu/health-and-safety/">Health/Safety</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-community-safety-practices"><a href="https://coronavirus.rutgers.edu/health-and-safety/community-safety-practices/">Community Safety Practices</a></li>
+	<li class="menu-item menu-controlling-access-and-circulation"><a href="https://coronavirus.rutgers.edu/controlling-access-and-circulation/">Controlling Access and Circulation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-students-parents"><a href="https://coronavirus.rutgers.edu/students-parents/">For Students/Parents</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-technology-resources-for-students"><a href="https://it.rutgers.edu/remote-student-resources/">Technology Resources for Students</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-faculty"><a href="https://coronavirus.rutgers.edu/resources-for-faculty/">For Faculty</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-supporting-our-students"><a href="https://coronavirus.rutgers.edu/supporting-our-students/">Supporting Our Students</a></li>
+	<li class="menu-item menu-quick-start"><a href="https://it.rutgers.edu/remote-instruction/knowledgebase/important-considerations-for-planning-remote-instruction/">Quick Start</a></li>
+	<li class="menu-item menu-technology-tools-for-faculty"><a href="https://it.rutgers.edu/remote-instruction/">Technology Tools for Faculty</a></li>
+	<li class="menu-item menu-remote-exams-and-assessments"><a href="https://it.rutgers.edu/remote-instruction/knowledgebase/guide-to-remote-exams-and-assessments/">Remote Exams and Assessments</a></li>
+	<li class="menu-item menu-remote-instruction-faq"><a href="https://it.rutgers.edu/remote-instruction/faqs/remote-instruction-faq/">Remote Instruction FAQ</a></li>
+	<li class="menu-item menu-tip-sheet-for-remote-response-to-student-disclosures-of-interpersonal-violence"><a href="https://coronavirus.rutgers.edu/resources-for-faculty/tip-sheet-for-remote-response-to-student-disclosures-of-interpersonal-violence/">Tip Sheet for Remote Response to Student Disclosures of Interpersonal Violence</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-employees"><a href="https://coronavirus.rutgers.edu/employees/">For Employees</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-technology-resources-for-working-remotely"><a href="https://it.rutgers.edu/remote-work/">Technology Resources for Working Remotely</a></li>
+	<li class="menu-item menu-covid-19-telecommuting-and-leave"><a href="https://coronavirus.rutgers.edu/employees/covid-19-telecommuting-and-leave/">COVID-19 Telecommuting and Leave</a></li>
+	<li class="menu-item menu-health-care-provider-resource-center"><a href="https://academichealth.rutgers.edu/hcp-resource-center">Health Care Provider Resource Center</a></li>
+</ul>
+</li>
+<li class="menu-item menu-resources"><a href="https://coronavirus.rutgers.edu/resources/">Resources</a></li>
+<li class="active menu-item menu-item-has-children menu-faq"><a href="https://coronavirus.rutgers.edu/faqs/" aria-current="page">FAQ</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-communications"><a href="https://coronavirus.rutgers.edu/communications/">Communications</a></li>
+</ul>
+</li>
+</ul>                <div id="search-button">
+                    <a id="search-toggle" href="#"><i class="fas fa-search"></i>
+                        <div class="sr-only">Open Search Input</div>
+                    </a>
+                </div>
+                <div class="header-search-form closed">
+					<div id='ajaxsearchlite1' class="wpdreams_asl_container asl_w asl_m asl_m_1">
+<div class="probox">
+
+    
+    <div class='promagnifier'>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <path id="magnifier-2-icon" d="M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037
+                    C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041
+                    c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056
+                    c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041
+                    z"/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='prosettings'  data-opened=0>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <polygon id="arrow-25-icon" transform = "rotate(90 256 256)" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='proinput'>
+        <form autocomplete="off" aria-label='Ajax search form'>
+            <input aria-label='Search input' type='search' class='orig' name='phrase' placeholder='Search here..' value='' autocomplete="off"/>
+            <input aria-label='Autocomplete input, do not use this' type='text' class='autocomplete' name='phrase' value='' autocomplete="off"/>
+            <span class='loading'></span>
+            <input type='submit' value="Start search" style='width:0; height: 0; visibility: hidden;'>
+        </form>
+    </div>
+
+    
+    
+    <div class='proloading'>
+
+        <div class="asl_loader"><div class="asl_loader-inner asl_simple-circle"></div></div>
+
+            </div>
+
+            <div class='proclose'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                 y="0px"
+                 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+                 xml:space="preserve">
+            <polygon id="x-mark-icon"
+                     points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
+        </svg>
+        </div>
+    
+    
+</div>
+</div>
+
+
+<div id='ajaxsearchlitesettings1' class="searchsettings wpdreams_asl_settings asl_w asl_s asl_s_1">
+    <form name='options' autocomplete='off'>
+
+        
+                <fieldset class="asl_sett_scroll">
+            <legend style="display: none;">Generic selectors</legend>
+            <div class="asl_option_inner hiddend">
+                <input type='hidden' name='qtranslate_lang' id='qtranslate_lang'
+                       value='0'/>
+            </div>
+
+	        
+            
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="checked" id="set_exactonly1"
+                           title="Exact matches only"
+                           name="set_exactonly" />
+                    <label for="set_exactonly1">Exact matches only</label>
+                </div>
+                <div class="asl_option_label">
+                    Exact matches only                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_intitle1"
+                           title="Search in title"
+                           name="set_intitle"  checked="checked"/>
+                    <label for="set_intitle1">Search in title</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in title                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_incontent1"
+                           title="Search in content"
+                           name="set_incontent"  checked="checked"/>
+                    <label for="set_incontent1">Search in content</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in content                </div>
+            </div>
+            <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="None" id="set_inexcerpt1"
+                       title="Search in excerpt"
+                       name="set_inexcerpt"  checked="checked"/>
+                <label for="set_inexcerpt1">Search in excerpt</label>
+            </div>
+
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inposts1"
+                           title="Search in posts"
+                           name="set_inposts"  checked="checked"/>
+                    <label for="set_inposts1">Search in posts</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in posts                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inpages1"
+                           title="Search in pages"
+                           name="set_inpages"  checked="checked"/>
+                    <label for="set_inpages1">Search in pages</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in pages                </div>
+            </div>
+                    </fieldset>
+                    <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="rutgers-groups"
+                       id="1customset_11"
+                       title="Hidden option, ignore please"
+                       name="customset[]" checked="checked"/>
+                <label for="1customset_11">Hidden</label>
+            </div>
+            <div class="asl_option_label hiddend"></div>
+
+                        <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="rutgers-people"
+                       id="1customset_12"
+                       title="Hidden option, ignore please"
+                       name="customset[]" checked="checked"/>
+                <label for="1customset_12">Hidden</label>
+            </div>
+            <div class="asl_option_label hiddend"></div>
+
+                    
+        <fieldset>
+                            <legend>Filter by Categories</legend>
+                        <div class='categoryfilter asl_sett_scroll'>
+                
+            </div>
+        </fieldset>
+            </form>
+</div>
+
+<div id='ajaxsearchliteres1' class='vertical wpdreams_asl_results asl_w asl_r asl_r_1'>
+
+    
+    <div class="results">
+
+        
+            <div class="resdrg">
+            </div>
+
+        
+    </div>
+
+    
+                    <p class='showmore'>
+            <a>More results...</a>
+        </p>
+        
+</div>
+
+    <div id="asl_hidden_data">
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="aslblur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+            </filter>
+        </svg>
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="no_aslblur"></filter>
+        </svg>
+
+    </div>
+
+<div class="asl_init_data wpdreams_asl_data_ct" style="display:none !important;" id="asl_init_id_1" data-asldata="ew0KICAgICJob21ldXJsIjogImh0dHBzOi8vY29yb25hdmlydXMucnV0Z2Vycy5lZHUvIiwNCiAgICAicmVzdWx0c3R5cGUiOiAidmVydGljYWwiLA0KICAgICJyZXN1bHRzcG9zaXRpb24iOiAiaG92ZXIiLA0KICAgICJpdGVtc2NvdW50IjogNCwNCiAgICAiaW1hZ2V3aWR0aCI6IDcwLA0KICAgICJpbWFnZWhlaWdodCI6IDcwLA0KICAgICJyZXN1bHRpdGVtaGVpZ2h0IjogIjcwcHgiLA0KICAgICJzaG93YXV0aG9yIjogMCwNCiAgICAic2hvd2RhdGUiOiAwLA0KICAgICJzaG93ZGVzY3JpcHRpb24iOiAxLA0KICAgICJjaGFyY291bnQiOiAgMCwNCiAgICAiZGVmYXVsdEltYWdlIjogImh0dHA6Ly9zaXRlcy5ydXRnZXJzLmVkdS9kZXBhcnRtZW50LW9mLWV4YW1wbGUvd3AtY29udGVudC9wbHVnaW5zL2FqYXgtc2VhcmNoLWxpdGUvaW1nL2RlZmF1bHQuanBnIiwNCiAgICAiaGlnaGxpZ2h0IjogMCwNCiAgICAiaGlnaGxpZ2h0d2hvbGV3b3JkcyI6IDEsDQogICAgInNjcm9sbFRvUmVzdWx0cyI6IDAsDQogICAgInJlc3VsdGFyZWFjbGlja2FibGUiOiAxLA0KICAgICJhdXRvY29tcGxldGUiOiB7DQogICAgICAgICJlbmFibGVkIiA6IDEsDQogICAgICAgICJsYW5nIiA6ICJlbiINCiAgICB9LA0KICAgICJ0cmlnZ2Vyb250eXBlIjogMSwNCiAgICAidHJpZ2dlcl9vbl9jbGljayI6IDEsDQogICAgInRyaWdnZXJfb25fZmFjZXRfY2hhbmdlIjogMSwNCiAgICAic2V0dGluZ3NpbWFnZXBvcyI6ICJyaWdodCIsDQogICAgImhyZXN1bHRhbmltYXRpb24iOiAiZngtbm9uZSIsDQogICAgInZyZXN1bHRhbmltYXRpb24iOiAiZngtbm9uZSIsDQogICAgImhyZXN1bHRoaWRlZGVzYyI6ICIxIiwNCiAgICAicHJlc2NvbnRhaW5lcmhlaWdodCI6ICI0MDBweCIsDQogICAgInBzaG93c3VidGl0bGUiOiAiMCIsDQogICAgInBzaG93ZGVzYyI6ICIxIiwNCiAgICAiY2xvc2VPbkRvY0NsaWNrIjogMSwNCiAgICAiaWlmTm9JbWFnZSI6ICJkZXNjcmlwdGlvbiIsDQogICAgImlpUm93cyI6IDIsDQogICAgImlpdGVtc1dpZHRoIjogMjAwLA0KICAgICJpaXRlbXNIZWlnaHQiOiAyMDAsDQogICAgImlpc2hvd092ZXJsYXkiOiAxLA0KICAgICJpaWJsdXJPdmVybGF5IjogMSwNCiAgICAiaWloaWRlQ29udGVudCI6IDEsDQogICAgImlpYW5pbWF0aW9uIjogIjEiLA0KICAgICJhbmFseXRpY3MiOiAwLA0KICAgICJhbmFseXRpY3NTdHJpbmciOiAiIiwNCiAgICAicmVkaXJlY3RvbmNsaWNrIjogMCwNCiAgICAicmVkaXJlY3RDbGlja1RvIjogImFqYXhfc2VhcmNoIiwNCiAgICAicmVkaXJlY3RDbGlja0xvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3Rfb25fZW50ZXIiOiAxLA0KICAgICJyZWRpcmVjdEVudGVyVG8iOiAicmVzdWx0c19wYWdlIiwNCiAgICAicmVkaXJlY3RFbnRlckxvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3RfdXJsIjogIj9zPXtwaHJhc2V9IiwNCiAgICAib3ZlcnJpZGV3cGRlZmF1bHQiOiAxLA0KICAgICJvdmVycmlkZV9tZXRob2QiOiAiZ2V0Ig0KfQ0K"></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<a id="main-content"></a>
+  <div class="wrap"
+    role="document">
+    <div class="content row ">
+      <main class="main ">
+            <div class="container px-0">
+		<div class="col-12">
+    <div class="page-header">
+        <h1>FAQ</h1>
+		    </div>
+</div>
+    </div>
+			    <div class="container">
+        <div class="row">
+            <div class="col-12">
+				<p style="text-align: left"><a href="#returning">Returning to Rutgers</a> | <a href="#health">Health/Safety</a> | <a href="#healthcare">Health Care Providers</a> | <a href="#operations">University Operations</a> | <a href="#classroom">Classroom Instruction and Academics</a> | <a href="https://it.rutgers.edu/remote-instruction/faqs/remote-instruction-faq/">Remote Instruction</a> | <a href="#housing">Housing and Student Life</a> | <a href="#events">Events</a> | <a href="#faculty">Faculty and Staff</a> | <a href="#research">Research</a></p>
+            </div>
+        </div>
+    </div>
+<div class="cb-content container"><div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="returning"></a></p>
+<h3>RETURNING TO RUTGERS</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-1">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-1-content" id="wcs-accordion-1-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-1-content">
+            <span class="wcs-accordion__trigger__label">
+              What is Rutgers considering when preparing the university for the fall semester? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-1-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers has established guidelines, assessed policies, and is developing requirements and recommendations with the understanding that the health and safety of the University community is a shared responsibility among all employees and students.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-2-content" id="wcs-accordion-1-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-2-content">
+            <span class="wcs-accordion__trigger__label">
+              Will employees be returning to campus to work? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-2-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>A phased approach will be implemented for the return of employees.</p>
+<ul>
+<li>Employees who can effectively work remotely will likely continue to do so until restrictions are eased for larger gatherings or increased density.</li>
+<li>Testing may be critical as campus populations and operations increase, with the understanding that if public health guidelines dictate, reduced staffing may need to be implemented again.</li>
+</ul>
+<p>Departments have the discretion to utilize remote work, alternating days, flexible work hours and staggered reporting/departing, while making reasonable accommodations and being mindful of workforce anxiety once employees return to work.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-3-content" id="wcs-accordion-1-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-3-content">
+            <span class="wcs-accordion__trigger__label">
+              Are people required to wear face coverings while on campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-3-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Face coverings must be worn by all employees and visitors on campus when in the presence of others and in buildings in public settings.</p>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-4-content" id="wcs-accordion-1-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-4-content">
+            <span class="wcs-accordion__trigger__label">
+              How should social distancing be maintained on campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-4-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Employees and students should practice social distancing by maintaining a minimum of six feet of space between one another and by refraining from gathering in groups.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-5-content" id="wcs-accordion-1-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-5-content">
+            <span class="wcs-accordion__trigger__label">
+              Will in-person meetings be permitted on campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-5-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>In-person meetings among employees are strongly discouraged and shall not exceed 50 percent of a room’s capacity, assuming individuals can still maintain six feet of separation for social distancing requirements.</p>
+<p>Employees are encouraged to communicate with colleagues by email, telephone, or other available technology rather than face-to-face.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-6-content" id="wcs-accordion-1-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-6-content">
+            <span class="wcs-accordion__trigger__label">
+              What are some of the health and safety requirements that individuals must adhere to? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-6-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Employees must wash hands with soap and water for at least 20 seconds after being in a public place, after blowing nose, coughing, sneezing, or touching the face.</p>
+<p>Maintain a minimum of six feet of space between one another.</p>
+<p>Wear face coverings when in the presence of others and in buildings in public settings.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-7-content" id="wcs-accordion-1-7-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-7-content">
+            <span class="wcs-accordion__trigger__label">
+              Is testing required for individuals to return to campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-7-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-7-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>The development of a program for self-screening, testing, and contract tracing continues. Testing protocols are being developed by medical teams at RBHS.</p>
+<p>Every employee shall perform a self-assessment daily – monitoring for signs and symptoms of COVID-19 &#8211; before reporting to work. If the employee does not feel well or is sick, the employee must stay home. If an employee is diagnosed with COVID-19, or is out sick with signs and symptoms, the employee will be required to provide medical clearance to return to the workplace.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-8-content" id="wcs-accordion-1-8-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-8-content">
+            <span class="wcs-accordion__trigger__label">
+              How will facilities be prepared for staff, faculty, and students to return to campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-8-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-8-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>University facilities will be inspected and cleaned before staff, faculty, and students return to campus. Custodial crews will focus on high-traffic areas such as entrances, elevators, lavatories, conference rooms, and gathering areas.</p>
+<p>Employees should take care to clean their individual work areas, including frequently touched surfaces such as light switches, doorknobs, drawer handles, phone sets, and keyboards.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-9-content" id="wcs-accordion-1-9-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-9-content">
+            <span class="wcs-accordion__trigger__label">
+              Will visitors be allowed on campus? [NEW June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-9-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-9-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Only visitors with a legitimate business purpose on campus and invited guests are permitted in workplaces.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-10-content" id="wcs-accordion-1-10-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-10-content">
+            <span class="wcs-accordion__trigger__label">
+              How is Rutgers planning for the return to campus in fall 2020? [NEW May 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-10-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-10-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>In a May 13 communications, President Barchi wrote that a preliminary plan for returning to campus in the fall semester will be shared with our community in the coming weeks and will outline the safety requirements and the process for preparing our facilities and our employees to return to work safely. The planning teams are working closely with incoming president Jonathan Holloway in developing plans that prioritize community health and safety, that ensure robust academic offerings, and that further our essential mission of teaching, research, and service. All of our plans for returning to our campuses rely on social distancing, augmented by our growing capacity to test for the presence of the virus and for previous virus exposure, and conducting contact tracing when new positive cases are identified.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-11-content" id="wcs-accordion-1-11-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-11-content">
+            <span class="wcs-accordion__trigger__label">
+              What scenarios are under consideration for fall 2020 instruction? [NEW May 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-11-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-11-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Since the COVID-19 landscape is still fluid, a number of scenarios for the fall are being actively considered. Of utmost importance, a rigorous, thoughtful planning process involving the faculty and faculty leadership is under way for undergraduate education. These scenarios include:</p>
+<ul>
+<li>A traditional in-person opening to the academic year, with minimal adjustments;</li>
+<li>Beginning the fall in a hybrid state, where some activities can be held in-person, but where state or federal guidelines still limit gatherings and business operations;</li>
+<li>Beginning the fall remotely, while transitioning to a more traditional operating model during the term; and</li>
+<li>A full remote semester.</li>
+</ul>
+<p>Please recognize that the final decisions regarding many of these issues can only be made as more information becomes available over the next 6 to 8 weeks. If there is one thing this pandemic has taught us at home, in our communities, and at Rutgers, it is that we must be flexible and be prepared to adjust. In light of this necessity, we ask for your understanding and patience.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-1-12-content" id="wcs-accordion-1-12-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-1-12-content">
+            <span class="wcs-accordion__trigger__label">
+              How is the university planning to use its academic space in fall 2020? [NEW May 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-1-12-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-1-12-title-trigger" data-parent="wcs-accordion-1">
+              <div class="wcs-accordion__content__container">
+                <p>Our planning process prioritizes student, faculty, and staff safety, and is focused on the creative uses of academic spaces to accommodate in-person instruction, the specific needs of certain disciplines such as music and the performing arts for campus infrastructure, and the need for models that allow for a combination of face-to-face, remote synchronous instruction, and asynchronous remote engagement. Again, please recognize that the final decisions regarding many of these issues can only be made as more information becomes available over the next 6 to 8 weeks. If there is one thing this pandemic has taught us at home, in our communities, and at Rutgers, it is that we must be flexible and be prepared to adjust. In light of this necessity, we ask for your understanding and patience.</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="health"></a></p>
+<h3>HEALTH/SAFETY</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-3">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-1-content" id="wcs-accordion-3-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-1-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the symptoms of COVID-19 and how is it treated?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-1-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>Symptoms of the virus are similar to those of a respiratory illness: fever, cough, shortness of breath, and loss of taste or smell. There is no specific treatment for this virus at this time other than supportive care as needed.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-2-content" id="wcs-accordion-3-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-2-content">
+            <span class="wcs-accordion__trigger__label">
+              How is COVID-19 spread?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-2-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>The CDC believes the virus is spread by person-to-person close contact.</p>
+<p>There is currently no vaccine to prevent COVID-19 infection. The best way to prevent infection is to avoid being exposed to this virus. However, the CDC recommends everyday preventive actions to help prevent the spread of respiratory viruses such as wearing a mask while in public, covering coughs and sneezes, washing your hands often, staying home if you are feeling unwell, disinfect frequently touched surfaces, and avoiding touching your face or sharing personal items such as utensils and foods.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-3-content" id="wcs-accordion-3-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-3-content">
+            <span class="wcs-accordion__trigger__label">
+              What is the university’s health care advice?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-3-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>It is important to take steps to prevent contracting or spreading disease. These include:</p>
+<ul>
+<li>Covering your nose and mouth with a tissue or sleeve while coughing and sneezing</li>
+<li>Washing your hands with soap and water often and for at least 20 seconds</li>
+<li>Using an alcohol-based sanitizer on hands if soap and water are not available</li>
+<li>Avoiding touching your face</li>
+<li>Not sharing foods, utensils, e-cigarettes, etc.</li>
+<li>Cleaning commonly touched objects and surfaces regularly</li>
+<li>Staying home if you are symptomatic</li>
+<li>Practicing social distancing and adhering to government and agency guidance</li>
+<li>Wearing a face covering is required when on campus.</li>
+</ul>
+<p>This year, it will be especially important to get the flu vaccine as many of the symptoms of the flu (including fever and cough) are the same as those of the novel coronavirus.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-4-content" id="wcs-accordion-3-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-4-content">
+            <span class="wcs-accordion__trigger__label">
+              Will the university provide health care for students?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-4-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>Student Health Centers can provide health care services for current students. Please call the health centers on your campus. Staff are available to provide care through video visits, telephone visits, and in some cases personal visits to the Health Centers. Students may contact <a href="https://coronavirus.rutgers.edu/care-and-prevention/#care">student health services</a> for assistance.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-5-content" id="wcs-accordion-3-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-5-content">
+            <span class="wcs-accordion__trigger__label">
+              Are Rutgers–New Brunswick Health Centers open? [Updated May 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-5-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>The Hurtado Health Center remains open from 9 a.m.–5 p.m., Monday through Friday. Please call 848-932-7402 to make an appointment for a health visit or laboratory visit. Walk-in appointments are not currently available. Our clinicians are also available for video or telephone visits.</p>
+<p>CAPS is providing services remotely.</p>
+<p>For the latest operating status, please visit the <a href="http://health.rutgers.edu/general-resources/RSH-operating-status/">Student Health site</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-6-content" id="wcs-accordion-3-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-6-content">
+            <span class="wcs-accordion__trigger__label">
+              What precautions, including cleaning, are taking place at the university to keep living and common areas safe?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-6-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>In accordance with CDC recommendations, University Facilities has increased routine cleaning of frequently touched surfaces in all buildings, including doorknobs, elevator buttons, and other surfaces. No additional disinfection beyond routine cleaning is recommended at this time.</p>
+<p>Facilities is using Enviro Care Neutral Disinfectant to clean most surfaces. Enviro Care Natural Disinfectant has demonstrated effectiveness against viruses similar to 2019 Novel Coronavirus (2019-nCoV) on hard, non-porous surfaces and is qualified under EPA&#8217;s emerging viral pathogen program for use against SARS-CoV-2, a coronavirus that causes COVID-19.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-7-content" id="wcs-accordion-3-7-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-7-content">
+            <span class="wcs-accordion__trigger__label">
+              What will happen as cases of COVID-19 are confirmed within the campus community?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-7-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-7-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>As cases of COVID-19 are confirmed the university will follow <a href="https://www.nj.gov/health/cd/topics/ncov.shtml">NJDOH</a> protocols for containment and those who have had close contact with the patient will be contacted and monitored by the appropriate health agency with the support of the university.</p>
+<p>Visit <a href="https://covid19.nj.gov">New Jersey’s COVID-19 Information Hub</a>, the state’s official website for services and information related to coronavirus, for more information on the state&#8217;s disease monitoring.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-8-content" id="wcs-accordion-3-8-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-8-content">
+            <span class="wcs-accordion__trigger__label">
+              Are there guidelines for students and employees who are on campus and test positive for COVID-19?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-8-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-8-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>Employees and students who test positive for COVID-19 and are physically on campus or in Rutgers facilities should contact Occupational Health and Student Health directly to report the case and seek guidance.</p>
+<p><strong>Rutgers Student Health offices by location:</strong></p>
+<ul>
+<li><strong>Rutgers–New Brunswick</strong>
+<ul>
+<li>Call 848-932-7402</li>
+<li>Locations and hours can be found at <a href="http://health.rutgers.edu/locations">health.rutgers.edu/locations</a>.</li>
+<li>Make an appointment online via our <a href="https://cas.rutgers.edu/login?TARGET=https%3a%2f%2fnbstudenthealthportal.rutgers.edu%2fhome.aspx" rel="noopener noreferrer">Patient Portal</a> (requires NetID)</li>
+<li>Local Hospitals
+<ul>
+<li>Robert Wood Johnson University Hospital &#8211; 732-828-3000</li>
+<li>St. Peter’s University Hospital &#8211; 732-745-8600</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Rutgers Biomedical and Health Sciences</strong>
+<ul>
+<li>Newark &#8211; 973-972-8219</li>
+<li>New Brunswick &#8211; 732-235-5160</li>
+</ul>
+</li>
+<li><strong>Rutgers–Newark</strong>
+<ul>
+<li>Call 973-353-5232</li>
+<li>Visit Blumenthal Hall, Room 104</li>
+<li>Email: stuhlth@newark.rutgers.edu</li>
+</ul>
+</li>
+<li><strong><span style="font-size: 1rem">Rutgers–Camden</span></strong>
+<ul>
+<li><span style="font-size: 1rem">Call 856-225-6005</span></li>
+<li><span style="font-size: 1rem">Visit the Campus Center, second floor</span></li>
+</ul>
+</li>
+</ul>
+<p><strong>Rutgers Occupational Health offices by location:</strong></p>
+<ul>
+<li>Rutgers University: New Brunswick, Newark, and Camden: 848-932-8254</li>
+<li>Rutgers Biomedical and Health Sciences (RBHS) Newark: 973-972-2900</li>
+<li>RBHS New Brunswick/Piscataway: 848-445-0123 ext. 2</li>
+<li>Robert Wood Johnson Medical School Faculty and Staff: 732-235-6559</li>
+</ul>
+<p>The Occupational Health and Student Health offices will then evaluate these individuals and the risk of exposure to others in accordance with the N.J. Department of Health and CDC Risk Assessment Guidelines. As appropriate, Occupational Health and/or Student Health will speak to those who are deemed to be close contacts of the individual and potentially at risk. Those who are not contacted will have been deemed to not be at-risk.</p>
+<p>If there are locations and areas that require additional cleaning following a report of a positive COVID-19 test, those areas will be addressed by the University’s Institutional Planning and Operations and Environmental Health and Safety staff.</p>
+<p>While these are the steps that we are taking, it is important to know that tracking and reporting positive COVID-19 tests is the responsibility of local and state health departments. Any announcements regarding positive COVID-19 cases will come from those agencies.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-9-content" id="wcs-accordion-3-9-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-9-content">
+            <span class="wcs-accordion__trigger__label">
+              How can I donate Personal Protective Equipment (PPE)?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-9-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-9-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p class="x_MsoNormal">Thank you for your interest in sharing resources with us.  A shortage of personal protective equipment (PPE) is being felt across the country. If you have access to PPE that you would like to donate to Rutgers health care workers please visit this webpage to learn how you can <a href="https://academichealth.rutgers.edu/news/2020-03-27-donate-personal-protective-equipment">contact us to coordinate your contribution</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-3-10-content" id="wcs-accordion-3-10-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-3-10-content">
+            <span class="wcs-accordion__trigger__label">
+               Has RBHS resumed some of its health care services? [NEW May 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-3-10-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-3-10-title-trigger" data-parent="wcs-accordion-3">
+              <div class="wcs-accordion__content__container">
+                <p>At Rutgers Biomedical and Health Sciences, Rutgers Health has already begun to expand in-person ambulatory service delivery. As in most areas of the country, elective procedures were suspended at the outset of the outbreak to free up all available resources for COVID-19 patients. As inpatient capacity becomes available again, non-urgent procedures are now being rescheduled. Outpatient activity will increase with social distancing, and continuing travel restrictions will necessitate reliance on telemedicine as a major means of delivering care.</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="healthcare"></a></p>
+<h3>HEALTH CARE PROVIDERS</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-5">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-1-content" id="wcs-accordion-5-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-1-content">
+            <span class="wcs-accordion__trigger__label">
+              What should I do if I start to develop signs of illness while at work?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-1-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers health care providers can find guidance on symptom monitoring and screening, COVID-19 exposure, and returning to work on our <a href="https://academichealth.rutgers.edu/hcp-resource-center#monitoring">Health Care Provider Resource Center</a> webpage.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-2-content" id="wcs-accordion-5-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-2-content">
+            <span class="wcs-accordion__trigger__label">
+              What should I do if I become ill off work hours?              </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-2-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers health care providers can find guidance on symptom monitoring and screening, COVID-19 exposure, and returning to work on our <a href="https://academichealth.rutgers.edu/hcp-resource-center#monitoring">Health Care Provider Resource Center</a> webpage.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-3-content" id="wcs-accordion-5-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-3-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the criteria to be tested for COVID-19?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-3-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers health care providers can find guidance on testing on our <a href="https://academichealth.rutgers.edu/hcp-resource-center#testing">Health Care Provider Resource Center</a> webpage.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-4-content" id="wcs-accordion-5-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-4-content">
+            <span class="wcs-accordion__trigger__label">
+              Can I return to work as scheduled if I have recently (within the last 14 days) returned from a region that has been identified on the CDC website as a level 3 destination?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-4-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers health care providers can find guidance on symptom monitoring and screening, COVID-19 exposure, and returning to work on our <a href="https://academichealth.rutgers.edu/hcp-resource-center#monitoring">Health Care Provider Resource Center</a> webpage.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-5-content" id="wcs-accordion-5-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-5-content">
+            <span class="wcs-accordion__trigger__label">
+              Who can I contact if I have more questions?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-5-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Notify your Occupational or Employee Health office for advice on testing, restrictions from work, and self-monitoring instructions.</p>
+<p>Rutgers Occupational/Employee Health offices by location:</p>
+<ul>
+<li>Rutgers University New Brunswick, Newark and Camden: <a href="tel:+1-848-932-8254">848-932-8254</a></li>
+<li>Rutgers Biomedical and Health Sciences (RBHS) Newark: <a href="tel:+1-973-972-2900">973-972-2900</a></li>
+<li>RBHS New Brunswick/Piscataway: <a href="tel:+848-445-0123p2">848-445-0123 ext. 2</a></li>
+<li>Robert Wood Johnson Medical School Faculty and Staff: <a href="tel:+1-732-235-6559">732-235-6559</a></li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-5-6-content" id="wcs-accordion-5-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-5-6-content">
+            <span class="wcs-accordion__trigger__label">
+              Is there any guidance for health care providers regarding HIPAA during the COVID-19 crisis?              </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-5-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-5-6-title-trigger" data-parent="wcs-accordion-5">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers health care providers can find HIPAA guidance on our <a href="https://academichealth.rutgers.edu/hcp-resource-center#hipaa">Health Care Provider Resource Center</a> webpage.</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="operations"></a></p>
+<h3>UNIVERSITY OPERATIONS</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-7">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-1-content" id="wcs-accordion-7-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-1-content">
+            <span class="wcs-accordion__trigger__label">
+              What is status of operations and classes on campus?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-1-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers is open and operating. The university has moved to remote instruction, with the exception of clinical instruction, through August 14. Some services and facilities may not be operating or are operating on limited schedules.</p>
+<p>Check these links for up-to-date information at:</p>
+<p><a href="https://www.camden.rutgers.edu/about/responses-covid-19-rutgers-university-camden">Rutgers University–Camden</a></p>
+<p><a href="https://www.newark.rutgers.edu/covid-19-operating-status">Rutgers University–Newark</a></p>
+<p><a href="https://nbchancellor.rutgers.edu/status">Rutgers University–New Brunswick</a></p>
+<p><a href="https://academichealth.rutgers.edu/rbhs-operating-status">Rutgers Biomedical and Health Sciences</a></p>
+<p><strong><br />
+Classroom instruction at Rutgers–Camden, Newark, and New Brunswick </strong></p>
+<ul>
+<li>There will be <strong>no in-person</strong> classes, programs, camps, conferences, or other activities at Rutgers University through at least August 14.</li>
+<li>All University-sponsored courses, programs, and activities that will take place through August 14 on the Camden, Newark, and New Brunswick campuses <strong>will be done via remote technology</strong>.</li>
+</ul>
+<p class="x_MsoNormal"><b>Instruction at Rutgers Biomedical and Health Sciences</b></p>
+<ul type="disc">
+<li class="x_MsoNormal">Courses at RBHS continue as scheduled.</li>
+<li>The cancellation of in-person activities at Rutgers University through August 14 does not apply to RBHS clinical programs and activities; check with the relevant RBHS office to ascertain the status of RBHS summer programs, courses, and activities.</li>
+<li class="x_MsoNormal">Students should contact their deans re: clinical rotations and clinical instruction.</li>
+</ul>
+<p><strong>Campus Activities </strong></p>
+<ul>
+<li><strong>All events scheduled at the University through August 14 are suspended</strong>.</li>
+<li>There will be <strong>no in-person</strong> classes, programs, camps, conferences, or other activities at Rutgers  through at least August 14.</li>
+<li>All athletic competitions are suspended.</li>
+</ul>
+<p><strong>Faculty and Staff</strong></p>
+<ul>
+<li>University offices and services will remain open during this time period.</li>
+<li>The university is operating under a <a href="https://sites.rutgers.edu/coronavirus/card-access-changes-on-campus/">card access only model</a>. During this time, buildings/rooms with electronic access control readers <strong><em>will require the use of RU ID cards for entry at all times. </em></strong><strong>All Rutgers community members should be sure to have their IDs with them whenever they are on campus</strong>. While RBHS buildings are excluded from this policy, Rutgers–Newark buildings are included.</li>
+<li>Employees are strongly encouraged to use teleconference services, such as <a href="https://webex.rutgers.edu/">Webex</a>, in lieu of in-person meetings.</li>
+<li>Guidance from University Human Resources advising staff on appropriate telecommuting practices, employee leave management, and related workplace questions is available on <a href="https://discover-uhr.rutgers.edu/onesource/home">OneSource</a>.</li>
+<li>Specific <a href="https://coronavirus.rutgers.edu/domestic-travel-restriction-and-meeting-covid19-guidance-for-rutgers-healthcare-faculty-staff-and-students-who-directly-interact-with-patients/">guidance for health care workers who have direct contact with patients</a> is available from the Executive Vice President of Health Affairs.</li>
+<li>Please take steps to protect your health and the health of your coworkers by following <a href="https://coronavirus.rutgers.edu/care-and-prevention/">guidance on prevention and care</a>. If you feel unwell, please stay home.</li>
+</ul>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-2-content" id="wcs-accordion-7-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-2-content">
+            <span class="wcs-accordion__trigger__label">
+              How do I contact student services operations? [NEW April 3]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-2-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <h4><strong>Student Services<br />
+</strong></h4>
+<h5><strong> Rutgers–Camden</strong></h5>
+<p>Rutgers is open, but some services and facilities may not be operating or may be operating on limited schedules. Check the campus operating status for more details: <a href="https://www.camden.rutgers.edu/about/responses-covid-19-rutgers-university-camden">Rutgers University–Camden</a></p>
+<p>The One-Stop Center and the Contact Center remain operational via email and will respond within two business days:</p>
+<ul>
+<li>Admissions: <a href="mailto:admissions@camden.rutgers.edu">admissions@camden.rutgers.edu</a></li>
+<li>Financial Aid: <a href="mailto:finaid@camden.rutgers.edu">finaid@camden.rutgers.edu</a></li>
+<li>Registrar: <a href="mailto:camreg@camden.rutgers.edu">camreg@camden.rutgers.edu</a></li>
+<li>Student Accounting: <a href="mailto:camdensar-inquiries@camden.rutgers.edu">camdensar-inquiries@camden.rutgers.edu</a></li>
+<li>Disability Services: The <a href="https://ods.rutgers.edu/">office</a> remains open as a resource for students. Email staff at <a href="mailto:disability-services@camden.rutgers.edu">disability-services@camden.rutgers.edu</a>.</li>
+</ul>
+<h5><strong>Rutgers–Newark</strong></h5>
+<p>Rutgers is open, but some services and facilities may not be operating or may be operating on limited schedules. Check the campus operating status for more details: <a href="https://www.newark.rutgers.edu/covid-19-operating-status">Rutgers University–Newark</a></p>
+<p>One Stop and Enrollment Services, Financial Aid, Registrar and Student Accounting, will be serving students remotely Monday– Friday, 8:30 a.m. – 4:30 p.m.</p>
+<ul>
+<li>Students should <a href="https://myrun.newark.rutgers.edu/covid-office-hours">visit MyRUN</a> for detailed information about services available.</li>
+<li>Students can call 973-353-1766 ext.1 or email <a href="mailto:myRUN@newark.rutgers.edu">myRUN@newark.rutgers.edu</a> for assistance.</li>
+<li>Disability Services: Contact the office by email, <a href="mailto:ods@newark.rutgers.edu">ods@newark.rutgers.edu</a>, or by phone, 973-353-5375.</li>
+</ul>
+<h5><strong>Rutgers–New Brunswick </strong></h5>
+<p>Rutgers is open, but some services and facilities may not be operating or may be operating on limited schedules. Check the campus operating status for more details: <a href="https://nbchancellor.rutgers.edu/status">Rutgers University–New Brunswick</a></p>
+<p>The Visitor Center and the Undergraduate Admissions office are closed to the public.</p>
+<ul>
+<li>Admissions staff will continue to answer phone inquiries at 732-445-4636 and <a href="https://www.ugadmissions.rutgers.edu/forms/contactus.aspx?c=nb">emails</a> during this time.</li>
+<li>All campus visits/tours have been canceled through August 14.</li>
+<li>One Stop Student Services Center: Is <span style="font-size: 1rem">closed for walk-in inquiries through the month of May. Students can contact a Student Services Adviser using the following contact forms: </span></li>
+</ul>
+<ul>
+<li style="list-style-type: none">
+<ul>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/index.php?pg=request">Financial Aid </a></li>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/reg/index.php?pg=request">Registrar </a></li>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/sar/index.php?pg=request">Student Accounting</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Students may also call Monday through Friday from 8:30 a.m. to 5:00 p.m.:
+<ul>
+<li>Financial Aid: 848-932-7057</li>
+<li>Registrar: 848-445-7000</li>
+<li>Student Accounting: 848-932-2254</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Office of the Registrar: <a style="font-size: 1rem" href="https://helpspot.finaid.rutgers.edu/helpspot/reg/index.php?pg=request">Requested documents</a><span style="font-size: 1rem"> will be available by mail only.</span></li>
+<li>Cashier: <span style="font-size: 1rem">The New Brunswick Cashier&#8217;s office will be closed for in-person payments until further notice. Payments can be made online at </span><a style="font-size: 1rem" href="https://finservices.rutgers.edu/otb/">paymybill.rutgers.edu</a><span style="font-size: 1rem"> or mail payments to:</span></li>
+</ul>
+<p style="padding-left: 80px">Rutgers University Student Accounting Services<br />
+P.O. Box 2021<br />
+New Brunswick, NJ 08903-2021</p>
+<ul>
+<li>RU-info can be reached via phone at 848-445-info (4636), text at 732-662-2664, or online at <a href="http://ruinfo.rutgers.edu">ruinfo.rutgers.edu</a>. They are open Monday through Friday from 8:30 a.m. to 8:30 p.m. and on weekends from 10:00 a.m. to 4:00 p.m.</li>
+<li>Disability Services: Staff members are working remotely and can be <a href="https://ods.rutgers.edu/contact-ods/rutgers-university-new-brunswick">contacted through email and phone</a>.</li>
+</ul>
+<h5></h5>
+<h5><strong>RBHS</strong></h5>
+<p>Rutgers is open, but some services and facilities may not be operating or may be operating on limited schedules. Check the operating status for more details: <a href="https://academichealth.rutgers.edu/rbhs-operating-status">Rutgers Biomedical and Health Sciences</a></p>
+<ul>
+<li>Registrar: <a href="mailto:rbhsregistrar@rbhs.rutgers.edu">rbhsregistrar@rbhs.rutgers.edu</a>; 973-972-5374</li>
+<li>Disability Services: Working remotely, Monday to Friday, 8:30 a.m. to 4:30 p.m., no reduction in services. Email: <a href="mailto:odsrbhs@rbhs.rutgers.edu">odsrbhs@rbhs.rutgers.edu</a> or call 973-640-0058.</li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-3-content" id="wcs-accordion-7-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-3-content">
+            <span class="wcs-accordion__trigger__label">
+              Is the Admissions Office, Visitor Center, or One Stop in New Brunswick open? [UPDATED April 2]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-3-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p><strong>Admissions</strong></p>
+<ul>
+<li>The Visitor Center and Undergraduate Admissions office are closed to the public.</li>
+<li>Admissions staff will continue to answer phone inquiries at 732-445-4636 and <a href="https://www.ugadmissions.rutgers.edu/forms/contactus.aspx?c=nb">emails</a> during this time.</li>
+<li>Campus visits/tours are suspended through at least August 14.</li>
+</ul>
+<p><strong>One Stop Student Services Center</strong></p>
+<p>The One Stop Student Services Center is closed for walk-in inquiries through at least August 14. Students can contact a Student Services Adviser using the following contact forms:</p>
+<ul>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/index.php?pg=request">Financial Aid </a></li>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/reg/index.php?pg=request">Registrar </a></li>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/sar/index.php?pg=request">Student Accounting</a></li>
+</ul>
+<p>Students may also call Monday through Friday from 8:30 a.m. to 5:00 p.m.:</p>
+<ul>
+<li>Financial Aid: 848-932-7057</li>
+<li>Registrar: 848-445-7000</li>
+<li>Student Accounting: 848-932-2254</li>
+</ul>
+<h4></h4>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-4-content" id="wcs-accordion-7-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-4-content">
+            <span class="wcs-accordion__trigger__label">
+              How can I reach the Financial Aid office?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-4-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p><strong>New Brunswick</strong><br />
+Students may contact a Student Services Adviser using the following contact form:</p>
+<ul>
+<li><a href="https://helpspot.finaid.rutgers.edu/helpspot/index.php?pg=request">Financial Aid </a></li>
+</ul>
+<p>Students may also call Monday through Friday from 8:30 a.m. to 5:00 p.m.:</p>
+<ul>
+<li>Financial Aid: 848-932-7057</li>
+</ul>
+<p><strong><span style="font-size: 1.2rem">Camden</span></strong></p>
+<p>Student may contact financial aid by sending an email to:</p>
+<ul>
+<li>  <a href="mailto:finaid@camden.rutgers.edu">finaid@camden.rutgers.edu</a></li>
+</ul>
+<p><strong>Newark</strong></p>
+<p>Financial Aid will be serving students remotely Monday – Friday, 8:30 a.m. – 4:30 p.m.</p>
+<ul>
+<li>Students should <a href="https://myrun.newark.rutgers.edu/covid-office-hours">visit MyRUN</a> for detailed information about services available.</li>
+<li>Students can call 973-353-1766 ext.1 or email <a href="mailto:myRUN@newark.rutgers.edu">myRUN@newark.rutgers.edu</a> for assistance.</li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-5-content" id="wcs-accordion-7-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-5-content">
+            <span class="wcs-accordion__trigger__label">
+              Where can international students and scholars find resources and information?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-5-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <h5></h5>
+<p>Rutgers Global provides <a href="https://global.rutgers.edu/travel-resources"><span style="font-size: 1rem">Global Travel Resources</span></a><span style="font-size: 1rem"> with</span><span style="font-size: 1rem"> updates, advisories, and useful resources for international students and scholars. </span></p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-6-content" id="wcs-accordion-7-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-6-content">
+            <span class="wcs-accordion__trigger__label">
+              Are Rutgers' libraries open?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-6-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p class="x_xmsonormal">The Rutgers Library buildings are currently closed.</p>
+<p class="x_xmsonormal">Online library services are available through the <a href="https://www.libraries.rutgers.edu/" rel="noopener noreferrer" data-auth="NotApplicable"> Rutgers University Libraries</a> website.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-7-content" id="wcs-accordion-7-7-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-7-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the operating hours for the university computing labs?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-7-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-7-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>Computer labs are currently closed.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-8-content" id="wcs-accordion-7-8-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-8-content">
+            <span class="wcs-accordion__trigger__label">
+              Where can I go for help with technology questions?              </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-8-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-8-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>Help with technology issues or questions is available from the <a href="https://it.rutgers.edu/help-support/">Office of Information Technology Help Desk</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-9-content" id="wcs-accordion-7-9-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-9-content">
+            <span class="wcs-accordion__trigger__label">
+              Are Rutgers buses running? [Updated May 14]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-9-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-9-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <div>Bus service will be available on a reduced schedule. Buses are currently running on a modified spring break schedule. Check <a title="https://ipo.rutgers.edu/dots" href="https://ipo.rutgers.edu/dots" rel="noopener noreferrer" data-auth="NotApplicable">Transportation Services</a> for updates.</div>
+<div></div>
+<div>For campus info:</div>
+<div></div>
+<p><a href="https://ipo.rutgers.edu/files/ru-nbbusschedulemay2020pdf">Rutgers University–New Brunswick</a></p>
+<p><a href="https://ipo.rutgers.edu/files/ru-newarkschedule052020pdf">Rutgers University–Newark</a></p>
+<p><a href="https://ipo.rutgers.edu/sites/default/files/RU-Camden_schedule052020.pdf">Rutgers University–Camden</a></p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-10-content" id="wcs-accordion-7-10-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-10-content">
+            <span class="wcs-accordion__trigger__label">
+              Is mail being delivered on campus?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-10-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-10-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>Mail Services has suspended normal departmental mail delivery to campus locations on the Newark, RBHS, Piscataway and New Brunswick campuses until further notice.</p>
+<p><strong>For Students:</strong> Mail Services will close service windows at student post offices to limit exposure between postal clerk and students. Postal clerks will still be present at student post offices to support the students still on the New Brunswick, RBHS, and Newark campuses. Mail and packages for these on campus students will be placed into the automated locker system for students to retrieve.</p>
+<p><strong>For Employees:</strong></p>
+<p><u>Important Notices for Rutgers New Brunswick, Rutgers Newark, and RBHS:</u></p>
+<ul>
+<li>RBHS loading docks will remain open but will not be delivering. Departments will need to go to the loading dock area to retrieve their packages.</li>
+<li>Campus mail will continue to be transported between Newark/ New Brunswick and Camden/ New Brunswick.</li>
+<li>Mail Services will be working with UPS, FedEx, DHL, Amazon, Laser Ship and Office Depot to redirect departmental deliveries (with the exception of RBHS loading dock locations) to one of the Mail Hubs mentioned above. These packages will be held until picked up by their respective department.</li>
+</ul>
+<p><u>New Brunswick/Piscataway areas:</u><br />
+In place of the former mail delivery system, departments will have two options:</p>
+<ol>
+<li>Departments may pick up their mail and drop off outgoing mail at the following locations between 9 a.m. – 2 p.m., Monday through Friday.
+<ul>
+<li>Please use our Mail Services Hub located in the rear of ASB II, 57 U.S. Highway 1 on the Cook Campus. Entrance through the rear loading dock, use doorbell if the door is closed.</li>
+</ul>
+</li>
+<li>Departments may request that their mail be held at the ASB II Mail Facility for an extended period of time. Please email mailquestions@ipo.rutgers.edu to request this option.</li>
+</ol>
+<p>Please feel free to contact Tom Stadthaus (New Brunswick) at tom.stadthaus@rutgers.edu or at 848- 932-4267.<br />
+<u></u></p>
+<p><u>Newark Areas:</u><br />
+In place of the former mail delivery system, departments will have two options:</p>
+<ol>
+<li>Departments may pick up their mail and drop off outgoing mail at the following locations between 9 a.m. – 2 p.m., Monday through Friday.
+<ul>
+<li>Departments with an address that contains zip code 07103 please use Mail Services located at 30 Bergen St, ADMC complex, room 212, please use the rear door in the rear of the parking lot</li>
+<li>Departments with an address that contain zip code 07102 please use Mail Services located at 110 Bradley Hall, our office is on the first floor next to the elevators.</li>
+</ul>
+</li>
+<li>Departments may request that their mail be held at our Mail Facility for an extended period of time. Please email mailquestionsnewark@ipo.rutgers.edu to request this option.</li>
+</ol>
+<p>Please feel free to contact Sam Bandy (Newark) at 973-972-4060 or Samuel.bandy@rutgers.edu with any questions.</p>
+<p><u>Camden Areas:</u><br />
+These changes do not apply to the Camden Campus Mail service. For more information on Camden Mail Service please contact Shari Wakeley 856-225-6003 or shari.wakeley@rutgers.edu</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-11-content" id="wcs-accordion-7-11-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-11-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the university's new guidelines for deliveries to Rutgers and non-Rutgers addresses?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-11-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-11-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>The University Finance and Administration <a href="https://finance.rutgers.edu/COVID19">COVID-19 Updates page</a> has posted guidelines for <a href="https://finance.rutgers.edu/guidelines-deliveries-rutgers-and-non-rutgers-addresses">deliveries to Rutgers and non-Rutgers addresses</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-12-content" id="wcs-accordion-7-12-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-12-content">
+            <span class="wcs-accordion__trigger__label">
+              Is the Rutgers Bookstore Open?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-12-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-12-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>Following the guidelines provided by the CDC and federal government, the Rutgers Barnes &amp; Noble Bookstore locations in Camden, Newark, and New Brunswick are currently closed to the public. The bookstores will remain closed to the public until further notice. Rutgers bookstores will continue to do business online. You may enjoy free shipping as you shop online for course materials, supplies, and Rutgers clothing and gifts at the following websites.</p>
+<p>Camden<br />
+<a href="https://universitydistrict.bncollege.com/shop/university-district/home">University District Bookstore</a><br />
+Email: <a href="mailto:sm8006@bncollege.com">sm8006@bncollege.com</a><br />
+Phone: 856-968-1200</p>
+<p>Newark<br />
+<a href="https://newark-rutgers.bncollege.com/shop/rutgers-newark/home">Barnes &amp; Noble at Rutgers–Newark </a><br />
+Email: <a href="mailto:bksrutgersnewark@bncollege.com">bksrutgersnewark@bncollege.com</a><br />
+Phone: 973-353-2227</p>
+<p>New Brunswick<br />
+<a href="https://rutgers.bncollege.com/shop/rutgers/home">Barnes &amp; Noble at Rutgers</a><br />
+Email: <a href="mailto:am660@bncollege.com">am660@bncollege.com</a><br />
+Phone: 732-246-8448</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-13-content" id="wcs-accordion-7-13-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-13-content">
+            <span class="wcs-accordion__trigger__label">
+              Is the Zimmerli Art Museum open?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-13-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-13-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>In the interest of protecting the well-being of our staff, the university community, and all visitors, and following guidance from campus, state, and federal authorities regarding measures that best promote public health, we have decided to temporarily close the Zimmerli Art Museum to the public until further notice. In addition, all previously scheduled programs and events at the university through August 14 are suspended.</p>
+<p>The most effective way to reach museum staff at this time is by email. Please visit the <a href="http://zimmerlimuseum.rutgers.edu/about/contact-us#Departmental%20Contacts">contact page</a> and select the staff member&#8217;s department. If you do not know the staff member&#8217;s department, email <a href="mailto:info@zimmerli.rutgers.edu">info@zimmerli.rutgers.edu</a> and include the name of the person you wish to reach, or a brief description of the information you seek, and your message will be directed to the appropriate individual.</p>
+<p>Please visit our <a href="http://zimmerlimuseum.rutgers.edu">home page</a>, as well as social media pages, for updates and virtual activities.</p>
+<div>
+<p>&nbsp;</p>
+</div>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-7-14-content" id="wcs-accordion-7-14-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-7-14-content">
+            <span class="wcs-accordion__trigger__label">
+              How can I support students whose lives and education have been interrupted by COVID-19?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-7-14-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-7-14-title-trigger" data-parent="wcs-accordion-7">
+              <div class="wcs-accordion__content__container">
+                <p>The Rutgers Foundation has created emergency funds to support students during COVID-19. Select the fund to support and make a donation online at: <a href="http://give.rutgers.edu/emergencysupport">give.rutgers.edu/emergencysupport</a>. Learn more about emergency support funding for students and research at: <a href="http://support.rutgers.edu/covid19support">support.rutgers.edu/covid19support.</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="classroom"></a></p>
+<h3>CLASSROOM INSTRUCTION AND ACADEMICS</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-9">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-1-content" id="wcs-accordion-9-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-1-content">
+            <span class="wcs-accordion__trigger__label">
+              What is the status of classes? [UPDATED June 11]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-1-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <h5><strong>Fall 2020 Instruction</strong></h5>
+<p><strong>Professional and Graduate Education</strong></p>
+<ul>
+<li>Graduate education will return to a combination of in-person and remote education in September.</li>
+<li>Graduate education will be prioritized for access to campus facilities wherever possible in absolute adherence with state and federal guidelines, testing expectations, and strict plans for protective distancing.</li>
+<li>Professional education will also plan to return to a combination of in-person and remote modes at the discretion of the chancellors.</li>
+<li>Professional students will likewise be given priority access to our campus facilities wherever feasible, and health sciences professional students will have access to training in our healthcare delivery sites.</li>
+</ul>
+<p><strong>Undergraduate Education</strong></p>
+<ul>
+<li>We acknowledge and are sympathetic to the frustrations of our undergraduate students and their families as they seek clarity about arrangements for the fall semester.</li>
+<li>Because of the complexities created by adhering to protective distancing guidelines in our residence halls, dining facilities, and transportation system, undergraduate education remains the most difficult area of planning.</li>
+<li>Our current thinking will prioritize in-person instruction while respecting state and federal health and safety guidelines concerning the density of students who can occupy the campus.</li>
+<li>We will make a final decision on the scope of in-person undergraduate education by the first week of July.</li>
+</ul>
+<h5><strong>Summer 2020 Instruction</strong></h5>
+<p><strong>Rutgers University–Camden, Newark, and New Brunswick </strong></p>
+<ul>
+<li>There will be <strong>no in-person</strong> classes, programs, camps, conferences, or other activities at Rutgers University through at least August 14.</li>
+<li>All University-sponsored courses/programs/activities that will take place through August 14 on the Camden, Newark, and New Brunswick campuses will be done via remote technology.</li>
+</ul>
+<p><strong>Rutgers Biomedical and Health Sciences</strong></p>
+<ul type="disc">
+<li class="x_MsoNormal">Courses at RBHS continue as scheduled.</li>
+<li>The cancellation of in-person activities at Rutgers University through August 14 does not apply to RBHS clinical programs and activities; check with the relevant RBHS office to ascertain the status of RBHS summer programs, courses, and activities.</li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-2-content" id="wcs-accordion-9-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-2-content">
+            <span class="wcs-accordion__trigger__label">
+              Will Rutgers accept Pass/No credit grades from transfer students? [NEW]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-2-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <p>Rutgers will accept Pass/No-credit grades from students transferring to most schools at Rutgers. Students transferring to RBHS schools must submit letter grades (A to F) per accreditation requirements.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-3-content" id="wcs-accordion-9-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-3-content">
+            <span class="wcs-accordion__trigger__label">
+              What if I don’t have access to the internet during the remote instruction period? [UPDATED March 21]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-3-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <div>Free internet access is available from a number of sources. See the list of providers offering free internet access on the <a href="https://it.rutgers.edu/remote-student-resources/">Technology Resources for Students page.</a></div>
+<div></div>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-4-content" id="wcs-accordion-9-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-4-content">
+            <span class="wcs-accordion__trigger__label">
+              How does remote instruction affect student interns?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-4-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <p>Student interns should check with their faculty advisers for guidance.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-5-content" id="wcs-accordion-9-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-5-content">
+            <span class="wcs-accordion__trigger__label">
+              How can I return my rental textbooks? [UPDATED May 18]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-5-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <p>Rental textbooks are due June 15, 2020. Barnes &amp; Noble will provide a grace period during the summer semester to allow for students to ship their rental books back to the bookstore. Students that rented textbooks will receive emails beginning the week of exams reminding them to return their rental books.  This email will include the order # used and instructions for how to generate a free shipping label for rental returns. Students may also print their own shipping label from the bookstore website: www.rutgers.bncollege.com [Textbooks/Textbook Rentals/Rental Return].</p>
+<p><strong>Links for returning rental books</strong></p>
+<p>New Brunswick students:<br />
+<a href="https://rutgers.bncollege.com/shop/rutgers/page/rental-book-return">https://rutgers.bncollege.com/shop/rutgers/page/rental-book-return</a></p>
+<p>Newark students:<br />
+<a href="https://newark-rutgers.bncollege.com/shop/rutgers-newark/page/rental-book-return">https://newark-rutgers.bncollege.com/shop/rutgers-newark/page/rental-book-return</a></p>
+<p>Camden students:<br />
+<a href="https://universitydistrict.bncollege.com/shop/university-district/page/rental-book-return">https://universitydistrict.bncollege.com/shop/university-district/page/rental-book-return</a></p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-6-content" id="wcs-accordion-9-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-6-content">
+            <span class="wcs-accordion__trigger__label">
+              How will the 2020 summer session proceed?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-6-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <p>The 2020 Rutgers University summer session will proceed as scheduled. Because of the spread of the COVID-19 virus, instruction for all courses will be offered remotely.</p>
+<p>Registration is open for summer session classes. Please direct any questions you might have about course offerings to the school or department offering the course, or to the dean’s office of the school in which you are enrolled or wish to be enrolled.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-9-7-content" id="wcs-accordion-9-7-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-9-7-content">
+            <span class="wcs-accordion__trigger__label">
+              Where can graduate students find information?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-9-7-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-9-7-title-trigger" data-parent="wcs-accordion-9">
+              <div class="wcs-accordion__content__container">
+                <p>Graduate and professional school students may refer to their campus operating status (<a href="https://www.camden.rutgers.edu/about/responses-covid-19-rutgers-university-camden">Camden</a>, <a href="https://www.newark.rutgers.edu/covid-19-operating-status">Newark</a>, <a href="https://nbchancellor.rutgers.edu/status">New Brunswick</a>, <a href="https://academichealth.rutgers.edu/rbhs-operating-status">RBHS</a>) and to their <a href="https://www.rutgers.edu/academics/schools-and-colleges">school websites</a> for additional information about support services, remote instruction, degree completion, and more.</p>
+<p>Students in the <a href="https://gsnb.rutgers.edu">School of Graduate Studies</a> should refer to the school’s COVID-19 information including the deadline change for the submission of theses and dissertation materials and <a href="https://gsnb.rutgers.edu/covid-19-frequently-asked-questions">FAQ.</a></p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="housing"></a></p>
+<h3>HOUSING AND STUDENT LIFE</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-11">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-11-1-content" id="wcs-accordion-11-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-11-1-content">
+            <span class="wcs-accordion__trigger__label">
+              Where can I find up-to-date information about on-campus housing?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-11-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-11-1-title-trigger" data-parent="wcs-accordion-11">
+              <div class="wcs-accordion__content__container">
+                <p><strong>Rutgers University–New Brunswick and RBHS Students in New Brunswick<br />
+</strong></p>
+<ul>
+<li><a href="http://ruoncampus.rutgers.edu/residence-life-operation-status/">Residence Life&#8217;s Operating Status</a></li>
+</ul>
+<p class="x_MsoNormal"><b><strong>Rutgers University–</strong>Newark and RBHS Students in Newark<br />
+</b></p>
+<ul type="disc">
+<li class="x_MsoNormal"><span style="font-size: 1rem">Students will be notified via email about any changes to residence hall operations.</span></li>
+</ul>
+<p><strong>Rutgers University–Camden</strong></p>
+<ul>
+<li><a href="https://housing.camden.rutgers.edu">Resident Hall Operating Status</a></li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-11-2-content" id="wcs-accordion-11-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-11-2-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the operating hours for the Rutgers Student Food Pantry in New Brunswick? [UPDATED April 9]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-11-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-11-2-title-trigger" data-parent="wcs-accordion-11">
+              <div class="wcs-accordion__content__container">
+                <p class="x_MsoNormal">The Rutgers Student Food Pantry is operating out of the Graduate Student Lounge (126 College Ave, behind Panera Bread). Students can come to the Graduate Student Lounge by appointment only to receive a bag of non-perishable items. Appointments are available Monday, Wednesday, and Friday between the hours of 12–3 p.m.  Appointments must be made one day in advance by visiting <a href="http://go.rutgers.edu/foodsignup">go.rutgers.edu/<span class="x_SpellE">foodsignup</span></a>.</p>
+<p class="x_MsoNormal">39 Union Street, the off-campus office and normal location of the Rutgers Food Pantry, will be physically closed.</p>
+<p class="x_MsoNormal">For updates on status see the <a href="http://ruoffcampus.rutgers.edu/status/">Off-Campus Living Office and Food Pantry page</a> and their social media channels.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-11-3-content" id="wcs-accordion-11-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-11-3-content">
+            <span class="wcs-accordion__trigger__label">
+              Will facilities and services such as dining halls and recreation centers remain open while classes are suspended? [UPDATED March 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-11-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-11-3-title-trigger" data-parent="wcs-accordion-11">
+              <div class="wcs-accordion__content__container">
+                <p>Some services and facilities may not be operating or are operating on limited schedules. Check these websites for more updates on what is open and hours of operations.</p>
+<p>The main <a href="http://studentaffairs.rutgers.edu/division-operating-status/">Rutgers University–New Brunswick Student Affairs status page</a> provides the latest updates to Student Affairs Operations and Services. Please note recreation and students centers are closed.</p>
+<p>Specific details on <a href="http://food.rutgers.edu/operatingstatus/">food availability at Rutgers University–New Brunswick </a>.</p>
+<p class="post-title">Rutgers University–Camden announced an <a href="https://news.camden.rutgers.edu/2020/03/update-on-campus-responses-to-covid-19/" rel="bookmark">Update on Campus Responses to COVID-19</a>.</p>
+<p>Rutgers University–Newark announced <a href="https://coronavirus.rutgers.edu/rutgers-university-newark-spring-break-hours-of-operation/">Spring Break hours of operation</a>.</p>
+<p>Bus service is on a reduced schedule. Check <a title="https://ipo.rutgers.edu/dots" href="https://ipo.rutgers.edu/dots" rel="noopener noreferrer" data-auth="NotApplicable">Transportation Services</a> for updates.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-11-4-content" id="wcs-accordion-11-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-11-4-content">
+            <span class="wcs-accordion__trigger__label">
+              Is mail being delivered?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-11-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-11-4-title-trigger" data-parent="wcs-accordion-11">
+              <div class="wcs-accordion__content__container">
+                <p>Mail Services has suspended normal departmental mail delivery to campus locations on the Newark, RBHS, Piscataway, and New Brunswick campuses until further notice.</p>
+<p>Mail Services closed service windows at student post offices to limit exposure between postal clerk and students. Postal clerks will still be present at student post offices to support the students still on the New Brunswick, RBHS, and Newark campuses. Mail and packages for these on campus students will be placed into the automated locker system for students to retrieve.</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="events"></a></p>
+<h3>EVENTS</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-13">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-13-1-content" id="wcs-accordion-13-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-13-1-content">
+            <span class="wcs-accordion__trigger__label">
+              Are university events or gatherings canceled? [UPDATED April 2]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-13-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-13-1-title-trigger" data-parent="wcs-accordion-13">
+              <div class="wcs-accordion__content__container">
+                <ul>
+<li>All in-person university events are canceled through at least August 14.</li>
+<li>Groups with in-person events through August 14 are urged to begin considering alternative plans.</li>
+<li>No new non-essential events should be scheduled until further notice.</li>
+</ul>
+<p>Please also monitor event-specific postings to receive up-to-date guidance from event organizers. Students and university employees are reminded that part of good respiratory hygiene is staying home from events when they are ill.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-13-2-content" id="wcs-accordion-13-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-13-2-content">
+            <span class="wcs-accordion__trigger__label">
+              Are alumni events canceled?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-13-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-13-2-title-trigger" data-parent="wcs-accordion-13">
+              <div class="wcs-accordion__content__container">
+                <p>For updates and information about other alumni and donor events, please check the <a href="http://emailru.rutgers.edu/Am0k00IV30zZHWk00L0o0MS">Ralumni.com events page</a>.</p>
+<p>For more information about how to help students encountering difficulties, please visit the <a href="http://emailru.rutgers.edu/ujz000MV0L0Z0f03mWkISH0">Rutgers University Foundation</a> homepage.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-13-3-content" id="wcs-accordion-13-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-13-3-content">
+            <span class="wcs-accordion__trigger__label">
+              What steps has Rutgers Athletics taken regarding games and practices? [UPDATED]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-13-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-13-3-title-trigger" data-parent="wcs-accordion-13">
+              <div class="wcs-accordion__content__container">
+                <p>With the health and well-being of student-athletes, coaches, and staff of primary concern, Rutgers Athletics has taken the following steps proceeding until further notice:</p>
+<ul>
+<li>The NCAA and Big Ten Conference canceled all athletic competition for the remainder of this academic year.</li>
+<li>All third-party competitions or events scheduled to take place at Rutgers University Athletics facilities have been cancelled. The sponsoring entities have the discretion to place these events at alternative venues.</li>
+<li>All international travel is prohibited.</li>
+</ul>
+<p>All single game ticket purchases, as well as third-party ticketed events, will be refunded by the Rutgers Athletics Ticket Office. The Ticket Office will be contacting all accounts that purchased tickets once refunds are processed.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="faculty"></a></p>
+<h3>FACULTY AND STAFF</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-15">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-1-content" id="wcs-accordion-15-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-1-content">
+            <span class="wcs-accordion__trigger__label">
+              Is there an update to the March 19 communication on COVID-19 leave and telecommuting? [UPDATED June 19]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-1-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>In order to continue to support social distancing, the university will:</p>
+<ul>
+<li>Extend the telecommuting policy rule relaxation policy through <a href="https://sites.rutgers.edu/coronavirus/covid-19-telecommuting-policy-extended-through-august-31-2020/">August 31, 2020</a>.</li>
+<li>Provide COVID-19 related leave in concert with the Emergency Family Medical Leave Act (E-FMLA) and Emergency Paid Sick Leave Act (EPSLA) under the <a href="https://www.dol.gov/agencies/whd/pandemic/ffcra-employer-paid-leave">Families First Coronavirus Response Act</a> which was signed into law on March 18, 2020.</li>
+</ul>
+<p>Read the <a href="https://uhr.rutgers.edu/frequently-asked-questions-e-fmla-and-epsl">FAQ</a> to learn more about the provisions and processes of E-FMLA and EPSLA effective May 9 to December 31, 2020. You may also login to <a href="https://onesource.rutgers.edu/">OneSource</a> and select the COVID-19 Related Services option in the catalog for more details.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-2-content" id="wcs-accordion-15-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-2-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the guidelines and processes of how COVID-19 leaves will be managed under the Emergency Family and Medical Leave Expansion Act and Emergency Paid Sick Leave Act, effective May 9, 2020 to December 31, 2020? [May 1]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-2-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>Learn more about the <a href="https://coronavirus.rutgers.edu/emergency-family-and-medical-leave-expansion-act-e-fmla-and-emergency-paid-sick-leave-act-epsla/">provisions by reading the May 1, 2020, communications</a> and <a href="https://uhr.rutgers.edu/frequently-asked-questions-e-fmla-and-epsl">FAQ</a>. You may also login to <a href="https://onesource.rutgers.edu">OneSource</a> and select the COVID-19 Related Services option in the catalog.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-3-content" id="wcs-accordion-15-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-3-content">
+            <span class="wcs-accordion__trigger__label">
+              If I am diagnosed with COVID-19, what should I do?  [UPDATED May 1]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-3-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>Learn more about the <a href="https://coronavirus.rutgers.edu/emergency-family-and-medical-leave-expansion-act-e-fmla-and-emergency-paid-sick-leave-act-epsla/">provisions and processes of  E-FMLA and EPSLA</a> effective May 9 to December 31, 2020, and read the <a href="https://uhr.rutgers.edu/frequently-asked-questions-e-fmla-and-epsl">FAQ</a>. You should contact <a href="https://discover-uhr.rutgers.edu/onesource/home">OneSource</a> and forward appropriate medical documentation confirming the diagnosis within five (5) business days of your initial absence. You should also let your supervisor know that you will be absent due to illness, but you are not required to disclose your medical diagnosis to your supervisor.</p>
+<p>Diagnosed employees are advised to stay home and follow medical direction regarding treatment and absence from work.</p>
+<p class="xxmsonormal">Employees who test positive for COVID-19 and are physically on campus or in Rutgers facilities should contact Occupational Health directly to report the case and seek guidance.</p>
+<p class="xxmsonormal"><strong style="font-size: 1.2rem">Rutgers Occupational Health offices by location:</strong></p>
+<ul>
+<li>Rutgers–New Brunswick, Rutgers–Newark, and Rutgers–Camden: <a href="tel:+1-848-932-8254">848-932-8254</a></li>
+<li>Rutgers Biomedical and Health Sciences (RBHS) Newark: <a href="tel:+1-973-972-2900">973-972-2900</a></li>
+<li>RBHS New Brunswick/Piscataway and University Correctional Health Care: <a href="tel:+1-848-445-0123p2">848-445-0123 ext. 2</a></li>
+<li>Robert Wood Johnson Medical School faculty and staff: <a href="tel:+1-732-235-6559">732-235-6559</a></li>
+</ul>
+<p>The Occupational Health office will then evaluate these individuals and the risk of exposure to others in accordance with the N.J. Department of Health and CDC Risk Assessment Guidelines. As appropriate, Occupational Health will speak to those who are deemed to be close contacts of the individual and potentially at risk. Those who are not contacted will have been deemed to not be at-risk.</p>
+<p>If there are locations and areas that require additional cleaning following a report of a positive COVID-19 test, those areas will be addressed by the University’s Institutional Planning and Operations and Environmental Health and Safety staff. It is important to know that tracking and reporting positive COVID-19 tests is the responsibility of local and state health departments. Any announcements regarding positive COVID-19 cases will come from those agencies.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-4-content" id="wcs-accordion-15-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-4-content">
+            <span class="wcs-accordion__trigger__label">
+              What is the status of university operations for faculty and staff? [UPDATED May 1]             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-4-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <ul>
+<li>Rutgers is open and operating. The university has moved to remote instruction, with the exception of clinical instruction, for the remainder of the spring semester. Some services and facilities may not be operating or are operating on limited schedules.</li>
+<li><span style="font-size: 1rem">University Human Resources has issued an <a href="https://coronavirus.rutgers.edu/covid-19-update-on-leave-and-telecommuting/">Update on Leave and Telecommuting (March 19), </a></span>a follow-up communication on <a href="https://coronavirus.rutgers.edu/covid-19-telecommuting-and-covid-19-paid-leave-update/">COVID-19 Telecommuting and COVID-19 Paid Leave Update (April 24)</a>, an timeline extension email <a href="https://coronavirus.rutgers.edu/covid-19-telecommuting-extended-through-june-30-2020/">COVID-19 Telecommuting Extended until June 30 (May 19)</a>, and an email on the <a href="https://coronavirus.rutgers.edu/emergency-family-and-medical-leave-expansion-act-e-fmla-and-emergency-paid-sick-leave-act-epsla/">Emergency Family and Medical Leave Expansion Act (E-FMLA) and Emergency Paid Sick Leave Act (EPSLA) (May 1)</a> that is effective May 9 to Dec. 31, 2020. Please refer to the most recent <a href="https://coronavirus.rutgers.edu/communications/">communications</a> for the latest information. Or review UHR&#8217;s <a href="https://discover-uhr.rutgers.edu/onesource/home">OneSource</a> website for additional information on policies.</li>
+<li>Clinical research guidance for the RBHS community is detailed in the communication, <a href="https://coronavirus.rutgers.edu/wp-content/uploads/sites/425/2020/03/Guidance-Conduct_of_Clinical_Research_COVID19-3.13.2020.pdf">Guidance on the Conduct of Clinical Research at Rutgers Biomedical and Health Sciences during the COVID-19 Pandemic</a>.</li>
+<li><span style="font-size: 1rem">Employees are strongly encouraged to use teleconference services, such as </span><a style="font-size: 1rem" href="https://webex.rutgers.edu/">Webex</a><span style="font-size: 1rem">, in lieu of in-person meetings.</span></li>
+<li>Specific <a href="https://coronavirus.rutgers.edu/domestic-travel-restriction-and-meeting-covid19-guidance-for-rutgers-healthcare-faculty-staff-and-students-who-directly-interact-with-patients/">guidance for health care workers</a> who have direct contact with patients will be forthcoming from the Executive Vice President of Health Affairs.</li>
+<li>Please take steps to protect your health and the health of your co-workers by following <a href="https://coronavirus.rutgers.edu/care-and-prevention/">guidance on prevention and care</a>. If you feel unwell, please stay home.</li>
+</ul>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-5-content" id="wcs-accordion-15-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-5-content">
+            <span class="wcs-accordion__trigger__label">
+              Can employee be sent home from work if they are showing fever, cough, shortness of breath, or other flu-like symptoms?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-5-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>If an employee is showing flu-like symptoms (e.g., fever above 100.4ºF, cough and/or sore throat, body aches, headache, chills) or symptoms consistent with COVID-19 (fever, cough, shortness of breath) their supervisor should direct them to leave work. If the employee appears too ill to drive, the supervisor may offer to call a family member to pick them up. If the employee asks for an ambulance or appears very ill, the supervisor should call an ambulance.</p>
+<p>In advising the employee, supervisors should be mindful of current recommendations from Rutgers’ Senior Vice Chancellor of Health Affairs and the CDC regarding COVID-19—it is generally recommended that employees remain home from work until they are fever free (without the use of fever-reducing medications) for at least 24 hours.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-6-content" id="wcs-accordion-15-6-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-6-content">
+            <span class="wcs-accordion__trigger__label">
+              What should a supervisor do if an employee is showing fever, cough, shortness of breath, or other flu-like symptoms, and is asked to go home, the employee is refusing to go?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-6-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-6-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>If an employee refuses to go home, the supervisor may call Occupational Health (OH) and transfer the call to the employee for discussion with a physician or nurse. After a discussion with the employee, OH will advise both employee and the supervisor whether the employee will go home and the expected duration of absence. OH will also provide direction to the employee about when to return to work. If the employee is sent home, the employee may return to work only when they have  been fever-free (and off fever-reducing medications) for the past 24 hours.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-7-content" id="wcs-accordion-15-7-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-7-content">
+            <span class="wcs-accordion__trigger__label">
+              Should a supervisor inform other employees in their department if one of their co-workers has been diagnosed with COVID-19?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-7-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-7-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>No. The supervisor should inform their local <a href="https://sites.rutgers.edu/coronavirus/care-and-prevention/">Occupational Health Office</a> and they will provide guidance on the matter.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-8-content" id="wcs-accordion-15-8-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-8-content">
+            <span class="wcs-accordion__trigger__label">
+              Is a supervisor required to report any case of COVID-19 infection to any university department?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-8-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-8-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>A supervisor should contact <a href="https://sites.rutgers.edu/coronavirus/care-and-prevention/">Occupational Health</a> if an employee has a seen a physician and has been diagnosed with COVID-19.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-9-content" id="wcs-accordion-15-9-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-9-content">
+            <span class="wcs-accordion__trigger__label">
+              Has the university recommended a preferred practice to teach remotely (i.e., use Webex during regular classtime)—or do faculty have carte blanche during this time?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-9-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-9-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>We have encouraged faculty to consider a variety of approaches to <a href="https://coronavirus.rutgers.edu/resources-for-faculty/">remote instruction</a>. The decision is up to each faculty member.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-10-content" id="wcs-accordion-15-10-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-10-content">
+            <span class="wcs-accordion__trigger__label">
+              Are there special protocols or precautions for working on campus?              </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-10-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-10-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>Employee safety is our top priority, as such we ask employees to follow CDC recommendations for everyday preventive actions to void the spread of COVID-19, including:</p>
+<ul>
+<li>Avoid touching your eyes, nose, and mouth.</li>
+<li>Stay home when you are sick.</li>
+<li>Cover your cough or sneeze with a tissue, then throw the tissue in the trash.</li>
+<li>Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing.</li>
+<li>Do not organize or attend in-person meetings with more than 15 people.</li>
+</ul>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-11-content" id="wcs-accordion-15-11-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-11-content">
+            <span class="wcs-accordion__trigger__label">
+              Are there changes to how faculty will be evaluated for the spring 2020 semester? [March 20]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-11-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-11-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>Changes with respect to faculty evaluations:</p>
+<ol>
+<li>We will extend the probationary period (tenure clock) for full-time tenure track faculty who are in a probationary period as of January 1, 2020, for one year. In other words, academic year 2019-20 will be excluded from their probationary period—much like we exclude an academic year for other contractual reasons (parental or medical leaves). Faculty will have until May 1 to request an additional year, which must be approved by the department chair and the dean.</li>
+<li>We will administer student course evaluations at the end of the semester, as is our usual practice, but will permit faculty, at their option, to exclude the teaching evaluation data for spring 2020 from their promotion or reappointment packets.</li>
+</ol>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-12-content" id="wcs-accordion-15-12-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-12-content">
+            <span class="wcs-accordion__trigger__label">
+              Is mail being delivered?             </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-12-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-12-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>Mail Services has suspended normal departmental mail delivery to campus locations on the Newark, RBHS, Piscataway and New Brunswick campuses until further notice.</p>
+<p><u>Important Notices for Rutgers New Brunswick, Rutgers Newark, and RBHS:</u></p>
+<ul>
+<li>RBHS loading docks will remain open but will not be delivering. Departments will need to go to the loading dock area to retrieve their packages.</li>
+<li>Campus mail will continue to be transported between Newark/ New Brunswick and Camden/ New Brunswick.</li>
+<li>Mail Services will be working with UPS, FedEx, DHL, Amazon, Laser Ship and Office Depot to redirect departmental deliveries (with the exception of RBHS loading dock locations) to one of the Mail Hubs mentioned above. These packages will be held until picked up by their respective department.</li>
+</ul>
+<p><u>New Brunswick/Piscataway areas:</u><br />
+In place of the former mail delivery system, departments will have two options:</p>
+<ol>
+<li>Departments may pick up their mail and drop off outgoing mail at the following location between 9:00am – 2:00pm, Monday through Friday. ASB II, 57 U.S. Highway 1 on the Cook Campus. Use the rear loading dock entrance; ring the bell and our staff will assist you.</li>
+<li>Departments may request that their mail be held at the ASB II Mail Facility  for an extended period of time. Please email mailquestions@ipo.rutgers.edu to request this option.</li>
+</ol>
+<p>Please feel free to contact Tom Stadthaus (New Brunswick) at tom.stadthaus@rutgers.edu or at 848- 932-4267.<br />
+<u></u></p>
+<p><u>Newark Areas:</u><br />
+In place of the former mail delivery system, departments will have two options:</p>
+<ol>
+<li>Departments may pick up their mail and drop off outgoing mail at the following locations between 9:00am – 2:00pm, Monday through Friday.
+<ul>
+<li>Departments with an address that contains zip code 07103 please use Mail Services located at 30 Bergen St, ADMC complex, room 212, please use the rear door in the rear of the parking lot</li>
+<li>Departments with an address that contain zip code 07102 please use Mail Services located at 110 Bradley Hall, our office is on the first floor next to the elevators.</li>
+</ul>
+</li>
+<li>Departments may request that their mail be held at our Mail Facility for an extended period of time. Please email mailquestionsnewark@ipo.rutgers.edu to request this option.</li>
+</ol>
+<p>Please feel free to contact Sam Bandy (Newark) at 973-972-4060 or Samuel.bandy@rutgers.edu with any questions.</p>
+<p><u>Camden Areas:</u><br />
+These changes do not apply to the Camden Campus Mail service. For more information on Camden Mail Service please contact Shari Wakeley 856-225-6003 or shari.wakeley@rutgers.edu</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-13-content" id="wcs-accordion-15-13-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-13-content">
+            <span class="wcs-accordion__trigger__label">
+              What are the university's new guidelines for deliveries to Rutgers and non-Rutgers addresses? [March 26]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-13-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-13-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>The University Finance and Administration <a href="https://finance.rutgers.edu/COVID19">COVID-19 Updates page</a> has posted guidelines for <a href="https://finance.rutgers.edu/guidelines-deliveries-rutgers-and-non-rutgers-addresses">deliveries to Rutgers and non-Rutgers addresses</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-15-14-content" id="wcs-accordion-15-14-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-15-14-content">
+            <span class="wcs-accordion__trigger__label">
+              Is there an essential employee card or letter that I could use when traveling to and from Rutgers? [March 22]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-15-14-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-15-14-title-trigger" data-parent="wcs-accordion-15">
+              <div class="wcs-accordion__content__container">
+                <p>In response to questions about a potential essential employee card or letter, John Hoffman, <span class="st">Senior Vice President and General Counsel,</span> has developed the following guidance in accordance with the Governors Executive Order 107:</p>
+<ol>
+<li>Display your Rutgers ID, which you should keep with you at all times;</li>
+<li>If you are stopped explain that you are traveling to or from work at an educational institution, or in support of essential operations at an educational institution, and that remote support of this educational function is not practicable, all of which is expressly provided for in the Governor’s Executive Order (EO 107 at paragraphs 2, 10-11); and</li>
+<li>Verification of your employment can be provided by RUPD, which can be reached at 848-932-7211.</li>
+</ol>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+    <div class="col-sm-12">
+		<p><a name="research"></a></p>
+<h3>RESEARCH</h3>
+    </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-17">
+      <dl class="wcs-accordion">
+                    <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-17-1-content" id="wcs-accordion-17-1-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-17-1-content">
+            <span class="wcs-accordion__trigger__label">
+              Is there a plan to return Rutgers to conducting research? [NEW May 30]            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-17-1-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-17-1-title-trigger" data-parent="wcs-accordion-17">
+              <div class="wcs-accordion__content__container">
+                <p>Yes, a detailed plan is available with a phased and safe Return to Research at the university. The plan involves increasing Rutgers research capacity in 25% increments, then assessing results before moving to the next phase. This is a method that a number of our peer universities are initiating as well. <a href="https://coronavirus.rutgers.edu/wp-content/uploads/sites/425/2020/05/Return-to-Research-PIs-05-29-20.pdf">Read the communications</a> from David Kimball, senior vice president, Research and Economic Development, that outlines the plan.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-17-2-content" id="wcs-accordion-17-2-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-17-2-content">
+            <span class="wcs-accordion__trigger__label">
+              What is the university’s response to questions regarding laboratory research?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-17-2-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-17-2-title-trigger" data-parent="wcs-accordion-17">
+              <div class="wcs-accordion__content__container">
+                <p>The Office of Research and Economic Development (ORED) has posted FAQs regarding laboratory research on <a href="https://ored.rutgers.edu/faq-covid19#LabResearch">their website</a>.</p>
+<p>On March 25, 2020, ORED issued the memo, <a href="https://ored.rutgers.edu/sites/ored.rutgers.edu/files/Status_Update-Research_Operations_%26_Contingency_Planning.pdf">Status Update: Research Operations and Contingency Planning</a>, which communicates the following mandates for responsible research operations:</p>
+<ol>
+<li>Telecommuting &#8211; Research and research related activities that can be performed remotely, must be performed remotely until further notification.</li>
+<li>Onsite Work &#8211; Any presence onsite requires strict adherence to social distancing and may require rescheduling researchers to reduce their density in the research labs. Research laboratories should minimize overlap among the roles of key personnel onsite at any given time to ensure strict enforcement of university and CDC guidance on health care and minimize the risk that an entire cohort of researchers could become infected.</li>
+<li>Further Contingency Planning – Researchers are urged to consider which specific research experiments, studies and projects would be considered critical and to develop plans in the event further restrictions are imposed on onsite laboratory research.</li>
+</ol>
+<p>Please read the <a href="https://ored.rutgers.edu/sites/ored.rutgers.edu/files/Status_Update-Research_Operations_%26_Contingency_Planning.pdf">memo</a> for important details.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-17-3-content" id="wcs-accordion-17-3-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-17-3-content">
+            <span class="wcs-accordion__trigger__label">
+              What is the university’s response to questions regarding research administration?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-17-3-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-17-3-title-trigger" data-parent="wcs-accordion-17">
+              <div class="wcs-accordion__content__container">
+                <p>The Office of Research and Economic Development has posted FAQs regarding research administration on <a href="https://ored.rutgers.edu/faq-covid19#ResearchAdmin">their website</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-17-4-content" id="wcs-accordion-17-4-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-17-4-content">
+            <span class="wcs-accordion__trigger__label">
+              What guidance has the university provided for maintaining animal care and facilities?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-17-4-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-17-4-title-trigger" data-parent="wcs-accordion-17">
+              <div class="wcs-accordion__content__container">
+                <p>The Office of Research and Economic Development has posted FAQs regarding animal care on <a href="http://orad.rutgers.edu/sites/orad.rutgers.edu/files/Rutgers_Animal_Care_COVID-19_FAQ.pdf">their website</a>.</p>
+              </div>
+            </dd>
+                        <dt class="wcs-accordion__title">
+              <button type="button" class="wcs-accordion__trigger" aria-expanded="false"
+                      aria-controls="wcs-accordion-17-5-content" id="wcs-accordion-17-5-title-trigger"
+                      data-toggle="collapse" data-target="#wcs-accordion-17-5-content">
+            <span class="wcs-accordion__trigger__label">
+              How can I support Rutgers COVID-19 research and clinical care?            </span>
+              </button>
+            </dt>
+            <dd role="region" id="wcs-accordion-17-5-content" class="wcs-accordion__content collapse"
+                aria-labelledby="wcs-accordion-17-5-title-trigger" data-parent="wcs-accordion-17">
+              <div class="wcs-accordion__content__container">
+                <p>The Rutgers Foundation has created an emergency fund to support research, clinical care, and the purchase of medical supplies. You can make a donation online at: <a href="http://give.rutgers.edu/covid19">give.rutgers.edu/covid19</a>. Learn more about emergency support funding at: <a href="http://support.rutgers.edu/covid19support">support.rutgers.edu/covid19support</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+              </div>
+            </dd>
+                  </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+<div class="cb-row transparent" style="">
+        <div class="container">
+<div class="row">
+  <div class="col">
+    <div class="wcs-accordion__wrap" role="presentation" id="wcs-accordion-18">
+      <dl class="wcs-accordion">
+              </dl>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+
+</div>	
+      </main><!-- /.main -->
+          </div><!-- /.content -->
+  </div><!-- /.wrap -->
+  <footer class="content-info">
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 order-4 order-sm-1">
+					<section class="widget text-4 widget_text"><h3>COVID-19 Resources</h3>			<div class="textwidget"><p><a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">Centers for Disease Control and Prevention</a></p>
+<p><a href="https://www.state.nj.us/health/cd/topics/ncov.shtml">New Jersey’s Official COVID-19 Information Hub</a></p>
+<p><a href="/resources-2/">Additional Resources</a></p>
+</div>
+		</section>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-3 order-sm-2">
+					<section class="widget text-5 widget_text"><h3>Hotline</h3>			<div class="textwidget"><p>New Jersey Poison Information and Education System at Rutgers is serving as the <strong>NJDOH COVID-19 Call Center</strong>—<strong>call the hotline at </strong><a href="tel:+1-800-222-1222"><strong>1-800-222-1222</strong></a> for assistance in multiple languages and 24 hours a day.</p>
+</div>
+		</section>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-2 order-sm-3">
+					<section class="widget text-6 widget_text"><h3>Contact Us</h3>			<div class="textwidget"><p><strong><a href="https://rutgers.ca1.qualtrics.com/jfe/form/SV_5cMs6A1eHbzgfQ1">Contact us</a></strong> if you have a question related to information posted on this site. Or email the Rutgers Office of Emergency Management at <a href="mailto:covid19@rutgers.edu">covid19@rutgers.edu</a></p>
+</div>
+		</section>                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-1 order-sm-4">
+                    <div class="logo-rutgers">
+                        <a class="brand" href="https://coronavirus.rutgers.edu/">
+							<svg class="logo-rutgers--noshield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222.63 59.86"><defs><style>.logo-rutgers--noshield .cls-1{fill:#e31837;fill-rule:evenodd;}</style></defs><path class="cls-1" d="M65.91,42.26l1.56-.47V15.59c0-6.34,0-6.6,2-6.81l1.87-.15V7.51H58.74V8.63l1.87.15c2,.21,2,.47,2,6.81V36.7a12.49,12.49,0,0,1-9.41,4.16c-8,0-9.29-4.94-9.29-12.37V15.59c0-6.34,0-6.6,2-6.81l1.87-.15V7.51H35.21V8.63l1.87.15c2,.21,2,.47,2,6.81V29.32c0,7.07.88,13.25,11.63,13.25,6.91,0,11.22-3.27,11.95-3.27s1.19.73,1.92,1.45Z"/><path class="cls-1" d="M79.82,41.79H94.21V40.67l-1.87-.15c-2.91-.21-2.91-.47-2.91-6.81V9h2.7c7.33,0,7.43.78,8.58,6.8H102c0-.2-.26-7.12-.47-8.26H72.55c-.21,1.14-.47,8.06-.47,8.26h1.25c1.14-6,1.25-6.8,8.57-6.8h2.7V33.71c0,6.34,0,6.6-2.85,6.81l-1.93.15Z"/><path class="cls-1" d="M133.93,35c0-5.06,0-5.32,1-5.53l1.87-.16V28.16h-13.2v1.11l1.87.16c3.64.21,3.64.47,3.64,6.83v3.92a26.49,26.49,0,0,1-6.08.68c-10.18,0-14.7-8.23-14.7-17.09,0-9.71,5.35-15.32,13.87-15.32,8.88,0,9.56,6.33,10.08,8.41l1.4-.31c-.23-2.56-.5-5.47-.83-7.69-1.35-.83-5.3-2.13-10.6-2.13-8.21,0-19.37,4.16-19.37,18,0,13.23,9.35,17.81,19.79,17.81A34.33,34.33,0,0,0,134,40.5S133.93,36.52,133.93,35Z"/><path class="cls-1" d="M140,41.79h23.79a84.28,84.28,0,0,0,1.71-8.62L164.19,33c-1,4.26-1.56,7.38-9.83,7.38a29.36,29.36,0,0,1-5.65-.68v-15h4.61c4,0,5,.06,5.29,2.19l.26,1.76h1.37V19.3h-1.37l-.26,1.77c-.31,2.13-1.25,2.18-5.29,2.18h-4.61V9H153c7.33,0,7.44.77,8.58,6.33l1.25-.21c0-.46-.26-6.44-.47-7.58H140V8.63l1.87.15c2,.21,2,.47,2,6.82V33.7c0,6.35,0,6.61-2,6.82l-1.87.15Z"/><path class="cls-1" d="M169.56,41.79h12.57V40.67l-1.88-.15c-2-.21-2-.47-2-6.82V26.83h1.93a5.17,5.17,0,0,1,3.22.68,23.74,23.74,0,0,1,3.21,5.1l2.08,4c1.56,2.86,3.95,5.17,7.38,5.17h4V40.67a5.45,5.45,0,0,1-2.6-.51c-1.3-.73-3.59-3.8-5.77-7.71-1.4-2.49-3.12-5.83-3.9-7.28,2.86-1.35,7.17-4.21,7.17-9,0-7.9-7-8.61-11.89-8.61H169.56V8.63l1.87.15c2,.21,2,.47,2,6.82V33.7c0,6.35,0,6.61-2,6.82l-1.87.15Zm8.72-32.15a16.41,16.41,0,0,1,3.22-.42c4.05,0,8.05,1.88,8.05,8,0,5.87-3.94,8.21-8.31,8.21h-3Z"/><path class="cls-1" d="M211.41,20.5c-2.8-1.66-5-3.33-5-6.39A5.51,5.51,0,0,1,212,8.45c5.86,0,6.7,4.52,7.21,7.11h1.31c-.13-1.51-.26-5.32-.53-7.17a14.47,14.47,0,0,0-7.16-1.66c-5.51,0-10.81,2.65-10.81,9,0,3.89,2.76,7.11,5.72,8.72l3.32,1.82c4.05,1.82,7.22,4.42,7.22,8.21,0,4.05-2.65,6.39-6.23,6.39-7.12,0-9-6.18-9.61-9.92l-1.66.41c.58,3.56,1.16,7.18,1.66,9.15a15,15,0,0,0,8.15,2.07c5.51,0,12-2.7,12-9.71,0-6.24-4.26-8.42-8.36-10.75Z"/><path class="cls-1" d="M23.27,22c.59,3.3,5.18,11.75,6.94,14.89,4,7.34,14.17,22.18,21.79,21.7h.88v1.2l-1.34.05c-10.78.42-20.41-11.59-26-21.22-2.28-3.92-4.49-8.46-6.46-12.54a4.64,4.64,0,0,0-1.79-2.15,7.92,7.92,0,0,0-3.6-.55c-.66,0-2.64,0-3.67,0V32c0,1.59-.12,5.53.31,7.08.34,1.23,1.08,1.38,2.3,1.51l2.11.18v1H0v-1l2.11-.18c1.26-.13,2-.28,2.36-1.51.44-1.53.32-5.5.32-7.08V9.78c0-1.58.12-5.55-.32-7.08-.35-1.23-1.1-1.38-2.36-1.51L0,1V0H10C18.88,0,30.8-1.22,30.8,11.2c0,5-3.42,8.31-7.59,10.36A3.41,3.41,0,0,0,23.27,22ZM10,22c1.59.09,3.3,0,4.89,0,6.15,0,9.91-3.3,9.91-9.45C24.8,5.84,21,1.73,14.17,1.73A21.66,21.66,0,0,0,10,2.28Z"/></svg>                        </a>
+                    </div>
+
+                    <div class="contact-info text-left">
+                        <p>
+
+							                        <p>
+																					                        </p>
+						                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sub-footer">
+    <div class="container text-center">
+        <p><a href="mailto:sites-at-rutgers@oit.rutgers.edu">Contact Webmaster</a><span
+                    class="accessibility-notice-js"> | <a href="#" data-toggle="modal"
+                                                          data-target="#accessibilityModal"
+                                                          class="accessibility-notice-link">Accessibility</a></span>
+        </p>
+        <p class="accessibility-notice-no-js">Rutgers is an equal access/equal opportunity institution. Individuals
+            with disabilities are encouraged to direct suggestions, comments, or complaints concerning any
+            accessibility issues with Rutgers web sites to <a href="mailto:accessibility@rutgers.edu">accessibility@rutgers.edu</a>
+            or complete the <a href="https://accessibility.rutgers.edu/barrierform">Report Accessibility Barrier or
+                Provide Feedback Form</a>.</p>
+        <p>Copyright ©2020</a>, <a href="http://rutgers.edu">Rutgers, The State University of
+                New Jersey</a></p>
+    </div>
+</div>
+
+<div class="modal fade" id="accessibilityModal" tabindex="-1" role="dialog"
+     aria-labelledby="accessibilityModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accessibilityModalTitle">Accessibility Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Rutgers is an equal access/equal opportunity institution. Individuals with disabilities are
+                    encouraged to direct suggestions, comments, or complaints concerning any accessibility issues
+                    with Rutgers web sites to <a
+                            href="mailto:accessibility@rutgers.edu">accessibility@rutgers.edu</a> or complete the <a
+                            href="https://accessibility.rutgers.edu/barrierform">Report Accessibility Barrier or
+                        Provide Feedback Form</a>.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer>
+<!-- AddThis Sharing Script -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a956c310454803e"></script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script src="https://code.jquery.com/jquery-1.12.4-wp.min.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajaxsearchlite = {"ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","js_scope":"jQuery"};
+var ASL = {"ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","js_scope":"jQuery","detect_ajax":"0","scrollbar":"1","js_retain_popstate":"0","version":"4737","fix_duplicates":"1"};
+/* ]]> */
+</script>
+<script>(window.jQuery && jQuery.noConflict()) || document.write('<script src="https://coronavirus.rutgers.edu/wp-includes/js/jquery/jquery.js"><\/script>')</script>
+<script src="/coronavirus/wp-content/plugins/ajax-search-lite/js/min/jquery.ajaxsearchlite.min.js?ver=4.8"></script>
+<script src="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/scripts/main.js"></script>
+<script src="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/scripts/accessibility.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a852971bae","applicationID":"205519541","transactionName":"YFJRY0BQVkdUVEdbV1kYZkVbHhddW1NWShZHX0M=","queueTime":0,"applicationTime":399,"atts":"TBVSFQhKRUk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

@@ -1,0 +1,621 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a852971bae",applicationID:"205519541"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TML9HWS');</script>
+<!-- End Google Tag Manager -->
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-159873833-1", 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cc0033">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
+    <title>COVID-19 Telecommuting – Extended through August 31, 2020 - Universitywide COVID-19 Information</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirus.rutgers.edu/covid-19-telecommuting-policy-extended-through-august-31-2020/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="COVID-19 Telecommuting – Extended through August 31, 2020 - Universitywide COVID-19 Information" />
+<meta property="og:description" content="June 19, 2020 Dear Rutgers Colleagues, In order to continue to support social distancing, the telecommuting rule relaxation policy set to expire on June 30, 2020 has been extended through August 31, 2020. Telecommuting is automatically updated and does not require a new or revised request unless there has been a change to your work &hellip; Read More" />
+<meta property="og:url" content="https://coronavirus.rutgers.edu/covid-19-telecommuting-policy-extended-through-august-31-2020/" />
+<meta property="og:site_name" content="Universitywide COVID-19 Information" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="June 19, 2020 Dear Rutgers Colleagues, In order to continue to support social distancing, the telecommuting rule relaxation policy set to expire on June 30, 2020 has been extended through August 31, 2020. Telecommuting is automatically updated and does not require a new or revised request unless there has been a change to your work &hellip; Read More" />
+<meta name="twitter:title" content="COVID-19 Telecommuting – Extended through August 31, 2020 - Universitywide COVID-19 Information" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronavirus.rutgers.edu/#website","url":"https://coronavirus.rutgers.edu/","name":"Universitywide COVID-19 Information","inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://coronavirus.rutgers.edu/search/{search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://coronavirus.rutgers.edu/covid-19-telecommuting-policy-extended-through-august-31-2020/#webpage","url":"https://coronavirus.rutgers.edu/covid-19-telecommuting-policy-extended-through-august-31-2020/","name":"COVID-19 Telecommuting \u2013 Extended through August 31, 2020 - Universitywide COVID-19 Information","isPartOf":{"@id":"https://coronavirus.rutgers.edu/#website"},"inLanguage":"en-US","datePublished":"2020-06-19T16:22:27+00:00","dateModified":"2020-06-29T22:59:52+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//sites.rutgers.edu' />
+<link rel='dns-prefetch' href='//coronavirus.rutgers.edu' />
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.11.2.1">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.11.2.1">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2">
+<link rel="stylesheet" href="/coronavirus/wp-content/plugins/ajax-search-lite/css/style.basic.css?ver=4.8">
+<link rel="stylesheet" href="/coronavirus/wp-content/plugins/ajax-search-lite/css/style-simple-red.css?ver=4.8">
+<link rel="stylesheet" href="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/styles/main.css?ver=1.0.0">
+<script src='https://sites.rutgers.edu/?dm=464145f44c97e5ebb6c6a6e3931babc5&amp;action=load&amp;blogid=425&amp;siteid=1&amp;t=176797262&amp;back=https%3A%2F%2Fcoronavirus.rutgers.edu%2Fcovid-19-telecommuting-policy-extended-through-august-31-2020%2F' type='text/javascript'></script><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://coronavirus.rutgers.edu"><link rel="https://theeventscalendar.com/" href="https://coronavirus.rutgers.edu/wp-json/tribe/events/v1/" />
+<!-- CSS Automatic Override Styles via selected Customize-specific options -->
+<style type="text/css">
+  body>header>.container:nth-child(2),
+  body>header {
+    background-color: #FFFFFF !important;
+  }
+
+  body>header>.navigation-bar {
+    background-color: #333333 !important;
+  }
+
+  #rutgers-logo g#label-rutgers .cls-2 {
+    fill: #CE0534  }
+
+  .logo h2 {
+    color: #231F20;
+    border-color: #231F20;
+  }
+
+  #rutgers-logo g#label-school .cls-3 {
+    fill: #231F20;
+  }
+
+  .pre-header {
+    background-color: #CE0534  }
+
+</style>
+                <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+                                <style type="text/css">
+                    <!--
+                    
+            @font-face {
+                font-family: 'aslsicons2';
+                src: url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot');
+                src: url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot?#iefix') format('embedded-opentype'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff2') format('woff2'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff') format('woff'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.ttf') format('truetype'),
+                     url('https://coronavirus.rutgers.edu/wp-content/plugins/ajax-search-lite/css/fonts/icons2.svg#icons') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label {
+                font-size: 0px !important;
+                color: rgba(0, 0, 0, 0);
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label:after {
+                font-size: 11px !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            div[id*='ajaxsearchlite'].wpdreams_asl_container {
+                width: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {
+                font-weight: bold;
+                color: rgba(217, 49, 43, 1);
+                background-color: rgba(238, 238, 238, 1);
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results .results div.asl_image {
+                width: 70px;
+                height: 70px;
+            }
+            div.asl_r .results {
+                max-height: auto;
+            }
+                                -->
+                </style>
+                            <script type="text/javascript">
+                if ( typeof _ASL !== "undefined" && _ASL !== null && typeof _ASL.initialize !== "undefined" )
+                    _ASL.initialize();
+            </script>
+            <link rel="icon" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192-150x150.png" sizes="32x32" />
+<link rel="icon" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" />
+<meta name="msapplication-TileImage" content="/coronavirus/wp-content/uploads/sites/425/2018/01/android-chrome-192x192.png" />
+		<style type="text/css" id="wp-custom-css">
+			.home.page .stage { display: none; }
+
+.home.page .cta-wrapper {
+	display:none;
+}
+
+.home.page .cb-content.container {
+	margin-top: -40px;
+/* 		padding: 0; */
+
+}
+
+
+@media (min-width: 768px){ 
+	.home.page main .container > .row {
+		flex-direction:  row-reverse !important;
+	}
+	.home.page .cb-content.container .container {
+	padding: 0;
+}
+
+.home.page .cb-content.container .container .col-sm-12 {
+	padding-left: 0;
+}
+
+}
+
+
+@media (max-width: 768px){ 
+	.home.page main .container > .row {
+		flex-direction:  column-reverse !important;
+	}
+	.home.page .cb-content.container .container .col-sm-12 {
+	padding: 0;
+}
+	
+}
+
+
+.home.page .cb-content.container .col-md-8.col-lg-9  >.cb-content .container {
+	padding: 0;
+}
+
+
+.home.page .cb-content.container .col-md-8.col-lg-9  >.cb-content .container .col-sm-12 {
+	padding-left: 0;
+}
+
+.figure-caption, .wp-caption-text {
+	color: #444;
+}
+
+.main-footer a:hover {
+    color: #fc0;
+    text-decoration: underline;
+}		</style>
+		    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+  
+<body class="page-template page-template-template-custom page-template-template-custom-php page page-id-2488 tribe-no-js covid-19-telecommuting-policy-extended-through-august-31-2020">
+  <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TML9HWS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!--[if IE]>
+<div class="alert alert-warning">
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
+    browser</a> to improve your experience.</div>
+<![endif]-->
+  <a href="#main-content" class="screen-reader-text">Skip to main content</a>
+<div class="mobile-overlay"></div>
+<header class="banner">
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+				<nav>
+      <ul class="global-links">
+      <li><a href="http://rutgers.edu/" target="_blank">Rutgers.edu</a></li>
+      <li><a href="http://newbrunswick.rutgers.edu/" target="_blank">New Brunswick</a></li>
+      <li><a href="http://rbhs.rutgers.edu/" target="_blank">RBHS</a></li>
+      <li><a href="http://www.newark.rutgers.edu/" target="_blank">Newark</a></li>
+      <li><a href="http://www.camden.rutgers.edu/" target="_blank">Camden</a></li>
+      <li><a href="http://onlinelearning.rutgers.edu/" target="_blank">Online</a></li>
+      <li><a href="http://rutgershealth.org/" target="_blank">Rutgers Health</a></li>
+      <li><a href="https://search.rutgers.edu/" target="_blank">Rutgers Search</a></li>
+    </ul>
+  </nav>
+
+
+                <div class="social-media">
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <a class="brand" href="https://coronavirus.rutgers.edu/">
+            <div class="logo">
+                            <div class="logo-rutgers">
+					<svg id="rutgers-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474.42 128.35"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#e31837;}.cls-3{fill:#231f20;}</style></defs><g id="ru-shield"><path class="cls-1" d="M0,0V75.72C.28,88.39,4.42,99.3,12.29,108.16c14,15.76,35.24,19.67,37.61,20.06l.33.06.47.07.47-.07c.95-.14,23.36-3.58,38-20.13a47.31,47.31,0,0,0,8-12.43,52.26,52.26,0,0,0,4.25-20V0Z"/><path class="cls-2" d="M65.83,5.51H57.76l-.88,22.21.71.14Z"/><polygon class="cls-2" points="78.99 33.93 95.93 21.62 95.93 6.54 76 33.93 78.99 33.93"/><path class="cls-2" d="M69.55,33,94.91,5.51H81.43l-12.49,27Z"/><path class="cls-2" d="M63.82,29.82,78.71,5.51H68.93l-5.78,24Z"/><polygon class="cls-2" points="95.93 33.93 95.93 25.3 86.58 33.93 95.93 33.93"/><path class="cls-2" d="M50.7,27.16h.42L54.54,5.51H47L50.4,27.16Z"/><path class="cls-2" d="M44.62,27.72,43.74,5.51H35.67l8.24,22.35Z"/><polygon class="cls-2" points="25.49 33.93 5.57 6.54 5.57 21.62 22.51 33.93 25.49 33.93"/><path class="cls-2" d="M32.56,32.55l-12.49-27H6.58L32,33Z"/><path class="cls-2" d="M38.35,29.54l-5.78-24H22.79L37.68,29.82Z"/><polygon class="cls-2" points="5.57 25.3 5.57 33.93 14.91 33.93 5.57 25.3"/><path id="shield-outline" class="cls-3" d="M0,0V75.72C.28,88.39,4.42,99.3,12.29,108.16c14,15.76,35.24,19.67,37.61,20.06l.33.06.47.07.47-.07c.95-.14,23.36-3.58,38-20.13a47.31,47.31,0,0,0,8-12.43,52.26,52.26,0,0,0,4.25-20V0ZM98.83,75.66a49.88,49.88,0,0,1-4,19,45.1,45.1,0,0,1-7.55,11.76c-14.06,15.87-35.54,19.15-36.45,19.28h-.19l-.28,0c-2.28-.37-22.67-4.13-36.1-19.23C6.77,98.06,2.85,87.7,2.58,75.65V2.58H98.83Z"/><polygon class="cls-2" points="23.66 67.44 23.66 70.17 26.33 70.17 26.33 67.67 26.31 67.44 23.66 67.44"/><path class="cls-2" d="M18.6,65.52l0,.17h7.66V56.84L26,57a5.08,5.08,0,0,1-1.66.36h-.44a9.07,9.07,0,0,1-3.84-.84l-.37-.18A3.17,3.17,0,0,0,18.39,56a3.23,3.23,0,0,0-3.23,3.23c0,1,.2,1.43,1.54,2.88A8.49,8.49,0,0,1,18.6,65.52Z"/><rect class="cls-2" x="33.33" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M5.58,75.73c.26,11.3,3.92,21,10.9,28.85C27.58,117.06,44,121.4,49.27,122.51V36.85H5.58ZM19.26,85.9H15v-.32l.83-.1c.55-.06.55-.18.55-1.53v-3.3c0-1.51-.09-1.63-.34-1.63a2,2,0,0,0-.42,0l-.83.14-.1-.33c.54-.21,2.79-1,3-1l.19.14v6c0,1.35,0,1.47.55,1.53l.83.1Zm19.5-11.61v.82H16v-.82ZM16,73.46v-.81H38.76v.81Zm8.44,9.29a14.88,14.88,0,0,0-1.23,3.43l-.13.09a2.83,2.83,0,0,1-1.27-.92c.14-.87,1.69-2.56,2.78-4.3a5.65,5.65,0,0,0,.82-1.86H23c-1.4,0-1.29,0-1.66,1l-.33-.1a5.35,5.35,0,0,1,.55-2h5l.12.13C26.37,79.43,25.79,80,24.44,82.75Zm6.1,3.34c-1.51,0-2.78-1.09-2.78-3.39,0-3.39,2.23-4.87,4.25-4.87a3.32,3.32,0,0,1,1.21.22l-.1.35a2.8,2.8,0,0,0-.81-.1c-1.7,0-3,1.41-3,4.24,0,1.79.51,3.08,1.58,3.08.82,0,1.14-.86,1.14-1.64,0-1.21-.69-2.27-1.66-2.27l-.32,0L30,81.51a2,2,0,0,1,3.35,1.58A2.71,2.71,0,0,1,30.54,86.09Zm6.89,0c-1.5,0-2.77-1.09-2.77-3.39,0-3.39,2.22-4.87,4.25-4.87a3.25,3.25,0,0,1,1.2.22l-.1.35a2.67,2.67,0,0,0-.8-.1c-1.7,0-3,1.41-3,4.24,0,1.79.51,3.08,1.57,3.08.83,0,1.14-.86,1.14-1.64,0-1.21-.68-2.27-1.65-2.27l-.32,0-.05-.22a2,2,0,0,1,3.35,1.58A2.71,2.71,0,0,1,37.43,86.09Zm-10-37.81a2,2,0,1,1-2,2A2,2,0,0,1,27.41,48.28Zm-9,5.38a5.67,5.67,0,0,1,2.35.51l.33.17a6.7,6.7,0,0,0,2.82.62h.33a3.09,3.09,0,0,0,2.55-1.67h1.32A3.12,3.12,0,0,0,30.65,55H31a6.69,6.69,0,0,0,2.63-.54,4.88,4.88,0,0,1,.65-.32,5.57,5.57,0,0,1,2.17-.44,5.66,5.66,0,0,1,5.65,5.66A6.7,6.7,0,0,1,40,63.76a.43.43,0,0,0-.09.1A6,6,0,0,0,38.37,67a4.19,4.19,0,0,0-.07.63v.69a6.14,6.14,0,0,0,.47,2V71.7H16V70.43A6.13,6.13,0,0,0,16.52,68a5.86,5.86,0,0,0-.07-.94,6.07,6.07,0,0,0-1.52-3.18l-.1-.11a6.56,6.56,0,0,1-2.09-4.42A5.67,5.67,0,0,1,18.39,53.66Z"/><rect class="cls-2" x="18.82" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M36.21,65.52a8.45,8.45,0,0,1,1.9-3.36c.16-.19,1.55-1.86,1.55-2.89A3.23,3.23,0,0,0,36.43,56a3.09,3.09,0,0,0-1.24.25l-.37.18-.29.15a9.18,9.18,0,0,1-3.55.71h-.49A5.69,5.69,0,0,1,28.83,57l-.31-.12v8.86h7.64Z"/><rect class="cls-2" x="28.5" y="67.44" width="2.67" height="2.73"/><path class="cls-2" d="M66.31,70.6a8.88,8.88,0,0,0,1.37-.21,5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.74,6.74,0,0,0-2.38-.43,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.46,8.46,0,0,1,64,69.49v1A9,9,0,0,0,66.31,70.6Z"/><path class="cls-2" d="M66.31,68a8.88,8.88,0,0,0,1.37-.21,5.93,5.93,0,0,1,1.26-.16,5.69,5.69,0,0,1,2.37.49v-1a6.54,6.54,0,0,0-2.38-.44,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.06,8.06,0,0,1,64,66.9v1A9,9,0,0,0,66.31,68Z"/><path class="cls-2" d="M66.31,65.42a10.53,10.53,0,0,0,1.37-.2,5.91,5.91,0,0,1,1.26-.17,5.56,5.56,0,0,1,2.37.5v-1a6.13,6.13,0,0,0-2.38-.43,6.34,6.34,0,0,0-1.44.18,7.37,7.37,0,0,1-1.25.19A7.7,7.7,0,0,1,64,64.31v1A8.56,8.56,0,0,0,66.31,65.42Z"/><path class="cls-2" d="M66.31,60.25A8.88,8.88,0,0,0,67.68,60a5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.52,6.52,0,0,0-2.38-.43,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.46,8.46,0,0,1,64,59.14v1A9,9,0,0,0,66.31,60.25Z"/><path class="cls-2" d="M66.31,62.84a10.3,10.3,0,0,0,1.37-.21,5.91,5.91,0,0,1,1.26-.17,5.71,5.71,0,0,1,2.37.5v-1a6.32,6.32,0,0,0-2.38-.43,7.72,7.72,0,0,0-1.44.18,7.37,7.37,0,0,1-1.25.19A7.7,7.7,0,0,1,64,61.72v1A9,9,0,0,0,66.31,62.84Z"/><path class="cls-2" d="M66.31,57.66a8.88,8.88,0,0,0,1.37-.21,5.93,5.93,0,0,1,1.26-.16,5.69,5.69,0,0,1,2.37.49v-1a6.54,6.54,0,0,0-2.38-.44,6.9,6.9,0,0,0-1.44.19,10.14,10.14,0,0,1-1.25.19A8.06,8.06,0,0,1,64,56.55v1A9,9,0,0,0,66.31,57.66Z"/><path class="cls-2" d="M66.59,74.14a9.09,9.09,0,0,1,6.23.76v-.78L72.58,74A6.8,6.8,0,0,0,69,73h-.21l-.51,0a13,13,0,0,0-1.58.18,12.51,12.51,0,0,1-4.9-.25l-.32-.07V55.4l-.83-.22V73.54A13.09,13.09,0,0,0,66.59,74.14Z"/><path class="cls-2" d="M66.59,75.84a9.15,9.15,0,0,1,6.23.76v-.76l-.11-.07a.56.56,0,0,1-.13-.07,8.21,8.21,0,0,0-5.85-.76,14.24,14.24,0,0,1-6.58-.7l-.29-.09V55.91c-.27-.09-.54-.17-.81-.27V74.71C62.1,75.82,64.63,76.21,66.59,75.84Z"/><path class="cls-2" d="M80.52,67.8a8.72,8.72,0,0,0,3.68.07v-1a8.06,8.06,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.54,6.54,0,0,0-2.38.44v1a5.69,5.69,0,0,1,2.37-.49A5.93,5.93,0,0,1,80.52,67.8Z"/><path class="cls-2" d="M81.62,74.14a13.06,13.06,0,0,0,5.9-.6V55.18l-.83.22V72.91l-.32.07a12.51,12.51,0,0,1-4.9.25,13,13,0,0,0-1.58-.18l-.51,0h-.21a6.8,6.8,0,0,0-3.55.95l-.24.13v.78A9.11,9.11,0,0,1,81.62,74.14Z"/><path class="cls-2" d="M80.52,65.22a10.53,10.53,0,0,0,1.37.2,8.53,8.53,0,0,0,2.31-.14v-1a7.7,7.7,0,0,1-2.24.16,7.37,7.37,0,0,1-1.25-.19,6.34,6.34,0,0,0-1.44-.18,6.13,6.13,0,0,0-2.38.43v1a5.56,5.56,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,65.22Z"/><path class="cls-2" d="M52.18,122.51c5.26-1.11,21.69-5.45,32.79-17.93C92,96.74,95.61,87,95.87,75.73V36.85H52.18ZM67.71,83.73,66,82.85l-1.68.88.32-1.87-1.35-1.33,1.87-.27.84-1.7.84,1.7,1.88.27-1.36,1.33Zm16.14,0-1.68-.88-1.68.88.32-1.87-1.36-1.33,1.88-.27.84-1.7.84,1.7,1.88.27-1.36,1.33ZM74.57,71.36V55.24A9,9,0,0,1,76,54.4a8.27,8.27,0,0,1,3.42-.68,11.87,11.87,0,0,1,2.24.22,9.17,9.17,0,0,0,.95.11,13.35,13.35,0,0,0,3.62-.36l.5-.11v1c.36-.09.73-.19,1.12-.31l.53-.16v1l1.08-.39.55-.2V75.28l-.26.1c-3.32,1.24-6.09,1.67-8.24,1.26a8.35,8.35,0,0,0-5.73.7H74.57Zm.37,11.2,1.88.27-1.36,1.33L75.78,86l-1.68-.88L72.42,86l.32-1.87-1.36-1.33,1.88-.27.84-1.7ZM58.23,54.47l.55.2,1.08.39v-1l.53.16c.39.12.76.22,1.12.31v-1l.5.11a13.35,13.35,0,0,0,3.62.36c.33,0,.65-.06,1-.11a11.69,11.69,0,0,1,2.23-.22,8.24,8.24,0,0,1,3.42.68,8.56,8.56,0,0,1,1.39.84v22.1H72.46a8.35,8.35,0,0,0-5.73-.7c-2.15.41-4.92,0-8.23-1.26l-.27-.1Z"/><path class="cls-2" d="M81.62,75.84c1.95.37,4.48,0,7.53-1.13V55.64l-.81.27V74.15l-.29.09a14.24,14.24,0,0,1-6.58.7,8.21,8.21,0,0,0-5.85.76.56.56,0,0,1-.13.07l-.11.07v.76A9.17,9.17,0,0,1,81.62,75.84Z"/><path class="cls-2" d="M80.52,70.39a8.55,8.55,0,0,0,3.68.06v-1a8.46,8.46,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.74,6.74,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,70.39Z"/><path class="cls-2" d="M80.52,60a8.55,8.55,0,0,0,3.68.06v-1A8.46,8.46,0,0,1,82,59.3a10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.52,6.52,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,60Z"/><path class="cls-2" d="M80.52,57.45a8.72,8.72,0,0,0,3.68.07v-1a8.06,8.06,0,0,1-2.24.16,10.14,10.14,0,0,1-1.25-.19,6.9,6.9,0,0,0-1.44-.19,6.54,6.54,0,0,0-2.38.44v1a5.69,5.69,0,0,1,2.37-.49A5.93,5.93,0,0,1,80.52,57.45Z"/><path class="cls-2" d="M80.52,62.63a10.3,10.3,0,0,0,1.37.21,9,9,0,0,0,2.31-.15v-1a7.7,7.7,0,0,1-2.24.16,7.37,7.37,0,0,1-1.25-.19,7.72,7.72,0,0,0-1.44-.18,6.32,6.32,0,0,0-2.38.43v1a5.71,5.71,0,0,1,2.37-.5A5.91,5.91,0,0,1,80.52,62.63Z"/></g><g id="label-rutgers"><path class="cls-2" d="M229.15,84.54l2.44-.73v-41c0-9.92,0-10.33,3.17-10.66l2.93-.24V30.15H217.93V31.9l2.93.24c3.17.33,3.17.74,3.17,10.66v33a19.55,19.55,0,0,1-14.72,6.51c-12.59,0-14.55-7.73-14.55-19.36V42.8c0-9.92,0-10.33,3.18-10.66l2.92-.24V30.15H181.1V31.9l2.93.24c3.17.33,3.17.74,3.17,10.66V64.28c0,11.06,1.38,20.74,18.21,20.74,10.82,0,17.56-5.12,18.7-5.12s1.87,1.14,3,2.28Z"/><path class="cls-2" d="M250.93,83.81h22.52V82.05l-2.93-.24C266,81.48,266,81.08,266,71.15V32.43h4.22c11.47,0,11.63,1.22,13.42,10.65h1.95c0-.32-.41-11.14-.73-12.93H239.54c-.32,1.79-.73,12.61-.73,12.93h1.95c1.79-9.43,2-10.65,13.42-10.65h4.23V71.15c0,9.93,0,10.33-4.47,10.66l-3,.24Z"/><path class="cls-2" d="M335.61,73.1c0-7.91,0-8.32,1.54-8.64l2.93-.25V62.46H319.42v1.75l2.93.25c5.69.32,5.69.73,5.69,10.68v6.14a41.09,41.09,0,0,1-9.51,1.06c-15.93,0-23-12.88-23-26.74,0-15.2,8.37-24,21.7-24,13.9,0,15,9.91,15.77,13.16l2.2-.48c-.36-4-.79-8.56-1.3-12-2.12-1.29-8.29-3.33-16.59-3.33-12.84,0-30.32,6.51-30.32,28.21C287,77.86,301.62,85,318,85a53.65,53.65,0,0,0,17.79-3.24s-.15-6.23-.15-8.68"/><path class="cls-2" d="M345.07,83.81h37.24A134.91,134.91,0,0,0,385,70.31L383,70c-1.63,6.67-2.44,11.55-15.39,11.55a46.79,46.79,0,0,1-8.84-1.06V57.06H366c6.32,0,7.79.08,8.27,3.41l.41,2.76h2.15V48.61h-2.15l-.41,2.76c-.48,3.33-2,3.41-8.27,3.41h-7.22V32.43h6.73c11.48,0,11.64,1.21,13.43,9.92l1.95-.33c0-.73-.4-10.08-.73-11.87h-35V31.9l2.93.24c3.17.33,3.17.74,3.17,10.67V71.14c0,9.94,0,10.34-3.17,10.67l-2.93.24Z"/><path class="cls-2" d="M405,33.48a26.23,26.23,0,0,1,5-.65c6.34,0,12.59,2.93,12.59,12.44,0,9.19-6.17,12.85-13,12.85H405ZM391.36,83.81H411V82.05l-2.93-.24C405,81.48,405,81.08,405,71.15V60.39h3c1.7,0,3.73,0,5,1.06,1.05.9,2.92,4,5,8l3.25,6.28c2.44,4.47,6.18,8.1,11.54,8.1h6.26V82.05a8.44,8.44,0,0,1-4.06-.8c-2-1.15-5.61-6-9-12.06-2.2-3.91-4.89-9.12-6.11-11.4,4.48-2.11,11.23-6.59,11.23-14.17,0-12.36-10.9-13.47-18.61-13.47H391.36V31.9l2.93.24c3.17.33,3.17.74,3.17,10.67V71.15c0,9.93,0,10.33-3.17,10.66l-2.93.24Z"/><path class="cls-2" d="M456.87,50.47c-4.39-2.59-7.89-5.2-7.89-10a8.62,8.62,0,0,1,8.86-8.86c9.19,0,10.49,7.07,11.3,11.13h2c-.19-2.36-.39-8.32-.81-11.22a22.79,22.79,0,0,0-11.22-2.6c-8.61,0-16.91,4.15-16.91,14.07,0,6.09,4.31,11.13,8.95,13.65l5.2,2.85c6.34,2.84,11.3,6.91,11.3,12.84,0,6.34-4.15,10-9.76,10-11.14,0-14.14-9.67-15-15.53l-2.6.66c.92,5.57,1.83,11.23,2.6,14.3C445.4,83.32,449.3,85,455.65,85c8.61,0,18.77-4.23,18.77-15.2,0-9.76-6.66-13.18-13.09-16.84Z"/><path class="cls-2" d="M141.66,52.85c2.49.13,5.16-.08,7.65-.08,9.62,0,15.5-5.16,15.5-14.78,0-10.46-6-16.88-16.63-16.88a34.05,34.05,0,0,0-6.51.85Zm20.76,0c.92,5.15,8.1,18.38,10.85,23.3,6.23,11.49,22.18,34.71,34.12,34h1.38l0,1.88-2.09.08c-16.87.66-31.95-18.14-40.72-33.21-3.57-6.13-7-13.24-10.11-19.63a7.4,7.4,0,0,0-2.8-3.36c-1.67-.88-3.84-.86-5.63-.86h-5.74V68.54c0,2.49-.19,8.66.48,11.09.54,1.91,1.7,2.16,3.61,2.36l3.3.27v1.53H126V82.26l3.31-.27c2-.2,3.15-.45,3.69-2.36.69-2.4.5-8.61.5-11.09V33.7c0-2.47.19-8.68-.5-11.08-.54-1.92-1.73-2.16-3.69-2.36L126,20V18.45h15.71c13.83,0,32.5-2,32.5,17.48,0,7.87-5.35,13-11.89,16.21a5.48,5.48,0,0,0,.1.69"/></g></svg>                </div>
+				                <h2>Universitywide COVID-19 Information</h2>
+            </div>
+        </a>
+    </div>
+    <div class="navigation-bar">
+        <div class="container">
+
+            <div class="mobile-menu">Menu</div>
+            <nav class="nav-primary">
+				<ul id="menu-header-menu" class="nav"><li class="menu-item menu-home"><a href="https://coronavirus.rutgers.edu/">Home</a></li>
+<li class="menu-item menu-item-has-children menu-health-safety"><a href="https://coronavirus.rutgers.edu/health-and-safety/">Health/Safety</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-community-safety-practices"><a href="https://coronavirus.rutgers.edu/health-and-safety/community-safety-practices/">Community Safety Practices</a></li>
+	<li class="menu-item menu-controlling-access-and-circulation"><a href="https://coronavirus.rutgers.edu/controlling-access-and-circulation/">Controlling Access and Circulation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-students-parents"><a href="https://coronavirus.rutgers.edu/students-parents/">For Students/Parents</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-technology-resources-for-students"><a href="https://it.rutgers.edu/remote-student-resources/">Technology Resources for Students</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-faculty"><a href="https://coronavirus.rutgers.edu/resources-for-faculty/">For Faculty</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-supporting-our-students"><a href="https://coronavirus.rutgers.edu/supporting-our-students/">Supporting Our Students</a></li>
+	<li class="menu-item menu-quick-start"><a href="https://it.rutgers.edu/remote-instruction/knowledgebase/important-considerations-for-planning-remote-instruction/">Quick Start</a></li>
+	<li class="menu-item menu-technology-tools-for-faculty"><a href="https://it.rutgers.edu/remote-instruction/">Technology Tools for Faculty</a></li>
+	<li class="menu-item menu-remote-exams-and-assessments"><a href="https://it.rutgers.edu/remote-instruction/knowledgebase/guide-to-remote-exams-and-assessments/">Remote Exams and Assessments</a></li>
+	<li class="menu-item menu-remote-instruction-faq"><a href="https://it.rutgers.edu/remote-instruction/faqs/remote-instruction-faq/">Remote Instruction FAQ</a></li>
+	<li class="menu-item menu-tip-sheet-for-remote-response-to-student-disclosures-of-interpersonal-violence"><a href="https://coronavirus.rutgers.edu/resources-for-faculty/tip-sheet-for-remote-response-to-student-disclosures-of-interpersonal-violence/">Tip Sheet for Remote Response to Student Disclosures of Interpersonal Violence</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children menu-for-employees"><a href="https://coronavirus.rutgers.edu/employees/">For Employees</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-technology-resources-for-working-remotely"><a href="https://it.rutgers.edu/remote-work/">Technology Resources for Working Remotely</a></li>
+	<li class="menu-item menu-covid-19-telecommuting-and-leave"><a href="https://coronavirus.rutgers.edu/employees/covid-19-telecommuting-and-leave/">COVID-19 Telecommuting and Leave</a></li>
+	<li class="menu-item menu-health-care-provider-resource-center"><a href="https://academichealth.rutgers.edu/hcp-resource-center">Health Care Provider Resource Center</a></li>
+</ul>
+</li>
+<li class="menu-item menu-resources"><a href="https://coronavirus.rutgers.edu/resources/">Resources</a></li>
+<li class="menu-item menu-item-has-children menu-faq"><a href="https://coronavirus.rutgers.edu/faqs/">FAQ</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-communications"><a href="https://coronavirus.rutgers.edu/communications/">Communications</a></li>
+</ul>
+</li>
+</ul>                <div id="search-button">
+                    <a id="search-toggle" href="#"><i class="fas fa-search"></i>
+                        <div class="sr-only">Open Search Input</div>
+                    </a>
+                </div>
+                <div class="header-search-form closed">
+					<div id='ajaxsearchlite1' class="wpdreams_asl_container asl_w asl_m asl_m_1">
+<div class="probox">
+
+    
+    <div class='promagnifier'>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <path id="magnifier-2-icon" d="M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037
+                    C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041
+                    c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056
+                    c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041
+                    z"/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='prosettings'  data-opened=0>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <polygon id="arrow-25-icon" transform = "rotate(90 256 256)" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='proinput'>
+        <form autocomplete="off" aria-label='Ajax search form'>
+            <input aria-label='Search input' type='search' class='orig' name='phrase' placeholder='Search here..' value='' autocomplete="off"/>
+            <input aria-label='Autocomplete input, do not use this' type='text' class='autocomplete' name='phrase' value='' autocomplete="off"/>
+            <span class='loading'></span>
+            <input type='submit' value="Start search" style='width:0; height: 0; visibility: hidden;'>
+        </form>
+    </div>
+
+    
+    
+    <div class='proloading'>
+
+        <div class="asl_loader"><div class="asl_loader-inner asl_simple-circle"></div></div>
+
+            </div>
+
+            <div class='proclose'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                 y="0px"
+                 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+                 xml:space="preserve">
+            <polygon id="x-mark-icon"
+                     points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
+        </svg>
+        </div>
+    
+    
+</div>
+</div>
+
+
+<div id='ajaxsearchlitesettings1' class="searchsettings wpdreams_asl_settings asl_w asl_s asl_s_1">
+    <form name='options' autocomplete='off'>
+
+        
+                <fieldset class="asl_sett_scroll">
+            <legend style="display: none;">Generic selectors</legend>
+            <div class="asl_option_inner hiddend">
+                <input type='hidden' name='qtranslate_lang' id='qtranslate_lang'
+                       value='0'/>
+            </div>
+
+	        
+            
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="checked" id="set_exactonly1"
+                           title="Exact matches only"
+                           name="set_exactonly" />
+                    <label for="set_exactonly1">Exact matches only</label>
+                </div>
+                <div class="asl_option_label">
+                    Exact matches only                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_intitle1"
+                           title="Search in title"
+                           name="set_intitle"  checked="checked"/>
+                    <label for="set_intitle1">Search in title</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in title                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_incontent1"
+                           title="Search in content"
+                           name="set_incontent"  checked="checked"/>
+                    <label for="set_incontent1">Search in content</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in content                </div>
+            </div>
+            <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="None" id="set_inexcerpt1"
+                       title="Search in excerpt"
+                       name="set_inexcerpt"  checked="checked"/>
+                <label for="set_inexcerpt1">Search in excerpt</label>
+            </div>
+
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inposts1"
+                           title="Search in posts"
+                           name="set_inposts"  checked="checked"/>
+                    <label for="set_inposts1">Search in posts</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in posts                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inpages1"
+                           title="Search in pages"
+                           name="set_inpages"  checked="checked"/>
+                    <label for="set_inpages1">Search in pages</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in pages                </div>
+            </div>
+                    </fieldset>
+                    <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="rutgers-groups"
+                       id="1customset_11"
+                       title="Hidden option, ignore please"
+                       name="customset[]" checked="checked"/>
+                <label for="1customset_11">Hidden</label>
+            </div>
+            <div class="asl_option_label hiddend"></div>
+
+                        <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="rutgers-people"
+                       id="1customset_12"
+                       title="Hidden option, ignore please"
+                       name="customset[]" checked="checked"/>
+                <label for="1customset_12">Hidden</label>
+            </div>
+            <div class="asl_option_label hiddend"></div>
+
+                    
+        <fieldset>
+                            <legend>Filter by Categories</legend>
+                        <div class='categoryfilter asl_sett_scroll'>
+                
+            </div>
+        </fieldset>
+            </form>
+</div>
+
+<div id='ajaxsearchliteres1' class='vertical wpdreams_asl_results asl_w asl_r asl_r_1'>
+
+    
+    <div class="results">
+
+        
+            <div class="resdrg">
+            </div>
+
+        
+    </div>
+
+    
+                    <p class='showmore'>
+            <a>More results...</a>
+        </p>
+        
+</div>
+
+    <div id="asl_hidden_data">
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="aslblur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+            </filter>
+        </svg>
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="no_aslblur"></filter>
+        </svg>
+
+    </div>
+
+<div class="asl_init_data wpdreams_asl_data_ct" style="display:none !important;" id="asl_init_id_1" data-asldata="ew0KICAgICJob21ldXJsIjogImh0dHBzOi8vY29yb25hdmlydXMucnV0Z2Vycy5lZHUvIiwNCiAgICAicmVzdWx0c3R5cGUiOiAidmVydGljYWwiLA0KICAgICJyZXN1bHRzcG9zaXRpb24iOiAiaG92ZXIiLA0KICAgICJpdGVtc2NvdW50IjogNCwNCiAgICAiaW1hZ2V3aWR0aCI6IDcwLA0KICAgICJpbWFnZWhlaWdodCI6IDcwLA0KICAgICJyZXN1bHRpdGVtaGVpZ2h0IjogIjcwcHgiLA0KICAgICJzaG93YXV0aG9yIjogMCwNCiAgICAic2hvd2RhdGUiOiAwLA0KICAgICJzaG93ZGVzY3JpcHRpb24iOiAxLA0KICAgICJjaGFyY291bnQiOiAgMCwNCiAgICAiZGVmYXVsdEltYWdlIjogImh0dHA6Ly9zaXRlcy5ydXRnZXJzLmVkdS9kZXBhcnRtZW50LW9mLWV4YW1wbGUvd3AtY29udGVudC9wbHVnaW5zL2FqYXgtc2VhcmNoLWxpdGUvaW1nL2RlZmF1bHQuanBnIiwNCiAgICAiaGlnaGxpZ2h0IjogMCwNCiAgICAiaGlnaGxpZ2h0d2hvbGV3b3JkcyI6IDEsDQogICAgInNjcm9sbFRvUmVzdWx0cyI6IDAsDQogICAgInJlc3VsdGFyZWFjbGlja2FibGUiOiAxLA0KICAgICJhdXRvY29tcGxldGUiOiB7DQogICAgICAgICJlbmFibGVkIiA6IDEsDQogICAgICAgICJsYW5nIiA6ICJlbiINCiAgICB9LA0KICAgICJ0cmlnZ2Vyb250eXBlIjogMSwNCiAgICAidHJpZ2dlcl9vbl9jbGljayI6IDEsDQogICAgInRyaWdnZXJfb25fZmFjZXRfY2hhbmdlIjogMSwNCiAgICAic2V0dGluZ3NpbWFnZXBvcyI6ICJyaWdodCIsDQogICAgImhyZXN1bHRhbmltYXRpb24iOiAiZngtbm9uZSIsDQogICAgInZyZXN1bHRhbmltYXRpb24iOiAiZngtbm9uZSIsDQogICAgImhyZXN1bHRoaWRlZGVzYyI6ICIxIiwNCiAgICAicHJlc2NvbnRhaW5lcmhlaWdodCI6ICI0MDBweCIsDQogICAgInBzaG93c3VidGl0bGUiOiAiMCIsDQogICAgInBzaG93ZGVzYyI6ICIxIiwNCiAgICAiY2xvc2VPbkRvY0NsaWNrIjogMSwNCiAgICAiaWlmTm9JbWFnZSI6ICJkZXNjcmlwdGlvbiIsDQogICAgImlpUm93cyI6IDIsDQogICAgImlpdGVtc1dpZHRoIjogMjAwLA0KICAgICJpaXRlbXNIZWlnaHQiOiAyMDAsDQogICAgImlpc2hvd092ZXJsYXkiOiAxLA0KICAgICJpaWJsdXJPdmVybGF5IjogMSwNCiAgICAiaWloaWRlQ29udGVudCI6IDEsDQogICAgImlpYW5pbWF0aW9uIjogIjEiLA0KICAgICJhbmFseXRpY3MiOiAwLA0KICAgICJhbmFseXRpY3NTdHJpbmciOiAiIiwNCiAgICAicmVkaXJlY3RvbmNsaWNrIjogMCwNCiAgICAicmVkaXJlY3RDbGlja1RvIjogImFqYXhfc2VhcmNoIiwNCiAgICAicmVkaXJlY3RDbGlja0xvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3Rfb25fZW50ZXIiOiAxLA0KICAgICJyZWRpcmVjdEVudGVyVG8iOiAicmVzdWx0c19wYWdlIiwNCiAgICAicmVkaXJlY3RFbnRlckxvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3RfdXJsIjogIj9zPXtwaHJhc2V9IiwNCiAgICAib3ZlcnJpZGV3cGRlZmF1bHQiOiAxLA0KICAgICJvdmVycmlkZV9tZXRob2QiOiAiZ2V0Ig0KfQ0K"></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<a id="main-content"></a>
+  <div class="wrap"
+    role="document">
+    <div class="content row ">
+      <main class="main ">
+            <div class="container px-0">
+		<div class="col-12">
+    <div class="page-header">
+        <h1>COVID-19 Telecommuting – Extended through August 31, 2020</h1>
+		    </div>
+</div>
+    </div>
+			    <div class="container">
+        <div class="row">
+            <div class="col-12">
+				<p><strong>June 19, 2020</strong></p>
+<p>Dear Rutgers Colleagues,</p>
+<p>In order to continue to support social distancing, the telecommuting rule relaxation policy set to expire on June 30, 2020 has been extended through August 31, 2020. Telecommuting is automatically updated and does not require a new or revised request unless there has been a change to your work schedule.</p>
+<p>Sincerely,</p>
+<p>Vivian Fernández<br />
+Senior Vice President for Human Resources &amp; Organizational Effectiveness</p>
+            </div>
+        </div>
+    </div>
+<div class="cb-content container"></div>	
+      </main><!-- /.main -->
+          </div><!-- /.content -->
+  </div><!-- /.wrap -->
+  <footer class="content-info">
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 order-4 order-sm-1">
+					<section class="widget text-4 widget_text"><h3>COVID-19 Resources</h3>			<div class="textwidget"><p><a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">Centers for Disease Control and Prevention</a></p>
+<p><a href="https://www.state.nj.us/health/cd/topics/ncov.shtml">New Jersey’s Official COVID-19 Information Hub</a></p>
+<p><a href="/resources-2/">Additional Resources</a></p>
+</div>
+		</section>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-3 order-sm-2">
+					<section class="widget text-5 widget_text"><h3>Hotline</h3>			<div class="textwidget"><p>New Jersey Poison Information and Education System at Rutgers is serving as the <strong>NJDOH COVID-19 Call Center</strong>—<strong>call the hotline at </strong><a href="tel:+1-800-222-1222"><strong>1-800-222-1222</strong></a> for assistance in multiple languages and 24 hours a day.</p>
+</div>
+		</section>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-2 order-sm-3">
+					<section class="widget text-6 widget_text"><h3>Contact Us</h3>			<div class="textwidget"><p><strong><a href="https://rutgers.ca1.qualtrics.com/jfe/form/SV_5cMs6A1eHbzgfQ1">Contact us</a></strong> if you have a question related to information posted on this site. Or email the Rutgers Office of Emergency Management at <a href="mailto:covid19@rutgers.edu">covid19@rutgers.edu</a></p>
+</div>
+		</section>                </div>
+                <div class="col-12 col-sm-6 col-md-3 order-1 order-sm-4">
+                    <div class="logo-rutgers">
+                        <a class="brand" href="https://coronavirus.rutgers.edu/">
+							<svg class="logo-rutgers--noshield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222.63 59.86"><defs><style>.logo-rutgers--noshield .cls-1{fill:#e31837;fill-rule:evenodd;}</style></defs><path class="cls-1" d="M65.91,42.26l1.56-.47V15.59c0-6.34,0-6.6,2-6.81l1.87-.15V7.51H58.74V8.63l1.87.15c2,.21,2,.47,2,6.81V36.7a12.49,12.49,0,0,1-9.41,4.16c-8,0-9.29-4.94-9.29-12.37V15.59c0-6.34,0-6.6,2-6.81l1.87-.15V7.51H35.21V8.63l1.87.15c2,.21,2,.47,2,6.81V29.32c0,7.07.88,13.25,11.63,13.25,6.91,0,11.22-3.27,11.95-3.27s1.19.73,1.92,1.45Z"/><path class="cls-1" d="M79.82,41.79H94.21V40.67l-1.87-.15c-2.91-.21-2.91-.47-2.91-6.81V9h2.7c7.33,0,7.43.78,8.58,6.8H102c0-.2-.26-7.12-.47-8.26H72.55c-.21,1.14-.47,8.06-.47,8.26h1.25c1.14-6,1.25-6.8,8.57-6.8h2.7V33.71c0,6.34,0,6.6-2.85,6.81l-1.93.15Z"/><path class="cls-1" d="M133.93,35c0-5.06,0-5.32,1-5.53l1.87-.16V28.16h-13.2v1.11l1.87.16c3.64.21,3.64.47,3.64,6.83v3.92a26.49,26.49,0,0,1-6.08.68c-10.18,0-14.7-8.23-14.7-17.09,0-9.71,5.35-15.32,13.87-15.32,8.88,0,9.56,6.33,10.08,8.41l1.4-.31c-.23-2.56-.5-5.47-.83-7.69-1.35-.83-5.3-2.13-10.6-2.13-8.21,0-19.37,4.16-19.37,18,0,13.23,9.35,17.81,19.79,17.81A34.33,34.33,0,0,0,134,40.5S133.93,36.52,133.93,35Z"/><path class="cls-1" d="M140,41.79h23.79a84.28,84.28,0,0,0,1.71-8.62L164.19,33c-1,4.26-1.56,7.38-9.83,7.38a29.36,29.36,0,0,1-5.65-.68v-15h4.61c4,0,5,.06,5.29,2.19l.26,1.76h1.37V19.3h-1.37l-.26,1.77c-.31,2.13-1.25,2.18-5.29,2.18h-4.61V9H153c7.33,0,7.44.77,8.58,6.33l1.25-.21c0-.46-.26-6.44-.47-7.58H140V8.63l1.87.15c2,.21,2,.47,2,6.82V33.7c0,6.35,0,6.61-2,6.82l-1.87.15Z"/><path class="cls-1" d="M169.56,41.79h12.57V40.67l-1.88-.15c-2-.21-2-.47-2-6.82V26.83h1.93a5.17,5.17,0,0,1,3.22.68,23.74,23.74,0,0,1,3.21,5.1l2.08,4c1.56,2.86,3.95,5.17,7.38,5.17h4V40.67a5.45,5.45,0,0,1-2.6-.51c-1.3-.73-3.59-3.8-5.77-7.71-1.4-2.49-3.12-5.83-3.9-7.28,2.86-1.35,7.17-4.21,7.17-9,0-7.9-7-8.61-11.89-8.61H169.56V8.63l1.87.15c2,.21,2,.47,2,6.82V33.7c0,6.35,0,6.61-2,6.82l-1.87.15Zm8.72-32.15a16.41,16.41,0,0,1,3.22-.42c4.05,0,8.05,1.88,8.05,8,0,5.87-3.94,8.21-8.31,8.21h-3Z"/><path class="cls-1" d="M211.41,20.5c-2.8-1.66-5-3.33-5-6.39A5.51,5.51,0,0,1,212,8.45c5.86,0,6.7,4.52,7.21,7.11h1.31c-.13-1.51-.26-5.32-.53-7.17a14.47,14.47,0,0,0-7.16-1.66c-5.51,0-10.81,2.65-10.81,9,0,3.89,2.76,7.11,5.72,8.72l3.32,1.82c4.05,1.82,7.22,4.42,7.22,8.21,0,4.05-2.65,6.39-6.23,6.39-7.12,0-9-6.18-9.61-9.92l-1.66.41c.58,3.56,1.16,7.18,1.66,9.15a15,15,0,0,0,8.15,2.07c5.51,0,12-2.7,12-9.71,0-6.24-4.26-8.42-8.36-10.75Z"/><path class="cls-1" d="M23.27,22c.59,3.3,5.18,11.75,6.94,14.89,4,7.34,14.17,22.18,21.79,21.7h.88v1.2l-1.34.05c-10.78.42-20.41-11.59-26-21.22-2.28-3.92-4.49-8.46-6.46-12.54a4.64,4.64,0,0,0-1.79-2.15,7.92,7.92,0,0,0-3.6-.55c-.66,0-2.64,0-3.67,0V32c0,1.59-.12,5.53.31,7.08.34,1.23,1.08,1.38,2.3,1.51l2.11.18v1H0v-1l2.11-.18c1.26-.13,2-.28,2.36-1.51.44-1.53.32-5.5.32-7.08V9.78c0-1.58.12-5.55-.32-7.08-.35-1.23-1.1-1.38-2.36-1.51L0,1V0H10C18.88,0,30.8-1.22,30.8,11.2c0,5-3.42,8.31-7.59,10.36A3.41,3.41,0,0,0,23.27,22ZM10,22c1.59.09,3.3,0,4.89,0,6.15,0,9.91-3.3,9.91-9.45C24.8,5.84,21,1.73,14.17,1.73A21.66,21.66,0,0,0,10,2.28Z"/></svg>                        </a>
+                    </div>
+
+                    <div class="contact-info text-left">
+                        <p>
+
+							                        <p>
+																					                        </p>
+						                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sub-footer">
+    <div class="container text-center">
+        <p><a href="mailto:sites-at-rutgers@oit.rutgers.edu">Contact Webmaster</a><span
+                    class="accessibility-notice-js"> | <a href="#" data-toggle="modal"
+                                                          data-target="#accessibilityModal"
+                                                          class="accessibility-notice-link">Accessibility</a></span>
+        </p>
+        <p class="accessibility-notice-no-js">Rutgers is an equal access/equal opportunity institution. Individuals
+            with disabilities are encouraged to direct suggestions, comments, or complaints concerning any
+            accessibility issues with Rutgers web sites to <a href="mailto:accessibility@rutgers.edu">accessibility@rutgers.edu</a>
+            or complete the <a href="https://accessibility.rutgers.edu/barrierform">Report Accessibility Barrier or
+                Provide Feedback Form</a>.</p>
+        <p>Copyright ©2020</a>, <a href="http://rutgers.edu">Rutgers, The State University of
+                New Jersey</a></p>
+    </div>
+</div>
+
+<div class="modal fade" id="accessibilityModal" tabindex="-1" role="dialog"
+     aria-labelledby="accessibilityModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accessibilityModalTitle">Accessibility Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Rutgers is an equal access/equal opportunity institution. Individuals with disabilities are
+                    encouraged to direct suggestions, comments, or complaints concerning any accessibility issues
+                    with Rutgers web sites to <a
+                            href="mailto:accessibility@rutgers.edu">accessibility@rutgers.edu</a> or complete the <a
+                            href="https://accessibility.rutgers.edu/barrierform">Report Accessibility Barrier or
+                        Provide Feedback Form</a>.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer>
+<!-- AddThis Sharing Script -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a956c310454803e"></script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script src="https://code.jquery.com/jquery-1.12.4-wp.min.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajaxsearchlite = {"ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","js_scope":"jQuery"};
+var ASL = {"ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/coronavirus.rutgers.edu\/wp-admin\/admin-ajax.php","js_scope":"jQuery","detect_ajax":"0","scrollbar":"1","js_retain_popstate":"0","version":"4737","fix_duplicates":"1"};
+/* ]]> */
+</script>
+<script>(window.jQuery && jQuery.noConflict()) || document.write('<script src="https://coronavirus.rutgers.edu/wp-includes/js/jquery/jquery.js"><\/script>')</script>
+<script src="/coronavirus/wp-content/plugins/ajax-search-lite/js/min/jquery.ajaxsearchlite.min.js?ver=4.8"></script>
+<script src="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/scripts/main.js"></script>
+<script src="https://coronavirus.rutgers.edu/wp-content/themes/rusites/dist/scripts/accessibility.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a852971bae","applicationID":"205519541","transactionName":"YFJRY0BQVkdUVEdbV1kYZkVbHhddW1NWShZHX0M=","queueTime":0,"applicationTime":289,"atts":"TBVSFQhKRUk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

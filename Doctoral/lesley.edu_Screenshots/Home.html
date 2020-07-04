@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Lesley University is closely monitoring the ongoing Coronavirus Disease 2019 (COVID-19) outbreak." />
+<meta name="keywords" content="coronavirus, corona virus, covid-19, flu" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"243cf7c2e9",applicationID:"70699940"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<link rel="shortcut icon" href="/themes/custom/lesley/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://lesley.edu/students/health-wellness-safety/coronavirus-disease-2019-covid-19-information" />
+<link rel="shortlink" href="https://lesley.edu/node/41931" />
+<link rel="revision" href="https://lesley.edu/students/health-wellness-safety/coronavirus-disease-2019-covid-19-information" />
+
+    <title>Coronavirus Disease (COVID-19) Information | Lesley University</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_b_GrnikYzx_yo3VivLA12akwEdkCLdWQOeP0iObqbVQ.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cPxPTeGUZw1R-_l0C4xh7RFTePsyCXGA8MC50eEK104.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0036/9562.js" async="async"></script>
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NQC9CR');</script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+  <body class="lang-en section-students path-node node--type-audience-content-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQC9CR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a href="#main" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+    <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
+      
+    </aside>
+
+    <aside id="right-off-canvas-menu" class="off-canvas right-off-canvas-menu position-right" role="complementary" data-off-canvas>
+      
+    </aside>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      
+      <header class="row" role="banner" aria-label="Site header">
+              </header>
+
+                    <div>
+    <section class="views-element-container block-views-block-site-alert-block-1" id="block-views-block-site-alert-block-1" data-block-plugin-id="views_block:site_alert-block_1">
+  
+  
+    
+
+  
+          <div><div class="view view-site-alert view-id-site_alert view-display-id-block_1 js-view-dom-id-92c265ce9f2725841c7ca34c0ce1b931b04a978769baa23046accdea601feabd">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div id="site-alert" class="site-alert callout" data-closable data-changed-time="1585143424">
+  <div class="row">
+    <div class="columns small-12 relative clearfix">
+
+      <div class="site-alert__wrapper">
+
+        <div class="site-alert__link">
+          <div class="button-wrapper">
+            <a href="/students/health-wellness-safety/coronavirus-disease-2019-covid-19-information" class="button"><span>More at lesley.edu/covid-19</span></a>
+          </div>
+        </div>
+
+        <div class="site-alert__details">
+
+          <div class="site-alert__title">
+            <span class="field-wrapper">COVID-19 Guidance</span>
+
+          </div>
+
+          <div class="site-alert__body">
+            <div class="field-wrapper field field-node--field-body-plain-text field-name-field-body-plain-text field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">In response to COVID-19, all courses are now online and employees are working remotely.</div>
+      </div>
+</div>
+
+          </div>
+
+        </div>
+
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    
+    
+  </section>
+<nav  id="block-utilitynav" data-block-plugin-id="system_menu_block:utility-nav" class="block-utilitynav">
+      
+        
+
+<div class="row">
+  <div class="columns small-12">
+                  <ul class="menu">
+              <li class="in-active-trail" >
+        <a href="/students" target="" rel="" data-drupal-link-system-path="node/189">Students</a>
+              </li>
+          <li>
+        <a href="/faculty-staff" data-drupal-link-system-path="node/321">Faculty &amp; Staff</a>
+              </li>
+          <li>
+        <a href="/parents" target="" rel="" data-drupal-link-system-path="node/190">Parents</a>
+              </li>
+          <li>
+        <a href="/advancement-alumni-relations" target="" rel="" data-drupal-link-system-path="node/34976">Alumni</a>
+              </li>
+          <li>
+        <a href="/covid-19-articles-resources" data-drupal-link-system-path="node/42146">COVID-19 Articles &amp; Resources</a>
+              </li>
+        </ul>
+  
+  </div>
+  
+
+
+          <a href="/advancement-alumni-relations/give-to-lesley-university" target="" rel="" class="button button--give" data-drupal-link-system-path="node/42211">Give Today</a>
+        
+
+
+</div>
+
+
+  </nav>
+<nav  id="block-mainnavigation-5" data-block-plugin-id="menu_block:main" class="block-mainnavigation-5">
+      
+        
+
+  <div id="top-bar-sticky-container">
+    <div id="top-bar-sticky-container--inner">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+            <a class="mobile-logo" href="/">Home</a>
+            <button class="menu-icon" type="button" data-toggle>Menu</button>
+            <div class="title-bar-title"></div>
+          </div>
+          <nav class="top-bar" id="main-menu" role="navigation">
+            <div class="top-bar-left">
+              <a aria-label="Lesley University Home" href="/"><div class="icon-logo"></div></a>
+            </div>
+            <div class="top-bar-right">
+                <section class="views-exposed-form block-exposedformacquia-searchpage" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage" data-block-plugin-id="views_exposed_filter_block:acquia_search-page">
+    <div class="search-main-menu">
+      <button class="search-main-menu__close-button" aria-label="Close search" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    
+    
+        
+
+    
+              <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Type to search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" placeholder="Search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
+</div>
+
+
+</form>
+
+      
+      
+        </div>
+  </section>
+
+                                    <ul class="menu vertical large-horizontal" data-responsive-menu="drilldown large-dropdown">
+                                                                <li aria-expanded="false"  class="has-submenu toggle-mega-menu">
+                      <a href="/all-academics" target="" rel="" data-drupal-link-system-path="node/17481">Academics</a>
+            <div id="mega-menu">
+              <div class="row relative">
+                <button aria-label="close mega-menu" id="close-mega-menu" class="close-button" type="button"></button>
+                <div class="columns small-12">
+                  <div class="mega-menu__row clearfix">
+                        
+                  <div class="mega-menu__column column-1"><span>Program Types</span>
+                                          <div class="inner-loop"><a href="/academics/undergraduate">Undergraduate Programs</a>
+                      <div class="inner-loop__description">
+              Programs for first time students, transfers, and adults.
+            </div>
+                  </div>
+            <div class="inner-loop"><a href="/academics/graduate">Graduate Programs</a>
+                      <div class="inner-loop__description">
+              Advance your career through master&#039;s, certificate, and doctoral programs.
+            </div>
+                  </div>
+            <div class="inner-loop"><a href="/online-programs">Online Programs</a>
+                      <div class="inner-loop__description">
+              Online programs providing flexibility, convenience, and quality.
+            </div>
+                  </div>
+            <div class="inner-loop"><a href="/professional-development-and-continuing-education">Professional Development and Continuing Education</a>
+                      <div class="inner-loop__description">
+              Pursue lifelong learning through conferences, workshops, and courses.
+            </div>
+                  </div>
+            <div class="inner-loop"><a href="/threshold-program">Threshold Program</a>
+                      <div class="inner-loop__description">
+              Two-year, campus-based learning for students with diverse learning challenges.
+            </div>
+                  </div>
+      
+                      </div>
+                  <div class="mega-menu__column column-2"><span>Areas of Study</span>
+                                          <div class="inner-loop"><a href="/academics/art-design">Art &amp; Design</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/business-management">Business Management</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/counseling-psychology">Counseling &amp; Psychology</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/education">Education</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/expressive-therapies">Expressive Therapies</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/humanities">Humanities</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/science-mathematics">Science &amp; Mathematics</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/social-sciences">Social Sciences</a>
+                  </div>
+      
+                      </div>
+                  <div class="mega-menu__column column-3"><span>Schools</span>
+                                          <div class="inner-loop"><a href="/academics/college-of-art-design">College of Art &amp; Design</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/college-of-liberal-arts-sciences">College of Liberal Arts &amp; Sciences</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/graduate-school-of-arts-social-sciences">Graduate School of Arts &amp; Social Sciences</a>
+                  </div>
+            <div class="inner-loop"><a href="/academics/graduate-school-of-education">Graduate School of Education</a>
+                  </div>
+      
+                      </div>
+        
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                                                  <li>
+            <a href="/admissions-aid" data-drupal-link-system-path="node/303">Admissions &amp; Aid</a>
+          </li>
+                                                  <li>
+            <a href="/stories" target="" rel="" data-drupal-link-system-path="node/166">Stories</a>
+          </li>
+                                                  <li>
+            <a href="/life-at-lesley" data-drupal-link-system-path="node/297">Life at Lesley</a>
+          </li>
+                                                  <li>
+            <a href="/about" target="" rel="" data-drupal-link-system-path="node/291">About</a>
+          </li>
+                  <li class="toggle-search" aria-expanded="false" role="menuitem"><a class="icon-search" style="width: 24px; height: 24px;"><span class="show-for-sr">Search</span></a></li>
+    </ul>
+    <div class="top-bar-secondary clearfix">
+      <div class="columns small-6">
+        <nav  id="block-footerlinksleft" data-block-plugin-id="system_menu_block:footer-links-left" class="block-footerlinksleft">
+      
+        
+
+              <ul class="menu vertical large-horizontal">
+              <li>
+        <a href="/about/work-at-lesley" target="" rel="" data-drupal-link-system-path="node/3431">Work at Lesley</a>
+              </li>
+          <li>
+        <a href="/about/newsroom" target="" rel="" data-drupal-link-system-path="node/3821">Newsroom</a>
+              </li>
+          <li>
+        <a href="/events/week" target="" rel="" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+          <li>
+        <a href="/contact-us" target="" rel="" data-drupal-link-system-path="node/16061">Contact Us</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+      </div>
+      <div class="columns small-6">
+        <nav  id="block-audiencenavigation-4" data-block-plugin-id="menu_block:utility-nav" class="block-audiencenavigation-4">
+      
+        
+
+<div class="row">
+  <div class="columns small-12">
+                  <ul class="menu vertical large-horizontal">
+              <li class="in-active-trail" >
+        <a href="/students" target="" rel="" data-drupal-link-system-path="node/189">Students</a>
+              </li>
+          <li>
+        <a href="/faculty-staff" data-drupal-link-system-path="node/321">Faculty &amp; Staff</a>
+              </li>
+          <li>
+        <a href="/parents" target="" rel="" data-drupal-link-system-path="node/190">Parents</a>
+              </li>
+          <li>
+        <a href="/advancement-alumni-relations" target="" rel="" data-drupal-link-system-path="node/34976">Alumni</a>
+              </li>
+          <li>
+        <a href="/covid-19-articles-resources" data-drupal-link-system-path="node/42146">COVID-19 Articles &amp; Resources</a>
+              </li>
+        </ul>
+  
+  </div>
+</div>
+
+
+  </nav>
+
+      </div>
+    </div>
+  
+                                        </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  </nav>
+
+  </div>
+
+      
+      <div class="row">
+                      </div>
+
+      
+            <div class="l-help row">
+        <div class="large-12 columns">
+          
+        </div>
+      </div>
+      
+              <main id="main" tabindex="-1">
+            <div>
+    <section id="block-lesley-content" data-block-plugin-id="system_main_block" class="block-lesley-content">
+  
+  
+    
+
+  
+          <div class="audience-page audience-page">
+
+	<div class="audience-page__breadcrumbs audience-page__breadcrumbs--mobile-two-rows">
+		<div class="row">
+			<div class="columns small-12">
+				<section id="block-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="block-breadcrumbs">
+  
+  
+    
+
+  
+            <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">You are here</h2>
+    <ul class="breadcrumbs">
+    
+              <li class="last-link">
+                      <a href="/students">Students</a>
+                  </li>
+
+          
+      
+                <li class="current">Coronavirus Disease (COVID-19)</li>
+    </ul>
+  </nav>
+
+    
+    
+  </section>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="local-mobile-nav">
+		<a id="toggle-local-mobile-nav" href="#"><span class="menu-icon"></span> Coronavirus Disease (COVID-19)</a>
+		<div class="local-mobile-nav__nav">
+			<nav  id="block-audiencenavigation-3" data-block-plugin-id="menu_block:utility-nav" class="block-audiencenavigation-3">
+      
+        
+
+        <ul class="menu vertical">
+                                                                    <li class="in-active-trail" >
+          <span>Health, Wellness, &amp; Safety</span>
+                              <ul class="menu vertical">
+          <li class="in-active-trail" >
+        <a href="/students/health-wellness-safety/coronavirus-disease-2019-covid-19-information" title="Coronavirus Disease (COVID-19)" data-drupal-link-system-path="node/41931" class="is-active">Coronavirus Disease (COVID-19)</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/undergraduate-health-services" data-drupal-link-system-path="node/6631">Undergraduate Health Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/immunization-information" data-drupal-link-system-path="node/5691">Immunization Information</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/student-health-and-dental-insurance" data-drupal-link-system-path="node/5696">Student Health and Dental Insurance</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/counseling-center" data-drupal-link-system-path="node/6996">Counseling Center</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/disability-services" data-drupal-link-system-path="node/7001">Disability Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/sexual-assault-prevention-services" target="" rel="" data-drupal-link-system-path="node/7041">Sexual Assault Prevention &amp; Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/sexual-assault-prevention-services/emergency-and-support-resources" target="" rel="" data-drupal-link-system-path="node/18471">Emergency and Support Resources for Sexual Assault</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/public-safety" data-drupal-link-system-path="node/1811">Public Safety</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/womens-center" data-drupal-link-system-path="node/6886">Women&#039;s Center</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/chemical-hygiene-plan" data-drupal-link-system-path="node/34681">Chemical Hygiene Plan</a>
+              </li>
+        </ul>
+  
+                  </li>
+                                                                                    </ul>
+  
+
+
+
+  </nav>
+
+		</div>
+	</div>
+
+	<div class="chevron-bg chevron-bg--right chevron-bg--light-gray">
+		<div class="chevron-bg-wrapper">
+		</div>
+	</div>
+
+
+
+	<div class="audience-page__body">
+		<div class="row">
+			<div class="columns small-12 audience-page__local-nav-wrapper">
+				<div class="audience-page__local-nav">
+					<nav  id="block-audiencenavigation-3" data-block-plugin-id="menu_block:utility-nav" class="block-audiencenavigation-3">
+      
+        
+
+        <ul class="menu vertical">
+                                                                    <li class="in-active-trail" >
+          <span>Health, Wellness, &amp; Safety</span>
+                              <ul class="menu vertical">
+          <li class="in-active-trail" >
+        <a href="/students/health-wellness-safety/coronavirus-disease-2019-covid-19-information" title="Coronavirus Disease (COVID-19)" data-drupal-link-system-path="node/41931" class="is-active">Coronavirus Disease (COVID-19)</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/undergraduate-health-services" data-drupal-link-system-path="node/6631">Undergraduate Health Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/immunization-information" data-drupal-link-system-path="node/5691">Immunization Information</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/student-health-and-dental-insurance" data-drupal-link-system-path="node/5696">Student Health and Dental Insurance</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/counseling-center" data-drupal-link-system-path="node/6996">Counseling Center</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/disability-services" data-drupal-link-system-path="node/7001">Disability Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/sexual-assault-prevention-services" target="" rel="" data-drupal-link-system-path="node/7041">Sexual Assault Prevention &amp; Services</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/sexual-assault-prevention-services/emergency-and-support-resources" target="" rel="" data-drupal-link-system-path="node/18471">Emergency and Support Resources for Sexual Assault</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/public-safety" data-drupal-link-system-path="node/1811">Public Safety</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/womens-center" data-drupal-link-system-path="node/6886">Women&#039;s Center</a>
+              </li>
+          <li>
+        <a href="/students/health-wellness-safety/chemical-hygiene-plan" data-drupal-link-system-path="node/34681">Chemical Hygiene Plan</a>
+              </li>
+        </ul>
+  
+                  </li>
+                                                                                    </ul>
+  
+
+
+
+  </nav>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="columns small-12">
+				<h1 class="audience-page__page-title"><span class="field-wrapper">Coronavirus Disease (COVID-19) Information</span>
+</h1>
+			</div>
+		</div>
+
+		<div class="field-wrapper field field-node--field-body field-name-field-body field-type-entity-reference-revisions field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <div class="row">
+    <div class="columns small-12 body-text paragraph--text">
+              <p>Lesley University is monitoring the Coronavirus Disease (COVID-19) situation, offering guidance, support, and regular updates. The health, wellbeing, and safety of our students, faculty, and staff, as well as members of our extended community, are always first. Please read the following information, policies, and key decisions, and check this page for regular updates.</p>
+          </div>
+  </div>
+</div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>Resources for students, educators, and caregivers</h3>
+        <p>At Lesley, we are fortunate to have faculty who are experts in what we call the human arts, such as education, mental health counseling, expressive arts therapy, visual and written arts, mindfulness, and more. They've drawn on their extensive experience to create <a href="https://lesley.edu/covid-19-articles-resources">resources to help students, teachers, parents/caregivers, and the community as a whole through this time.</a></p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Mindfulness and Mental Health Resources</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a href="https://lesley.edu/article/10-minute-mindful-breathing-and-self-compassion-meditation">A 10-Minute Mindful Breathing &amp; Self-Compassion Meditation</a></p>
+
+<p><a href="https://lesley.edu/article/circles-in-our-every-day-deepening-connections-in-the-time-of-social-distancing">Deepening Connections During Social Distancing</a></p>
+
+<p><a href="https://lesley.edu/article/relax-and-refocus-with-these-guided-meditations">Relax &amp; Refocus: Guided Meditations</a></p>
+
+<p><a href="https://lesley.edu/news/five-tips-for-mindfully-managing-during-a-crisis">Tips for Mindfully Managing in a Crisis</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Resources for Students </span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a href="https://lesley.edu/article/avoid-activist-burnout-and-sustain-your-commitment-to-community">Avoiding Activist Burnout</a></p>
+
+<p><a href="https://lesley.edu/article/avoid-these-10-common-study-traps">Avoiding Study Traps</a></p>
+
+<p><a href="https://lesley.edu/article/the-3-pile-method-of-studying-a-recipe-for-no-stress-success">The 3-Pile Method of Studying</a></p>
+
+<p><a href="https://lesley.edu/article/five-tips-for-students-during-the-coronavirus-self-quarantine">Tips for Students During Self-Quarantine</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Resources for Educators </span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a href="https://lesley.edu/article/resilient-educators-in-times-of-crisis">Resilient Educators in Times of Crisis</a></p>
+
+<p><a href="https://drive.google.com/file/d/15Cb1b-haspiWwOrwcFdZXyBHKEXvDlgR/view">Structuring Virtual Learning: Tips for Teachers</a></p>
+
+<p><a href="http://www.theclassroombookshelf.com/2020/03/coronavirus-support-teaching-resources-for-k-8-online-learning/">Teaching Resources for K–8 Online Learning from the Classroom Bookshelf</a></p>
+
+<p><a href="https://lesley.edu/article/resources-for-teachers-and-caregivers-during-the-coronavirus">Online Curriculum Resources for Teachers and Caregivers</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Resources for Parents and Caregivers</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a href="https://docs.google.com/document/d/1YhpyimLwtjGENVskHLeL_X947D5O1KVag1SZjz7gXos/edit">Caregiver Math Resources</a></p>
+
+<p><a href="https://lesley.edu/resources-for-teachers-and-caregivers">Online Curriculum Resources for Teachers and Caregivers</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item">
+
+<div class="row">
+  <div class="columns small-12">
+    <div class="promotional-story promotional-story__left negative-row-margin">
+              <div class="promotional-story__image">
+  <div class="image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><article>
+  
+      <div class="field-wrapper field field-media--image field-name-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">    <picture>
+                  <source srcset="/sites/default/files/styles/promotional_story_left_1x_wide/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=KIk9FMgl 1x, /sites/default/files/styles/promotional_story_left_2x_wide/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=H2xhFbea 2x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_medium/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=TpXEYMtR 1x, /sites/default/files/styles/promotional_section_2x_medium/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=rBSjGQjE 2x" media="all and (min-width: 460px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_small/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=j3X0LdV6 1x, /sites/default/files/styles/promotional_section_2x_small/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=X5bCsv_g 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/promotional_story_left_1x_wide/public/Colleen%20-Smith-silly-grad-pic.jpg?h=b847d938&amp;itok=KIk9FMgl" alt="9 photos of graduates in individual locations wearing their cap and gown and holding up signs like &quot;I did it&quot;" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      </div>
+</div>
+
+  </article>
+</div>
+      </div>
+</div>
+
+</div>
+<div class="promotional-story__content">
+  <div class="topic-area-label">
+    <div class="field-wrapper field field-paragraph--field-topic-label field-name-field-topic-label field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Honoring our Graduating Students</div>
+      </div>
+</div>
+
+  </div>
+  <div class="story-title">
+    
+  </div>
+  <div class="promotional-story__teaser">
+    <div class="field-wrapper field field-paragraph--field-para-teaser field-name-field-para-teaser field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Lesley had to make the difficult but necessary decision to postpone Commencement and all of the related activities. We intend to hold a traditional, in-person celebration for 2020 graduates once it is safe to do so. On Saturday, May 16 we virtually honored their educational journeys and experiences.</div>
+      </div>
+</div>
+
+  </div>
+  <div class="read-more">
+    <div class="field-wrapper field field-paragraph--field-para-link field-name-field-para-link field-type-link field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><a href="https://lesley.edu/students/commencement/commencement-2020">Learn how we honored our students</a></div>
+      </div>
+</div>
+
+  </div>
+</div>
+
+          </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="columns small-12">
+    <div class="promotional-story promotional-story__right negative-row-margin">
+              <div class="promotional-story__image">
+  <div class="image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><article>
+  
+      <div class="field-wrapper field field-media--image field-name-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">    <picture>
+                  <source srcset="/sites/default/files/styles/promotional_story_right_1x_wide/public/janet-at-convocation.jpg?h=c6980913&amp;itok=5U-IrQ2- 1x, /sites/default/files/styles/promotional_story_right_2x_wide/public/janet-at-convocation.jpg?h=c6980913&amp;itok=8kwt8fao 2x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_medium/public/janet-at-convocation.jpg?h=c6980913&amp;itok=-7KHn8LM 1x, /sites/default/files/styles/promotional_section_2x_medium/public/janet-at-convocation.jpg?h=c6980913&amp;itok=_kT1SJ6G 2x" media="all and (min-width: 460px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_small/public/janet-at-convocation.jpg?h=c6980913&amp;itok=SGyLCVr- 1x, /sites/default/files/styles/promotional_section_2x_small/public/janet-at-convocation.jpg?h=c6980913&amp;itok=-D-0Ycqd 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/promotional_story_right_1x_wide/public/janet-at-convocation.jpg?h=c6980913&amp;itok=5U-IrQ2-" alt="President Steinmayer at the podium addressing the audience at Convocation" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      </div>
+</div>
+
+  </article>
+</div>
+      </div>
+</div>
+
+</div>
+<div class="promotional-story__content">
+  <div class="topic-area-label">
+    <div class="field-wrapper field field-paragraph--field-topic-label field-name-field-topic-label field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Marking May 16</div>
+      </div>
+</div>
+
+  </div>
+  <div class="story-title">
+    
+  </div>
+  <div class="promotional-story__teaser">
+    <div class="field-wrapper field field-paragraph--field-para-teaser field-name-field-para-teaser field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Our virtual celebration includes a message from President Janet L. Steinmayer, conferral of degrees by Chair of the Board of Trustees Hans Strauch, and a video compilation from the Lesley community and beyond—including Massachusetts Senator Elizabeth Warren, U.S. Representative Ayanna Pressley, and countless families and friends.</div>
+      </div>
+</div>
+
+  </div>
+  <div class="read-more">
+    <div class="field-wrapper field field-paragraph--field-para-link field-name-field-para-link field-type-link field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><a href="https://www.youtube.com/watch?v=iWT7NqZ75is&amp;feature=emb_title">Watch the messages to our graduation students.</a></div>
+      </div>
+</div>
+
+  </div>
+</div>
+
+          </div>
+  </div>
+</div>
+
+</div>
+          <div class="field-item">
+
+<div class="row">
+  <div class="columns small-12">
+    <div class="promotional-story promotional-story__left negative-row-margin">
+              <div class="promotional-story__image">
+  <div class="image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><article>
+  
+      <div class="field-wrapper field field-media--image field-name-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">    <picture>
+                  <source srcset="/sites/default/files/styles/promotional_story_left_1x_wide/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=cq5ab_Pi 1x, /sites/default/files/styles/promotional_story_left_2x_wide/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=uP2QKOBh 2x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_medium/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=zYaWopsI 1x, /sites/default/files/styles/promotional_section_2x_medium/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=xJ0ruaXo 2x" media="all and (min-width: 460px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_small/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=Cvb49lmD 1x, /sites/default/files/styles/promotional_section_2x_small/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=qPMK0OVv 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/promotional_story_left_1x_wide/public/plan-your-visit.jpg?h=2e0d2ac2&amp;itok=cq5ab_Pi" alt="Lesley University&#039;s Doble Campus quad" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      </div>
+</div>
+
+  </article>
+</div>
+      </div>
+</div>
+
+</div>
+<div class="promotional-story__content">
+  <div class="topic-area-label">
+    <div class="field-wrapper field field-paragraph--field-topic-label field-name-field-topic-label field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Visiting Campus</div>
+      </div>
+</div>
+
+  </div>
+  <div class="story-title">
+    
+  </div>
+  <div class="promotional-story__teaser">
+    <div class="field-wrapper field field-paragraph--field-para-teaser field-name-field-para-teaser field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">If you&#039;re an accepted student, you can still take a virtual tour of Lesley even though the campus is currently closed. You can learn more about our programs, meet our faculty, and get to know our community.</div>
+      </div>
+</div>
+
+  </div>
+  <div class="read-more">
+    <div class="field-wrapper field field-paragraph--field-para-link field-name-field-para-link field-type-link field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><a href="https://lesley.university-tour.com/">Learn more about our undergraduate programs.</a></div>
+      </div>
+</div>
+
+  </div>
+</div>
+
+          </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="columns small-12">
+    <div class="promotional-story promotional-story__right negative-row-margin">
+              <div class="promotional-story__image">
+  <div class="image field field-paragraph--field-image field-name-field-image field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><article>
+  
+      <div class="field-wrapper field field-media--image field-name-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">    <picture>
+                  <source srcset="/sites/default/files/styles/promotional_story_right_1x_wide/public/background-political-science.jpg?h=125a58ae&amp;itok=Sh4XyBnm 1x, /sites/default/files/styles/promotional_story_right_2x_wide/public/background-political-science.jpg?h=125a58ae&amp;itok=6BKKmhnd 2x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_medium/public/background-political-science.jpg?h=125a58ae&amp;itok=wuc-ghxl 1x, /sites/default/files/styles/promotional_section_2x_medium/public/background-political-science.jpg?h=125a58ae&amp;itok=OrtoKHCZ 2x" media="all and (min-width: 460px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/promotional_section_1x_small/public/background-political-science.jpg?h=125a58ae&amp;itok=VQeC8ZcV 1x, /sites/default/files/styles/promotional_section_2x_small/public/background-political-science.jpg?h=125a58ae&amp;itok=b9ajD3jT 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/promotional_story_right_1x_wide/public/background-political-science.jpg?h=125a58ae&amp;itok=Sh4XyBnm" alt="hand on laptop computer" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      </div>
+</div>
+
+  </article>
+</div>
+      </div>
+</div>
+
+</div>
+<div class="promotional-story__content">
+  <div class="topic-area-label">
+    <div class="field-wrapper field field-paragraph--field-topic-label field-name-field-topic-label field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Online learning at Lesley</div>
+      </div>
+</div>
+
+  </div>
+  <div class="story-title">
+    
+  </div>
+  <div class="promotional-story__teaser">
+    <div class="field-wrapper field field-paragraph--field-para-teaser field-name-field-para-teaser field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">With over 40 years of experience in distance learning, we know how important it is to build a strong community when learning from different spaces. Our small class sizes and accessible professors mean that our students can focus on learning while still connecting with their peers and making connections that last a lifetime.</div>
+      </div>
+</div>
+
+  </div>
+  <div class="read-more">
+    <div class="field-wrapper field field-paragraph--field-para-link field-name-field-para-link field-type-link field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><a href="https://www.youtube.com/watch?v=gI1ziy7gtnY&amp;feature=youtu.be">Learn how Lesley approaches online learning.</a></div>
+      </div>
+</div>
+
+  </div>
+</div>
+
+          </div>
+  </div>
+</div>
+
+</div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>COVID-19 within the Lesley University Community</h3>
+        
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Respect for Privacy</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>We are committed to supporting our colleagues, students, and the broader community through the challenges presented by COVID-19.</p>
+
+<p>In the event that members of the Lesley community test positive for COVID-19, we ask that you be respectful of their need for privacy.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Getting Help if You&#039;re Concerned about Exposure</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>If you are concerned that you may have been exposed to COVID-19 please contact your primary care physician.</p>
+
+<p>If you have been tested, please notify Lesley University at <a href="mailto:michele.trifiro@lesley.edu">michele.trifiro@lesley.edu</a> so that we may take appropriate steps to support you and protect the Lesley community.</p>
+
+<ul></ul></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Take Care of Your Mental Health</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>Lesley's Counseling Center</h3>
+
+<p>In this time of uncertainty, we know many of you are struggling to make sense of everything that is happening. Lesley's Counseling Center continues to support our students the best way they can. At this time, the Counseling Center can only offer some current clients counseling services via teletherapy. They are also happy to help you locate resources and referrals that are near you.</p>
+
+<ul><li><strong>Students: </strong>Email<strong> </strong><a href="mailto:counselingcenter@lesley.edu">counselingcenter@lesley.edu </a>or call 617.349.8545, and leave your name and number in a message. The Counseling Center is checking voicemail and emails each day, and a member of the team will be in touch with you.</li>
+	<li><strong>Employees:  </strong>Contact Magi McKinnies at the Counseling Center at <a href="mailto:mmckinni@lesley.edu">mmckinni@lesley.edu</a></li>
+</ul><h3>Resources on the Counseling Center's Web Page</h3>
+
+<p>Visit the <a href="/node/6996">Counseling Center's web page</a> for resources such as crisis hotlines, meditation apps, and more.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Health and Safety</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>We encourage you to continue to take steps to keep yourself and those around you safe. Although most of our employees are working remotely, we do have some who continue to report to campus. We have provided guidance on health and safety, enhanced our cleaning protocols, and are doing our best to support their safety and wellbeing.</p>
+
+<p>Social distancing, wearing a cloth face mask in public, and frequent handwashing are essential. Please continue to follow the guidance from the Centers for Disease Control &amp; Prevention, the Massachusetts Department of Public Health, the Cambridge Board of Health, and Governor Baker.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>Frequently Asked Questions</h3>
+        
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>CARES Act</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><strong>Updated June 18, 2020</strong></p>
+
+<p>Lesley University has signed and returned to the Department of Education the Certification and Agreement under the Coronavirus Aid, Relief and Economic Security (CARES) Act. The University intends to use no less than 50% of the funds it receives under Section 18004(a)(1) of the CARES Act to provide Emergency Financial Aid Grants to students.</p>
+
+<p>Under the CARES Act, Lesley University will receive $998,930 from the Department pursuant to its Certification and Agreement for Emergency Financial Aid Grants to Students.</p>
+
+<p>As of June 16, 2020, the institution has made $460,650 in emergency grant funds to 1,181 students.</p>
+
+<p>The University estimates that 2,353 students were eligible to participate in programs under Section 484 of Title IV of the Higher Education Act of 1965 and thus would be eligible to receive Emergency Financial Aid Grants to Students under Section 18004(a)(1) of the CARES Act.</p>
+
+<p>The institution has distributed a questionnaire to the 2,353 students determined to be eligible and as of June 16, 2020 has received 1,181 completed questionnaires which were used to help determine for whom and in what amount to award the Emergency Financial Aid Grants under Section 18004(a)(1) of the CARES Act.</p>
+
+<p>Eligible students were notified by email, provided instructions, and a link to an application to request Emergency Financial Aid Grants.  Students were also directed to our Lynx Solution Center at: <a href="https://solutioncenter.lesley.edu/s/" target="_blank">solutioncenter.lesley.edu</a> for additional information and guidance.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>General</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><strong>Q: IS LESLEY UNIVERSITY STILL OPEN? </strong></p>
+
+<p><strong>A: </strong>Yes. Students attending summer sessions continue their studies online and faculty, most staff, and administrators are working remotely to provide the same level of office operations and services as before. Further information is available on this webpage.</p>
+
+<p><strong>Q: WHY IS LESLEY MAKING THESE DECISIONS? </strong></p>
+
+<p><strong>A: </strong>These are uncertain and, at least in recent history, unprecedented times. The World Health Organization has classified the Coronavirus as a worldwide pandemic. In addition, the Commonwealth of Massachusetts is operating under a governor-declared State of Emergency as well as a "stay at home" order. The university is proceeding with an abundance of caution for the safety and wellbeing of our students, faculty, staff, vendors, and visitors.</p>
+
+<p><strong>Q: WHERE CAN I FIND MORE INFORMATION ABOUT THE CORONAVIRUS?</strong></p>
+
+<p><strong>A:</strong> On the CDC website: <a href="https://www.cdc.gov/" target="_blank">cdc.gov/covid</a></p>
+
+<p><strong>Q: WHAT ARE HEALTH EXPERTS RECOMMENDING?</strong></p>
+
+<p><strong>A: </strong>Watch for symptoms, wash your hands, wear cloth face coverings in public (per order of the Cambridge and Somerville Boards of Health), and practice social distancing. According to the CDC, symptoms include fever, cough and shortness of breath. Also, assess whether you have traveled from a place experiencing widespread reported cases of Coronavirus, or if you believe you’ve had contact with someone exposed to it. If so, experts advise self-quarantining at home, if at all possible. Consult <a href="https://cdc.gov/coronavirus/2019-ncov/about/symptoms.html" target="_blank">cdc.gov/coronavirus/2019-ncov/about/symptoms.html</a></p>
+
+<p><strong>Q: ARE CAMPUS EVENTS BEING CANCELED? </strong></p>
+
+<p><strong>A: </strong>The university postponed ALL on-campus events and major celebrations during the Spring semester, and we are reviewing next steps, all with an eye toward the health, safety, and wellbeing of our community members. Our goal is to resume full on-campus operations at a later date, when it is prudent to do so. Keep checking this page for further updates.</p>
+
+<p><strong>Q: ARE COMMENCEMENT AND OTHER ASSOCIATED EVENTS STILL ON?</strong></p>
+
+<p><strong>A: </strong>No. Regrettably, Commencement is postponed and, out of an abundance of caution, all campus events through the end of the semester are postponed or canceled. The decision to postpone Commencement, especially, was a difficult one, as it traditionally is a time for the entire Lesley community to gather in celebration of the accomplishments of those earning their degrees. Though degrees were still awarded, we want to acknowledge the gravity of this decision, and what the entire community will be missing.</p>
+
+<p>We honored our graduates’ accomplishments virtually on Saturday, May 16 as a way to mark their educational journeys and experiences.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Students and Parents</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><strong>Q: DID STUDENTS COME BACK TO CAMPUS DURING THE SPRING SEMESTER?</strong></p>
+
+<p><strong>A: </strong>No. Lesley University did not hold classes on campus through the end of the Spring semester.</p>
+
+<p><strong>Q: DID STUDENTS RETURN TO CAMPUS TO MOVE BACK INTO THE RESIDENCE HALLS? </strong></p>
+
+<p><strong>A: </strong>No. Lesley University moved all classes ONLINE through the end of the Spring semester.</p>
+
+<p><strong>Q: ARE STUDENTS ELIGIBLE FOR A ROOM AND BOARD REFUND?</strong></p>
+
+<p><strong>A: </strong> We provided residential students a credit for room and board for the time between spring break and the end of the Spring 2020 semester. The amount of credit was applied toward any outstanding balance on your student account. If the credit resulted in a refund, it should have been issued in April. Students who have not already signed up for direct deposit accounts should do so by logging into their student account at Lesley.afford.com. As the credits are posted they will be viewable at Lesley.afford.com as well.</p>
+
+<p>Please contact us at 617.349.8760 with any questions. We anticipate providing students with the option to select a refund or a credit for the pro-rata portion of room and board payments, accounting for the time the student is away from campus. There are a number of governmental regulations and guidelines that must be taken into consideration to make sure we structure these refunds or credits properly for you so we appreciate your patience as we await guidance from the Federal government. </p>
+
+<p><strong>Q: WHAT ABOUT STUDENT EXCHANGE AND STUDY ABROAD PROGRAMS?</strong></p>
+
+<p>A: Our students typically participate in a variety of programs. Over the course of the Spring semester, a number of programs were either canceled or moved online including all Lesley Exchange Partner programs. We have been in contact with all of our study abroad students regarding their individual circumstances to support their transition. International faculty-led travel courses for Spring 2020 that had not commenced prior to Spring Break were canceled. We are carefully considering courses planned beyond the spring semester.</p>
+
+<p><strong>Q. WHAT ABOUT MY INTERNSHIP OR FIELD PLACEMENT?</strong></p>
+
+<p><strong>A. </strong>Lesley has come to the difficult decision that any field placements and internships that have not been cancelled <strong>will remain remote/online participation experiences until future notice for the Spring 2020 semester and through the Summer 2020 semesters</strong>. We came to this decision after our faculty and field offices contacted students, faculty, sites, and the licensing boards to determine how to best move forward. During this time, please be in contact, virtually, with your practicum/internship supervisor and/or your school's field training/internship office.</p>
+
+<p>For students in licensure programs, you will (or will have) received communication from your school's field offices that remain in contact with external regulatory bodies. For specific guidance, please refer to those correspondences.  </p>
+
+<p>Our Field Placement Offices remain your partners in experiential learning throughout this situation and will guide you through this transition. Field experience and internships are key parts of a Lesley education and we recognize how difficult it is to imagine long-term on-line engagement as a replacement for face-to-face contact. As the situation continues to rapidly evolve, we will review the circumstances again when the state and national declarations of emergency are lifted and we will be guided by ongoing consideration of state and health agency recommendations.</p>
+
+<p><strong>Q. WHAT ABOUT SUMMER RESIDENCIES?</strong></p>
+
+<p><strong>A.</strong> Summer residencies are either switching to an online format or have changed their timing.</p>
+
+<p><strong>Q. I’M AN ACCEPTED STUDENT, WHAT SHOULD I DO?</strong></p>
+
+<p><strong>A</strong>. Our admission decisions won't change because of the current pandemic. Please proceed as follows:</p>
+
+<p>If you are an accepted undergraduate, <a href="https://lesley.university-tour.com/">take a virtual tour of our campus and learn more about our programs.</a> If you have questions, please contact Deb Kocar, Director of Undergraduate Admissions: <a href="mailto:dkocar@lesley.edu">dkocar@lesley.edu</a>; 617.349.8800.</p>
+
+<p>If you are an accepted graduate student, <a href="https://lesleygraduate.university-tour.com/">take a virtual tour of our campus and learn more about our programs.</a> If you have any questions, please contact Barbara Selmo, Associate Vice President of Graduate Admissions: <a href="mailto:bselmo@lesley.edu">bselmo@lesley.edu</a>; 617.349.8300.</p>
+
+<p><strong>Q. IS LESLEY STILL ACCEPTING APPLICATIONS?</strong></p>
+
+<p><strong>A.</strong> Yes. And we have a very flexible approach and can work with you if you've experienced disruption due to the global pandemic. Additionally, we've extended our commitment deadline.</p>
+
+<p>If you are applying as an undergraduate and have any questions, please contact Deb Kocar, Director of Undergraduate Admissions: <a href="mailto:dkocar@lesley.edu">dkocar@lesley.edu</a>; 617.349.8800.</p>
+
+<p>If you are applying as a graduate student and have any questions, please contact Barbara Selmo, Associate Vice President of Graduate Admissions: <a href="mailto:bselmo@lesley.edu">bselmo@lesley.edu</a>; 617.349.8267</p>
+
+<p><strong>Q. I’M A STUDENT (OR PARENT): TO WHOM SHOULD I DIRECT QUESTIONS?</strong></p>
+
+<p><strong>A.</strong>  Nathaniel Mays, Dean of Students<br />
+     Email: <a href="mailto:nmays@lesley.edu">nmays@lesley.edu</a><br />
+     Phone: 617.894.2765</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Faculty and Staff</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><strong>Q: I NEED ACCESS TO MY OFFICE, WHAT CAN I DO?</strong></p>
+
+<p><strong>A: </strong>If you need access to your office or need to come to campus for a short period of time, please contact public safety at 617.349.8888 to inform them of your plans.</p>
+
+<p><strong>Q: WHAT KIND OF CLEANING IS BEING DONE ON CAMPUS?</strong></p>
+
+<p><strong>A: </strong> We have adjusted our campus cleaning protocols and buildings are being cleaned up to two times a day, with special emphasis on frequently touched areas. </p>
+
+<p><strong>Q: WILL TRAVEL TO OVERSEAS CONFERENCES BE ALLOWED?</strong></p>
+
+<p><strong>A: </strong>No. All Lesley-sponsored foreign travel has been suspended until further notice.</p>
+
+<p><strong>Q: WILL TRAVEL WITHIN THE UNITED STATES BE PERMITTED?</strong></p>
+
+<p><strong>A: </strong> Any essential work-related <strong>domestic travel</strong> via airplane or Amtrak requires Cabinet-level approval, even if you have already obtained department approval. </p>
+
+<p><strong>Q: WHAT ABOUT PERSONAL/VACATION TRAVEL?</strong></p>
+
+<p><strong>A: </strong>We discourage any international travel at this time, and urge community members to <a href="http://cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">consult the CDC’s travel advisory page</a> and the <a href="https://travel.state.gov/content/travel.html" target="_blank">Department of State’s travel advisory page</a>. travel.state.gov. Anyone who does travel should contact <strong>Michele Trifiro, Director of Campus Safety and Services, </strong><a href="mailto:michele.trifiro@lesley.edu"><strong>michele.trifiro@lesley.edu</strong></a><strong>. </strong></p>
+
+<p><strong>Q. WHAT ABOUT GUESTS WHO MIGHT BE COMING TO CAMPUS.</strong></p>
+
+<p><strong>A.</strong> We are discouraging guests coming to campus, and ask that you reschedule or switch to a virtual format.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Contacts</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Questions should be directed to the following individuals:</p>
+
+<p><strong>Student and parent questions:</strong></p>
+
+<ul><li>Nathaniel Mays, Dean of Students<br />
+	Email: <a href="mailto:nmays@lesley.edu">nmays@lesley.edu</a><br />
+	Phone: 617.894.2765</li>
+</ul><p><strong>Faculty questions: </strong></p>
+
+<ul><li>Margaret Everett, Provost<br />
+	Email: <a href="mailto:Margaret.everett@lesley.edu">Margaret.everett@lesley.edu</a><br />
+	Phone: 617.349.8587</li>
+</ul><p><strong>Staff questions: </strong></p>
+
+<ul><li>Michele Trifiro, Director of Campus Safety and Services<br />
+	Email: <a href="mailto:Michele.trifiro@lesley.edu">Michele.trifiro@lesley.edu</a> <br />
+	Phone: 617.599.9230</li>
+</ul></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>Teaching and Learning</h3>
+        <p>Here are some important changes to how courses will be delivered and other events.</p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Moving Courses Online</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>As of <strong>March 23</strong>, we have moved our undergraduate and graduate courses online for the Spring and Summer semesters.</p>
+
+<p>Regrettably, the university will not return to in-person instruction before the fall. Students should continue to check their email for information from the university and for instructions from faculty about their courses going online.</p>
+
+<p>We are working on the implications of this shift for studio courses, labs, internships, the Threshold program, and other types of courses or activities. We are sharing information as it becomes available.</p>
+
+<p>As circumstances change, we will adjust our plans accordingly. But given what we know at the moment, we believe this is the wisest course of action</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Grading Policy for Spring 2020</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>After careful consideration from faculty, the Registrar’s office, and other affected constituents, the grading policy for the Spring semester and Spring Term 2 changed. Key points are:</p>
+
+<ol start="1" type="1"><li>Default grade for all classes will be pass/fail (P/F)</li>
+	<li>Students can request letter grades instead (opt in) by April 8</li>
+	<li>Faculty have the discretion to allow their students to opt in for letter grades after April 8</li>
+	<li>The Registrar and Information Technology will change the setting of all courses (except those already P/F) to allow either P/F or a letter grade</li>
+</ol><p><strong>Note</strong>: While a grade of P (Pass) does not impact the GPA, a grade of F (Fail) does have an impact. In computing grade point averages, Pass (P) is not included, but a Fail (F) is always included except when a course has been repeated.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Guidance for Faculty</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Please see the Provost’s previous communication for initial guidance in the email archive on the bottom of this web page. The Provost and E-Learning and Instructional Support team (eLIS) will share additional information to support faculty.</p>
+
+<p>Additionally, the grading policy for Spring semester as well as Spring Term 2 was changed. Please see communication from Dean of Faculty Diana Direiter for details. The highlights are:</p>
+
+<ol start="1" type="1"><li>Default grade for all classes will be pass fail (P/F)</li>
+	<li>Students can request letter grades (opt in) instead by April 8</li>
+	<li>Faculty have discretion to allow their students to opt in for letter grades after April 8</li>
+	<li>The Registrar and Information Technology will change the setting of all courses (except those already P/F) to allow either P/F or a letter grade</li>
+</ol></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Guidance for Staff</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Staff members are very important in supporting our students and keeping the university functioning. We have moved to an online learning format and employees are working remotely. Employees can access guides and instructions for Lesley's technology and systems on <a href="https://support.lesley.edu/support/home">the Information Technology help portal,</a> including Microsoft Office 365 products, online collaboration tools, software, phones, and more. <a href="mailto:lesley@it.edu">Please contact it@lesley.edu with questions.</a></p>
+
+<p>Additionally, Lesley has purchased an enterprise site license for Zoom’s Video Conferencing software. These licenses will be available to all current faculty, staff, and students. Each user should receive an invitation email directly from Zoom to their Lesley email address. <a href="https://support.lesley.edu/support/solutions/articles/4000156574">For questions or help with training, visit our resource page for more information.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>University Travel and Meeting Policies</h3>
+        <p>Contagion patterns are not well known and global hotspots are ever-changing. With that uncertainty, we need to make prudent choices to protect the health of our own community and the broader communities we belong to while continuing our educational mission.<br />
+ <br />
+Effective immediately, and in step with <a href="https://www.mass.gov/resource/information-on-the-outbreak-of-coronavirus-disease-2019-covid-19" target="_blank">new advice from the Massachusetts Department of Public Health</a>, the following policies are in place.</p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Lesley-Sponsored Travel</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><ul><li>We are suspending all Lesley-sponsored <strong>international travel </strong>for all students and employees.  </li>
+	<li>Any essential work-related <strong>domestic travel</strong> via airplane or Amtrak requires Cabinet-level approval, even if you had already obtained department approval.  </li>
+	<li>We encourage everyone in our community, students and employees, to weigh whether domestic travel is essential.</li>
+</ul></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Meeting and Events Guidance for Spring and Summer 2020</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>During this period we will cancel or postpone all campus events, including athletics. We are also postponing Commencement, although we virtually celebrated our graduating students on May 16. We are asking faculty and staff to postpone all outside meetings and to limit inside meetings. Most activities will be curtailed to encourage social distancing. </p>
+
+<p>We will limit access to buildings as we continue our efforts to reduce disease transmission. Buildings have shifted to keycard access as of 5:00 pm on Friday, March 13, 2020. If you do not have an ID card, please go to the security desk at University Hall or on the Doble Campus or contact Bill Eve, Assistant Director of Campus Services, at <a href="mailto:lesleycard@lesley.edu?subject=ID%20card%20needed">lesleycard@lesley.edu</a>.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Personal Travel</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>We discourage Lesley community members from personal travel to international locations. However, if you must travel to another country, <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">please review the CDC’s COVID-19 travel advisories page</a> before leaving. We urge you to weigh the risks and potential consequences for yourself and others if you travel to any nation where the CDC reports “widespread sustained (ongoing) transmission” of COVID-19.</p>
+
+<p>Further, as new outbreaks occur and government travel restrictions shift, be aware that if you travel outside the United States, you may encounter difficulties in returning. If you return from a country where there is sustained transmission (Level 3) or from a U.S. outbreak location, according to the CDC, you will be asked to self-quarantine for 2 weeks. <strong>Please self-report any travel to a <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">CDC travel advisory of Level 3 or Level 2 region</a> or to a U.S. outbreak location to Michele Trifiro, the Director of Campus Safety and Services, at <a href="mailto:michele.trifiro@lesley.edu">michele.trifiro@lesley.edu</a>. </strong></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Study Abroad</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Our students typically participate in a variety of programs. And we have been in contact with all of our Study Abroad students regarding their individual circumstances to support their transition.</p>
+
+<p>International faculty-led travel courses for Spring 2020 that had not commenced prior to Spring Break were canceled, and we are carefully considering courses planned beyond the spring semester.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Protocols for Those Abroad Returning to Campus</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Lesley is following the <a href="https://wwwnc.cdc.gov/travel/notices/warning/coronavirus-europe" target="_blank">Centers for Disease Control &amp; Prevention (CDC)</a> and the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">World Health Organization (WHO) guidelines</a> on all screening and response protocols. These evidence-based protocols meet national and international standards.</p>
+
+<p>If you return from a country where there is sustained transmission (Level 3) or from a U.S. outbreak location, according to the CDC, you will be asked to self-quarantine for 2 weeks. <strong>Please self-report any travel to a CDC travel advisory of Level 3 or Level 2 region or from a U.S. outbreak location</strong> to the Director of Campus Safety and Services Michele Trifiro at <a href="mailto:michele.trifiro@lesley.edu">michele.trifiro@lesley.edu</a>.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>About COVID-19</h3>
+        <p>Learn about symptoms, staying healthy, university resources, and other information.</p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Symptoms and Staying Healthy</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>Symptoms</h3>
+
+<p><a href="https://www.cdc.gov/coronavirus/2019-ncov/about/symptoms.html?utm_source=1.27&amp;utm_campaign=1ad74b13d8-EMAIL_CAMPAIGN_2020_01_31_07_39&amp;utm_medium=email&amp;utm_term=0_e415f4d82b-1ad74b13d8-86221700" target="_blank">Symptoms of the Coronavirus</a> occur between 2 and 14 days of exposure and include fever, cough, body aches, and shortness of breath.</p>
+
+<h3>Self-Reporting Your Diagnosed Illness</h3>
+
+<p><strong>Students</strong> diagnosed with seasonal flu, or with a confirmed Coronavirus diagnosis or exposure, must notify Student Health Services at <a href="mailto:lesleyhealthservice@lesley.edu">lesleyhealthservice@lesley.edu</a>.</p>
+
+<p><strong>Faculty and staff</strong> diagnosed with seasonal flu, or with confirmed Coronavirus diagnosis or exposure, must notify Human Resources at 617.349.8787 or <a href="mailto:hr@lesley.edu">hr@lesley.edu</a>.</p>
+
+<h3>Staying Healthy</h3>
+
+<p>Effective steps you can take every day to protect yourself from this and other respiratory viruses:</p>
+
+<ul><li>Wash your hands often with soap and water for at least 20 seconds.</li>
+	<li>Wear a cloth face covering in public at all times—pursuant to orders from the Cambridge Board of Health.</li>
+	<li>Use an alcohol-based hand sanitizer containing at least 60% alcohol (such as Purell) when soap and water are not available.</li>
+	<li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+	<li>Avoid close contact with people who are sick.</li>
+	<li>Stay home when you are sick.</li>
+	<li>Wipe down frequently touched surfaces, such as tabletops and doorknobs, with disinfecting wipes.</li>
+</ul><h3>Who Is Most At Risk</h3>
+
+<p>Currently, individuals who are most at risk of developing COVID-19 are those who have traveled to areas of sustained community transmission or have been in close contact with a person confirmed to have the disease. Visit the <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html?utm_source=1.27&amp;utm_campaign=1ad74b13d8-EMAIL_CAMPAIGN_2020_01_31_07_39&amp;utm_medium=email&amp;utm_term=0_e415f4d82b-1ad74b13d8-86221700" target="_blank">Centers for Disease Control &amp; Prevention (CDC) website</a> for up-to-date information.</p>
+
+<h3>Getting a Flu Shot</h3>
+
+<p>Flu activity in Massachusetts is high and the flu vaccine is among the most effective ways to safeguard the health of the entire Lesley community. If you haven’t gotten your flu shot yet, please consider getting it.</p>
+
+<p>Faculty and staff can contact their Primary Care Physician. All health insurance plans, including those offered by Lesley, cover the flu shot without a copayment from in-network providers. Use the <a href="https://vaccinefinder.org/?utm_source=1.27&amp;utm_campaign=1ad74b13d8-EMAIL_CAMPAIGN_2020_01_31_07_39&amp;utm_medium=email&amp;utm_term=0_e415f4d82b-1ad74b13d8-86221700" target="_blank">vaccine finder tool</a> to find the nearest walk-in provider.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Coping with Anxiety and Increased Stress</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>We recognize that events like these can cause anxiety and increased stress. <a href="mailto:counselingcenter@lesley.edu">If you would like to speak with a counselor, students can contact our Counseling Center at counselingcenter@lesley.edu</a>, or faculty and staff can reach out to Magi McKinnies, Director of Lesley's Counseling Center, <a href="mailto:mmckinni@lesley.edu">mmckinni@lesley.edu.</a></p>
+
+<p>Fear and anxiety can also lead to social stigma, and it's important that we counteract stigma and provide social support within our community and beyond, treating each other with dignity and respect.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>External Resources and Duration of the COVID-19 Outbreak</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Unfortunately, we know very little about COVID-19 right now and cannot estimate the duration of the outbreak with any certainty. This is an emerging infectious diseases with little clinical experience to make informed predictions.</p>
+
+<p>For more information, here are a few external links:</p>
+
+<ul><li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">Centers for Disease Control and Prevention (CDC) Novel Coronavirus (2019-nCoV)</a></li>
+	<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">World Health Organization (WHO) </a></li>
+	<li><a href="https://www.mass.gov/resource/information-on-the-outbreak-of-coronavirus-disease-2019-covid-19">Massachusetts Department of Public Health (MDPH) Novel Coronavirus (2019-nCoV)</a></li>
+</ul></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>Campus Resources and Updates</h3>
+        <p>A task force from across the university is meeting regularly to review the evolving situation and current recommendations from the <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html" target="_blank">Centers for Disease Control &amp; Prevention</a> (CDC), the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">World Health Organization </a>(WHO), and the <a href="https://www.mass.gov/orgs/department-of-public-health" target="_blank">Massachusetts Department of Public Health</a>.</p>
+
+<p>We recognize that the fluidity and uncertainty of this outbreak present challenges across our community and we appreciate everyone’s assistance, cooperation, and ongoing efforts to contain disease transmission.</p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Campus Cleaning Protocols</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>Adjusted Protocols</h3>
+
+<p>On-campus cleaning protocols have been adjusted as a result of the current flu season. Campus buildings are being cleaned up to two times a day with a special emphasis on cleaning areas such as flat surfaces, bathrooms, doorknobs, elevators, and other areas of high-touch activity.</p>
+
+<p>Cleaning solutions include both a virucide and bactericide, which have been reviewed and approved by the <a href="https://www.occupationalhc.com/" target="_blank">Occupational Health Center</a>.</p>
+
+<p>We would like to remind the community to practice good hygiene and follow measures to lower your risk of getting sick.</p>
+
+<h3>Requesting Cleaning</h3>
+
+<ul><li>Schools, colleges, and departments with specific cleaning concerns should contact Facilities at 617.349.8881 or submit a <a href="/node/15806">work order</a>.</li>
+	<li>Students living in residence halls with specific cleaning concerns should contact the Residence Life Office at <a href="mailto:reslife@lesley.edu">reslife@lesley.edu</a> or 617.349.8585.</li>
+	<li>For after-hour emergency cleaning, contact Public Safety at 617.349.8888.</li>
+</ul></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Impact on Commencement </span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>Regrettably, the university has postponed Commencement and related celebrations. We plan on celebrating our graduates in person when the time is right. However, we acknowledge that the difficult, though necessary, decision to postpone Commencement is especially sobering. Though degrees were still awarded, we understand that the Commencement celebration is replete with tradition, meaning and importance.</p>
+
+<p>On Saturday, May 16 we virtually celebrated our graduating students as a way to mark their educational journeys and experiences. With messages from parents, families, staff and faculty, and members of our community, including Senator Elizabeth Warren and Representative Ayanna Pressley, we were able to mark the moment and come together as a campus community in celebration.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item"><div class="accordion-paragraph">
+  <div class="row">
+    <div class="columns small-12">
+      <div class="body-text">
+        <h3>Email Communications from Lesley University</h3>
+        <p>Here is an archive of the email communications we have sent to the Lesley community regarding the Coronavirus.</p>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of April 25 - May 1, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>April 27, 2020: Message to Lesley Students from the Lesley Commencement Office</h3>
+
+<p><a href="https://mailchi.mp/lesley/help-us-honor-our-graduating-students-sr60lc063s">Read the April 27 message to Lesley Students from the Lesley Commencement Office.</a></p>
+
+<h3>April 27, 2020: Message to Lesley Faculty &amp; Staff from the Lesley Commencement Office</h3>
+
+<p><a href="https://mailchi.mp/lesley/help-us-honor-our-graduating-students">Read the April 27 message to Lesley Faculty &amp; Staff from the Lesley Commencement Office.</a></p>
+
+<h3>April 30, 2020: Message to the Lesley Community from the office of Public Safety</h3>
+
+<p><a href="https://mailchi.mp/lesley/spring-updates-from-public-safety?e=[UNIQID]">Read the April 30 message to the Lesley Community from the office of Public Safety.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of April 18 - April 24, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>April 21, 2020: Message to Lesley Staff from President Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley/a-message-from-president-steinmayer">Read the April 21 message to Lesley Staff from President Janet Steinmayer.</a></p>
+
+<h3>April 22, 2020: Message to Lesley Alumni from President Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley/message-from-the-president-042220" target="_blank">Read the April 22 message to Lesley Alumni from President Janet Steinmayer.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of April 4 - April 10, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>April 10, 2020: Message to Lesley Students from President Janet Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley/message-to-all-lesley-students-from-president-steinmayer">Read the April 10 message to Lesley Students from President Janet Steinmayer.</a></p>
+
+<h3>April 10, 2020: Message to Families of Undergraduates from President Janet Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/message-to-all-lesley-students-from-president-steinmayer-504476">Read the April 10 message to Families of Undergraduates from President Janet Steinmayer.</a></p>
+
+<h3>April 10, 2020: Message to Lesley Faculty and Staff from President Janet Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley/message-to-the-lesley-community-from-president-steinmayer">Read the April 10 message to Lesley Faculty and Staff from President Janet Steinmayer.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of March 29 - April 3, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>March 31, 2020: Message to Lesley Alumni from President Janet Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley/message-from-the-president-033120" target="_blank">Read the March 31 message to Lesley Alumni from President Steinmayer.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of March 22 - 28, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>March 27, 2020: Message to Lesley faculty and staff from President Janet Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/message-to-lesley-faculty-and-staff-032620">Read the March 27 message to Lesley staff and faculty from President Steinmayer.</a></p>
+
+<h3>March 26, 2020: Message to Lesley students from Provost Margaret Everett</h3>
+
+<p><a href="https://lesley.edu/sites/default/files/2020-03/Communication%20to%20Lesley%20students%20from%20Provost%20Everett.pdf">Read the March 26 message from Provost Margaret Everett concerning updates to the grading policy.</a></p>
+
+<h3>March 24, 2020: Message to Lesley students from Provost Margaret Everett</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/continued-suspension-of-in-person-internships-and-fieldwork-504432">Read the March 24, 2020 message to students from Provost Margaret Everett.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of March 15 - 21, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>March 20, 2020: Message to Lesley Faculty &amp; Staff from President Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/message-to-lesley-faculty-and-staff-032020?e=[UNIQID]">Read the March 20, 2020 message to faculty &amp; staff from President Janet Steinmayer.</a></p>
+
+<h3>March 20, 2020: Message to parents from President Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/message-from-president-steinmayer-032020?e=[UNIQID]">Read the March 20, 2020 message to parents of Lesley students from President Janet Steinmayer.</a></p>
+
+<h3>March 20, 2020: Message to students from President Steinmayer</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/message-to-students-from-president-steinmayer-032020?e=[UNIQID]">Read the March 20, 2020 message to Lesley University students from President Janet Steinmayer.</a></p>
+
+<h3>March 19, 2020: Possible Case of COVID-19</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/possible-case-of-covid-19" target="_blank">Read the March 19, 2020 email to faculty, staff and students with information about the first known case directly connected to the Lesley community</a>.</p>
+
+<h3>March 18, 2020: Campus office access protocol</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/campus-office-access-protocol" target="_blank">Read the March 18, 2020 email to faculty and staff with information for employees who need to access their offices during the temporary shutdown.</a></p>
+
+<h3>March 16, 2020: Coronavirus Update, Work from Home Begins Tomorrow.</h3>
+
+<p><a href="https://mailchi.mp/lesley/coronavirus-update-march-16-2020-work-from-home-begins-tomorrow?e=d0567f5cd1">Read the March 16, 2020 email to faculty and staff regarding remote work and continuing university work.</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of March 8 - 14, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>March 13, 2020: Coronavirus Update - Internships And Field Placements</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-13-2020-internships-and-field-placements" target="_blank">Read the March 13, 2020 email to students regarding internships, field placements, and practica</a>.</p>
+
+<h3>March 13, 2020: Communication Regarding Alternate Work Arrangements</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-13-2020-alternate-work-arrangements" target="_blank">Read the email sent to Lesley staff regarding how to request alternate work arrangements</a>.</p>
+
+<h3>March 13, 2020: Coronavirus Update - Events and Campus Information</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-13-2020-events-and-campus-information" target="_blank">Read the March 13, 2020 email to faculty and staff</a>.</p>
+
+<h3>March 12, 2020: Coronavirus Frequently Asked Questions Resource to Parents</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-12-2020-faq" target="_blank">Read the March 12, 2020 email to parents and families</a> </p>
+
+<h3>March 12, 2020: Coronavirus Frequently Asked Questions Resource</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-12-2020-frequently-asked-questions" target="_blank">Read the March 12, 2020 email to the Lesley community regarding the FAQ resource.</a> </p>
+
+<h3>March 11, 2020: Message from President Steinmayer to the Community</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-11-2020-official-announcement-504356" target="_blank">Read the communication sent on March 11, 2020 from Lesley University President Janet Steinmayer</a>.</p>
+
+<h3>March 10, 2020: Guidance for Meetings, Events, and Business Continuity</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-10-2020-guidance-for-meetings-events" target="_blank">Read the March 10, 2020 email to the Lesley Community regarding guidance for meetings, events, and business continuity</a>.</p>
+
+<h3>March 10, 2020: Update to the Lesley Community on Travel Policies</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-update-march-10-2020" target="_blank">Read the March 10, 2020 update to the Lesley Community.</a></p>
+
+<h3>March 10, 2020: Letter to Faculty from Provost Margaret Everett</h3>
+
+<p>Dear Faculty,</p>
+
+<p>We are continuing to closely monitor developments around COVID-19 and potential impacts on our community and university operations. You can read university information on the <a href="/node/41931">COVID-19 webpage here</a>, which will be updated frequently as our planning continues and we receive new information. I am writing to you now to help us prepare for the possibility that classes may be unable to meet in person. While we do not yet know if this will be necessary, we can develop readiness now by ensuring that all instructors are familiar with core technology tools to facilitate remote teaching. </p>
+
+<p>I have asked Kris McElroy and John McCormick in <strong><a href="/node/14541">E-Learning and Instructional Support</a></strong> (eLis) to provide a curated list of the most helpful tutorials and resources to assist you. We are fortunate to have a strong team of instructional design and academic technology support in place to assist you. <strong>We are sharing a few initial requests and links.</strong> You will be receiving more information from eLis and from my office in the next few days.</p>
+
+<ol start="1" type="1"><li>Every Lesley course, regardless of modality, has a course shell in Blackboard. If you have not already done so, please be sure to add your syllabus to your course shell(s). <strong><a href="https://support.lesley.edu/support/solutions/articles/4000013713-communicating-within-your-mylesley-course-faculty-" target="_blank">You can find a tutorial on adding your syllabus to courses here</a>. </strong></li>
+	<li>Familiarize yourself with the Announcements tool in Blackboard. It will be essential for your students to know where you will be communicating any updates or information about course changes throughout the term, and how they can communicate with you. This <strong><a href="https://support.lesley.edu/support/solutions/articles/4000013713-communicating-within-your-mylesley-course-faculty-#Announcements" target="_blank">tutorial on Announcements</a></strong> will help orient you.</li>
+	<li>Familiarize yourself with the Discussion board. This will be an essential tool for many courses should you need to move instruction online. <strong><a href="https://support.lesley.edu/support/solutions/articles/4000013713-communicating-within-your-mylesley-course-faculty-#Discussions" target="_blank">See the tutorial on discussion boards</a></strong>.</li>
+	<li>Review your syllabus now. Begin thinking about your learning outcomes and identifying critical assignments and activities. How might you be able to adapt some of these to an online environment? This <strong><a href="https://support.lesley.edu/support/solutions/articles/4000013195-adding-content-to-your-mylesley-course-faculty-" target="_blank">tutorial on adding content to your course</a> </strong>is also helpful.</li>
+</ol><p>Should a closure become necessary, I recognize it would be a daunting task to quickly adapt all courses to an online environment. We do not expect that faculty should adapt their curriculum with the same level of detail and design of a standard online course.</p>
+
+<p>We also recognize that it will be challenging to replicate the plans you have for face-to-face classes in an online environment. Some courses, such as labs and studios, may not be adaptable to the online environment. Should we have a closure, we will deal with these on a case-by-case basis. We will provide as much support as possible. I know we are all focused on providing the best academic experience for our students and ensuring that they can complete their semester as planned. I thank you all for your flexibility during this period of uncertainty.</p>
+
+<p>Best wishes,</p>
+
+<p>Margaret<br />
+Margaret Everett, PhD<br />
+Provost and Vice President for Academic Affairs<br />
+Pronouns: she/her/hers<br />
+1.617.349.8587<br /><a href="mailto:margaret.everett@lesley.edu">margaret.everett@lesley.edu</a></p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>Week of March 1 - 7, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>March 5, 2020: Coronavirus Update: Letter to Parents</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/lesley-university-update-coronavirus-march-5-2020" target="_blank">Read the March 5, 2020 letter to parents</a>.</p></div>
+      </div>
+</div>
+
+    </div>
+  </li><li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><span>January and February, 2020 communications to the Lesley community.</span></a>
+    <div class="accordion-content" data-tab-content>
+      <div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h3>February 28, 2020: Coronavirus Update and Travel Information</h3>
+
+<p><a href="https://mailchi.mp/lesley/coronavirus-outbreak-information-504296" target="_blank">Read the February 28, 2020 message to the Lesley Community</a>.</p>
+
+<h3>January 31, 2020: An Update on the Novel Coronavirus Outbreak</h3>
+
+<p><a href="https://mailchi.mp/lesley.edu/coronavirus-outbreak-information" target="_blank">Read the January 31, 2020 message to the Lesley Community from Lesley's Student Health Services Center</a>.</p>
+
+<h3>January 27, 2020: Lesley Community Advisories</h3>
+
+<p>Dear Lesley Community</p>
+
+<p>As students arrive back on campus and we find ourselves in the midst of the winter cold and flu season, I want to remind you to be vigilant in taking precautions to prevent the spread of illnesses. Practicing good hygiene and ensuring that you have your flu vaccination will help ensure the health and safety of everyone in our community. Also, please know that the University is monitoring the global concern for the novel Coronavirus (COVID-19) coming out of Wuhan, China, and will continue to keep the Lesley community informed.  </p>
+
+<p><strong>Seasonal Flu and Cold:</strong></p>
+
+<p>Following simple measures can help lower your risk of getting sick.  Measures like, washing your hands often with soap and water (20 seconds of scrubbing) or using alcohol-based hand cleaners, coughing/sneezing into a tissue and disposing of the used tissue immediately into a trash can (if you don’t have a tissue, cough/sneeze into the crook of your elbow, not your hands), avoid touching your eyes, nose, and mouth, which accelerates the spread of infections, avoid close contact with others who are sick, if you are sick, avoid contact with others (including parties, meetings, and events), do not share glasses, eating utensils, water bottles, cigarettes/vapes/JUULs, lipstick/makeup, etc.</p>
+
+<p>And please get your flu vaccine (it’s not too late to benefit from it).  For all Lesley students who receive their care at Lesley University Student Health Services, flu vaccines are still available at the Health Center. If you have not yet received one, make an appointment by contacting Student Health Services at 617.349.8222, or simply stop by the clinic Monday through Friday between 9:00AM and 3:00PM. For all other members of the community, please contact your Primary Care Provider (PCP) or an Urgent Care to get your flu vaccine.  If you think you may have the flu, please stay home and consult your Primary Care Provider and please notify the University. Students should contact Student Health Services and faculty and staff should contact Human Resources so that we can track the flu virus and the area can be disinfected thoroughly.  Students are encouraged to call first and speak to a nurse about their symptoms by calling Student Health Services at 617.349.8222<strong> </strong>before making an appointment or walking into the Health Center.  </p>
+
+<p><strong>Coronavirus (COVID-19):  </strong></p>
+
+<p>We are closely monitoring the situation with the novel Coronavirus coming out of China. While we have no indication that Massachusetts or the Lesley campus are affected, we are working diligently to ensure that our clinical staff is prepared if someone presents to Student Health Services with symptoms and a clinical history that may indicate the novel Coronavirus.</p>
+
+<p>We will continue to update the Lesley community as additional information becomes available through the Centers for Disease Control and Prevention (CDC) and the Massachusetts Department of Public Health. Keep in mind that the prevention measures as described for the flu and other illnesses are also your best protection against Coronavirus. </p>
+
+<p><strong>For anyone who recently returned from China (particularly the Wuhan area):  </strong>If you feel well, please follow the routine advice listed while you go about your daily activities.  If you develop respiratory symptoms or fever within 14 days of travel, call Student Health Services or your personal healthcare provider for a phone consultation.</p>
+
+<p>More information on <a href="https://www.cdc.gov/flu/index.htm" target="_blank">seasonal flu</a> and <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">Coronavirus</a>.</p>
+
+<p>Kerry Folkman, Community Nurse Practitioner (CNP) <br />
+Director, Lesley University Student Health Services<br />
+Phone: 617.349.8222<br />
+Fax: 617.349.8225<br />
+Email: <a href="mailto:kfolkman@lesley.edu">kfolkman@lesley.edu</a><br />
+She | Her | Hers</p></div>
+      </div>
+</div>
+
+    </div>
+  </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+          <div class="field-item">  <div class="paragraph paragraph--type--resusable-pattern paragraph--view-mode--default">
+          <div class="field-wrapper field field-paragraph--field-reusable-pattern field-name-field-reusable-pattern field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><div class="field-wrapper field field-node--field-reusable-pattern field-name-field-reusable-pattern field-type-entity-reference-revisions field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><div class="list-content-pattern list-content-pattern__white-bg">
+
+      <div class="list-content-pattern--narrow">
+  
+    <div class="row">
+      <div class="columns small-12">
+                
+                  <div class="list-content-pattern__title"><div class="field-wrapper field field-paragraph--field-para-title field-name-field-para-title field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Contact Us</div>
+      </div>
+</div>
+</div>
+                
+                  <div class="list-content-pattern__teaser"><div class="field-wrapper field field-paragraph--field-para-teaser field-name-field-para-teaser field-type-string-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Here&#039;s who to contact with regard to your concerns regarding Coronavirus and the flu.</div>
+      </div>
+</div>
+</div>
+              </div>
+    </div>
+    <div class="list-content-pattern__columns row">
+      
+        
+          <div class="columns small-12 medium-4">
+              <div class="paragraph paragraph--type--column-list-of-links-or-text paragraph--view-mode--default">
+          <div class="field-wrapper field field-paragraph--field-para-title field-name-field-para-title field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Self-Report an Illness or Travel</div>
+      </div>
+</div>
+<div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><ul><li><strong>Students with flu or Coronavirus:</strong><br />
+	Student Health Services<br />
+	<a href="mailto:lesleyhealthservice@lesley.edu">lesleyhealthservice@lesley.edu</a><br />
+	 </li>
+	<li><strong>Faculty/staff with flu or Coronavirus:</strong><br />
+	Human Resources<br />
+	617.349.8787<br /><a href="mailto:hr@lesley.edu">hr@lesley.edu</a><br />
+	 </li>
+	<li><strong>Report travel to <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">CDC Level 2 or Level 3 countries</a></strong><br />
+	Michele Trifiro<br /><a href="mailto:Michele.trifiro@lesley.edu">michele.trifiro@lesley.edu</a></li>
+</ul></div>
+      </div>
+</div>
+
+      </div>
+
+          </div>
+
+        
+      
+        
+          <div class="columns small-12 medium-4">
+              <div class="paragraph paragraph--type--column-list-of-links-or-text paragraph--view-mode--default">
+          <div class="field-wrapper field field-paragraph--field-para-title field-name-field-para-title field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Request Cleaning or Building Access</div>
+      </div>
+</div>
+<div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><ul><li><strong>Departments with cleaning concerns:</strong><br />
+	Facilities<br /><a href="/node/15806">Work order</a> or 617.349.8881</li>
+	<li><strong>Students living in residence halls:</strong><br />
+	Residence Life<br />
+	<a href="mailto:reslife@lesley.edu">reslife@lesley.edu</a><br />
+	617.349.8585</li>
+	<li><strong>After-hours emergency cleaning:</strong><br />
+	Public Safety<br />
+	617.349.8888</li>
+	<li><strong>If you need access to buildings and don't have an ID card:</strong><br />
+	<a href="mailto:lesleycard@lesley.edu">lesleycard@lesley.edu</a><br />
+	Or go to a security desk.</li>
+</ul></div>
+      </div>
+</div>
+
+      </div>
+
+          </div>
+
+        
+      
+        
+          <div class="columns small-12 medium-4 end">
+              <div class="paragraph paragraph--type--column-list-of-links-or-text paragraph--view-mode--default">
+          <div class="field-wrapper field field-paragraph--field-para-title field-name-field-para-title field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">General Questions &amp; Counseling Center</div>
+      </div>
+</div>
+<div class="field-wrapper field field-paragraph--field-text field-name-field-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><ul><li><strong>Students &amp; Parents: </strong><br />
+	Nathaniel Mays, Dean of Students<br />
+	<a href="mailto:nmays@lesley.edu">nmays@lesley.edu</a><br />
+	617.894.2765</li>
+	<li><strong>Faculty:</strong><br />
+	Jonathan Jefferson, Interim Provost<br />
+	<a href="mailto:jjeffer2@lesley.edu">jjeffer2@lesley.edu</a><br />
+	617.349.8621</li>
+	<li><strong>Staff:</strong><br />
+	Michele Trifiro, Director of Campus Safety &amp; Services<br />
+	<a href="mailto:michele.trifiro@lesley.edu">michele.trifiro@lesley.edu</a><br />
+	617.599.9230</li>
+	<li><strong>If you have anxiety about your health:</strong><br />
+	Counseling Center<br />
+	<a href="mailto:counselingcenter@lesley.edu">counselingcenter@lesley.edu</a></li>
+</ul></div>
+      </div>
+</div>
+
+      </div>
+
+          </div>
+
+        
+          </div>
+  </div>
+</div></div>
+      </div>
+</div>
+</div>
+      </div>
+</div>
+
+      </div>
+</div>
+      </div>
+</div>
+
+	</div>
+</div>
+
+
+    
+    
+  </section>
+
+  </div>
+
+        </main>
+
+      
+      <footer>
+        <div class="footer__second-row">
+          <div class="row">
+            <div class="columns medium-6">
+              <a aria-label="Lesley University Home" href="/"><div class="icon-logo"></div></a>
+            </div>
+            <div class="columns medium-6 footer__search">
+                <div>
+    <section class="views-exposed-form block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2" data-block-plugin-id="views_exposed_filter_block:acquia_search-page">
+  
+  
+    
+
+  
+          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search--2">Type to search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search--2" name="search" value="" size="30" maxlength="128" class="form-text" placeholder="Search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search-2" type="submit" id="edit-submit-acquia-search--2" value="Search" />
+</div>
+
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-6 medium-12 footer__left-links">
+                <div>
+    <nav  id="block-footerlinksleft" data-block-plugin-id="system_menu_block:footer-links-left" class="block-footerlinksleft">
+      
+        
+
+              <ul class="menu vertical large-horizontal">
+              <li>
+        <a href="/about/work-at-lesley" target="" rel="" data-drupal-link-system-path="node/3431">Work at Lesley</a>
+              </li>
+          <li>
+        <a href="/about/newsroom" target="" rel="" data-drupal-link-system-path="node/3821">Newsroom</a>
+              </li>
+          <li>
+        <a href="/events/week" target="" rel="" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+          <li>
+        <a href="/contact-us" target="" rel="" data-drupal-link-system-path="node/16061">Contact Us</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+            <div class="columns small-6 footer__audience">
+                <div>
+    <nav  id="block-audiencenavigation-4" data-block-plugin-id="menu_block:utility-nav" class="block-audiencenavigation-4">
+      
+        
+
+<div class="row">
+  <div class="columns small-12">
+                  <ul class="menu vertical large-horizontal">
+              <li class="in-active-trail" >
+        <a href="/students" target="" rel="" data-drupal-link-system-path="node/189">Students</a>
+              </li>
+          <li>
+        <a href="/faculty-staff" data-drupal-link-system-path="node/321">Faculty &amp; Staff</a>
+              </li>
+          <li>
+        <a href="/parents" target="" rel="" data-drupal-link-system-path="node/190">Parents</a>
+              </li>
+          <li>
+        <a href="/advancement-alumni-relations" target="" rel="" data-drupal-link-system-path="node/34976">Alumni</a>
+              </li>
+          <li>
+        <a href="/covid-19-articles-resources" data-drupal-link-system-path="node/42146">COVID-19 Articles &amp; Resources</a>
+              </li>
+        </ul>
+  
+  </div>
+</div>
+
+
+  </nav>
+
+  </div>
+
+            </div>
+          </div>
+        </footer>
+        <div class="footer__third-row">
+          <div class="row">
+            <div class="columns medium-3 footer__social">
+                <div>
+    <nav  id="block-footersocialmedialinks" data-block-plugin-id="system_menu_block:footer-social-media-links" class="block-footersocialmedialinks">
+      
+        
+              <ul class="menu">
+              <li>
+        <a href="https://www.facebook.com/LesleyUniversity/" target="" rel="" class="icon-facebook">Facebook</a>
+              </li>
+          <li>
+        <a href="https://twitter.com/lesley_u" target="" rel="" class="icon-twitter">Twitter</a>
+              </li>
+          <li>
+        <a href="https://www.instagram.com/lesleyuniversity/" target="" rel="" class="icon-instagram">Instagram</a>
+              </li>
+          <li>
+        <a href="https://www.linkedin.com/school/13852/" target="" rel="" class="icon-linkedin">LinkedIn</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+            <div class="columns medium-6 text-center footer__address">
+               <div>29 Everett St, Cambridge, MA 02138 <div class="phone-number"><div class="icon-phone"></div> 617.868.9600</div></div>
+            </div>
+            <div class="columns medium-3 footer__privacy">
+                <div>
+    <nav  id="block-footerprivacy" data-block-plugin-id="system_menu_block:footer-privacy" class="block-footerprivacy">
+      
+        
+              <ul class="menu">
+              <li>
+        <a href="/accessibility-at-lesley-university" target="" rel="" data-drupal-link-system-path="node/40776">Accessibility</a>
+              </li>
+          <li>
+        <a href="/about/accreditations-licensure-state-approvals" target="" rel="" data-drupal-link-system-path="node/13606">Accreditation</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+  <div>
+    
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/41931","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"ajaxTrustedUrl":{"\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"d0b50876bf3711763aec6f04cd2ad6ac168360b2e7d693432f9d90b8854e9c91"}}</script>
+<script src="/sites/default/files/js/js_53VeIyFDM_h8lWnf-Uk4hqYQtoLO7LNlh78s7qlj-to.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"243cf7c2e9","applicationID":"70699940","transactionName":"MV0GbBRYVhdSWhENWQgXJVsSUFcKHH0XEUYHVDhJE1BbD2xXCgBTOVsIVwhcZCdcVxEWWQpUAUo6aE0NUFIrC1IDewhXCFx2C1dcJAdVA0sXFVhaVAtdXCsLUgM=","queueTime":0,"applicationTime":492,"atts":"HRoFGlxCRRk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  <!-- Start Learning House Script -->
+    <script type="text/javascript" src="https://requestforms.learninghouse.com/js/affiliate_lesley.js"></script>
+  <!-- End Learning House Script -->
+  <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2605803.js"></script>
+  <!-- End of HubSpot Embed Code -->
+</html>
