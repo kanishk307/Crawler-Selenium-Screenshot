@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5e6a8310c7",applicationID:"55448097"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<link rel="shortcut icon" href="https://studentsongrounds.virginia.edu/sites/all/themes/custom/uvacomm/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="image_src" href="https://studentsongrounds.virginia.edu/sites/together/files/social-fall2020.jpg" />
+<link rel="canonical" href="https://studentsongrounds.virginia.edu/coursework-and-learning" />
+<link rel="shortlink" href="https://studentsongrounds.virginia.edu/node/316" />
+<meta property="og:site_name" content="Fall 2020 Student Resource Site" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://studentsongrounds.virginia.edu/coursework-and-learning" />
+<meta property="og:title" content="Coursework and Learning" />
+<meta property="og:updated_time" content="2020-06-22T13:56:05+00:00" />
+<meta property="og:image" content="https://studentsongrounds.virginia.edu/sites/together/files/social-fall2020.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200px" />
+<meta property="og:image:height" content="630px" />
+<meta property="article:published_time" content="2020-06-11T20:08:30+00:00" />
+<meta property="article:modified_time" content="2020-06-22T13:56:05+00:00" />
+  <title>Coursework and Learning | Fall 2020 Student Resource Site</title>
+  <link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_2fkB1ectXUm6ry_YznQJuNj2iuWzjAPDH1HFKtcv8lQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_jENQOQqZCRFGZK__DTefxYiXR2RUf03k1ugj3_Vg7vk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_fU3i1neJKUOMyVCvxWX-MuU1TxcDu1MlR2Ilsle_fqM.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_WXJS2s-VDbzM1I3TSQRpZFy_2NP38qJt7U0HNTG69Qo.css" media="all" />
+<![endif]-->
+  <script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_u5Jb8Lhqd7Fk4SeaiccUOWL0Rf8Pr0yocKY8UooCqdI.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_2DUJ0FnMK9unEFEAgi9LrVqY5V4-QovXZ7kJbqY6EYA.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-169016599-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_5PvWEnWNlEYJIzDmxK3DSCqf3VLSGc2EKICbTuYtecI.js"></script>
+<script src="//use.typekit.net/tgy5tlj.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_XVowPwDkOij-uNqzTNyE_fJ1AzY42RzAtq8JPBR5MeE.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","jcaption":{"jcaption_selectors":[".node.node--full .field--type-text-long img",".node.node--full .field--type-text-with-summary img"],"jcaption_alt_title":"title","jcaption_requireText":0,"jcaption_copyStyle":0,"jcaption_removeStyle":1,"jcaption_removeClass":1,"jcaption_removeAlign":1,"jcaption_copyAlignmentToClass":1,"jcaption_copyFloatToClass":1,"jcaption_copyClassToClass":1,"jcaption_autoWidth":1,"jcaption_keepLink":0,"jcaption_styleMarkup":"","jcaption_animate":0,"jcaption_showDuration":"200","jcaption_hideDuration":"200"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/coursework-and-learning":true},"field_group":{"div":"full"}});</script>
+   
+<!---Access Analytics--->
+<script src="https://cdn.levelaccess.net/accessjs/YW1wX3V2YTExMDA/access.js" type="text/javascript"></script>
+
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-316 node-type-storytelling-page section-coursework-and-learning">
+<div id="omnilert" style="display: none;">
+  <script type="text/javascript" src="http://widgets.omnilert.net/b360bb4c302e68987b9f16dc822e4162-11074"></script>
+</div>
+<script type="text/javascript">
+  (function ($) {
+    Drupal.behaviors.immanentThreat = {
+      attach: function(context, settings) {
+        var checkAlert = function(){
+          var container = '#omnilert',
+            $container = $(container),
+            popup = $('.SmartBoard_Table', container);
+          if (popup.length) {
+            if (typeof Cookies.get('threatClosed') == 'undefined' || !Cookies.get('threatClosed')) {
+              $container.show();
+            }
+            var closeBtn = $(document.createElement('a')).attr('href', '#close').text('X');
+            closeBtn.click(function(ev){
+              $container.hide();
+              Cookies.set('threatClosed', 1);
+            });
+            popup.once('close-added').prepend(closeBtn);
+          }
+        };
+
+        $(document).ready(function(){
+          checkAlert();
+        });
+      }
+    }
+  }(jQuery));
+</script>
+<script type="text/javascript">
+  (function ($) {
+    if ($(".SmartBoard_Table").length)
+    { $("#zone-header .imminent-threat").show(); }
+  }(jQuery));
+</script>
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  <div id="wrapper">
+        
+<div class="l-page">
+  <header class="header-main" role="banner">
+
+    <div class="utility">
+          </div>
+
+    <div class="row row-branding">
+        
+        <div class="l-branding">
+        <h2 class="site-name">
+		<a href="http://www.virginia.edu" title="Home" rel="home" target="blank" ><span>Fall 2020 Student Resource Site</span></a>
+	    </h2>
+          <div class="l-region l-region--branding">
+    
+<div class="search-wrapper">
+  <div id="block-search-api-page-site-search" class="block block--search-api-page block--search-api-page-site-search">
+            <div class="block__content">
+      <form class="search-api-page-search-form-site-search" action="/coursework-and-learning" method="post" id="search-api-page-search-form-site-search" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-keys-1">
+  <label class="element-invisible" for="edit-keys-1">Enter your search term </label>
+ <input placeholder="Enter your search term" type="text" id="edit-keys-1" name="keys_1" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="hidden" name="id" value="1" />
+<input type="submit" id="edit-submit-1" name="op" value="Search" class="form-submit" /><input type="hidden" name="form_build_id" value="form-OytYrKIalDDJJqpxJBnYqQrFV9PLEVJbr0RLX1a3-PA" />
+<input type="hidden" name="form_id" value="search_api_page_search_form_site_search" />
+</div></form>    </div>
+    <div class="search-close-wrapper"><a href="#search-close" class="btn-search-close">Close</a></div>
+  </div>
+
+</div>
+
+  </div>
+        
+
+        <div class="btn-menu-mobile" tabindex="0"><span>Main Menu</span></div>
+        <div class="btn-search-mobile" tabindex="0" role="button" aria-controls="block-search-api-page-site-search" aria-expanded="false"><span></span></div>
+
+        </div>
+          </div>
+
+    <div class="row-navigation">
+              <div class="site-name">
+	        <h2>
+	          <a href="/" title="Home" rel="home"><span>Fall 2020 Student Resource Site</span></a>
+	        </h2>
+				</div>
+      			
+        <div class="l-region l-region--navigation">
+    <nav id="block-system-main-menu" role="navigation" class="block block--system block--menu block--system-main-menu">
+        <h2 class="block__title">Main menu</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/public-health-measures">Public Health Measures</a></li>
+<li class="leaf active-trail"><a href="/coursework-and-learning" class="active-trail active">Coursework and Learning</a></li>
+<li class="expanded"><a href="/life-grounds">Life on Grounds</a><ul class="menu"><li class="first leaf"><a href="/life-grounds#housing" title="">Housing</a></li>
+<li class="leaf"><a href="/life-grounds#dining" title="">Dining</a></li>
+<li class="leaf"><a href="/life-grounds#clubs-imrec" title="">Clubs, IM-Rec</a></li>
+<li class="last leaf"><a href="/life-grounds#athletics" title="">Athletics</a></li>
+</ul></li>
+<li class="leaf"><a href="/tuition-fees-and-financial-aid">Tuition, Fees and Financial Aid</a></li>
+<li class="expanded"><a href="/faqs/students" title="">FAQs</a><ul class="menu"><li class="first leaf"><a href="/faqs/students#academics" title="">Academics</a></li>
+<li class="leaf"><a href="/faqs/students#calendar" title="">Academic Calendar</a></li>
+<li class="leaf"><a href="/faqs/students#advising" title="">Advising</a></li>
+<li class="leaf"><a href="/faqs/students#health" title="">Student Health</a></li>
+<li class="leaf"><a href="/faqs/students#housing" title="">Housing</a></li>
+<li class="leaf"><a href="/faqs/students#buses" title="">Buses</a></li>
+<li class="leaf"><a href="/faqs/students#operations" title="">Operations</a></li>
+<li class="leaf"><a href="/faqs/students#dining" title="">Dining</a></li>
+<li class="leaf"><a href="/faqs/students#meetings" title="">Meetings, Spaces, and People</a></li>
+<li class="leaf"><a href="/faqs/students#athletics" title="">Athletics</a></li>
+<li class="leaf"><a href="/faqs/students#clubs" title="">Clubs and Activities</a></li>
+<li class="leaf"><a href="/faqs/students#tuition" title="">Tuition</a></li>
+<li class="leaf"><a href="/faqs/students#fees" title="">Fees</a></li>
+<li class="leaf"><a href="/faqs/students#aid" title="">Financial Aid</a></li>
+<li class="last leaf"><a href="/faqs/students#career" title="">Career Center</a></li>
+</ul></li>
+<li class="leaf"><a href="/admitted-students">For Admitted Students</a></li>
+<li class="last leaf"><a href="/cares-act">CARES Act Information</a></li>
+</ul></nav>
+  </div>
+    
+      <nav>
+              </nav>
+    </div>
+
+	  			<div class="row-breadcrumb tablet">
+	      <h2 class="element-invisible">You are here</h2><ul class="breadcrumb"><li><a href="/">Home</a></li><li>Coursework and Learning</li></ul>			</div>
+	    </header>
+
+		<div class="site-tabs"></div>
+    
+						<div class="l-main">
+				
+    <div class="l-content" role="main">
+
+	    	  		<div class="row-breadcrumb">
+	        <h2 class="element-invisible">You are here</h2><ul class="breadcrumb"><li><a href="/">Home</a></li><li>Coursework and Learning</li></ul>	  		</div>
+	    			
+            <a id="main-content"></a>
+                                    <article role="article" class="node node--storytelling-page node--promoted node--full node--storytelling-page--full">
+  
+  
+  <div class="node__content">
+    <div class="refresh-image field-group-div"><div class="group-text field-group-div"><div class="field field--name-field-display-title field--type-text field--label-hidden"><div class="field__items"><div class="field__item even"><h1 class="field--name-title-field page-title">Coursework and Learning</h1>
+</div></div></div><div class="field field--name-field-refresh-background field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/Academics_6x1.2.jpg?itok=KGISpeHN&amp;timestamp=1592403387 1x" media="(min-width: 1140px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/Academics_6x1.2.jpg?itok=KGISpeHN&amp;timestamp=1592403387 1x" media="(min-width: 960px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/story_telling_hero_tablet/public/Academics_6x1.2.jpg?itok=4s7WHvZW&amp;timestamp=1592403387 1x" media="(min-width: 580px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/story_telling_hero_tablet/public/Academics_6x1.2.jpg?itok=4s7WHvZW&amp;timestamp=1592403387 1x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<img  src="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/Academics_6x1.2.jpg?itok=KGISpeHN&amp;timestamp=1592403387" alt="" title="" />
+</picture></div></div></div></div></div><div class="field field--name-field-hero-ratio field--type-list-text field--label-hidden"><div class="field__items"><div class="field__item even">6x1</div></div></div><div class="dp-composite-field-container clearfix"><div class="field field--name-field-story-blocks field--type-dp-composite-field field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>We are welcoming all students who wish to join us to be back on Grounds. Unlike in the past, however, we have designed this Fall so that students can take courses from wherever they are. (The few exceptions will be practicums and other courses that require a specific in-person experience for licensure.) While we hope and expect that many students will return to Grounds, we also know and appreciate that others will need to or choose to stay in their home communities. Regardless of where students are, our aim will be to provide all of them an engaging and enriching academic experience.<span id="calendar" style="display:inline-block;">&nbsp;</span></p></div>
+
+	     </div>
+</div>
+</div><div class="field__item odd"> 
+<div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section">
+  <div class="content">
+    	  
+	  	  <div class="content-section singular-section">
+	     <div class="content-title"><h2><span>Academic Calendar</span></h2></div>
+	  </div>
+	    </div>
+</div>
+</div><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>Assuming federal and state health and safety guidelines allow, the Fall semester will start August 25th, 2020 for undergraduate programs, as planned. <a href="https://www2.virginia.edu/registrar/documents/calendar_other_programs20-21.pdf" target="_blank">Start dates for graduate programs</a> are listed on the <a href="https://www2.virginia.edu/registrar/" target="_blank">Registrar’s Office</a>. There will be no Fall reading days, and in-person instruction will end by Thanksgiving. In an effort to minimize the risk of bringing the virus back to Charlottesville, students will not return until the new year.<span id="online" style="display:inline-block;">&nbsp;</span></p></div>
+
+	     </div>
+</div>
+</div><div class="field__item odd"> 
+<div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section">
+  <div class="content">
+    	  
+	  	  <div class="content-section singular-section">
+	     <div class="content-title"><h2><span>Online Options</span></h2></div>
+	  </div>
+	    </div>
+</div>
+</div><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>Because of social distancing requirements and their effect on our classroom capacity, large classes will be all online. We will, however, offer as many in-person classes as we can. For classes and sections offered in-person, there will be a remote option for students who are not on Grounds. The deans and faculty in every School are thinking creatively about how we can maximize the number of in-person classroom experiences; decisions about which classes will have an in-person option will be made based on the format of each class, our classroom capacity in light of public health requirements, and the availability of faculty instructors to teach in-person. Students can expect to hear more from individual Schools in the coming weeks and, in any event, no later than the end of July, which is before the start of the add-drop period.<span id="expanded" style="display:inline-block;">&nbsp;</span></p></div>
+
+	     </div>
+</div>
+</div><div class="field__item odd"> 
+<div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section">
+  <div class="content">
+    	  
+	  	  <div class="content-section singular-section">
+	     <div class="content-title"><h2><span>Expanded Options for Students</span></h2></div>
+	  </div>
+	    </div>
+</div>
+</div><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>In addition to Fall and Spring courses, every undergraduate student will have the opportunity to take a January term course and a course in the first Summer session of 2021. While these courses normally require the payment of additional tuition, next year they will be included within the regular tuition for Fall and Spring semesters. To enhance our offerings, we are designing new, interdisciplinary courses for the January and Summer terms. These courses, tailored specifically for this year’s new and returning students, will be taught by professors from across the University and will explore some of today’s most relevant topics—from the science of pandemics, to racial justice, to analyzing the 2020 election. Most students will therefore have the option, depending on their degree program requirements, to spread out what would normally be taken in Fall and Spring over Fall, J-term, Spring, and Summer. Schools will provide additional guidance on this, and you can find more information on the <a href="/faqs">FAQs for Students</a>.<span id="deferral" style="display:inline-block;">&nbsp;</span></p><p>Finally, as always, undergraduate students will be able to request a deferral (gap year) or leave of absence. The deadline for new students to apply for a deferral through the Office of Undergraduate Admission is July 1st, and current students may request leaves of absence according to individual schools’ policies. Students who plan to live in the residence halls will be asked to confirm whether they plan to join us in the Fall by July 1st.<span id="research" style="display:inline-block;">&nbsp;</span></p></div>
+
+	     </div>
+</div>
+</div><div class="field__item odd"> 
+<div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-content-section">
+  <div class="content">
+    	  
+	  	  <div class="content-section singular-section">
+	     <div class="content-title"><h2><span>Research</span></h2></div>
+	  </div>
+	    </div>
+</div>
+</div><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>As a top research university, we are deeply committed to advancing knowledge. While we have had to adapt to new ways of conducting research over the last several months, this commitment has never been stronger. In the midst of a global pandemic, the University of Virginia has been mobilizing its resources and researchers to find a test and vaccine for COVID-19, treat patients, track the COVID-19 globally, and analyze the crisis through the lens of history, politics, economics, business, law and more.</p><div class="faq-morelink"><h4><a href="https://returntogrounds.virginia.edu/faqs/faculty?utm_source=StudentsOnGrounds&utm_medium=referral&utm_campaign=Fall2020#research" target="_blank"><span>FAQs on Research</span></a></h4></div></div>
+
+	     </div>
+</div>
+</div></div></div></div>  </div>
+
+    </article>
+<div id="block-block-21" class="block block--block block--block-21">
+        <div class="block__content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.contact-covid {
+    background: #0B265B url(/sites/all/themes/custom/uvacomm/images/refresh/BlueBarWithHalftone.png) no-repeat right bottom;
+    background-size: cover;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.contact-covid .contact-content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 2.25rem 0;
+    width: 95%;
+}
+.contact-covid .content-title {
+    margin-bottom: 1.75rem;
+}
+.contact-covid .content-title h2 {
+    background: #0B265B;
+    color: #fff;
+}
+.contact-covid .contact-columns {
+    overflow: hidden;
+}
+.contact-covid .contact-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.contact-covid .contact-info ul li {
+    padding: 0.5rem 0;
+}
+.contact-covid .contact-info ul a {
+    color: #fff;
+}
+.contact-covid .contact-info ul a:hover {
+    color: #E57200;
+}
+
+@media (min-width:580px) {
+.contact-covid .contact-info {
+    float: left;
+    width: 45%;
+}
+.contact-covid .contact-info:first-of-type {
+    border-right: #fff 1px solid;
+	margin-left: 4.5%;
+    margin-right: 4.5%;
+    padding-right: 4.5%;
+}
+}
+
+/*--><!]]>*/
+</style><div class="contact-covid"><div class="contact-content"><div class="content-section group-section"><div class="content-title"><h2><span>Questions?</span></h2></div></div><div class="contact-columns"><div class="contact-info"><ul><li><strong>Domestic - 877-685-4836</strong></li><li><strong>International - +1 202 800-2408</strong></li></ul></div><div class="contact-info"><ul><li><a href="mailto:covidinformation@virginia.edu">covidinformation@virginia.edu</a></li></ul></div><!--
+      <div class="contact-info">
+        <div class="content-section group-section">
+          <div class="content-title">
+            <h2><span>Suggestions?</span></h2>
+          </div>
+        </div>
+        <ul>
+          <li><a href="/community-feedback">Submit Your Idea or Suggestion</a></li>
+        </ul>
+      </div>
+      --></div></div></div>  </div>
+</div>
+          </div>
+
+        
+    
+  </div>
+
+  
+  <footer role="contentinfo">
+
+    <div class="container-pre-footer">
+          </div>
+
+    <div class="container-footer">
+        <div class="l-region l-region--footer">
+    <div id="block-block-16" class="block block--block footer-logo block--block-16">
+        <div class="block__content">
+    <div class="uva-logo"><a href="http://www.virginia.edu/" target="blank">University of Virginia Logo</a></div>  </div>
+</div>
+<div id="block-block-1" class="block block--block footer-block-address block--block-1">
+        <div class="block__content">
+    <div class="footer-address">2420 Old Ivy Road<br />P.O. Box 400229<br />University of Virginia<br />Charlottesville, VA 22904-4229</div>  </div>
+</div>
+<div id="block-block-6" class="block block--block footer-block-contact block--block-6">
+        <div class="block__content">
+    <div class="footer-contact"><div class="contact-row"><div class="contact-label">Phone</div><div class="contact-content">(434) 924-1400</div></div><div class="contact-row"><div class="contact-label">Fax</div><div class="contact-content">(434) 924-0938</div></div><div class="contact-row"><div class="contact-label">Email</div><div class="contact-content"><a href="mailto:webmaster@virginia.edu">University Communications</a></div></div></div>  </div>
+</div>
+<div id="block-uva-social-uva-social" class="block block--uva-social block--uva-social-uva-social">
+        <div class="block__content">
+     <ul id="aetni-social">
+ 			<li id="aetni-social-youtube" class="social-icon-youtube"><a class="social" href="https://www.youtube.com/uva" target="_blank">YouTube</a></li>
+	
+			<li id="aetni-social-twitter" class="social-icon-twitter"><a class="social" href="https://twitter.com/UVA" target="_blank">Twitter</a></li>
+	
+ 	    <li id="aetni-social-facebook" class="social-icon-facebook"><a class="social" href="https://www.facebook.com/UniversityofVirginia/" target="_blank">Facebook</a></li>
+	
+	
+			<li id="aetni-social-snapchat" class="social-icon-snapchat"><a class="social" href="http://snapchat.com/add/univofvirginia" target="_blank">Snapchat</a></li>
+	
+			<li id="aetni-social-instagram" class="social-icon-instagram"><a class="social" href="https://instagram.com/uva" target="_blank">Instagram</a></li>
+	
+	<!--  -->
+
+	<!--  -->
+
+	<!--  -->
+</ul>  </div>
+</div>
+<div id="block-block-11" class="block block--block footer-block-copyright block--block-11">
+        <div class="block__content">
+    <div class="footer-copyright">© 2020 By the Rector and Visitors of the University of Virginia</div>  </div>
+</div>
+  </div>
+    </div>
+    
+    <!--Washington Post-->
+        <div id="ttdUniversalPixelTagbae5d1dfcb8041c187e87265f2935a0d" style="display:none">
+            <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                (function(global) {
+                    if (typeof TTDUniversalPixelApi === 'function') {
+                        var universalPixelApi = new TTDUniversalPixelApi();
+                        universalPixelApi.init("das0vmi", ["821gkyk"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTagbae5d1dfcb8041c187e87265f2935a0d");
+                    }
+                })(this);
+            </script>
+        </div>
+    
+  </footer>
+
+  <!-- <footer class="l-footer" role="contentinfo">
+
+  </footer> -->
+</div>
+    <script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5e6a8310c7","applicationID":"55448097","transactionName":"ZAdbZkBYXEZWU0FfDl1NbEBbFltbU1VNGBFbEg==","queueTime":0,"applicationTime":14,"atts":"SEBYEAhCT0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

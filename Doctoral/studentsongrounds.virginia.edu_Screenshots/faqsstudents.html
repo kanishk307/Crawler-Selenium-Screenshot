@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5e6a8310c7",applicationID:"55448097"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<link rel="shortcut icon" href="https://studentsongrounds.virginia.edu/sites/all/themes/custom/uvacomm/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon-precomposed" href="https://studentsongrounds.virginia.edu/sites/all/themes/contrib/omega/omega/apple-touch-icon-precomposed.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="image_src" href="https://studentsongrounds.virginia.edu/sites/together/files/social-fall2020.jpg" />
+<link rel="canonical" href="https://studentsongrounds.virginia.edu/faqs/students" />
+<link rel="shortlink" href="https://studentsongrounds.virginia.edu/node/326" />
+<meta property="og:site_name" content="Fall 2020 Student Resource Site" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://studentsongrounds.virginia.edu/faqs/students" />
+<meta property="og:title" content="FAQs" />
+<meta property="og:updated_time" content="2020-06-17T13:19:01+00:00" />
+<meta property="og:image" content="https://studentsongrounds.virginia.edu/sites/together/files/social-fall2020.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200px" />
+<meta property="og:image:height" content="630px" />
+<meta property="article:published_time" content="2020-06-11T20:09:53+00:00" />
+<meta property="article:modified_time" content="2020-06-17T13:19:01+00:00" />
+  <title>FAQs | Fall 2020 Student Resource Site</title>
+  <link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_2fkB1ectXUm6ry_YznQJuNj2iuWzjAPDH1HFKtcv8lQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_jENQOQqZCRFGZK__DTefxYiXR2RUf03k1ugj3_Vg7vk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_fU3i1neJKUOMyVCvxWX-MuU1TxcDu1MlR2Ilsle_fqM.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://studentsongrounds.virginia.edu/sites/together/files/css/css_WXJS2s-VDbzM1I3TSQRpZFy_2NP38qJt7U0HNTG69Qo.css" media="all" />
+<![endif]-->
+  <script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_u5Jb8Lhqd7Fk4SeaiccUOWL0Rf8Pr0yocKY8UooCqdI.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_2DUJ0FnMK9unEFEAgi9LrVqY5V4-QovXZ7kJbqY6EYA.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-169016599-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_5PvWEnWNlEYJIzDmxK3DSCqf3VLSGc2EKICbTuYtecI.js"></script>
+<script src="//use.typekit.net/tgy5tlj.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+<script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_XVowPwDkOij-uNqzTNyE_fJ1AzY42RzAtq8JPBR5MeE.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","jcaption":{"jcaption_selectors":[".node.node--full .field--type-text-long img",".node.node--full .field--type-text-with-summary img"],"jcaption_alt_title":"title","jcaption_requireText":0,"jcaption_copyStyle":0,"jcaption_removeStyle":1,"jcaption_removeClass":1,"jcaption_removeAlign":1,"jcaption_copyAlignmentToClass":1,"jcaption_copyFloatToClass":1,"jcaption_copyClassToClass":1,"jcaption_autoWidth":1,"jcaption_keepLink":0,"jcaption_styleMarkup":"","jcaption_animate":0,"jcaption_showDuration":"200","jcaption_hideDuration":"200"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/faqs\/students":true},"field_group":{"div":"full"}});</script>
+   
+<!---Access Analytics--->
+<script src="https://cdn.levelaccess.net/accessjs/YW1wX3V2YTExMDA/access.js" type="text/javascript"></script>
+
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-326 node-type-storytelling-page section-faqs">
+<div id="omnilert" style="display: none;">
+  <script type="text/javascript" src="http://widgets.omnilert.net/b360bb4c302e68987b9f16dc822e4162-11074"></script>
+</div>
+<script type="text/javascript">
+  (function ($) {
+    Drupal.behaviors.immanentThreat = {
+      attach: function(context, settings) {
+        var checkAlert = function(){
+          var container = '#omnilert',
+            $container = $(container),
+            popup = $('.SmartBoard_Table', container);
+          if (popup.length) {
+            if (typeof Cookies.get('threatClosed') == 'undefined' || !Cookies.get('threatClosed')) {
+              $container.show();
+            }
+            var closeBtn = $(document.createElement('a')).attr('href', '#close').text('X');
+            closeBtn.click(function(ev){
+              $container.hide();
+              Cookies.set('threatClosed', 1);
+            });
+            popup.once('close-added').prepend(closeBtn);
+          }
+        };
+
+        $(document).ready(function(){
+          checkAlert();
+        });
+      }
+    }
+  }(jQuery));
+</script>
+<script type="text/javascript">
+  (function ($) {
+    if ($(".SmartBoard_Table").length)
+    { $("#zone-header .imminent-threat").show(); }
+  }(jQuery));
+</script>
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  <div id="wrapper">
+        
+<div class="l-page">
+  <header class="header-main" role="banner">
+
+    <div class="utility">
+          </div>
+
+    <div class="row row-branding">
+        
+        <div class="l-branding">
+        <h2 class="site-name">
+		<a href="http://www.virginia.edu" title="Home" rel="home" target="blank" ><span>Fall 2020 Student Resource Site</span></a>
+	    </h2>
+          <div class="l-region l-region--branding">
+    
+<div class="search-wrapper">
+  <div id="block-search-api-page-site-search" class="block block--search-api-page block--search-api-page-site-search">
+            <div class="block__content">
+      <form class="search-api-page-search-form-site-search" action="/faqs/students" method="post" id="search-api-page-search-form-site-search" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-keys-1">
+  <label class="element-invisible" for="edit-keys-1">Enter your search term </label>
+ <input placeholder="Enter your search term" type="text" id="edit-keys-1" name="keys_1" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<input type="hidden" name="id" value="1" />
+<input type="submit" id="edit-submit-1" name="op" value="Search" class="form-submit" /><input type="hidden" name="form_build_id" value="form-eh9r-kROCnfd2FmkzRgE8wsTTlhV-HDgqzL8_QdjZSo" />
+<input type="hidden" name="form_id" value="search_api_page_search_form_site_search" />
+</div></form>    </div>
+    <div class="search-close-wrapper"><a href="#search-close" class="btn-search-close">Close</a></div>
+  </div>
+
+</div>
+
+  </div>
+        
+
+        <div class="btn-menu-mobile" tabindex="0"><span>Main Menu</span></div>
+        <div class="btn-search-mobile" tabindex="0" role="button" aria-controls="block-search-api-page-site-search" aria-expanded="false"><span></span></div>
+
+        </div>
+          </div>
+
+    <div class="row-navigation">
+              <div class="site-name">
+	        <h2>
+	          <a href="/" title="Home" rel="home"><span>Fall 2020 Student Resource Site</span></a>
+	        </h2>
+				</div>
+      			
+        <div class="l-region l-region--navigation">
+    <nav id="block-system-main-menu" role="navigation" class="block block--system block--menu block--system-main-menu">
+        <h2 class="block__title">Main menu</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/public-health-measures">Public Health Measures</a></li>
+<li class="leaf"><a href="/coursework-and-learning">Coursework and Learning</a></li>
+<li class="expanded"><a href="/life-grounds">Life on Grounds</a><ul class="menu"><li class="first leaf"><a href="/life-grounds#housing" title="">Housing</a></li>
+<li class="leaf"><a href="/life-grounds#dining" title="">Dining</a></li>
+<li class="leaf"><a href="/life-grounds#clubs-imrec" title="">Clubs, IM-Rec</a></li>
+<li class="last leaf"><a href="/life-grounds#athletics" title="">Athletics</a></li>
+</ul></li>
+<li class="leaf"><a href="/tuition-fees-and-financial-aid">Tuition, Fees and Financial Aid</a></li>
+<li class="expanded active-trail"><a href="/faqs/students" title="" class="active-trail active">FAQs</a><ul class="menu"><li class="first leaf"><a href="/faqs/students#academics" title="" class="active">Academics</a></li>
+<li class="leaf"><a href="/faqs/students#calendar" title="" class="active">Academic Calendar</a></li>
+<li class="leaf"><a href="/faqs/students#advising" title="" class="active">Advising</a></li>
+<li class="leaf"><a href="/faqs/students#health" title="" class="active">Student Health</a></li>
+<li class="leaf"><a href="/faqs/students#housing" title="" class="active">Housing</a></li>
+<li class="leaf"><a href="/faqs/students#buses" title="" class="active">Buses</a></li>
+<li class="leaf active-trail"><a href="/faqs/students#operations" title="" class="active-trail active">Operations</a></li>
+<li class="leaf"><a href="/faqs/students#dining" title="" class="active">Dining</a></li>
+<li class="leaf"><a href="/faqs/students#meetings" title="" class="active">Meetings, Spaces, and People</a></li>
+<li class="leaf"><a href="/faqs/students#athletics" title="" class="active">Athletics</a></li>
+<li class="leaf"><a href="/faqs/students#clubs" title="" class="active">Clubs and Activities</a></li>
+<li class="leaf"><a href="/faqs/students#tuition" title="" class="active">Tuition</a></li>
+<li class="leaf"><a href="/faqs/students#fees" title="" class="active">Fees</a></li>
+<li class="leaf"><a href="/faqs/students#aid" title="" class="active">Financial Aid</a></li>
+<li class="last leaf"><a href="/faqs/students#career" title="" class="active">Career Center</a></li>
+</ul></li>
+<li class="leaf"><a href="/admitted-students">For Admitted Students</a></li>
+<li class="last leaf"><a href="/cares-act">CARES Act Information</a></li>
+</ul></nav>
+  </div>
+    
+      <nav>
+              </nav>
+    </div>
+
+	  			<div class="row-breadcrumb tablet">
+	      <h2 class="element-invisible">You are here</h2><ul class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/faqs/students" title="" class="active">FAQs</a></li><li>Operations</li></ul>			</div>
+	    </header>
+
+		<div class="site-tabs"></div>
+    
+						<div class="l-main">
+				
+    <div class="l-content" role="main">
+
+	    	  		<div class="row-breadcrumb">
+	        <h2 class="element-invisible">You are here</h2><ul class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/faqs/students" title="" class="active">FAQs</a></li><li>Operations</li></ul>	  		</div>
+	    			
+            <a id="main-content"></a>
+                                    <article role="article" class="node node--storytelling-page node--promoted node--full node--storytelling-page--full">
+  
+  
+  <div class="node__content">
+    <div class="refresh-image field-group-div"><div class="group-text field-group-div"><div class="field field--name-field-display-title field--type-text field--label-hidden"><div class="field__items"><div class="field__item even"><h1 class="field--name-title-field page-title">FAQs for Students</h1>
+</div></div></div><div class="field field--name-field-refresh-background field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/FAQ_6x1.jpg?itok=NkqqV2Yi&amp;timestamp=1592403351 1x" media="(min-width: 1140px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/FAQ_6x1.jpg?itok=NkqqV2Yi&amp;timestamp=1592403351 1x" media="(min-width: 960px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/story_telling_hero_tablet/public/FAQ_6x1.jpg?itok=J37kdIHk&amp;timestamp=1592403351 1x" media="(min-width: 580px)" />
+<source srcset="https://studentsongrounds.virginia.edu/sites/together/files/styles/story_telling_hero_tablet/public/FAQ_6x1.jpg?itok=J37kdIHk&amp;timestamp=1592403351 1x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<img  src="https://studentsongrounds.virginia.edu/sites/together/files/styles/refresh_storytelling_hero_desktop/public/FAQ_6x1.jpg?itok=NkqqV2Yi&amp;timestamp=1592403351" alt="" title="" />
+</picture></div></div></div></div></div><div class="dp-composite-field-container clearfix"><div class="field field--name-field-story-blocks field--type-dp-composite-field field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-refresh-copy-video">
+  <div class="content copy-video-section">
+    	  	  <div class="image-frame">
+	  <div class="image"></div>
+	  <div class="image-media-title"><h3></h3></div>
+	  </div>
+	  <div class="image-headline-title"><h3></h3></div>
+	  <div class="image-description"><p>For an overview of health and safety expectations for Fall 2020, visit our <a href="/public-health-measures">Public Health Measures</a> guidelines.</p></div>
+
+	     </div>
+</div>
+</div><div class="field__item odd"><div class="entity entity-dp-composite-field-item dp-composite-field-item-faq-display clearfix" class="entity entity-dp-composite-field-item dp-composite-field-item-faq-display">
+  <div class="content">
+    <div class="field field--name-field-faqs field--type-blockreference field--label-hidden"><div class="field__items"><div class="field__item even"><div id="block-views-32152c79cd76ce8720ea70aaf286da91" class="block block--views block--views-32152c79cd76ce8720ea70aaf286da91">
+        <div class="block__content">
+    <div class="view view-faq-taxonomy view-id-faq_taxonomy view-display-id-students_faqs_block view-dom-id-6e0749a67df6390a0285dc9a868bff6a">
+        
+  
+  
+      <div class="view-content">
+      <div class="view-grouping"><div class="view-grouping-header"></div><div class="view-grouping-content">  <h3><div class="content-section singular-section" id="academics"><div class="content-title"><h2><span>Academics</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will all classes have an online option?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes, with the exception of a small number of clinical or practicum courses, all courses will be available virtually in Fall 2020. Students with preexisting conditions should feel free to contact their School of enrollment or the <a href="https://www.studenthealth.virginia.edu/sdac" target="_blank">Student Disability Access Center</a> for information about accommodations.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can all undergraduates take a J-term and a Summer Session I class without paying additional tuition?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">For the 2020-2021 academic year, undergraduate UVA Fall and Spring tuition will include a domestic J-term course. So long as a student accumulates no more than 33 credits in Fall, J-term, and Spring (cumulative), the student may also take one course in Summer Session I without extra charge.</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can all undergraduates take a reduced course load in Fall 2020?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">While most undergraduates will have the option of taking a reduced course load in the Fall, some programs or scholarships may impose requirements that exclude or restrict this option. In considering whether to take a reduced course load in the Fall, students should consult their advisors and, where relevant, Student Financial Services.</div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can graduating 4th year students take a Summer Session I course?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">4th year students who meet the criteria above may take a Summer Session I course at no additional charge, even if they have already graduated. 4th year students who need the Summer Session I course credits in order to graduate can still participate in final exercises (and take the Summer Session I course after final exercises).</div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What will the grading policy be for Fall 2020?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University’s <a href="http://records.ureg.virginia.edu/content.php?catoid=47&amp;navoid=3414#grad_syst" target="_blank">standard grading options</a> will apply in the upcoming year.</div>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will UVA offices, such as the Office of the Dean of Students, UREG, Office of Undergraduate Admissions, be providing services in the Fall semester?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes. The University intends to reopen various departments in the Fall semester but is still finalizing plans for employees and staff.&nbsp; Students should visit the websites for the <a href="https://odos.virginia.edu/" target="_blank">Dean of Students</a>, <a href="https://www2.virginia.edu/registrar/" target="_blank">UREG</a>, and <a href="https://admission.virginia.edu/" target="_blank">Office of Undergraduate Admissions</a> for specific plans and operational updates.</div>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What about the libraries?  Where can students go for quiet study?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">As many Libraries as possible will be open, but everyone will be expected to adhere to all university and public health guidelines including the use of PPE and social distancing.  Physical barriers will also be installed in library study spaces to limit contact.</div>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What will orientation look like?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Orientation and new student programs will partner with the undergraduate schools of enrollment to offer a virtual program over the course of the Summer that includes course registration support, focused training modules, community building activities, and opportunities to learn more about life at the University this Fall. Updated information will be posted throughout the Summer on the <a href="https://orientation.virginia.edu" target="_blank">Orientation &amp; New Student Programs site</a>.</div>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">I need to form a study group as an online student. How can I do that?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Students interested in online study groups should speak to their instructors about recruiting fellow students and identifying and using available online resources.</div>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">When do we think study abroad will resume?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Due to continuation of the <a href="https://travel.state.gov/content/travel/en/traveladvisories/ea/travel-advisory-alert-global-level-4-health-advisory-issue.html" target="_blank" title="https://travel.state.gov/content/travel/en/traveladvisories/ea/travel-advisory-alert-global-level-4-health-advisory-issue.html">U.S. Department of State Global Health Advisory - Level 4: Do Not Travel</a> and <a href="https://wwwnc.cdc.gov/travel/notices/warning/coronavirus-global" target="_blank" title="https://wwwnc.cdc.gov/travel/notices/warning/coronavirus-global">CDC Level 3 Warning: Global COVID-19 Pandemic Notice</a> for all locations outside the United States, UVA leadership has decided to suspend student international travel for University-related purposes for the fall 2020 semester. This includes credit-bearing study abroad, research, UVA internships, and student participation in non-UVA-sponsored education abroad programs. </p><p>A decision regarding J-Term 2021 programs and international travel will be announced by October 31, 2020. A decision on spring 2021 will be announced by November 30, 2020.</p><p>Petitions for an exemption for essential international travel will be considered from advanced graduate students and GME trainees. They can email <a href="mailto:hoosabroad@virginia.edu">hoosabroad@virginia.edu</a> for further details.</p></div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="calendar"><div class="content-title"><h2><span>Academic Calendar</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">When will exams take place?  Will they all be virtual?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University is still making plans for final exams and their scheduling.&nbsp; Any final exams scheduled after the Thanksgiving holiday will be conducted virtually.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What is the academic calendar?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><div class="faq-morelink"><h4><a href="https://www2.virginia.edu/registrar/calendar.html" target="_blank"><span>UVA Academic Calendar</span></a></h4></div></div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="advising"><div class="content-title"><h2><span>Advising</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will faculty advising be offered in person or virtually?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University is still finalizing plans for employees and staff to return to Grounds. More details are forthcoming and can be found at the <a href="https://advising.virginia.edu/" target="_blank">Total Advising site</a>.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can I request a virtual meeting with my adviser?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes, all students should feel free and are encouraged to request a virtual meeting with their adviser. More details are forthcoming and can be found at the <a href="https://advising.virginia.edu/" target="_blank">Total Advising site</a>.</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will the College Association Deans still be available for walk-in advising sessions?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University is still finalizing plans for employees and staff to return to Grounds. Please continue to check the <a href="https://college.as.virginia.edu/" target="_blank">College of Arts and Sciences website</a> for updates.</div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">My course has a lab component but I am not planning to take classes in person.  How will I get lab credit?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University will be assessing whether classes such as labs and practicums can be offered online.</div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">I can’t come back from my country of origin.  Will I still be able to take classes this Fall?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes. With the exception of a small number of clinical or practicum courses, all courses will be available virtually in Fall 2020.</div>  </div>  </div>
+  <h3><div id="health" class="content-section singular-section"><div class="content-title"><h2><span>Student Health</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What services will Student Health be providing?  Will they be in-person or virtual?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Student Health will continue offering a full range of services to students and will have both in-person and virtual appointments available.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What do I do if I think I have COVID-19?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Students who believe they have been exposed to and/or have contracted COVID-19 should seek medical attention immediately by calling Student Health at (434) 924-5362.</p></div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">How are we isolating students who contract COVID-19?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">First, it’s helpful to note that&nbsp;<em>isolation</em>&nbsp;and&nbsp;<em>quarantine</em>&nbsp;are different terms.&nbsp;<em>Isolation</em>&nbsp;refers to cases where an individual has a confirmed infection.&nbsp;<em>Quarantine</em>&nbsp;refers to situations where an individual has been exposed but may or may not be infected. The University has set aside housing for both the isolation and quarantine of students who reside in University housing.</div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">I have a preexisting condition.  Should I come back for in-person classes?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Students with preexisting conditions such as diabetes, asthma, or other health issues should consult with their medical professional to make the best decision for their individual health and well-being. With the exception of a small number of clinical or practicum courses, all courses will be available virtually in Fall 2020.</div>  </div>  </div>
+  <h3><div id="housing" class="content-section singular-section"><div class="content-title"><h2><span>Housing</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">How will COVID-19 safety precautions be reinforced in the residence halls?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Resident Advisors will provide training for dorm residents at the beginning of the year on rules and regulations pertaining to COVID-19 and how they apply to housing and residence life.&nbsp; If students have questions, Resident Advisors will be able to direct them to additional resources.&nbsp; Failure to comply with University requirements may result in disciplinary action in accordance with relevant policies.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What will be different about the student residential experience?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The residential experience is an important part of life at the University of Virginia. In public spaces, students will be expected to follow all university and public health guidelines including the use of PPE and social distancing. There will be guidelines for communal bathrooms, including assigning students to specific sinks, stalls, and showers, and limiting the number of students at any given time. Public areas in residence halls will undergo increased cleaning efforts and hand sanitizer stands will be readily available. All students will be provided two cloth face coverings, two 2-ounce containers of hand sanitizer and a touch-tool, which is meant to assist in tasks such as opening doors and punching keypads, hands free.</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">I’m an incoming first-year student.  Will I be required to live on Grounds?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Our long-standing policy is that all incoming first-year students are required to live on Grounds.&nbsp; We are modifying that policy for this year to allow students to remain in their home communities for any reason if they desire.&nbsp; In the days following the mid-June announcement, the University will be communicating more information about on-Grounds housing options to first-year and returning students.</div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">I’m an upper-class student planning to live on Grounds. Will there be changes to my dorm assignment?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">At this time, upper-class students with a housing assignment for 2020-2021 will be able to remain in their assigned housing. The possibility always exists of reassignment due to evolving health and safety concerns.</div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will students be housed in doubles?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Double rooms will continue to be the default option for housing for first-year students.</div>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What about shared bathrooms and common spaces in residence halls?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Shared bathrooms and common spaces will be available to students and will require that students adhere to all university and public health guidelines.&nbsp; Students will be assigned to sinks, stalls, and showers and we will limit the number of students allowed in a communal bathroom at any given time.&nbsp; All public spaces in residence halls will be undergoing increased cleanings.</div>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What types of special cleaning services will housekeeping be providing in the residence halls and classrooms?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University is planning to substantially increase cleaning services in all public areas, including residence halls and academic spaces.</div>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Is it possible to request housing accommodations if I have an underlying medical condition?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Students and families will receive a follow up communication in the days after the mid-June announcement that will include information on housing and ensure students know how to request accommodations through the Student Disability Access Center.</div>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What if I want to cancel my on-Grounds housing contract after July 1?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">If you are an undergraduate student and chose to live on Grounds by July 1, but afterward decide you wish to take your classes remotely for the fall semester, Housing &amp; Residence Life will release you from your on-Grounds housing agreement with no penalty, provided you contact them by August 1. This gives you time to assess your July 1 housing decision. Incoming first-years released from their on-Grounds housing agreement are required to live at home, consistent with the University’s fall 2020 housing policies for first-year students.&nbsp;<strong>To request a release after July 1, you must notify Housing &amp; Residence Life at&nbsp;<a href="mailto:housing@virginia.edu">housing@virginia.edu</a>&nbsp;by Saturday, August 1.</strong></div>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">If I don’t sign an on-Grounds housing contract for the full 2020-2021 academic year, can I still apply for housing for spring 2021?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes. Please note, however, housing is not guaranteed and is subject to availability. For undergraduate students, the housing application process for the spring semester typically begins on November 1, with offers made on a rolling basis beginning in mid-November. Graduate students may submit a Graduate and Faculty/Staff—2020-21 housing application and request a January 2021 move-in date on their application.</div>  </div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">If my roommate decides not to return for either the fall or spring semester, will I be assigned a random roommate?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes, Housing &amp; Residence Life will fill any vacancies as it deems appropriate. If vacancy exists in a room, suite, or apartment before or after move-in, any student who has applied for housing may be assigned there. Students may contact the Housing &amp; Residence Life assignments office at&nbsp;<a href="mailto:housingassignments@virginia.edu">housingassignments@virginia.edu</a>&nbsp;if they would like to request someone who wishes to take the vacated space.&nbsp; However, Housing &amp; Residence Life cannot guarantee these requests can be accommodated.</div>  </div>  </div>
+  <div class="views-row views-row-12 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">If I have a housing contract but decide not to move in for the fall semester, can I still pay for the room so I can keep it for the spring?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Yes, students who are enrolled in virtual classes may opt to pay for the fall semester of housing to keep their contract.&nbsp; You are required to agree to the COVID-19 policy and COVID-19 housing addendum by the appropriate deadline, and to notify&nbsp;<a href="mailto:housingassignments@virginia.edu" target="_blank">housingassignments@virginia.edu</a>&nbsp;that you will not be physically on Grounds during the fall semester but want to keep your full academic year housing agreement.&nbsp; You must be enrolled in classes (virtual or in-person) to be eligible for any housing contract on Grounds.</div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="operations"><div class="content-title"><h2><span>Operations</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will there be any changes related to my parking location or fee?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><ul><li>With some modifications, parking management, including locations and fees, will return to normal in August. Communications will be issued to employee permit holders in late July. Modifications include:<ul><li>Some commuter parking permit designations will be consolidated and residential student storage parking formerly near the stadium and in the Emmet/Ivy Garage will be relocated.</li><li>Parking meters and payment stations will be removed. Meter payments throughout Grounds, including the recreation centers, will be exclusively via ParkMobile app.</li><li>New options will be available for those who need to park on Grounds occasionally.</li><li>Technology-based parking management approaches will be implemented with increased use of on-line transactions and parking by license plate.</li><li>In-person customer service will be by appointment only.</li><li>Parking citations may be issued via US Mail or email.</li></ul></li><li><a href="https://parking.virginia.edu/operations" target="_blank">Parking information</a></li></ul></div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="buses"><div class="content-title"><h2><span>Buses</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will UTS buses continue to provide bus service?  Will there be any changes to bus capacity, routes, or frequency?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>UTS is operating but due to COVID-19, passengers can expect changes:</p><ul><li>Passengers and drivers are required to wear a face covering.</li><li>Passengers should board through the rear doors (exception: passengers who need the ramp will board through the front doors).</li><li>The standee line has been moved away from the driver and seating capacity has been reduced by 60%. These capacity changes require significant route changes that will prioritize longer trips.</li><li>Service will end at 10PM to allow for enhanced cleaning of buses.</li></ul><p><a href="https://parking.virginia.edu/covid-19-rider-guide" target="_blank">COVID-19 UTS Riders’ Guide</a></p><p><a href="https://parking.virginia.edu/operations" target="_blank">Complete information about UTS</a></p></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will Safe Ride services continue to be offered?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Safe Ride will operate overnight when UTS is out of service.
+<a href="https://parking.virginia.edu/operations" target="_blank">Operational Information</a></div>  </div>  </div>
+  <h3><div id="dining" class="content-section singular-section"><div class="content-title"><h2><span>Dining</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What are the plans for Dining?  Will dining halls be open to sit and stay or will it be grab-and-go?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Dining halls will be open but dine-in options will be limited. Students who choose to eat in a dining hall will be expected to adhere to all university and public health and safety guidelines. Dining halls will reduce seating capacity by 50 percent in accordance with Governor Northam’s <a href="https://www.governor.virginia.gov/media/governorvirginiagov/executive-actions/EO-63-and-Order-Of-Public-Health-Emergency-Five---Requirement-To-Wear-Face-Covering-While-Inside-Buildings.pdf" target="_blank">Executive Order 63</a>, provide masks for social distancing, maintain counts at entrances and exits to control occupancy, and add outside locations for food pick-up. Take out options will be available, and the University is working on additional take out options for students in the Fall.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What types of foods will Dining be serving?  Will there be vegetarian and vegan options?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Dining halls will still be providing a broad range of food options, including vegetarian and vegan options.</div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="meetings"><div class="content-title"><h2><span>Meetings, Spaces, and People</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can I go to the library to study?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">As many Libraries as possible will be open, but everyone will be expected to adhere to all university and public health guidelines including the use of PPE and social distancing. Physical barriers will also be installed in library study spaces to limit contact.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What spaces are open to students?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Our hope is to open as many spaces as possible while observing social distancing guidelines. Limited occupancy with rotational schedules will be used to maintain social distancing in public spaces. Physical barriers will be provided in library study-spaces, at public-service locations (such as dining hall cashiers, help desks, customer-service points of access).</div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="athletics"><div class="content-title"><h2><span>Athletics</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What are the plans for Athletics in the Fall?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">We are planning for Fall sporting events to be held on Grounds, and student athletes will be hearing from coaches about steps that will allow them to train and compete safely. We have not yet made final decisions about fan attendance, but we will communicate plans to our ticket holders and supporters as those decisions are made.</div>  </div>  </div>
+  <h3><div id="clubs" class="content-section singular-section"><div class="content-title"><h2><span>Clubs and Activities</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Can my CIO still meet and hold events?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Meetings and events can still be held as long as they adhere to regulations regarding the number of individuals allowed at gatherings (currently limited to 50) and&nbsp;all university and public health and safety guidelines including the use of PPE and social distancing.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will the IM-Rec facilities be open?  If yes, what special cleaning steps will be instituted?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">IM-Rec facilities will be open and everyone will be expected to adhere to all university and public health and safety guidelines including the use of PPE and social distancing.&nbsp; Facilities will be subject to increased cleaning efforts and hand sanitizer stands will be available.</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What about the fraternities and sororities?  Will they be able to have events, including parties?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The houses operated by Inter-Fraternity Council (IFC) and Inter-Sorority Council (ISC) student chapters are private residences owned by independent alumni-managed house corporations, and are not owned by the University. However, all currently matriculating students are expected to conform to necessary COVID-19 mitigation measures designed to protect public health (consistent with any regulations or directives from state government and health officials), and this includes students who live in off-Grounds private residences such as fraternity/sorority houses. In addition, student organizations may be held accountable for violations of the University’s Standards of Conduct and the terms of any agreements between the University and the student organization, which may include organized activities that violate COVID-19 mitigation measures and place public health at risk.</div>  </div>  </div>
+  <h3><div id="tuition" class="content-section singular-section"><div class="content-title"><h2><span>Tuition</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will tuition be the same whether my classes are online or in-person?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Tuition will not vary between online and in-person classes because both options offer the same academic content and ability for students to earn credit. Our faculty and staff are working very hard to ensure that instruction and student engagement in the Fall remain at our high standards of excellence, despite the unprecedented conditions. In order to provide students more flexibility, tuition for the Fall and Spring semesters will also cover one course during the J-Term and one course in the first Summer session, as described within this FAQ.</p></div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="fees"><div class="content-title"><h2><span>Fees</span></h2></div></div><div class="faq-header"> </div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will fees be the same whether I am in Charlottesville or in my home community?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The University is continuing to assess student fees for the upcoming academic year. Please continue to monitor this site for future updates.</div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="aid"><div class="content-title"><h2><span>Financial Aid</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Do I need to take a certain number of credits each semester to remain eligible for financial aid?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Need-based aid from the University and federal loans require the student to attend at least half time (typically this means enrolling in a minimum of 6 credit hours per term) to remain eligible.</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">My family’s financial situation has been impacted substantially by the pandemic.  How can I find out if I qualify for additional financial aid for the 2020-2021 academic year?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">If your financial situation has changed as a result of the pandemic, we encourage you to reach out to Student Financial Services at <a href="mailto:sfs@virginia.edu">sfs@virginia.edu</a> in order to learn about the appeals process for Fall 2020 need-based financial aid decisions.</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Is money still available to help students through the CARES Act? How do I apply?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>The University received federal funds pursuant to the <a href="/cares-act">Coronavirus Aid Relief and Economic Security (CARES) Act</a>. That funding will enable us to continue providing our students with emergency hardship support for these and other expenses related to the disruption of on-Grounds operations due to COVID-19. Undergraduate, graduate and professional students who were enrolled in the Spring 2020 semester can request funding for expenses related to the disruption of campus operations due to the pandemic including, but not necessarily limited to, travel, technology, food, medication and other living expenses.</p><div class="faq-morelink"><h4><a href="https://virginia.academicworks.com/opportunities/9386" target="_blank"><span>Application for Emergency Funding Related to COVID-19</span></a></h4></div></div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content">My mother/father/guardian lost their job, and this has an impact on my ability to remain enrolled. What can UVA do to help?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">If your financial situation has changed as a result of the pandemic, we encourage you to reach out to Student Financial Services at <a href="mailto:sfs@virginia.edu">sfs@virginia.edu</a> in order to learn about the appeals process for Fall 2020 need-based financial aid decisions.</div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will work-study be available in the Fall?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">Work-study funding from the federal government will be available in the Fall.</div>  </div>  </div>
+  <h3><div class="content-section singular-section" id="career"><div class="content-title"><h2><span>Career Center</span></h2></div></div></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Will job fairs and recruiting events be taking place this fall on Grounds?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>The UVA Career Center is making efforts to turn many of their in-person events into virtual events in the coming months.</p><div class="faq-morelink"><h4><a href="https://career.virginia.edu" target="_blank"><span>UVA Career Center</span></a></h4></div></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">What is the Career Center doing to help students in the face of economic decline?</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>The Career Center is hosting appointments virtually (through <a href="https://career.virginia.edu/handshake" target="_blank">Handshake</a>) and by telephone (434-924-8900). Appointments can be scheduled on the same day or for a future date, Monday through Friday, 12 to 5 PM.</p><div class="faq-morelink"><h4><a href="https://career.virginia.edu" target="_blank"><span>UVA Career Center</span></a></h4></div></div>  </div>  </div>
+</div></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div></div></div></div>  </div>
+</div>
+</div></div></div></div>  </div>
+
+    </article>
+<div id="block-block-21" class="block block--block block--block-21">
+        <div class="block__content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.contact-covid {
+    background: #0B265B url(/sites/all/themes/custom/uvacomm/images/refresh/BlueBarWithHalftone.png) no-repeat right bottom;
+    background-size: cover;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.contact-covid .contact-content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 2.25rem 0;
+    width: 95%;
+}
+.contact-covid .content-title {
+    margin-bottom: 1.75rem;
+}
+.contact-covid .content-title h2 {
+    background: #0B265B;
+    color: #fff;
+}
+.contact-covid .contact-columns {
+    overflow: hidden;
+}
+.contact-covid .contact-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.contact-covid .contact-info ul li {
+    padding: 0.5rem 0;
+}
+.contact-covid .contact-info ul a {
+    color: #fff;
+}
+.contact-covid .contact-info ul a:hover {
+    color: #E57200;
+}
+
+@media (min-width:580px) {
+.contact-covid .contact-info {
+    float: left;
+    width: 45%;
+}
+.contact-covid .contact-info:first-of-type {
+    border-right: #fff 1px solid;
+	margin-left: 4.5%;
+    margin-right: 4.5%;
+    padding-right: 4.5%;
+}
+}
+
+/*--><!]]>*/
+</style><div class="contact-covid"><div class="contact-content"><div class="content-section group-section"><div class="content-title"><h2><span>Questions?</span></h2></div></div><div class="contact-columns"><div class="contact-info"><ul><li><strong>Domestic - 877-685-4836</strong></li><li><strong>International - +1 202 800-2408</strong></li></ul></div><div class="contact-info"><ul><li><a href="mailto:covidinformation@virginia.edu">covidinformation@virginia.edu</a></li></ul></div><!--
+      <div class="contact-info">
+        <div class="content-section group-section">
+          <div class="content-title">
+            <h2><span>Suggestions?</span></h2>
+          </div>
+        </div>
+        <ul>
+          <li><a href="/community-feedback">Submit Your Idea or Suggestion</a></li>
+        </ul>
+      </div>
+      --></div></div></div>  </div>
+</div>
+          </div>
+
+        
+    
+  </div>
+
+  
+  <footer role="contentinfo">
+
+    <div class="container-pre-footer">
+          </div>
+
+    <div class="container-footer">
+        <div class="l-region l-region--footer">
+    <div id="block-block-16" class="block block--block footer-logo block--block-16">
+        <div class="block__content">
+    <div class="uva-logo"><a href="http://www.virginia.edu/" target="blank">University of Virginia Logo</a></div>  </div>
+</div>
+<div id="block-block-1" class="block block--block footer-block-address block--block-1">
+        <div class="block__content">
+    <div class="footer-address">2420 Old Ivy Road<br />P.O. Box 400229<br />University of Virginia<br />Charlottesville, VA 22904-4229</div>  </div>
+</div>
+<div id="block-block-6" class="block block--block footer-block-contact block--block-6">
+        <div class="block__content">
+    <div class="footer-contact"><div class="contact-row"><div class="contact-label">Phone</div><div class="contact-content">(434) 924-1400</div></div><div class="contact-row"><div class="contact-label">Fax</div><div class="contact-content">(434) 924-0938</div></div><div class="contact-row"><div class="contact-label">Email</div><div class="contact-content"><a href="mailto:webmaster@virginia.edu">University Communications</a></div></div></div>  </div>
+</div>
+<div id="block-uva-social-uva-social" class="block block--uva-social block--uva-social-uva-social">
+        <div class="block__content">
+     <ul id="aetni-social">
+ 			<li id="aetni-social-youtube" class="social-icon-youtube"><a class="social" href="https://www.youtube.com/uva" target="_blank">YouTube</a></li>
+	
+			<li id="aetni-social-twitter" class="social-icon-twitter"><a class="social" href="https://twitter.com/UVA" target="_blank">Twitter</a></li>
+	
+ 	    <li id="aetni-social-facebook" class="social-icon-facebook"><a class="social" href="https://www.facebook.com/UniversityofVirginia/" target="_blank">Facebook</a></li>
+	
+	
+			<li id="aetni-social-snapchat" class="social-icon-snapchat"><a class="social" href="http://snapchat.com/add/univofvirginia" target="_blank">Snapchat</a></li>
+	
+			<li id="aetni-social-instagram" class="social-icon-instagram"><a class="social" href="https://instagram.com/uva" target="_blank">Instagram</a></li>
+	
+	<!--  -->
+
+	<!--  -->
+
+	<!--  -->
+</ul>  </div>
+</div>
+<div id="block-block-11" class="block block--block footer-block-copyright block--block-11">
+        <div class="block__content">
+    <div class="footer-copyright">© 2020 By the Rector and Visitors of the University of Virginia</div>  </div>
+</div>
+  </div>
+    </div>
+    
+    <!--Washington Post-->
+        <div id="ttdUniversalPixelTagbae5d1dfcb8041c187e87265f2935a0d" style="display:none">
+            <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                (function(global) {
+                    if (typeof TTDUniversalPixelApi === 'function') {
+                        var universalPixelApi = new TTDUniversalPixelApi();
+                        universalPixelApi.init("das0vmi", ["821gkyk"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTagbae5d1dfcb8041c187e87265f2935a0d");
+                    }
+                })(this);
+            </script>
+        </div>
+    
+  </footer>
+
+  <!-- <footer class="l-footer" role="contentinfo">
+
+  </footer> -->
+</div>
+    <script src="https://studentsongrounds.virginia.edu/sites/together/files/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5e6a8310c7","applicationID":"55448097","transactionName":"ZAdbZkBYXEZWU0FfDl1NbEBbFltbU1VNGBFbEg==","queueTime":0,"applicationTime":12,"atts":"SEBYEAhCT0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
