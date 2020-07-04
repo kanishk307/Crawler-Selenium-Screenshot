@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--
+You are looking at the GradAdvance platform.
+   ______               __   ___       __
+  / ____/________ _____/ /  /   | ____/ /   ______ _____  ________
+ / / __/ ___/ __ `/ __  /  / /| |/ __  / | / / __ `/ __ \/ ___/ _ \
+/ /_/ / /  / /_/ / /_/ /  / ___ / /_/ /| |/ / /_/ / / / / /__/  __/
+\____/_/   \__,_/\__,_/  /_/  |_\__,_/ |___/\__,_/_/ /_/\___/\___/
+
+
+To learn more please contact Mitchell Muller at mitchell.muller@graduway.com
+-->
+
+<head>
+<script type="text/javascript">var _rollbarConfig = {"ignoredMessages":[["^ReferenceError: Can't find variable: tagboardQueryHeight","^ReferenceError: 'tagboardIframeLoaded' is not defined","^(unknown): Script error","Blocked a frame with origin","^Uncaught SecurityError: Failed to read the 'cssRules' property from 'CSSStyleSheet'","^ActionView::MissingTemplate: Missing template","^ActionController::RoutingError: No route matches [TRACE]","^ActionController::RoutingError: No route matches [POST] \"/public_ajax/social/incoming\"","^DEBUG: For more advanced debugging, install the Ember Inspector from","^(unknown): Script error.","^ReferenceError: Can't find variable: tagboardQueryHeight","^ReferenceError: 'tagboardQueryHeight' is undefined"],["app.amploadvance.com","api.amploadvance.com","app1.amploadvance.com","app2.amploadvance.com","app3.amploadvance.com","stg1.amploadvance.com","stg2.amploadvance.com","stg3.amploadvance.com","beta.amploadvance.com","stg.amploadvance.com","test.amploadvance.com","dev.amploadvance.com","local.amploadvance.com","tyler.amploadvance.com","127.0.0.1","amplo.dev","amplo-research.herokuapp.com","amplo-staging.herokuapp.com","amplo-production.herokuapp.com","localhost"]],"accessToken":null,"captureUncaught":true,"payload":{"environment":"production"}};</script>
+<script type="text/javascript">!function(r){function o(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,o),t.loaded=!0,t.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";var n=e(1),t=e(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.2.3/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,o,e){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,o){this.options=r,this._rollbarOldOnError=null;var e=s++;this.shimId=function(){return e},window&&window._rollbarShims&&(window._rollbarShims[e]={handler:o,messages:[]})}function a(r,o){var e=o.globalAlias||"Rollbar";if("object"==typeof r[e])return r[e];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(o);return n(function(){o.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),o.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=o.autoInstrument;return(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[e]=t,t})()}function l(r){return n(function(){var o=this,e=Array.prototype.slice.call(arguments,0),n={shim:o,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=e(2),s=0,d=e(3),c=function(r,o){return new t(r,o)},p=d.bind(null,c);t.prototype.loadFull=function(r,o,e,t,a){var l=function(){var o;if(void 0===r._rollbarDidLoad){o=new Error("rollbar.js did not load");for(var e,n,t,l,i=0;e=r._rollbarShims[i++];)for(e=e.messages||[];n=e.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(o);break}}"function"==typeof a&&a(o)},i=!1,s=o.createElement("script"),d=o.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,e||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,o,e){try{var n;if(n="function"==typeof o?o:function(){return o||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){e&&"function"==typeof e&&e.apply(this,arguments);try{return r.apply(this,arguments)}catch(e){var o=e;throw"string"==typeof o&&(o=new String(o)),o._rollbarContext=n()||{},o._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=o,o}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(o){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,o){"use strict";function e(r,o,e){if(r){var t;"function"==typeof o._rollbarOldOnError?t=o._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,o._rollbarOldOnError=t);var a=function(){var e=Array.prototype.slice.call(arguments,0);n(r,o,t,e)};a.belongsToShim=e,r.onerror=a}}function n(r,o,e,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),o.handleUncaughtException.apply(o,n),e&&e.apply(r,n)}function t(r,o,e){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var e=r.reason,n=r.promise,t=r.detail;!e&&t&&(e=t.reason,n=t.promise),o&&o.handleUnhandledRejection&&o.handleUnhandledRejection(e,n)};n.belongsToShim=e,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,o,e){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(o,r[t].prototype,e)}}function l(r,o,e){if(o.hasOwnProperty&&o.hasOwnProperty("addEventListener")){for(var n=o.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(o,e,t){n.call(this,o,r.wrap(e),t)};t._rollbarOldAdd=n,t.belongsToShim=e,o.addEventListener=t;for(var a=o.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,o,e){a.call(this,r,o&&o._rollbar_wrapped||o,e)};l._rollbarOldRemove=a,l.belongsToShim=e,o.removeEventListener=l}}r.exports={captureUncaughtExceptions:e,captureUnhandledRejections:t,wrapGlobals:a}},function(r,o){"use strict";function e(r,o){this.impl=r(o,this),this.options=o,n(e.prototype)}function n(r){for(var o=function(r){return function(){var o=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,o)}},e="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureDomContentLoaded,captureLoad".split(","),n=0;n<e.length;n++)r[e[n]]=o(e[n])}e.prototype._swapAndProcessMessages=function(r,o){this.impl=r(this.options);for(var e,n,t;e=o.shift();)n=e.method,t=e.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],e.ts]):this[n].apply(this,t));return this},r.exports=e},function(r,o){"use strict";r.exports=function(r){return function(o){if(!o&&!window._rollbarInitialized){r=r||{};for(var e,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;e=window._rollbarShims[i++];)n||(n=e.handler),e.handler._swapAndProcessMessages(l,e.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+</script>
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-54759192-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+</script>
+
+  <script>
+
+    // custom event for when analytics load
+    window.addEventListener('AnalyticsLoaded', function() {
+      var options = JSON.parse('{}')
+      window.SnapAnalytics = new window.AnalyticsConstructor('5a09ce7dbaaf13361066886f', options)
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+    ;r.type="text/javascript";r.async=true
+    ;r.src="https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js"
+    ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+    e.amplitude.runQueuedFunctions()}else{
+    console.log("[Amplitude] Error: could not load SDK")}}
+    ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+    ;function s(e,t){e.prototype[t]=function(){
+    this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+    var o=function(){this._q=[];return this}
+    ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+    ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+    ;return this}
+    ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+    ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+    ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut",
+    "setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify",
+    "clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp",
+    "logEventWithGroups","setSessionId","resetSessionId"]
+    ;function v(e){function t(t){e[t]=function(){
+    e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+    for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+    e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+    ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+    ;e.amplitude=n})(window,document);
+
+    amplitude.getInstance().init("359121b6e85cb2b3bfa56fa5aeafba56");
+  </script>
+  <script src="//amploprod.s3.amazonaws.com/assets/vue-output/event-analytics-service-5c6079a4c9d7a6650a18d4c30c50163812256e8b117a209bdfb31e6037db4bf0.js"></script>
+    <script>
+      window.EventAnalyticsService.addEvent({ name: 'PAGE VIEW' });
+    </script>
+
+<script src="//amploprod.s3.amazonaws.com/assets/vue-output/event-analytics-service-5c6079a4c9d7a6650a18d4c30c50163812256e8b117a209bdfb31e6037db4bf0.js"></script>
+<title>Answering the Call of Pro Humanitate - Wake Forest Crisis Response Crowdfunding</title>
+<script>
+  ENTITY_INITIAL_DATA = { id: "5a09ce7dbaaf13361066886f" }
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="https://amploprod.s3.amazonaws.com/uploads/entity/favicon/5a09ce7dbaaf13361066886f/Wake_Forest_Head_logo.png" />
+<link rel="stylesheet" media="all" href="//amploprod.s3.amazonaws.com/assets/application-ac84bf476320a6732d92d613bb11fc99c56a26fb2e49f9ce29eae5e56d26165b.css" />
+<link href='/entity_styles.css?entity_id=5a09ce7dbaaf13361066886f' media='all' rel='stylesheet'>
+<script>
+//<![CDATA[
+window.gon={};gon.assets={"vote_box_white":"//amploprod.s3.amazonaws.com/assets/vote-box-white-c6101705a88c40bc3c176d847d9cff24ed4c7ec048894a0fd72a270f236167f6.png","vote_box":"//amploprod.s3.amazonaws.com/assets/vote-box-fe41f57b74233d59fefb9fdf98fa38e94a1c7efcc1e2b0ec98c7e59f9f119258.png","like_plus":"//amploprod.s3.amazonaws.com/assets/likeplus-983ef46142387c83f661296482e91d719acd9730b0aab565f57fa1a239b83440.png","athletics":"//amploprod.s3.amazonaws.com/assets/athletics-19c206bcc10e222813fe5f429060ef5dc85c7fae765b6605dc2f45b46328cdba.jpg","alumni":"//amploprod.s3.amazonaws.com/assets/alumni-4ca9a3d2004394d1e088cea56456e09bbdae5fc1885a330d1891c6207d6ea317.jpg","academy":"//amploprod.s3.amazonaws.com/assets/academy-a3fae8ebc772e7701c2b63ffdd62022f70d964c32bf8bcd1a871929b7547634f.jpg","residence":"//amploprod.s3.amazonaws.com/assets/residence-9cbd3da628f1b9bfe9ab88ec9ad01ba06f7fa49ce0913feaf27203c84a89a861.jpg","institutes":"//amploprod.s3.amazonaws.com/images/institutes.jpg","students":"//amploprod.s3.amazonaws.com/assets/students-2e7091819062c4aa58ab7c7a6f8ed3500ba00cc558e1672fa16952592aa0e4b9.jpg","abroad":"//amploprod.s3.amazonaws.com/assets/abroad-903738e9e5b1115ac529836465c2ffafce40bdf2f19b9f8afe78f05b9d689686.jpg","units":"//amploprod.s3.amazonaws.com/assets/units-fa57e883869f3f9d87aa0404ef8086d56cc92f7ea633497210b71834a5ca42a8.jpg","bottle_cap":"//amploprod.s3.amazonaws.com/assets/bottlecap_logo-1adebc2ff3ce5c61d96f8b9fda5af6cc0223c3c8e8e6e1912c3733337a6b6b7c.png","all_categories":"//amploprod.s3.amazonaws.com/images/all_categories.jpg","cc_security":"//amploprod.s3.amazonaws.com/assets/cc_security-d7857c0d14dd67bd6b94209845c8894034139fa369ba45513d1500912a5b42c4.png"};gon.campaign={"id":"5e73a6c9dea5890017365688","name":"Answering the Call of Pro Humanitate","logo":"https://amploprod.s3.amazonaws.com/uploads/campaign/logo/5e73a6c9dea5890017365688/2d692222-2299-4d14-8243-18e38b1e9451.jpeg","_type":null,"type":"dollars","person_msg":"On March 28, Nathan and Julie Hatch established the Wake Forest Crisis Response Fund with a $100,000 gift to help students, employees and contract personnel facing personal financial hardship. Faculty, staff, alumni, parents and friends have rallied to the cause.  To date, the Crisis Response Fund has paid out more than $430,000 to meet the needs of our community.\u003cbr\u003e\u003cbr\u003e\n\nThanks to the generosity of so many faculty, staff, students, alumni and parents, Wake Foresters are receiving help with housing, meals, family care and other basic necessities stemming from the temporary closing of campus and the unstable economy.\u003cb\u003e But the need is great and continues to grow.  We anticipate needing to extend an unprecedented amount of emergency financial aid in the coming months.\u003c/b\u003e\n\n\u003cbr\u003e\u003cbr\u003eWith your help, we seek to raise at least $1 million to help those in our University community who need it most.\n\n\u003cbr\u003e\u003cbr\u003ePlease answer the call of Pro Humanitate and join us today.","how_donations_used":"All gifts allocated to the Wake Forest Crisis Response Fund directly \u003cbr\u003e\u003cbr\u003e support students, faculty, and staff members affected by the novel \u003cbr\u003e\u003cbr\u003e coronavirus (COVID-19).  With your help, our Wake Forest family \u003cbr\u003e\u003cbr\u003e members are receiving assistance with housing, meals, family care, \u003cbr\u003e\u003cbr\u003e and basic necessities stemming from sheltering in place and the \u003cbr\u003e\u003cbr\u003e temporary closing of campus.","descr_head":"Answering the call of Pro Humanitate","why_donations_head":"How does my gift help?","person_msg_head":"Answering the call of Pro Humanitate","how_donations_used_head":"Donations are applied to:","description":null,"why_donations":"Your gifts will support needs such as, but not limited to: \u003cbr\u003e\u003cbr\u003e\n-Assistance with food needs of students and campus employees at home\u003cbr\u003e\u003cbr\u003e\n\n-Assistance with housing crises, including basic rent payments\u003cbr\u003e\u003cbr\u003e\n\n-Support for international students who are unable to return to their home country\u003cbr\u003e\u003cbr\u003e\n\n-Extra medical needs of students in self-isolation or quarantine\u003cbr\u003e\u003cbr\u003e\n\n-Unbudgeted costs for safety equipment for on-campus employees in housing and food service\u003cbr\u003e\u003cbr\u003e\n\n-Access to technology for remote instruction\u003cbr\u003e\u003cbr\u003e\n\n-Student travel expenses to return home\u003cbr\u003e\u003cbr\u003e\n\n-Continuing pay for those who are experiencing reduced hours of work","total_votes":0,"category":null,"url":"https://crowdfund.wfu.edu/campaigns/answering-the-call-of-pro-humanitate","goal_progress":788160.93,"total_raised":788160.93,"total_referrals":0,"start_date":"2020-03-23T04:03:00.000Z","end_date":"2020-08-01T21:00:00.000Z","proxy_goal":1000000.0,"proxy_member_goal":null,"dollar_proxy_ratio":1.0,"allow_subscriptions":null,"team_size":null,"occurrences":12,"facebook_approved":true,"status":"active","average_donation":799.3518559837729,"gid":"gid://amplo/Campaign/5e73a6c9dea5890017365688","quote":null,"hashtag":"#AnsweringTheCallOfProHumanitate","external_donation_url":null,"title_color":null,"custom_sms_text":"Join me in answering the call of #ProHumanitate. Donate to the Wake Forest Crisis Response Fund","custom_twitter_text":"Join me in answering the call of #ProHumanitate. Donate to the @WakeForest Crisis Response Fund: https://crowdfund.wfu.edu/campaigns/answering-the-call-of-pro-humanitate","leader_invite_text":null,"participant_invite_text":null,"welcome_text_1":"By taking a minute to share our campaign, you bring us closer to reaching our goal. You can easily reach out to people within your network below.","welcome_text_2":"This wizard will walk you through the steps to support our campaign. You can easily share with people via email, text, and facebook. Thanks for your support!","welcome_image":"https://amploprod.s3.amazonaws.com/uploads/entity/headlogo/5a09ce7dbaaf13361066886f/Wake_Forest_Head_logo_-_FULL_shield.png","credit_card_processor":"spreedly","custom_donation_amount":true,"touchnet_url":null,"upay_site_id":null,"donation_address_required":true,"entity_credit_cards_accepted":null,"hide_average_donation":false,"reply_to":"crowdfund@wfu.edu","request_affinity":false,"use_giving_form":false,"spreedly_key":"FHhhXncaUMnTuQ9vcNYnbt702cf","currency_code":"USD","causes":[],"donation_levels":[{"id":"5e74cf90dea589005c3656e3","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e74cf90dea589005c3656e3/4875b6a7-98d2-46f1-8dd1-023c7e374cc3.jpeg","amount":25,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":2.08,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e74cfd8a9e4ae007007adc0","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e74cfd8a9e4ae007007adc0/659c67fc-3dcd-4c47-9bcc-ca3e52f2daf2.jpeg","amount":100,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":8.33,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e74cff6a9e4ae005d07adb5","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e74cff6a9e4ae005d07adb5/e8af0bb6-a099-4bf1-a3cb-267a1ba2266d.jpeg","amount":500,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":41.67,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e74d01aa9e4ae005d07adb6","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e74d01aa9e4ae005d07adb6/45c4b6fd-ec2b-4a81-9dec-22821ec5e187.jpeg","amount":1000,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":83.33,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e7ba22352359e008daae119","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e7ba22352359e008daae119/88461fff-061a-4084-b963-fa6148041013.jpeg","amount":2500,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":208.33,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e7ba22b52359e008daae11a","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e7ba22b52359e008daae11a/23c275b3-1033-41dc-b7a9-28b8cc3e3cd5.jpeg","amount":5000,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":416.67,"campaign_id":"5e73a6c9dea5890017365688"},{"id":"5e7e301a44c2ab00303a6646","image":"https://amploprod.s3.amazonaws.com/uploads/donation_level/image/5e7e301a44c2ab00303a6646/977f79bd-e4a7-40e3-b6ee-b45e88e97908.jpeg","amount":10000,"reward":null,"impact":null,"impact_head":"Your Donation Impact","occurrences":null,"split":833.33,"campaign_id":"5e73a6c9dea5890017365688"}]};gon.timezone="America/New_York";gon.appeals=[];gon.features_enabled=["affinities","affinities_grad_year","campaign_email","donation","email","events","impact_reporting","insight_reporting","reporting"];gon.preSelectedValue={};gon.contact_import_google_enabled=false;gon.enabledCustomFields=[];gon.sharewizard_campaign_html_closed=null;gon.sharewizard_campaign_html_pending=null;gon.campaign_id="5e73a6c9dea5890017365688";gon.campaign_type="dollars";gon.no_user_image="//amploprod.s3.amazonaws.com/assets/no-user-image-square-9f6a473a32ad639f619216331d10d61ce1b35c9271d5683920960e1a5ee45bb8.jpg";gon.amplo_logo="//amploprod.s3.amazonaws.com/assets/snap-advance-footer-logo-4a3d736edae9845b9ed760246199963bfea1626e9308b9d0bbfd991a18ea9899.png";gon.xls_logo="//amploprod.s3.amazonaws.com/assets/xls-logo-04d68127e7c17ef629de200e2dda5e5f9c6b8e196c776cb3403a552d36f53dd5.png";gon.gmail_logo="//amploprod.s3.amazonaws.com/assets/gmail-logo-62c1f677d848524b94e207891b9cc730fac683a1538b9b1168e1617876cf94be.png";gon.manual_logo="//amploprod.s3.amazonaws.com/assets/Manual-icon-b0bce081d9d0722e70fe6cf17d1135754b563fd5d7c558cf30942f9a81b21fd7.png";gon.cc_security="//amploprod.s3.amazonaws.com/assets/cc_security-d7857c0d14dd67bd6b94209845c8894034139fa369ba45513d1500912a5b42c4.png";gon.welcome_logo="//amploprod.s3.amazonaws.com/assets/welcome-940867e087eb0621e89f2190f70ad38f4775132340ab669c5778e9837e665df9.png";gon.return_logo="//amploprod.s3.amazonaws.com/assets/return-logo-9d6ebad5c45a8ed92f2cf46fef3f67cb4d5a8aa796844b031bfa7b459bf384b4.png";gon.money_logo="//amploprod.s3.amazonaws.com/assets/money-logo-6b1caf9c80893c38c6846b2a795f4f6dc2150a4469cbd402dc74d48cc23dcb95.png";gon.profile="//amploprod.s3.amazonaws.com/assets/profile-7242dfca676d4ea5746587d4ecf6e489fbc729c03899b69c2d592c248d5e0bbb.png";gon.sms_logo="//amploprod.s3.amazonaws.com/assets/sms-blurb-icon-eabae71a7d19a1290ec4cd1c84bab7fa33d8ae4110188442feaad768892e4b69.png";gon.lock_icon="//amploprod.s3.amazonaws.com/assets/lock-icon-54a8621adf0b433d045d234059c52f923202b4232a76a7d05fd7d085f38b376b.png";gon.ribbon_icon="//amploprod.s3.amazonaws.com/assets/ribbon-icon-0b0bf303b88f53da1dc882e9febcf65227ea2970a9708d4bc682744468016afd.png";gon.facebookblurb_logo="//amploprod.s3.amazonaws.com/assets/facebookblurb-icon-70b8bca1a7c1359268fb76131681facb69b88a75f9adc2aade8e1fb43d58902a.png";gon.countries=["Åland Islands","Zimbabwe","Zambia","Yemen","Western Sahara","Wallis and Futuna","Virgin Islands, U.S.","Virgin Islands, British","Vietnam","Venezuela, Bolivarian Republic of","Vanuatu","Uzbekistan","Uruguay","United States Minor Outlying Islands","United Kingdom","United Arab Emirates","Ukraine","Uganda","Tuvalu","Turks and Caicos Islands","Turkmenistan","Turkey","Tunisia","Trinidad and Tobago","Tonga","Tokelau","Togo","Timor-Leste","Thailand","Tanzania, United Republic of","Tajikistan","Taiwan","Syrian Arab Republic","Switzerland","Sweden","Swaziland","Svalbard and Jan Mayen","Suriname","Sudan","Sri Lanka","Spain","South Sudan","South Georgia and the South Sandwich Islands","South Africa","Somalia","Solomon Islands","Slovenia","Slovakia","Sint Maarten (Dutch part)","Singapore","Sierra Leone","Seychelles","Serbia","Senegal","Saudi Arabia","Sao Tome and Principe","San Marino","Samoa","Saint Vincent and the Grenadines","Saint Pierre and Miquelon","Saint Martin (French part)","Saint Lucia","Saint Kitts and Nevis","Saint Helena, Ascension and Tristan da Cunha","Saint Barthélemy","Réunion","Rwanda","Russia","Romania","Qatar","Puerto Rico","Portugal","Poland","Pitcairn","Philippines","Peru","Paraguay","Papua New Guinea","Panama","Palestine, State of","Palau","Pakistan","Oman","Norway","Northern Mariana Islands","Norfolk Island","Niue","Nigeria","Niger","Nicaragua","New Zealand","New Caledonia","Netherlands","Nepal","Nauru","Namibia","Myanmar","Mozambique","Morocco","Montserrat","Montenegro","Mongolia","Monaco","Moldova, Republic of","Micronesia, Federated States of","Mexico","Mayotte","Mauritius","Mauritania","Martinique","Marshall Islands","Malta","Mali","Maldives","Malaysia","Malawi","Madagascar","Macedonia, Republic of","Macao","Luxembourg","Lithuania","Liechtenstein","Libya","Liberia","Lesotho","Lebanon","Latvia","Lao People's Democratic Republic","Kyrgyzstan","Kuwait","Korea, Republic of","Korea, Democratic People's Republic of","Kiribati","Kenya","Kazakhstan","Jordan","Jersey","Japan","Jamaica","Italy","Israel","Isle of Man","Ireland","Iraq","Iran, Islamic Republic of","Indonesia","India","Iceland","Hungary","Hong Kong","Honduras","Holy See (Vatican City State)","Heard Island and McDonald Islands","Haiti","Guyana","Guinea-Bissau","Guinea","Guernsey","Guatemala","Guam","Guadeloupe","Grenada","Greenland","Greece","Gibraltar","Ghana","Germany","Georgia","Gambia","Gabon","French Southern Territories","French Polynesia","French Guiana","France","Finland","Fiji","Faroe Islands","Falkland Islands (Malvinas)","Ethiopia","Estonia","Eritrea","Equatorial Guinea","El Salvador","Egypt","Ecuador","Dominican Republic","Dominica","Djibouti","Denmark","Côte d'Ivoire","Czechia","Cyprus","Curaçao","Cuba","Croatia","Costa Rica","Cook Islands","Congo, The Democratic Republic of the","Congo","Comoros","Colombia","Cocos (Keeling) Islands","Christmas Island","China","Chile","Chad","Central African Republic","Cayman Islands","Cameroon","Cambodia","Cabo Verde","Burundi","Burkina Faso","Bulgaria","Brunei Darussalam","British Indian Ocean Territory","Brazil","Bouvet Island","Botswana","Bosnia and Herzegovina","Bonaire, Sint Eustatius and Saba","Bolivia, Plurinational State of","Bhutan","Bermuda","Benin","Belize","Belgium","Belarus","Barbados","Bangladesh","Bahrain","Bahamas","Azerbaijan","Austria","Australia","Aruba","Armenia","Argentina","Antigua and Barbuda","Antarctica","Anguilla","Angola","Andorra","American Samoa","Algeria","Albania","Afghanistan","Canada","United States"];gon.us_states=["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","Washington DC","District of Columbia","West Virginia","Wisconsin","Wyoming","Other"];gon.ca_provinces=["Alberta","British Columbia","Manitoba","New Brunswick","Newfoundland and Labrador","Nova Scotia","Ontario","Prince Edward Island","Quebec","Saskatchewan","Other"];gon.end_date="2020-08-01T21:00:00.000Z";gon.entity_facebook_key="509513122802506";gon.entity_facebook_namespace="wakeforestgive";gon.entity_name="Wake Forest Crisis Response Crowdfunding";gon.entity_logo="https://amploprod.s3.amazonaws.com/uploads/entity/headlogo/5a09ce7dbaaf13361066886f/Wake_Forest_Head_logo_-_FULL_shield.png";gon.entity_minimum_giving_day_amount=5;gon.fund_goal=1000000;gon.fund_raised=788160;
+//]]>
+</script>
+<meta content='Answering the Call of Pro Humanitate - Wake Forest Crisis Response Crowdfunding' property='og:title'>
+<meta content='https://crowdfund.wfu.edu/campaigns/answering-the-call-of-pro-humanitate' property='og:url'>
+<meta content='' property='og:description'>
+<meta content='https://amploprod.s3.amazonaws.com/uploads/campaign_image/name/5e73b59a4f6a840057401fef/9f5d8701-eda2-4b06-9f76-0239d6fc6d79.jpeg' property='og:image'>
+
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1 maximum-scale=2, user-scalable=0' name='viewport'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="g6Lx1vZE6+pfx6I1daccqf+IeyHCfzLtbY+yLBUttzZibSkADWH3WAfV7fqP9AJ8rc39afNVd0wtQtgi2EpqGQ==" />
+
+</head>
+<body class='application-main microsite'>
+<div id='fb-root'></div>
+<header>
+<nav class='navbar navbar-default' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<a href="/"><img class="header_logo img-circle" src="https://amploprod.s3.amazonaws.com/uploads/entity/headlogo/5a09ce7dbaaf13361066886f/Wake_Forest_Head_logo_-_FULL_shield.png" alt="Wake forest head logo   full shield" /></a>
+</div>
+<div class='navbar-collapse collapse' id='navbar-collapse-header'>
+<ul class='nav navbar-nav navbar-right'>
+</ul>
+</div>
+</div>
+</nav>
+
+</header>
+</body>
+<span>
+</span>
+<div id='cookie-policy' style='z-index: 999999999; position: fixed; bottom: 0; left: 0; min-width: 200px; width: 100%; text-align: center; padding: 0.75rem 0.5rem; font-size: 1.5rem; background-color: rgba(0,0,0,0.8); color: white;'>
+<p>This website uses cookies as well as similar tools and technologies to understand visitors’ experiences. By continuing to use this website, you consent to Wake Forest University’s use of cookies in accordance with the <a target="_blank" rel="nofollow" href="https://about.wfu.edu/privacy-policy/">Wake Forest University Website Cookie Notice</a>.</p><br>
+<br>
+<br>
+<a onclick='document.getElementById(&#39;cookie-policy&#39;).remove()' style='cursor: pointer;'>
+Got it!
+</a>
+<script>
+  if (window.localStorage['not_first_time']) {
+    document.getElementById('cookie-policy').remove()
+  }
+  else {
+    window.localStorage['not_first_time'] = true
+  }
+</script>
+</div>
+<input data-campaign-id='5e73a6c9dea5890017365688' data-campaign-slug='answering-the-call-of-pro-humanitate' data-entity-name='Wake Forest Crisis Response Crowdfunding' id='campaign' type='hidden'>
+<div class='donate-bar'>
+<div class='donate-section'>
+<div class='donate-text'>
+<span>Help us reach our goal.</span>
+<span class='hidden'>Now's the time to step up and donate</span>
+</div>
+<div class='donate-button mix-data-donate'>
+<a class='share_wizard_link' href='#/' id='contribute-button-ribbon'>
+Donate
+<i class='fa fa-angle-double-right'></i>
+</a>
+</div>
+</div>
+<div class='share-section'>
+<div class='share-text'>
+<span>Share Our Campaign.</span>
+<span class='hidden'>Not ready to donate yet? Spread the word.</span>
+</div>
+<div class='share-button mix-data-share'>
+<a class='share_wizard_link' href='#/facebook'>
+<i class='fa fa-angle-double-left'></i>
+Share
+</a>
+</div>
+</div>
+</div>
+
+<div class='campaign-page' style='background-image:url(https://amploprod.s3.amazonaws.com/uploads/campaign/banner/5e73a6c9dea5890017365688/e5aa5284-51bf-4070-becb-5e754989f44c.jpeg);'>
+<div class='campaign-cta-container'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-4'>
+<img class="img-responsive img-circle campaign-img visible-xs" src="https://amploprod.s3.amazonaws.com/uploads/campaign/logo/5e73a6c9dea5890017365688/2d692222-2299-4d14-8243-18e38b1e9451.jpeg" />
+</div>
+<div class='col-sm-8'>
+<div class='campaign-info-container'>
+<h1 class='campaign-header-color'>Answering the Call of Pro Humanitate</h1>
+</div>
+<div id='progress_info'>
+<div class='fund_goal'>
+<div class='callout goal'>
+<!-- = render 'shared/bubble_arrow_up' -->
+<b>
+<span class='amt'>0</span>
+<br>
+<span class='title'>Campaign Goal</span>
+</b>
+</div>
+</div>
+<div class='fund_raised'>
+<div class='callout'>
+
+<b>
+<span class='amt'>0</span>
+<br>
+<span class='title'>
+<span class='capitalize'>dollars raised</span>
+</span>
+</b>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class='campaign-details'>
+<div class='container media-and-supporter-info'>
+<div class='row'>
+<div class='col-md-8'>
+<div class='carousel slide' data-interval='false' data-ride='carousel' id='campaign-media-carousel'>
+<!-- Indicators -->
+<ol class='carousel-indicators'>
+<li class='active' data-slide-to='0' data-target='#campaign-media-carousel'></li>
+<li class='' data-slide-to='1' data-target='#campaign-media-carousel'></li>
+<li class='' data-slide-to='2' data-target='#campaign-media-carousel'></li>
+</ol>
+<!-- Wrapper for slides -->
+<div class='carousel-inner'>
+<div class='item active'>
+<div class='embed-responsive embed-responsive-16by9'>
+<iframe class='embed-responsive-item' frameborder='0' src='//www.youtube.com/embed/qGpTSzwkSKY?rel=0'></iframe>
+<div class='carousel-caption'></div>
+</div>
+</div>
+<div class='item '>
+<div class='embed-responsive embed-responsive-16by9'>
+<img class="embed-responsive-item" alt="Wait Chapel" src="https://amploprod.s3.amazonaws.com/uploads/campaign_image/name/5e73b59a4f6a840057401fef/9f5d8701-eda2-4b06-9f76-0239d6fc6d79.jpeg" />
+<div class='carousel-caption'></div>
+</div>
+</div>
+<div class='item '>
+<div class='embed-responsive embed-responsive-16by9'>
+<img class="embed-responsive-item" alt="Pro Humanitate" src="https://amploprod.s3.amazonaws.com/uploads/campaign_image/name/5e73b77caa0b9b00274debf7/e813d571-b8fc-4ccd-838f-060e3c0d3ca5.jpeg" />
+<div class='carousel-caption'></div>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<a aria-label='Previous Slide' class='left carousel-control mix-data-carousel' data-slide='prev' href='#campaign-media-carousel' role='button'>
+<span class='glyphicon glyphicon-chevron-left'></span>
+</a>
+<a aria-label='Next Slide' class='right carousel-control mix-data-carousel' data-slide='next' href='#campaign-media-carousel' role='button'>
+<span class='glyphicon glyphicon-chevron-right'></span>
+</a>
+</div>
+<br>
+<br>
+
+<h2 class='primary-color-text' style='font-size: 18px;'>
+Answering the call of Pro Humanitate
+</h2>
+<div class='panel panel-default panel-personal-msg'>
+<div class='panel-heading'>
+On March 28, Nathan and Julie Hatch established the Wake Forest Crisis Response Fund with a $100,000 gift to help students, employees and contract personnel facing personal financial hardship. Faculty, staff, alumni, parents and friends have rallied to the cause.  To date, the Crisis Response Fund has paid out more than $430,000 to meet the needs of our community.<br><br>
+
+Thanks to the generosity of so many faculty, staff, students, alumni and parents, Wake Foresters are receiving help with housing, meals, family care and other basic necessities stemming from the temporary closing of campus and the unstable economy.<b> But the need is great and continues to grow.  We anticipate needing to extend an unprecedented amount of emergency financial aid in the coming months.</b>
+
+<br><br>With your help, we seek to raise at least $1 million to help those in our University community who need it most.
+
+<br><br>Please answer the call of Pro Humanitate and join us today.
+</div>
+</div>
+<p></p>
+</div>
+<div class='col-md-4'>
+<a class='btn btn-lg new-btn-warning btn-block share_wizard_link m-md-b contribute mix-data-contribute' href='#/' id='contribute-button-page'>CONTRIBUTE</a>
+<div class='days_left'>
+<div class='number'>29</div>
+<div class='text'>
+Days
+Left
+</div>
+</div>
+<div class='divider-double'></div>
+<div class='supporters'>
+<span class='number'>958</span>
+<span class='text'>Supporters</span>
+</div>
+<h3 class='thanks'>Thanks To Our Recent Donors!</h3>
+<div class='divider'></div>
+<div class='supporter-messages-container'>
+<ul class='fb-messages'>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $250.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Lexi and Trey Sindall
+</div>
+</div>
+<p class='donation-amount'> - $50.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $100.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $100.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $5,000.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $500.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $50.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+DeFord Davis
+</div>
+</div>
+<p class='donation-amount'> - $100.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Elms and Harriet Allen
+</div>
+</div>
+<p class='donation-amount'> - $500.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Allison Johnson
+</div>
+</div>
+<p class='donation-amount'> - $500.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Austin Locke
+</div>
+</div>
+<p class='donation-amount'> - $500.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $100.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $5.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $50.00</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $211.18</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $190.19</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $211.18</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $288.83</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $41.77</p>
+</div>
+<p class='msg-content'></p>
+</li>
+<li class='fb-message'>
+<div>
+<div class='fb-user-info'>
+<div class='fb-user-name'>
+Anonymous
+</div>
+</div>
+<p class='donation-amount'> - $119.93</p>
+</div>
+<p class='msg-content'></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='share-info-bar'>
+<div class='container'>
+<div class='row'>
+<div class='share-container total-shares'>
+<span class='number campaign-total-shares'></span>
+<span class='text'>
+Total
+<br>
+Shares
+</span>
+</div>
+<div class='share-container facebook-shares'>
+<div class='text'>
+<a class="btn new-btn-facebook mix-data-facebook share_wizard_link " href="#/facebook"><i class='fa fa-facebook'></i>
+SHARE
+</a></div>
+<div class='number'>
+<span></span>
+</div>
+</div>
+<div class='share-container email-shares' data-number='1'>
+<span class='text'>
+<a class="btn new-btn-email mix-data-email new-btn-success share_wizard_link " href="#/emails"><i class='fa fa-envelope'>
+EMAIL
+</i>
+</a></span>
+<div class='number'>
+<span>1</span>
+</div>
+</div>
+<div class='share-container twitter-shares' data-number='33'>
+<span class='text'>
+<a class='btn new-btn-info new-btn-twitter mix-data-twitter' href='https://twitter.com/intent/tweet?text=Join%20me%20in%20answering%20the%20call%20of%20%23ProHumanitate.%20Donate%20to%20the%20%40WakeForest%20Crisis%20Response%20Fund%3A%20https%3A%2F%2Fcrowdfund.wfu.edu%2Fcampaigns%2Fanswering-the-call-of-pro-humanitate' onclick='window.open(&#39;https://twitter.com/intent/tweet?text=Join%20me%20in%20answering%20the%20call%20of%20%23ProHumanitate.%20Donate%20to%20the%20%40WakeForest%20Crisis%20Response%20Fund%3A%20https%3A%2F%2Fcrowdfund.wfu.edu%2Fcampaigns%2Fanswering-the-call-of-pro-humanitate&#39;, &#39;newwindow&#39;, &#39;width=510, height=300&#39;); return false;'>
+<i class='fa fa-twitter'>
+TWEET
+</i>
+</a>
+</span>
+<div class='number'>
+<span>33</span>
+</div>
+</div>
+<div class='share-container sms-shares' data-number='5'>
+<span class='text'>
+<a class="btn new-btn-sms mix-data-sms new-btn-primary share_wizard_link " href="#/sms"><i class='fa fa-mobile'>
+SMS
+</i>
+</a></span>
+<div class='number'>
+<span>5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='about'>
+<div class='container'>
+<h2 class='primary-color-text' style='font-size: 18px;'>
+Answering the call of Pro Humanitate
+</h2>
+<p></p>
+<div class='row'>
+<div class='col-md-6'>
+<h3>
+Donations are applied to:
+</h3>
+<div class='panel panel-default panel-donation-msg'>
+<div class='panel-heading'>
+<p>All gifts allocated to the Wake Forest Crisis Response Fund directly <br><br> support students, faculty, and staff members affected by the novel <br><br> coronavirus (COVID-19).  With your help, our Wake Forest family <br><br> members are receiving assistance with housing, meals, family care, <br><br> and basic necessities stemming from sheltering in place and the <br><br> temporary closing of campus.</p>
+</div>
+</div>
+</div>
+<div class='col-md-6'>
+<h3>
+How does my gift help?
+</h3>
+<div class='panel panel-default panel-donation-msg'>
+<div class='panel-heading'>
+<p>Your gifts will support needs such as, but not limited to: <br><br>
+-Assistance with food needs of students and campus employees at home<br><br>
+
+-Assistance with housing crises, including basic rent payments<br><br>
+
+-Support for international students who are unable to return to their home country<br><br>
+
+-Extra medical needs of students in self-isolation or quarantine<br><br>
+
+-Unbudgeted costs for safety equipment for on-campus employees in housing and food service<br><br>
+
+-Access to technology for remote instruction<br><br>
+
+-Student travel expenses to return home<br><br>
+
+-Continuing pay for those who are experiencing reduced hours of work</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='shareWizard'></div>
+</div>
+<style>
+  h1.campaign-header-color {
+    color: ;
+  }
+</style>
+
+<footer class='entity navbar navbar-default' style='display: none;'>
+<div class='color-overlay'>
+<div class='container'>
+<div class='row text-center'>
+<p><img src="https://amploprod.s3.amazonaws.com/uploads/entity/footlogo/5a09ce7dbaaf13361066886f/WFU_Footer_Image_Black_Color.png" alt="Wfu footer image black color" /></p>
+<p class='tagline'></p>
+<div class='divider-social'></div>
+<p class='social-tagline'>Connect With Us:</p>
+<a class="footer-link" target="_blank" alt="Share on Facebook" href="https://www.facebook.com/wfuniversity/"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-facebook'></i>
+</span>
+</a><a class="footer-link" target="_blank" alt="Share on Twitter" href="https://twitter.com/WakeForest"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-twitter'></i>
+</span>
+</a><a class="footer-link" target="_blank" alt="Visit our Instagram" href="https://www.instagram.com/wfuniversity/"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-instagram'></i>
+</span>
+</a><a class="footer-link" target="_blank" alt="Share on LinkedIn" href="https://www.linkedin.com/school/166861/"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-linkedin-square'></i>
+</span>
+</a><a class="footer-link" target="_blank" alt="Visit our Youtube Channel" href="https://www.youtube.com/user/WForestUniversity"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-youtube'></i>
+</span>
+</a><a class="footer-link" target="_blank" alt="Add us on Snapchat" href="https://www.snapchat.com/add/wfuniversity"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-snapchat-ghost'></i>
+</span>
+</a><div class='divider-social'></div>
+<span>
+<a target="blank" class="footer-nav-link" alt="WFU Privacy Policy" href="https://about.wfu.edu/privacy-policy/">WFU Privacy Policy</a>
+</span>
+<p class='footer-copyright'>P.O Box 7227 | Winston-Salem, NC 27109 | 336.758.6031</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+<div id='fadedBackground'></div>
+<div class='mobile hidden-sm hidden-xs'></div>
+<script>
+  // browser support
+  var $buoop = {
+    vs:{i:10,f:-4,o:-4,s:10,c:-8},
+    api:4,
+    reminder: 48
+  };
+  function $buo_f(){
+   var e = document.createElement("script");
+   e.src = "//browser-update.org/update.min.js";
+   document.body.appendChild(e);
+  };
+  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+  catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+<script src="//amploprod.s3.amazonaws.com/assets/packs/vendor-bundle-df27452c05db52f05ed5.js"></script>
+<script src="//amploprod.s3.amazonaws.com/assets/packs/legacy-bundle-cbef275bc2e8d1e33e61.js"></script>
+<script src="//amploprod.s3.amazonaws.com/assets/packs/sharewizard-vendor-bundle-4197976a9e2d10f5be47.js"></script>
+<script src="//amploprod.s3.amazonaws.com/assets/sharewizard/vendor-654eabb4c07e443732aede3323676801b85df05dbd1a2c3050c7d66b6ceeb3ed.js"></script>
+<script src="//amploprod.s3.amazonaws.com/assets/sharewizard/sharewizard-20d5c55989d8efb91cd90628467a77b0b9f504492825dfef04de2cc535a19660.js"></script>
+<script src='https://core.spreedly.com/iframe/iframe-v1.min.js' type='text/javascript'></script>
+<script>
+  $(document).ready(() => {
+    const triggerAmplitudeEvent = (options) => {
+      if (typeof window.EventAnalyticsService != 'undefined') {
+        window.EventAnalyticsService.addEvent(options);
+      }
+    }
+  
+    ['welcome', 'email', 'facebook', 'sms', 'donate'].forEach((sharewizardTabName) => {
+      $(`.ember-view.${sharewizardTabName}`).on('click', () => {
+        triggerAmplitudeEvent({
+          name: 'SHAREWIZARD - SELECT STEP',
+          step: 'sharewizardTabName',
+        })
+      });
+    })
+    $('#shareWizard').click((e) => {
+      const $target = $(e.target)
+      if ($target.closest('.donation-lvl-container').length > 0) {
+        triggerAmplitudeEvent({
+          name: 'SHAREWIZARD - SELECT AMOUNT',
+          step: 'Donation',
+        })
+      } else if ($target.closest('.custom-donation-button').length > 0) {
+        triggerAmplitudeEvent({
+          name: 'SHAREWIZARD - SELECT AMOUNT',
+          step: 'Donation',
+        })
+      } else if ($target.closest('#donate').length > 0) {
+        triggerAmplitudeEvent({
+          name: 'SHAREWIZARD - SUBMIT DONATION',
+          step: 'Donation',
+        })
+      }
+    })
+  })
+</script>
+
+<script src="//amploprod.s3.amazonaws.com/assets/vue-output/react-giving-form-service-322b54f5120b42d497e3ab1ad189c0f05313baba9c6891cb609c231ad546f2a2.js"></script>
+</html>
