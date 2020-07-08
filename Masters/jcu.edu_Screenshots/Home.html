@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"d1a4d7cbd5",applicationID:"368085321"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta http-equiv="content-language" content="en" />
+<link rel="canonical" href="https://jcu.edu/healthupdate" />
+<meta name="description" content="[node:body]" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/upward/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://jcu.edu/healthupdate" />
+
+    <title>Health Advisory: Coronavirus</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSKRW9W');</script>
+<!-- End Google Tag Manager -->
+<script async="async" src="https://admission.jcu.edu/ping">/**/</script>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Mqc_z8vHHHoFFv7xF7zCYnDDVJ3TAo36ee0M5dIjvmE.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_q61Xygqyn6RXkXS0tcj8rzKWlzSnkLFrLa2Ej5kWnIE.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_e3ouwH1xrafGnafVtCeguSaEiinzqMrjyjNh-abE6z0.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-page cbp-spmenu-push cbp-spmenu-push-contact">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSKRW9W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <div id="skiptocontent">
+      <a href="#skip-to-main-content" tabindex="1">Skip to main content</a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="body-overlay"></div>
+<div class="fixed-header">
+    <header>
+        <div class="header-top clearfix">
+            <button class="nav-list open-close"></button>
+            <div class="header-logo"><a href="/">JCU Edu</a></div>
+            <div class="tablet-search">
+                <div class="search-button">
+                    <p class="sb-closed">Search</p>
+                    <p class="sb-open"><strong>X</strong> Close</p>
+                </div>
+                <div id="block-search-form-tablet" class="block block-search">
+                    <div class="block-content">
+                      <div class="region region-search">
+                        <div class="jcu-search-form-mobile block block-custom-blocks block-jcu-search-form-mobile-block" data-drupal-selector="jcu-search-form-mobile" data-msg-required="This field is required.">
+  
+    
+      <form action="/healthupdate" method="post" id="jcu-search-form-mobile" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-words form-item-words">
+        <label for="edit-words" class="js-form-required form-required">Search Pages:</label>
+    
+        <input data-drupal-selector="edit-words" data-msg-maxlength="Search Pages: field has a maximum length of 128." data-msg-required="Search Pages: is required." type="text" id="edit-words" name="words" value="" size="60" maxlength="128" placeholder="Search" class="form-text required" required="required" aria-required="true" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-jq3ajrswotsfn6bgiiex8n8oubn68akbnhizzkh03sm" data-msg-required="This field is required." type="hidden" name="form_build_id" value="form-JQ3AjRSWOtsFn6bgIIeX8N8OuBN68akbnHIZzkh03sM" />
+<input data-drupal-selector="edit-jcu-search-form-mobile" data-msg-required="This field is required." type="hidden" name="form_id" value="jcu_search_form_mobile" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" data-msg-required="This field is required." id="edit-actions--2"><input data-drupal-selector="edit-submit" data-msg-required="This field is required." type="submit" id="edit-submit--2" name="op" value="Search Now" class="button button--primary js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+
+                      </div>
+                    </div>
+                    <div class="search-links clearfix">
+                          
+                      <div class="sl-col">
+                        <nav role="navigation"  class="block block-menu navigation menu--frequently-searched">
+      
+  <h3>Frequently Searched</h3>
+  
+
+        
+              <ul>
+    
+                <li>
+        <a href="/student-life/career-services" data-drupal-link-system-path="node/44">Career Services</a>
+              </li>
+                <li>
+        <a href="/registrar" data-drupal-link-system-path="node/5881">Registrar</a>
+              </li>
+                <li>
+        <a href="/calendar" data-drupal-link-system-path="node/41">University Calendar</a>
+              </li>
+                <li>
+        <a href="https://banner.jcu.edu/" target="_blank">BannerWeb</a>
+              </li>
+                <li>
+        <a href="https://www.bkstr.com/johncarrollstore" target="_blank">Bookstore</a>
+              </li>
+        
+        
+    
+    
+    </ul>
+  
+
+
+  </nav>
+
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="ht-right">
+                    <nav role="navigation"  id="block-topright" class="block block-menu navigation menu--top-right">
+            
+  <h3 class="visually-hidden" id="block-topright-menu">Top Right</h3>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/apply" data-drupal-link-system-path="node/6386">Apply</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visit-campus" data-drupal-link-system-path="node/6382">Visit</a>
+              </li>
+                <li class="menu-item">
+        <a href="/request-info" class="mobile-only" data-drupal-link-system-path="node/6388">Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/request-info" class="mobile-hidden" data-drupal-link-system-path="node/6388">Request  Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/give" data-drupal-link-system-path="node/3672">Give</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+            </div>
+            <div class="dsk-audience">
+				<nav role="navigation"  id="block-topleft" class="block block-menu navigation menu--top-left">
+    
+              <ul class="menu">
+    
+                <li class="menu-item">
+        <a href="https://jcu.edu/admission" target="_blank">Prospective Students</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life" data-drupal-link-system-path="node/2126">Current Students</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="https://banner.jcu.edu/" target="_blank">Banner Web</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs" data-drupal-link-system-path="node/9254">Student Financial Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://canvas.jcu.edu/login/ldap" target="_blank">Canvas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/registrar" data-drupal-link-system-path="node/5881">Registrar</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/welcome-campus-living" data-drupal-link-system-path="node/5177">Housing</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Explore Student Life Resources"  href="/student-life">Explore Student Life</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded menu-item--active-trail">
+        <a href="/parent-resources" data-drupal-link-system-path="node/9256">Parents</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item menu-item--active-trail">
+        <a href="/healthupdate" data-drupal-link-system-path="node/10100" class="is-active">Health Advisory: Coronavirus</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/health-wellness-and-safety" data-drupal-link-system-path="node/3201">Health, Wellness, &amp; Safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs" data-drupal-link-system-path="node/9254">Financial Aid</a>
+              </li>
+                <li class="menu-item">
+        <a href="/registrar/alumni-and-friends/parents" data-drupal-link-system-path="node/5938">FERPA</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/getting-involved" data-drupal-link-system-path="node/3305">Student Involvement Opportunities </a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs/tuition-and-billing/payment-options" data-drupal-link-system-path="node/5548">Make a Payment</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Learn more about resources for parents"  href="/parent-resources">Learn More</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/faculty-staff" data-drupal-link-system-path="node/9283">Faculty &amp; Staff</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="https://banner.jcu.edu/" target="_blank">Banner Web</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://canvas.jcu.edu/login/ldap" target="_blank">Canvas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/career-opportunities" data-drupal-link-system-path="node/5624">Career Opportunities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/benefits-wellness" data-drupal-link-system-path="node/5354">Benefits &amp; Wellness</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/policies" data-drupal-link-system-path="node/5750">Policies</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="More Resources for Faculty and Staff"  href="/faculty-staff">More Resources</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/alumni" data-drupal-link-system-path="node/5253">Alumni</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="/events?aud=-1&amp;dep=86&amp;type=-1" data-drupal-link-query="{&quot;aud&quot;:&quot;-1&quot;,&quot;dep&quot;:&quot;86&quot;,&quot;type&quot;:&quot;-1&quot;}" data-drupal-link-system-path="node/43">Alumni Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/get-involved" data-drupal-link-system-path="node/5323">Get Involved</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/benefits-and-services/update-my-information" data-drupal-link-system-path="node/5317">Update Your Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/alumni-chapters-groups/alumni-chapters" data-drupal-link-system-path="node/10338">Alumni Chapters</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/benefits-and-services" data-drupal-link-system-path="node/5267">Benefits and Services</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Information for Alumni to Stay Connected"  href="/alumni">Stay Connected </a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+        
+    
+
+    
+    </ul>
+  
+
+
+</nav>
+
+            </div>
+        </div>
+        <div class="overlay overlay-toggleMenu cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="theoverlay">
+            <div class="header-bottom">
+                <div class="dsk-search">
+                    <div class="search-button" tabindex="2">
+                        <p class="sb-closed">Search</p>
+                        <p class="sb-open" tabindex="2"><strong>X</strong> Close</p>
+                    </div>
+                    <div id="block-search-form-header" class="block block-search">
+                      <div class="block-content">
+                            <div class="region region-search">
+                              <div class="jcu-search-form block block-custom-blocks block-jcu-search-form-block" data-drupal-selector="jcu-search-form" data-msg-required="This field is required.">
+  
+    
+      <form action="/healthupdate" method="post" id="jcu-search-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-words form-item-words">
+        <label for="edit-words--2" class="js-form-required form-required">Search:</label>
+    
+        <input data-drupal-selector="edit-words" data-msg-maxlength="Search: field has a maximum length of 128." data-msg-required="Search: is required." type="text" id="edit-words--2" name="words" value="" size="60" maxlength="128" placeholder="Search" class="form-text required" required="required" aria-required="true" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-v9nqu5ve2ykbn0ula3y0482qaczidsll-wx2b9n3fte" data-msg-required="This field is required." type="hidden" name="form_build_id" value="form-V9nqU5vE2YkBn0ulA3y0482QAczidsLL_WX2B9N3FtE" />
+<input data-drupal-selector="edit-jcu-search-form" data-msg-required="This field is required." type="hidden" name="form_id" value="jcu_search_form" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" data-msg-required="This field is required." id="edit-actions--3"><input data-drupal-selector="edit-submit" data-msg-required="This field is required." type="submit" id="edit-submit--3" name="op" value="Search" class="button button--primary js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+
+                            </div>
+                          </div>
+                          <div class="search-links">
+                              <div class="search-links-wrapper clearfix">
+                                    <div class="sl-col">
+                                      <nav role="navigation"  class="block block-menu navigation menu--search-people-and-places">
+      
+  <h3>Search People and Places</h3>
+  
+
+        
+              <ul>
+    
+                <li>
+        <a href="/campus-directory?staff-tab-search=&amp;primary=staff-tab&amp;staff-tab-page=0&amp;staff-tab-atoz=-1&amp;staff-tab-deps=-1" data-drupal-link-query="{&quot;primary&quot;:&quot;staff-tab&quot;,&quot;staff-tab-atoz&quot;:&quot;-1&quot;,&quot;staff-tab-deps&quot;:&quot;-1&quot;,&quot;staff-tab-page&quot;:&quot;0&quot;,&quot;staff-tab-search&quot;:&quot;&quot;}" data-drupal-link-system-path="node/3270">Faculty and Staff</a>
+              </li>
+                <li>
+        <a href="/campus-directory?loc-tab-search=&amp;primary=loc-tab&amp;loc-tab-page=0&amp;loc-tab-atoz=-1&amp;loc-tab-deps=-1" data-drupal-link-query="{&quot;loc-tab-atoz&quot;:&quot;-1&quot;,&quot;loc-tab-deps&quot;:&quot;-1&quot;,&quot;loc-tab-page&quot;:&quot;0&quot;,&quot;loc-tab-search&quot;:&quot;&quot;,&quot;primary&quot;:&quot;loc-tab&quot;}" data-drupal-link-system-path="node/3270">Locations and Offices</a>
+              </li>
+        
+        
+    
+    
+    </ul>
+  
+
+
+  </nav>
+
+                                    </div>
+                                <div class="sl-col">
+                                  <nav role="navigation"  class="block block-menu navigation menu--frequently-searched">
+      
+  <h3>Frequently Searched</h3>
+  
+
+        
+              <ul>
+    
+                <li>
+        <a href="/student-life/career-services" data-drupal-link-system-path="node/44">Career Services</a>
+              </li>
+                <li>
+        <a href="/registrar" data-drupal-link-system-path="node/5881">Registrar</a>
+              </li>
+                <li>
+        <a href="/calendar" data-drupal-link-system-path="node/41">University Calendar</a>
+              </li>
+                <li>
+        <a href="https://banner.jcu.edu/" target="_blank">BannerWeb</a>
+              </li>
+                <li>
+        <a href="https://www.bkstr.com/johncarrollstore" target="_blank">Bookstore</a>
+              </li>
+        
+        
+    
+    
+    </ul>
+  
+
+
+  </nav>
+
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+              </div>
+                <div class="main-nav">
+					    <nav role="navigation"  id="block-mainnavigation" class="block block-menu navigation menu--main">
+            
+  <h3 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h3>
+  
+
+        
+              <ul class="menu">
+    
+          
+            <li class="menu-item menu-item--expanded">
+        <a href="/about-us" data-drupal-link-system-path="node/3685">About Us</a> 
+                                
+        
+                                  
+      
+      <ul  class="menu menu-wide">
+
+      
+
+            
+    
+          
+            <li class="menu-item menu-item--collapsed">
+        <a href="/about-us/values-and-jesuit-tradition" data-drupal-link-system-path="node/5849">Values and Jesuit Tradition</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/about-us/jcu-101" data-drupal-link-system-path="node/5864">JCU 101</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="https://jcu.edu/president" target="_blank">Office of the President</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/about-us/our-history" data-drupal-link-system-path="node/5869">Our History</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/campus-directory?primary=loc-tab" data-drupal-link-query="{&quot;primary&quot;:&quot;loc-tab&quot;}" data-drupal-link-system-path="node/3270">Locations and Offices</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <span>Administrative Offices</span> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/about-us/contact-us-about-us" data-drupal-link-system-path="node/5870">Contact Us</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/web-accessibility">Web Accessibility</a> 
+              </li>
+              
+        
+    
+
+    </ul>
+  
+              </li>
+                
+                
+            <li class="menu-item menu-item--expanded">
+        <a href="/admission" data-drupal-link-system-path="node/6371">Admission</a> 
+                                
+        
+                                  
+      
+      <ul  class="menu menu-wide">
+
+      
+
+            
+    
+          
+            <li class="menu-item menu-item--collapsed">
+        <a href="/admission/first-year-admission" data-drupal-link-system-path="node/5713">First-Year</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/admission/transfer-admission" data-drupal-link-system-path="node/5788">Transfer</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/admission/graduate-admission" data-drupal-link-system-path="node/5778">Graduate</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/admission/readmission" data-drupal-link-system-path="node/9265">Readmission</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/admission/international-admission" data-drupal-link-system-path="node/5830">International</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/admission/veterans-program" data-drupal-link-system-path="node/5800">Veterans</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/admission/college-credit-plus" data-drupal-link-system-path="node/5836">College Credit Plus/Visiting</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/sefs/financing-jcu-education" data-drupal-link-system-path="node/9266">Financing a JCU Education</a> 
+              </li>
+              
+        
+    
+
+    </ul>
+  
+              </li>
+                
+            <li class="menu-item menu-item--expanded">
+        <a href="/academics" data-drupal-link-system-path="node/3175">Academics</a> 
+                                
+        
+                                  
+      
+      <ul  class="menu menu-wide">
+
+      
+
+            
+    
+          
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/resources-advising" submenustart="yes" data-drupal-link-system-path="node/5585">Resources &amp; Advising</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/beyond-classroom" data-drupal-link-system-path="node/4991">​Beyond the Classroom</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/colleges-departments" data-drupal-link-system-path="node/3176">Colleges &amp; Departments</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/grasselli-library" submenustart="yes" data-drupal-link-system-path="node/10187">Grasselli Library</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/program-finder" data-drupal-link-system-path="node/22">Degrees &amp; Programs</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/academics/internships" data-drupal-link-system-path="node/5914">Internships</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/service-learning" submenustart="yes" data-drupal-link-system-path="node/9863">Service Learning</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/academics/global-experiences" data-drupal-link-system-path="node/4785">Global Experiences</a> 
+              </li>
+              
+        
+    
+
+    </ul>
+  
+              </li>
+                
+            <li class="menu-item menu-item--expanded menu-item--active-trail">
+        <a href="/student-life" data-drupal-link-system-path="node/2126">Student Life</a> 
+                                
+        
+                                  
+      
+      <ul  class="menu menu-wide">
+
+      
+
+            
+    
+          
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/campus-ministry/about-us" data-drupal-link-system-path="node/10463">About Us</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed menu-item--active-trail">
+        <a href="/student-life/health-wellness-and-safety" data-drupal-link-system-path="node/3201">Health, Wellness, and Safety</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/welcome-campus-living" submenustart="yes" data-drupal-link-system-path="node/5177">Housing</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/campus-ministry/experiences-faith-and-worship" data-drupal-link-system-path="node/5148">Faith and Worship</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/getting-involved" data-drupal-link-system-path="node/3305">Getting Involved</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/campus-ministry/social-justice-initiatives" data-drupal-link-system-path="node/10438">Social Justice Initiatives</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/leadership-opportunities" submenustart="yes" data-drupal-link-system-path="node/3162">Leadership Opportunities</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="https://jcu.edu/academics/center-service-and-social-action" target="_blank">Service</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/career-services" submenustart="yes" data-drupal-link-system-path="node/44">Career Services</a> 
+              </li>
+                
+            <li class="menu-item">
+        <a href="/student-life/campus-ministry" data-drupal-link-system-path="node/10637">Campus Ministry</a> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <span>Student Resources</span> 
+              </li>
+                
+            <li class="menu-item menu-item--collapsed">
+        <a href="/student-life/campus-ministry/assessments" data-drupal-link-system-path="node/5231">Assessments</a> 
+              </li>
+              
+        
+    
+
+    </ul>
+  
+              </li>
+                
+            <li class="menu-item">
+        <a href="https://jcusports.com/index.aspx" target="_blank">Athletics</a> 
+              </li>
+                
+                
+              
+        
+    
+
+    </ul>
+  
+
+
+  </nav>
+
+
+                </div>
+            </div>
+            <div class="mobile-audience">
+                    <nav role="navigation"  id="block-topleft-2" class="block block-menu navigation menu--top-left">
+    
+              <ul class="menu">
+    
+                <li class="menu-item">
+        <a href="https://jcu.edu/admission" target="_blank">Prospective Students</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/student-life" data-drupal-link-system-path="node/2126">Current Students</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="https://banner.jcu.edu/" target="_blank">Banner Web</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs" data-drupal-link-system-path="node/9254">Student Financial Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://canvas.jcu.edu/login/ldap" target="_blank">Canvas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/registrar" data-drupal-link-system-path="node/5881">Registrar</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/welcome-campus-living" data-drupal-link-system-path="node/5177">Housing</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Explore Student Life Resources"  href="/student-life">Explore Student Life</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded menu-item--active-trail">
+        <a href="/parent-resources" data-drupal-link-system-path="node/9256">Parents</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item menu-item--active-trail">
+        <a href="/healthupdate" data-drupal-link-system-path="node/10100" class="is-active">Health Advisory: Coronavirus</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/health-wellness-and-safety" data-drupal-link-system-path="node/3201">Health, Wellness, &amp; Safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs" data-drupal-link-system-path="node/9254">Financial Aid</a>
+              </li>
+                <li class="menu-item">
+        <a href="/registrar/alumni-and-friends/parents" data-drupal-link-system-path="node/5938">FERPA</a>
+              </li>
+                <li class="menu-item">
+        <a href="/student-life/getting-involved" data-drupal-link-system-path="node/3305">Student Involvement Opportunities </a>
+              </li>
+                <li class="menu-item">
+        <a href="/sefs/tuition-and-billing/payment-options" data-drupal-link-system-path="node/5548">Make a Payment</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Learn more about resources for parents"  href="/parent-resources">Learn More</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/faculty-staff" data-drupal-link-system-path="node/9283">Faculty &amp; Staff</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="https://banner.jcu.edu/" target="_blank">Banner Web</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://canvas.jcu.edu/login/ldap" target="_blank">Canvas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/career-opportunities" data-drupal-link-system-path="node/5624">Career Opportunities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/benefits-wellness" data-drupal-link-system-path="node/5354">Benefits &amp; Wellness</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hr/policies" data-drupal-link-system-path="node/5750">Policies</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="More Resources for Faculty and Staff"  href="/faculty-staff">More Resources</a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/alumni" data-drupal-link-system-path="node/5253">Alumni</a>
+                                
+        
+                    
+            
+              
+      <ul  class="menu menu-wide menu-tight">
+
+      
+
+                    <li class="main-title">Popular Resources</li>
+      
+    
+                <li class="menu-item">
+        <a href="/events?aud=-1&amp;dep=86&amp;type=-1" data-drupal-link-query="{&quot;aud&quot;:&quot;-1&quot;,&quot;dep&quot;:&quot;86&quot;,&quot;type&quot;:&quot;-1&quot;}" data-drupal-link-system-path="node/43">Alumni Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/get-involved" data-drupal-link-system-path="node/5323">Get Involved</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/benefits-and-services/update-my-information" data-drupal-link-system-path="node/5317">Update Your Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/alumni-chapters-groups/alumni-chapters" data-drupal-link-system-path="node/10338">Alumni Chapters</a>
+              </li>
+                <li class="menu-item">
+        <a href="/alumni/benefits-and-services" data-drupal-link-system-path="node/5267">Benefits and Services</a>
+              </li>
+        
+             <li class="menu-button"><a  aria-label="Information for Alumni to Stay Connected"  href="/alumni">Stay Connected </a></li>
+    
+
+    
+    </ul>
+  
+              </li>
+        
+    
+
+    
+    </ul>
+  
+
+
+</nav>
+
+            </div>
+            <div class="mobile-bottom-menu">
+                <nav role="navigation"  id="block-topright-2" class="block block-menu navigation menu--top-right">
+            
+  <h3 class="visually-hidden" id="block-topright-2-menu">Top Right</h3>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/apply" data-drupal-link-system-path="node/6386">Apply</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visit-campus" data-drupal-link-system-path="node/6382">Visit</a>
+              </li>
+                <li class="menu-item">
+        <a href="/request-info" class="mobile-only" data-drupal-link-system-path="node/6388">Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/request-info" class="mobile-hidden" data-drupal-link-system-path="node/6388">Request  Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/give" data-drupal-link-system-path="node/3672">Give</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+                            </div>
+        </div>
+    </header>
+</div>
+   
+<section class="pageContainer ">
+    
+    <div class="block block-core block-page-title-block">
+  
+    
+      
+
+
+  </div>
+<div class="block block-system block-system-main-block">
+  
+    
+      <div class="sub-nav">
+	<div class="container">
+		<div class="block-region-submenu"><div class="sub-nav-tbl">
+  <div>
+    <p class="sub-menu-top">
+      <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center" submenustart="yes">Student Health and Wellness Center</a>
+    </p>
+  </div>
+  <div class="sub-menu-holder">
+      
+              <ul class="smenu">
+                    <li class="menu-item leaf active-trail">
+        <a href="/healthupdate" data-drupal-link-system-path="node/10100" class="is-active">Health Advisory: Coronavirus</a>
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/health-center-services" data-drupal-link-system-path="node/9726">Health Center Services</a>
+              </li>
+                <li class="menu-item leaf expanded">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/peer-health-advocates" data-drupal-link-system-path="node/3487">Peer Health Advocates</a>
+                                <ul class="smenu sub-menu">
+                    <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/peer-health-advocates/my" data-drupal-link-system-path="node/10330">My Quarantined Life</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/physical-well-being" data-drupal-link-system-path="node/3488">Physical Well-Being</a>
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/relationship-health" data-drupal-link-system-path="node/3489">Relationship Health</a>
+              </li>
+                <li class="menu-item leaf expanded">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/mental-health" data-drupal-link-system-path="node/3490">Mental Health</a>
+                                <ul class="smenu sub-menu">
+                    <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/mental-health/work" data-drupal-link-system-path="node/10118">Work in Progress</a>
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/mental-health/work-0" data-drupal-link-system-path="node/10225">Work in Progress Challenge</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/alcohol-and-other-drugs" data-drupal-link-system-path="node/3491">Alcohol and Other Drugs</a>
+              </li>
+                <li class="menu-item leaf">
+        <a href="/student-life/health-wellness-and-safety/student-health-and-wellness-center/resources" data-drupal-link-system-path="node/3494">Resources</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</div>
+</div>
+	</div>
+</div>
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="block-region-breadcrumbs"><div class="block block-system block-system-breadcrumb-block">
+  
+    
+      
+            
+                          <a class="home-page" href="/">John Carroll University</a>
+                    
+        <span>/</span>                  <a class="home-page" href="/student-life">Student Life</a>
+                    
+        <span>/</span>                  <a class="home-page" href="/student-life/health-wellness-and-safety">Health, Wellness, and Safety</a>
+                    
+        <span>/</span>                  <a class="home-page" href="/student-life/health-wellness-and-safety/student-health-and-wellness-center">Student Health and Wellness Center</a>
+                    
+        <span>/</span>                  <span class="current-page">Health Advisory: Coronavirus</span>
+            
+  </div>
+</div>
+	</div>
+</div>
+<div id="skip-to-main-content"></div>
+<div class="news-banner no-abstract no-banner-mob no-banner-tab">
+	<div class="container">
+    <div class="mob-news-banner no-banner"></div>
+    <div class="tab-dsk-news-banner no-banner"></div>
+		<div class="banner-copy no-abstract no-banner-mob no-banner-tab">
+			<div class="block-region-banner">
+            <div class="field field--name-field-subheadline field--type-string field--label-hidden field__item"><h4>COVID-19 (Coronavirus) FAQ, Campus Communications, and Resources</h4></div>
+      
+            <div class="field field--name-field-headline field--type-string field--label-hidden field__item"><h1>Health Advisory: Coronavirus</h1></div>
+      <div class="block block-custom-blocks block-banner-helper-block">
+  
+    
+      
+  </div>
+<div class="block block-custom-blocks block-banner-helper-block">
+  
+    
+      
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<div class="body-area">
+	<div class="container">
+    
+		<div class="block-region-bodytop"><div data-drupal-messages-fallback class="hidden"></div>
+</div>
+
+	</div>
+</div>
+
+<div class="block-region-content">
+      <div class="field field--name-field-body-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="ptype-video_with_caption_and_heading field__item">
+        
+        
+        
+                        
+    
+       
+
+   
+
+<div class="body-video with-large-copy">
+  <div class="container">
+    <a href="https://www.youtube.com/watch?v=qBQO0Akyjho" class="video-button video-iframe">
+      <span class="video-img">
+                        
+
+               <img src="/sites/default/files/styles/content_cta_video_image/public/2020-03/Screen%20Shot%202020-03-13%20at%202.40.17%20PM.png?itok=lOY0SEc-" width="1085" height="391" alt="dr. johnson in his office" typeof="foaf:Image" class="image-style-content-cta-video-image" />
+
+
+
+         
+  
+              </span>
+            <span class="video-copy">
+        <span class="bv-heading">Video: A Message from Dr. Johnson</span>        <span class="bv-copy">These are unprecedented times at John Carroll University. We will get through this together, as a community.
+                  </span>
+      </span>
+          </a>
+    <div id="video-play-7117" class="mfp-hide zoom-anim-dialog black-dialog-popup">
+        
+          </div>
+  </div>
+</div> </div>
+              <div class="ptype-body field__item">  <div class="paragraph paragraph--type--body paragraph--view-mode--default">
+          <div class="body-area">
+	<div class="container">
+					<h2>Campus Communications</h2>
+
+<p><strong>Fall 2020 Planning</strong></p>
+
+<p><a href="https://jcu.edu/news-center/john-carrolls-fall-academic-plan">John Carroll University Announces Fall Academic Plan</a></p>
+
+<p><strong>Student Resources</strong></p>
+
+<p><a href="/commencement">Commencement Updates</a><br /><a href="https://jcu.edu/graduate-students-pass-fail-april-7">Graduate Academic Update: Withdrawal and Pass/Fail</a><br /><a href="https://jcu.edu/pass-fail-memo-april-2">Undergraduate Academic Update: Pass/Fail, Withdrawals, Course Repeats Policies</a><br /><a href="https://jcu.edu/prorated-refunds-march-31">Housing, Dining, and Parking Refunds</a><br /><a href="https://jcu.edu/covid-19-student-resources">Academic, Spiritual, and Mental Health Needs</a><br /><span><span><span><span><span><a href="https://jcu.edu/student-life/welcome-campus-living/residence-life-covid-19">Residence Life: Updates for Residential Students</a></span></span></span></span></span></p>
+
+<p><strong>ITS Resources</strong></p>
+
+<p><a href="https://jcu.edu/its/services/resources/remote-technology">Remote Technology Instructions and ITS Service Desk</a></p>
+
+<p><strong>COVID-19 Task Force Updates</strong></p>
+
+<p><span><span><span><span><span><strong>April 3: </strong><a href="https://jcu.edu/covid-19-task-force-update-april-3">COVID-19 Update | Extension of Ohio's Stay at Home Order</a> <br /><strong>March 20: </strong><a href="https://jcu.edu/presidents-covid-19-message-parents">President's Message to JCU Families</a></span></span></span></span></span><br /><span><span><span><span><span><strong>March 20</strong>: <a href="https://jcu.edu/covid-19-task-force-update-march-20">COVID-19 Daily Update</a><br /><strong>March 20</strong>: <a href="https://jcu.edu/covid-19-treatment-and-care-guide">COVID-19: A Guide to Treatment and Care</a></span></span></span></span></span><br /><span><span><span><span><span><strong>March 16</strong>: <a href="https://jcu.edu/presidents-covid-19-update-march-16">President's Update | Extending Online Classes To End of Spring Semester</a><br /><strong>March 11</strong>: <a href="https://jcu.edu/covid-19-task-force-update-march-11">COVID-19 Daily Update</a></span></span></span></span></span><br /><strong>March 10: </strong><a href="/news-center/covid-19-presidents-update-jcu-transitions-online-classes">President’s Update | JCU Transitions to Online Classes</a><br /><span><span><span><span><span><strong>March 9: </strong><a href="/news-center/march-9-covid-19-update">COVID-19 Daily Update (Evening)</a><br /><strong>March 9: </strong></span></span></span></span></span><a href="/news-center/international-and-domestic-travel-updates-covid-19-coronavirus">COVID-19 Daily Update | International and Domestic Travel (Afternoon)</a><br /><strong>March 5</strong>: <a href="https://jcu.edu/president-formalizes-covid-19-task-force">President's Update | Announcing the COVID-19 Task Force</a><br /><span><span><span><strong><span><span>March 4: </span></span></strong></span></span></span><a href="https://jcu.edu/news-center/international-travel-updates-covid-19-coronavirus"><span><span><span><span><span><span>International Travel Updates, Advisories, and Restrictions</span></span></span></span></span></span></a><br /><span><span><span><strong><span><span>Feb. 28: </span></span></strong></span></span></span><span><span><span><span><span><span><a href="https://jcu.edu/news-center/health-reminders-prior-spring-break-covid-19-coronavirus">Health Reminders Prior to Spring Break</a> </span></span></span></span></span></span><br /><span><span><span><strong><span><span>Jan. 31: </span></span></strong></span></span></span><span><span><span><span><span><span><a href="https://jcu.edu/news-center/elevated-china-travel-advisories-covid-19-coronavirus">Elevated China Travel Advisories</a> </span></span></span></span></span></span><br /><span><span><span><strong><span><span>Jan. 30: </span></span></strong></span></span></span><a href="https://jcu.edu/news-center/covid-19-coronavirus-china-hygiene-reminders"><span><span><span><span><span><span>Coronavirus in China &amp; Hygiene Reminders</span></span></span></span></span></span></a></p>
+
+<p><strong><span><span><span><span><span><span>Additional Updates </span></span></span></span></span></span></strong></p>
+
+<p><span><span><span><span><span><strong>April 21: </strong><a href="https://jcu.edu/hr-faq-april-21-2020">Human Resources: Answers to Recent Questions</a><br /><strong>March 25</strong>: <a href="https://jcu.edu/updated-building-hours-march-25">Amended Access to Campus Buildings</a><br /><strong>March 20</strong>: <a href="https://jcu.edu/coronavirus-emergency-time-donation-bank">Human Resources: Emergency Time-Off Donation Bank</a><br /><strong>March 14</strong>: <a href="https://jcu.edu/academic-continuity-update-students-march-14">Academic Continuity Working Group: An Update for Students</a></span></span></span></span></span><br /><span><span><span><span><span><strong>March 12:</strong> <a href="https://jcusports.com/news/2020/3/12/fan-zone-official-statement-john-carroll-university-ohio-athletic-conference-announce-cancellation-of-spring-seasons.aspx">Athletics: Ohio Athletic Conference (OAC) Cancels Spring Season</a></span></span></span></span></span><br /><span><span><span><span><span><strong>March 12: </strong><a href="https://jcu.edu/jcu-staff-telecommuting-announcement">Human Resources: Staff Telecommuting Memo (Updated March 13)</a><br /><strong>March 12: </strong><a href="https://jcu.edu/staff-faq-telecommuting">Human Resources: Staff Telecommuting FAQ</a></span></span></span></span></span><br /><strong>March 12</strong>: <a href="https://jcu.edu/academic-continuity-update-students">Academic Continuity Working Group: An Update for Students</a><br /><span><span><span><span><span><strong>March 11: </strong><a href="https://jcu.edu/jcu-cancels-100-years-athletics-gala">Advancement: JCU Cancels 100 Years of Athletics Gala </a></span></span></span></span></span><br /><span><span><span><span><span><strong>March 10</strong>: <a href="https://jcu.edu/human-resources-recommendations-staff-supervisors">Human Resources: Recommendations for Staff Supervisors</a></span></span></span></span></span></p>
+
+<h2><span><span><span><span><span>COVID-19 (Coronavirus) FAQ</span></span></span></span></span></h2>
+			</div>
+</div>
+      </div>
+</div>
+              <div class="ptype-expanders field__item">  <div class="paragraph paragraph--type--expanders paragraph--view-mode--default">
+          
+<div  class="accordion">
+      
+<div  class="container">
+      
+      <div class="field field--name-field-expanders field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Are there any cases of Coronavirus on JCU’s campus?">Are there any cases of Coronavirus on JCU’s campus?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>There are presently no cases of Coronavirus on our campus.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Will JCU be conducting online classes for the remainder of the semester?">Will JCU be conducting online classes for the remainder of the semester?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>Yes, we made the difficult, but necessary decision to </span></span></span></span></span></span><a href="https://jcu.edu/presidents-covid-19-update-march-16"><span><span><span><span><span><u><span><span>extend our online learning through the end of the Spring semester</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>. We believe this is the necessary and prudent way to protect the health and safety of our community, and to limit the potential spread of COVID-19 on our campus and within our larger John Carroll Community.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Is John Carroll University open to the public?">Is John Carroll University open to the public?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>Our campus remains open, but all classes have transitioned to online learning. Residential students, with some very limited exceptions, have returned to their permanent addresses. Staff have been encouraged to telecommute, where possible. All campus events have been canceled through at least May 15. This date may be extended pending government or health agency restrictions. Recreational and intramural facilities are closed. </span></span></span></span></span></span><a href="https://jcu.edu/updated-building-hours-march-18"><span><span><span><span><span><u><span><span>The University’s buildings are currently open with truncated hours</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for I’m a member of the JCU community and I’m not feeling well. What do you recommend?">I’m a member of the JCU community and I’m not feeling well. What do you recommend?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>Contact a medical professional for advice. Please do not come to work or class while ill and avoid close contact with others. Unless you have traveled to a Level 3 country or have been exposed to someone who visited a Level 3 country who is feeling sick with symptoms of the novel coronavirus, you most likely have a cold, the flu or another virus. As always, call your health practitioner for guidance. If you have travelled to a Level 3 country or have been exposed to someone who visited a Level 3 country who is feeling sick with symptoms of the novel coronavirus, you should call your healthcare provider or hospital before going to any health care facility and indicate your travel or exposure history. We also request that you contact the Cuyahoga County Board of Health at 216-201-2000 and the Director of the JCU Student Health and Wellness Center at 216-397-4349.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for I’m a member of the JCU community and I’m feeling overwhelmed by all the news and information related to Coronavirus. What do you recommend?">I’m a member of the JCU community and I’m feeling overwhelmed by all the news and information related to Coronavirus. What do you recommend?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>If you are a student, please contact the University Counseling Center by calling 216-397-4283 or visit the office at 2567 South Belvoir. If you are feeling ill, please do not visit the Counseling Center. Instead, please contact the JCU Student Health and Wellness Center by phone so we can assess the proper steps to take and the best method for providing or referring you to assistance.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for What is the difference between self-quarantine and self-isolation?">What is the difference between self-quarantine and self-isolation?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>The U.S. Department of Health &amp; Human Services outlines the differences on its</span></span></span></span></span></span><a href="https://www.hhs.gov/answers/public-health-and-safety/what-is-the-difference-between-isolation-and-quarantine/index.html"><span><span><span><span><span><u><span><span> website</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><em><span>Quarantine</span></em></strong></span></span></span><span><span><span><span><span><span> is used to separate and restrict the movement of </span></span></span></span></span></span><span><span><span><strong><span><span>well</span></span></strong></span></span></span><span><span><span><span><span><span> persons who may have been exposed to a communicable disease to see if they become ill. These people may have been exposed to a disease and do not know it, or they may have the disease but do not show symptoms. Quarantine can also help limit the spread of communicable disease.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><em><span>Isolation</span></em></strong></span></span></span><span><span><span><span><span><span> is used to separate</span></span></span></span></span></span><span><span><span><strong><span><span> ill</span></span></strong></span></span></span><span><span><span><span><span><span> persons who have a communicable disease from those who are healthy. Isolation restricts the movement of ill persons to help stop the spread of certain diseases. </span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>Additional information on prevention of and precautions related to the spread of COVID-19 virus can be found on the</span></span></span></span></span></span><a href="https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html"><span><span><span><span><span><u><span><span> CDC website</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>. </span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Are you permitting students in current study abroad programs to continue studying abroad this semester?">Are you permitting students in current study abroad programs to continue studying abroad this semester?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>All Spring 2020 study abroad programs have been canceled.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Are JCU personnel permitted to travel abroad?">Are JCU personnel permitted to travel abroad?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>University-sponsored international travel for faculty, staff and students is on hold through August 1, 2020. We have also discouraged our faculty, staff and students from traveling for personal reasons to any areas that are currently on CDC or State Department Level 3 advisory lists.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Will you still host large University gatherings?">Will you still host large University gatherings?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>No. Events on campus are canceled through at least May 15. Attendees should contact event organizers with questions.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Will you host Commencement on May 16-17, 2020?">Will you host Commencement on May 16-17, 2020?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>No. Following the CDC’s recommendations to limit gatherings of more than 50 people for the next eight weeks, and in anticipation of any additional restrictions, we are not comfortable holding our Commencement Exercises as previously planned on May 16-17, 2020. We are investigating alternate dates and opportunities to celebrate the accomplishments of the Class of 2020 at John Carroll University.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for When can I move out of my Residence Hall?">When can I move out of my Residence Hall?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>We will not initiate any residence hall move outs until at least April 13. Residential students have received consistent updates via email, </span></span></span></span></span></span><a href="https://jcu.edu/student-life/welcome-campus-living/residence-life-covid-19"><span><span><span><span><span><u><span><span>all of which are available at the Residence Life webpage</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for I left something in my Residence Hall. How can I retrieve it?">I left something in my Residence Hall. How can I retrieve it?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>Please contact the Office of Residence Life at (216) 397-4408 or </span></span></span></span></span></span><a href="mailto:jcureslife@jcu.edu"><span><span><span><span><span><u><span><span>jcureslife@jcu.edu</span></span></u></span></span></span></span></span></a><span><span><span><span><span><span>.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Will I receive a prorated refund or credit for my Room and Board or meal plans?">Will I receive a prorated refund or credit for my Room and Board or meal plans?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>Yes, students who are eligible for a prorated refund or credit related to housing, dining, and parking received a communication on March 30 with details.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for How will information on COVID-19 be communicated?">How will information on COVID-19 be communicated?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><span><span><span>The University will send out notices to the campus community as appropriate. In addition, there is a link to this page on the JCU homepage.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+              <div class="acc-item">  <div class="paragraph paragraph--type--expander paragraph--view-mode--default">
+          
+
+              <button class="acc-heading" aria-label="Expand Content for Who can I contact with questions?">Who can I contact with questions?</button>
+       
+
+
+              <div class="acc-content clearfix"><p><span><span><span><strong><span><span>For Media Inquiries:</span></span></strong></span></span></span><span><span><span><span><span><span> Please contact Mike Scanlan, Executive Director of Strategic Communications, at mscanlan@jcu.edu or 216-397-1596.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span>For Health-Related Questions:</span></span></strong></span></span></span><span><span><span><span><span><span> Please contact Jan Krevh, R.N., B.S.N., Director of the JCU Student Health and Wellness Center, at jkrevh@jcu.edu or 216-397-4349.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span>For Academic-Related Questions:</span></span></strong></span></span></span><span><span><span><span><span><span> Please contact Jim Krukones, Associate Academic Vice President, at jkrukones@jcu.edu or 216-397-4762.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span>For Human Resources Questions: </span></span></strong></span></span></span><span><span><span><span><span><span>Please contact Jen Rick, Assistant Vice President of Human Resources, at jrick@jcu.edu or 216-397-1905.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span>For Student Affairs Questions (Student Activities, Residence Halls, etc.)</span></span></strong></span></span></span><span><span><span><span><span><span>: Please contact Mark McCarthy, Vice President for Student Affairs, at mmccarthy@jcu.edu or 216-397-4214.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span>For General Questions:</span></span></strong></span></span></span><span><span><span><span><span><span> Please contact Garry Homany, Director of Regulatory Affairs/Risk Management at ghomany@jcu.edu or 216-397-1982.</span></span></span></span></span></span></p></div>
+       
+
+      </div>
+</div>
+          </div>
+  
+  </div>
+
+  </div>
+
+      </div>
+</div>
+              <div class="ptype-body field__item">  <div class="paragraph paragraph--type--body paragraph--view-mode--default">
+          <div class="body-area">
+	<div class="container">
+					<h2><span><span><span><span><span>General Resources</span></span></span></span></span></h2>
+
+<p><span><span><span><span><span><span>Centers for Disease Control and Prevention (CDC) - Coronavirus Resources &amp; Updates</span></span></span></span></span></span><br /><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html"><span><span><span><span><span><u><span><span>https://www.cdc.gov/coronavirus/2019-ncov/index.html</span></span></u></span></span></span></span></span></a></p>
+
+<p><span><span><span><span><span><span>World Health Organization (WHO) - Coronavirus Resources &amp; Updates</span></span></span></span></span></span><br /><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"><span><span><span><span><span><u><span><span>https://www.who.int/emergencies/diseases/novel-coronavirus-2019</span></span></u></span></span></span></span></span></a></p>
+
+<p><span><span><span><span><span><span>Cuyahoga County Board of Health (CCBH) - Coronavirus Resources &amp; Updates</span></span></span></span></span></span><br /><a href="https://www.ccbh.net/coronavirus/"><span><span><span><span><span><u><span><span>https://www.ccbh.net/coronavirus/</span></span></u></span></span></span></span></span></a></p>
+
+<p> </p>
+			</div>
+</div>
+      </div>
+</div>
+              <div class="ptype-body field__item">  <div class="paragraph paragraph--type--body paragraph--view-mode--default">
+          <div class="body-area">
+	<div class="container">
+					<h2 id="question">Submit a Question</h2>
+
+<p>If your question has not been addressed above, please submit it using the form below. Due to the nature or volume of inquiries, we may not respond to all submissions. Thank you for your understanding.</p>
+			</div>
+</div>
+      </div>
+</div>
+              <div class="ptype-contact_form field__item">  <div class="paragraph paragraph--type--contact-form paragraph--view-mode--default">
+          
+            <div class="field field--name-field-contact-form field--type-webform field--label-hidden field__item"><form class="webform-submission-form webform-submission-add-form webform-submission-coronavirus-submit-a-question-form webform-submission-coronavirus-submit-a-question-add-form webform-submission-coronavirus-submit-a-question-paragraph-15211-form webform-submission-coronavirus-submit-a-question-paragraph-15211-add-form js-webform-details-toggle webform-details-toggle" data-drupal-selector="webform-submission-coronavirus-submit-a-question-paragraph-15211-add-form" data-msg-required="This field is required." action="/healthupdate" method="post" id="webform-submission-coronavirus-submit-a-question-paragraph-15211-add-form" accept-charset="UTF-8">
+  
+  <fieldset data-drupal-selector="edit-name" data-msg-required="Name is required." id="edit-name--wrapper" class="webform-name--wrapper fieldgroup form-composite webform-composite-hidden-title js-webform-type-webform-name webform-type-webform-name js-form-item form-item js-form-wrapper form-wrapper">
+      <legend>
+    <span class="visually-hidden fieldset-legend">Name</span>
+  </legend>
+  <div class="fieldset-wrapper">
+              <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name-first form-item-name-first">
+        <label for="edit-name-first">First name</label>
+    
+        <input data-drupal-selector="edit-name-first" data-msg-maxlength="First name field has a maximum length of 255." data-msg-required="First name is required." type="text" id="edit-name-first" name="name[first]" value="" size="60" maxlength="255" class="form-text" />
+
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name-last form-item-name-last">
+        <label for="edit-name-last">Last name</label>
+    
+        <input data-drupal-selector="edit-name-last" data-msg-maxlength="Last name field has a maximum length of 255." data-msg-required="Last name is required." type="text" id="edit-name-last" name="name[last]" value="" size="60" maxlength="255" class="form-text" />
+
+        </div>
+
+
+          </div>
+</fieldset>
+<div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+        <label for="edit-email" class="js-form-required form-required">Email</label>
+    
+        <input data-drupal-selector="edit-email" data-msg-maxlength="Email field has a maximum length of 254." data-msg-email="Email does not contain a valid email." data-msg-required="Email is required." type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+<div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-question form-item-question">
+        <label for="edit-question" class="js-form-required form-required">Question</label>
+    
+        <div class="form-textarea-wrapper">
+  <textarea data-drupal-selector="edit-question" data-msg-required="Question is required." id="edit-question" name="question" rows="5" cols="60" class="form-textarea required resize-vertical" required="required" aria-required="true"></textarea>
+</div>
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-xmunlnovlttidudv3qgw-gr4p36wbyr03-ywrtydbno" data-msg-required="This field is required." type="hidden" name="form_build_id" value="form-XmunLnOVlTTiDuDV3qgW-Gr4P36WbYR03-ywRtyDBNo" />
+<input data-drupal-selector="edit-webform-submission-coronavirus-submit-a-question-paragraph-15211-add-form" data-msg-required="This field is required." type="hidden" name="form_id" value="webform_submission_coronavirus_submit_a_question_paragraph_15211_add_form" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" data-msg-required="This field is required." id="edit-actions"><input class="webform-button--submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" data-msg-required="This field is required." type="submit" id="edit-submit" name="op" value="Submit" />
+
+</div>
+
+
+  
+</form>
+</div>
+      
+      </div>
+</div>
+          </div>
+  </div>
+
+
+  </div>
+
+    
+</section>    
+<footer>
+		<div class="f-wrapper">
+                            <div class="f-top">
+                    <div class="ft-wrapper clearfix">
+                        <div class="ft-left">
+                            <p class="footer-logo"><a href="/"><img alt="JCU Edu" src="/themes/upward/images/svg/footer-logo.svg"></a></p>
+                            <div class="ft-left-wrapper clearfix">
+                                <nav role="navigation"  id="block-upward-footer" class="block block-menu navigation menu--footer">
+      
+  <h4>1 John Carroll Boulevard, University Heights, Ohio 44118</h4>
+  
+
+        
+              <ul class="menu">
+    
+                <li class="menu-item">
+        <a href="/campus-maps" data-drupal-link-system-path="node/6041">Campus Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://jcu.peopleadmin.com/" target="_blank">Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/policies-and-disclosures" data-drupal-link-system-path="node/6167">Policies</a>
+              </li>
+                <li class="menu-item">
+        <a href="/web-accessibility-statement">Web Accessibility</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
+              </li>
+        
+    
+
+    
+    </ul>
+  
+
+
+  </nav>
+
+                            </div>
+                        </div>
+                        <div class="ft-right">
+                            <div class="block block-custom-blocks block-footer-social-block">
+  
+    
+      	<ul class="ft-links">
+					<li><a href="https://www.facebook.com/JCU1886" target="_blank"><img alt="Facebook Link" src="/sites/default/files/2018-08/facebook.svg"></a></li>
+					<li><a href="https://twitter.com/johncarrollu" target="_blank"><img alt="Twitter Link" src="/sites/default/files/2018-08/twitter.svg"></a></li>
+					<li><a href="https://www.instagram.com/johncarrollu/" target="_blank"><img alt="Instagram Link" src="/sites/default/files/2019-09/instagram.png"></a></li>
+					<li><a href="https://www.youtube.com/user/JohnCarrollU" target="_blank"><img alt="Youtube Link" src="/sites/default/files/2018-08/youtube.svg"></a></li>
+			</ul>
+
+  </div>
+
+                        </div>                    
+                    </div>
+                </div>
+                
+                        <div class="footer-copy">
+                <div class="block block-block-content block-block-contenta72d4d3c-f2bf-47d1-924e-3e8b2c551b49">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Copyright John Carroll University 2020</p></div>
+      
+  </div>
+
+            </div>
+                        
+        </div>
+ </footer>
+ 
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/10100","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":".tab-content a","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"container","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast"}}},"user":{"uid":0,"permissionsHash":"1c503568953e9dc59998035e950e06d408bfd834349c7ffb0e19f2797645834e"}}</script>
+<script src="/sites/default/files/js/js_JJcgwM-UH2FtAzgDOSW8Uvfqi7BKrK9TjhBRkIpeQcE.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="/sites/default/files/js/js_FJkatqrKUAOW9wGX57RLGmRP7HOB8CKjTf3tlFXtAbQ.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,600,700" rel="stylesheet"> 
+
+<script>
+      (function(d) {
+        var config = {
+          kitId: 'kjl3myw',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d1a4d7cbd5","applicationID":"368085321","transactionName":"MVxSZkdTChVTARIKWwgWcVFBWwsIHRIHBFE5WlFRXVc=","queueTime":0,"applicationTime":26,"atts":"HRtREA9JGRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

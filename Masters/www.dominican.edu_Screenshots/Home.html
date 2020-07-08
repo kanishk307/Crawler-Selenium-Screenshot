@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-ce14a7cff8f815c3e31",applicationID:"448229765"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><meta name="title" content="COVID-19 Updates and Resources | Dominican University of California" />
+<link rel="canonical" href="https://www.dominican.edu/covid19" />
+<meta name="description" content="Here you will find the latest information on Dominican University&#039;s prevention and response efforts related to novel coronavirus disease (COVID-19). " />
+<meta property="og:url" content="https://www.dominican.edu/covid19" />
+<meta property="og:title" content="COVID-19 Updates and Resources" />
+<meta property="og:description" content="Here you will find the latest information on Dominican University&#039;s prevention and response efforts related to novel coronavirus disease (COVID-19). " />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #0779bf} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="revision" href="https://www.dominican.edu/covid19" />
+
+    <title>COVID-19 Updates and Resources | Dominican University of California</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_za8zHQkxJBDlbdadMiTkXgnmxehshPpDVjGOn1OepPY.css" />
+<link rel="stylesheet" media="all" href="https://use.typekit.net/vth8hab.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_S9K6NDwkQHtbFXBr7Sfhp4JDkk3qbumfL0uWbiVfL_k.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="32x32"
+          href="/themes/custom/dominican/assets/favicons/fav-32.png">
+    <link rel="apple-touch-icon-precomposed" sizes="140x140"
+          href="/themes/custom/dominican/assets/favicons/fav-140.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="/themes/custom/dominican/assets/favicons/fav-152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192"
+          href="/themes/custom/dominican/assets/favicons/fav-192.png">
+    <link rel="shortcut icon" href="/themes/custom/dominican/assets/favicons/favicon.ico?v=2" type="image/ico">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W9N6RVL');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9N6RVL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="skip-link">
+      <a href="#main-menu" class="element-focusable">Skip to main site navigation</a>
+      <a href="#main-content" class="element-focusable">Skip to main content</a>
+    </div>
+
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<div class="page page--page">
+
+  <div id="alert-wrapper"></div>
+
+
+  <div class="rave-alert-wrapper" data-type=""></div>
+
+
+      <div class="system-region">
+      <div class="grid-container">
+        <div class="system-messages">
+          <div data-drupal-messages-fallback class="hidden"></div>
+
+
+        </div>
+      </div>
+    </div>
+  
+  <header class="site-header">
+    <div class='site-header__sticky-container'>
+      <div class="grid-container">
+        <nav role="navigation" class="cta-menu" data-item-open-text="Open the %s menu" data-item-close-text="Close the %s menu">
+  
+              <ul class="menu">
+              <li class="li--level-one">
+        <a href="/admissions/request-information" data-drupal-link-system-path="node/637">Request Info</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/admissions/visit-and-tour" data-drupal-link-system-path="node/137">Visit</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/admissions/apply-now" data-drupal-link-system-path="node/421">Apply</a>
+              </li>
+        </ul>
+  
+
+
+</nav>
+
+
+        <a class="site-header__logo" href="/">
+          <img width="153" height="50" src="/themes/custom/dominican/assets/img/logo-black.svg"
+               alt="Dominican University of California Logo">
+        </a>
+        <div class="site-search">
+  <button class="site-search__toggle" data-button-open-text="Open the search panel"
+          data-button-close-text="Close the search panel" data-button-enable-at="0"
+          data-button-open-class="search-panel-open">
+    <span class="show-for-sr"></span>
+  </button>
+      <form class="search-block-form" data-drupal-selector="oho-university-search-api-form-2" action="/covid19" method="post" id="oho-university-search-api-form--2" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys--2" class="visually-hidden">Search</label>
+        <input placeholder="Search by Keyword or Name" data-drupal-selector="edit-keys" type="text" id="edit-keys--2" name="keys" value="" size="60" maxlength="128" class="form-text" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-imzkrkchgqjwtpsqbdguvprf4l9mbmu-4on8u6qcgte" type="hidden" name="form_build_id" value="form-IMZKrkcHgqjWTpSQBdGuvPRf4L9MBMU_4On8U6qcGTE" />
+<input data-drupal-selector="edit-oho-university-search-api-form-2" type="hidden" name="form_id" value="oho_university_search_api_form" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Go" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+
+
+        <button class="mobile-menu-button" data-button-open-class-element="body" data-button-text-element="span" data-button-open-text="MENU" data-button-close-text="CLOSE MENU" data-button-enable-at="0" data-button-open-class="mobile-menu-open">
+          <span></span>
+        </button>
+        <div class="site-header__main">
+          <div class="site-header__bottom">
+            <nav id="main-menu" class="main-menu accessible-menu" data-item-open-text="Open the %s menu" data-item-close-text="Close the %s menu">
+  
+              <ul class="menu">
+              <li class="menu-item--expanded li--level-one">
+        <a href="/academics" title="Academics" data-drupal-link-system-path="node/5">Academics</a>
+                                <ul class="menu">
+              <li class="li--level-two">
+        <a href="/academics/dominican-experience" data-drupal-link-system-path="node/38">The Dominican Experience</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/undergraduate-programs" data-drupal-link-system-path="node/61">Undergraduate Majors and Programs</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/graduate-programs" data-drupal-link-system-path="node/62">Graduate Programs</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/adult-and-continuing-education" data-drupal-link-system-path="node/509">Adult and Continuing Education</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/schools" title="Schools" data-drupal-link-system-path="node/77">Schools</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/archbishop-alemany-library" data-drupal-link-system-path="node/430">The Archbishop Alemany Library</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/engaged-learning" title="Engaged Learning" data-drupal-link-system-path="node/706">Engaged Learning</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/academics/academic-calendar" data-drupal-link-system-path="node/406">Academic Calendar</a>
+              </li>
+          <li class="li--level-two">
+        <a href="https://www.dominican.edu/directory/registrar" rel="noopener">Registrar</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/academics/free-summer-courses" data-drupal-link-system-path="node/1338">Free Summer Courses</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="menu-item--expanded li--level-one">
+        <a href="/admissions" title="Admissions and Aid" data-drupal-link-system-path="node/6">Admissions and Aid</a>
+                                <ul class="menu">
+              <li class="li--level-two">
+        <a href="/admissions/apply-now" title="Apply Now" data-drupal-link-system-path="node/421">Apply Now</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/admissions/undergraduate-first-year-admissions" title="Undergraduate First-Year Admissions" data-drupal-link-system-path="node/422">Undergraduate First-Year Admissions</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/admissions/transfer-admissions" data-drupal-link-system-path="node/426">Transfer Admissions</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/admissions/visit-and-tour" data-drupal-link-system-path="node/137">Visit and Tour</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/academics/adult-and-continuing-education/adult-degree-completion" data-drupal-link-system-path="node/705">Adult Degree Completion Admissions</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/admissions/graduate-admissions" data-drupal-link-system-path="node/437">Graduate Admissions</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/admissions/international-admissions" data-drupal-link-system-path="node/440">International Admissions</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/admissions/tuition-and-financial-aid" data-drupal-link-system-path="node/638">Tuition and Financial Aid</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/admissions/request-information" data-drupal-link-system-path="node/637">Request Information</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="menu-item--expanded li--level-one">
+        <a href="/campus-life" data-drupal-link-system-path="node/7">Campus Life</a>
+                                <ul class="menu">
+              <li class="menu-item--collapsed li--level-two">
+        <a href="/campus-life/living-campus" data-drupal-link-system-path="node/370">Living on Campus</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/campus-life/athletics" data-drupal-link-system-path="node/373">Athletics</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/campus-life/getting-involved" data-drupal-link-system-path="node/374">Getting Involved</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/campus-life/student-services-and-resources" data-drupal-link-system-path="node/389">Student Services and Resources</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/campus-life/health-and-wellness" data-drupal-link-system-path="node/415">Health and Wellness</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/campus-life/student-handbook-and-policies" data-drupal-link-system-path="node/420">Student Handbook and Policies</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="menu-item--expanded menu-item--active-trail li--level-one">
+        <a href="/about" data-drupal-link-system-path="node/625">About</a>
+                                <ul class="menu">
+              <li class="li--level-two">
+        <a href="/about/our-campus" data-drupal-link-system-path="node/369">Our Campus</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/glance" title="Facts, figures and major accomplishments" data-drupal-link-system-path="node/336">At a Glance</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/diversity" data-drupal-link-system-path="node/379">Diversity</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/about/leadership" title="Leaders of the University" data-drupal-link-system-path="node/344">Leadership</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/about/dominican-mission-and-history" data-drupal-link-system-path="node/644">Dominican Mission and History</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/about/student-success-and-institutional-effectiveness" data-drupal-link-system-path="node/380">Student Success and Institutional Effectiveness</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/policies-and-procedures" data-drupal-link-system-path="node/382">Policies and Procedures</a>
+              </li>
+          <li class="menu-item--collapsed menu-item--active-trail li--level-two">
+        <a href="/about/safety-and-emergency-information" data-drupal-link-system-path="node/383">Safety and Emergency Information</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/campus-and-venue-rentals" data-drupal-link-system-path="node/361">Campus and Venue Rentals</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/commencement" data-drupal-link-system-path="node/1316">Commencement</a>
+              </li>
+          <li class="menu-item--collapsed li--level-two">
+        <a href="/about/summer-camps" data-drupal-link-system-path="node/364">Summer Camps</a>
+              </li>
+          <li class="li--level-two">
+        <a href="/about/maps-directions-and-contact" data-drupal-link-system-path="node/366">Maps, Directions and Contact</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+</nav>
+<nav id="utlity-menu" class="utility-menu">
+  
+              <ul class="menu">
+              <li class="menu-item--collapsed li--level-one">
+        <a href="/directory-people" data-drupal-link-system-path="node/93">Directory</a>
+              </li>
+          <li class="menu-item--collapsed li--level-one">
+        <a href="/news" data-drupal-link-system-path="node/13">News</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/admissions/visit-and-tour" title="Visit and Tour" data-drupal-link-system-path="node/137">Visit</a>
+              </li>
+        </ul>
+  
+
+
+</nav>
+
+
+            <div class="ancillary-menus">
+              <nav id="audience-menu" class="audience-menu accessible-menu" data-item-open-text="Open the %s menu" data-item-close-text="Close the %s menu">
+  <ul class="menu">
+    <li class="menu-item--expanded">
+      <span class="">Resources For</span>
+      
+              <ul class="menu">
+              <li class="menu-item--collapsed li--level-one">
+        <a href="/alumni" data-drupal-link-system-path="node/1139">Alumni</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/admitted-students" title="Resources for newly admitted Dominican students" data-drupal-link-system-path="node/432">Admitted Students</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/current-students" data-drupal-link-system-path="node/1171">Current Students</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/parents-and-family-0" data-drupal-link-system-path="node/425">Parents and Family</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/counselors-0" data-drupal-link-system-path="node/424">Counselors</a>
+              </li>
+          <li class="menu-item--collapsed li--level-one">
+        <a href="/faculty-and-staff" data-drupal-link-system-path="node/67">Faculty and Staff</a>
+              </li>
+        </ul>
+  
+
+
+    </li>
+  </ul>
+</nav>
+<nav id="additional-menu" class="resources-menu additional-menu" data-item-open-text="Open the %s menu" data-item-close-text="Close the %s menu">
+            <ul class="menu">
+              <li>
+            <a href="/alumni">Alumni</a>
+
+        </li>
+              <li>
+            <a href="https://www.dominican.edu/directory/office-advancement-and-alumni-engagement/giving" rel="noopener">Give</a>
+
+        </li>
+          </ul>
+  
+</nav>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div>
+  
+    
+      
+  </div>
+
+
+
+  <div class="page-wrapper">
+    <main id="main-content" class="main-content">
+      
+      
+<section class="hero section--global-spacing hero--no-img">
+  <div class="hero__content">
+    <div class='grid-container'>
+      <div class="hero__content__inner">
+                  <h1>COVID-19 Updates and Resources</h1>
+                                  <div class='intro-text serif'><p>Here you will find the latest information on Dominican University's prevention and response efforts related to novel coronavirus disease (COVID-19). </p></div>
+                      </div>
+    </div>
+  </div>
+
+  
+  </section>
+
+
+<section class='section--page-content global-padding--white'>
+  <div class='grid-container'>
+        <div class="grid-x grid-margin-x global-spacing--default">
+              <div class="cell medium-3">
+          <nav class="sidebar-menu accessible-menu sidebar-menu--border-levels" data-menu-open-text="Open the %s submenu" data-menu-close-text="Close the %s submenu">
+  <button class="sidebar-menu__toggle" data-button-open-text="Click to expose navigation links on mobile" data-button-close-text="Click to hide navigation links on mobile" data-button-open-class="sidebar-menu-open" data-button-disable-at="769">
+    More In This Section
+    <span class="show-for-sr">Click to expose navigation links on mobile</span>
+  </button>
+  <div class="sidebar-menu__container">
+    <nav>
+            <h3>
+              <a href="/about/safety-and-emergency-information/campus-safety-and-health-messages">Campus Safety and Health Messages</a>
+            </h3>
+      
+  
+              <ul class="menu">
+              <li class="menu-item--active-trail li--level-one">
+        <a href="/covid19" data-drupal-link-system-path="node/1210" class="is-active">COVID-19 Updates and Resources</a>
+              </li>
+        </ul>
+  
+
+
+</nav>
+
+  </div>
+</nav>        </div>
+      
+      <div class="cell medium-auto">
+        <article class="basic-page">
+          
+
+          <section class="clearfix wysiwyg">
+            <p><em style="font-size: 1.25rem;">Dominican President Mary B. Marcy issued the following statement on Monday, June 15.</em></p>
+
+<p>Dear Dominican Students and Families:<br />
+ <br />
+This spring, our faculty quickly adapted to delivering their courses online while retaining that important Dominican commitment to creating a community of learners. They maintained meaningful online interactions with students through Zoom, providing content through lectures and then context for that content through smaller discussion groups. They worked with community partners to ensure many clinical, internship, and service-learning placements were able to continue through the semester. Our staff ensured that support systems and business operations continued without interruption. It was intense, complex, unprecedented — all the things that you hear about. I’m proud that we pulled it off, and did so with real quality.</p>
+
+<p>As we look ahead to the fall, we are incorporating the best of what we learned from the spring semester, while anticipating the return of our students, faculty and staff. We look forward to the vibrancy and vitality that comes with the gathering of our Dominican community. </p>
+
+<p>This academic year will look very different. We will ensure continuity of education, even as we are proactive in protecting the health and safety of the entire campus community. We will remain agile and responsive, building into our plans the ability to integrate instructional best practices with the flexibility of interacting remotely as needed. Currently, our Fall Strategy Team and its four working groups are developing a comprehensive plan for the 2020-2021 academic year. With physical distancing recommendations likely to remain in place for the foreseeable future, we are leveraging our small size to make decisions based on research, advice, and regulatory protocols from state and county health officials.</p>
+
+<p>The comprehensive plan developed by the Fall Strategy Team will be completed in early July and more detailed information will be provided then. Meanwhile, I am pleased to share the following updates. </p>
+
+<h2>Health And Safety</h2>
+
+<p>The pandemic will not end for some time, and so we must develop new practices that embrace a fundamental shift in our operations. The health and safety of students, faculty, staff, and visitors on campus will be integrated into all of our interactions and protocols. We are working closely with Marin Health and Human Services to ensure that our planned operations are congruent with their guidance and suggested best practices. Additionally, our own experts on campus in the Student Health Center and the Global Public Health program are playing an integral role in guiding us as we shape and implement new practices.</p>
+
+<p>Students can expect changes with the return to campus, including physical distancing requirements, health self-assessments, the use of face coverings, enhanced cleaning, and partitions where appropriate. We will provide education and training to all members of our campus community, realizing that individual responsibility and good judgment will be as important on campus as they are in our homes and daily lives.</p>
+
+<p>Even with the measures we take, there will be cases of infection on campus, just as there will be in the larger world. We will have procedures for self-isolation and quarantine in place by the time fall semester begins. We are engaged in discussions with leading health experts about the importance of testing, and are defining how regular screening could be implemented on campus. We will need cooperation from everyone to reduce risks.</p>
+
+<h2>Academic Excellence And The Dominican Experience</h2>
+
+<p>Our dedicated faculty are developing a full range of flexible and engaging curriculum delivery options to ensure the best possible experience for our students. Our primary emphasis will be on individualized, personal interactions, while we remain adaptable to meet public health measures.</p>
+
+<p>We are excited about embracing a variety of innovative approaches that can be delivered online, in a hybrid model, or in-person. These approaches include the flipped classroom model, which will feature small group and tutorial style meetings enhanced by online readings and assignments. We will broadly employ high quality hybrid approaches to accommodate safety guidelines, particularly those for students whose health conditions prevent a return to the classroom or who may need to self-isolate. We will also offer courses online due to physical distancing and space limitations.</p>
+
+<p>Regardless of the method of delivery, <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="9a078cc7-b366-4d3d-9c56-448f1fc8a2e4" href="/academics/dominican-experience" title="The Dominican Experience">The Dominican Experience</a> will not diminish. This relationship-driven, individualized education will continue. Our network of integrative coaches and faculty mentors will remain focused on the success of every student.</p>
+
+<h2>Classrooms And Campus Facilities</h2>
+
+<p>We have evaluated every campus facility, including classrooms, labs, and common spaces. This summer we are making changes to our facilities by installing signs and marking spaces to reinforce the importance of physical distancing. Dominican already offers small class sizes; we also are getting creative when planning to use our spacious campus. In the fall, some of our classrooms will be indoors or online while some will move outdoors so that we can take advantage of our mild Northern California climate. Imagine learning under the redwoods or in a secluded grove next to the creek.</p>
+
+<h2>Campus Housing</h2>
+
+<p>We are preparing our residence halls and townhouses for the appropriate protocols that will be implemented within the facilities. Our planning is guided at every point by consideration for the health and safety of our students, our campus community, and our region. We have reserved a number of private, single rooms for individuals should the need for self-isolation or quarantine be necessary for a campus resident.</p>
+
+<h2>Campus Dining</h2>
+
+<p>Caleruega dining hall and Chilly’s Café will operate differently when we return. Our chefs will continue to customize our menus for a variety of serving options, with the understanding that tasty and nutritious food is crucial for well-being. In addition to implementing physically distant dining and increasing the frequency of sanitizing, campus dining is developing pre-order and contactless payment options, as well as more grab-and-go items.<br />
+<br />
+Seeing beyond the medical and social crises of this historical moment is not without challenge. Adapting to our current reality requires extensive coordination, careful thought, and informed action in today’s uncertain environment. Our Dominican community, marked by intellectual engagement, kindness, respect, and an enduring commitment to the thriving of each of its members, can help us move beyond this moment. Together, we will study and reflect so that we can reimagine a stronger, more equitable and healthy world. Let us continue this work together.</p>
+
+<p> </p>
+
+<p>Sincerely,<br />
+<img alt="Mary B. Marcy signature" height="66" src="https://ci6.googleusercontent.com/proxy/mgttmQMvQ6FK5UdjIOt0MGkjP8z4XsDkjpClR8JS0SE7UHdAb0jfgHHOO0VBgI5ctz4Zd3xhg5bwaUsq8wu_QyAPgWWnxWTrfjuTQ4JcqUDgokErrt_hrsQflbcgqLZukL4P0isVHtURv66WxIoWozByymbLfNknAiyr8Q50DoVCCfr9rX6gTCIv2_8=s0-d-e1-ft#https://mx.technolutions.net/proxy/tEEcZf7IAU31HPwCL_pn1biYafeQoMpMKdj-jkQfGbNqykAaCINNs-Bb-N43V9GpKFl26w0CfLU5FSaCD43epw" width="150" /><br />
+Mary B. Marcy<br />
+President</p>
+
+<p dir="ltr"> </p>
+
+<hr />
+<h3><strong>Previous COVID-19 Messaging</strong></h3>
+
+<p><strong>Here you will find an archive of all messages that have been distributed that relate to Dominican's response to COVID-19. </strong></p>
+
+<p><br />
+<em style="font-size: 1.25rem;">Dominican President Mary B. Marcy issued the following statement on Wednesday, May 20</em></p>
+
+<p dir="ltr">Dear Students and Families:</p>
+
+<p dir="ltr">Congratulations on working with great focus and diligence through a spring semester like no other. In these extraordinary times, the value of a personalized education has never been more evident, or more urgent. This past semester our campus community has done a tremendous job working remotely. Our online and remote work did not lessen the value of our mission. </p>
+
+<p dir="ltr">However, one thing became abundantly clear: You miss working with faculty in the classroom. You miss each other. And, our faculty really miss the one-on-one interaction with their students. Technology can enhance our classes — and there is much we plan to do to further integrate the latest technology into student learning — but technology cannot replace our close-knit, on-campus residential community. </p>
+
+<p dir="ltr">In a time of unprecedented change and uncertainty, I want you to be certain of one thing: We are here for you. The essence of <a href="https://www.dominican.edu/academics/dominican-experience">The Dominican Experience</a> is that students have a rich array of experiences inside and outside the classroom. Our network of mentors and advisors remain ready to support you from through commencement and beyond. Our faculty remain ready to inspire you to embark on a journey of research and scholarship. Our community partners remain ready to engage with you — and to help you become true leaders. </p>
+
+<h2 dir="ltr"><strong>Fall 2020</strong></h2>
+
+<p dir="ltr">We intend to welcome students to campus and conduct in-person courses this fall, state and county orders permitting. Our mission, as embodied by The Dominican Experience, will not change.  We will adjust how we deliver that education based on research, advice from local, state and national public health experts, and our own internal expertise. That means some things will look different as we adapt to evolving public health protocols, but the close-knit community and sense of engagement will not change. It is simply in Dominican’s DNA to create such a learning environment. We are fortunate that our beautiful, spacious campus grounds allow for community even as we employ best public health protocols. Our relatively small size means there are almost no large classes in our curriculum, and allows us to be nimble in tackling current and prospective issues as they arise.</p>
+
+<p dir="ltr">We are working closely with the Marin County Public Health Officer and the Marin County Office of Education as we plan for the upcoming academic year.</p>
+
+<p dir="ltr">I have appointed a cross-functional task force to develop a comprehensive plan for preparing the campus for fall 2020. Its members will be responsible for developing strategies that will enable us to remain flexible while continuing our work and learning. Fortunately, these efforts will not be as difficult for us compared with large schools or those in denser urban areas.</p>
+
+<p dir="ltr">The team will also assess technology, training, policy, and infrastructure needed to offer our high-impact learning experiences in hybrid or remote delivery contexts if necessary.  We will ensure that students have equitable access to learning in any scenario.</p>
+
+<h2 dir="ltr"><strong>Campus Housing</strong></h2>
+
+<p dir="ltr">We anticipate opening our residence halls and townhouses for occupancy in the fall. We are planning for each facet of student life, including securing additional student housing within Marin County. Our planning is guided at every point by consideration for the health and safety of our students and our impact on our local community, through our partnership with Marin County Public Health. We will continue to keep you informed as decisions are made. </p>
+
+<h2 dir="ltr"><strong>Summer 2020</strong></h2>
+
+<p dir="ltr">We know you may not have been able to visit campus in person because of the travel restrictions imposed due to the coronavirus. To give you a taste of the Dominican Experience, we have developed a free virtual summer term to help you get to know other students, work with our professors, and have fun. You can earn up to two units without being charged tuition or a campus fee. </p>
+
+<p dir="ltr">These 25 free courses reflect our professors’ expertise and interests — from examining the origins of COVID-19, to developing a radio show, to studying Hollywood movies through the perspective of aesthetics, capital, and politics. You can gain Excel skills in a class led by the Dean of the Barowsky School of Business.  You can learn about herpetology (the study of amphibians and reptiles) in a biology class focused on exotic pets. Or you can prepare for your time on campus via two courses — “Mastering College” and “Life Skills” — which will be led by staff mentors (“Integrative Coaches”) who are specially trained to help with your transition to college. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="167a0f78-af3e-4137-b13b-13fbe7867c7b" href="/academics/free-summer-courses" title="Free Summer Courses">Detailed course descriptions can be found here. </a></p>
+
+<h2 dir="ltr"><strong>Financial Assistance</strong></h2>
+
+<p dir="ltr">We understand that the information provided on your FAFSA may not accurately reflect your family's current financial situation. It is a challenging time. If things have changed, please reach out to discuss the situation and see how we can help. It's not too late to file the FAFSA for the 2020-21 academic year. More than 90 percent of our students receive some form of financial aid — scholarships, grants, loans, and/or work-study. The Financial Aid Team is here to support you. Connect with us by scheduling a <a href="https://admissions.dominican.edu/portal/onlineapptsfa" class="elf-external elf-icon" rel="noopener">Zoom appointment</a>, sending an <a href="mailto:finaid@dominican.edu" class="elf-mailto elf-icon">email</a>, or giving us a call at (415) 257-1350.</p>
+
+<p dir="ltr">In the coming weeks and months, you will receive updates on our progress to prepare for the fall semester. We are so excited about welcoming our “penguins” back to our campus — to our close-knit, fun, and caring Dominican family. Until then, I wish you and your family a safe and healthy summer.<br />
+<br />
+Sincerely,<br />
+<img alt="Mary B. Marcy signature" height="66" src="https://ci6.googleusercontent.com/proxy/mgttmQMvQ6FK5UdjIOt0MGkjP8z4XsDkjpClR8JS0SE7UHdAb0jfgHHOO0VBgI5ctz4Zd3xhg5bwaUsq8wu_QyAPgWWnxWTrfjuTQ4JcqUDgokErrt_hrsQflbcgqLZukL4P0isVHtURv66WxIoWozByymbLfNknAiyr8Q50DoVCCfr9rX6gTCIv2_8=s0-d-e1-ft#https://mx.technolutions.net/proxy/tEEcZf7IAU31HPwCL_pn1biYafeQoMpMKdj-jkQfGbNqykAaCINNs-Bb-N43V9GpKFl26w0CfLU5FSaCD43epw" width="150" /><br />
+Mary B. Marcy<br />
+President</p>
+
+<p> </p>
+
+<hr />
+<p><em>Dominican President Mary B. Marcy issued the following statement on Thursday, April 30:</em></p>
+
+<p>This week’s newsletter is a joint communication from the Board Chair, Carolyn Klebanoff, and me. The Senior Team has been working closely with Board leadership as we address the ongoing issues raised by the coronavirus pandemic and our plans for the future. The Board’s commitment to Dominican's mission and support of our work is not always visible to the campus, but in times like these, it is highly valued. Thus, we wanted to share today’s message with all of you.</p>
+
+<p>Dear Dominican Students and Families:</p>
+
+<p>The last two months have not been without significant challenges. We are grateful and proud of our students for a swift, thoughtful, and impressive adaptation in the midst of the coronavirus pandemic. Many students will successfully graduate, and many more will continue their education because of their great fortitude and persistence. While dealing personally with your own set of demands under the shelter-in-place order, you, our students and families, have demonstrated profound resilience. Thank you for being a part of the Dominican community that inspires us daily — now, more than ever.</p>
+
+<p>We write today to share important information on two topics as we plan for continued adaptation: our approach to the summer, and our plans for starting fall semester.</p>
+
+<h2>Summer Programs and Planning</h2>
+
+<p>Our summer work will be significantly affected by the pandemic and necessary public health protocols. We expect summer classes to be offered online. Additionally, we will be offering <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="167a0f78-af3e-4137-b13b-13fbe7867c7b" href="/academics/free-summer-courses" title="Free Summer Courses">several online courses free of charge</a> to current and prospective students. This will provide an opportunity for students to experience the value of a Dominican education — albeit virtually — and will keep our community engaged while we continue to navigate the pandemic. A number of faculty and staff quickly agreed to develop these courses, and for this we are thankful.</p>
+
+<h2>Starting Fall Semester</h2>
+
+<p>The President’s Cabinet is developing plans for all aspects of the University’s operations for the upcoming academic year, working closely with the faculty and staff. We are planning for a range of scenarios; however, it is our assumption that we will start fall semester on campus, with primarily in-person classes and onsite work. Our relatively small institution and average class size lend themselves to social distancing, and our beautiful open campus grounds provide a space for community even as we employ best public health protocols.</p>
+
+<p>We will need to build in greater flexibility for our course delivery, protect our students, employees, and the larger community as we design our fall semester. We are developing options for student housing, for managing larger events, and for ensuring the dining hall is operating safely. As we develop our plans for the fall, we are working closely with Marin’s public health officer, the State of California, and with other independent colleges and universities in the region and state. More details about these plans will be provided in the coming days and weeks.</p>
+
+<p>We remain grateful for the extraordinary flexibility and shared commitment to education our students and their families have demonstrated in recent weeks. Likewise, we are inspired by the faculty, staff, and broader Dominican community for their dedication to our institutional mission. We move forward together with resolution and confidence that those same characteristics will ensure that we emerge from this time with strength and continued focus on the enduring Dominican values of study, reflection, community, and service — on behalf of our students, ourselves, and our society.</p>
+
+<hr />
+<p><em>Dominican President Mary B. Marcy issued the following statement on Thursday, April 16:</em></p>
+
+<p>Dear Campus Community: </p>
+
+<p>As announced in my March 26 newsletter, our traditional in-person Commencement ceremony will not take place as planned this spring. That said, we cannot allow the Class of 2020’s graduation, a momentous occasion, to pass without a joyous commemoration.<br />
+ <br />
+The Commencement Committee has worked in collaboration with student leaders in ASDU to recommend the style, tone, and elements that will make for a memorable celebration. With input from the class, an upbeat, documentary-style video and production is underway.<br />
+ <br />
+The short film will be broadcast on Saturday, May 16, at 10 a.m. on Dominican’s YouTube channel. Although our community members may be in different locations, we will come together through technology to recognize the resilience and the accomplishments of this year’s graduates.</p>
+
+<p><a class="btn" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="757d359a-842b-4719-8f43-c0eb148b35a4" href="/about/commencement" title="Commencement">Spring Graduation Celebration</a></p>
+
+<p> </p>
+
+<hr />
+<p><em>Dominican President Mary B. Marcy issued the following statement on Thursday, March 26:</em></p>
+
+<p>Dear Campus Community: </p>
+
+<p>It has been an intense 10 days since the first shelter in place order was issued by the county health officers of the Bay Area, and I am writing to you today with some important updates. Our decisions continue to be informed by guidance from health officials, and the health and safety of our students and community remains our highest priority. <br />
+<br />
+Based on the latest COVID-19 information, Dominican will extend remote instruction through the end of the academic year. It is poignant, and now also clearly apparent, that we also must fundamentally change our commencement ceremony in light of public health directives concerning large group gatherings.</p>
+
+<h2><strong>Commencement</strong></h2>
+
+<p>Our Commencement Committee, which has been responsible for so many grand celebrations, is committed to making sure that the graduates of 2020 receive recognition for their work, and a chance to celebrate with our community. With that focus, we will offer two events rather than one — a virtual celebration this spring, and, for those who are able to attend, an in-person event next fall.<br />
+<br />
+The virtual celebration will be held on May 16, the original date of Commencement. It will be designed in collaboration with ASDU and student input. We will reconvene in the fall with a ceremony on campus.<br />
+More information for students will be available in the coming weeks. For Faculty, we ask that you please continue to save the date of May 16, and stay tuned for further details.</p>
+
+<h2><strong>Completing the Semester Online</strong></h2>
+
+<p>Faculty and students should plan for remote instruction to continue for the remainder of the spring semester. In a limited number of cases in professional programs, no remote replacement for lab hours and/or required clinical placements has yet been developed; in these cases, communication will continue between program faculty and students as we evaluate options.<br />
+<br />
+A temporary revision and expansion of the University’s policy on awarding Incomplete (INC) grades is currently being drafted and will be moved rapidly through the appropriate shared governance approval process. This is to respond supportively and flexibly to any cases where we find there is no acceptable way of completing course delivery by the end of this semester, as well to cases of individual students who are unable to complete coursework for unusual and legitimate reasons.<br />
+<br />
+Students should contact their instructors or the chair of their programs with questions specific to their academic progress. For further academic and personal support, contact the Student Success Center or reach out to one of our integrative coaches.</p>
+
+<h2><strong>Student Success Working Group</strong></h2>
+
+<p>The staff and personnel in the <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="e3ebc1ab-6296-4fc0-bc4d-a87bdfa0d11b" href="/directory/student-success-center" title="Student Success Center">Student Success Center</a> and in <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="544052a5-1252-474f-9711-a14f3b20d3f2" href="/directory/office-student-affairs" title="Office of Student Affairs">Student Life</a> are working online and remotely to continue to provide support and guidance to students. In addition to academic guidance and support, we are exploring opportunities for students to engage with their peers and communities — albeit virtually — to foster interaction and promote well-being during these challenging times.<br />
+<br />
+The teams have created a <a href="https://sites.google.com/dominican.edu/du-student-life-sp20-resources/home" class="elf-external elf-icon" rel="noopener">student resource website</a> that lists the various support programs, engagement opportunities, and important information for students. The site is updated periodically — please do visit frequently.</p>
+
+<h2><strong>Residence Halls</strong></h2>
+
+<p>With the decision to complete the remainder of the spring 2020 term via remote course delivery, we will close the residence halls for the remainder of the spring term. This decision is informed, in part, by Governor Newsom’s executive order and the directives concerning University residential facilities.<br />
+We understand that this is a challenge for our student community; the loss of access to the residence halls and meal plan was not something anyone anticipated, and is also a great loss of community for the entire campus. As a result of this necessary closing, the university will be working with students and families to prorate residence hall costs in line with guidelines from the federal Department of Education’s financial aid policies.<br />
+<br />
+In the coming days, the Department of Housing and Residence Life will send detailed information to students about the move-out process, including dates and times and coordination of access to facilities, while being mindful of social distancing guidelines. Additionally, we will provide details of the prorated room/board costs and how that will be handled through the University’s <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b325095b-dcef-45eb-9459-59a096f23c07" href="/campus-life/student-services-and-resources/business-services/business-services-policies" title="Business Services Policies">Business Services Office</a> once students are officially moved out of their assigned residence hall spaces.</p>
+
+<h2><strong>Virtual Town Hall for Students and Families</strong></h2>
+
+<p>In order to provide students and families with more detailed information and to offer some insight into what to expect the remainder of the semester, we will be hosting virtual “Town Hall Gathering” programs for students and families within the coming weeks. Campus leaders will present essential information via the online town hall. In addition to important informational updates, students and families will have the opportunity to ask questions directly to University leadership. The shift to online instruction and support has been sudden, and email communication is often not the most effective way to facilitate communication. The Town Hall format will allow us to interact more directly, and cover a wide array of issues. It will also help us be in the same ‘room’ together, albeit virtually, something we all seek as part of our Dominican community. Once the date has been confirmed, we will send a separate email invitation for the town hall.</p>
+
+<h2><strong>Resources for Faculty and Staff</strong></h2>
+
+<p>As faculty and staff plan for remote instruction to continue for the remainder of the spring semester, we invite faculty and staff to use this survey to request trainings or to share expertise. To help us stay connected (and of course in alignment with our Dominican value of community), the link also offers the chance to request virtual lunch (or other) gatherings. Additionally, the Faculty Resource Site provides a number of materials, recorded trainings, and information designed to support Faculty in your online teaching and learning. If you are working remotely and need office access to retrieve materials, please coordinate with your direct supervisor to establish access. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b0249c5d-72f8-43c6-aebb-d7508f764205" href="/directory/campus-security" title="Campus Security">Campus Security</a> is permitted to open campus facilities as needed once access has been confirmed. If you have questions or need support, please email <a href="mailto:jesse.andrews@dominican.edu" class="elf-mailto elf-icon">jesse.andrews@dominican.edu.</a><br />
+<br />
+I will continue to send regular updates via this newsletter, both to keep us informed in the rapidly shifting environment, and to keep us connected, albeit virtually, to our strong community. Please know that our online and remote work does not change the nature of our community, or lessen the value of our mission. I remain grateful for your good spirit and good work as we continue to adapt.<br />
+<br />
+<em>— <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="27277393-f662-45e7-886c-99611f841d83" href="/directory-people/mary-b-marcy" title="Mary B. Marcy">Mary B. Marcy, President</a></em><br />
+ </p>
+
+<h3> </h3>
+
+<p><em>Dominican President Mary B. Marcy issued the following statement on Monday, March 23:</em></p>
+
+<p>Welcome to the last stretch of our academic year, and to the first day of online course delivery! Today's update comes in the form of a video. <br />
+<br />
+After today, I will no longer send daily messages, but I will continue to provide updates as needed. For the next few days and weeks as we adapt, let's all focus on ensuring the Dominican values and culture shine through, even as we embrace a new mode of educational delivery.</p>
+
+<div data-embed-button="ohou_media_embed" data-entity-embed-display="view_mode:media.full" data-entity-type="media" data-entity-uuid="64285fb8-4365-451b-a35b-246b99f02c5b" data-langcode="en" class="embedded-entity"><div class="video-embed-field-provider-youtube video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/j0V0LF8K0XY?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+
+</div>
+
+
+<p> </p>
+
+<hr />
+<p><em>Dominican President Mary B. Marcy issued the following statement on Monday, March 16:</em></p>
+
+<p>Dear Dominican Campus Community: </p>
+
+<p>Based on today’s directive from the public health officers of the Bay Area, Dominican will be delivering all courses and conducting all work online. The directive is effective at 12:01 a.m. Tuesday, March 17, and is expected to last until April 7. </p>
+
+<p>Online course delivery will commence as planned on Monday, March 23. Remote work for all non-essential personnel will begin tomorrow. </p>
+
+<h2>Faculty and Staff</h2>
+
+<p>This afternoon please gather any materials necessary to work from home or deliver courses from home. All non-essential portions of our physical campus will be closed for the duration of the shelter in place order. This means you will not have access to your office until the order has been lifted. Only essential personnel will be permitted to return to campus after today. We will notify those individuals who have been designated as essential personnel once we have more information from the public health agency about the scope of their directive. Please do not return to campus unless you have been notified to do so.</p>
+
+<h2>Residence Halls</h2>
+
+<p>Residence halls will remain open for those students who need our campus as a space to shelter in place. These students will receive pre-made take-out meals from the dining hall. Any students staying on campus must check in with their RA this afternoon, and as soon as possible. Students who wish to leave the residence halls may make arrangements to do so but will not be permitted to return upon departing.</p>
+
+<h2>President's Cabinet</h2>
+
+<p>Like the rest of campus, the President's Cabinet has been preparing for the need to work fully online. We will continue to meet and provide regular updates to our community about essential functions. I know you have many questions, as do I; I will share information as I have it. The important thing is to recognize that while this is a difficult situation, it is also temporary, and we are fortunate to have a strong campus and community as we respond. Please be patient as we implement the directives of the public health agency and continue our mission.</p>
+
+<p>We will work through this unprecedented challenge together. I have tremendous confidence in the values, the integrity, and the significance of the Dominican community. Please take care of yourselves and your loved ones, and know that, although it is temporarily in a virtual space, our community and our work continues.<br />
+ </p>
+
+<p><em>— <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="27277393-f662-45e7-886c-99611f841d83" href="/directory-people/mary-b-marcy" title="Mary B. Marcy">Mary B. Marcy, President</a></em></p>
+
+<h3>Campus Contacts</h3>
+
+<p>For more specific questions or further information:</p>
+
+<ul>
+	<li><strong>Students and families:</strong><br />
+	Paul Raccanello, Vice President for Student Affairs and Dean of Students<br />
+	(415) 485-3223</li>
+	<li><strong>Communications/media relations:</strong><br />
+	Sarah Gardner, Executive Director of Communications<br />
+	(415) 485-3239</li>
+	<li><strong>General queries:</strong><br />
+	<a href="mailto:safety@dominican.edu" target="_blank" aria-label="opens in new window" class="elf-mailto elf-icon">safety@dominican.edu</a></li>
+</ul>
+
+<p><em>Dominican President Mary B. Marcy issued the following statement on Friday, March 13:</em></p>
+
+<p>Events concerning the coronavirus are moving quickly, and the University’s leadership is committed to supporting community health and to continuing our mission. This page contains further updates about changes to operations on campus after spring break.</p>
+
+<p>Regular academic classes will be suspended this coming week, March 16-20. This will allow the campus to prepare for online course delivery beginning March 23, and to fully implement protocols to best support the health of our community.  </p>
+
+<p>The University has been following the Marin County Health and Human Services recommended public health guidelines, which until now have encouraged schools to remain open. But events are moving rapidly, and the University must be proactive to support our community’s health. University leadership is implementing the following changes as outlined below.</p>
+
+<ul>
+</ul>
+
+<p><em>— <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="27277393-f662-45e7-886c-99611f841d83" href="/directory-people/mary-b-marcy" title="Mary B. Marcy">Mary B. Marcy, President</a></em><br />
+ </p>
+
+<h2>Information for Students and Families </h2>
+
+<p><strong>Classes:</strong> Please note the following changes to academic class delivery for the spring 2020 semester:</p>
+
+<ul>
+	<li>March 16-20: Regular classes will be suspended this week. (Please see below for information regarding non-lecture classes, such as clinicals and fieldwork placements.)</li>
+	<li>Beginning March 23: Classes that can be taught remotely will move to online course delivery.  </li>
+	<li>March 23 through the end of the spring semester: The University will continue online classes as long as necessary. We will continue to monitor the situation and work with our public health partners to determine when it is appropriate to return to in-class instruction.</li>
+</ul>
+
+<p><strong>Residence Halls: </strong>The residence halls (including Townhomes) and the dining hall remain open to those students choosing to stay on campus. There may be modifications to room arrangements and changes to dining services; the Department of Housing and Residence Life will send follow-up information to resident students in the coming week, and we ask resident students to please respond to those emails.</p>
+
+<p><strong>Clinicals and Fieldwork Placements:</strong> Clinicals and fieldwork placements will continue to meet  as scheduled. We remind students that the requirements for clinical and fieldwork placements are set by State authorities and, as such, the loss of clinical/fieldwork hours have implications for students’ progress toward graduation. Students should stay tuned for communications from their programs. Additionally, students will be notified by their program faculty if there will be changes or disruptions to their clinical or fieldwork placements. Faculty are working closely with our healthcare partners to ensure the safety of our students.</p>
+
+<p><strong>Osher Life Long Learning Institute (OLLI): </strong>Classes will not be held in the coming week. Updates will be provided to members later in the week regarding the upcoming spring term. (<em>Update: spring quarter classes canceled.</em>)</p>
+
+<p><strong>Student Employees: </strong>Student employees may return to work beginning on March 16. Students not returning to work should communicate with their supervisor ASAP.</p>
+
+<p><strong>Athletics and Conlan Recreation Center:</strong> The PacWest has discontinued athletics competitions through April 3. All athletics practices and events are canceled for the week of March 16-20. The Department of Athletics will provide additional information to student-athletes and coaches in the coming week. The Conlan Recreation Center will be closed March 14-22. All classes and events in Conlan are canceled for the week. </p>
+
+<h2>Information for Faculty and Staff </h2>
+
+<p><strong>Professional Development:</strong> Faculty and staff, additional information regarding resources and training for remote teaching and work will be available next week.</p>
+
+<p> </p>
+
+<p><strong>Faculty Training:</strong> IT Services and Academic Affairs are developing a series of training workshops (Google Hangouts, Zoom, and Moodle, VPN) to prepare faculty for remote instruction and access. Academic Affairs will distribute information about sessions and locations. Please contact <a href="mailto:mojgan.behmand@dominican.edu" class="elf-mailto elf-icon">mojgan.behmand@dominican.edu</a> with questions regarding the training offerings. Adjunct faculty currently teaching this semester will be paid for the time they spend training as per the CBA. Adjunct faculty may contact <a href="mailto:yuti.huang@dominican.edu" class="elf-mailto elf-icon">yuti.huang@dominican.edu</a> with questions. </p>
+
+<p><strong>Staff:</strong> Campus offices will remain open. Department supervisors should designate one employee to serve as the primary contact with IT; that individual can also assist colleagues with technology-related questions. Supervisors should determine how best to use March 16-20 in order to prepare for the possibility of many employees working from home. Some departments may want to practice remote work for those days, while others may want to team-train. Staff are welcome to attend the faculty training if it is relevant to their work.</p>
+
+<p><strong>Workday:</strong> All employees can now access Workday from any location, including off-campus:</p>
+
+<ul>
+	<li>Login to your Dominican email</li>
+	<li>Go to <a href="https://www.myworkday.com/dominican/d/home.htmld" class="elf-external elf-icon" rel="noopener">www.myworkday.com/dominican/d/home.htmld</a></li>
+</ul>
+
+<p>If you have problems accessing Workday, email <a href="mailto:workdaysupport@dominican.edu" class="elf-mailto elf-icon">workdaysupport@dominican.edu</a></p>
+
+<p><strong>Accessing dataworker shares via the VPN: </strong>Please review the video for instructions on how to access dataworker shares <a href="https://vpn.dominican.edu" class="elf-external elf-icon" rel="noopener">via the VPN</a>. If you do not know the path or location for your dataworker share, please email <a href="mailto:helpdesk@dominican.edu" class="elf-mailto elf-icon">helpdesk@dominican.edu</a>.</p>
+
+<p><strong>Sick Leave/Caring for Family Members:</strong> Dominican will provide work-at-home flexibility to employees who are at high-risk (i.e., chronically ill or immunocompromised prior to this outbreak), have a need to work remotely due to personal matters related to COVID-19, or have extenuating circumstances. Employees should consult with their direct supervisor and HR.</p>
+
+<p>Supervisors are asked to please remain flexible with your staff needing to care for family members. If they can work at home, this would be the first option. If this is not possible, then they would need to contact HR.</p>
+
+<p>Any member of the Dominican community who exhibits signs of the flu should self-quarantine and seek medical attention as directed by their provider.</p>
+
+<p>Current sick leave eligibility and policies remain in place as defined in the Employee Handbook. In addition, the California EDD has made Disability, Paid Family Leave and Unemployment Insurance available for those impacted by COVID-19. HR is available to support these claims.</p>
+
+<h2>Information for the Campus Community </h2>
+
+<p><strong>Large Events:</strong> Marin HHS' Public Health Division is recommending the cancellation or postponement of nonessential indoor gatherings of more than 100 people. Marin HHS is not making the same recommendation for outdoor events at this time because the risk for transmission outdoors is low. The Events Management Office is working with all internal and external clients to cancel or reschedule any affected events.</p>
+
+<p><strong>Travel:</strong> Following guidance from the Marin HHS’ Public Health Division, we are canceling all nonessential University travel until further notice. This includes student travel to conferences and select events. Those students, faculty, and staff currently away from campus on Dominican travel need not be recalled, but we do ask that they complete the University’s Travel Form. We are asking those who had planned to travel on behalf of the University to make every effort to secure refunds; many vendors are being more flexible than their normal policies allow.</p>
+
+<p><strong>Campus Cleaning: </strong>Expanded, frequent, and intensive disinfection of high contact surfaces and shared spaces on campus continues. Custodial staff have been instructed to follow health guidelines and are equipped with nitrile gloves for their own safety. Hand sanitizer has been made available in public areas.</p>
+
+<p><strong>Prevention:</strong> No matter where you are on campus or off, please take robust preventative public health and hygiene measures. These include washing your hands thoroughly five or six times each day, sneezing into a tissue or sleeved arm, and distancing yourself from others at the first sign of flu-like symptoms. </p>
+
+<p>The campus community will continue to be updated via email as more information is available. In addition, we have established the coronavirus information page on our website where you will find the latest information on the University’s prevention and response efforts related to COVID-19. If you have any questions related to the University’s response and plans for COVID-19, please contact <a href="mailto:safety@dominican.edu" class="elf-mailto elf-icon">safety@dominican.edu</a>.</p>
+
+<h3>Campus Contacts</h3>
+
+<p>For more specific questions or further information:</p>
+
+<ul>
+	<li><strong>Students and families:</strong><br />
+	Paul Raccanello, Vice President for Student Affairs and Dean of Students<br />
+	(415) 485-3223</li>
+	<li><strong>Communications/media relations:</strong><br />
+	Sarah Gardner, Executive Director of Communications<br />
+	(415) 485-3239</li>
+	<li><strong>General queries:</strong><br />
+	<a href="mailto:safety@dominican.edu" target="_blank" aria-label="opens in new window" class="elf-mailto elf-icon">safety@dominican.edu</a></li>
+</ul>
+
+          </section>
+
+          
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section--cards global-padding--white global-padding--large">
+  <div class='grid-container'>
+    <div class="grid-x grid-margin-x">
+      <div class="cell initial-12 medium-10">
+        <h2 class="h3">Recent Updates: Campus Health and Safety </h2>
+      </div>
+      <div class="cell initial-12 medium-2">
+                  <a href="/news/news-listing" class="news-button">All News</a>
+              </div>
+    </div>
+  </div>
+
+  <div class="views-element-container"><div class="js-view-dom-id-c724a66c1c5dd6e43aa0a8f53126a7b28596d7a505cf32ffb7e7b3f7fe9be7bb listing">
+  
+  
+  
+
+  
+
+  
+  
+
+  <div class="grid-container section--card-items">
+    <div class="global-spacing grid-x grid-margin-x">
+                <div class="cell initial-12 medium-4">
+  <article class="card card--news card--unbounded card--horizontal card--small">
+          <div class="card__media">
+          <img src="/sites/default/files/styles/width_330/public/2020-02/guzman-news.jpg?itok=zin6fleo" width="330" height="199" alt="guzman hall at dominican university of california" typeof="foaf:Image" />
+
+
+
+      </div>
+        <div class="card__content">
+      <div class="card__content__inner">
+        <h3 class="card__title link-arrow"><a href="/news/news-listing/health-message-campus-community">Health Message For Campus Community</a></h3>
+      </div>
+    </div>
+  </article>
+</div>
+
+            <div class="cell initial-12 medium-4">
+  <article class="card card--news card--unbounded card--horizontal card--small">
+          <div class="card__media">
+          <img src="/sites/default/files/styles/width_330/public/2020-03/Angelico%20Hall%20Photo%20For%20Homepage.jpg?itok=LUTWUf8m" width="330" height="220" alt="angelico concert hall building" typeof="foaf:Image" />
+
+
+
+      </div>
+        <div class="card__content">
+      <div class="card__content__inner">
+        <h3 class="card__title link-arrow"><a href="/news/news-listing/experts-address-health-concerns-open-forum">Experts Address Health Concerns In Open Forum</a></h3>
+      </div>
+    </div>
+  </article>
+</div>
+
+  
+      
+      
+    </div>
+  </div>
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</section>
+
+
+
+    </main>
+  </div>
+
+  
+<section class="sock">
+  <div class="grid-container global-padding--default">
+    <div class="grid-x grid-margin-x sock__inner">
+      <div class="cell sock__inner__heading-column">
+        <h2 class="h4">Start your Dominican Journey</h2>
+      </div>
+      <div class="cell initial-12 sock__inner__button-column">
+                  <ul class="sock__links">
+              <li>
+            <a href="/admissions/request-information">Request Info</a>
+
+        </li>
+              <li>
+            <a href="/admissions/visit-and-tour">Visit</a>
+
+        </li>
+              <li>
+            <a href="/admissions/apply-now">Apply</a>
+
+        </li>
+          </ul>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="site-footer global-padding--default">
+    
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell initial-12 medium-4">
+      <a class="site-footer__logo" href="/">
+        <img width="191" height="175" src="/themes/custom/dominican/assets/img/logo-white.svg"
+          alt="Dominican University of California Logo">
+      </a>
+      <div class="site-footer__address">
+        <p>Dominican University of California<br />
+50 Acacia Avenue, San Rafael, CA 94901</p>
+        <p><a href="tel:%28415%29457-4440" rel="noopener">(415) 457-4440</a></p>
+      </div>
+    </div>
+
+    <div class="cell initial-12 medium-4">
+      <div class="site-footer__helpful-links">
+        <h2 class="eyebrow">Helpful Links</h2>
+                  <ul>
+              <li>
+            <a href="/about/maps-directions-and-contact">Contact Us</a>
+
+        </li>
+              <li>
+            <a href="/admissions/request-information">Request Information</a>
+
+        </li>
+              <li>
+            <a href="/directory/human-resources">Career Opportunities </a>
+
+        </li>
+              <li>
+            <a href="/about/safety-and-emergency-information">Emergency Information</a>
+
+        </li>
+              <li>
+            <a href="/about/safety-and-emergency-information/sexual-misconduct-title-ix-and-discrimination">Title IX Resources</a>
+
+        </li>
+          </ul>
+  
+      </div>
+    </div>
+
+    <div class="cell initial-12 medium-4">
+      <div class="site-footer__resources">
+        <h2 class="eyebrow">Resources For</h2>
+        <nav>
+  
+  
+              <ul class="menu">
+              <li class="menu-item--collapsed li--level-one">
+        <a href="/alumni" data-drupal-link-system-path="node/1139">Alumni</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/admitted-students" title="Resources for newly admitted Dominican students" data-drupal-link-system-path="node/432">Admitted Students</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/current-students" data-drupal-link-system-path="node/1171">Current Students</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/parents-and-family-0" data-drupal-link-system-path="node/425">Parents and Family</a>
+              </li>
+          <li class="li--level-one">
+        <a href="/counselors-0" data-drupal-link-system-path="node/424">Counselors</a>
+              </li>
+          <li class="menu-item--collapsed li--level-one">
+        <a href="/faculty-and-staff" data-drupal-link-system-path="node/67">Faculty and Staff</a>
+              </li>
+        </ul>
+  
+
+
+</nav>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="grid-x grid-margin-x site-footer__bottom">
+    <div class="cell initial-12 medium-9">
+      <div class="site-footer__bottom__inner">
+                  <p><a href="/website-feedback">Website Feedback</a></p>
+      <p><a href="/privacy-policy">Privacy</a></p>
+      <p><a href="/consumer-information">Consumer Information</a></p>
+  
+
+        <p class="site-footer__copyright">© 2020 Dominican University of California. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="cell initial-12 medium-3">
+      <div class="site-footer__social-media">
+        <h2 class="show-for-sr">Social Media Links</h2>
+                  <ul class="social-media">
+              <li><a href="https://twitter.com/DominicanCANews" target="_blank" aria-label="Opens in a new window">
+  <span class="show-for-sr">Twitter</span>
+  <i class="fab fa-twitter"></i>
+
+
+</a>
+</li>
+              <li><a href="https://www.facebook.com/DominicanUniversityofCalifornia" target="_blank" aria-label="Opens in a new window">
+  <span class="show-for-sr">Facebook</span>
+  <i class="fab fa-facebook-square"></i>
+
+
+</a>
+</li>
+              <li><a href="https://www.linkedin.com/school/dominican-university-of-california" target="_blank" aria-label="Opens in a new window">
+  <span class="show-for-sr">LinkedIn</span>
+  <i class="fab fa-linkedin-in"></i>
+
+
+</a>
+</li>
+              <li><a href="https://www.youtube.com/user/dominicanpenguins" target="_blank" aria-label="Opens in a new window">
+  <span class="show-for-sr">Youtube</span>
+  <i class="fab fa-youtube"></i>
+
+
+</a>
+</li>
+              <li><a href="https://www.instagram.com/dominicanuniversityca/" target="_blank" aria-label="Opens in a new window">
+  <span class="show-for-sr">Instagram</span>
+  <i class="fab fa-instagram"></i>
+
+
+</a>
+</li>
+          </ul>
+  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </footer>
+</div>
+
+  </div>
+
+    
+
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+    var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+    sz.src = '//siteimproveanalytics.com/js/siteanalyze_66359000.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+    })();
+    /*]]>*/
+    </script>
+
+    <script async="async" src="https://admissions.dominican.edu/ping">/**/</script>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1210","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Carticle class=\u0022cookie-compliance-popup\u0022\u003E\n  \u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n      \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n        \u003Cdiv class=\u0022grid-x grid-padding-x\u0022\u003E\n          \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\n                      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EReview privacy policy\u003C\/button\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022btn agree-button eu-cookie-compliance-default-button\u0022\u003EDismiss\u003C\/button\u003E\n                  \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/article\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Carticle class=\u0022cookie-compliance-popup\u0022\u003E\n  \u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n      \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n        \u003Cdiv class=\u0022grid-x grid-padding-x\u0022\u003E\n          \n                      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EReview privacy policy\u003C\/button\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022btn agree-button eu-cookie-compliance-default-button\u0022\u003EDismiss\u003C\/button\u003E\n                  \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/article\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"5c6d129023b782737bff000617832d6ea92938da471518b5c2ad3007b6fbfd85"}}</script>
+<script src="/sites/default/files/js/js_WMFlZWbCO4dpCmZ3FqxEMlPiJdQkHZ3zcX40R8LWF58.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-ce14a7cff8f815c3e31","applicationID":"448229765","transactionName":"YF1WMEMAVkNVAhdYVlkXdQdFCFdeGxECVlxoW1UHWQQ=","queueTime":0,"applicationTime":69,"atts":"TBpVRgsaRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

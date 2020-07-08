@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3d2bdb7666",applicationID:"3175187"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  	<title>Eastern Illinois University :: COVID-19  - Emails</title>	
+	<meta name="description" content="Emails sent out by the university community in regards to COVID-19. " />
+	<meta name="author" content="Eastern Illinois University">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="5rtQ9OSiIU8M41fOEatiMgjq1LerRlliUv8b7M1qaew" />
+<meta name="msvalidate.01" content="AFF7CB252CEFDF595B7C669BF46EC5EA" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLPT2M');</script>
+<!-- End Google Tag Manager --><meta name="history-image" content="/_eiu15/images/universal/history_images/about.jpg" />
+
+	<link rel="stylesheet"  href="https://www.eiu.edu/_eiu15/css/eiu_secondary.css" media="screen" />
+	<link rel="stylesheet"  href="local.css" media="screen" />
+	
+	<script>
+   function showorhide(divid){
+	   $("#" + divid).slideToggle("");
+    } 
+</script>
+
+
+</head>
+
+
+<body>
+
+		<!-- Header and Navbar -->
+		
+		<!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+      	
+        <div class="container-fluid no-padding">
+           
+          <div class="navbar-header navbar-logo">
+	          <div class="navbar-brand"><a class="" href="https://www.eiu.edu/"><span>Eastern Illinois University</span><img src="//www.eiu.edu/_eiu15/images/universal/header_logo.png" alt='Eastern Illinois University' /></a></div>
+           
+            
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="menutext">Menu</span>
+               <span class="sr-only">Toggle navigation</span>
+              <span class="menuicon">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+              </span>
+            </button>
+             
+           
+          </div>
+          
+           
+          
+          
+          
+          
+          <div id="headertophits" >
+            	
+            	<ul class="navbar-collapse collapse">
+					<li class="header_atoz"><a href="https://www.eiu.edu/atoz.php" ><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/settings.png" alt="a-z" /> a-z</a></li>
+					<li class="header_panthermail"><a href="https://www.eiu.edu/panthermail/"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/panthermail.png" alt="panthermail"  /> panthermail</a></li>
+					<li class="header_paws"><a href="https://www.eiu.edu/pawslogin/"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/paws.png" alt="paws" /> paws</a></li>
+					<li class="header_library"><a href="https://www.library.eiu.edu/welcome.html"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/library.png" alt="library"  /> library</a></li>
+					<li class="last header_eiuonline"><a href="https://www.eiu.edu/d2l"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/d2l.png" alt="d2l" /> d2l</a></li>
+				</ul>
+            	
+            </div>
+            <div id="searchandhistory">
+            	<i class="fa fa-search fa-lg searchbt"><span class="search_words">search </span></i>
+				<i class="fa fa-history fa-lg history-btn"><span class="history_words">history </span></i>
+            </div>
+          
+<!--
+          <div id="searchandhistorymobile">
+            	<i class="fa fa-search fa-lg searchbt"></i>
+				<i class="fa fa-history fa-lg history-btn"></i>
+          </div>
+-->
+            
+        </div><!--/.container-fluid -->
+        
+      </nav>		
+		
+		<!--Search Overlay -->
+		
+		<!-- Search Overlay -->
+<div class="container">
+	<div id="morphsearch" class="morphsearch">
+		<form class="morphsearch-form">
+			<input class="morphsearch-input" type="search" placeholder="Search..." autocorrect="off" autocomplete="off"/> 
+			<button class="morphsearch-submit" type="submit"></button>
+			<input type="hidden" class="morphsearch-start" value="0" />
+		</form>
+		<div class="morphsearch-content">
+			<div class="dummy-column recent_search_column">
+				<h2>Recent Searches</h2>
+				
+				<div class="recent_search_column-content">
+					
+				</div>
+			</div>
+			<div class="dummy-column trending_pages_column">
+				<h2>Trending Searches</h2>
+				<div class="trending_pages_column-content2">
+					<a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>academic calendar</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>Financial Aid</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>housing</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>registrar</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>banner</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a>					
+				</div>
+			</div>
+			<div class="radio-tabs" role="tablist">
+	  
+			    <input class="state" type="radio" title="Starks" name="houses-state" id="starks" role="tab" aria-controls="starks-panel" aria-selected="true" checked />
+			    <input class="state" type="radio" title="Lanisters" name="houses-state" id="lannisters" role="tab" aria-controls="lannisters-panel" />
+			
+			    <div class="tabs col-sm-12" aria-hidden="true" style="padding-left: 0px;">
+			        <div class="col-sm-9 col-xs-6 tabs-button tab-selected">
+				        <label for="starks" id="starks-tab" class="tab" aria-selected="true">Web Results</label>
+			        </div>
+			        <div class="col-sm-3 col-xs-6 tabs-button">
+			        	<label for="lannisters" id="lannisters-tab" class="tab">Directory Results</label>
+			        </div>
+			    </div>
+			
+			    <div class="panels">
+			        
+			        <div class='google_result_column col-sm-9 panel active' id="starks-panel" role="tabpanel" aria-labelledby="starks-tab">
+						<div class='search-results-container'>
+							<div class="google_search_loading">Loading Search Results...</div>
+						</div>
+					</div>
+					<div class='directory_result_column col-sm-3 panel' id="lannisters-panel" role="tabpanel" aria-labelledby="lannisters-tab">
+						<div class='directory-info'>
+							<div class="directory_search_loading">Loading Directory Results...</div>
+						</div>
+					</div>
+			 
+			    </div>
+			
+			</div>
+		</div><!-- /morphsearch-content -->
+		<span class="morphsearch-close">
+			<span class='morphsearch-close-content'>Close</span>
+		</span>
+	</div><!-- /morphsearch -->
+	<!-- 			<div class="overlay"></div> -->
+</div>			 
+	
+		<!--History Slide in Panel -->
+		
+		<!--History Slide in Panel -->
+<div class="history-panel from-right">
+	<header class="history-panel-header">
+		<h2>History</h2>
+		<a href="#0" class="history-panel-close">Close<!-- <i class="fa fa-times"></i> --></a>
+	</header>
+	
+	<div class="history-panel-container">
+		<div class="history-panel-content">
+			<h3 class="recentsearch">Recent Pages</h3>
+	
+			<div class="history-panel-content-page">
+				
+			</div>
+			
+			<h3 class="recentsearch">Recent Searches</h3>
+		
+			<div class="history-panel-content-search">
+				
+			</div>
+			
+		</div> <!-- history-panel-content -->
+	</div> <!-- history-panel-container -->
+</div> <!-- history-panel -->		
+		
+		
+      	
+	
+       
+	       <div class="container">
+		   		<div class="row">
+			   		<div class="col-sm-12">
+				   		<h1>EIU <span>COVID-19</span></h1>
+			   		</div>
+		   		</div>
+	       </div>
+	       
+	          <!--MAIN NAV BAR -->
+	         
+			 <div class="main_nav navbar-collapse collapse no-padding" id='1'>
+	<a class="main_nav_logo main_nav_logo_text" id='1a' href='https://www.eiu.edu/covid/index.php'>Home</a>
+	<ul class="six_items chap_collapse">
+		<li class="main_nav_item" id="23451">
+			<a class="dropdown-toggle menu_item" data-toggle="dropdown" id="23451a">General Information</a>
+			<ul class="main_nav_dropdown collapse dropdown-menu" role="menu">
+				<li><a href="students.php" target="" class="">Student Remote Learning</a></li>
+				<li><a href="https://www.eiu.edu/fdic/remote.php" target="_blank" class="">Faculty Resources</a></li>
+				<li><a href="https://www.eiu.edu/panthertech/remote.php" target="" class="">Working Remotely</a></li>
+				<li><a href="https://www.eiu.edu/covid/faq.php" target="" class="">EIU FAQ</a></li>
+				<li><a href="https://www.eiu.edu/covid/#contacts" target="" class="">Contacts</a></li>
+				<li><a href="info.php" target="" class="">More Information</a></li>
+				<li><a href="emails.php" target="" class="">University Emails</a></li>
+				<li><a href="https://www.eiu.edu/humanres/machform/view.php?id=7609" target="" class="">COVID-19 Emergency Paid Sick Leave Act Form</a></li>
+				<li><a href="signage.php" target="" class="">Printable Signage</a></li>
+			</ul>
+		</li>
+
+		<li class="main_nav_item" id="23454">
+			<a href="https://www.eiu.edu/health/" class="menu_item " target="_blank" >EIU Medical Clinic</a>
+		</li>
+
+		<li class="main_nav_item" id="23455">
+			<a href="https://www.dph.illinois.gov/" class="menu_item " target="_blank" >Illinois Department of Public Health</a>
+		</li>
+
+		<li class="main_nav_item" id="23456">
+			<a href="https://www.cdc.gov/" class="menu_item " target="_blank" >CDC</a>
+		</li>
+
+		<li class="main_nav_item" id="23457">
+			<a href="https://www.sarahbush.org/" class="menu_item " target="_blank" >Sarah Bush Lincoln Hospital</a>
+		</li>
+
+		<li class="main_nav_item" id="23458">
+			<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="menu_item " target="_blank" >World Health Organization</a>
+		</li>
+	</ul>
+<div class="socialmymenu"></div>
+</div>
+ 
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+	$('#23451').addClass('selected');
+	$('#23451a').addClass('selected');
+});
+</script>
+ 
+
+			 
+			 
+			<div class="container main_section" >
+			<div class="row">
+		   			   		<div class="hidden-xs hidden-sm col-md-3">
+			   		<ul class="leftmenu">
+				   		
+				   		<li><a href="students.php" target="" class="">Student Remote Learning</a></li> <li><a href="https://www.eiu.edu/fdic/remote.php" target="_blank" class="">Faculty Resources</a></li> <li><a href="https://www.eiu.edu/panthertech/remote.php" target="" class="">Working Remotely</a></li> <li><a href="https://www.eiu.edu/covid/faq.php" target="" class="">EIU FAQ</a></li> <li><a href="https://www.eiu.edu/covid/#contacts" target="" class="">Contacts</a></li> <li><a href="info.php" target="" class="">More Information</a></li> <li><a href="emails.php" target="" class="">University Emails</a></li> <li><a href="https://www.eiu.edu/humanres/machform/view.php?id=7609" target="" class="">COVID-19 Emergency Paid Sick Leave Act Form</a></li> <li><a href="signage.php" target="" class="">Printable Signage</a></li>				   		
+			   		</ul>
+		   		</div>
+		   			   		<div class="col-sm-12 col-md-9 right_side_content">
+			   		<h2>University Emails</h2>
+<p class="why_choose_quote">EIU has been communicating with our students in regards to COVID-19. This is an archive of those emails.</p>
+<br class="clear" />
+					<hr />
+					<br class="clear" />
+					<a name="06_25_2020"></a>
+<h3>Plans to Return for Fall 2020</h3>
+<h4><em>June 25, 2020</em></h4>
+					<p>Dear Students, faculty and staff – </p>
+					<p>Eastern Illinois University has been hard at work planning for on-campus educational activities to resume this fall, relying on guidelines issued by the CDC, the Governor’s Office, the Illinois Department of Public Health, and the Illinois Board of Higher Education. That decision assumes Illinois will remain in <a href="https://coronavirus.illinois.gov/s/restore-illinois-phase-4" target="_blank">Phase 4 of the State’s “Restore Illinois” plan</a>, allowing universities to offer face-to-face learning provided they follow best-practice safety and health strategies issued by those entities.</p>
+					<p>Above all, our goal is to unite EIU’s reputation for academic excellence with its role as a thoughtful, responsible organization committed to public health and safety. As such, a variety of internal teams have been working diligently to create a science-based approach to providing our students with the most comprehensive EIU experience possible while taking necessary steps in protecting the safety and health of our campus community.</p>
+					<p>Until holistic prevention and treatment methods are in place, including a vaccine, our collective risk as a university and as a global society remains heightened. That’s why, as we enter into the fall, everyone (students, faculty, staff and guests) will be responsible for complying with EIU’s health and safety measures.</p>
+					<p>Below is a summary of those measures: <a href="javascript:void(0)" onclick="showorhide('06_25_2020')">(read more)</a></p>
+					<div id="06_25_2020" style="display:none;">
+						<h4>General Safety</h4>
+					<ul>
+						<li>Students and employees will receive training on COVID-related safety measures. </li>
+						<li>Appropriately worn face and mouth coverings will be mandatory across campus and in classrooms. Exceptions exist and include residence hall rooms, some employee offices, outside on the campus grounds in the evening and weekends in which social distancing of 6-feet or more can be maintained, and others. Details are forthcoming.</li>
+						<li>The university will provide one cloth mask to all students. Students should consider bringing additional cloth masks to reduce the need for daily washing of their university-issued mask.</li>
+						<li>Hand sanitizer and wipes will be available in common and high-traffic areas.</li>
+						<li>High-touch surfaces such as door handles will be cleaned/disinfected regularly.</li>
+						<li>Traditional flu shots will be strongly encouraged for all students and employees.</li>
+						</ul>
+						<h4>Instruction</h4>
+						<ul>
+							<li>A mixture of in-person and remote instruction will provide physical distancing to inhibit virus spread.</li>
+							<li>Courses and classroom schedules will be adjusted to create physical distancing and safer traffic flow.</li>
+							<li>Accommodations will be made where possible for vulnerable and at-risk groups, and for students unable to be on campus due to travel restrictions or other considerations.</li>
+							<li>Hand sanitizer and wipes will be available in active classrooms via sanitation stations, and active classrooms will be cleaned/disinfected daily.</li>
+							<li>Appropriately worn face and mouth coverings will be mandatory in all classrooms.</li>
+							<li>Academic research will continue following appropriate safety and health guidelines.</li>
+						</ul>
+						<h4>University Housing and Dining</h4>
+						<ul>
+							<li>EIU will offer all students living in residence halls single-room occupancy.</li>
+							<li>Students living in residence halls will be required to wear appropriate face and mouth coverings at all times except when they are alone in their room.</li>
+							<li>Outside visitors will not be allowed in residence halls.</li>
+							<li>Quarantine areas will be created to accommodate students who test positive for COVID-19 or display symptoms who are not able to return home at that time.</li>
+							<li>Dining Centers will provide meals for carryout with limited in-person dining and physical distancing. </li>
+							<li>Common areas will be cleaned/disinfected regularly, and hand sanitizer will be available.</li>
+							<li>Use of these common areas will follow State guidelines and physical distancing will be observed.</li>
+						</ul>
+						<h4>Campus life</h4>
+						<ul>
+							<li>The size of gatherings will be based on standards under the State reopening guidelines in force this fall and beyond.</li>
+							<li>Use of auxiliary facilities like the Rec. Center will be limited to preserve personal safety.</li>
+						</ul>
+						<h4>Employees</h4>
+						<ul>
+							<li>Most faculty and staff will continue a phased-in return to work that began in June and will be completed by mid-July.</li>
+							<li>Vulnerable employees and those with family-related considerations may be eligible for work-from-home consideration. </li>
+							<li>Work areas will be cleaned/disinfected regularly and hand sanitizer will be provided.</li>
+							<li>Appropriately worn face and mouth coverings will be mandatory in publicly shared spaces.</li>
+							<li>All employees will be told to stay home if they are not feeling well and will be sent home if they begin to exhibit symptoms.</li>
+						</ul>
+						<h4>Testing and Notification</h4>
+						<ul>
+							<li>COVID-19 testing will be available on-campus for all employees and students on specified dates in August. Although the testing is voluntary, it is highly encouraged that the entire university community be tested. Details are forthcoming.</li>
+							<li>In coordination with its partner organizations and local public health entities, EIU and EIU’s Health and Counseling Services will assist in monitoring, tracking and tracing positive cases identified on campus as needed to notify individuals at risk for infection and mitigate spread.</li>
+							<li>Local public health departments will be provided test results based on required local, state and federal regulations.</li>
+						</ul>
+							<p>Part of our successful response is to remain flexible in our approach as information emerges or changes, and to respond accordingly. External authorities may force further modifications that could alter current plans. Further, our employees and our students must understand their collective obligation to keeping our Eastern and Charleston communities safe, and return ready to comply with EIU’s COVID-19 prevention guidelines.</p>
+							<p>Very soon, EIU will release a formal Campus Guidebook outlining our plans for a successful return to campus this fall. Please continue to check the <a href="https://www.eiu.edu/covid/">EIU website</a> and your Panthermail accounts for the latest information, and I hope that you are all staying safe.</p>
+							<p>We’re preparing for a great year. I am very excited to seeing you on campus this August. </p>
+							<p>Sincerely,</p>
+							<p>David Glassman<br />
+								President</p>
+					</div>
+<hr />
+					
+					<a name="06_10_2020"></a>
+<h3>Reducing Employee Risk for COVID-19 in the Workplace</h3>
+<h4><em>June 10, 2020</em></h4>
+					<p>Dear EIU Employees,</p>
+					<p>The university has begun the process for non-instructional employees to return to on-campus work in preparation for reopening our university as a residential campus in the Fall. (The specific details of EIU’s return-to-campus work plans are available in a <a href="#05_29_2020">May 29 email available on this page</a>.)</p>
+					<p>This week, most supervisors, directors and unit heads have come back to campus.  Over the next few weeks, all non-instructional employees will return except for those who have applied for and received an accommodation by the Office of Human Resources to continue to work remotely.  <a href="javascript:void(0)" onclick="showorhide('06_10_2020')">(read more)</a></p>
+					<div id="06_10_2020" style="display:none;">
+						<p><a href="https://www.eiu.edu/covid/2020CovidEIUGuidelinesSummary.pdf" target="_blank">The linked document</a> is a short summary of EIU guidelines to promote health and safety on campus. It includes information on COVID-19 symptom monitoring and reducing the risk of COVID-19 in the workplace through wearing masks or full-face shields, social distancing, hand hygiene, and sanitizing procedures. This information will be reviewed with employees by their supervisors as they return to campus. These strategies are guided by several sources — including the State’s Restore Illinois Plan, the Illinois Department of Public Health, CDC, and the Coles County Public Health Department — with everyone’s health and safety at the forefront of our planning.</p>
+						<p>Thank you all so much for your contributions to our campus in what has been a challenging spring. Your resiliency in these unprecedented times is intensely appreciated, and a true indicator of our commitments to each other and to our extended EIU Family. As always, we continue to encourage you to visit the EIU website and continue to check your emails frequently for the most up-to-date information on EIU’s response to the COVID-19 pandemic.</p>
+						<p>Sincerely,</p>
+						<p><strong>David Glassman</strong><br />
+President, on behalf of the University’s Administrative Team</p>
+<p><strong>Eric Davidson</strong><br />
+Interim Director, Health and Counseling Services</p>
+<p><strong>Linda Holloway</strong><br />
+Interim Director of Human Resources</p>
+					</div>
+					<hr />					
+					<a name="06_08_2020"></a>
+<h3>Summer 2020 Credit/No Credit (C/NC) Option Update</h3>
+<h4><em>June 8, 2020</em></h4>
+					<p>To support student success and provide targeted relief, a modified C/NC option for Summer 2020 is now available to undergraduate students with appropriate approvals and application by August 1, 2020. Please note, this process and the form varies from the earlier Spring 2020 accommodation. The Summer 2020 C/NC option seeks to support all of our students who have been impacted by COVID-19, recent unrest, economic challenges, and other issues that have rapidly changed everyday life across the state, nation, and world. </p>
+<p>The general process is outlined below: <a href="javascript:void(0)" onclick="showorhide('06_08_2020')">(read more)</a></p>
+<div id="06_08_2020" style="display:none;">
+						<ul>
+<li>An instructor or advisor concerned about an undergraduate student's academic performance recommends to the student that they might pursue a CR/NC option. Alternatively, the student may initiate this conversation with the instructor.</li>
+<li>Student consults their academic advisor on the CR/NC option for Summer 2020</li>
+<li>No later than August 1, the student petitions to change course grade types from a grade of "C" or "B" to "Credit," or CR. Individuals with grades of "D" or "F" can request a "No Credit," or NC.</li>
+<li>The electronic form is routed for review to the faculty, department chair, and the Registrar.</li>
+<li>As in the spring, the C/NC grades for Summer 2020 will not be applied to the maximum of 12 credits permitted pursuant to the catalog.</li>
+</ul>
+<p>To make request, please visit: <a href="https://www.eiu.edu/acaffair/machform/view.php?id=14504" target="_blank">https://www.eiu.edu/acaffair/machform/view.php?id=14504</a></p> 
+						<p><strong>Jay Gatrell</strong><br />Provost</p>
+
+					</div>
+<hr />
+					<a name="05_29_2020"></a>
+<h3>Masking and Return To Work</h3>
+<h4><em>May 29, 2020</em></h4>
+					<p>Dear EIU Employees,</p>
+					<p>EIU has always been an institution known for its friendliness and sense of family.  We all love our university and respect and care for each other.  We’ve demonstrated resilience in the face of challenges in the past and are doing so once again during the COVID-19 health crisis.  Our ability to meet these challenges has always come from working as a team in a collaborative spirit of unity. This pandemic is no different and EIU will once again be successful in navigating through the current COVID-19 environment. <a href="javascript:void(0)" onclick="showorhide('05_29_2020')">(read more)</a></p>
+					<div id="05_29_2020" style="display:none;">
+						<p>Our enrollment numbers for Fall 2020 are looking very good and we anticipate a strong class of new freshman, transfer and graduate students joining our returning Panthers.  We need to begin getting ready for our campus to be repopulated and that includes the phased-in re-acclimation of our non-instructional employees who have been working remotely back to campus. But as we do so, we need to be mindful of the health and safety of everyone in our EIU community. Our plans are guided by several sources including the State’s Restore Illinois Plan, the Illinois Department of Public Health, CDC, and the Coles County Public Health Department. EIU’s own Emergency Management Team, made up of employees across the campus and representing different divisions, have been central to gathering data and making recommendations to the administration.  Health and safety are at the forefront of our planning.</p>
+						<p>In an email last week, the University shared the idea that EIU and its central geographic region are on track for a phased reopening. The University also indicated that more details about Eastern’s incremental reopening would be forthcoming, and we’d like to share those updates with you today.</p>
+						<p>The first update involves the university’s policy for the wearing of masks and social distancing. Please remember that the wearing of masks and social distancing not only protects you, it protects your fellow colleagues. Let’s make sure we embrace our collective Panther spirit by continuing to look out for one another.</p>
+						<p>The second update provides details of our return to campus plan for non-instructional employees who have been working remotely. The Illinois Board of Higher Education has indicated that they will be releasing a set of guidelines specific to the Fall reopening of Illinois colleges and universities. We anticipate these guidelines will become available next week. Due to this development, we have made a slight alteration to our Phase-In timeline, as you will see below.</p>
+						<h4>Masking and Social Distancing Policies</h4>
+						<p>Like other places of business, the University’s plan to reintegrate employees to an on-site work environment will require new but anticipated changes. For EIU, one such change is the adoption of Masking and Social Distancing Policies.</p>
+						<p>Public health experts continue to learn about COVID-19. Based on current data and similar coronaviruses, the virus is believed to be spread between close contacts via respiratory droplets or contact with contaminated surfaces. Social distancing and use of face masks are two critical approaches to protecting each other from respiratory droplets produced through coughing, sneezing, and talking. For these public policy reasons, EIU’s masking policy is broadly written to support the health and safety of our campus.</p>
+						<p> Therefore, it is the policy of the university to require its employees (faculty, staff, and administrators), students, volunteers and guests to wear face masks while on campus, both indoors and outdoors, including all buildings, grounds, parking lots, and EIU vehicles. This includes everyone on campus as they travel to, from, and between all classes and/or university buildings. Proper wearing of a face mask includes covering the nose and mouth areas. This policy includes, but is not limited to, attending academic spaces (including areas such as classrooms, laboratories & studios), walking to restrooms, walking around others, traveling from one building to another or a parking lot, walking the campus grounds, etc. </p>
+						<p>Exceptions where face mask usage is not required are 1) when students are in their individual residence hall rooms, or when students can maintain six-foot distancing in student suites or university-operated apartments, 2) in a person’s assigned, individual office (when no others are present), 3) when individuals in a joint office may maintain at least a six-foot distance between colleagues or have a wall divider five feet tall or higher separating their desks, 4) while using a recreational machine in the EIU Recreation Center, 5) jogging on the Tom Woodall Panther Trail, 5) student-athletes during practices on their playing fields, pool or court, and 6) during the evenings and weekends for walks on campus if social distancing of six feet or more between walkers can be maintained.</p>
+						<p>Visitors and members of the public who refuse to comply with this policy may be asked to leave campus. </p>
+						<p>It is also the policy of the university to support and recommend social distancing between individuals to avoid spreading the illness. This includes limiting in-person gatherings as approved by State guidelines. </p>
+						<p>These policies are effective immediately and will remain in effect until revised information is provided by the University’s administration.</p>
+						<h4>Details of Return-to-Campus Plan</h4>
+						<p>As we plan for non-instructional employees to incrementally return over the summer, please know all staff will be provided with information outlining EIU’s on-campus health and safety requirements prior to rejoining their colleagues on campus. Additionally, the following details may help to provide some clarity and address some general questions, and are largely intended as a basic framework for returning to on-campus work.</p>
+						<ul>
+							<li>Week of June 8: Supervisors, directors and unit heads within all divisions (President’s Office, Academic Affairs, Business Affairs, Student Affairs and University Advancement) will return to campus.  A small number of other staff members may be asked to return during this time period as well. Those employees will be contacted by their supervisors. Employees returning to EIU’s campus for work this week represent PHASE 1 of the EIU Return-to-Campus Plan. (Supervisors, directors and unit heads who would like to return to campus during the week of June 1 may do so.)</li>
+							<ul>
+								<li>Supervisors, directors and unit heads will be provided with information outlining best-practices for managing and maintaining health and safety in their areas. They will be responsible for training their staff in on-campus health and safety requirements as staff return to campus in upcoming phases.</li>
+								<li>Supervisors, directors and unit heads will identify and notify approximately one-half of their staff members that they should prepare to return to campus during the weeks of June 15 and June 22. Notifications should be provided at least one week prior to their employees’ on-campus return dates. </li>
+							</ul>
+							<li>Weeks of June 15 and June 22: Employees contacted by their supervisors to return to work during this time period will begin to do so. This represents PHASE 2 of the EIU Return-to-Campus Plan, and may involve additional flexibility based on specific program and needs. Returning employees will receive additional training on health and safety requirements upon their return.</li>
+							<ul>
+								<li>Supervisors, directors and unit heads will identify and notify their remaining remote staff members that they should prepare to return to campus during the weeks of June 29 and July 6. Notifications should be provided at least one week prior to their employees’ on-campus return dates. </li>
+							</ul>
+							<li>Weeks of June 29 and July 6: Employees contacted by their supervisors to return to work in this time period will begin to do so. This represents PHASE 3 of the EIU Return-to-Campus Plan, and may involve additional flexibility based on specific program and needs. Returning employees will receive additional training on health and safety requirements upon their return.</li>
+						</ul>
+						<p>EIU employees with medical vulnerabilities, as identified by the CDC, are encouraged to contact Human Resources. Human Resources has an official Request for COVID-19 ADA-hybrid Reasonable Accommodation for Remote Work due to Higher Risk for Severe Illness due to COVID-19 form available. All accommodations will be evaluated every two months and may be canceled by EIU at its discretion based on guidance from IBHE and/or IDPH or an employee’s inability to perform essential functions of the position remotely (including availability in Charleston, IL during regular office hours and accurate time reporting). In most cases, Human Resources will have an interactive discussion with eligible employees, their supervisors, and their Vice President to determine reasonable accommodations.</p>
+						<p>The intent of EIU’s Return-to-Campus Plan is to have all non-instructional staff back to campus and EIU offices open by Monday, July 13. Even so, the plan must remain flexible to adapt to any changes required by new federal or state regulations, and to continue observing best-practice CDC recommendations and Illinois Board of Higher Education guidelines. Any additional or changing information will be provided in a future update.</p>
+						<p>While we understand these details may not answer every unique question, they are meant to provide a fundamental understanding of EIU’s approach to incrementally reintroduce non-instructional employees to the workplace over the next six weeks as part of the state’s broader Restore Illinois plan. </p>
+						<p>Again, thank you all so much for your contributions to our campus in what has been a challenging spring. Your resiliency in these unprecedented times is intensely appreciated, and a true indicator of our commitments to each other and to our extended EIU Family. As always, we continue to encourage you to visit the EIU website and continue to check your emails frequently for the most up-to-date information on EIU’s response to the COVID-19 pandemic.</p>
+						<p>Sincerely,</p>
+						<p><strong>David Glassman</strong><br />President, on behalf of the University’s Administrative Team</p>
+						<p><strong>Eric Davidson</strong><br />Interim Director, Health and Counseling Services</p>
+						<p><strong>Linda Holloway</strong><br />Interim Director of Human Resources</p>
+					</div>
+<hr />
+					<a name="05_22_2020"></a>
+<h3>Transitioning to Phase 3 of the Restore Illinois Plan</h3>
+<h4><em>May 22, 2020</em></h4>
+					<p>Many of you are now familiar with the <a href="https://coronavirus.illinois.gov/sfc/servlet.shepherd/document/download/069t000000BadS0AAJ?operationContext=S1" target="_blank">Restore Illinois</a> plan, a blueprint issued by the Governor’s Office on May 5, 2020, for a phased reopening of the state that supports our ongoing COVID-19 response.</p>
+					<p>For those of you not familiar with the details of the plan, it places EIU in a central geographic region of the State soon slated for transition into <strong>Phase 3 – Recovery</strong>. In fact, we expect this transition to begin as soon as late May or early June. <a href="javascript:void(0)" onclick="showorhide('05_22_2020')">(read more)</a></p>
+					<div id="05_22_2020" style="display:none;">
+						<p>With this in mind, the University has developed a plan for the reintegration of EIU employees to an on-campus work environment. Non-faculty employees will begin returning to campus during the month of June with the first 1/3 of employees who have been working remotely – including departmental and unit supervisors – returning to campus on or around June 1. The second stage will increase on-campus capacity to 2/3 of non-faculty employees around mid-June. The final stage will allow remaining non-faculty employees to return to campus nearer the end of June. Plans to return may differ between various campus units. Departmental supervisors will contact individual employees to discuss when they should expect to return to campus.</p>
+					<p>It is strongly encouraged that EIU non-faculty employees begin now to prepare for their return to the workplace. Individuals age 65 or older, or those with health-related conditions that make them more vulnerable to severe effects of the COVID-19 virus, may request accommodations to continue remote work. Such requests should be directed to the relevant supervisor(s) and to the Human Resources office.</p>
+					<p>While Phase 3 of the State’s Restore Illinois plan will relax some earlier restrictions, please know that EIU will continue to observe best-practice cautionary health guidelines intended to safeguard all members of our EIU community. As such, EIU employees can expect to receive more detailed information outlining the on-campus health and safety requirements for those returning to campus in upcoming announcements.</p>
+					<p>Thank you for all you do for EIU and for each other. We appreciate the resilience and flexibility each of you has shown as we strategize our safe return to campus in this dynamic environment. </p>
+					<p>With appreciation,</p>
+					<p>David M. Glassman<br />
+President</p>
+					</div>
+<hr />
+					<a name="05_06_2020"></a>
+<h3>Announcement Regarding 2020-21 On-Campus Room Options</h3>
+<h4><em>May 6, 2020</em></h4>
+					<p>Alongside a world-class education, our students' well-being is our primary concern at Eastern Illinois University. The events of the past two months have forced all of us to make significant changes to our everyday lives, and to ensure we're all doing our part to take care of those around us in these unique times. Many of those adjustments are likely to continue into the foreseeable future as the world continues to adapt and respond to COVID-19.</p>
+					<p>That’s why today, we want to share another significant step EIU is taking to support the well-being of our entire campus community. <a href="javascript:void(0)" onclick="showorhide('05_06_2020')">(read more)</a></p>
+					<div id="05_06_2020" style="display:none;">
+						<p>All continuing and incoming EIU students with housing and dining contracts will be provided single-occupancy rooms during the 2020-21 academic year at no additional cost.</p>
+					<p>Having a roommate has typically gone hand-in-hand with the residential university experience. However, these are not typical times. By offering this additional benefit to our on-campus residents, EIU intends to further ease the anxieties you and your family face as you return to campus this fall. It will also allow you to focus better on your studies in our friendly and supportive on-campus environment.</p>
+					<p>More detailed information on EIU’s 2020-21 single-room occupancy room guidelines are <a href="https://www.eiu.edu/housing/roomoptions.php" target="_blank">available here</a>. Single-occupancy rooms will be subject to availability, but we anticipate having capacity for all continuing and new incoming students.</p>
+					<p>At EIU, we take everyone’s well-being very seriously. This and other wellness-focused decisions will continue to be made as thoughtfully and responsibly as possible to protect our students, our employees, and our entire EIU community.</p>
+					</div>
+<hr />
+					<a name="05_04_2020"></a>
+<h3>How to Submit Credit / No Credit Grade Type Requests</h3>
+<h4><em>May 4, 2020</em></h4>
+					<p>Dear Students,</p>
+					<p>As I wrote to you on March 30, 2020, undergraduate students may petition the Registrar to change grade type in self-selected courses.  As of today, students may begin the process of submitting requests, after consulting their advisor via email, phone, or avirtual advising session.  To submit a request online, please visit https://www.eiu.edu/registra/credit_nocredit.php.</p>
+					<p>A broad overview is presented below: <a href="javascript:void(0)" onclick="showorhide('05_04_2020')">(read more)</a></p>
+					<div id="05_04_2020" style="display:none;">
+					<ul>
+						<li>Students can petition to change course grade types from a grade of “C” or “B” to “Credit,” or CR. Individuals with grades of “D” or “F” can request a “No Credit,” or NC.</li>
+						<li>There is no limit on the number of Spring 2020 courses a student can convert to credit/no credit grading. Students can make the decision on a course-by-course basis after final grades are posted at the end of the Spring 2020 semester.</li>
+						<li>When and where a CR designation may complicate graduation or program requirements, the Registrar, with the full support of your College Dean and Provost, will facilitate progress towards degree, registration, and/or certify graduation.</li>
+						<li> Students may petition to change course grade types through the Registrar beginning today through August 1, 2020. As indicated above, all students are required to consult their academic advisors prior to submitting requests.</li>
+					</ul>
+					<p>In addition to the information above, I, along with the Registrar, Mr. Brad Bennington, will also review the official Spring 2020 academic standing for all students to ensure the relative performance of individual students will not be disproportionately harmed by the transition from the physical classroom to online or remote learning. Likewise, Financial Aid and Enrollment Management ensures all students that merit-based scholarships will not be negatively impacted as a result of a student selecting the CR/NC option.</p>
+					<p>Additionally, while graduate students are not covered by this extraordinary change in practice, any graduate student who believes the COVID-19 events were especially harmful relative to their academic performance may contact the Dean of the Graduate School to discuss potential options.</p>
+					<p>Finally, I wish you well with exams and encourage you to communicate with faculty in a timely fashion if you have any questions.  And as always, we encourage you to adhere to physical distancing guidelines and the best practices of the CDC to keep you and those around you safe and healthy during the summer break.</p>
+					<p>Sincerely,</p>
+					<p>Jay D. Gatrell Ph.D.<br />
+Provost and Vice President for Academic Affairs</p>
+					</div>
+<hr />
+					<a name="05_01_2020"></a>
+<h3>A Message from President Glassman about Fall 2020 Classes</h3>
+<h4><em>May 1, 2020</em></h4>
+					<p>Dear Students,</p>
+					<p>I hope this message finds you and your loved ones healthy and safe.</p>
+					<p>We are very excited you have chosen to be part of our EIU Family, and we want you to know we fully intend to begin our Fall 2020 semester as a traditional residential campus. We are taking the health-related strategic steps to ensure that students can attend classes, live on our campus and in adjacent housing, and enjoy the various other amenities that epitomize EIU and the City of Charleston.</p>
+					<p>In the current climate of the pandemic, we understand that you may have questions and perhaps some anxiety in wondering what the Fall semester at EIU will look like. We are here to provide those answers. <a href="javascript:void(0)" onclick="showorhide('05_01_2020')">(read more)</a></p>
+					<div id="05_01_2020" style="display:none;">
+					<p>As we plan to resume face-to-face classes in the fall, we will do so following the scientific guidelines issued to us by our state, federal, and global health authorities. Any additional precautions we choose to take will ensure we’re doing all we can to protect the health, safety, and well-being of our students, our employees, and our community. Please know that alongside your educational experience, the safety and security of our students is the University’s highest priority. Our operations—no matter what modifications will be necessary to implement for the Fall semester—will surely reflect that responsibility. We are also very fortunate that our city and beautiful campus in Coles County continue to be a safe community, and the impact of COVID-19 has been limited in rural regions like East Central Illinois.</p>
+					<p>When you join us in the Fall, you will experience EIU’s top-ranked academic education in an environment of small class sizes, individualized attention, and classes taught by outstanding and caring faculty. Here, you won’t just be a number, you’ll be a member of the EIU family that is there to support you in every way on your journey to success.</p>
+					<p>Most importantly, EIU remains ALL IN for you. We understand that unique times call for unique solutions. So to maximize flexibility for our incoming students, we are making the following changes:</p>
+					<ul>
+						<li><a href="https://www.eiu.edu/aimhigh/" target="_blank">AIM HIGH Scholarship</a> deadlines have been extended to June 1. There is still time to send us your FAFSA and complete your financial aid requirements.</li>
+						<li>We are accepting new test scores and updated GPAs until August 24 to determine your eligibility for <a href="https://www.eiu.edu/scholarships/merit.php" target="_blank">EIU Merit Scholarships</a>.</li>
+						<li><a href="https://www.eiu.edu/deposit/" target="_blank">Deposits</a> for freshmen to secure their place in EIU’s Class of 2024 are open until August 24. (Earlier deposits ensure additional flexibility in your class schedule and choice of residence halls with your housing deposit.)</li>
+					</ul>
+					<p>We want you to feel totally comfortable about your deposit and excited about your commitment to attend EIU. Therefore, if any unforeseen occurrences prevent EIU from hosting on-campus classes beginning this fall, and you decide you do not wish to attend your Fall semester online, we are pleased to provide our incoming students the following options:</p>
+					<ul>
+						<li>You can defer admission to the University and retain any merit scholarship you may have been awarded for the Fall up to two semesters, as long as you do not attend another college or university during that time. Students who take advantage of this option can make their decisions before August 1 using the most up-to-date information possible, with no detrimental effect on their EIU housing arrangements or orientation schedules.</li>
+						<li>You can get your freshman deposit and/or Housing down payment refunded or credited to a future semester, as long as the request is received by August 1. For further details, contact <a href="mailto:admissions@eiu.edu">admissions@eiu.edu</a>.</li>
+					</ul>
+					<p>For all of EIU’s successes, and amidst its reputation for excellence, one thing remains abundantly clear—Eastern Illinois University will always be defined by its students. Throughout our rich 125-year history, that truth is especially evident today. Eastern is distinguished by your enthusiasm and your ambition. Most notably, I wish to share how genuinely I value the diversity and inclusivity of our incoming student body, and for all you will bring with you to our dynamic environment. As beautiful as our campus is, its splendor is undeniably enhanced by the kinship and charisma you will contribute to our learning communities.</p>
+					<p>We are excited about welcoming you to a world-class University that is known for creating phenomenal relationships with its students, providing them with an incredible education, and helping them to appreciate their EIU experience in a caring, safe, and supportive community. I speak for all EIU employees in saying I look forward to joining you on campus this fall, enthusiastically pursuing our personal and professional passions together as only EIU Panthers can.</p>
+					<p>I look forward to seeing you in the Fall.</p>
+					<p>Sincerely,</p>
+					<p>David Glassman<br />President, Eastern Illinois University</p>
+					<p><em>If you or any family member has additional questions, please contact <a href="mailto:admissions@eiu.edu">admissions@eiu.edu</a>, and an EIU representative will reach out to you in a timely manner.</em></p>
+					</div>
+					<hr />
+					<a name="04_28_2020"></a>
+				
+				<h3>Instructions Regarding Move-Out Procedures</h3>
+<h4><em>April 28, 2020</em></h4>
+					<p>On-Campus Students and Family Members,</p>
+<p>On Thursday, April 23, Governor Pritzker extended his stay-at-home order through May 30; that included a provision for allowing students to return to move out of their on-campus residences. Please note that the order stipulates all persons must continue to follow Centers for Disease Control and Prevention (CDC) guidelines as they pertain to social distancing, which includes the requirement of wearing masks and gloves.</p>
+<p>We are now able to launch signs-ups for our move-out process that will begin May 1. To ensure this move-out process occurs in the safest, healthiest, and most efficient way possible, we will continue to comply with CDC guidelines during this process. The move-out schedule has been planned to promote social distancing to best protect the health and safety of our students and staff. To that end, <strong>please read the following important instructions.</strong> <a href="javascript:void(0)" onclick="showorhide('04_28_2020')">(read more)</a></p>
+<div id="04_28_2020" style="display:none;">
+					<p><strong><u>Move-Out Process</u></strong></p>
+<ul>
+<li>Students will need to sign up for a move-out appointment. In order to promote social distancing, we are only allowing a limited number of slots each day for students to move out. We plan to do a contactless checkout process.</li>
+<li>Students should plan to bring no more than 2 additional people with them to assist in moving out. <strong>All persons coming to campus should be in good health</strong>.</li>
+<li>Individuals who fall into these categories noted below <strong>cannot help</strong> residents move out.
+<ul>
+<li>Anyone who has tested positive for or exhibits symptoms of COVID-19 or other respiratory/flu-like illness</li>
+<li>Older adults</li>
+<li>People who have serious underlying medical conditions such as:
+<ul>
+<li>Heart disease</li>
+<li>Diabetes</li>
+<li>Lung disease</li>
+<li>Asthma</li>
+<li>HIV/AIDS</li>
+</ul>
+</li>
+<li>Women who are pregnant</li>
+</ul>
+</li>
+<li>Roommates are asked to coordinate their return and are discouraged from being in the room at the same time.</li>
+<li><strong>Students and all helpers must come prepared with cleaning supplies, antibacterial wipes, <u>masks and gloves</u> to wear while moving out of their room to help protect yourself and others. </strong></li>
+<li>Students will have 2 hours to remove all belongings from their room.</li>
+<li>No overnight stays in the on-campus residences (hall, Greek Court and apartments) will be allowed.</li>
+<li>For the safety of residents currently still living with us, please only use the public restrooms in the lobby of your building.</li>
+<li>A staff member will be in touch with you prior to your move-out date, with confirmation of scheduled date/time and any additional instructions.</li>
+</ul>
+<p><strong><u>Select a Move-Out Appointment</u></strong>:</p>
+<p>As a reminder throughout this process, we will practice social distancing in alignment with recommendations from the CDC and the governor. As a result, a <strong>limited number of appointments</strong> are available for each time slot. This will minimize the number of students moving out at any one time.</p>
+<p>University Housing will be open for move-out as follows:</p>
+<ul>
+<li><strong>Monday to Friday:</strong> 9 a.m. to 7 p.m.</li>
+<li><strong>Saturday and Sunday</strong>: 9 a.m. to 8 p.m.</li>
+</ul>
+<p><br /> <strong>Schedule a move-out time at </strong><a href="https://www.eiu.edu/housing/moveout.php" target="_blank"><strong>eiu.edu/housing/moveout.php</strong></a></p>
+<p><strong><u>Move-Out Steps</u></strong>:</p>
+<p>Step 1: <strong>Use the self-check guide</strong> to check yourself for COVID symptoms prior to arriving on campus. <a href="https://healthcounselingservices.createsend1.com/t/ViewEmail/y/C7C74B4377E20881" target="_blank">Self-check guide</a></p>
+<p>Step 2: <strong>Call the on-call number</strong> to alert staff that you have arrived for checkout. Look on the exterior doors for an on-call number if you have questions upon your arrival.</p>
+<p>Step 3: <strong>Parking.</strong> When you arrive, leave your car in the parking lot until your belongings are packed.</p>
+<p>Step 4: <strong>Pack your belongings, Everything must be taken with you or put in the dumpster.</strong></p>
+<p>Step 5: <strong>Retrieve a cart, if needed. </strong>A limited number of carts will be available. Transport your belongings to the loading area. It is up to you to sanitize the cart prior to use.</p>
+<p>Step 6: <strong>Bring your car</strong> to the loading area and transfer your belongings. <strong>(Please note there is a 30-minute time limit for vehicles in the loading area). </strong></p>
+<p>Step 7: <strong>Wipe down your cart</strong> with antibacterial wipes and <strong>return your cart</strong> to the lobby of your residence hall.</p>
+<p>Step 8: <strong>Return your room furniture</strong> to the bunk configuration and the room arrangement according to the instructions included at <a href="https://www.eiu.edu/housing/closinginfo.php" target="_blank">eiu.edu/housing/closinginfo.php</a>.</p>
+<p>Step 9: <strong>Ensure your keys have been left on your desk. Complete the Check-out form at </strong><a href="https://eiu.edu/housing/checkout.php" target="_blank">eiu.edu/housing/checkout.php</a><strong> stating you have cleared your room, attach your room picture and leave your keys on your desk.</strong> This form will be considered your official check-out notice.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li><strong>Bring a cart or dolly</strong> with you.</li>
+<li><strong>Limit the number of people in an elevato</strong> <strong>Only members of your moving party should ride the elevator together.</strong></li>
+<li>Able-bodied individuals not pushing a cart are asked to take the stairs.</li>
+</ul>
+<p><strong><u>Your Belongings</u>:</strong></p>
+<ul>
+<li>All items must be removed from your room &ndash; you must take <strong>everything</strong> with you or put things in the trash. <strong>There will not be donation stations available.</strong></li>
+<li><strong>Please note:</strong> The student must be present when items are removed.</li>
+<li>You will need to provide your own plastic bins or boxes for transporting your belongings.</li>
+<li>You should bag and remove all trash to the appropriate outside containers. A limited number of additional trash bags may be available in the lobby.</li>
+<li>On-campus storage is not available. If you cannot take your items home, you must secure your own off-campus storage.</li>
+</ul>
+<p>Thank you for your patience during this difficult time. We know our students are anxious to pick up their belongings. We appreciate your help to make this process as safe as possible for you and your move-out crew during this time. We wish our students success as they conclude the spring semester. Congratulations to our graduating seniors!</p>
+<p><strong>Questions?</strong></p>
+<p>If you have any questions about the move-out process visit the FAQs eiu.edu/housing/covid.php or contact <a href="mailto:housing@eiu.edu">housing@eiu.edu</a> or 217-581-5111.<br /> </p>
+<p>Do you have housing for next year yet? If not, then we've got you covered! There are tons of great options available in the Residence Halls and Greek Court. The online Room &amp; Board Contract is accessible through your PAWS account. Interested in our on-campus apartment complex, University Court? Reach out to their staff at <a href="mailto:univcourt@eiu.edu">univcourt@eiu.edu</a> to start the process!</p>
+</div>
+<hr />
+	<a name="04_08_2020"></a>
+					<h3>Extension of Stay-at-Home Order Through April</h3>
+<h4><em>April 8, 2020</em></h4>
+					<p>Dear Students,</p>
+					<p>It is my absolute hope that you are all doing well as you continue to transition your coursework to an online format. The Governor of Illinois recently extended the “Stay-at-Home” Executive Order to continue throughout the month of April.  During this time, we urge all our students to follow the guidelines for safe practices that will help in slowing the spread of COVID-19.  It is critical that we all do our part to stay healthy and to keep those around us as safe as possible. <a href="javascript:void(0)" onclick="showorhide('04_08_2020')">(read more)</a></p>
+					<div id="04_08_2020" style="display:none;">
+					<p>Following the Executive Order extension, I’d like to share the following important updates with our students:</p>
+					<ul>
+	<li>For those students who have left University Housing due to the COVID-19 pandemic, prorated credits are being applied to your student accounts, and refunds of positive balances will be made to your direct deposit account in about four to five weeks.  For those students who have not signed up for direct deposit, refund checks will be sent by mail to your permanent address.</li>
+	<li>All Graduate Assistants will be paid their stipend through the end of the semester.</li>
+	<li>All students on federal work-study funds will continue to be paid up to the amount allocated in federal funding. All students on federal work-study should continue to work on campus or remotely if at all possible.</li>
+	<li>All student workers who were working prior to Spring Break and were scheduled to return to work after Spring Break will continue to be paid, beginning from March 23, for the remainder of the semester. Students’ pay will be based on the average hours worked per week prior to Spring Break or based on their supervisor’s intended scheduling of the student’s hours for the remainder of the semester. All students will be paid at their regular hourly rate and direct deposits will be made according to the University’s established payroll schedule. Students currently still working on campus or remotely should turn in their work hours as they normally do.  These students may consult with their supervisor to work additional hours if it is within budget and doesn't exceed 42 hours per pay period.  For all other students, pay-period hours will be handled automatically through the Payroll Office.</li>
+	<li>Due to the COVID-19 pandemic and because nearly 90% of our summer enrollment is through online learning, EIU’s Summer 2020 courses will be online or hybrid. </li>
+	<li>With the extension of the Governor’s Stay-at-Home Executive Order, the University cannot allow students to move out their belongings from EIU’s university housing (Residence Hall, Greek Court, University Court and University Apartments) at this time. When it becomes possible to do so, students will receive a message from Eastern’s Housing Office indicating the process and timeline for safely moving their belongings out of on-campus residences.</li>
+	<li>At the end of the semester, students will need to return their textbooks. This can be done by using the external book drop located on the east side of the Textbook Rental Service building or by mailing textbooks back to Textbook Rental Service. Students will need their E-numbers or Panther Cards to activate the external book drop. Eastern is extending the deadline for returning textbooks through Sunday, May 10. The address for mailing textbooks back to Textbook Rental Service is Textbook Rental Service/ Eastern Illinois University / 975 Edgar Drive / Charleston, IL 61920.  When mailing textbooks, we recommend students insure all packages.  Students returning to Charleston to move out of their on-campus housing may return their textbooks at that time to Textbook Rental Service via the external book drop.</li>
+	<li>To our graduating seniors: I, like you, am deeply regretful that this unprecedented pandemic has forced us to cancel our May graduation ceremonies. Please know that all of us at EIU celebrate your success and accomplishments. You are all wonderful examples of what it means to be an EIU Panther, poised to go on to great successes in your future. Still, we want to provide an opportunity to publicly celebrate your graduation with friends and family, and hope you will join us for a shared commencement ceremony on Saturday, December 19, 2020, that will allow us to applaud our May 2020 and December 2020 graduates. We expect it to be a monumental occasion, and allow us all to simultaneously celebrate EIU’s 125-year anniversary.  It is surely going to be a wonderful event!</li>
+					</ul>
+					<p>As we move toward the end of the semester, I want you all to know how proud our faculty, staff and administration are of every single one of our EIU students.  We realize the unforeseen challenges of moving back home, transitioning to online coursework, and the general stress and anxiety caused by the COVID-19 pandemic forced us all to respond rapidly and responsively to an abruptly changing environment. You have done so with remarkable resolve, and we are all deeply inspired by your collective confidence, responsibility, and Panther pride.  </p>
+
+<p>With gratitude for your exceptional resilience,</p>
+					<p>David M. Glassman<br />
+						President</p>
+						<p><em>If you or any family member has additional questions, please contact <a href="mailto:admissions@eiu.edu">admissions@eiu.edu</a>, and an EIU representative will reach out to you in a timely manner.</em></p>
+</div>
+					<hr />
+	<a name="04_03_2020"></a>
+<h3>Information and Guidance for EIU Students</h3>
+<h4><em>April 3, 2020</em></h4>
+					<p>Dear EIU Student,</p>
+					<p>Information and guidance regarding the COVID-19 pandemic quickly evolves and changes.  With the implementation of on-line and distance learning, and our encouragement that our students return to their permanent residences, our student body is spread throughout Illinois and the nation.   Regardless of wherever you may be, we still feel a strong responsibility to provide you with updates regarding prevention, screening and treatment of COVID-19. <a href="javascript:void(0)" onclick="showorhide('04_03_2020')">(read more)</a></p>
+					<div id="04_03_2020" style="display:none;">
+					<h4>Preventative Measures</h4>
+					<p>The best way to prevent infection is to avoid exposure.  You can help prevent the spread by doing the following:</p>
+					<ul>
+						<li>Practice social distancing/physical distancing – stay at least 6 feet away from others.</li>
+						<li>Remain out of congregate settings, avoiding mass gatherings.</li>
+						<li>Wash your hands often with soap and water for at least 20 - 30 seconds.</li>
+						<li>Avoid close contact with persons who have respiratory illness symptoms.</li>
+						<li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+						<li>Cover your cough or sneeze with a tissue, then throw the tissue in the trash.</li>
+						<li>Clean and disinfect frequently touched objects and surfaces.</li>
+						<li>Stay home when you are sick.</li>
+					</ul>
+					<h4>COVID-19 Daily Screening</h4>
+					<p>All Eastern Illinois University students are highly urged to conduct a COVID-19 Daily Self-Screening by taking their temperature and assessing respiratory symptoms. This action is important and should be conducted every day, especially if one is not sheltering in place, by answering the following questions.</p>
+					<ol>
+						<li>Do you have difficulty breathing (struggling for each breath) or shortness of breath at rest or when lying down?</li>
+						<li>Do you have a fever (100.4° F [38.0° C] or greater) using an oral thermometer?</li>
+						<li>Aside from fever, do you have any of the following: dry cough, sore throat, runny nose, unexplained lack of smell or taste?</li>
+					</ol>
+					<p>If you answered yes to #1, call your local provider or hospital emergency room.  If this is an emergency, call 911 and tell them you are having respiratory problems. </p>
+					<p>If you answered yes to # 2 and/or #3, limit your contact with others, and isolate yourself from others.  If your symptoms continue or progress, contact your health care provider for medical advice.</p>
+					<h4>Seeking Medical Attention</h4>
+					<p>If a student is highly sick and believes they need medical attention, they should call a medical provider before attempting to visit a medical facility. <strong><em>Anyone with a life-threatening illness or injury should call EMS at 911 or go to the nearest emergency room.</em></strong></p>
+					<h4>On-Campus Students and Off-Campus Students in Charleston Area</h4>
+					<p>Students living on campus and in the greater Charleston area are strongly encouraged to call the EIU Health and Counseling Medical Clinic to make an appointment for their medical needs. In many cases, students are seen the same day.</p>
+					<p><strong>EIU Health and Counseling Medical Clinic</strong><br />
+						217-581-3013<br />
+						Open Monday - Friday: 8 a.m. - 12 p.m.; 1 p.m. - 4:30 p.m.</p>
+					<p>When the EIU Medical Clinic is closed, several other medical care facility options exist in the Charleston area. Students are strongly encouraged to call these facilities prior to visiting.</p>
+					<p><strong>SBLHS Respiratory Clinic</strong><br />
+						217-238-3000<br />
+						Open Monday - Friday: 8 a.m. - 7 p.m.<br />
+						Saturday and Sunday, 8 a.m. - 3 p.m.</p>
+					<p><strong>SBLHS Walk-In Clinic  </strong><br />
+						217-345-2030<br />
+Open Monday - Friday: 8 a.m. - 7 p.m.<br />
+						Saturday and Sunday: 8 a.m. - 3 p.m.</p>
+					<p><strong>Carle Clinic Urgent Care Clinic</strong><br />
+217-258-5900<br />
+						Open Daily: 8 a.m. - 8 p.m.</p>
+
+					<h4>Off-Campus Students Outside of the Charleston Area</h4>
+					<p>Students living outside of the immediate Charleston area are encouraged to contact their regular primary provider. If you do not have a primary provider, you are encouraged to contact a local urgent care clinic. <strong><em>Anyone with a life-threatening illness or injury should call EMS at 911 or go to the nearest emergency room.</em></strong></p>
+
+					<h4>Individuals Who Have Been Sick but Have Not Been to a Medical Provider</h4>
+					<p>Individuals who have been sick with confirmed or suspected COVID-19 symptoms who have self-isolated and <strong>have not been tested for COVID by their medical provider</strong> should utilize the following criteria in determining when returning to class or work.  </p>
+					<ul>
+						<li>Resolution of fever without the use of fever-reducing medications and</li>
+						<li>Improvement in respiratory symptoms (e.g., cough, shortness of breath), AND</li>
+						<li>At least 3 days (72 hours) have passed since recovery defined as resolution of fever without the use of fever-reducing medications and improvement in respiratory symptoms (e.g., cough, shortness of breath); AND</li>
+						<li>At least 7 days have passed since symptoms first appeared.</li>
+					</ul>
+					<h4>Notifying Faculty of an Illness</h4>
+					<p>If you have been diagnosed as having COVID-19 or other respiratory illnesses and your medical provider has recommended that you refrain from school work and other academic responsibilities, please submit any supporting documentation from your provider to the EIU Health and Counseling Medical Clinic and we will provide notice to your faculty members of your intended absence(s). Please be reminded that it is your responsibility to follow-up with your faculty concerning missed assignments, quizzes, tests, and other academic responsibilities.</p>
+					<p>Your cooperation in conducting a self-screening and abiding by guidelines for staying at home are important in helping “flatten the curve” and in making EIU a healthier and safer place for all.</p>
+					<p>Eric S. Davidson, Ph.D., MCHES, CSPS <br />
+						Interim Director, EIU Health and Counseling Services</p>
+					<p>Joseph R. Baumgart, M.D.<br />
+						Medical Director, EIU Health and Counseling Services</p>
+					</div>
+					<hr />
+	<a name="04_01_2020b"></a>
+<h3>Self-Screening Instructions for Employees During the COVID-19 Pandemic</h3>
+<h4><em>April 1, 2020</em></h4>
+					<p><strong>PLEASE PRINT OUT AND USE AS A REFERENCE WHEN CONDUCTING SELF-SCREENINGS</strong></p>
+					<p>All members of the Eastern Illinois University community – including any faculty, staff, or independent contractors who will be on campus – are strongly urged to conduct a COVID-19 daily self-screening by taking their temperature and assessing respiratory symptoms.  This action is important and should be conducted before leaving one’s residence and/or arriving on campus. <a href="javascript:void(0)" onclick="showorhide('04_01_2020b')">(read more)</a></p>
+					<div id="04_01_2020b" style="display:none;">
+					<p>After screening, <strong>individuals demonstrating the following conditions should stay at home</strong>. If symptoms continue or progress, they should contact their health care provider for medical advice.</p>
+					<ul>
+						<li>a fever (100.4° F [38.0° C] or greater) based on the use of oral thermometer.</li>
+						<li>and/or symptoms of acute respiratory illness (i.e. dry cough, shortness of breath, trouble breathing).</li>
+						<li>lack of taste and or smell.</li>
+					</ul>
+					<p>Supervisors who suspect an employee may be ill may send them home for the day with pay.</p>
+					<p>Individuals who have been sick with confirmed or suspected COVID-19 symptoms who <strong>have self-isolated and have not been tested for COVID by their medical provider</strong> should utilize the following criteria in determining when to go to work: </p>
+					<ul>
+						<li>Resolution of fever without the use of fever-reducing medications, AND</li>
+						<li>Improvement in respiratory symptoms (e.g., cough, shortness of breath), AND</li>
+						<li>At least 3 days (72 hours) have passed since recovery defined as resolution of fever without the use of fever-reducing medications and improvement in respiratory symptoms (e.g., cough, shortness of breath); AND</li>
+						<li>At least 7 days have passed since symptoms first appeared.</li>
+						<li>If an individual has never tested for COVID-19 but has an alternate diagnosis (e.g., tested positive for influenza), criteria for returning to work should be based on that diagnosis.</li>
+					</ul>
+					<p>Your cooperation in conducting a self-screening and abiding by guidelines for staying at home and returning to work are important in helping “flatten the curve” and in making EIU a healthier and safer place for all. </p>
+					<p>Eric S. Davidson, Ph.D., MCHES, CSPS<br /> 
+						Interim Director, EIU Health and Counseling Services </p>
+					<p>Joseph R. Baumgart, M.D.<br />
+						Medical Director, EIU Health and Counseling Services</p>
+					</div>
+	<hr />
+		<a name="04_01_2020a"></a>
+<a name="04_01_2020"></a>
+<h3>A Message From EIU Housing and Dining Services</h3>
+<h4><em>April 1, 2020</em></h4>
+<p>To All University Housing Students –</p>
+					<p>Thank you for your patience as we respond to the complexities and challenges of the COVID-19 pandemic.  Please read the important information below as it answers many of your questions concerning University Housing and Dining. You can also visit the <a href="https://www.eiu.edu/housing/covid.php">University Housing COVID-19 FAQ page</a> for additional information. <a href="javascript:void(0)" onclick="showorhide('04_01_2020a')">(read more)</a></p>
+	<div id="04_01_2020a" style="display:none;">
+					<h4>Refunds/Credits</h4>
+	<p>All students who currently are no longer residing on campus as a response to the COVID-19 pandemic will be provided a prorated credit to their university account for the time period from March 23 through the remainder of the semester. The credit will be first applied to any balance on the account, and then a refund check or direct deposit for any excess credit will be sent to the student’s permanent address in late April. For additional information on signing up for a direct deposit, students can visit <a href="https://www.eiu.edu/busofc/bursar_directdeposit.php">eiu.edu/busofc/bursar_directdeposit.php</a>. Dining Dollars not yet used will be rolled over to the 2020-21 school year.</p>
+	<h4>Move-Outs</h4>
+	<p>The State of Illinois is under a Shelter in Place order as mandated by Governor Pritzker.  Eastern Illinois University is complying with this order and as such <strong>cannot offer move-outs from on campus residences at this time</strong>.  Updates regarding a move-out process will be communicated as we are able.</p>
+	<h4>Mail and packages</h4>
+	<p>Our priority is the health and safety of our students.  Mail forwarding may be delayed. As we are able, we will forward all 1st class mail and packages to the permanent address that students have on file with the University.  If students need to update their permanent address, students can send the information to <a href="mailto:records@eiu.edu">records@eiu.edu</a> from their Panthermail account, or contact the Registrar's Office for additional instructions at 217-581-3511.</p>
+	<h4>For residents that are currently on campus</h4>
+	<p>Anyone approved and remaining on campus should continue to follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fprepare%2Fprevention.htmlQ" target="_blank">CDC’s recommended prevention guidelines</a> as it pertains to social distancing.</p>
+	<p>Dining Services is open for carryout only in the Taylor Dining Center.   We will be offering meals 7 days a week for lunch from 11 a.m. to 1 p.m. and dinner from 4:30 p.m. to 6:30 p.m.  Residents must enter through the Lawson side of the Taylor Dining Center.  As stated, meals will be carryout only and students should adhere to the social distancing guidelines when they eat their meals.</p>
+	<p>Residents currently on campus can pick up/check their mail at the Lawson Hall Desk.  The desk will be open Monday – Saturday from 9 a.m. to 6 p.m. and Sundays from 11 a.m. to 6 p.m.  Residents will be required to present a photo-id to retrieve their mail.</p>
+	<p>We appreciate your patience as we navigated these unprecedented events.  Please know that our top priority is your safety as well as the entire university community.   If you have any questions, please reach out to us at <a href="mailto:housing@eiu.edu">housing@eiu.edu</a>.</p>
+	<p>Thank you and stay safe! </p>
+	</div>
+	<hr />
+		<a name="03_30_2020"></a>
+<h3>Undergraduate Student Option to Change Grade Type</h3>
+<h4><em>March 30, 2020</em></h4>
+<p>Dear Students,</p>
+<p>As the university makes our unanticipated transition to remote learning, EIU faculty continue to be committed to academic excellence and high-quality learning experiences for every student.  At the same time though, we — the university and specifically your faculty — also understand the challenges this rapid transition presents you, our students. For that reason, your faculty encourages every one of you to remain fully engaged in their classes, read your email, login to D2L, and strive to obtain the highest levels of academic achievement — on every assignment, on every test, and in every course.  Please know, we believe in you — you’ve got this! <a href="javascript:void(0)" onclick="showorhide('03_30_2020')">(read more)</a></p>
+	<div id="03_30_2020" style="display:none;">
+					<p>While I am confident every member of the EIU community is working to promote student success, the university recognizes that in some cases students may need additional options. Indeed, the COVID-19 crisis itself has not only prompted academic challenges, but also has changed everyday life for students and faculty alike. To respond to these significant disruptions and the migration from face-to-face to remote learning, undergraduate students may petition the Registrar to change grade type in self-selected courses. While graduate students are not covered by this extraordinary change in practice, any graduate student who believes the COVID-19 events were especially harmful relative to their academic performance may contact the Dean of the Graduate School to discuss potential options (<a href="#faq">see the FAQs, below</a>).</p>
+	<p>In terms of the administrative relief available to undergraduate students, a broad overview of the changes is presented below:</p>
+	<ul>
+		<li>Only after consulting their academic advisor, students can petition to change course grade types from a grade of “C” or “B” to “Credit,” or CR. Individuals with grades of “D” or “F” can request a “No Credit,” or NC.</li>
+		<li>There is no limit on the number of Spring 2020 courses a student can convert to credit/no credit grading. Students can make the decision on a course-by-course basis after final grades are posted at the end of the Spring 2020 semester.</li>
+		<li>When and where a CR designation may complicate graduation or program requirements, the Registrar, with the full support of your College Dean and Provost, will facilitate progress towards degree, registration, and/or certify graduation.</li>
+		<li>Students may petition to change course grade types through the Registrar beginning May 13 through August 1, 2020. As indicated above, all students are required to consult their academic advisors prior to submitting requests.</li>
+	</ul>
+	<p>In addition to the information above, I, along with the Registrar, Mr. Brad Bennington, will also review the official Spring 2020 academic standing for all students to ensure the relative performance of individual students will not be disproportionately harmed by the transition from the physical classroom to online or remote learning.  Likewise, Financial Aid and Enrollment Management ensures all students that merit-based scholarships will not be negatively impacted as a result of a student selecting the CR/NC option.</p>
+	<p>We’ve made these options available with our students’ best interests in mind. If you have further questions about grading options, please contact your academic advisor.  Further, I would encourage you to review the additional FAQs below the signature line.</p>
+	<p><strong>Finally, as always, our primary concern continues to be your health, well-being and safety. Regardless of where you may be completing your semester from, please continue to follow the <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fprepare%2Fprevention.html" target="_blank">CDC’s best-practice guidelines</a> for keeping you and those around you healthy and safe.</strong></p>
+	<p>Sincerely,</p>
+<p>Jay Gatrell Ph.D.<br />Provost and Vice President for Academic Affairs</p>
+		<a name="faq"></a>
+	<div class="programbox program_1" data-toggle="program_1">
+<h3 class="program_1_h3">MORE INFORMATION ABOUT CHANGING GRADE TYPE & FAQs</h3><span class="programbox-close" data-toggle="program_1"></span> 
+<div id="program_1_info">
+	<h4>Are all courses now “Pass” or “Fail”? </h4>
+	<p> No. Eastern Illinois does not have a grade type equivalent to “Pass” or “Fail.” After spring grades are posted, students may seek academic relief by requesting a grade type change for one or more courses. Please note, the only grade type change relief available will be from a letter grade to credit or no credit only. Most importantly though, while relief is available, the expectation is that all students will remain engaged in their courses and perform at the highest level possible. Finally, it is the student’s responsibility to meet with their advisor and submit any requests prior to the August 1, 2020 deadline. The online form will be available at the Registrar’s webpage in May. </p>
+	<h4>Who can request a change in grade type?</h4>
+	<p>Any undergraduate student enrolled at EIU during the Spring 2020 semester. This one-time form of administrative relief cannot be applied to prior or subsequent terms.</p>
+	<h4>How does an undergraduate student request a change in grade type from a letter grade to credit / no credit (CR/NC)?</h4>
+	<p>After the close of the Spring 2020 semester when final course grades have been entered, students must consult with their advisor prior to making a request for a change in grade type in one or more classes. Following the meeting with the advisor, students can complete an electronic form that will be posted on the Registrar’s website from May 13 through August 1, 2020.</p>
+	<h4>How does a graduate student obtain administrative relief as a result of the COVID-19 crisis and the transitions / disruptions that have occurred during the Spring 2020 semester?</h4>
+	<p>Graduate students may make a direct appeal to the Dean of the Graduate School for academic relief in extraordinary situations. Depending on the context, graduate students may be eligible for the CR/NC option. Graduate students should consult with their academic advisor prior to making this request, and if desired, must do no later than August 1, 2020. </p>
+	<h4>Why is consultation with your advisor required?</h4>
+	<p>The decision to change a course grade from a letter grade to CR/NC in one or more classes can have significant consequences. In nearly all cases, students should focus on completing their coursework to earn the highest letter grade possible in each of their courses. Should a student consider the CR/NC option, every student needs to understand the implications relative to future transferability, as well as the future admission requirements to graduate school and/or professional programs (such as medicine, physical therapy, physician assistant, or law school). Indeed, many post-baccalaureate programs have minimum letter grade requirements in required courses as an admissions requirement. Please be sure to discuss your career goals with your advisor, including any intent to pursue an advanced degree. Similarly, if you are in a degree program leading to licensure or specialized accreditation, your advisor will be able to provide guidance.</p>
+	<h4>Who is my advisor? How do I meet with my advisor?</h4>
+	<p>Your advisor is listed at the top of your degree audit in PAWS (<a href="https://www.eiu.edu/acaffair/dars/student.php" target="_blank">instructions here</a>). If no advisor is listed, please contact the department office for your major. Students may accomplish the required consultation with their advisor through a virtual meeting (e.g., Zoom, FaceTime, Skype, etc.), telephone call, or email. The key is to discuss the potential implications of a grade type change on future academic opportunities or professional goals.</p>
+	<h4>What about teacher education students?</h4>
+	<p>With respect to teacher education students, EIU has received confirmation from the Illinois State Board of Education (ISBE) that the CR/NC is acceptable as the CR is the equivalent of a “C grade or better.”</p>
+	<h4>What about EIU course pre-requisites?</h4>
+	<p>In situations where a “C grade or better” is required in a pre-requisite course, a “CR” will meet the EIU requirement and all academic deans agree on this point.</p>
+	<h4>What about student-athletes?</h4>
+	<p>Student-athletes are expected to consult their departmental or program advisor, as well as their assigned Panther Athletic Academic Student Services advisor.</p>
+	<h4>Do I need advisor “approval”?</h4>
+	<p>No. The decision to change grade type is yours as a student. While an advisor consultation is required, you are responsible for the decision: advisor or program approval is not required. In order to prevent limiting future options or situations where a course would be repeated, the letter grade is the safest option and is preferred. </p>
+	<h4>When can I submit the request?</h4>
+	<p>Undergraduate students may submit their request electronically to the Registrar after final grades post on or about May 13, 2020. All requests for grade type changes to CR/NC must be submitted prior to August 1, 2020. After August 1, 2020, no further requests will be accepted. The same timeline applies to graduate student appeals to the Graduate School Dean.</p>
+	<h4>What does CR/NC mean and why is it different than a letter grade (A/B/C/D/F)?</h4>
+	<p>Generally, the safest and preferred option is to accept the earned letter grade. The most important potential benefit of the CR/NC option is that is does not impact your term or cumulative GPA. Although this may be a benefit in some cases (outlined below) it is important to recognize that choosing NC instead of a “D” means you will NOT earn academic credit for the course. Students are encouraged to consider the following:</p>
+	<ul>
+		<li>If you earned an “A” the “CR” does not provide any potential benefit. The letter grade is the optimal choice.</li>
+		<li>If you earned a “B” the “CR” may provide some benefit depending on a student’s cumulative GPA. Additionally, all students should discuss the future implications of converting this grade to a “CR” with their advisor. </li>
+		<li>If you earned a “C” the “CR” may provide some benefit depending on your cumulative GPA. All students should discuss the future implications of converting this grade to a “CR” with their advisor. </li>
+		<li>If you earned a “D” the “NC” option is not optimal as you will not earn academic credit. As such you will need to retake the course, if required. Depending of the specific context, converting a “D” to a “NC” might make sense in a given term — particularly if the student intends to replace the grade in a future term by repeating the course. As the grading scale for graduate school is different than that for undergraduate students, only a B or C can be changed to CR/NC for a graduate student. </li>
+		<li>If you earned an “F” the “NC” option would provide a concrete benefit to your term and cumulative GPA. In both cases, academic credit is not earned.</li>
+	</ul>
+	<h4>What about an “Incomplete”?</h4>
+	<p>The grade "I" or "Incomplete" for courses in which letter grades are earned is given only by the course instructor when, because of documented illness or other valid reason, a student's progress in a course is delayed so that not all requirements for the course are fulfilled by the official closing date of the term. In no case may an "I" be substituted for a failing grade. Procedures for assigning and removing incomplete grades are <a href="https://castle.eiu.edu/auditing/046.php" target="_blank">outlined in IGP 46</a>. An “incomplete” grade does not remain on your transcript and is removed once you have earned a letter grade. You are encouraged to complete course assignments as soon as possible.</p>
+		</div>
+	</div>
+	</div>
+	<hr />
+	<a name="03_27_2020"></a>
+<h4><em>March 27, 2020</em></h4>
+<p>To EIU Students &mdash;</p>
+<p>The world we share has shifted noticeably in just the past few weeks. Even so, I am profoundly inspired by your determination and flexibility.</p>
+<p>As lifelong learners and future leaders, your ability and willingness to rapidly adapt in this unprecedented time will be an epic hallmark of your experience here at EIU. More than that, it is a skill you can proudly carry with you throughout your personal lives and professional careers. <a href="javascript:void(0)" onclick="showorhide('03_27_2020')">(read more)</a></p>
+<div id="03_27_2020" style="display:none;">
+					<p>Together, it is my sincere hope that we are all confidently preparing for our Spring 2020 classes to resume Monday in an online format. EIU’s faculty members are positively poised to continue the semester online, and to provide each of you the most seamless transition possible as we finish the term. I encourage you to stay in regular contact with your instructors, who stand ready to assist you at every available opportunity.</p>
+	<p><strong>Most importantly, I urge you, regardless of where you may be currently located, to continue to follow the <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html" target="_blank">CDC’s best-practice guidelines</a> for keeping you and those around you healthy and safe. Practice physical distancing. Avoid close contact. Refrain from gathering in groups for social events or playing close-contact sports. Cover coughs and sneezes. Wash your hands often. Clean and disinfect common surfaces. By implementing these common-sense routines to protect ourselves, we also can protect everyone else around us — including those who we love most and are closest to us. Demonstrating such discipline today will pay dividends for all of us in the future.</strong></p>
+<p>I am very proud of each of you, and of the unique and compassionate relationship we all share as members of the EIU Family. For that, I celebrate you all.</p>
+	<p>Stay safe, and please continue to check your EIU email and the EIU website with increased frequency for the most up-to-date information from the university. Specific questions not already answered by <a href="faq.php">our FAQs</a> may be sent to <a href="mailto:covid19info@eiu.edu">covid19info@eiu.edu</a>, and you should receive a response within 24 hours.  </p>
+<p>David M. Glassman<br />President</p>
+</div>
+<hr />
+	<a name="03_24_2020"></a>
+<h3>A Message from Paul McCann to All EIU Employees</h3>
+<h4><em>March 24, 2020</em></h4>
+<p>To my EIU colleagues &ndash;</p>
+<p>Some additional clarification on time reporting as EIU operates in a way consistent with Illinois<span> </span><a href="https://eiupresident.cmail19.com/t/y-l-uikyyut-tudhituyhj-y/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eiupresident.cmail19.com/t/y-l-uikyyut-tudhituyhj-y/&amp;source=gmail&amp;ust=1585101635580000&amp;usg=AFQjCNEHzF4PP52KqUCQVFjjtXTlTI_okA">Executive Order 2020-10</a>. </p>
+<p>Any employee who is working, on-campus or remotely, will need to take accrued time if they do not work as scheduled. Even during the COVID-19 pandemic, the regular absence call-in (alerting your supervisor of your absence) and reporting of time off under the appropriate accrued benefits category is required. This includes if an employee cannot work because:  <a href="javascript:void(0)" onclick="showorhide('03_24_2020')">(read more)</a></p>
+<div id="03_24_2020" style="display:none;">
+					<ul>
+<li>they believe they are in a high-risk category for COVID-19;</li>
+<li>they or a close family member have been exposed to COVID-19 and need to self-isolate; or </li>
+<li>they or a close family member have COVID-19 symptoms and are seeking a diagnosis.</li>
+</ul>
+<p>EIU recognizes some of its Unionized employees may have reached temporary agreements during the COVID-19 pandemic. Those employees are encouraged to contact their local Union Representation.</p>
+<p>Any questions should be directed to <a href="mailto:benefits@eiu.edu" target="_blank">benefits@eiu.edu</a>.</p>
+<p>Thank you all for following these practices.</p>
+<p>Sincerely,</p>
+<p>Paul McCann<br />Interim Vice President for Business Affairs </p>
+</div>
+<hr />
+	<a name="03_21_2020"></a>
+<h3>Spring 2020 Commencement Ceremonies Canceled</h3>
+<h4><em>March 21, 2020</em></h4>
+<p> </p>
+<p>The priority during this unprecedented global pandemic is the health and safety of our Eastern Illinois University family. With that in mind, the decision has been made to cancel May 2020 Commencement Ceremonies.  <a href="javascript:void(0)" onclick="showorhide('03_21_2020')">(read more)</a></p>
+<div id="03_21_2020" style="display:none;">
+					<p>You have worked hard to obtain your degree and we couldn't be any prouder of the Class of 2020 for your achievements in and outside of the classroom. We understand your disappointment, but we want to do everything we can to recognize you for your accomplishments.</p>
+<p>All eligible May 2020 graduates will receive their EIU diplomas, diploma covers, graduation programs and, as appropriate, honors medallions in the mail at the end of the semester if all university and programmatic requirements are met. Those will be mailed approximately six weeks after grades are finalized. We also encourage and welcome graduates to participate in the December 2020 ceremony, which will be held on <strong>SATURDAY, DEC. 19, 2020.</strong></p>
+<h4>Other Important Deadlines/Information</h4>
+<p><strong>Cap and Gown:</strong> Cap and gown rental is through Herff Jones and more information on cancellations, returns or rentals can be obtained from <a href="https://collegegradwarranty.herffjones.com/?event=capGownReturns" target="_blank">their site</a> or by calling their customer service center at 800-837-4235. They will be open Monday through Friday, 8 a.m. to 5 p.m. (EST).  In addition, even though the ceremony will not be held, many students have expressed an interest in renting a cap and gown for photos or family events. Herff Jones will fulfill those orders by mailing them directly to your home with no shipping cost (although you will be responsible for return postage).</p>
+<p><strong>Distinguished Seniors:</strong> Nominations and applications for the 2020 Distinguished Senior Awards are being accepted through an extended deadline of April 10. These awards are presented by the EIU Alumni Association to EIU seniors who have enriched the university community with their academic successes and active involvement in all facets of campus life. You can apply by <a href="https://www.eiu.edu/alumni/seniorawards.php" target="-blank">clicking here</a>.</p>
+<p><strong>Contact Information:</strong> We will continue to provide information as it becomes available. Please fill out <a href="https://www.eiu.edu/alumni/machform/embed.php?id=10966" target="_blank">this form</a> so we can stay connected and you can receive your diploma. If you have questions, contact Amber May at <a href="mailto:ammay@eiu.edu">ammay@eiu.edu</a>.</p>
+<p><strong>While we're as disappointed as you that we won't be able to celebrate with you and your loved ones during a May ceremony, we truly are All In for you.</strong></p>
+<p><strong>Today. Tomorrow. Together ... don't ever hesitate to reach out to your campus family if we can be of assistance.</strong></p>
+</div>
+					<hr />
+	<a name="03_20_2020b"></a>
+<h3>An Important Message from President Glassman Regarding Today&rsquo;s Executive Order</h3>
+<h4><em>March 20, 2020</em></h4>
+<p>To our entire EIU Family &ndash;</p>
+<p>Federal and state COVID-19 actions continue to change rapidly, and we are responding to those actions as quickly and responsibly as possible. This afternoon, Governor Pritzker issued Executive Order 10, which includes a &ldquo;Stay-at-Home&rdquo; section. The order goes into effect tomorrow, Saturday, March 21 at 5:00 p.m., and will continue through April 7 unless extended by the Governor. Today&rsquo;s order will have far-reaching implications for how the State of Illinois will move forward as we continue to combat this escalating global health crisis together.  <a href="javascript:void(0)" onclick="showorhide('03_20_2020b')">(read more)</a></p>
+<div id="03_20_2020b" style="display:none;">
+					<ol>
+<li>The information in this email supersedes previous information you may have received; and</li>
+<li>More detailed information will continue to emerge from the university with additional specifics for all involved.</li>
+</ol>
+<p>Consistent with today&rsquo;s Executive Order, EIU is issuing the following announcements for its primary audiences:</p>
+<p><strong>Students:</strong></p>
+<ul>
+<li>Classes will resume in online format March 30 as scheduled. Students having questions about their classes should contact their instructor.</li>
+<li>Students who were in University Housing and need specific education support materials, (books, computers, etc.) from their rooms may request an opportunity to retrieve these items by scheduling a time through the Housing and Dining Office at <a href="mailto:housing@eiu.edu.">housing@eiu.edu</a>.  The University Housing and Dining Office will communicate instructions for this process.  Students will not be permitted to reside overnight in campus housing. </li>
+<li>Students should not come to campus intending to move out of university housing (Residence Halls, Greek Court, University Court, or University Apartments), until the Executive Order is lifted. Students&rsquo; belongings will remain secure. University Housing will contact students to schedule a complete move out when appropriate.</li>
+<li>Prior to classes starting on March 30, residential students with extraordinary circumstances (such as international students, students without permanent homes, or other impacting situations) may petition to return to University Housing. Students requesting accommodations will need to complete a request form that can be obtained by contacting <a href="mailto:housing@eiu.edu.">housing@eiu.edu</a></li>
+<li>Return of textbooks will occur at the end of the semester either through drop-off at Textbook Rental Service or through U.S. Mail. Instructions for mailing back textbooks will be communicated to students prior to the end of the semester.</li>
+</ul>
+<p><strong>Faculty, Librarians, and Student Academic Support Services:</strong></p>
+<ul>
+<li>Faculty and staff who have the tools they need to facilitate distance learning and student success from home should do so.</li>
+<li>Faculty and staff who need access to departmental resources or their faculty office to facilitate distance learning may travel to work under the Executive Order.</li>
+<li>Faculty or researchers with critical research initiatives may access their assigned laboratory facilities.</li>
+<li>Booth Library will be remote and virtual through Sunday, March 29, and resume limited service beginning Monday, March 30.</li>
+</ul>
+<p><strong>Staff:</strong></p>
+<ul>
+<li>Many EIU employees have begun and will continue to work remotely. In response to today&rsquo;s Executive Order, the administration is reviewing whether there are additional employees who will be assigned to work from home. Supervisors will contact individual employees.</li>
+<li>All regular university faculty and staff will continue to be paid throughout the term of today&rsquo;s Executive Order. Employees are not required to use accrued leave during this time period.</li>
+</ul>
+<p>Once again, I stress the importance of monitoring your EIU email and checking the EIU website with increased frequency. The university will work diligently in communicating important details to our EIU community.</p>
+<p>We are all in this together, and as a community, we will continue to do our best to limit the spread and impact of this global pandemic while advancing our educational mission. Remember to respect and support one another during this challenging time. Please also remember to follow guidelines for social distancing and for safeguarding personal wellness.</p>
+<p>We all share in the stress and anxiety that this pandemic has placed on us as individuals and as a global society. More than ever, it&rsquo;s important for all of us to value and care for one another.</p>
+<p>With enduring appreciation for your patience, understanding, and trust,</p>
+<p>David M. Glassman, President</p>
+</div>
+	<hr />
+	<a name="03_20_2020a"></a>
+<h3>Self-Screening Instructions for Employees During the COVID-19 Pandemic</h3>
+<h4><em>March 20, 2020</em></h4>
+<p>All Eastern Illinois University employees are strongly encouraged to self-screen each day prior to leaving their residence and reporting to work by taking their temperature and assessing respiratory symptoms.</p>
+<p>Employees who demonstrate the following conditions should stay at home and remain there until symptoms are gone. If symptoms continue or progress, they should contact their health care provider for medical advice.  <a href="javascript:void(0)" onclick="showorhide('03_20_2020a')">(read more)</a></p>
+<div id="03_20_2020a" style="display:none;">
+					<ul>
+<li>a fever (100.4&deg; F [38.0&deg; C] or greater) using an oral thermometer,</li>
+<li>and/or symptoms of acute respiratory illness (i.e. dry cough, shortness of breath).</li>
+</ul>
+<p>Supervisors who suspect an employee may be ill may send them home for the day with pay.</p>
+<p>Current CDC guidance states that individuals with suspected COVID-19 who have home-isolated without having been tested for influenza, COVID-19, or other illnesses can stop home isolation when:</p>
+<ul>
+<li>they have had no fever for at least 72 hours (that is three full days of no fever without the use medicine that reduces fevers),</li>
+</ul>
+<p>AND</p>
+<ul>
+<li>other symptoms have improved (for example, when one&rsquo;s cough or shortness of breath have improved),</li>
+</ul>
+<p>AND</p>
+<ul>
+<li>at least 7 days have passed since one&rsquo;s symptoms first appeared.</li>
+</ul>
+<p>Eric S. Davidson, Ph.D., MCHES, CSPS <br /> Interim Director, <br /> EIU Health and Counseling Services</p>
+<p>Joseph R. Baumgart, M.D.<br /> Medical Director<br /> EIU Health and Counseling Services</p>
+</div>
+					<hr />
+	<a name="03_19_2020"></a>
+<h3>An Important Message to All EIU Students</h3>
+<h4><em>March 19, 2020</em></h4>
+<p>The current COVID-19 pandemic is escalating rapidly, and the university must make important decisions in response. That said, the health and safety of all our students, our campus, and our community remains our top priority. As such, the following actions are being announced:  <a href="javascript:void(0)" onclick="showorhide('03_19_2020')">(read more)</a></p>
+<div id="03_19_2020" style="display:none;">
+					<ul>
+<li>EIU intensely urges every student who can return home for the remainder of the Spring 2020 semester to do so.</li>
+<li>Students residing in student housing (Residence Halls, Greek Court, University Court and University Apartments) will receive an email from the Housing and Dining Office on Friday which will include information on the checkout process and a link to a sign-up form to reserve your checkout time. It is important that we spread out checkout times so we can limit the number of people in the building at the same time. Available checkout times will start on Sunday, March 22 at 1pm and continue until Saturday, March 28. You must quickly pack your belongings, check out, and return to your permanent residences. Students are not allowed to reside on campus overnight. All belongings will need to be removed by Saturday, March 28. Students needing additional time to remove belongings, please contact EIU&rsquo;s Housing and Dining Office.</li>
+<li>The University will provide prorated credits to accounts or prorated refunds to students leaving EIU residences (Residence Halls, Greek Court, University Court, and University Apartments) for the remaining portion of the semester. More information concerning the credits and/or refunds will be sent to students from the EIU Housing and Dining Office. Dining dollars remaining on student accounts will roll over for use in the Fall semester.</li>
+<li>We realize there may be special circumstances for some students that necessitate staying in student housing (including international students, students with no online learning access at home and other extraordinary situations). In these very rare cases, the university will make those accommodations. Students needing this accommodation should not return to campus until March 29, and will need to notify the Housing and Dining Office (housing@eiu.edu) of their intention and reason for their return as soon as possible. EIU&rsquo;s Housing and Dining Office will communicate details to those who request accommodations. Students who remain in EIU residences may be moved to different locations on campus to ensure appropriate health-related social distancing as guided by CDC recommendations, as well as safety and staffing considerations. Some residential buildings will be closed.</li>
+<li>All graduate assistants and student workers should not return to campus until March 29 unless explicitly communicated by their supervisors between now and March 22 that they are needed next week.</li>
+<li>The decision has been made to cancel May 2020 Commencement Ceremonies and to allow those graduates to participate in the December 2020 ceremony. All eligible May 2020 graduates will receive their EIU diplomas, diploma covers, and graduation programs in the mail at the end of the semester.</li>
+</ul>
+<p>The following facilities and events are closed or cancelled for the duration of the Spring 2020 semester:</p>
+<ul>
+<li>Student Recreation Center</li>
+<li>University Pool</li>
+<li>Bowling Alley and Billiards Center</li>
+<li>E-Sports Arena</li>
+<li>Multicultural Center</li>
+<li>Panther Shuttle Service</li>
+<li>Doudna Fine Arts Center Events</li>
+<li>Tarble Arts Center Events</li>
+<li>Intramural Sports Events</li>
+<li>All student campus events, including Greek Week, UB events, the Spring Concert, and others.</li>
+<li>All in-person meetings with more than 10 participants (virtual RSO meetings are still encouraged).</li>
+<li>Booth Library will remain open at reduced hours for EIU students, staff and faculty for the duration of the semester, and will operate under strict CDC distancing guidelines.</li>
+<li>University food services will remain open at Taylor Dining Center with reduced hours of operation. Food will be available on a grab-and-go basis only.</li>
+</ul>
+<p>In what has proven to be an escalating and ongoing situation, these measures have been enacted to keep our EIU populations as safe and as supported as possible. While the university remains committed to sharing information reliably and rapidly, these announcements may generate additional questions. Please email those questions to covid19info@eiu.edu, and the university will do its best to answer them within a 24-hour period.</p>
+<p>In the interim, I strongly encourage all students to continue checking their EIU emails and the EIU website with increased frequency to stay abreast of the most up-to-date and relevant information as these circumstances, and EIU&rsquo;s resulting actions, continue to evolve rapidly for everyone.</p>
+<p>We appreciate the enduring patience, flexibility, and trust you&rsquo;ve all demonstrated as the University continues to navigate this unparalleled and evolving global crisis.</p>
+<p>With appreciation,</p>
+<p>David M. Glassman<br />President<br /><br />CDC: <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html" target="_blank">www.cdc.gov/coronavirus/2019-nCoV/index.html</a><br /><br />WHO: <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">www.who.int/emergencies/diseases/novel-coronavirus-2019</a><br /><br />EIU Health &amp; Counseling Services: <a href="https://www.eiu.edu/health">www.eiu.edu/health</a></p>
+</div>
+<hr />
+	<a name="03_17_2020"></a>
+<h3>A Coronavirus Update from President Glassman</h3>
+<h4><em>March 17, 2020</em></h4>
+<p>To our EIU students, faculty, and staff -</p>
+<p>In my authority as President and in consultation with the Provost, I have instructed our university leadership to proceed with remote learning for the remainder of the Spring 2020 semester. This decision, though difficult, was made in response to state and federal best-practice suppression and mitigation strategies to help contain the COVID-19 virus. The health and safety of our students and employees is our top priority.  <a href="javascript:void(0)" onclick="showorhide('03_17_2020')">(read more)</a></p>
+<div id="03_17_2020" style="display:none;">
+					<p>Please know that despite this decision, the University will remain open for the duration of the semester - including residence and dining centers for those choosing to remain on campus, the library, our student services offices (such as the Health Center, Counseling Center, Career Center, Advising Center) and our general business offices. Even as these offices are open, much of the work will be conducted remotely.</p>
+<p>More information will be forthcoming soon, including a collection of FAQs that will provide students and employees with answers to many of their prevailing questions. Please continue to monitor the <a href="https://www.eiu.edu/covid/">EIU webpage</a> and your EIU email account.</p>
+<p>Sincerely,</p>
+<p>David Glassman, <em>President</em><br /> Jay Gatrell, <em>Provost and Vice President for Academic Affairs</em></p>
+</div>
+<hr />
+	<a name="03_12_2020"></a>
+<h3>A Message from Eastern Illinois University President Dr. David Glassman</h3>
+<h4><em>March 12, 2020</em></h4>
+<p>To the Eastern Illinois University community:</p>
+<p>We write to update you on our response to the unprecedented health challenges presented by the global Coronavirus (COVID-19) pandemic. It is critical our university remains proactive and engaged in ensuring the health and safety of everyone within our university community.  <a href="javascript:void(0)" onclick="showorhide('03_12_2020')">(read more)</a></p>
+<div id="03_12_2020" style="display:none;">
+					<p>In order to address these new challenges, a number of actions are necessary to protect the safety, health, and well-being of our University community. Our actions are based on current best practices for managing the quickly evolving situation surrounding the COVID-19 pandemic, and in accordance with current COVID-19 information available from the World Health Organization and the Centers for Disease Control (CDC), as well as from state and local health officials. We understand that many questions remain, and ask for your patience as we navigate these new challenges together.</p>
+<p>The actions to be taken include the following:</p>
+<ul>
+<li>Eastern Illinois University will extend its spring break for students through March 29. No classes will be held during this time.</li>
+<li>Students will have the option of studying remotely from their campus residence or from home after spring break.</li>
+<li>The University and all of its offices will remain open during this time period and will remain open moving forward.</li>
+<li>To the greatest extent possible, when university courses resume March 30, classes will be delivered through online instruction and/or other alternative instructional methods. Online and other alternative learning methods will replace traditional face-to-face instruction and continue until further notice. We understand that some classes will be much more difficult to deliver online and in different formats. We continue to explore different approaches for completing these courses and faculty will communicate with their classes via email during the week of March 23rd.</li>
+<li>Faculty are expected to return to work on March 23rd to develop the necessary actions to move their face-to-face courses to online or other alternative models, working in close consultation with the Faculty Development and Innovation Center, as well as their college leadership, to provide instructional excellence shaped by best practices.</li>
+<li>There will be no change in programming for students enrolled in internship, clinical, or student teaching experiences off campus. These activities will continue, but may vary in the future based on the policies of the host organization, school, or business. If students have questions about these experiences, please contact the academic program coordinators.</li>
+<li>Graduate assistants and student workers should report back to work on March 23rd as usual, unless otherwise indicated by their unit supervisors. Alternative schedules may be developed on a case-by-case basis as determined by supervisors. Student employees will be contacted by the supervisors with more detailed information on student-worker assignments.</li>
+<li>Students, faculty, staff and their families will be updated regularly via email and university websites during this time frame. As such, it is imperative that students closely monitor their official EIU email accounts.</li>
+<li>Residence halls and Greek Court will close throughout the duration of the previously scheduled Spring Break, though students may return on March 23. In short, all residence halls and on-campus dining will be available to all enrolled students with housing and dining contracts.</li>
+<li>Effective March 12, all University-sponsored, non-essential domestic travel and all international travel is suspended until further notice, unless approved by the Office of the President. All forthcoming Summer 2020 study abroad programs and international internships are canceled. Personal international travel is strongly discouraged, and we urge caution and the exercise of good judgment for personal domestic travel, in accordance with previous university recommendations. Those choosing to travel must follow updated university policies on self-isolation before returning to campus if returning from any country with a Level 3 or higher federal health warning.</li>
+<li>Throughout this pandemic, Eastern Illinois University is attempting to contain or limit any spread by recommending observing the <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fprepare%2Fprevention.htmlQ" target="_blank">CDC&rsquo;s recommended prevention guidelines</a>.</li>
+<li>Effective March 16, events at Eastern Illinois University with 50 or more anticipated attendees are postponed through at least May 1. This includes all Registered Student Organizations (RSO) events. All gatherings falling into acceptable participant levels should follow the CDC&rsquo;s guidelines. Events that do not fall into acceptable attendee limit parameters may opt for livestream or other telecommunication delivery, or be postponed to a future date. More information will be provided regarding the status of specific events.</li>
+</ul>
+<p>We recognize these actions will undoubtedly create challenges for students, faculty, staff members, and the greater Eastern Illinois University community. However, this pandemic has created unprecedented circumstances, making these actions prudent and necessary. For more information about COVID-19 and Eastern Illinois University&rsquo;s response, please visit <a href="https://www.eiu.edu/covid/">https://www.eiu.edu/covid/</a>.</p>
+<p><strong>We understand this message also will raise questions for which answers are not yet available.</strong> In the interim, we will continue to have ongoing discussions with students, faculty, and staff members impacted by today&rsquo;s decisions answering to more specific issues. We ask for your patience as we attempt to address individual concerns and circumstances. Until then, inquiries can be directed to <a href="mailto:covid19info@eiu.edu" target="_blank">covid19info@eiu.edu</a>.</p>
+<p>Eastern Illinois University is a community unified by the deep, impactful relationships we create with our students. As such, we pledge to work together as we navigate these unprecedented circumstances. We appreciate your understanding as we move forward with the best interests of all involved driving our every decision.</p>
+<p>Sincerely,</p>
+<p>David Glassman, <em>President</em><br />Jay Gatrell, <em>Provost and Vice President for Academic Affairs</em><br />Lynette Drake, <em>Vice President for Student Affairs</em></p>
+<p><strong>Additional resources:</strong><br />EIU&rsquo;s COVID-19 site: <a href="https://www.eiu.edu/covid/">https://www.eiu.edu/covid/</a><br />Centers for Disease Control and Prevention: <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/index.html</a><br />World Health Organization:<span> </span><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a></p>
+</div>
+<hr />
+	<a name="03_11_2020"></a>
+<h3>Instructional Planning For Student Success: COVID-19 Update</h3>
+<h4><em>March 11, 2020</em></h4>
+<p>To our campus community &ndash;</p>
+<p>As President Glassman&rsquo;s email indicated last night, EIU is actively exploring the implementation of potential distance learning options in the coming weeks as a possible response to the swift and dynamic changes of the current public health crisis surrounding COVID-19.  <a href="javascript:void(0)" onclick="showorhide('03_11_2020')">(read more)</a></p>
+<div id="03_11_2020" style="display:none;">
+					<p>For this reason, I have met today with university deans, and together we are encouraging current on-campus students to bring all necessary academic resources and materials with them as they leave for Spring Break. Again, this is a precautionary action intended to allow our students to support learning at a distance, if needed, after the Spring Break period. More importantly, please know that there is no known presence of COVID-19 on our campus or community and that the safety of our students, faculty, and staff is paramount.</p>
+<p>Finally, and for purposes of clarity, the University will remain open&mdash;including our residence halls, cafeterias, and other services, although there may possibly be a transition from face-to-face to online instruction. As always, additional information will be shared with students and the campus as it becomes available or should further actions be required.</p>
+<p>Jay D. Gatrell, Ph.D.<br />Provost and Vice President of Academic Affairs</p>
+</div>
+<hr />
+	<a name="03_10_2020"></a>
+<h3>A Message from Eastern Illinois University President Dr. David Glassman</h3>
+<h4><em>March 10, 2020</em></h4>
+<p>Dear Faculty, Staff and Students,</p>
+<p>Please know that we are aware of wide scale changes occurring across other universities and their various responses to deal with potential fallout from the COVID-19 virus, especially following the spring break time period. EIU&rsquo;s administration is closely monitoring these activities and are planning for and considering different responses, which may include alternative instructional models that move away from in-person classes. You will be receiving additional information in the future on any changes to a further EIU response, which has the capacity to happen quickly once announced, given the nature of this current health crisis.</p>
+<p><strong>Please know there is no presence of COVID-19 on our campus or in our community at this time.</strong></p>
+<p>Sincerely,</p>
+<p>David M. Glassman<br />President</p>
+<hr />
+	<a name="03_04_2020b"></a>
+<h3>Coronavirus Disease (COVID-19) Advisory Regarding Travel</h3>
+<h4><em>March 4, 2020</em></h4>
+<p>Dear Students, Faculty, and Staff,</p>
+<p>As the Coronavirus Disease (COVID-19) outbreak continues to evolve, there is growing potential for it to disrupt travel during Eastern Illinois University&rsquo;s Spring Break beginning March 14 through March 22.  <a href="javascript:void(0)" onclick="showorhide('03_04_2020b')">(read more)</a></p>
+<div id="03_04_2020b" style="display:none;">
+					<p><strong>Spring Break Travel Within the United States</strong></p>
+<p>As of March 2, 10 states have reported confirmed and presumptive positive cases of COVID-19. Although Spring Break destinations may not currently be within cities and states in which positive and presumptive cases have been diagnosed, the Coronavirus Disease (COVID-19) situation is rapidly evolving. <em>At this time, there are no destinations in the United States which require self-isolation for 14 days after having visited, although this could change. </em></p>
+<p>Spring Break travelers are strongly encouraged to regularly check updates to the <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fsummary.html" target="_blank">CDC COVID-19 Situation Summary</a> and <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Johns Hopkins Hospital&rsquo;s GIS Map</a> for locations where COVID-19 has been detected. Should areas in the United States require 14 days of self-isolation, students will be notified through EIU e-mail.</p>
+<p><strong>International Travel</strong></p>
+<p>In recent weeks, the Centers for Disease Control (CDC) have raised health-related travel advisory levels and issued alerts for several countries, including China, Japan, South Korea, Italy, and Iran. Individuals traveling abroad should consider the possibility of experiencing travel difficulties returning to the United States, including quarantine.</p>
+<p>Any student, faculty member, or staff member traveling from international areas designated by the CDC as<span> </span><strong>Level 3 Travel Health Advisory (Warning, Avoid Nonessential Travel)</strong><span> </span>or<span> </span><strong>Level 2 Travel Health Advisory (Alert, Practice Enhanced Precautions)</strong><span> </span>must self-isolate at their permanent home/residence before returning to campus. Before being allowed to resume normal campus activities, those who have traveled must provide documentation of 14-day self-isolation.</p>
+<p>During the 14-day self-isolation period, faculty and staff will be required to use sick leave days.</p>
+<p>During the 14-day self-isolation period, students should contact all faculty to inquire how they may continue their studies remotely.</p>
+<p>As of March 2, the CDC has issued the following travel guidance related to COVID-19 (<a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html</a>):</p>
+<ul>
+<li>
+<p><strong>Level 3 Travel Health Advisory, Avoid Nonessential Travel (14-day self-isolation before returning to campus):</strong><br />China, Italy, Iran, South Korea</p>
+</li>
+<li>
+<p><strong>Level 2 Travel Health Advisory, Practice Enhanced Cautions (14-day self-isolation before returning to campus):</strong><br />Japan</p>
+</li>
+<li>
+<p><strong>Level 1, Practice Usual Precautions (No Requirement for Self-Isolation):</strong><br />Hong Kong</p>
+</li>
+</ul>
+	<p><strong>If you are considering international travel this spring, Eastern Illinois University Health and Counseling Services and international travel officials encourage you to continue to monitor Coronavirus Disease (COVID-19) travel advisories from the <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/" target="_blank">U.S. Department of State</a> and the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">Centers for Disease Control</a>.</strong></p>
+<p><strong>Preventative Measures</strong></p>
+<p>As with any other virus, the best way to prevent infection is to avoid exposure. You can help prevent the spread of any respiratory virus by doing the following:</p>
+<ul>
+<li>
+<p>Wash your hands often with soap and water for at least 20-30 seconds.</p>
+</li>
+<li>
+<p>Avoid close contact with persons who have respiratory illness symptoms.</p>
+</li>
+<li>
+<p>Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+</li>
+<li>
+<p>Cover your cough or sneeze with a tissue, then throw the tissue in the trash.</p>
+</li>
+<li>
+<p>Clean and disinfect frequently touched objects and surfaces.</p>
+</li>
+<li>
+<p>Stay home when you are sick.</p>
+</li>
+</ul>
+<p>Eastern Illinois University will continue to work closely with local, state, and national public health organizations regarding the Coronavirus Disease (COVID-19) concern and will take necessary precautions to safeguard the health and wellness of our campus community. Please be alert for additional university messages containing COVID-19 updates and other associated warnings and protocols. Updates and additional information may also be found at the Health and Counseling Services Medical Clinic website.</p>
+</div>
+<hr />
+	<a name="03_04_2020a"></a>
+<h3>Coronavirus Disease (COVID-19) International Travel Self-Isolation Policy</h3>
+<h4><em>March 4, 2020</em></h4>
+<p>Any student, faculty member, and staff traveling from international areas which have been designated as falling under the Centers for Disease Control and Prevention&rsquo;s Travel Health Notice Level 3 (Warning, Avoid Nonessential Travel) and Travel Health Notice Level 2 (Alert, Practice Enhanced Precautions) who wish to return to campus must self-isolate at their permanent home/residence after departing from the country in question and before returning to campus/Charleston for a period of 14 days. The CDC maintains a list of COVID-19 Travel Health notices at:<span> </span><a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" target="_blank">www.cdc.gov/coronavirus/2019-ncov/travelers/index.html</a>.  <a href="javascript:void(0)" onclick="showorhide('03_04_2020a')">(read more)</a></p>
+<div id="03_04_2020a" style="display:none;">
+					<p>Self-isolation is defined as &ldquo;staying in one&rsquo;s dwelling (house, apartment, room) entirely during the 14 days. Individuals self-isolating should not go to classes, athletic events, work, or other social gatherings until the 14 days after the departure from the country in question has passed.&rdquo; Those in self-isolation should avoid public spaces and places, as well as avoid taking public transportation. If living alone, those in self-isolation should plan for others to bring food and other necessities to them.</p>
+<p>During the 14-day self-isolation period, faculty and staff will be required to use sick leave days.</p>
+<p>During the 14-day self-isolation period, students should contact all faculty to inquire how they may continue their studies remotely.</p>
+<p>Before being allowed to resume normal campus activities, those who have traveled must prove the 14-day self-isolation before being allowed to resume normal campus activities.</p>
+<p>Those who are unable to return to their permanent home/residence for self-isolation should contact the <a href="https://www.eiu.edu/health/" target="_blank">Health and Counseling Services Medical Clinic</a> to make alternative isolation arrangements.</p>
+<p>Sincerely, <br />Eric S. Davidson<br />Interim Director, EIU Health and Counseling Services</p>
+<p>Joseph R. Baumgart, M.D.<br />Medical Director, EIU Health and Counseling Services</p>
+</div>
+</div>
+</div>
+</div>
+
+		   		</div>
+	   		</div>
+	   	</div> <!--End Container -->
+	   	
+	  
+	   	
+	  
+	  
+      
+      
+      
+      
+     	<div class="grey_page_bg"><div class="container secondarygridpage no-bottom-padding">
+	   			<h2>Related Pages</h2>
+		   		
+			   		
+				   			<div class="round_big_button_links">
+								
+								<a href="https://www.cdc.gov/" class="round_big_button_dinklage">Center for Disease Control and Prevention</a>				
+			   		</div>			   		
+		   		
+		   		
+		   		
+	   		
+	   	</div>
+	   	
+	   	 <div class="container secondarygridpage ">
+		   		<div class="col-md-12 no-padding">
+			   		
+			   		<h2>Contact Information</h2><div class='deptinfo'>
+
+
+
+
+
+
+
+			<h3>Health & Counseling Services</h3><p>Medical Clinic <br>Eastern Illinois University Human Services Building<br>600 Lincoln Avenue<br>Charleston, IL 61920<br><a href='tel:217-581-3013'>(217) 581-3013</a><br><a href='mailto:health@eiu.edu'>health@eiu.edu</a><br>
+</p></div>
+<br class='clear' />
+			   		
+		   		</div>
+		   	</div>
+		   	
+		   	</div><!-- end grey bg -->
+  
+    
+   
+
+
+  
+<div class="next_step_section home_step">
+	<div class="container ">
+    	<div class="row">
+	   		<div class="col-sm-12">
+		   		<h2>Take the <span>next</span> step</h2>
+		   		<a href="https://www.eiu.edu/myeiu/register.php?skip=1" class="linkbutton">apply now <i class="fa icon-arrow"></i></a><br />
+		   		<a href="https://www.eiu.edu/admissions/discover.php#visit" class="linkbutton">schedule a visit <i class="fa icon-arrow"></i></a>
+	   		</div>
+		</div>
+	</div><!--End Container -->
+</div>  <!--End Next Step -->	
+	
+	
+<div class="givetoeiu">
+   		<div class="container givetoeiubg">
+	   		<a href="https://www.eiu.edu/develop/">
+	   		<h2>Give to EIU</h2>
+	   		<p>Every gift made to Eastern Illinois University -- whether it's big or small -- makes a difference. EIU's generous donors are helping our students fulfill their dreams every day, and you can be part of that.</p>
+	   		<p>Learn more about how to make your contribution today!</p>
+	   		</a>
+   		</div>
+</div>    
+	
+	
+<div class="footerlogo">
+	<div class="container">
+		<img src="//www.eiu.edu/_eiu15/images/universal/footer_logo.png" alt='Eastern Illinois University' />
+	</div>
+</div>
+
+<div class="footer">
+	   <div class="container">
+		   	   		<div class="row">
+		   		<div class="col-sm-6">
+			   		<h2>Say Hello.</h2>
+			   		<div id="question_error"></div>
+			   		<form id="question" name="question" action="contact.php" method="post" class="contactus">
+				   		<label for="username">Name* </label><input name="username" id="username" value="" placeholder="name" />
+				   		<label for="userphone">Telephone </label><input name="userphone" id="userphone" value="" placeholder="telephone" />
+				   		<label for="useremail">E-mail* </label><input name="useremail" id="useremail" value="" placeholder="email" />
+				   		<label for="useremailretype">Retype E-mail* </label><input name="useremailretype" id="useremailretype" value="" placeholder="retype email"/>
+				   		<label for="topic">Topic</label><select name="topic" id="topic" required>
+						  <option value="" class="placeholdertext">choose a topic for your inquiry</option>
+						  							  <option value="covid0749191">COVID-19</option>
+						  						  <option value="admissions@eiu.edu">Undergraduate Admissions</option>
+						  <option value="transfer@eiu.edu">Transfer Admissions</option>
+						  <option value="graduate@eiu.edu">Graduate Admissions</option>
+						  <option value="interntl@eiu.edu">International Admissions</option>
+						  <option value="botba@eiu.edu">Continuing Education Admissions</option>
+						  <option value="orient@eiu.edu">Chat with an EIU Student</option>
+						  <option value="alumeiu@eiu.edu">Alumni Questions</option>
+						  <option value="itshelp@eiu.edu">ITS Help Desk (e.g. lost passwords)</option>
+						  <option value="thallingram@eiu.edu">General EIU Questions</option>
+						</select>
+				   		<label for="question">The Question *</label><textarea name="question" id="question_content" rows="5" cols="50" title="your question" required placeholder="what can we do for you?"></textarea>
+				   		<div class="g-recaptcha" data-sitekey="6Ld3KisUAAAAAIyf06qjk83lQuiMAw9SesoTHNuN"></div><br />
+				   		<input type="submit" name="submitquestion" value="submit question" class="submitcontact" />	
+				   	</form>
+			   		</form>
+		   		</div>
+		   		<div class="col-sm-6">
+			   		<h2>Connect.</h2>
+			   		<a class="footericon" href="https://www.facebook.com/iameiu"><i class="fa fa-facebook"></i></a>
+			   		<a class="footericon" href="https://www.twitter.com/eiu"><i class="fa fa-twitter"></i></a>
+			   		<a class="footericon" href="https://www.flickr.com/groups/eiu/pool/"><i class="fa fa-flickr"></i></a>
+			   		<a class="footericon" href="https://www.youtube.com/iameiu/"><i class="fa fa-youtube"></i></a>
+			   		<a class="footericon" href="https://vimeo.com/eiu/"><i class="fa fa-vimeo"></i></a>
+			   		<a class="footericon sexualassault" href="https://www.eiu.edu/sexualassaultresources/"><i class="fa icon-awareness-ribbon"></i></a>
+		   		</div>
+		   	
+	   		</div>
+	   			   		<div class="row">
+		   		<div class="col-sm-12 footermoreinfo">
+		   		<a href="https://www.eiu.edu/contact.php">Contact Us</a> | <a href="https://www.eiu.edu/accessibility.php">Accessibility</a> | <a href="https://www.eiu.edu/about/index.php">About EIU</a> | <a href="https://www.eiu.edu/alerteiu/">Emergency Information</a> | <a href="https://www.eiu.edu/humanres/employment/">Employment at EIU</a> | <a href="https://www.eiu.edu/map/">Campus Map</a> | <a href="https://castle.eiu.edu/gcounsel/foia.php">Freedom of Information Act</a> | <a href="https://www.eiu.edu/veterans/">Supporting our Veterans</a>  | <a href="https://www.eiu.edu/complaints/">Concerns &amp; Complaints</a><br />
+		   		<p>Eastern Illinois University is authorized to operate as a postsecondary educational institution by the Illinois Board of Higher Education.</p>
+		   		</div>
+	   		</div>
+	   
+	   </div>
+   </div>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+ <script type="text/javascript" src="https://fast.fonts.net/jsapi/dc85cdc0-cf53-427e-9feb-fec36d04605e.js"></script>	
+ <script async="async" defer="defer" src="https://www.youvisit.com/tour/Embed/js2"></script>
+<!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="https://www.eiu.edu/_eiu15/js/jquery.min.js"></script>
+<!--  <script>window.jQuery || document.write('<script src="https://www.eiu.edu/_eiu15/js/jquery.min.js">\x3C/script>')</script>  -->
+ <script src="//www.eiu.edu/_eiu15/js/production_v2.min.js?v=1.2"></script>
+
+<noscript>
+		<style>
+			body {
+				opacity: 1;
+			}
+		</style>
+</noscript>	
+
+	 
+
+
+		  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3d2bdb7666","applicationID":"3175187","transactionName":"ZgMANhBQXhJXAUddDV9JNxALHlMOQAtXGwdcBwsOER9ACUY=","queueTime":0,"applicationTime":14,"atts":"SkQDQFhKTRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

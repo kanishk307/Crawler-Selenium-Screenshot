@@ -1,0 +1,685 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3d2bdb7666",applicationID:"3175187"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  	<title>Eastern Illinois University :: COVID-19  - Emails</title>	
+	<meta name="description" content="Emails sent out by the university community in regards to COVID-19. " />
+	<meta name="author" content="Eastern Illinois University">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="5rtQ9OSiIU8M41fOEatiMgjq1LerRlliUv8b7M1qaew" />
+<meta name="msvalidate.01" content="AFF7CB252CEFDF595B7C669BF46EC5EA" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLPT2M');</script>
+<!-- End Google Tag Manager --><meta name="history-image" content="/_eiu15/images/universal/history_images/about.jpg" />
+
+	<link rel="stylesheet"  href="https://www.eiu.edu/_eiu15/css/eiu_secondary.css" media="screen" />
+	<link rel="stylesheet"  href="local.css" media="screen" />
+	
+	
+
+
+</head>
+
+
+<body>
+
+		<!-- Header and Navbar -->
+		
+		<!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+      	
+        <div class="container-fluid no-padding">
+           
+          <div class="navbar-header navbar-logo">
+	          <div class="navbar-brand"><a class="" href="https://www.eiu.edu/"><span>Eastern Illinois University</span><img src="//www.eiu.edu/_eiu15/images/universal/header_logo.png" alt='Eastern Illinois University' /></a></div>
+           
+            
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="menutext">Menu</span>
+               <span class="sr-only">Toggle navigation</span>
+              <span class="menuicon">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+              </span>
+            </button>
+             
+           
+          </div>
+          
+           
+          
+          
+          
+          
+          <div id="headertophits" >
+            	
+            	<ul class="navbar-collapse collapse">
+					<li class="header_atoz"><a href="https://www.eiu.edu/atoz.php" ><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/settings.png" alt="a-z" /> a-z</a></li>
+					<li class="header_panthermail"><a href="https://www.eiu.edu/panthermail/"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/panthermail.png" alt="panthermail"  /> panthermail</a></li>
+					<li class="header_paws"><a href="https://www.eiu.edu/pawslogin/"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/paws.png" alt="paws" /> paws</a></li>
+					<li class="header_library"><a href="https://www.library.eiu.edu/welcome.html"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/library.png" alt="library"  /> library</a></li>
+					<li class="last header_eiuonline"><a href="https://www.eiu.edu/d2l"><img src="//www.eiu.edu/_eiu15/images/universal/mobile_menu/d2l.png" alt="d2l" /> d2l</a></li>
+				</ul>
+            	
+            </div>
+            <div id="searchandhistory">
+            	<i class="fa fa-search fa-lg searchbt"><span class="search_words">search </span></i>
+				<i class="fa fa-history fa-lg history-btn"><span class="history_words">history </span></i>
+            </div>
+          
+<!--
+          <div id="searchandhistorymobile">
+            	<i class="fa fa-search fa-lg searchbt"></i>
+				<i class="fa fa-history fa-lg history-btn"></i>
+          </div>
+-->
+            
+        </div><!--/.container-fluid -->
+        
+      </nav>		
+		
+		<!--Search Overlay -->
+		
+		<!-- Search Overlay -->
+<div class="container">
+	<div id="morphsearch" class="morphsearch">
+		<form class="morphsearch-form">
+			<input class="morphsearch-input" type="search" placeholder="Search..." autocorrect="off" autocomplete="off"/> 
+			<button class="morphsearch-submit" type="submit"></button>
+			<input type="hidden" class="morphsearch-start" value="0" />
+		</form>
+		<div class="morphsearch-content">
+			<div class="dummy-column recent_search_column">
+				<h2>Recent Searches</h2>
+				
+				<div class="recent_search_column-content">
+					
+				</div>
+			</div>
+			<div class="dummy-column trending_pages_column">
+				<h2>Trending Searches</h2>
+				<div class="trending_pages_column-content2">
+					<a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>academic calendar</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>Financial Aid</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>housing</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>registrar</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a><a href='#search' class='recentsearchentry2'>
+			<div class='dummy-media-object search-overlay'>
+				<div class='search-container search-init'>
+					<div class='search-title2'>
+						<span class='recentsearchentry2'>banner</span>
+					</div>
+					<i class='fa icon-arrow search_arrow'></i>
+					<div style='clear:both;'></div>
+				</div>
+			</div>
+		</a>					
+				</div>
+			</div>
+			<div class="radio-tabs" role="tablist">
+	  
+			    <input class="state" type="radio" title="Starks" name="houses-state" id="starks" role="tab" aria-controls="starks-panel" aria-selected="true" checked />
+			    <input class="state" type="radio" title="Lanisters" name="houses-state" id="lannisters" role="tab" aria-controls="lannisters-panel" />
+			
+			    <div class="tabs col-sm-12" aria-hidden="true" style="padding-left: 0px;">
+			        <div class="col-sm-9 col-xs-6 tabs-button tab-selected">
+				        <label for="starks" id="starks-tab" class="tab" aria-selected="true">Web Results</label>
+			        </div>
+			        <div class="col-sm-3 col-xs-6 tabs-button">
+			        	<label for="lannisters" id="lannisters-tab" class="tab">Directory Results</label>
+			        </div>
+			    </div>
+			
+			    <div class="panels">
+			        
+			        <div class='google_result_column col-sm-9 panel active' id="starks-panel" role="tabpanel" aria-labelledby="starks-tab">
+						<div class='search-results-container'>
+							<div class="google_search_loading">Loading Search Results...</div>
+						</div>
+					</div>
+					<div class='directory_result_column col-sm-3 panel' id="lannisters-panel" role="tabpanel" aria-labelledby="lannisters-tab">
+						<div class='directory-info'>
+							<div class="directory_search_loading">Loading Directory Results...</div>
+						</div>
+					</div>
+			 
+			    </div>
+			
+			</div>
+		</div><!-- /morphsearch-content -->
+		<span class="morphsearch-close">
+			<span class='morphsearch-close-content'>Close</span>
+		</span>
+	</div><!-- /morphsearch -->
+	<!-- 			<div class="overlay"></div> -->
+</div>			 
+	
+		<!--History Slide in Panel -->
+		
+		<!--History Slide in Panel -->
+<div class="history-panel from-right">
+	<header class="history-panel-header">
+		<h2>History</h2>
+		<a href="#0" class="history-panel-close">Close<!-- <i class="fa fa-times"></i> --></a>
+	</header>
+	
+	<div class="history-panel-container">
+		<div class="history-panel-content">
+			<h3 class="recentsearch">Recent Pages</h3>
+	
+			<div class="history-panel-content-page">
+				
+			</div>
+			
+			<h3 class="recentsearch">Recent Searches</h3>
+		
+			<div class="history-panel-content-search">
+				
+			</div>
+			
+		</div> <!-- history-panel-content -->
+	</div> <!-- history-panel-container -->
+</div> <!-- history-panel -->		
+		
+		
+      	
+	
+       
+	       <div class="container">
+		   		<div class="row">
+			   		<div class="col-sm-12">
+				   		<h1>EIU <span>COVID-19 FAQs</span></h1>
+			   		</div>
+		   		</div>
+	       </div>
+	       
+	          <!--MAIN NAV BAR -->
+	         
+			 <div class="main_nav navbar-collapse collapse no-padding" id='1'>
+	<a class="main_nav_logo main_nav_logo_text" id='1a' href='https://www.eiu.edu/covid/index.php'>Home</a>
+	<ul class="six_items chap_collapse">
+		<li class="main_nav_item" id="23451">
+			<a class="dropdown-toggle menu_item" data-toggle="dropdown" id="23451a">General Information</a>
+			<ul class="main_nav_dropdown collapse dropdown-menu" role="menu">
+				<li><a href="students.php" target="" class="">Student Remote Learning</a></li>
+				<li><a href="https://www.eiu.edu/fdic/remote.php" target="_blank" class="">Faculty Resources</a></li>
+				<li><a href="https://www.eiu.edu/panthertech/remote.php" target="" class="">Working Remotely</a></li>
+				<li><a href="https://www.eiu.edu/covid/faq.php" target="" class="">EIU FAQ</a></li>
+				<li><a href="https://www.eiu.edu/covid/#contacts" target="" class="">Contacts</a></li>
+				<li><a href="info.php" target="" class="">More Information</a></li>
+				<li><a href="emails.php" target="" class="">University Emails</a></li>
+				<li><a href="https://www.eiu.edu/humanres/machform/view.php?id=7609" target="" class="">COVID-19 Emergency Paid Sick Leave Act Form</a></li>
+				<li><a href="signage.php" target="" class="">Printable Signage</a></li>
+			</ul>
+		</li>
+
+		<li class="main_nav_item" id="23454">
+			<a href="https://www.eiu.edu/health/" class="menu_item " target="_blank" >EIU Medical Clinic</a>
+		</li>
+
+		<li class="main_nav_item" id="23455">
+			<a href="https://www.dph.illinois.gov/" class="menu_item " target="_blank" >Illinois Department of Public Health</a>
+		</li>
+
+		<li class="main_nav_item" id="23456">
+			<a href="https://www.cdc.gov/" class="menu_item " target="_blank" >CDC</a>
+		</li>
+
+		<li class="main_nav_item" id="23457">
+			<a href="https://www.sarahbush.org/" class="menu_item " target="_blank" >Sarah Bush Lincoln Hospital</a>
+		</li>
+
+		<li class="main_nav_item" id="23458">
+			<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="menu_item " target="_blank" >World Health Organization</a>
+		</li>
+	</ul>
+<div class="socialmymenu"></div>
+</div>
+ 
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+	$('#23451').addClass('selected');
+	$('#23451a').addClass('selected');
+});
+</script>
+ 
+
+			 
+			 
+			<div class="container main_section" >
+			<div class="row">
+		   			   		<div class="hidden-xs hidden-sm col-md-3">
+			   		<ul class="leftmenu">
+				   		
+				   		<li><a href="students.php" target="" class="">Student Remote Learning</a></li> <li><a href="https://www.eiu.edu/fdic/remote.php" target="_blank" class="">Faculty Resources</a></li> <li><a href="https://www.eiu.edu/panthertech/remote.php" target="" class="">Working Remotely</a></li> <li><a href="https://www.eiu.edu/covid/faq.php" target="" class="">EIU FAQ</a></li> <li><a href="https://www.eiu.edu/covid/#contacts" target="" class="">Contacts</a></li> <li><a href="info.php" target="" class="">More Information</a></li> <li><a href="emails.php" target="" class="">University Emails</a></li> <li><a href="https://www.eiu.edu/humanres/machform/view.php?id=7609" target="" class="">COVID-19 Emergency Paid Sick Leave Act Form</a></li> <li><a href="signage.php" target="" class="">Printable Signage</a></li>				   		
+			   		</ul>
+		   		</div>
+		   			   		<div class="col-sm-12 col-md-9 right_side_content">
+			   		<p><span color="#333333" style="color: #333333;"></span> </p>
+
+<h3>ARCHIVED MATERIALS: EIU's Spring 2020 COVID-19 FAQs</h3>
+<i>Jun-01-2020</i><br><br>
+      	 <p>EIU's Spring 2020 COVID-19 FAQs were last updated April 27, 2020, but will remain archived below.</p>
+<p>For the latest information, <strong><a href="https://www.eiu.edu/covid/">visit EIU's COVID-19 website</a></strong>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>_______________________________________________</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>ARCHIVED FAQs Below:</strong></p>
+<p>&nbsp;</p>
+<p><em>On March 20, 2020 Governor Pritzker issued Executive Order 10, which included a Stay-At-Home order lasting until April 7.</em></p>
+<p><em>On Tuesday, March 31, that order was officially extended through April 30, 2020.</em></p>
+<p><em>On Thursday, April 23, a second extension amended the Stay-at-Home Executive Order to last through May 30, 2020.<strong><br /><br /></strong>These state-level decisions impact and supersede many&nbsp; previous answers that were provided here. Revisions to these questions have been applied where applicable in the answers below.<strong><br /><br /><a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn how the Executive Order (EO) and the extension impacts EIU's students, faculty, and staff here.</a></strong></em></p>
+<p><em>* * * * *</em></p>
+<p><em>The below information was last revised at<strong> 3 p.m. MONDAY, APRIL 27</strong>. Check back often for additional information and/or revisions to these updates, as national and state responses continue to evolve in real time. Please email more specific questions to <a href="mailto:COVID19INFO@EIU.EDU,">covid19info@eiu.edu,</a> and the university will make every attempt to respond or have someone reach out to you within 24 hours.</em></p>
+<p><em><strong><span class="_5yl5">What has EIU done in response to the COVID-19 virus</span>?</strong></em></p>
+<p><em>Eastern Illinois University continues to closely monitor developments with the Coronavirus (COVID-19). The University has taken a highly coordinated approach to planning and preparedness to ensure the safety of the campus community. Administrators and staff representing various areas across Eastern Illinois University are closely monitoring developments with the coronavirus and continue to develop contingency plans for different areas of the University's operations.</em></p>
+<p><em>The University&rsquo;s planning and preparedness efforts are guided by current information from the Centers for Disease Control, World Health Organization, U.S. Department of State, the Illinois Department of Public Health, the Coles County Health Department, and University emergency management and risk management protocols. Administrators and staff across campus continue to review and enhance preparedness and response plans as information emerges or changes.</em></p>
+<p><em><strong><u>GENERAL QUESTIONS</u></strong></em></p>
+<p><em><strong>What decision(s) has EIU made in response to the COVID-19 virus?</strong></em></p>
+<ul>
+<li><em>To date, EIU has made several decisions in response to the health challenges presented by COVID-19. Please review emails from Dr. Glassman and other leaders on campus: <a href="https://www.eiu.edu/covid/emails.php">https://www.eiu.edu/covid/emails.php</a>.&nbsp; Further updates will continue to be provided as urgently and responsibly as possible. Complete information regarding EIU&rsquo;s response to the pandemic, including ongoing updates, can be found here: <a href="https://www.eiu.edu/covid">https://www.eiu.edu/covid</a>.</em></li>
+</ul>
+<p><em><strong>What precautions is EIU taking to protect students/faculty/staff from the COVID-19 Virus?</strong></em></p>
+<ul>
+<li><em>Precautionary measures have included extending&nbsp; spring break for students and transitioning to delivering classes through online instruction and/or alternative instructional methods through the end of the semester. Complete information regarding EIU&rsquo;s response can be found at <a href="https://www.eiu.edu/covid/emails.php">https://www.eiu.edu/covid/emails.php</a>.</em></li>
+</ul>
+<p><em><strong>Can departmental meetings and other campus meetings continue to occur?</strong></em></p>
+<ul>
+<li><em>Face-to-face meetings should be kept to a minimum during this time.&nbsp; The university strongly discourage any non-essential large meetings of 10 people or more. CDC-recommended physical distancing should be observed at all times.</em></li>
+</ul>
+<p><em><strong>What steps can individuals take to help prevent the spread of Coronavirus?</strong></em></p>
+<ul>
+<li><em>Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <strong><a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+<li><em>Members of the campus community are strongly encouraged to read the <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">guidance provided by the CDC</a> regarding preventive steps you can take to avoid the Coronavirus and the spread of other respiratory diseases.</em><br /><br /><em>The CDC advises that many of the same precautions recommended when protecting yourself against the flu also can help prevent COVID-19 infection.</em></li>
+</ul>
+<p><em><strong>Should I wear a face mask?</strong></em></p>
+<ul>
+<li>
+<p><em>The CDC currently recommends wearing cloth face coverings in public settings where other social distancing measures are difficult to maintain (e.g., grocery stores and pharmacies) especially in areas of significant community-based transmission.</em></p>
+<p><em>It is critical to emphasize that maintaining 6-feet social distancing remains important to slowing the spread of the virus. CDC is additionally advising the use of simple cloth face coverings to slow the spread of the virus and help people who may have the virus and do not know it from transmitting it to others.&nbsp; Cloth face coverings fashioned from household items or made at home from common materials at low cost can be used as an additional, voluntary public health measure.</em><br /><br /><em>For more information, click <strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover.html">here</a>.</strong></em></p>
+</li>
+</ul>
+<p><em><strong>In general, what should I do if I feel sick and think I may have been exposed to COVID-19?</strong></em></p>
+<ul>
+<li><em>Stay home. You should also call ahead to your healthcare professional and follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">CDC guidance</a>.</em><br /><br /><em>If you are an employee of the University, you should work with your supervisor for proper guidance regarding call-procedures and protocols for your department.&nbsp; Leave must be reported in accordance with university policy.&nbsp; If you have questions regarding leave policies, please direct those questions to <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a>. </em><br /><br /><em>If you are a student, contact EIU&rsquo;s Health and Counseling Services Medical Clinic at (217) 581-3013 during regular hours. After-hours medical care is available at the local walk-in clinics, under the provisions of the student health insurance plan, if covered.</em></li>
+</ul>
+<p><em><strong>Is the University restricting university-related travel?</strong></em></p>
+<ul>
+<li><em>Effective March 12, all University-sponsored, non-essential domestic travel and all international travel is suspended until further notice without approval from the President&rsquo;s Office. All Summer 2020 study abroad programs and international internships are canceled.</em></li>
+</ul>
+<p><em><strong>If I was set to travel for business and have paid for travel arrangements and find the conference or business meeting has been canceled, will the university reimburse me for out-of-pocket expenses I have already incurred?</strong></em></p>
+<ul>
+<li><em>In most cases, refunds are being issued by airlines and conferences. We ask you to seek reimbursement from those entities.</em></li>
+</ul>
+<p><em><strong>What is the University's response to quarantine and isolation guidance?</strong></em></p>
+<ul>
+<li><em>EIU requires you to self-isolate for 14 days if you have been in contact with someone suspected of having the COVID-19 disease. If you become ill and believe you are infected with the COVID-19 virus you should quarantine yourself for 14 days.</em></li>
+<li><em>Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <strong><a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em>International travel:</em></p>
+<ul>
+<li><em>In accordance with guidance from the Illinois Department of Public Health, all persons returning from a <a href="https://wwwnc.cdc.gov/travel/notices">CDC Travel Notice 3</a> nation should remain at home and self-quarantine for 14 days from the date of departure, avoid group settings, limit public activities, and otherwise follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">CDC guidelines</a>.</em><br /><br /><em>If you are returning to the United States in this circumstance, the University requires you to return to your permanent home during the self-quarantine period (students should refer to the &ldquo;<strong>What if I cannot return to my permanent home residence to self-isolate?&rdquo;</strong> question in the student section of the FAQs.</em><br /><br /><em>It is imperative that when you reach your final destination, that you contact your local health department. Your health department will advise you on steps you can to take to protect your health and the health of your community.&nbsp;</em><br /><br /><em>If you are an employee of the University, you should work with your supervisor for proper guidance regarding call-procedures and protocols for your department.&nbsp; Leave must be reported in accordance with university policy.&nbsp; If you have questions regarding leave policies, please direct those questions to <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a>. &nbsp;</em></li>
+</ul>
+<p><em><strong>What if someone in my household tests confirmed positive/presumptive/positive/shows symptoms?</strong></em></p>
+<ul>
+<li><em>You should follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">CDC guidelines</a> and self-isolate. Employees should follow normal call-in procedures and protocols for their department and report time away from work in accordance with University policy. If you have questions regarding leave policies, please direct those questions to <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a>.&nbsp;<strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>Are there any locally reported cases?</strong></em></p>
+<ul>
+<li><em>The Illinois Department of Public Health and the State of Illinois are using a detailed state map, <strong><a href="https://coronavirus.illinois.gov/s/">available here</a></strong>, to track cases by county. For ongoing updates, visit the<strong><span style="color: red;"> <a href="https://www.dph.illinois.gov/">Illinois Department of Public Health website</a>.</span></strong></em></li>
+</ul>
+<p><em><strong><u>STUDENT QUESTIONS</u></strong></em></p>
+<p><em><strong>STUDENT AFFAIRS UPDATES AND FAQs:<br /></strong><strong><a href="https://www.eiu.edu/stuaff/services.php">https://www.eiu.edu/stuaff/services.php</a> <br /></strong></em></p>
+<p><em><strong>Now that Illinois is operating under the Governor's <a href="https://www.eiu.edu/media/viewstory.php?action=1450">"Stay-at-Home" directive and extension</a>, how will I return my textbooks?</strong></em></p>
+<ul>
+<li><em>Return of textbooks will occur at the end of the semester through drop-off at Textbook Rental Service or through U.S. Mail. Instructions for mailing back textbooks will be communicated to students prior to the end of the semester.</em></li>
+</ul>
+<p><em><strong>Will the spring semester be extended or shortened to accommodate for the extended spring break?</strong></em></p>
+<ul>
+<li><em>There are no plans to extend or shorten the semester.</em></li>
+</ul>
+<p><em><strong>Will my internship, practicum, clinical or student teaching continue?</strong></em></p>
+<ul>
+<li><em>As long as your site is still operating, you should report as previously assigned. If you have further questions, contact your academic advisor. <strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>I have a specific question about a class?</strong></em></p>
+<ul>
+<li><em>Your instructor will be reaching out to you during the week of March 23 to provide specifics regarding your course requirements and learning format. Please contact your instructor with any course-specific questions.</em></li>
+</ul>
+<p><em><strong>Will online or alternative-delivery instruction remain in place for the rest of the Spring 2020 semester?</strong></em></p>
+<ul>
+<li><em>EIU is moving to an online format for the duration of the Spring 2020 semester to limit/avoid face-to-face instruction as other higher ed institutions have done. Housing and Dining Services will remain open to support some students, for whom EIU&rsquo;s campus may be the safest place for them to reside. EIU is intentionally focusing on ensuring all our students have access to the necessary resources they need, and we are working to accommodate them on a case-by-case basis.</em><br /><br /><em>It is critical that students continue to frequently check email and the EIU website for the most up-to-date information in a rapidly evolving environment. This is unprecedented territory for all involved &ndash; students and university included, and we&rsquo;re working to get updated information out as urgently and as responsibly as possible.</em></li>
+</ul>
+<p><em><strong>What about commencement? Should graduating students still plan to participate?</strong></em></p>
+<ul>
+<li><em>At this time, <a href="https://www.eiu.edu/commence/">EIU's May 2020 commencement is cancelled</a>. Those who were planning to participate in the May 2020 ceremonies will be able to participate in the December 2020 ceremonies.</em></li>
+</ul>
+<p><em><strong>How will distance learning impact my academic progress?</strong></em></p>
+<ul>
+<li><em>The University will provide students every resource they need to succeed. While the University is moving from face-to-face instruction to an online framework, classes have not been cancelled. Faculty and staff will continue to be available to support all students.&nbsp; EIU is committed to ensuring its students can complete the semester in full to maintain their current academic progress.&nbsp;</em></li>
+</ul>
+<p><em><strong>Can I access my residence hall room or university-operated apartment to pick up my belongings? Are there any timelines or guidelines for moving out of the residence halls?<br /></strong></em></p>
+<ul>
+<li><em><strong>An email was issued April 24 with move-out guidelines. <a href="https://eiu.createsend.com/campaigns/reports/viewCampaign.aspx?d=y&amp;c=C635591EC8BF2DAC&amp;ID=79497DE691DC1548&amp;temp=False&amp;tx=0&amp;source=Report">READ THAT EMAIL HERE</a>. </strong></em></li>
+<li><em>Students who need to retrieve educational materials or need to request to stay on campus for extraordinary reasons can view specific housing instructions here:&nbsp; <a href="https://www.eiu.edu/housing/covid.php" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"> https://www.eiu.edu/housing/covid.php</a>.</em></li>
+</ul>
+<p><em><strong>What should I expect if/when I do return to campus to secure learning materials?</strong></em></p>
+<ul>
+<li>
+<p><em>Housing and Dining has worked to stagger times when students return to collect learning materials. All parents, students, staff, and faculty <strong>MUST</strong> maintain the recommended physical distancing expectations set by the CDC inside EIU housing facilities. Protecting the safety of our EIU community members working or living in these buildings is a <strong>TOP PRIORITY</strong>. Those not following these guidelines will be immediately and politely asked to leave.</em></p>
+</li>
+</ul>
+<p><em><strong>What if I cannot return to my permanent home residence to self-isolate?</strong></em></p>
+<ul>
+<li><em>Students who become ill or test positive for COVID-19 will be required to return home for 14 days to self-quarantine. Students who are unable to return home due to extenuating reasons will be addressed on a case-by-case basis by University Housing and Dining Services. Please contact them during regular hours at (217) 581-5111.</em><br /><br /><em>Please also refer to the self-isolation guidelines mentioned elsewhere in these FAQs.</em></li>
+</ul>
+<p style="line-height: 106%; margin: 0in 0in 8.0pt 0in;"><em><span style="color: black;"><strong>What if I have student health insurance and suspect I have the COVID-19 virus?</strong></span></em></p>
+<ul>
+<li><em>Students who become seriously ill from COVID-19 virus may need a variety of inpatient and outpatient services. Student Insurance provides benefits for inpatient hospital stays and outpatient services including physician visits, lab and radiology testing, ambulance transportation, and emergency room visits. The Student Insurance Brochure provides a complete outline of coverage. The brochure is available on the Student Insurance website <a href="https://www.eiu.edu/studentinsurance">www.eiu.edu/studentinsurance</a> under the Forms and Brochure link. The Student Insurance Claim Form is also available at this link.</em></li>
+<li><em>Students can access their Student Insurance card via PAWS, under the MyHealth tab. Simply click on the Student Insurance link. Please share the information on the insurance card, along with any primary insurance information, with all medical providers to ensure prompt claim processing.</em></li>
+<li><em>Students are encouraged to contact the Student Insurance Office at (217) 581-5290 when medical appointments are scheduled or as soon as possible following any medical visit. We will work with you to ensure providers have our claims address. Please feel free to contact us with any additional questions you may have. We can also be reached via email at <a href="mailto:stuinsure@eiu.edu">stuinsure@eiu.edu</a>.</em></li>
+</ul>
+<p><em><strong><u>EMPLOYMENT QUESTIONS</u></strong></em></p>
+<p><em><strong>Should I return to work prior to March 23? What if I&rsquo;m a faculty member but don&rsquo;t teach?</strong></em></p>
+<ul>
+<li><em>The university enacted a a temporary, Remote Work Policy to allow some departments to implement a Remote Work schedule, as allowed by available resources. Specifically, this Remote Work Policy grants department leaders, with Vice Presidential approval, the discretion to create remote work assignments for specific individuals while meeting EIU&rsquo;s needs. <strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>What if I don&rsquo;t feel well?</strong></em></p>
+<ul>
+<li><em>Stay home. As with any illness, employees who are ill should stay home and, if warranted, seek medical attention. Employees should follow normal call-in procedures and protocols for their department and report time away from work in accordance with University policy. If you believe you have been exposed to coronavirus, you should follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">this additional guidance from the CDC</a>.</em></li>
+</ul>
+<p><em><strong>Someone in the department appears to be ill. Can I send them home?</strong></em></p>
+<ul>
+<li><em>If it&rsquo;s an employee, please discuss the matter with your supervisor. If the employee presents symptoms that are cause for concern, you should send the employee home (with pay) for that day.&nbsp; In order for the employee to return to work, they must present a release from a medical provider that indicates they are clear to return to work.&nbsp; In absence of that return to work certification, the employee would need to utilize sick leave benefits until a return to work authorization can be obtained.</em><br /><br /><em>If the person is a student, please send them home and encourage them to consult with Campus Health Services.</em><br /><br /><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>My employee has not reported to work or called in absent. What should I do?</strong></em></p>
+<ul>
+<li><em>The absence of an employee from work (except those employees who have traveled to a <a href="https://wwwnc.cdc.gov/travel/notices">Level 3 country</a>) should be handled the same as any other absence, following your normal procedures when an employee fails to appear for work.</em><br /><br /><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>I am currently or soon will be holding campus interviews for employment.&nbsp; How do I conduct job searches and interviews during this period?</strong></em></p>
+<ul>
+<li><em>As a business necessity, on-campus interviews will continue to occur. Search committees are encouraged to use spaces to allow participants to sit with some distance between each other.</em><br /><br /><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>What if I have recently traveled from a Level 3 Country?</strong></em></p>
+<ul>
+<li><em>The fact that you have traveled, in and of itself, is not cause for concern. In accordance with guidance from the Illinois Department of Public Health, all persons returning from a <a href="https://wwwnc.cdc.gov/travel/notices">CDC Travel Notice 3 nation</a> should remain at home and self-quarantine for 14 days from the date of departure, avoid congregate settings, limit public activities and otherwise follow <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/prevention.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fprevention-treatment.html">CDC guidelines</a>. If you are returning to the United States in this circumstance, you cannot return to the University during the self-quarantine period. It is imperative that, when you reach your final destination, you contact your local health department. Your health department will advise you on steps you can take to protect your health and the health of your community.</em><br /><br /><em>If you are an employee of the University, you should work with your supervisor for proper guidance regarding call procedures and protocols for your department.&nbsp; Leave must be reported in accordance with university policy.&nbsp; If you have questions regarding leave policies, please direct those questions to <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a>.&nbsp;</em></li>
+</ul>
+<p><em><strong>I have a trip scheduled to a country that is currently at Level 2. Can I still take the trip?</strong></em></p>
+<ul>
+<li><em>The University has cancelled all international travel and all non-essential domestic travel. Although the University cannot restrict your personal travel, you are encouraged to review all <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">CDC travel advisories</a> before making any final decisions regarding your personal travel.</em></li>
+</ul>
+<p><em><strong>I am concerned about being exposed to illness if I come to work. Will the University provide me with a mask to wear so I don&rsquo;t get sick?</strong></em></p>
+<ul>
+<li><em>No. The CDC does not recommend that people who are well wear a facemask. The best way to prevent respiratory disease, including the coronavirus, is to use everyday preventive actions.</em></li>
+</ul>
+<p><em><strong>Should we allow our student employees to work during this period?</strong></em></p>
+<ul>
+<li><em>It is the department&rsquo;s discretion whether to allow students to work during this period.</em><br /><br /><em>A student in the Federal Work Study Program will continue to be paid even if they stop working. For these students, when reporting time worked, please instruct them to use the earn code of <strong>033 &ndash; FWS COVID-19 Hrs </strong>to report time worked.&nbsp;</em><br /><br /><em>All other student employees are only paid for the time that is actually worked.</em><br /><br /><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>I am employed on campus as a student employee (not a Graduate Assistant). Can I return to work even though the campus is still on spring break?</strong></em></p>
+<ul>
+<li><em>Student employees should hear from their supervisors before March 23.</em><br /><br /><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a></strong></em></li>
+</ul>
+<p><em><strong>Can I work from home? What if I have a compromised immune system?</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /></strong></em></li>
+<li><em>At this time, work-from-home eligibility guidelines for healthy employees are being developed and will be announced shortly.</em><br /><br /><em>Those with a compromised immune system who are not eligible to work from home should work with Human Resources. Depending on the circumstances, they may need to take FMLA leave or use sick leave (<a href="https://castle.eiu.edu/auditing/006.php">https://castle.eiu.edu/auditing/006.php</a>). Those who continue to work on campus that become sick should contact their medical provider and alert their supervisors immediately. To return to work after an illness, an employee will need a medical release indicating they are clear to return to work.&nbsp; In absence of that return to work certification, the employee would need to utilize sick leave benefits until a return to work authorization can be obtained.</em></li>
+</ul>
+<p><em><strong>What if I am ill and cannot report to work?</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /></strong></em></li>
+<li><em>Stay home. As with any illness, employees should stay home and/or seek medical attention if necessary. If you believe you have contracted COVID-19 or have been in contact with someone who does, then there is a 14-day mandatory self-isolation period that is required in order to return to work. Such isolation will need to be certified by your physician.</em><br /><br /><em>In all events, employees will need to follow regular call-in procedures and/or protocols for their individual departments.&nbsp; Time away from work must be reported in accordance with EIU policies.&nbsp; If you believe you have been exposed to the virus, you should follow guidance from the CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html">https://www.cdc.gov/coronavirus/2019-ncov/about/steps-when-sick.html</a>.</em></li>
+</ul>
+<p><em><strong>If I do stay home sick, will I need to use sick time?</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /></strong></em></li>
+<li><em>Yes, if you are out due to illness during this time, you must use your sick leave.&nbsp; If you are out as a precaution, the absence must be approved by your Supervisor and the appropriate leave should be vacation leave.</em></li>
+</ul>
+<p><em><strong>May I use leave without pay during this period?</strong></em></p>
+<ul>
+<li><em>If you have no leave balances, you may use leave without pay during a COVID-19 illness or self-isolation period.</em></li>
+</ul>
+<p><em><strong>My area&rsquo;s student employees did not return to campus, but I have a need for them to be on-site. Can I direct my student workers to report to work?</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /></strong></em></li>
+<li><em>As the University is open for business, students can report to work but are not required to work if they do not want to.&nbsp;If the student resides&nbsp;in&nbsp;the residence halls, the student must follow University Housing and Dining protocol for requesting to return the week of March 23 (March 22-30).&nbsp;</em></li>
+</ul>
+<p><em><strong>What if my child's school/daycare facility shuts down and I need to stay home to care for my child(ren).</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /></strong></em></li>
+<li><em>If you are designated as an eligible-to-work employee but are unable to report to work because of the lack of childcare, you should notify your supervisor of the need for absence following your department&rsquo;s normal call-in procedures and report time away for work in accordance with University policy. Employees will need to use available vacation, comp time, or personal days for these absences.</em><br /><br /><em>Questions related to leave reporting may be directed to HR at <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a>.</em></li>
+</ul>
+<p><em><strong>I have an underlying health condition, and I don't want to come to work and be exposed. Can I take a leave?</strong></em></p>
+<ul>
+<li><em><strong>REVISED: Abide by the "Stay-at-Home" guidelines in the Governor's Executive Order 10. <a href="https://www.eiu.edu/media/viewstory.php?action=1450">Learn what the Executive Order means for EIU students, faculty, and staff here.</a><br /><br /></strong></em></li>
+<li><em>The University has taken a number of steps to limit the risk of exposure to our faculty, staff and students. Employees who are not sick should generally expect to follow existing departmental policy by requesting time off from their supervisor. Approval will be at the supervisor's discretion in order to meet operational needs.</em><br /><br /><em>If you have an underlying health condition and believe that, despite the precautions taken by the University, that you are at risk for exposure by reporting to work, please contact the Human Resources Office at <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a> to discuss your eligibility for FMLA or an accommodation under the Americans with Disabilities Act.</em></li>
+</ul>
+<p><em><strong>Will I need a release to return to work if I am off work for five or more consecutive workdays?</strong></em></p>
+<ul>
+<li><em>The necessity for a return to work will be determined in accordance with the University's Return to Work procedures.</em><br /><br /><em>Please contact <a href="mailto:benefits@eiu.edu">benefits@eiu.edu</a> for questions regarding leave reporting or return-to-work requirements. If an employee is self-isolating, a certification to return to work will be necessary.&nbsp;</em></li>
+</ul>
+<p><em><strong>Can the University require that I self-quarantine or self-isolate?</strong></em></p>
+<ul>
+<li><em>Yes, to protect the health and safety of other employees and students, the university can require employees and students to self-isolate. &nbsp;Please discuss specific situations with the supervisor and contact HR with questions related to leave usage.&nbsp; As general guidance, if the employee presents symptoms that are cause for concern, you should send the employee home (with pay) for that day.&nbsp; In order for the employee to return to work, they must present a release from a medical provider that indicates they are clear to return to work.&nbsp; In absence of that return to work certification, the employee would need to utilize sick leave benefits until a return to work authorization can be obtained.</em></li>
+</ul>
+<p><em><strong>Other Student Affairs Questions?</strong></em></p>
+<ul>
+<li><em>For answers to other Student Affairs questions, click <strong><a href="https://www.eiu.edu/stuaff/services.php">here</a></strong>.</em></li>
+</ul>
+<p><em><strong>Other University Housing and Dining Questions?</strong></em></p>
+<ul>
+<li><em>For answers to other University Housing and Dining questions, click <a href="https://www.eiu.edu/housing/covid.php"><strong>here</strong></a>.</em></li>
+</ul>
+<p><em><strong>Other Health Services Questions?</strong></em></p>
+<ul>
+<li><em>For answers to other Health Services questions, click <a href="https://www.eiu.edu/health/index.php"><strong>here</strong></a>.</em></li>
+</ul>
+<p><em><strong>More Questions?</strong></em></p>
+<ul>
+<li><em>Email <a href="mailto:covid19info@eiu.edu">covid19info@eiu.edu</a>. We will aim to respond within 24 hours via a reply or through updates to this or similar EIU updates and documents.</em></li>
+</ul>
+<p><em><strong>NOTE</strong>: <strong>We recognize this may be a stressful time for our campus community.&nbsp; The Employee Assistance Program (EAP) is available for those who may need some assistance during this time.&nbsp; The EAP offers 3 free visits, and is a voluntary and confidential program that provides problem identification, counseling and referral services for employees regardless of their chosen health plan.&nbsp; Please visit </strong><a href="https://www.eiu.edu/humanres/benefits/EPA.php"><strong>https://www.eiu.edu/humanres/benefits/EPA.php</strong></a></em><strong><em> for additional information or contact Human Resources for a pamphlet.</em> <br /></strong></p> 
+					</div>
+
+		   		</div>
+	   		</div>
+	   	</div> <!--End Container -->
+	   	
+	  
+	   	
+	  
+	  
+      
+      
+      
+      
+     	<div class="grey_page_bg"><div class="container secondarygridpage no-bottom-padding">
+	   			<h2>Related Pages</h2>
+		   		
+			   		
+				   			<div class="round_big_button_links">
+								
+								<a href="https://www.cdc.gov/" class="round_big_button_dinklage">Center for Disease Control and Prevention</a>				
+			   		</div>			   		
+		   		
+		   		
+		   		
+	   		
+	   	</div>
+	   	
+	   	 <div class="container secondarygridpage ">
+		   		<div class="col-md-12 no-padding">
+			   		
+			   		<h2>Contact Information</h2><div class='deptinfo'>
+
+
+
+
+
+
+
+			<h3>Health & Counseling Services</h3><p>Medical Clinic <br>Eastern Illinois University Human Services Building<br>600 Lincoln Avenue<br>Charleston, IL 61920<br><a href='tel:217-581-3013'>(217) 581-3013</a><br><a href='mailto:health@eiu.edu'>health@eiu.edu</a><br>
+</p></div>
+<br class='clear' />
+			   		
+		   		</div>
+		   	</div>
+		   	
+		   	</div><!-- end grey bg -->
+  
+    
+   
+
+
+  
+<div class="next_step_section home_step">
+	<div class="container ">
+    	<div class="row">
+	   		<div class="col-sm-12">
+		   		<h2>Take the <span>next</span> step</h2>
+		   		<a href="https://www.eiu.edu/myeiu/register.php?skip=1" class="linkbutton">apply now <i class="fa icon-arrow"></i></a><br />
+		   		<a href="https://www.eiu.edu/admissions/discover.php#visit" class="linkbutton">schedule a visit <i class="fa icon-arrow"></i></a>
+	   		</div>
+		</div>
+	</div><!--End Container -->
+</div>  <!--End Next Step -->	
+	
+	
+<div class="givetoeiu">
+   		<div class="container givetoeiubg">
+	   		<a href="https://www.eiu.edu/develop/">
+	   		<h2>Give to EIU</h2>
+	   		<p>Every gift made to Eastern Illinois University -- whether it's big or small -- makes a difference. EIU's generous donors are helping our students fulfill their dreams every day, and you can be part of that.</p>
+	   		<p>Learn more about how to make your contribution today!</p>
+	   		</a>
+   		</div>
+</div>    
+	
+	
+<div class="footerlogo">
+	<div class="container">
+		<img src="//www.eiu.edu/_eiu15/images/universal/footer_logo.png" alt='Eastern Illinois University' />
+	</div>
+</div>
+
+<div class="footer">
+	   <div class="container">
+		   	   		<div class="row">
+		   		<div class="col-sm-6">
+			   		<h2>Say Hello.</h2>
+			   		<div id="question_error"></div>
+			   		<form id="question" name="question" action="contact.php" method="post" class="contactus">
+				   		<label for="username">Name* </label><input name="username" id="username" value="" placeholder="name" />
+				   		<label for="userphone">Telephone </label><input name="userphone" id="userphone" value="" placeholder="telephone" />
+				   		<label for="useremail">E-mail* </label><input name="useremail" id="useremail" value="" placeholder="email" />
+				   		<label for="useremailretype">Retype E-mail* </label><input name="useremailretype" id="useremailretype" value="" placeholder="retype email"/>
+				   		<label for="topic">Topic</label><select name="topic" id="topic" required>
+						  <option value="" class="placeholdertext">choose a topic for your inquiry</option>
+						  							  <option value="covid0749191">COVID-19</option>
+						  						  <option value="admissions@eiu.edu">Undergraduate Admissions</option>
+						  <option value="transfer@eiu.edu">Transfer Admissions</option>
+						  <option value="graduate@eiu.edu">Graduate Admissions</option>
+						  <option value="interntl@eiu.edu">International Admissions</option>
+						  <option value="botba@eiu.edu">Continuing Education Admissions</option>
+						  <option value="orient@eiu.edu">Chat with an EIU Student</option>
+						  <option value="alumeiu@eiu.edu">Alumni Questions</option>
+						  <option value="itshelp@eiu.edu">ITS Help Desk (e.g. lost passwords)</option>
+						  <option value="thallingram@eiu.edu">General EIU Questions</option>
+						</select>
+				   		<label for="question">The Question *</label><textarea name="question" id="question_content" rows="5" cols="50" title="your question" required placeholder="what can we do for you?"></textarea>
+				   		<div class="g-recaptcha" data-sitekey="6Ld3KisUAAAAAIyf06qjk83lQuiMAw9SesoTHNuN"></div><br />
+				   		<input type="submit" name="submitquestion" value="submit question" class="submitcontact" />	
+				   	</form>
+			   		</form>
+		   		</div>
+		   		<div class="col-sm-6">
+			   		<h2>Connect.</h2>
+			   		<a class="footericon" href="https://www.facebook.com/iameiu"><i class="fa fa-facebook"></i></a>
+			   		<a class="footericon" href="https://www.twitter.com/eiu"><i class="fa fa-twitter"></i></a>
+			   		<a class="footericon" href="https://www.flickr.com/groups/eiu/pool/"><i class="fa fa-flickr"></i></a>
+			   		<a class="footericon" href="https://www.youtube.com/iameiu/"><i class="fa fa-youtube"></i></a>
+			   		<a class="footericon" href="https://vimeo.com/eiu/"><i class="fa fa-vimeo"></i></a>
+			   		<a class="footericon sexualassault" href="https://www.eiu.edu/sexualassaultresources/"><i class="fa icon-awareness-ribbon"></i></a>
+		   		</div>
+		   	
+	   		</div>
+	   			   		<div class="row">
+		   		<div class="col-sm-12 footermoreinfo">
+		   		<a href="https://www.eiu.edu/contact.php">Contact Us</a> | <a href="https://www.eiu.edu/accessibility.php">Accessibility</a> | <a href="https://www.eiu.edu/about/index.php">About EIU</a> | <a href="https://www.eiu.edu/alerteiu/">Emergency Information</a> | <a href="https://www.eiu.edu/humanres/employment/">Employment at EIU</a> | <a href="https://www.eiu.edu/map/">Campus Map</a> | <a href="https://castle.eiu.edu/gcounsel/foia.php">Freedom of Information Act</a> | <a href="https://www.eiu.edu/veterans/">Supporting our Veterans</a>  | <a href="https://www.eiu.edu/complaints/">Concerns &amp; Complaints</a><br />
+		   		<p>Eastern Illinois University is authorized to operate as a postsecondary educational institution by the Illinois Board of Higher Education.</p>
+		   		</div>
+	   		</div>
+	   
+	   </div>
+   </div>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+ <script type="text/javascript" src="https://fast.fonts.net/jsapi/dc85cdc0-cf53-427e-9feb-fec36d04605e.js"></script>	
+ <script async="async" defer="defer" src="https://www.youvisit.com/tour/Embed/js2"></script>
+<!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="https://www.eiu.edu/_eiu15/js/jquery.min.js"></script>
+<!--  <script>window.jQuery || document.write('<script src="https://www.eiu.edu/_eiu15/js/jquery.min.js">\x3C/script>')</script>  -->
+ <script src="//www.eiu.edu/_eiu15/js/production_v2.min.js?v=1.2"></script>
+
+<noscript>
+		<style>
+			body {
+				opacity: 1;
+			}
+		</style>
+</noscript>	
+
+	 
+
+
+		  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3d2bdb7666","applicationID":"3175187","transactionName":"ZgMANhBQXhJXAUddDV9JNxALHlMOQAtXGwRQF0wSCkE=","queueTime":0,"applicationTime":55,"atts":"SkQDQFhKTRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
