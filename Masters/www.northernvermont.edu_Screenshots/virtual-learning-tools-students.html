@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"13beab3a3a",applicationID:"364431964"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://www.northernvermont.edu/sites/all/themes/custom/nvu_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Use these virtual learning tools to enhance your remote learning experience." />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.northernvermont.edu/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" />
+<link rel="shortlink" href="https://www.northernvermont.edu/node/9289" />
+<meta property="og:site_name" content="Northern Vermont University" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.northernvermont.edu/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" />
+<meta property="og:title" content="Virtual Learning Tools for Students" />
+<meta property="og:description" content="Use these virtual learning tools to enhance your remote learning experience." />
+<meta property="og:updated_time" content="2020-04-02T18:26:46-04:00" />
+<meta property="article:published_time" content="2020-03-20T11:41:01-04:00" />
+<meta property="article:modified_time" content="2020-04-02T18:26:46-04:00" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MZZZ5QX');</script>
+  <!-- End Google Tag Manager -->
+  <!-- begin AdRoll pixel -->
+  <script type="text/javascript">
+    adroll_adv_id = "JEI7E227RJGNJC3Y3RM54X";
+    adroll_pix_id = "ONF5NH7FB5AJZMXR4UOVOT";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+  </script>
+  <!-- end AdRoll pixel -->
+  <script async="async" src="https://connect.northernvermont.edu/ping">/**/</script>
+
+  <title>Virtual Learning Tools for Students | Northern Vermont University</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="https://www.northernvermont.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
+<link rel="stylesheet" href="https://www.northernvermont.edu/sites/default/files/css/css_-dsMs8pmI0DDXFhZKsb-BCseZ3ff-qUZ4AeAG-cXAr8.css" media="all" />
+<link rel="stylesheet" href="https://www.northernvermont.edu/sites/default/files/css/css_t2Qw5mcN4vkbVLOOxHsF9ZDok4nOjvX-LvMxqowN3N0.css" media="all" />
+<link rel="stylesheet" href="https://www.northernvermont.edu/sites/default/files/css/css_yfrQubRvLq6blf8muXcoLsJJ_7IkUVNw5aFTUMF1ZLY.css" media="all" />
+<style>#sliding-popup.sliding-popup-bottom,#sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,.eu-cookie-withdraw-tab{background:#cccccc;}#sliding-popup.sliding-popup-bottom.eu-cookie-withdraw-wrapper{background:transparent}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p,#sliding-popup label,#sliding-popup div,.eu-cookie-compliance-secondary-button,.eu-cookie-withdraw-tab{color:#333 !important;}.eu-cookie-withdraw-tab{border-color:#333;}.eu-cookie-compliance-more-button{color:#333 !important;}
+</style>
+<link rel="stylesheet" href="https://www.northernvermont.edu/sites/default/files/css/css_-rA-2WKPBcvGj7RQ-gX3l6OFcqjHT-JppD_LAvHFlkY.css" media="all" />
+<style>.page-banner-content{background-color:#aaaaaa !important;background-image:url('https://www.northernvermont.edu/sites/default/files/virtual_learning_banner_computer-typing.jpg') !important;background-repeat:no-repeat !important;background-attachment:scroll !important;background-position:center center !important;background-size:cover !important;-webkit-background-size:cover !important;-moz-background-size:cover !important;-o-background-size:cover !important;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.https://www.northernvermont.edu/sites/default/files/virtual_learning_banner_computer-typing.jpg',sizingMethod='scale');-ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://www.northernvermont.edu/sites/default/files/virtual_learning_banner_computer-typing.jpg',sizingMethod='scale')";}
+</style>
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs.js"></script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_VdqSC54Lrein-ophbKBZLWIv7x_UjlW-5MCIzNce1n4.js"></script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_iAm9ZDnhzjEb2ZoZSJSChMDp3xnggLlTYZHWUtSeyDQ.js"></script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_DuCBxVBnmwlqi-FUiwD_uvjmLVBk6uphM_23_gbOteI.js"></script>
+<script>jQuery.extend(Drupal.absolute_messages, {"dismiss":{"status":false,"warning":false,"error":false},"dismiss_time":{"status":"","warning":"","error":""},"dismiss_all_count":2});</script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_FH6Sq35ZRguJ-wPJN8tcglGkUDIsCVM2Ul79TNBqu_c.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-105622910-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_Z4Y7KhjQnxhxwME8kFHvpishQQzAQl6MIgFC9inRtuw.js"></script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_kwAub9AOHy_uODaiyZhGiBKr-nDFq-2LCjZhGuutDwo.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nvu_theme","theme_token":"UgKey4QDpIEImDntMvmketKT_JAQSCHKmAC3Pn58aLI","js":{"sites\/all\/libraries\/accessible_mega_menu\/js\/jquery-accessibleMegaMenu.js":1,"0":1,"1":1,"sites\/all\/modules\/custom\/kwall_multilevel_slide_menu\/js\/kwall_multilevel_slide_menu.js":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"\/\/code.jquery.com\/jquery-1.10.2.min.js":1,"2":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/libraries\/jquery.hoverintent\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/features\/kwall-megamenu\/kwall_megamenu.js":1,"sites\/all\/modules\/custom\/campus_alerts\/campus_alerts.js":1,"sites\/all\/modules\/custom\/kwall_directory\/js\/kwall_directory.js":1,"sites\/all\/modules\/custom\/kwall_video_slideshow\/js\/kwall_video_slideshow.js":1,"sites\/all\/modules\/contrib\/spamspan\/spamspan.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.js":1,"3":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"4":1,"sites\/all\/modules\/contrib\/menu_attach_block\/menu_attach_block.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/jquery.matchHeight-min.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/matchHeight-init.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/feature-vid.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/vendor\/swiper.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/vendor\/rangeslider.js":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/accessible_mega_menu\/css\/megamenu.css":1,"sites\/all\/modules\/features\/kwall-megamenu\/kwall_megamenu.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/contrib\/menu_attach_block\/menu_attach_block.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/custom\/kwall_directory\/css\/kwall_directory.css":1,"sites\/all\/modules\/custom\/kwall_video_slideshow\/css\/kwall_video_slideshow.css":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/modules\/custom\/kwall_multilevel_slide_menu\/css\/kwall_multilevel_slide_menu.css":1,"1":1,"sites\/all\/themes\/custom\/nvu_theme\/system.menus.css":1,"sites\/all\/themes\/custom\/nvu_theme\/css\/normalize.css":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/vendor\/stories.css":1,"sites\/all\/themes\/custom\/nvu_theme\/js\/vendor\/swiper.css":1,"sites\/all\/themes\/custom\/nvu_theme\/css\/styles.css":1,"sites\/all\/themes\/custom\/nvu_theme\/css\/print.css":1,"0":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"better_exposed_filters":{"views":{"slideshow":{"displays":{"hero":{"filters":[]}}},"content_displays":{"displays":{"block_6":{"filters":[]},"block_4":{"filters":[]},"block_7":{"filters":[]},"block_3":{"filters":[]}}}}},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":0,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThis site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.\u003C\/h2\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ELearn more\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ELearn more\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003ELearn more\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/about\/depth\/web-privacy-statement\/nvu-cookies-policy","popup_link_new_window":1,"popup_position":null,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","popup_eu_only_js":0,"cookie_lifetime":"100","cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":".external","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"currentPath":"node\/9289","currentPathIsAdmin":false,"urlIsAjaxTrusted":{"\/about\/nvu\/coronavirus-covid-19\/virtual-learning-tools-students":true,"\/studentlife\/CounselingServices\/documents\/Developing-Healthy-Boundaries.pdf":true},"kwall_multilevel_slide_menu":{"searchOpenSelector":".header-search-open","menuOpenSelector":".header-menu-open-button","navMenuID":"kwall-multilevel-slide-in-nav-menu"}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/contrib/zen/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+  <!-- begin CBE code -->
+  <script>
+      (function(a,b,c,d,e,f,g) {
+      a[e] = a[e] || function() {(a[e].q = a[e].q || []).push(arguments)};f=b.createElement(c);
+      g=b.getElementsByTagName(c)[0];f.async=1;f.src=d+"/cbe/cbe.js";g.parentNode.insertBefore(f,g);
+      })(window,document,"script","https://cbe.capturehighered.net","_cbe");
+
+      _cbe("create","045c9cfc");
+      _cbe("log","pageview");
+  </script>
+  <!-- end CBE code -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-9289 node-type-page section-about taxonomy-both-campuses" >
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZZZ5QX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      
+<div id="page">
+
+  <div class="header-wrapper">
+    <div class="row">
+
+      <header id="utility">
+              </header>
+      <header id="header" role="banner">
+          <div class="header__region region region-header">
+    <div id="block-menu-menu-utility-nav" class="block block-menu header-utility-nav-menu-block first odd" role="navigation">
+
+      
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf hide-mobile"><a href="/admissions-and-aid/request-information" class="menu__link menu__link">Request Info</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf hide-mobile"><a href="/admissions-and-aid/applying-nvu/visit" class="menu__link menu__link">Visit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/admissions-and-aid/applying-nvu/how-apply" class="menu__link menu__link">Apply</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/alumni" class="menu__link menu__link">Alumni</a></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded"><a href="/services" class="menu__link menu__link">Services</a><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf"><a href="/services/campus-mail" class="menu__link menu__link">Campus Mail </a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/services/campus-safety" class="menu__link menu__link">Campus Safety</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/services/conference-and-events" class="menu__link menu__link">Conference and Events Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf"><a href="/services/information-technology" class="menu__link menu__link">IT Services</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded"><span class="menu__link menu__link nolink">Quicklinks</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf"><a href="/academics/resources/academic-calendar" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/about/people/directory" class="menu__link menu__link">Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/academics/resources/libraries" class="menu__link menu__link">Libraries</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="https://outlook.office.com/owa/?realm=o365.vsc.edu&amp;vd=mail" class="menu__link menu__link">NVU Email</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/academics/resources-and-support/academic-support/advising-registration-and-resources/registrar" class="menu__link menu__link">Transcripts and Registration </a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="https://portal.vsc.edu" class="menu__link menu__link">VSCS Portal</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf"><a href="/services/campus-safety/weather-delayscampus-closures" class="menu__link menu__link">Weather Delays/Campus Closures</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="block-bean-header-logo" class="block block-bean header-logo-block even">
+
+      
+  <div class="entity entity-bean bean-single-image clearfix" about="/block/header-logo" typeof="">
+  <div class="content">
+    <div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.northernvermont.edu/"><img typeof="foaf:Image" src="https://www.northernvermont.edu/sites/default/files/nvu-logo-white.png" width="1601" height="301" alt="Northern Vermont University" title="Northern Vermont University" /></a></div></div></div>  </div>
+</div>
+
+</div>
+<div id="block-menu-block-2" class="block block-menu-block accessible-mega-menu fw-accessible-mega-menu main-menu-block no-mobile odd" role="navigation">
+
+      
+  <div class="kwall-megamenu-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="accessible-megamenu"><li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-1843 accessible-megamenu-top-nav-item menu-col-3"><a href="/about" class="menu__link menu__link">About</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item menu__item first menu-mlid-1844 even first col-md-4"><span class="menu__link menu__link kwall-megamenu-next-group nolink">NVU</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1845"><a href="/about/nvu/message-president" class="menu__link menu__link">Message from the President</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1846"><a href="/about/nvu/our-campuses" class="menu__link menu__link">Our Campuses</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2254"><a href="/about/nvu/quick-facts" class="menu__link menu__link">Quick Facts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2609"><a href="/about/nvu/depth" class="menu__link menu__link">In Depth</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1847"><a href="/about/mission-and-history" class="menu__link menu__link">Mission and History</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1849"><a href="/about/location-and-directions" class="menu__link menu__link">Location and Directions</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2989"><a href="/about/nvu/coronavirus-covid-19" class="menu__link menu__link">Information on Coronavirus (COVID-19)</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-1850 odd col-md-4"><span class="menu__link menu__link nolink">People</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1897"><a href="/about/people/nvu-leadership" class="menu__link menu__link">NVU Leadership</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2190"><a href="/about/people/directory" class="menu__link menu__link">Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2305"><a href="/about/people/diversity-inclusion-and-social-justice" class="menu__link menu__link">Diversity, Inclusion, and Social Justice</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1900"><a href="/about/people/employment-opportunities" class="menu__link menu__link">Employment Opportunities</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2935"><a href="/about/people/nvu-stories" class="menu__link menu__link">NVU Stories</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-1854 even last col-md-4"><span class="menu__link menu__link nolink">News and Events</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2188"><a href="/about/news-and-events/news-center" class="menu__link menu__link">News Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2189"><a href="/about/news-and-events/events" class="menu__link menu__link">Events Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2971"><a href="/about/news-and-events/lecture-and-arts" class="menu__link menu__link">Lecture and Arts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2225"><a href="/about/news-and-events/contact-nvu-communications" class="menu__link menu__link">Media Inquiries</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-1901 accessible-megamenu-top-nav-item menu-col-3"><a href="/academics" class="menu__link menu__link">Academics</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item menu__item first menu-mlid-1902 even first col-md-4"><span class="menu__link menu__link nolink">Academic Programs</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2213"><a href="/academics/academic-programs/degree-programs" class="menu__link menu__link">Degree Programs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2913"><a href="/academics/academic-programs/academic-schools" class="menu__link menu__link">Academic Schools</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2259"><a href="/academics/degree-programs/graduate-studies" class="menu__link menu__link">Graduate Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1910"><a href="/academics/academic-programs/center-professional-studies" class="menu__link menu__link">Center for Professional Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1911"><a href="/academics/academic-programs/continuing-education-0" class="menu__link menu__link">Continuing Education</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1914"><a href="/academics/academic-programs/study-away" class="menu__link menu__link">Study Away</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-1916"><a href="/academics/academic-programs/summerwinter-session" class="menu__link menu__link">Summer/Winter Session</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-1905 odd col-md-4"><span class="menu__link menu__link nolink">Resources</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1917"><a href="/academics/resources/academic-calendar" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1918"><a href="/academics/resources/bookstores" class="menu__link menu__link">Bookstores</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1919"><a href="/academics/resources/catalogs-and-course-bulletins" class="menu__link menu__link">Catalogs and Course Bulletins</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1920"><a href="/academics/resources/libraries" class="menu__link menu__link">Libraries</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2217"><a href="/academics/resources/student-handbook" class="menu__link menu__link">Student Handbook</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-1907 even last col-md-4"><span class="menu__link menu__link nolink">Support</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1921"><a href="/academics/support/academic-support" class="menu__link menu__link">Academic Support</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1922"><a href="/academics/support/advising-and-degree-planning" class="menu__link menu__link">Advising and Degree Planning</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1923"><a href="/academics/support/nvu-disability-services" class="menu__link menu__link">Disability Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2915"><a href="/academics/support/careers-and-internships" class="menu__link menu__link">Career and Internships</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2947"><a href="/academics/resources-and-support/center-teaching-and-learning" class="menu__link menu__link">Center for Teaching and Learning</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2984"><a href="/academics/support/office-institutional-research" class="menu__link menu__link">Institutional Research</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-1926"><a href="/academics/support/registrar" class="menu__link menu__link">Registration</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2091 accessible-megamenu-top-nav-item menu-col-2"><a href="/admissions-and-aid" class="menu__link menu__link">Admissions and Aid</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item menu__item first menu-mlid-2092 even first col-md-6"><span class="menu__link menu__link nolink">Applying to NVU</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2094"><a href="/admissions-and-aid/applying-nvu/visit" class="menu__link menu__link">Visit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2095"><a href="/admissions-and-aid/applying-nvu/how-apply" class="menu__link menu__link">How to Apply</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2096"><a href="/admissions-and-aid/applying-nvu/tuition-and-fees" class="menu__link menu__link">Tuition and Fees</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2097"><a href="/admissions-and-aid/applying-nvu/financial-aid" class="menu__link menu__link">Financial Aid</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2104"><a href="/admissions-and-aid/applying-nvu/accepted-students" class="menu__link menu__link">Accepted Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2633"><a href="/admissions-and-aid/applying-nvu/pay-your-enrollment-deposit" class="menu__link menu__link">Pay Your Deposit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2979"><a href="/admissions-and-aid/request-information" class="menu__link menu__link">Request Information</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2093 odd last col-md-6"><span class="menu__link menu__link nolink">Students</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2098"><a href="/admissions-and-aid/students/undergraduate-students" class="menu__link menu__link">Undergraduate Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2099"><a href="/admissions-and-aid/students/transfer-students" class="menu__link menu__link">Transfer Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2944"><a href="/admissions-and-aid/students/welcome-ccv-students" class="menu__link menu__link">CCV Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2100"><a href="/admissions-and-aid/students/international-students" class="menu__link menu__link">International Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2101"><a href="/admissions-and-aid/students/graduate-students" class="menu__link menu__link">Graduate Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2276"><a href="/admissions-and-aid/students/early-college-students" class="menu__link menu__link">Early College</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2353"><a href="/admissions-and-aid/students/dual-enrollment-students" class="menu__link menu__link">Dual Enrollment</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2103"><a href="/admissions-and-aid/students/veterans" class="menu__link menu__link">Veterans</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2032 accessible-megamenu-top-nav-item menu-col-2"><a href="/student-life" class="menu__link menu__link">Student Life</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item menu__item first menu-mlid-2033 even first col-md-6"><span class="menu__link menu__link nolink">Students</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2036"><a href="/student-life/activities-and-events" class="menu__link menu__link">Activities and Events</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2037"><a href="/student-life/students/clubs-and-organizations" class="menu__link menu__link">Clubs and Organizations</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2845"><a href="/student-life/students/families" class="menu__link menu__link">Families</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2035"><a href="/student-life" class="menu__link menu__link">Overview</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2990"><a href="/about/nvu/coronavirus-covid-19" class="menu__link menu__link">Information on Coronavirus (COVID-19)</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2034 odd last col-md-6"><span class="menu__link menu__link nolink">Services</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2038"><a href="/student-life/services/first-year-experience" class="menu__link menu__link">First-Year Experience</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2039"><a href="/student-life/services/housing-and-dining" class="menu__link menu__link">Housing and Dining</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2195"><a href="/student-life/student-wellness-and-safety" class="menu__link menu__link">Student Wellness and Safety</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2199"><a href="/student-life/services/information-commuter-students" class="menu__link menu__link">Commuter Students</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2131 accessible-megamenu-top-nav-item menu-col-1"><a href="/athletics" class="menu__link menu__link">Athletics</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-2136 even first last"><span class="menu__link menu__link nolink">Campus Athletics</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2135"><a href="http://nvubadgers.com/landing/index" class="menu__link menu__link">Johnson Athletics</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2133"><a href="http://www.lyndonhornets.com/landing/index" class="menu__link menu__link">Lyndon Athletics</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2140 accessible-megamenu-top-nav-item menu-col-3"><a href="/nvu-online" class="menu__link menu__link">NVU Online</a><div class="accessible-megamenu-panel"><div class="accessible-megamenu-outer-panel"><div class="accessible-megamenu-inner-panel"><ul class="accessible-megamenu-panel-group"><li class="menu__item menu__item first menu-mlid-2142 even first col-md-4"><span class="menu__link menu__link nolink">About</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2146"><a href="/nvu-online/about/nvu-online-tuition-and-fees" class="menu__link menu__link">Tuition and Fees</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2148"><a href="/nvu-online/about/request-info" class="menu__link menu__link">Request Info</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2149"><a href="/nvu-online/about/apply-nvu-online" class="menu__link menu__link">Apply</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2144 odd col-md-4"><span class="menu__link menu__link nolink">Programs</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2151"><a href="/online-degrees/accounting" class="menu__link menu__link">Accounting</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2152"><a href="/online-degrees/business-administration" class="menu__link menu__link">Business Administration</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2841"><a href="/academics/degree-programs/criminal-justice-online" class="menu__link menu__link">Criminal Justice</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2978"><a href="/nvu-online/programs/online-ma-education-digital-media-instruction-concentration" class="menu__link menu__link">Digital Media Instruction</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2153"><a href="/online-degrees/early-childhood-education" class="menu__link menu__link">Early Childhood Education (90% Online)</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2916"><a href="/academics/degree-programs/general-studies" class="menu__link menu__link">General Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2154"><a href="/online-degrees/interdisciplinary-studies" class="menu__link menu__link">Interdisciplinary Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2761"><a href="/nvu-online/programs/ma-leadership-studies" class="menu__link menu__link">Leadership Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2156"><a href="/online-degrees/professional-studies" class="menu__link menu__link">Professional Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2155"><a href="/online-degrees/psychology" class="menu__link menu__link">Psychology</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2755"><a href="/academics/degree-programs/online-programs/online-small-business-management-certificate" class="menu__link menu__link">Small Business Management</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2754"><a href="/academics/degree-programs/business-administration-online-degree/sport-management" class="menu__link menu__link">Sport Management</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2756"><a href="/academics/degree-programs/online-programs/online-certificate-sustainability" class="menu__link menu__link">Sustainability</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2157"><a href="/online-degrees/wellness-and-alternative-medicine" class="menu__link menu__link">Wellness and Alternative Medicine</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2145 even last col-md-4"><span class="menu__link menu__link nolink">Resources</span><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2158"><a href="/nvu-online/resources/nvu-online-academic-calendar" class="menu__link menu__link">Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2159"><a href="/nvu-online/resources/resources-and-support" class="menu__link menu__link">Support and Advising</a></li>
+</ul></li>
+</ul></div></div></div></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-955 accessible-megamenu-top-nav-item fa fa-search">
+<a href="# " class="menu-attach-block-drop-link external expand-on-click dropped" data-block-id="search|form" id="&lt;block&gt;-drop-link-955">More</a><div class="menu-attach-block-wrapper orientation-vertical">
+	<div id="block-search-form" class="block block-search pop-search first odd" role="search">
+
+      
+  <form action="/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-searchfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-search" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-ki9HXYiea9T1dRWz3MP8BK3ugFJnW1bETF1jmm4j6b4" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div>
+</div>
+</li>
+</ul></div>
+
+</div>
+<div id="block-bean-slide-menu-toggle" class="block block-bean header-slide-menu-toggle-block header-menu-open-button last even">
+
+      
+  <div class="entity entity-bean bean-slide-menu-toggle clearfix" about="/block/slide-menu-toggle" typeof="">
+  <div class="content">
+    
+  <div class="field field-name-field-menu-toggle field-type-link-field field-label-hidden">
+    <div  class="item-list item-list--linkicon" id="linkicon-bean-slide-menu-toggle-field-menu-toggle-5"><ul  class="linkicon"><li><a href="/%23" class="fa fa-bars header-menu-open-button linkicon__item"><span class="linkicon__text">Menu</span><span  class="fa fa-menu linkicon__icon icon" aria-hidden="true"></span></a></li></ul></div>  </div>
+  </div>
+</div>
+
+</div>
+  </div>
+      </header>
+      <div id="navigation" class="clearfix">
+              </div><!-- /#navigation -->
+
+    </div>
+  </div><!-- /.header-wrapper -->
+
+  <div class="highlighted-wrapper testln1">
+          <div class="region region-highlighted">
+      <div class="region region-highlighted">
+    <div id="block-views-content-displays-block-6" class="block block-views first last odd">
+
+      
+  <div class="view view-content-displays view-id-content_displays view-display-id-block_6 page-banner-content view-dom-id-567a2c366196a562ea25af0312c73d00">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="page-details-wrap">
+<div class="page-details">
+<div class="page-title"><h1>Virtual Learning Tools for Students</h1></div>
+<div class="page-intro">
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Use these virtual learning tools to enhance your remote learning experience. </p>
+</div></div></div>
+</div>
+</div>
+</div></span>  </div>  
+              </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div>
+  </div>
+  </div>
+  </div><!-- /.highlighted-wrapper -->
+
+  <div id="main" class="">
+    <div class="content-wrapper">
+      <div id="content" class="column" role="main">
+        <a id="main-content"></a>
+
+        <div class="before-content-wrapper">
+                                                </div>
+        <div class="visually_hidden_title">
+                      <span class="page__title title" id="page-title">Virtual Learning Tools for Students</span>
+                 </div>
+                  <div class="breadcrumb-wrapper">
+            <div class="content-wrapper">
+              <nav class="breadcrumb" role="navigation"><ol><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/about/nvu/coronavirus-covid-19">Coronavirus (COVID-19)</a></li><li class="active">Virtual Learning Tools for Students</li></ol></nav>            </div><!-- /.content-wrapper -->
+          </div><!-- /.breadcrumb-wrapper -->
+        
+        
+        
+        
+        <div class="content-main-wrapper">
+          <div class="region region-content-main">
+            
+
+
+<article class="node-9289 node node-page view-mode-full clearfix" about="/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" typeof="foaf:Document">
+
+      <header>
+      
+          </header>
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>NVU Students, we hope these resources will help your transition to remote coursework. Check back often for additions.</p>
+<p>Updated: 3/20/2020</p>
+<p>If you have any technical problems or questions that are not answered here, please submit a trouble ticket to our Help Desk at <a href="https://helpdesk.vsc.edu/" title="IT Help Desk">https://helpdesk.vsc.edu</a>. </p>
+<p>NVU Students can access Canvas and their NVU email through the <a href="https://portal.vsc.edu">NVU Portal</a>.</p>
+<h3>Canvas Guides for Students</h3>
+<ul>
+<li><a href="https://player.vimeo.com/video/74677642" title="Canvas Video Tour for Students">Canvas Video Tour for Students</a></li>
+<li><a href="https://community.canvaslms.com/videos/3980-canvas-student-app" title="Using the Canvas Mobile App">Using the Canvas Mobile App</a> - Video tutorial</li>
+<li><a href="https://community.canvaslms.com/docs/DOC-10701-canvas-student-guide-table-of-contents" title="Canvas Guide for Students">Canvas Guide for Students</a></li>
+<li><a href="https://community.canvaslms.com/docs/DOC-10720" title="What Web Browsers Does Canvas Support?">What Web Browsers Does Canvas Support?</a></li>
+</ul>
+<h3>Zoom</h3>
+<p><a href="https://www.youtube.com/embed/vFhAEoCF7jg?rel=0&amp;autoplay=1&amp;cc_load_policy=1" title="How to Join a Zoom Meeting">How to Join a Zoom Meeting</a> - One Minute Video</p>
+<p><a href="https://support.zoom.us/hc/en-us" title="Zoom Resource Site">Zoom Resource Site</a> - Loads of Topics</p>
+<p><a href="https://www.northernvermont.edu/sites/default/files/zoom_tips_for_students.pdf">Zoom Tips for Students</a></p>
+<p><a href="https://www.northernvermont.edu/computer-and-zoom-backgrounds">NVU Zoom Backgrounds</a></p>
+<p>REMINDER: Use computer audio whenever possible when joining a Zoom meeting.</p>
+<h3>Software</h3>
+<p><strong>Microsoft Office</strong> for Northern Vermont University Students - How to download and install Microsoft programs from your NVU Office 360 account on Windows and Mac OS. Chromebook users can download Office apps from the Google Play Store.</p>
+<p><a href="https://oit.northernvermont.edu/software">Visit the NVU OIT website for installation instructions</a>.</p>
+<p><strong>OneDrive, </strong>a cloud storage app, is also available for free to VSC students. <a href="https://oit.northernvermont.edu/file-storage/setting-up-your-onedrive-for-business-desktop-app">Learn how to install OneDrive at the NVU OIT website</a>. </p>
+<h3><strong>Discounts on Internet Access at Home</strong></h3>
+<p>Some Internet Service Providers (ISPs) are currently providing free or discounted Internet services to households for a limited period of time. Some ISPs may have requirements for free or discounted access.</p>
+<ul>
+<li>Comcast - <a href="https://www.internetessentials.com/" rel="noopener" target="_blank">https://www.internetessentials.com/</a></li>
+<li>Consolidated Communications - Call: 1-855-399-3084, mention the promo code "Two Months Free"</li>
+<li>Spectrum - <a href="https://www.spectrum.com/browse/content/spectrum-internet-assist" rel="noopener" target="_blank">https://www.spectrum.com/browse/content/spectrum-internet-assist</a></li>
+</ul>
+<p>Northern Vermont University is not affiliated with and does not endorse any individual ISP. Anyone taking advantage of free or discounted services should carefully read the ISP's terms of agreement.</p>
+</div></div></div>
+  
+  
+</article><!-- /.node -->
+                      </div>
+        </div><!-- /.content-main -->
+      </div><!-- /#content -->
+
+      
+              <aside class="sidebars">
+                      <section class="region region-sidebar-second column sidebar">
+    <div id="block-views-content-displays-block-7" class="block block-views sidebar-menu-block first last odd">
+
+      
+  <div class="view view-content-displays view-id-content_displays view-display-id-block_7 view-dom-id-b6c34bb456586a80d3f2d9a559e4d454">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <article class="node-9289 node node-page view-mode-sidebar clearfix" about="/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" typeof="foaf:Document">
+
+      <header>
+      
+          </header>
+  
+  
+<div class="paragraphs-items paragraphs-items-field-sidebar-content paragraphs-items-field-sidebar-content-full paragraphs-items-full">
+  <div class="field field-name-field-sidebar-content field-type-paragraphs field-label-hidden"><div class="field-items"><div class="field-item even"><div class="entity entity-paragraphs-item paragraphs-item-quicklinks-minimal paragraphs-item-id-2671" about="" typeof="">
+  <div class="content">
+    <div class="field field-name-field-links field-type-link-field field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.northernvermont.edu/nvu-portal">More information on the NVU Portal</a></div><div class="field-item odd"><a href="https://oit.northernvermont.edu/">Northern Vermont University Information Technology Website</a></div><div class="field-item even"><a href="https://helpdesk.vsc.edu/">Submit an IT help request</a></div><div class="field-item odd"><a href="https://www.northernvermont.edu/computer-and-zoom-backgrounds">Download backgrounds for Zoom and your computer.</a></div></div></div>  </div>
+</div>
+</div></div></div></div>
+
+  
+  
+</article><!-- /.node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div>
+  </section>
+        </aside><!-- /.sidebars -->
+          </div><!-- /.content-wrapper -->
+  </div><!-- /#main -->
+
+
+  <div class="content-bottom-wrapper">
+      </div><!-- /.content-bottom-wrapper -->
+
+  <div id="pre-footer-wrapper">
+    <div class="pre-footer-content">
+      <div class="row">
+          <div class="region region-pre-footer">
+    <div id="block-menu-menu-footer-menu-1" class="block block-menu footer-menu-block col-md-8 first odd" role="navigation">
+
+      
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf"><a href="/about/location-and-directions" class="menu__link menu__link">Directions</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/about/people/employment-opportunities" class="menu__link menu__link">Employment</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/services/campus-safety" class="menu__link menu__link">Campus Safety</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/about/news-and-events/contact-nvu-communications" class="menu__link menu__link">Contact</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/about/depth/web-privacy-statement" class="menu__link menu__link">Privacy</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/services/campus-safety/sexual-harassment-sexual-assault-title-ix" class="menu__link menu__link">Title IX/Sexual Respect</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/about/people/directory" class="menu__link menu__link">Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf"><a href="/about/coronavirus-covid-19/northern-vermont-university-events" class="menu__link menu__link">Events</a></li>
+</ul>
+</div>
+<div id="block-bean-social-block" class="block block-bean footer-social-links-block last even">
+
+      
+  <div class="entity entity-bean bean-social-block clearfix" about="/block/social-block" typeof="">
+  <div class="content">
+    <div class="field field-name-field-links field-type-link-field field-label-hidden"><div class="field-items"><div class="field-item even"><div  class="item-list item-list--linkicon" id="linkicon-bean-social-block-field-links-2"><ul  class="linkicon"><li><a href="https://www.givecampus.com/campaigns/8325/donations/new?donation_type=general" class="linkicon__item"><span  class="fa fa-give-now linkicon__icon icon" aria-hidden="true"></span><span class="linkicon__text">Give Now</span></a></li><li><a href="https://www.facebook.com/NorthernVTUniversity/" class="linkicon__item"><span  class="fa fa-facebook linkicon__icon icon" aria-hidden="true"></span><span class="linkicon__text">Facebook</span></a></li><li><a href="https://www.instagram.com/northernvermont/" class="linkicon__item"><span  class="fa fa-instagram linkicon__icon icon" aria-hidden="true"></span><span class="linkicon__text">Instagram</span></a></li><li><a href="https://twitter.com/northernVTU" class="linkicon__item"><span  class="fa fa-twitter linkicon__icon icon" aria-hidden="true"></span><span class="linkicon__text">Twitter</span></a></li></ul></div></div></div></div>  </div>
+</div>
+
+</div>
+  </div>
+      </div>
+    </div>
+  </div><!-- /.pre-footer -->
+
+
+  <div id="footer-wrapper">
+    <div class="footer-content">
+      <div class="row">
+          <div class="region region-footer">
+    <div id="block-bean-footer-logo" class="block block-bean footer-logo-block col-md-6 first odd">
+
+      
+  <div class="entity entity-bean bean-single-image clearfix" about="/block/footer-logo" typeof="">
+  <div class="content">
+    <div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://www.northernvermont.edu/"><img typeof="foaf:Image" src="https://www.northernvermont.edu/sites/default/files/nvu-logo-white.png" width="1601" height="301" alt="Northern Vermont University" title="Northern Vermont University" /></a></div></div></div>  </div>
+</div>
+
+</div>
+<div id="block-block-1" class="block block-block contact-one col-md-3 even">
+
+      
+  <p class="name">Johnson Campus</p>
+<p class="address">337 College Hill<br />
+Johnson, VT 05656</p>
+<p class="phone">800.635.2356 | 802.635.1219</p>
+
+</div>
+<div id="block-block-2" class="block block-block contact-two col-md-3 odd">
+
+      
+  <p class="name">Lyndon Campus</p>
+<p class="address">1001 College Rd.<br />
+Lyndonville, VT 05851</p>
+<p class="phone">800.225.1998 | 802.626.6413 </p>
+
+</div>
+<div id="block-kwall-multilevel-slide-menu-menu" class="block block-kwall-multilevel-slide-menu navigation-slide-menu-block kwall-multilevel-slide-in-nav-menu-block last even">
+
+      
+  <div class="kwall-multilevel-slide-in-nav-menu closed" id="kwall-multilevel-slide-in-nav-menu"><div class="kwall-multilevel-slide-menu-outer-wrapper"><div class="kwall-multilevel-slide-menu-wrapper"><form action="/studentlife/CounselingServices/documents/Developing-Healthy-Boundaries.pdf" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-searchfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-search" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-zKx51h_KP4_2nZj_ea2ighY5r3oGfKmwubsoMExA7Ko" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form><div class="slide-menu-close"><a href="#" class="slide-menu-close-button" aria-controls="kwall-multilevel-slide-in-nav-menu"><span class="element-invisible">Close Nav</span></a></div><div id="block-menu-block-kwall-menu-nav" class="block block-menu-block odd" role="navigation">
+
+        <h2 class="block__title block-title">Main menu</h2>
+    
+  <div class="menu-block-wrapper menu-block-kwall_menu_nav menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu slide-nav-top-level-menu"><li class="menu__item is-expanded first expanded menu-mlid-1843 menu-col-3"><a href="/about" class="menu__link submenu-open">About <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/about" class="menu__link menu__link">About</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-1844 col-md-4"><span class="menu__link menu__link kwall-megamenu-next-group nolink">NVU</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1845"><a href="/about/nvu/message-president" class="menu__link menu__link">Message from the President</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1846"><a href="/about/nvu/our-campuses" class="menu__link menu__link">Our Campuses</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2254"><a href="/about/nvu/quick-facts" class="menu__link menu__link">Quick Facts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2609"><a href="/about/nvu/depth" class="menu__link menu__link">In Depth</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1847"><a href="/about/mission-and-history" class="menu__link menu__link">Mission and History</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1849"><a href="/about/location-and-directions" class="menu__link menu__link">Location and Directions</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2989"><a href="/about/nvu/coronavirus-covid-19" class="menu__link menu__link">Information on Coronavirus (COVID-19)</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-1850 col-md-4"><span class="menu__link menu__link nolink">People</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1897"><a href="/about/people/nvu-leadership" class="menu__link menu__link">NVU Leadership</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2190"><a href="/about/people/directory" class="menu__link menu__link">Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2305"><a href="/about/people/diversity-inclusion-and-social-justice" class="menu__link menu__link">Diversity, Inclusion, and Social Justice</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1900"><a href="/about/people/employment-opportunities" class="menu__link menu__link">Employment Opportunities</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2935"><a href="/about/people/nvu-stories" class="menu__link menu__link">NVU Stories</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-1854 col-md-4"><span class="menu__link menu__link nolink">News and Events</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2188"><a href="/about/news-and-events/news-center" class="menu__link menu__link">News Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2189"><a href="/about/news-and-events/events" class="menu__link menu__link">Events Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2971"><a href="/about/news-and-events/lecture-and-arts" class="menu__link menu__link">Lecture and Arts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2225"><a href="/about/news-and-events/contact-nvu-communications" class="menu__link menu__link">Media Inquiries</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-1901 menu-col-3"><a href="/academics" class="menu__link submenu-open">Academics <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/academics" class="menu__link menu__link">Academics</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-1902 col-md-4"><span class="menu__link menu__link nolink">Academic Programs</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2213"><a href="/academics/academic-programs/degree-programs" class="menu__link menu__link">Degree Programs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2913"><a href="/academics/academic-programs/academic-schools" class="menu__link menu__link">Academic Schools</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2259"><a href="/academics/degree-programs/graduate-studies" class="menu__link menu__link">Graduate Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1910"><a href="/academics/academic-programs/center-professional-studies" class="menu__link menu__link">Center for Professional Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1911"><a href="/academics/academic-programs/continuing-education-0" class="menu__link menu__link">Continuing Education</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1914"><a href="/academics/academic-programs/study-away" class="menu__link menu__link">Study Away</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-1916"><a href="/academics/academic-programs/summerwinter-session" class="menu__link menu__link">Summer/Winter Session</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-1905 col-md-4"><span class="menu__link menu__link nolink">Resources</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1917"><a href="/academics/resources/academic-calendar" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1918"><a href="/academics/resources/bookstores" class="menu__link menu__link">Bookstores</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1919"><a href="/academics/resources/catalogs-and-course-bulletins" class="menu__link menu__link">Catalogs and Course Bulletins</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1920"><a href="/academics/resources/libraries" class="menu__link menu__link">Libraries</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2217"><a href="/academics/resources/student-handbook" class="menu__link menu__link">Student Handbook</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-1907 col-md-4"><span class="menu__link menu__link nolink">Support</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1921"><a href="/academics/support/academic-support" class="menu__link menu__link">Academic Support</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1922"><a href="/academics/support/advising-and-degree-planning" class="menu__link menu__link">Advising and Degree Planning</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1923"><a href="/academics/support/nvu-disability-services" class="menu__link menu__link">Disability Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2915"><a href="/academics/support/careers-and-internships" class="menu__link menu__link">Career and Internships</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2947"><a href="/academics/resources-and-support/center-teaching-and-learning" class="menu__link menu__link">Center for Teaching and Learning</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2984"><a href="/academics/support/office-institutional-research" class="menu__link menu__link">Institutional Research</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-1926"><a href="/academics/support/registrar" class="menu__link menu__link">Registration</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2091 menu-col-2"><a href="/admissions-and-aid" class="menu__link submenu-open">Admissions and Aid <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/admissions-and-aid" class="menu__link menu__link">Admissions and Aid</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-2092 col-md-6"><span class="menu__link menu__link nolink">Applying to NVU</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2094"><a href="/admissions-and-aid/applying-nvu/visit" class="menu__link menu__link">Visit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2095"><a href="/admissions-and-aid/applying-nvu/how-apply" class="menu__link menu__link">How to Apply</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2096"><a href="/admissions-and-aid/applying-nvu/tuition-and-fees" class="menu__link menu__link">Tuition and Fees</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2097"><a href="/admissions-and-aid/applying-nvu/financial-aid" class="menu__link menu__link">Financial Aid</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2104"><a href="/admissions-and-aid/applying-nvu/accepted-students" class="menu__link menu__link">Accepted Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2633"><a href="/admissions-and-aid/applying-nvu/pay-your-enrollment-deposit" class="menu__link menu__link">Pay Your Deposit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2979"><a href="/admissions-and-aid/request-information" class="menu__link menu__link">Request Information</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2093 col-md-6"><span class="menu__link menu__link nolink">Students</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2098"><a href="/admissions-and-aid/students/undergraduate-students" class="menu__link menu__link">Undergraduate Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2099"><a href="/admissions-and-aid/students/transfer-students" class="menu__link menu__link">Transfer Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2944"><a href="/admissions-and-aid/students/welcome-ccv-students" class="menu__link menu__link">CCV Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2100"><a href="/admissions-and-aid/students/international-students" class="menu__link menu__link">International Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2101"><a href="/admissions-and-aid/students/graduate-students" class="menu__link menu__link">Graduate Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2276"><a href="/admissions-and-aid/students/early-college-students" class="menu__link menu__link">Early College</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2353"><a href="/admissions-and-aid/students/dual-enrollment-students" class="menu__link menu__link">Dual Enrollment</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2103"><a href="/admissions-and-aid/students/veterans" class="menu__link menu__link">Veterans</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2032 menu-col-2"><a href="/student-life" class="menu__link submenu-open">Student Life <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/student-life" class="menu__link menu__link">Student Life</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-2033 col-md-6"><span class="menu__link menu__link nolink">Students</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2036"><a href="/student-life/activities-and-events" class="menu__link menu__link">Activities and Events</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2037"><a href="/student-life/students/clubs-and-organizations" class="menu__link menu__link">Clubs and Organizations</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2845"><a href="/student-life/students/families" class="menu__link menu__link">Families</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2035"><a href="/student-life" class="menu__link menu__link">Overview</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2990"><a href="/about/nvu/coronavirus-covid-19" class="menu__link menu__link">Information on Coronavirus (COVID-19)</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2034 col-md-6"><span class="menu__link menu__link nolink">Services</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2038"><a href="/student-life/services/first-year-experience" class="menu__link menu__link">First-Year Experience</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2039"><a href="/student-life/services/housing-and-dining" class="menu__link menu__link">Housing and Dining</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2195"><a href="/student-life/student-wellness-and-safety" class="menu__link menu__link">Student Wellness and Safety</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2199"><a href="/student-life/services/information-commuter-students" class="menu__link menu__link">Commuter Students</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2131 menu-col-1"><a href="/athletics" class="menu__link submenu-open">Athletics <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/athletics" class="menu__link menu__link">Athletics</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first last expanded menu-mlid-2136"><span class="menu__link menu__link nolink">Campus Athletics</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2135"><a href="http://nvubadgers.com/landing/index" class="menu__link menu__link">Johnson Athletics</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2133"><a href="http://www.lyndonhornets.com/landing/index" class="menu__link menu__link">Lyndon Athletics</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2140 menu-col-3"><a href="/nvu-online" class="menu__link submenu-open">NVU Online <span class="right-arrow">&rsaquo;</span><span class="element-invisible">Open Submenu</span></a><ul class="menu slide-nav-menu"><li class="menu__item menu__item slide-submenu-back"><a href="#" class="menu__link menu__link"><span class="back-arrow">&lsaquo;</span> Back</a></li>
+<li class="menu__item menu__item slide-submenu-title"><a href="/nvu-online" class="menu__link menu__link">NVU Online</a></li>
+<li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-2142 col-md-4"><span class="menu__link menu__link nolink">About</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2146"><a href="/nvu-online/about/nvu-online-tuition-and-fees" class="menu__link menu__link">Tuition and Fees</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2148"><a href="/nvu-online/about/request-info" class="menu__link menu__link">Request Info</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2149"><a href="/nvu-online/about/apply-nvu-online" class="menu__link menu__link">Apply</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-2144 col-md-4"><span class="menu__link menu__link nolink">Programs</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2151"><a href="/online-degrees/accounting" class="menu__link menu__link">Accounting</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2152"><a href="/online-degrees/business-administration" class="menu__link menu__link">Business Administration</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2841"><a href="/academics/degree-programs/criminal-justice-online" class="menu__link menu__link">Criminal Justice</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2978"><a href="/nvu-online/programs/online-ma-education-digital-media-instruction-concentration" class="menu__link menu__link">Digital Media Instruction</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2153"><a href="/online-degrees/early-childhood-education" class="menu__link menu__link">Early Childhood Education (90% Online)</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2916"><a href="/academics/degree-programs/general-studies" class="menu__link menu__link">General Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2154"><a href="/online-degrees/interdisciplinary-studies" class="menu__link menu__link">Interdisciplinary Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2761"><a href="/nvu-online/programs/ma-leadership-studies" class="menu__link menu__link">Leadership Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2156"><a href="/online-degrees/professional-studies" class="menu__link menu__link">Professional Studies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2155"><a href="/online-degrees/psychology" class="menu__link menu__link">Psychology</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2755"><a href="/academics/degree-programs/online-programs/online-small-business-management-certificate" class="menu__link menu__link">Small Business Management</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2754"><a href="/academics/degree-programs/business-administration-online-degree/sport-management" class="menu__link menu__link">Sport Management</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2756"><a href="/academics/degree-programs/online-programs/online-certificate-sustainability" class="menu__link menu__link">Sustainability</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2157"><a href="/online-degrees/wellness-and-alternative-medicine" class="menu__link menu__link">Wellness and Alternative Medicine</a></li>
+</ul></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-2145 col-md-4"><span class="menu__link menu__link nolink">Resources</span><ul class="menu slide-nav-menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-2158"><a href="/nvu-online/resources/nvu-online-academic-calendar" class="menu__link menu__link">Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2159"><a href="/nvu-online/resources/resources-and-support" class="menu__link menu__link">Support and Advising</a></li>
+</ul></li>
+</ul></li>
+<li class="menu__item is-leaf last leaf menu-mlid-955 fa fa-search">
+<a href="# " class="menu-attach-block-drop-link external expand-on-click dropped" data-block-id="search|form" id="&lt;block&gt;-drop-link-955">More</a><div class="menu-attach-block-wrapper orientation-vertical">
+	<div id="block-search-form--2" class="block block-search pop-search even" role="search">
+
+      
+  <form action="/about/nvu/coronavirus-covid-19/virtual-learning-tools-students" method="post" id="search-block-form--2" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-searchfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--4">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-search" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-p75KD5oUs8fYD_D2-20KB16m4laXUxJKHoIACHKRWRk" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div>
+</div>
+</li>
+</ul></div>
+
+</div>
+<div id="block-menu-block-kwall-menu-resources" class="block block-menu-block even" role="navigation">
+
+        <h2 class="block__title block-title">Resources</h2>
+    
+  <div class="menu-block-wrapper menu-block-kwall_menu_resources menu-name-menu-menu-utility-nav-mobile parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1174"><a href="/give-to-NVU" class="menu__link menu__link">Give</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1175"><a href="/admissions-and-aid/applying-nvu/visit" class="menu__link menu__link">Visit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1176"><a href="/services" class="menu__link menu__link">Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1178"><a href="/about/news-and-events/contact-nvu-communications" class="menu__link menu__link">Contact</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-1179"><a href="/alumni" class="menu__link menu__link">Alumni</a></li>
+</ul></div>
+
+</div>
+<div id="block-menu-block-kwall-menu-utility" class="block block-menu-block odd" role="navigation">
+
+        <h2 class="block__title block-title">Quicklinks</h2>
+    
+  <div class="menu-block-wrapper menu-block-kwall_menu_utility menu-name-menu-menu-quicklinks-nav-mobile parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1182"><a href="/academics/resources/academic-calendar" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1183"><a href="/academics/resources/libraries" class="menu__link menu__link">Libraries</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1184"><a href="/academics/resources-and-support/academic-support/advising-registration-and-resources/registrar" class="menu__link menu__link">Transcripts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1181"><a href="https://portal.vsc.edu" class="menu__link menu__link">NVU Portal</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2245"><a href="https://outlook.office.com/owa/?realm=o365.vsc.edu&amp;vd=mail" class="menu__link menu__link">NVU Mail</a></li>
+</ul></div>
+
+</div>
+</div></div></div>
+</div>
+    <div class="copyright-wrap">
+      <p>&copy; 2020 Northern Vermont University. All rights reserved.</p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      </div>
+</div><!-- /#page -->
+
+  <script src="https://www.northernvermont.edu/sites/default/files/js/js_F9G1OsYUfWZRUURFpJ37Lk6_0yKwG77xZ1imRHZJO0E.js"></script>
+<script>function euCookieComplianceLoadScripts(category) {}</script>
+<script>var eu_cookie_compliance_cookie_name = "";</script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_rH-MVUbIFvcr_run1yJBoPE_NbBm9QA6dIrBfFMUMek.js"></script>
+<script src="https://www.northernvermont.edu/sites/default/files/js/js_U5zGAhcKFu1dV9NTMS8_CNTcOy1GufCnyf4FHxVtYTQ.js"></script>
+  <script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="5aecd93f22d3923a49a11024"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"13beab3a3a","applicationID":"364431964","transactionName":"YAEHNhMDWBVSARJQV1lLMBAITRkPXQYDQRZHDBU=","queueTime":0,"applicationTime":10,"atts":"TEYEQFsZSxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

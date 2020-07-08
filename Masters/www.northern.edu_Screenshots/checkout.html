@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="og: http://ogp.me/ns# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PTH3JS');</script>
+<!-- End Google Tag Manager -->
+
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a82ba430c3",applicationID:"51794504"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta itemprop="acquia_lift:published_date" content="1585074598" />
+<link rel="shortcut icon" href="https://www.northern.edu/sites/all/themes/custom/nsu_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta itemprop="acquia_lift:event_udf11" content="" />
+<meta itemprop="acquia_lift:event_udf10" content="" />
+<meta itemprop="acquia_lift:event_udf9" content="" />
+<meta itemprop="acquia_lift:event_udf8" content="" />
+<meta itemprop="acquia_lift:event_udf7" content="" />
+<meta itemprop="acquia_lift:event_udf5" content="" />
+<meta itemprop="acquia_lift:event_udf4" content="" />
+<meta itemprop="acquia_lift:page_type" content="node page" />
+<meta itemprop="acquia_lift:content_uuid" content="3b77709a-143a-490c-ad38-a6384f2a6ca6" />
+<meta itemprop="acquia_lift:post_id" content="16301" />
+<meta itemprop="acquia_lift:event_udf6" content="" />
+<meta itemprop="acquia_lift:content_title" content="Residence Hall Spring 2020 Check-Out" />
+<meta itemprop="acquia_lift:site_id" content="northernst_prod" />
+<meta itemprop="acquia_lift:content_type" content="page" />
+<script src="https://www.google.com/recaptcha/api.js?hl=en" async="async" defer="defer"></script>
+<meta itemprop="acquia_lift:account_id" content="NORTHERNSTATE" />
+<link rel="apple-touch-icon" href="https://www.northern.edu/sites/default/files/apple-icon-72x72.png" type="image/png" />
+<meta itemprop="acquia_lift:liftAssetsURL" content="https://lift3assets.lift.acquia.com/stable" />
+<meta itemprop="acquia_lift:bootstrapMode" content="auto" />
+<meta itemprop="acquia_lift:contentReplacementMode" content="trusted" />
+<meta itemprop="acquia_lift:contentOrigin" content="" />
+<meta itemprop="acquia_lift:context_language" content="en" />
+<meta itemprop="acquia_lift:userAccess" content="" />
+<meta name="description" content="Northern students currently not residing on campus can move out of their rooms starting Friday, March 27, through Monday, April 6. Starting at noon on Wednesday, March 25, students will need to contact the Office of Residence Life at 605-626-3007 or 605-626-3008 to schedule a three-hour window (9 a.m.-noon; noon-3 p.m.; 3-6 p.m.) in which they will be permitted to return to" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.northern.edu/coronavirus/checkout" />
+<link rel="shortlink" href="https://www.northern.edu/node/16301" />
+<meta property="og:site_name" content="Northern State University" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.northern.edu/coronavirus/checkout" />
+<meta property="og:title" content="Residence Hall Spring 2020 Check-Out" />
+<meta property="og:description" content="Northern students currently not residing on campus can move out of their rooms starting Friday, March 27, through Monday, April 6. Starting at noon on Wednesday, March 25, students will need to contact the Office of Residence Life at 605-626-3007 or 605-626-3008 to schedule a three-hour window (9 a.m.-noon; noon-3 p.m.; 3-6 p.m.) in which they will be permitted to return to campus to complete their check-out. Strict adherence to each student’s scheduled time will allow the check-out to proceed within the social distancing criteria that will support the safety of everyone involved." />
+<meta property="og:updated_time" content="2020-03-24T16:22:32-05:00" />
+<meta property="article:published_time" content="2020-03-24T13:29:58-05:00" />
+<meta property="article:modified_time" content="2020-03-24T16:22:32-05:00" />
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '638896846296272');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {"content_type":"product","content_ids":"16301"});
+</script>
+<noscript><img height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=638896846296272&ev=PageView&noscript=1' /></noscript>
+<!-- End Facebook Pixel Code -->
+  <title>Residence Hall Spring 2020 Check-Out | Northern State University</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+  <link rel="stylesheet" href="https://www.northern.edu/sites/default/files/css/css_TlLusvWc4WLnuv7V57BXHxgbkzKIlOEq42DYv2PEZDM.css" media="all" />
+<link rel="stylesheet" href="https://www.northern.edu/sites/default/files/css/css_fWL8OG1SzeKGPw2vkjDMq1pk_6y0HG0f8Wbtnz8cKXY.css" media="all" />
+<link rel="stylesheet" href="https://www.northern.edu/sites/default/files/css/css_E0tGt23YcSQyTK0Rmh0b0ZtZAPjtuj92nctbjgAzZiM.css" media="all" />
+<link rel="stylesheet" href="https://www.northern.edu/sites/default/files/css/css_ZFKTngmLP5ek4QuNhyDx09MORVVTQZOY3gSkK8VcO4M.css" media="all" />
+<link rel="stylesheet" href="https://www.northern.edu/sites/default/files/css/css_9MQuPay2OyHfBJXCquTzHBKI8P2lntBm_AnCPPY5njI.css" media="all" />
+
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/contrib/zen/js/html5.js"></script>
+    <![endif]-->
+  
+    
+  <!-- Facebook Pixel Code - installed via module in Drupal Admin -->
+    
+
+  <!-- this code (Global site tag & Event snippet) added on 1/26/2018 -->
+  <!-- Global site tag (gtag.js) - Google AdWords: 848143324 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-848143324"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-848143324');
+  </script>
+
+
+  <!-- Snap Pixel - added 8/31/2018 by bjc -->
+  <script type='text/javascript'>
+    (function(win, doc, sdk_url){
+      if(win.snaptr) return;
+      var tr=win.snaptr=function(){
+        tr.handleRequest? tr.handleRequest.apply(tr, arguments):tr.queue.push(arguments);
+      };
+      tr.queue = [];
+      var s='script';
+      var new_script_section=doc.createElement(s);
+      new_script_section.async=!0;
+      new_script_section.src=sdk_url;
+      var insert_pos=doc.getElementsByTagName(s)[0];
+      insert_pos.parentNode.insertBefore(new_script_section, insert_pos);
+    })(window, document, 'https://sc-static.net/scevent.min.js');
+
+    snaptr('init','fc7fdb3e-2d21-4be2-ad8a-5273eea9e139',{
+      'user_email':'<USER-EMAIL>'
+    })
+    snaptr('track','PAGE_VIEW')
+  </script>
+
+
+
+<!-- LinkedIn Pixel code added by bjc on 5/30/2019 -->
+  	
+<script type="text/javascript"> _linkedin_partner_id = "1120538"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=1120538&fmt=gif" /> </noscript>
+
+
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-16301 node-type-page section-coronavirus" >
+
+    <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PTH3JS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </div>
+  
+<script>
+
+function RedirectToRequestInfoForm() {
+
+  //added this function on 3/12/2020 by bjc
+  //Justin wanted this to redirect to long form instead of short form
+  //button id="headerRequestInfoButton"... added onclick event to call this function
+  //and moved Block 'Webform: Request Information' to disabled from Page Top block
+  window.location.href = '/admission-aid/inforequest';
+
+}
+
+</script>
+
+<div id="page">
+
+  <!-- Header -->
+  <header id="top">
+    <div class="site-header">
+      <a href="#mainContent" class="sr-only sr-only-focusable skip-to">Skip to main content</a>
+
+      <div class="site-header__top">
+        <!-- Search trigger button -->
+        <button class="site-header__top__search-button" id="headerSearchButton" aria-controls="headerSearch" aria-expanded="false" type="button">
+          <i class="fa fa-search"></i>
+          <span class="site-header__top__search-button__text">SEARCH</span>
+        </button>
+
+        <!-- Search -->
+        <div class="site-header__top__search hidden" id="headerSearch" aria-expanded="false">
+
+  <!-- Search form close button -->
+  <button class="site-header__top__search__close-button" id="headerSearchCloseButton" aria-controls="headerSearch" aria-expanded="false" type="button">
+    <span class="sr-only">Close mobile menu</span>
+    <span class="x-icon"></span>
+  </button>
+
+  <form action="/coronavirus/checkout" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-searchfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-search" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-OExRbbXpWcsKEiqfvMe-XB8LoQb90FlHrY9CUFTeors" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form></div>
+
+        <!-- Utility nav -->
+        <nav class="site-header__top__nav" aria-label="Utility navigation">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-15891"><a href="/coronavirus" class="menu__link menu__link">COVID-19</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8126"><a href="/visit/visit-campus" title="Visit Campus" class="menu__link menu__link">VISIT</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-15906"><a href="https://apply.northern.edu/apply/" class="menu__link menu__link">APPLY</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-609"><a href="/mynsu" title="MY NSU" class="menu__link menu__link">myNSU</a></li>
+</ul></nav>
+
+        <!-- Request Information button -->
+        <button class="site-header__top__request-info-button" id="headerRequestInfoButton" aria-controls="headerRequestInfo" aria-expanded="false" type="button" onClick="RedirectToRequestInfoForm();">
+          REQUEST INFORMATION
+        </button>
+
+        <!-- Request Information form -->
+        <div class="site-header__top__request-info hidden block block-webform request-info-dropdown last odd" id="headerRequestInfo" aria-expanded="false">
+      
+  <form class="webform-client-form webform-client-form-1651" action="/coronavirus/checkout" method="post" id="webform-client-form-1651" accept-charset="UTF-8"><div><div  class="form-item webform-component webform-component-textfield webform-component--first-name">
+  <label for="edit-submitted-first-name">First Name <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text required" type="text" id="edit-submitted-first-name" name="submitted[first_name]" value="" size="60" maxlength="255" />
+</div>
+<div  class="form-item webform-component webform-component-textfield webform-component--last-name">
+  <label for="edit-submitted-last-name">Last Name <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text required" type="text" id="edit-submitted-last-name" name="submitted[last_name]" value="" size="60" maxlength="255" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--email">
+  <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text form-email required" type="email" id="edit-submitted-email" name="submitted[email]" size="60" />
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-OKYhT9Yxvd_fuDRwY-m_8D_s-TeQHZ2tVCLGUuFMusE" />
+<input type="hidden" name="form_id" value="webform_client_form_1651" />
+<div class="captcha"><input type="hidden" name="captcha_sid" value="113410821" />
+<input type="hidden" name="captcha_token" value="e7579c7f6323cd4126853b17558a4177" />
+<input type="hidden" name="captcha_response" value="Google no captcha" />
+<div class="g-recaptcha" data-sitekey="6LczT1gUAAAAAON4n4Y6_iByyVGlT6UvDqbDPNQP" data-theme="dark" data-type="image"></div><input type="hidden" name="captcha_cacheable" value="1" />
+</div><div class="form-actions"><input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit" /></div></div></form>
+</div>
+
+      </div><!-- /.header__top -->
+
+      <div class="site-header__navbar">
+
+        <div class="wrapper">
+          <!-- Mobile logo -->
+          <a class="site-header__navbar__mobile-logo" href="/"><img class="" src="/sites/all/themes/custom/nsu_theme/images/bkg-header-logo.png" alt="Northern State University" /></a>
+          <!-- Desktop logo -->
+          <a class="site-header__navbar__desktop-logo" href="/"><img class="" src="/sites/default/files/nsulogo_1.png" alt="Northern State University" /></a>
+
+          <!-- Off-canvas trigger button -->
+          <button class="site-header__navbar__menu-button" id="headerMenuButton" aria-controls="headerMenu" aria-expanded="false" type="button">
+            <span class="sr-only">Open mobile menu</span>
+            <span class="hamburger"></span>
+          </button>
+
+          <!-- Off-canvas menu -->
+          <div class="off-canvas hidden" id="headerMenu" aria-expanded="false">
+            <!-- Off-canvas close button -->
+            <button class="off-canvas__close-button" id="headerMenuCloseButton" aria-controls="headerMenu" aria-expanded="false" type="button">
+              <span class="sr-only">Close mobile menu</span>
+              <span class="x-icon"></span>
+            </button>
+
+            <!-- Main navigation -->
+            
+<nav class="mln mln--navbar site-header__navbar__nav" aria-label="Main navigation" data-mln-breakpoint="1130">
+  <ul class="mln__list"><li class="menu__item is-expanded menu__item is-expanded first expanded menu-mlid-1040 accessible-megamenu-top-nav-item"><a href="/admissions" class="menu__link menu__link">Admissions &amp; Aid</a><div class="mln__child__mega-menu"><div class="mega-menu__column"><ul><li class="menu__item menu__item first menu-mlid-1099 even first"><a href="/admissions-aid/admissions-faqs" class="menu__link menu__link">Admissions FAQs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1101 odd"><a href="/admission-aid/requirements" class="menu__link menu__link">Admission Requirements</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7926 even"><a href="/apply-now-forward" class="menu__link menu__link">Apply Now</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2756 odd"><a href="/admission-aid/inforequest" class="menu__link menu__link">Request Information</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1100 even"><a href="/admission-aid/visit" class="menu__link menu__link">Visit Us</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-14741 odd"><a href="/virtual-tour-forward" class="menu__link menu__link">Virtual Tour</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-15911 even last"><a href="https://apply.northern.edu/apply/" class="menu__link menu__link">Housing Application</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1103 even first"><a href="/admissions-aid/financial-aid" class="menu__link menu__link kwall-megamenu-next-group">Financial Aid</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2936 odd"><a href="/admissions-aid/apply-financial-aid" class="menu__link menu__link">Apply for Financial Aid</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7971 even"><a href="/admissions-aid/financial-aid#scholarships" class="menu__link menu__link">Scholarships</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7966 odd"><a href="/admission-aid/tuition-and-costs" class="menu__link menu__link">Tuition and Costs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7961 even"><a href="/admissions-aid/wolfpact-scholarship" class="menu__link menu__link">WolfPACT Scholarship</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-11031 odd"><a href="/huron" class="menu__link menu__link">Huron Community Campus</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-11866 even last"><a href="https://www.northern.edu/degrees" class="menu__link menu__link">Degree Programs</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8521 even first"><a href="/academics/records-registration/freshman-registration-days" class="menu__link menu__link kwall-megamenu-next-group">HOWL Freshman Registration</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-15386 odd"><a href="https://www.northern.edu/transfer" class="menu__link menu__link">Transfer Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-15391 even"><a href="https://www.northern.edu/returning-students" class="menu__link menu__link">Returning Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-9251 odd last"><a href="/contactadmissions" class="menu__link menu__link">Contact NSU Admissions</a></li>
+</ul></div><div class="clearfix"></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-810 accessible-megamenu-top-nav-item"><a href="/academics" class="menu__link menu__link">Academics</a><div class="mln__child__mega-menu"><div class="mega-menu__column"><ul><li class="menu__item menu__item first menu-mlid-1067 even first"><a href="/academics/college-arts-and-sciences" class="menu__link menu__link kwall-megamenu-next-group">College of Arts and Sciences</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1069 odd"><a href="/academics/school-business" class="menu__link menu__link">School of Business</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1070 even"><a href="/academics/school-education" class="menu__link menu__link">School of Education</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1068 odd"><a href="/academics/school-fine-arts" class="menu__link menu__link">School of Fine Arts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1076 even last"><a href="/academics/graduate-studies" class="menu__link menu__link">Graduate Studies</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1058 even first"><a href="/academics/academic-affairs" class="menu__link menu__link kwall-megamenu-next-group">Academic Affairs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1064 odd"><a href="/academics/academic-advising" class="menu__link menu__link">Academic Advising</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1065 even"><a href="/academics/academic-resources" class="menu__link menu__link">Academic Resources</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1077 odd"><a href="/academics/academic-support" class="menu__link menu__link">Academic Support</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1062 even"><a href="/academics/university-accreditation" class="menu__link menu__link">Accreditation</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2821 odd"><a href="http://bookstore.northern.edu" class="menu__link menu__link">Bookstore</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2761 even last"><a href="/academics/academic-calendars-important-dates" class="menu__link menu__link">Calendars &amp; Important Dates</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1063 even first"><a href="http://catalog.northern.edu" class="menu__link menu__link kwall-megamenu-next-group">Course Catalog</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-11861 odd"><a href="https://www.northern.edu/degrees" class="menu__link menu__link">Degree Programs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2791 even"><a href="/academics/elearning" class="menu__link menu__link">E-learning Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2766 odd"><a href="/academics/graduation-and-commencement" class="menu__link menu__link">Graduation</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1072 even"><a href="/academics/honors-program" class="menu__link menu__link">Honors Program</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2801 odd"><a href="/academics/dualcredit" class="menu__link menu__link">High School Dual Credit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2806 even last"><a href="/academics/institutional-research" class="menu__link menu__link">Institutional Research &amp; Assessment</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1071 even first"><a href="/academics/international-programs" class="menu__link menu__link kwall-megamenu-next-group">International Programs</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1073 odd"><a href="/academics/directory" class="menu__link menu__link">Our Faculty</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2776 even"><a href="/academics/records-registration" class="menu__link menu__link">Records &amp; Registration</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1075 odd"><a href="/scholarlyresearch" class="menu__link menu__link">Research and Scholarly Activities</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2796 even"><a href="/online/rising-scholars-program" class="menu__link menu__link">Rising Scholars Program</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8346 odd"><a href="/studyabroad" class="menu__link menu__link">Study Abroad</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2781 even"><a href="/academics/technology-services" class="menu__link menu__link">Technology Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2906 odd"><a href="/campus-life/veterans-and-active-military" class="menu__link menu__link">Veterans &amp; Active Military</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2786 even last"><a href="/academics/beulah-williams-library" class="menu__link menu__link">Williams Library</a></li>
+</ul></div><div class="clearfix"></div></div></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1356 accessible-megamenu-top-nav-item"><a href="http://nsuwolves.com/" target="_blank" class="menu__link menu__link">Athletics</a></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-812 accessible-megamenu-top-nav-item"><a href="/campus-life" class="menu__link menu__link">Campus Life</a><div class="mln__child__mega-menu"><div class="mega-menu__column"><ul><li class="menu__item menu__item first menu-mlid-1041 even first"><a href="/campus-life/residence-life" class="menu__link menu__link">Residence Life</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7931 odd"><a href="https://apply.northern.edu/apply/" class="menu__link menu__link">Housing Application</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2896 even"><a href="/campus-life/campus-safety/campusalert" class="menu__link menu__link">Campus Alert System</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1047 odd"><a href="/campus-life/campus-safety" class="menu__link menu__link">Campus Safety</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1045 even"><a href="http://northern.campusdish.com/" class="menu__link menu__link">Dining Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1079 odd last"><a href="/campus-life/parents-and-families" class="menu__link menu__link">Parent Information</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1057 even first"><a href="/student-activities-calendar" class="menu__link menu__link kwall-megamenu-next-group">Campus Events</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1042 odd"><a href="/campus-life/nsu-clubs-and-organizations" class="menu__link menu__link">Clubs and Organizations</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1044 even"><a href="/campus-life/gypsy-days" class="menu__link menu__link">Gypsy Days</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-875 odd"><a href="/student-involvement-leadership" class="menu__link menu__link">Student Involvement and Leadership</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-14166 even"><a href="https://www.northern.edu/fitness-and-wellness" class="menu__link menu__link">Intramurals /Recreation /Fitness</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1043 odd"><a href="/campus-life/veterans-and-active-military" class="menu__link menu__link">Veteran and Active Military Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-14696 even last"><a href="https://cm.maxient.com/reportingform.php?NorthernStateUniv" class="menu__link menu__link">Concerns and Complaints</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1078 even first"><a href="/campus-life/career-services" class="menu__link menu__link kwall-megamenu-next-group">Career Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7936 odd"><a href="/campus-life/counseling-center" class="menu__link menu__link">Counseling Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7941 even"><a href="/campus-life/disability-services-nsu" class="menu__link menu__link">Disability Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2911 odd"><a href="/campus-life/finance-office" class="menu__link menu__link">Finance Office</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7946 even"><a href="/campus-life/health-services" class="menu__link menu__link">Health Services</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1048 odd"><a href="/campus-life/student-rights-and-responsibilities" class="menu__link menu__link">Student Rights and Responsibilities</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-11251 even last"><a href="https://www.northern.edu/multicultural" class="menu__link menu__link">Multicultural Student Affairs</a></li>
+</ul></div><div class="clearfix"></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded expanded menu-mlid-813 accessible-megamenu-top-nav-item"><a href="/online-and-continuing-education" class="menu__link menu__link">Online</a><div class="mln__child__mega-menu"><div class="mega-menu__column"><ul><li class="menu__item menu__item first menu-mlid-7956 even first"><a href="/online-and-continuing-education#apply" class="menu__link menu__link">Apply Online</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1092 odd"><a href="/nsu-online/continuinged" class="menu__link menu__link">Continuing Education</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-7951 even last"><a href="/node/103/#ocedegrees" class="menu__link menu__link">Online Degrees</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1097 even first"><a href="/academics/elearning" class="menu__link menu__link kwall-megamenu-next-group">E-learning Center</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1095 odd"><a href="/academics/dualcredit" class="menu__link menu__link">High School Dual Credit</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1094 even last"><a href="/online/rising-scholars-program" class="menu__link menu__link">Rising Scholars</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8491 even first"><a href="/disclosure" class="menu__link menu__link kwall-megamenu-next-group">Disclosure Statements</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8486 odd"><a href="/onlineorientation" class="menu__link menu__link">Orientation for Online Education</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-8481 even last"><a href="/onlinesupport" class="menu__link menu__link">Support &amp; FAQs</a></li>
+</ul></div><div class="clearfix"></div></div></li>
+<li class="menu__item is-expanded menu__item is-expanded last expanded menu-mlid-814 accessible-megamenu-top-nav-item"><a href="/about-nsu" class="menu__link menu__link">About</a><div class="mln__child__mega-menu"><div class="mega-menu__column"><ul><li class="menu__item menu__item first menu-mlid-2861 even first"><a href="/about/campus" class="menu__link menu__link">The Campus</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2871 odd"><a href="/master-plan" class="menu__link menu__link">Campus Master Plan</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2876 even"><a href="/about/campus/campusmap" class="menu__link menu__link">Campus Map</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2901 odd"><a href="/campus-life/campus-safety/campusalert" class="menu__link menu__link">Campus Alert System</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2866 even last"><a href="/about/campus/facilities" class="menu__link menu__link">Facilities and Hours</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1080 even first"><a href="/about/points-pride" class="menu__link menu__link kwall-megamenu-next-group">Points of Pride</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2886 odd"><a href="/about/aberdeen-community" class="menu__link menu__link">The Community</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1083 even"><a href="/about/consumerinfo" class="menu__link menu__link">Consumer Information</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-8091 odd"><a href="/academics/institutional-research" class="menu__link menu__link">Institutional Research</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1089 even"><a href="/brand" class="menu__link menu__link">Media and Public Relations</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-9248 odd last"><a href="/blog" class="menu__link menu__link">NSU News</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1084 even first"><a href="/about/departments" class="menu__link menu__link kwall-megamenu-next-group">Departments and Offices</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1090 odd"><a href="/academics/directory" class="menu__link menu__link">Employee Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1082 even last"><a href="/about/news-and-events" class="menu__link menu__link">News and Events</a></li>
+</ul></div><div class="mega-menu__column"><ul><li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1085 even first"><a href="/about/presidentsoffice" class="menu__link menu__link kwall-megamenu-next-group">Office of the President</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1087 odd"><a href="/about/office-president/mission" class="menu__link menu__link">Mission</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2856 even"><a href="/about/office-president/orgchart" class="menu__link menu__link">Organizational Chart</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-2891 odd last"><a href="http://apps.northern.edu/flippingbook/missionforward/missionforward/" class="menu__link menu__link">Strategic Plan</a></li>
+</ul></div><div class="clearfix"></div></div></li>
+</ul></nav>
+          </div><!-- /.off-canvas -->
+          <div class="clearfix"></div>
+        </div>
+      </div><!-- /.header__navbar -->
+    </div>
+  </header>
+
+  <main id="mainContent" tabindex="-1">
+    <div class="highlight-wrapper">
+          </div>
+
+    <div class="sub-highlight-wrapper">
+        <div class="region region-sub-highlighted">
+    <div class="block block-kwall-sibling-menu kwall-sibling-menu first last odd" id="block-kwall-sibling-menu-sibling-menu">
+
+      
+  
+</div>
+  </div>
+    </div>
+
+    <div id="content" class="column" role="main">
+      <div class="title-breadcrumb-wrapper">
+        <div class="wrapper">
+          <nav class="breadcrumb" role="navigation"><h2 class="breadcrumb__title">You are here</h2><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="/">Home</a><span class="breadcrumb__separator"></span></li><li class="breadcrumb__item">Residence Hall Spring 2020 Check-Out</li></ol></nav>          <a id="main-content"></a>
+                                <h1 class="title" id="page-title"><span class="first-word styled-title">Residence </span><span class="last-half"> Hall Spring 2020 Check-Out</span></h1>
+                                                                    </div>
+      </div><!-- /.title-breadcrumb-wrapper -->
+      
+<div class="block block-nsu-custom top-content-scroll-block first odd" id="block-nsu-custom-top-content-scroll">
+
+      
+  <div class="next-button"><a href style="font-size: 0;" class="next-link">Next</a></div>
+</div>
+
+
+<article class="node-16301 node node-page view-mode-full clearfix" about="/coronavirus/checkout" typeof="foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Residence Hall Spring 2020 Check-Out" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  <div class="outer-wrapper"><div class="wrapper node-page-wrapper">
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Northern  students currently not residing on campus can move out of their rooms starting Friday, March 27, through Monday, April 6. Starting at noon on Wednesday, March 25, students will need to contact the Office of Residence Life at 605-626-3007 or 605-626-3008 to schedule a three-hour window (9 a.m.-noon; noon-3 p.m.; 3-6 p.m.) in which they will be permitted to return to campus to complete their check-out.  <span style="font-size: 1.6rem;">Strict adherence to each student’s scheduled time will allow the check-out to proceed within the social distancing criteria that will support the safety of everyone involved. Compliance with the indicated check-out times will also allow Northern to adequately staff each check-out site. </span></p>
+<p>Students currently residing on campus may begin the express check-out beginning Thursday morning. </p>
+<p>If a student needs to continue living on campus past the April 6, 2020, date, they must complete a Request for Accommodation form by Friday, April 3, 2020. </p>
+<p>The bookstore will be open from 9 a.m. to 6 p.m. March 27-April 6 (all days) so students can pick up mail and return rentals before they leave. <span style="font-size: 1.6rem;">Students have until May 29 to get their rentals back. </span></p>
+<p><strong><u>General Conditions</u></strong></p>
+<ol><li>No additional residents will be allowed to occupy any residence hall space beyond those students already occupying a residence hall space. </li>
+</ol><ol><li value="2">Should a student live outside of a 5-hour radius of the campus, they will be permitted to return to campus the evening before their scheduled departure time. Those students will need to schedule for a morning check-out.</li>
+</ol><ol><li value="3">Only students with scheduled check-out times will be permitted into the halls. Students will not be permitted to come into halls to pick up random individual items.</li>
+</ol><ol><li value="4">Students may not have friends or family complete their check-out without securing prior permission from the Director of Residence Life.</li>
+</ol><ol><li value="5">Students must take all belongings with them at the time of their departure. They are not permitted to leave belongings in their current room, even if they plan to occupy that room in the fall. </li>
+</ol><ol><li value="6">Students can be accompanied by only <strong><u>one</u></strong> person in addition to themselves to complete their checkout.</li>
+</ol><ol><li value="7">All perimeter doors will be locked and should not be propped open during the move-out process. Key cards will work only during the assigned time so please be prompt.</li>
+</ol><ol><li value="8">This is intended to be an “Express Check-Out” experience; thus, after you are done moving out, simply return your keys to the designated space in the lobby/desk area on the ground floor.</li>
+</ol><ol><li value="9">Refunds will be provided according to the Refund Procedure, which is detailed on the NSU COVID-19 webpage.</li>
+</ol><ol><li value="10">If you are unable to attend this initial window for check-out, a “Second Chance Check-Out” will be held between May 1 and May 9. Details for this will be provided in a follow-up posting.</li>
+</ol><ol><li value="11">Items left in the students’ rooms after May 9 will be packed and stored by the university at the owner’s expense.</li>
+</ol><ol><li value="12">During the check-out, on-site Residential Life personnel reserve the right to regulate traffic to a floor to maintain appropriate social distancing.</li>
+</ol><ol><li value="13">Students should give consideration to other campus obligations they may have by contacting those departments prior to their return to check-out of their room. Things to consider: returning books to the library; returning athletic equipment or uniforms; returning any other materials or supplies associated with an academic department.</li>
+</ol></div>
+      </div>
+</div>
+</div></div>
+  
+  
+</article><!-- /.node -->
+<div class="block block-block pre-footer-block last odd" id="block-block-6">
+
+      
+  <p><img alt="Join The Pack" src="https://northern.edu/sites/default/files/prefooter_feb2019.png" /></p>
+
+</div>
+          </div><!-- /#content -->
+
+    
+    
+    <aside>
+      <div class="footer">
+
+        <a class="footer__back-to-top" href="#top">
+          <span class="sr-only">Back to top</span>
+        </a>
+
+        <div class="footer__top">
+          <div class="wrapper">
+              <div class="region region-pre-footer-connect">
+    <div class="block block-nsu-custom pre-footer-connect first last odd" id="block-nsu-custom-prefooter-connect">
+
+      
+  <div class="footer__top__left">
+      <a class="button secondary" href="https://apply.northern.edu/apply/">Apply Now</a>
+      <a class="button" href="/admissions-aid/visit-campus">Schedule a Visit</a>
+    </div>
+    <nav class="footer__top__social" aria-label="Northern State University on social media"><ul>
+
+
+      <li><a href="http://snapchat.com/add/northernstateu"><i class="fa fa-snapchat-ghost"></i><span class="sr-only">Snapchat</span></a></li>
+      <li><a href="https://twitter.com/NorthernStateU"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a></li>
+      <li><a href="http://www.instagram.com/northernstateu"><i class="fa fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+      <li><a href="https://www.facebook.com/northernstateu/"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a></li>
+      <li><a href="https://www.youtube.com/WolvesNorthern"><i class="fa fa-youtube"></i><span class="sr-only">YouTube</span></a></li>
+
+    </ul></nav>
+</div>
+  </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="wrapper">
+            <!-- Footer nav -->
+            <nav class="footer__bottom__nav" aria-label="Footer navigation">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-632"><a href="/about/campus/campusmap" class="menu__link menu__link">Campus Map</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-629"><a href="/academics/directory" class="menu__link menu__link">Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-639"><a href="https://www.northern.edu/mynsulogin" class="menu__link menu__link">myNSU</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-627"><a href="/academics/academic-calendars-important-dates" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-637"><a href="/about/departments-and-offices/human-resources" class="menu__link menu__link">Employment</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-642"><a href="https://d2l.sdbor.edu/d2l/lp/auth/saml/login" class="menu__link menu__link">Desire2Learn</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-634"><a href="/academics/university-accreditation" class="menu__link menu__link">Accreditation</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-2826"><a href="/nsu-social-media-directory" class="menu__link menu__link">Social Media</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-635"><a href="https://www.sdbor.edu/Pages/default.aspx" class="menu__link menu__link">Board of Regents</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-643"><a href="https://wa-nsu.prod.sdbor.edu/WebAdvisor/webadvisor?TYPE=M&amp;PID=CORE-WBMAIN&amp;TOKENIDX=1895843318" class="menu__link menu__link">WebAdvisor</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-641"><a href="https://www.google.com/gmail" class="menu__link menu__link">Student Email</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-630"><a href="/policies-and-procedures" class="menu__link menu__link">Policies</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-640"><a href="http://outlook.com/owa/northern.edu" class="menu__link menu__link">Staff Email</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-11266"><a href="https://registration.sdbor.edu/StudentRegistrationSsb/ssb/term/termSelection?mode=search&amp;mepCode=BOR" class="menu__link menu__link">Browse Classes</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-628"><a href="https://www.northern.edu/public-calendar" class="menu__link menu__link">Events Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-9076"><a href="https://25live.collegenet.com/sdbor/scheduling.html" class="menu__link menu__link">Room Request</a></li>
+</ul></nav>
+
+              <div class="region region-bottom">
+    <div class="block block-bean footer-logo-copyright-block first last odd" id="block-bean-footer-logo-copyright">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/footer-logo---copyright" typeof="">
+        <div class="content">
+    
+  <p><a class="footer-logo" href="https://northern.edu/"><img alt="NSU" class="footer-logo-image" src="https://northern.edu/sites/default/files/footer-logo.png" /></a></p>
+<p><footer></footer></p>
+<ul class="footer__bottom__info"><li>NORTHERN STATE UNIVERSITY</li>
+<li>1200 S. JAY ST., ABERDEEN, S.D. 57401</li>
+<li><a href="#">1-800-678-5330</a></li>
+<li><a href="#">info@northern.edu</a></li>
+<li>©COPYRIGHT 2020</li>
+</ul><p></p>
+  </div>
+</div>
+
+</div>
+  </div>
+          </div>
+        </div>
+      </div><!-- /.footer -->
+
+    </aside>
+  </main><!-- /#main -->
+</div><!-- /#page -->
+
+  <script src="https://www.northern.edu/sites/default/files/js/js_wQNOeG2JgkTz4yNFPI4Zj7pdFa0mHF5Clo81oLEKWdk.js"></script>
+<script src="https://www.northern.edu/sites/default/files/js/js_uvkeAZ2BFib7WxcPbFsLZ15zzDdra1ASMkwv9zijgFg.js"></script>
+<script src="https://www.northern.edu/sites/default/files/js/js_YUf1ddXMyvlCU4kTe2VL1vh-QcnmeYX7eCTZwLPLmxs.js"></script>
+<script src="https://www.northern.edu/sites/default/files/js/js_JGuXlX09_TpxwU-ayzDtH0NIqkKPq_WhhLuBAQS-lRU.js"></script>
+<script src="https://lift3assets.lift.acquia.com/stable/lift.js"></script>
+<script src="https://www.northern.edu/sites/default/files/js/js_DuCBxVBnmwlqi-FUiwD_uvjmLVBk6uphM_23_gbOteI.js"></script>
+<script>jQuery.extend(Drupal.absolute_messages, {"dismiss":{"status":false,"warning":false,"error":false},"dismiss_time":{"status":"","warning":"","error":""},"dismiss_all_count":2});</script>
+<script src="https://www.northern.edu/sites/default/files/js/js_jpvj283_8w8GRVFB_c8YcJIeta684DBvZYnMsGh9InI.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-36365896-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.northern.edu/sites/default/files/js/js_Xc1dkUtG5yVGIc8fbgIlu_7I2Vdcin39BRP3_aVPRBw.js"></script>
+<script src="https://www.northern.edu/sites/default/files/js/js_UJKyV3ECUeSXjO9uDpWzBn6o-WaxkHiR1MM4_4gjDE4.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nsu_theme","theme_token":"eu8EW8WLD8BnXe3Z_Sn1MWti4uPR0ko_SsXoCblW6yA","js":{"public:\/\/google_tag\/google_tag.script.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/magnific-popup\/dist\/jquery.magnific-popup.js":1,"sites\/all\/modules\/contrib\/magnific_popup\/js\/behaviors.mfp-formatter.js":1,"sites\/all\/modules\/custom\/campus_alerts\/campus_alerts.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/custom\/nsu_custom\/js\/nsu_custom.js":1,"sites\/all\/modules\/user_alert\/js\/user-alert.js":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.js":1,"0":1,"sites\/all\/modules\/nodeviewcount\/theme\/js\/nodeviewcount.js":1,"sites\/all\/modules\/contrib\/captcha\/captcha.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/script.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/alphabetize-dropdown.js":1,"sites\/all\/themes\/custom\/nsu_theme\/..\/..\/..\/libraries\/stacktablejs\/stacktable.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/jquery.hoverIntent.minified.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/multilevel-nav.min.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/headroom.min.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/jQuery.headroom.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/main.js":1,"sites\/all\/themes\/custom\/nsu_theme\/js\/Playhouse.js":1,"sites\/all\/libraries\/accessible_mega_menu\/js\/jquery-accessibleMegaMenu.js":1,"sites\/all\/libraries\/jquery.hoverintent\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/features\/kwall-megamenu\/kwall_megamenu.js":1,"https:\/\/lift3assets.lift.acquia.com\/stable\/lift.js":1,"2":1,"3":1,"sites\/all\/modules\/contrib\/webform\/js\/webform.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/extlink\/js\/extlink.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/magnific-popup\/dist\/magnific-popup.css":1,"sites\/all\/modules\/contrib\/magnific_popup\/css\/mfp-formatter.css":1,"sites\/all\/libraries\/accessible_mega_menu\/css\/megamenu.css":1,"sites\/all\/modules\/features\/kwall-megamenu\/kwall_megamenu.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/user_alert\/css\/user-alert.css":1,"sites\/all\/modules\/contrib\/extlink\/css\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/webform\/css\/webform.css":1,"sites\/all\/modules\/contrib\/acquia_lift\/css\/acquia_lift.css":1,"sites\/all\/themes\/contrib\/zen\/system.base.css":1,"sites\/all\/themes\/custom\/nsu_theme\/system.menus.css":1,"sites\/all\/themes\/contrib\/zen\/system.messages.css":1,"sites\/all\/themes\/contrib\/zen\/system.theme.css":1,"sites\/all\/themes\/contrib\/zen\/comment.css":1,"sites\/all\/themes\/contrib\/zen\/node.css":1,"sites\/all\/themes\/custom\/nsu_theme\/css\/base\/normalize.css.less":1,"sites\/all\/themes\/custom\/nsu_theme\/styleguide\/assets\/fonts\/stylesheet.css":1,"sites\/all\/themes\/custom\/nsu_theme\/css\/styles.css.less":1,"sites\/all\/themes\/custom\/nsu_theme\/css\/themes\/print.css.less":1,"sites\/all\/themes\/custom\/nsu_theme\/css\/surround.css":1,"sites\/all\/themes\/custom\/nsu_theme\/css\/Playhouse\/playhouse-carousel.css.less":1,"public:\/\/css_injector\/css_injector_1.css":1,"public:\/\/css_injector\/css_injector_6.css":1,"public:\/\/css_injector\/css_injector_16.css":1,"public:\/\/css_injector\/css_injector_21.css":1}},"googleCSE":{"cx":"009234842511155857448:tmdnmzthzyy","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":true},"user_alert":{"url_prefix":""},"nodeviewcount":{"nodeviewcount_path":"nodeviewcount","nodeviewcount_nid":"16301","nodeviewcount_uid":0},"better_exposed_filters":{"views":{"slideshow":{"displays":{"hero":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"magnific_popup_api":{"iframe_patterns":{"youtube":{"index":"youtube.com\/","id":"v=","src":"\/\/www.youtube.com\/embed\/%id%?rel=0\u0026modestbranding=1\u0026playerapiid=mfp-iframe\u0026controls=2\u0026autoplay=1"}}},"currentPath":"node\/16301","currentPathIsAdmin":false,"urlIsAjaxTrusted":{"\/coronavirus\/checkout":true},"field_group":{"div":"full"},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)","extUseFontAwesome":false},"js":{"tokens":[]}});</script>
+  <script src="https://www.northern.edu/sites/default/files/js/js_F9G1OsYUfWZRUURFpJ37Lk6_0yKwG77xZ1imRHZJO0E.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a82ba430c3","applicationID":"51794504","transactionName":"ZABaZhNSXREHWkFdXl1KeVEVWlwMSVdaUFRsFVlVBGxFCwNO","queueTime":0,"applicationTime":243,"atts":"SEdZEFtITh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

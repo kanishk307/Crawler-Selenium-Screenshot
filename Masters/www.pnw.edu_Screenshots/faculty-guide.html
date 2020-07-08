@@ -1,0 +1,897 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-ef68e02b7b848eac80b",applicationID:"454473153"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="zoom-domain-verification" content="ZOOM_verify_Y0vtSuvVSHyMd5h1ga1t_w">
+  <!-- Google Tag Manager - PNW main -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZZ8M7X');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5K6NR8');</script>
+  <!-- End Google Tag Manager -->
+    <title>COVID-19 Faculty Guide - Purdue University Northwest</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.6.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="PNW faculty, see everything you need to know about COVID-19 and working and teaching at Purdue University Northwest as we plan a safe return to campus."/>
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="COVID-19 Faculty Guide - Purdue University Northwest" />
+<meta property="og:description" content="PNW faculty, see everything you need to know about COVID-19 and working and teaching at Purdue University Northwest as we plan a safe return to campus." />
+<meta property="og:url" content="https://www.pnw.edu/pnw-and-coronavirus-covid-19/faculty-guide/" />
+<meta property="og:site_name" content="Purdue University Northwest" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="PNW faculty, see everything you need to know about COVID-19 and working and teaching at Purdue University Northwest as we plan a safe return to campus." />
+<meta name="twitter:title" content="COVID-19 Faculty Guide - Purdue University Northwest" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.pnw.edu/#website","url":"https://www.pnw.edu/","name":"Purdue University Northwest","description":"Purdue University Northwest","potentialAction":{"@type":"SearchAction","target":"https://www.pnw.edu/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.pnw.edu/pnw-and-coronavirus-covid-19/faculty-guide/#webpage","url":"https://www.pnw.edu/pnw-and-coronavirus-covid-19/faculty-guide/","inLanguage":"en-US","name":"COVID-19 Faculty Guide - Purdue University Northwest","isPartOf":{"@id":"https://www.pnw.edu/#website"},"datePublished":"2020-06-23T01:08:31+00:00","dateModified":"2020-07-06T23:04:22+00:00","description":"PNW faculty, see everything you need to know about COVID-19 and working and teaching at Purdue University Northwest as we plan a safe return to campus."}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.pnw.edu' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.pnw.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='tribe-common-skeleton-style-css'  href='https://www.pnw.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.11.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-tooltip-css'  href='https://www.pnw.edu/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.11.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.pnw.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-typekit-fonts-css'  href='https://use.typekit.net/lfg5klq.css' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-main-css'  href='https://www.pnw.edu/wp-content/themes/pnw/dist/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.pnw.edu/wp-content/plugins/tablepress/css/default.min.css?ver=1.10' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='https://www.pnw.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pnw.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.pnw.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<link rel='shortlink' href='https://www.pnw.edu/?p=13473' />
+<link rel="alternate" type="application/json+oembed" href="https://www.pnw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pnw.edu%2Fpnw-and-coronavirus-covid-19%2Ffaculty-guide%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.pnw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pnw.edu%2Fpnw-and-coronavirus-covid-19%2Ffaculty-guide%2F&#038;format=xml" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.pnw.edu"><link rel="https://theeventscalendar.com/" href="https://www.pnw.edu/wp-json/tribe/events/v1/" /><link rel="icon" href="https://www.pnw.edu/wp-content/uploads/2020/02/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.pnw.edu/wp-content/uploads/2020/02/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.pnw.edu/wp-content/uploads/2020/02/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.pnw.edu/wp-content/uploads/2020/02/cropped-favicon-270x270.png" />
+</head>
+
+  <body class="page-template page-template-page--tertiary page-template-page--tertiary-php page page-id-13473 page-child parent-pageid-9385 has-dashicons tribe-no-js tribe-theme-pnw">
+    <nav aria-label="Skip to Sections">
+      <a class="skip-link" href="#main-nav">Skip to Navigation</a>
+      <a class="skip-link toggle-search" href="#searchbox">Skip to Search</a>
+      <a class="skip-link" href="#main-content">Skip to Main Content</a>
+      <a class="skip-link" href="#footer">Skip to Footer Links</a>
+    </nav>
+              <div class="alert" style="display:none;">
+      <div class="alert__container">
+                  <h3 class="alert__headline">PNW and COVID-19</h3>
+                <div class="alert__wrap">
+                      <p class="alert__text">Find the latest updates on how PNW is responding to novel coronavirus in our PNW COVID-19 Guide.</p>
+                                <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/"  class="alert__button">
+              Review the Guide            </a>
+                  </div>
+        <button class="alert__close"><span class="subhead">Close</span></button>
+      </div>
+    </div>
+          <div class="canvas">
+        <header id="main-nav" class="header">
+  <div class="header__small">
+    <button class="header__menu__toggle toggle-menu" aria-haspopup="true" aria-controls="main-menu" id="menubutton">
+      <span class="header__menu__toggle--open svgstore svgstore--icon-menu">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-menu"></use>
+    </svg>
+  </span>      <span class="header__menu__toggle--close svgstore svgstore--icon-x">
+    <svg>
+      <title>close</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-x"></use>
+    </svg>
+  </span>    </button>
+    <a href="/" class="header__small__logo">
+      <span class=" svgstore svgstore--logo">
+    <svg>
+      <title>Purdue University Northwest</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#logo"></use>
+    </svg>
+  </span>    </a>
+    <button class="header__search__toggle toggle-search">
+      <span class="header__search__toggle--open svgstore svgstore--icon-search">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-search"></use>
+    </svg>
+  </span>      <span class="header__search__toggle--close svgstore svgstore--icon-x">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-x"></use>
+    </svg>
+  </span>    </button>
+  </div>
+  <div class="header__menu" id="main-menu" aria-labelledby="menubutton">
+    <nav class="nav" aria-label="Main Navigation">
+      <a href="/" class="nav__logo">
+        <span class=" svgstore svgstore--logo">
+    <svg>
+      <title>Purdue University Northwest</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#logo"></use>
+    </svg>
+  </span>      </a>
+      <ul id="menu-primary-navigation" class="nav__list"><li id="nav-item-1480" class="menu-item menu-item-type-post_type menu-item-object-page nav-item-1480 nav__item"><a href="https://www.pnw.edu/why-pnw/" class="nav__link">Why PNW</a></li>
+<li id="nav-item-1482" class="menu-item menu-item-type-post_type menu-item-object-page nav-item-1482 nav__item"><a href="https://www.pnw.edu/admissions-financial-aid/" class="nav__link">Admissions &#038; Financial Aid</a></li>
+<li id="nav-item-1481" class="menu-item menu-item-type-post_type menu-item-object-page nav-item-1481 nav__item"><a href="https://www.pnw.edu/academics-research/" class="nav__link">Academics &#038; Research</a></li>
+<li id="nav-item-7343" class="menu-item menu-item-type-custom menu-item-object-custom nav-item-7343 nav__item"><a href="https://www.pnw.edu/student-life/" class="nav__link">Student Life</a></li>
+<li id="nav-item-5003" class="menu-item menu-item-type-custom menu-item-object-custom nav-item-5003 nav__item"><a href="https://pnwathletics.com/" class="nav__link">Athletics</a></li>
+<li id="nav-item-1478" class="menu-item menu-item-type-post_type menu-item-object-page nav-item-1478 nav__item"><a href="https://www.pnw.edu/about-pnw/" class="nav__link">About PNW</a></li>
+</ul>      <button class="nav__search__btn toggle-search">
+        <span class="nav__search__btn--open svgstore svgstore--icon-search">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-search"></use>
+    </svg>
+  </span>        <span class="nav__search__btn--close svgstore svgstore--icon-x">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-x"></use>
+    </svg>
+  </span>      </button>
+                </nav>
+    <nav class="cta" aria-label="Secondary Navigation">
+      <a href="/" class="cta__logo">Purdue University Northwest</a>
+      <ul id="menu-tactical-navigation" class="cta__list"><li id="nav-item-3608" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-3608 cta__item"><a href="https://discover.pnw.edu/register/info" class="cta__link">Request Information</a></li>
+<li id="nav-item-3119" class="menu-item menu-item-type-post_type menu-item-object-page cta-item-3119 cta__item"><a href="https://www.pnw.edu/admissions-financial-aid/undergraduate/schedule-a-visit/" class="cta__link">Visit</a></li>
+<li id="nav-item-3120" class="menu-item menu-item-type-post_type menu-item-object-page cta-item-3120 cta__item"><a href="https://www.pnw.edu/admissions-financial-aid/undergraduate/how-to-apply/" class="cta__link">Apply</a></li>
+<li id="nav-item-10683" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-10683 cta__item"><a href="https://www.pnw.edu/giving/" class="cta__link">Give</a></li>
+</ul>      <div class="cta__submenu">
+        <button class="cta__btn toggle-cta" aria-haspopup="true" aria-controls="cta-menu" id="cta-button">
+          I Am A...
+        </button>
+        <div class="cta__list--sub" id="cta-menu" aria-labelledby="cta-button">
+          <div class="cta__item--sub">
+            <button class="cta__btn--back toggle-cta" aria-label="Close">
+              <span>I Am A...</span>
+              <span>Menu</span>
+            </button>
+          </div>
+          <ul id="menu-audience-navigation" class="cta__list--sub-alt"><li id="nav-item-13491" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-13491 cta__item--sub"><a href="https://www.pnw.edu/for-current-students/" class="cta__link--sub">Current Student</a></li>
+<li id="nav-item-13492" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-13492 cta__item--sub"><a href="https://www.pnw.edu/for-faculty-staff/" class="cta__link--sub">Faculty/Staff</a></li>
+<li id="nav-item-13493" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-13493 cta__item--sub"><a href="https://www.pnw.edu/for-parents/" class="cta__link--sub">Parent</a></li>
+<li id="nav-item-13494" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-13494 cta__item--sub"><a href="https://www.pnw.edu/alumni/" class="cta__link--sub">PNW Alumnus</a></li>
+<li id="nav-item-13495" class="menu-item menu-item-type-custom menu-item-object-custom cta-item-13495 cta__item--sub"><a href="https://www.pnw.edu/for-the-local-community/" class="cta__link--sub">Community Member</a></li>
+</ul>        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="search module--black">
+    <form id="searchform" method="get" action="/search" class="search__container">
+      <div class="search__input__container">
+        <label for="site-search" class="screen-reader-text">Search</label>
+        <input id="site-search" type="search" class="search__input" placeholder="Search PNW" name="q">
+        <button class="search__input__btn" type="submit">
+          <span class=" svgstore svgstore--icon-search">
+    <svg>
+      <title>search</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-search"></use>
+    </svg>
+  </span>        </button>
+      </div>
+      <div class="search__selections">
+        <fieldset>
+          <legend>Search options</legend>
+          <label class="radio__label" for="a-option">
+            <input class="radio__option" type="radio" name="search" id="a-option" value="all" onChange="if(this.checked){document.getElementById('searchform').action='/search'}" checked>
+            <span></span>
+            <span>All</span>
+          </label>
+          <label class="radio__label" for="p-option">
+            <input class="radio__option" type="radio" name="search" id="p-option" value="program-finder" onChange="if(this.checked){document.getElementById('searchform').action='/program-finder';document.getElementById('site-search').name='search'}">
+            <span></span>
+            <span>Academic Programs</span>
+          </label>
+
+        </fieldset>
+      </div>
+                <div class="search__results__label">Popular Searches</div>
+          <ul class="search__results__list">
+                                                        <li class="search__results__item">
+                  <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/" class="search__results__link" >COVID-19 Guide</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://www.pnw.edu/directory/" class="search__results__link" >Directory</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://www.pnw.edu/mypnw" class="search__results__link" >myPNW</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://purdue.brightspace.com/" class="search__results__link" >Brightspace Login</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://www.pnw.edu/information-services/services/blackboard/" class="search__results__link" >Blackboard Login</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://www.pnw.edu/events/" class="search__results__link" >PNW Calendar</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="/financial-aid" class="search__results__link" >Tuition & Financial Aid</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="/advising" class="search__results__link" >Advising</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="/housing" class="search__results__link" >Housing</a>
+                </li>
+                                                                      <li class="search__results__item">
+                  <a href="https://www.pnw.edu/gabis-arboretum/" class="search__results__link" >Gabis Arboretum</a>
+                </li>
+                                    </ul>
+          </form>
+  </div>
+</header>
+
+
+<main class="page-content" id="main-content">
+
+  <div class="main">
+
+    <div class="breadcrumb">
+  <!-- Breadcrumb NavXT 6.3.0 -->
+<a property="item" typeof="WebPage" title="Go to Purdue University Northwest." href="https://www.pnw.edu" >Purdue University Northwest</a>&nbsp;/&nbsp;<a property="item" typeof="WebPage" title="Go to PNW and Coronavirus (COVID-19)." href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/" >PNW and Coronavirus (COVID-19)</a>&nbsp;/&nbsp;<span class="post post-page current-item">COVID-19 Faculty Guide</span>  </div>
+
+    <div class="main__sidebar">
+      
+<!-- <ul><li><a class="top" href="#open">Job Category</a> <ul><li class="parent"><a href=""></a></li><li class="parent"><a href=""></a></li></ul> -->
+
+  <nav class="subnav" aria-label="navigation">
+    <button class="subnav__toggle">
+      In this section
+    </button>
+    <ul class="subnav__list">
+      <li class="subnav__item page-item-13078"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/" class="subnav__link" title="Safe Return to Campus">Safe Return to Campus</a><ul>
+	<li class="page_item page-item-13529 subnav__item--sub"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/return-to-work-guidelines/" class="subnav__link--sub" title="Return-to-Work Guidelines">Return-to-Work Guidelines</a></li>
+	<li class="page_item page-item-13360 subnav__item--sub"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/fitness-centers-and-recreational-sports-phase-one/" class="subnav__link--sub" title="Fitness Centers and Recreational Sports: Phase One">Fitness Centers and Recreational Sports: Phase One</a></li>
+
+</ul>
+</li>
+<li class="subnav__item page-item-13456"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/student-guide/" class="subnav__link" title="COVID-19 Student Guide">COVID-19 Student Guide</a></li>
+<li class="subnav__item page-item-13483"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/staff-guide/" class="subnav__link" title="COVID-19 Staff Guide">COVID-19 Staff Guide</a></li>
+<li class="subnav__item page-item-13473  subnav__item--current"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/faculty-guide/" class="subnav__link" title="COVID-19 Faculty Guide">COVID-19 Faculty Guide</a></li>
+<li class="subnav__item page-item-13912"><a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/covid-feedback/" class="subnav__link" title="COVID Feedback">COVID Feedback</a></li>
+    </ul>
+  </nav>
+    </div>
+
+    <div class="main__content">
+              <h1>COVID-19 Faculty Guide</h1>
+                              <p class="p-large">PNW faculty, see everything you need to know about COVID-19 and working and teaching at Purdue University Northwest as we plan a safe return to campus.</p>
+                                        
+  <div class="feature">
+  <div class="feature__img">
+    <img width="900" height="600" src="https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-900x600.jpg" class="attachment-900x600 size-900x600" alt="Jacob Lenson, assistant vice chancellor of campus planning, project and space management, and Chancellor Keon celebrate the handover of the Nils K. Nelson Bioscience Innovation Building." srcset="https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-900x600.jpg 900w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-300x200.jpg 300w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-1024x683.jpg 1024w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-768x512.jpg 768w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-1536x1024.jpg 1536w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-2048x1365.jpg 2048w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-800x533.jpg 800w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22-at-12.25.39-PM-74-501x334.jpg 501w" sizes="(max-width: 900px) 100vw, 900px" />  </div>
+  <div class="feature__content">
+    <p class="h4">Limited Return to Campus Begins July 6</p>
+    <p>As we continue preparations to safely welcome students back to campus, PNW has approved the recommendation of the Safe Return to Campus Task Force to move into the next phase of operations beginning July 6.</p>
+<p><a class="button__link" href="https://www.pnw.edu/limited-return-to-campus-begins-july-6/">See the Latest Update</a></p>
+  </div>
+</div>
+                                          <div class="tabs tabs--white">
+    <div class="tabs__nav">
+              <button class="tabs__button">Today's Status: Summer Semester</button>
+              <button class="tabs__button">What's Next?</button>
+          </div>
+    <div class="tabs__content">
+              <button class="accordion__toggle tabs__toggle">Today's Status: Summer Semester</button>
+        <div class="tabs__content__item">
+          <div class="tabs__content__interior">
+            <p>What can you expect on campus today? Find out with the table below.</p>
+<div class="table">
+
+<table id="tablepress-106" class="tablepress tablepress-id-106">
+<tbody class="row-hover">
+<tr class="row-1 odd">
+	<td class="column-1"><strong>Social Distancing Standards in Effect</strong></td><td class="column-2">Yes</td>
+</tr>
+<tr class="row-2 even">
+	<td class="column-1"><strong>Mask Usage</strong></td><td class="column-2">Required indoors, your office excepted -  <a href="https://www.pnw.edu/pnw-mask-protocol-for-on-campus-community-members/">See the Protocol </a></td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1"><strong>Courses</strong></td><td class="column-2">All courses delivered remotely - <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/#Experiences">See Fall 2020 Plans</a></td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1"><strong>Library, Lounges, Fitness Centers</strong></td><td class="column-2">Remote</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1"><strong>Dining Services</strong></td><td class="column-2">Grab and go only</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1"><strong>Size Guidelines for All Gatherings</strong></td><td class="column-2">0 (Gatherings not allowed)</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1"><strong>Essential Employees Work Location</strong></td><td class="column-2">On-Campus</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1"><strong>Non-Essential Employees Work Location</strong></td><td class="column-2">Remote</td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1"><strong>University-Sponsored Travel</strong></td><td class="column-2">Not permitted</td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1"><strong>COVID-19 Screening</strong></td><td class="column-2">N/A</td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- #tablepress-106 from cache -->
+          </div>
+        </div>
+              <button class="accordion__toggle tabs__toggle">What's Next?</button>
+        <div class="tabs__content__item">
+          <div class="tabs__content__interior">
+            <p>Planning for fall? So are we! See PNW&#8217;s next steps for a safe return to the classroom below.</p>
+<div class="table">
+
+<table id="tablepress-107" class="tablepress tablepress-id-107">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">&nbsp;</th><th class="column-2">Phase 0<br />
+(Previous)</th><th class="column-3">Phase 1<br />
+(Began July 6)</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1"><strong>Social Distancing Standards in Effect</strong></td><td class="column-2">Yes</td><td class="column-3">Yes</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1"><strong>Mask Usage</strong></td><td class="column-2">Required Indoors, Your Office Excepted -  <a href="https://www.pnw.edu/pnw-mask-protocol-for-on-campus-community-members/">See the Protocol. </a></td><td class="column-3">Required Indoors, Your Office Excepted -  <a href="https://www.pnw.edu/pnw-mask-protocol-for-on-campus-community-members/">See the Protocol </a></td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1"><strong>Courses</strong></td><td class="column-2">All Courses Delivered Remotely - <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/#Experiences">See Fall 2020 Plans</a></td><td class="column-3">All Courses Delivered Remotely - <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/#Experiences">See Fall 2020 Plans</a></td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1"><strong>Library and Lounges</strong></td><td class="column-2">Remote</td><td class="column-3">Remote </td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1"><strong>Fitness Centers</strong></td><td class="column-2">Temporarily closed</td><td class="column-3">Opening July 13 - <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/fitness-centers-and-recreational-sports-phase-one/">See the Plan</a></td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1"><strong>Dining Services</strong></td><td class="column-2">Grab and go only</td><td class="column-3">Grab and go only</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1"><strong>Size Guidelines for All Gatherings</strong></td><td class="column-2">0 (On-campus gatherings not allowed)</td><td class="column-3">150 people or fewer</td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1"><strong>Essential Employees Work Location</strong></td><td class="column-2">On-campus</td><td class="column-3">On-campus</td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1"><strong>Non-Essential Employees Work Location</strong></td><td class="column-2">Remote</td><td class="column-3">Remote (for most)<br />
+On-campus (with approval or upon request from supervisor)</td>
+</tr>
+<tr class="row-11 odd">
+	<td class="column-1"><strong>University-Sponsored Travel</strong></td><td class="column-2">Not permitted</td><td class="column-3">Not permitted</td>
+</tr>
+<tr class="row-12 even">
+	<td class="column-1"><strong>COVID-19 Screening</strong></td><td class="column-2">N/A</td><td class="column-3">TBD</td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- #tablepress-107 from cache -->
+          </div>
+        </div>
+          </div>
+  </div>
+                                        
+  <div class="feature">
+  <div class="feature__img">
+    <img width="500" height="333" src="https://www.pnw.edu/wp-content/uploads/2020/02/Zhang_Shengyong_faculty_Engineering_20190913-PNWFaculty-57_brand_edit_optimized_500x375.jpg" class="attachment-900x600 size-900x600" alt="Shenyong Zhang" srcset="https://www.pnw.edu/wp-content/uploads/2020/02/Zhang_Shengyong_faculty_Engineering_20190913-PNWFaculty-57_brand_edit_optimized_500x375.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/02/Zhang_Shengyong_faculty_Engineering_20190913-PNWFaculty-57_brand_edit_optimized_500x375-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />  </div>
+  <div class="feature__content">
+    <p class="h4">Remote Resources</p>
+    <p>Whether you’re looking to work off campus or teach classes remotely, our tech experts have guides to help!</p>
+<p><a class="button__link" href="https://www.pnw.edu/information-services/services/resources-for-staff-working-remotely/">See PNW’s Remote Work Guide</a></p>
+<p><a class="button__link" href="https://www.pnw.edu/information-services/services/teaching-remotely-step-by-step-guide/">Explore PNW’s Remote Teaching Guide</a></p>
+  </div>
+</div>
+                            </div>
+    </div>
+
+              <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <h2 id="Experiences">Fall 2020 Learning Experiences</h2>
+<p>PNW will offer four “types” of courses in Fall 2020, ranging from fully remote learning to face-to-face courses deliver with precautions including social distancing, face coverings and deep cleaning.</p>
+<p>The Office of the Registrar is now working with colleges to identify how the delivery mode for every individual course and to enter this information into the course catalog. Our expectation is that students will have approximately one month before the start of fall semester to see how their fall 2020 classes will be delivered.</p>
+<p><a class="button__link" href="https://www.pnw.edu/looking-forward-to-fall-classes-at-pnw/">See the Latest Announcement About Fall Classes</a></p>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+                <div class="module">
+        <div class="container">
+        <div class="grid grid--4">
+                  <div class="card">
+        <img width="550" height="688" src="https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688-550x688.jpg" class="card__img" alt="A student works on a computer at home. An illustration in the corner of the image shows different faces arrayed around a computer screen." srcset="https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688.jpg 550w, https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688-240x300.jpg 240w, https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688-500x625.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688-350x437.jpg 350w, https://www.pnw.edu/wp-content/uploads/2020/06/Type1_550x688-480x600.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" />        <p class="headline" style="background: white;"><span style="font-family: 'Champion Lightwt',serif; color: black;">100% Online</span></p>
+<p class="h4" style="text-transform: none;">Fully Remote</p>
+<div class="card">
+<p>All course learning objectives can be achieved and assessed through a variety of remote-teaching methods. Remote methods in the 100% online courses are based on the idea that students will learn the same material even if they are working at different times and locations.</p>
+</div>
+<div class="card"></div>
+      </div>
+                <div class="card">
+        <img width="550" height="688" src="https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688-550x688.jpg" class="card__img" alt="A student works on a stylus as she looks at her computer screen. Illustrations on the image show faces arrayed on a computer screen and a clock." srcset="https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688.jpg 550w, https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688-240x300.jpg 240w, https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688-500x625.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688-350x437.jpg 350w, https://www.pnw.edu/wp-content/uploads/2020/06/Type2_550x688-480x600.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" />        <p class="headline" style="background: white;"><span style="font-family: 'Champion Lightwt',serif; color: black;">Virtual Classroom</span></p>
+<p class="h4" style="background: white; margin: 9.0pt 0in 3.0pt 0in;"><span style="font-family: 'Champion Lightwt',serif; color: black;">Fully Remote with Live Lecture</span></p>
+<div class="card">
+<p>All course learning objectives can be achieved and assessed through a variety of remote-teaching methods. Remote methods in this environment are based on students learning at the same time, with a commitment to a specific “virtual classroom” time.</p>
+</div>
+<div class="card"></div>
+      </div>
+                <div class="card">
+        <img width="550" height="688" src="https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688-550x688.jpg" class="card__img" alt="A student wearing a mask and gloves peers into a microscope. Illustrations on the image show faces arrayed around a computer screen and a building." srcset="https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688.jpg 550w, https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688-240x300.jpg 240w, https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688-500x625.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688-350x437.jpg 350w, https://www.pnw.edu/wp-content/uploads/2020/06/Type3_550x688-480x600.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" />        <p class="headline" style="background: white;"><span style="font-family: 'Champion Lightwt',serif; color: black;">Hybrid</span></p>
+<p class="h4" style="background: white; margin: 9.0pt 0in 3.0pt 0in;"><span style="font-family: 'Champion Lightwt',serif; color: black;">Combination of On-Campus and Online</span></p>
+<p>Course learning objectives can be achieved and assessed through a combination of remote delivery and face-to-face interactions between student and faculty.</p>
+<p>Examples: Lab-based courses; some clinical experiences.</p>
+      </div>
+                <div class="card">
+        <img width="550" height="688" src="https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688-550x688.jpg" class="card__img" alt="A student wearing a mask and gloves works with chemicals. An illustration on the photo shows a building" srcset="https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688.jpg 550w, https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688-240x300.jpg 240w, https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688-500x625.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688-350x437.jpg 350w, https://www.pnw.edu/wp-content/uploads/2020/06/Type4_550x688-480x600.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" />        <p class="headline" style="background: white;"><span style="font-family: 'Champion Lightwt',serif; color: black;">Face-to-Face</span></p>
+<p class="h4" style="background: white; margin: 9.0pt 0in 3.0pt 0in;"><span style="font-family: 'Champion Lightwt',serif; color: black;">In-Person Experiences</span></p>
+<p>All course learning objectives can only be achieved and assessed through a variety of on-site face-to-face teaching methodologies.</p>
+      </div>
+      </div>
+</div>
+      </div>
+                  <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <h2 class="headline">Show Your Pride. Share Responsibility</h2>
+<p>Help keep our community safe! These simple steps limit the spread of COVID-19.</p>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+                <div class="module">
+        <div class="container">
+            <div class="accordion__group">
+                        <div class="accordion">
+        <button class="accordion__toggle">1. Wear a Face Covering</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>You must wear a face covering when you are in a building, hallway, classroom, laboratory, washroom or common area. This simple act can help limit the spread of the virus. Face coverings also remind others to continue practicing social distancing.</p>
+<p>If you are outdoors, you do not have to wear a face covering, but social distancing still applies.</p>
+<h3>Related Updates</h3>
+<ul>
+<li><a href="https://www.pnw.edu/pnw-mask-protocol-for-on-campus-community-members/">PNW Face Covering Protocol for On-Campus Community Members</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">2. Practice Social Distancing</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Another strong step to limit the spread of COVID-19 is to practice social distancing, keeping a distance of about 6 feet from others.</p>
+<p>From limiting social gatherings and non-essential workers to pursuing a hybrid approach to Fall 2020 classes, we are building social distancing into <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/">PNW&#8217;s phased approach to a safe return to campus.</a></p>
+<h3>Related Updates</h3>
+<ul>
+<li><a href="https://www.pnw.edu/revised-pick-up-locations-for-mail-and-packages/">Revised Pick-Up Locations for Mail and Packages</a></li>
+<li><a href="https://www.pnw.edu/covid-19-research-guidance/">COVID-19 Research Guidance</a></li>
+<li><a href="https://www.pnw.edu/pnw-building-closings/">Restricting Public Access to PNW Buildings</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">3. Keep It Clean</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Cleaning and disinfecting will be an important aspect of reducing exposure risks associated with COVID-19.</p>
+<p>Remember, clean hands keep you healthy! Be sure to wash your hands with soap and water for at least 20 seconds.</p>
+<p>When the university incrementally reopens, all campus community members will be asked to take part in minimizing risk of exposure and preventing the spread by cleaning and disinfecting the various areas of campus.</p>
+<h3>Related Updates</h3>
+<ul>
+<li><a href="https://www.pnw.edu/pnw-covid-19-cleaning-and-disinfecting-protocols/">PNW COVID-19 Cleaning and Disinfecting Protocols</a></li>
+<li><a href="https://www.pnw.edu/purchasing-covid-19-related-supplies/">Purchasing COVID-19 Related Supplies</a></li>
+<li><a href="https://www.pnw.edu/pnw-process-to-request-workplace-modifications-for-covid-19-vulnerable-populations/">PNW Process to Request Workplace Modifications for COVID-19 Vulnerable Populations</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">4. Stay Home If You're Sick</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Your health and safety is our top priority. If you are not feeling well, please stay home, immediately contact your medical provider and follow their directions.</p>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+      </div>
+                <div class="container">
+  <div class="grid grid--66-33-split">
+          <div>
+                  <h2 class="h2">COVID Announcements for Faculty</h2>
+              </div>
+                  <div class="grid__item--right">
+                <a href="https://www.pnw.edu/post/tag/CovidCampus/"  class="button button--blue">
+          See All Updates        </a>
+      </div>
+      </div>
+  <div class="module">
+    <div class="grid grid__slider--mobile">
+              <div class="card--news">
+          <img width="302" height="301" src="https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-302x301.jpg" class="attachment-302x301 size-302x301 wp-post-image" alt="PNW Chancellor Thomas Keon speaks from the university&#039;s new Nils K. Nelson Bioscience Innovation Building" srcset="https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-302x301.jpg 302w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-300x300.jpg 300w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-150x150.jpg 150w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-235x235.jpg 235w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-250x250.jpg 250w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-200x200.jpg 200w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-272x271.jpg 272w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350-181x181.jpg 181w, https://www.pnw.edu/wp-content/uploads/2020/06/Keon_BioscienceBuilding_350x350.jpg 350w" sizes="(max-width: 302px) 100vw, 302px" />          <p class="headline--sm">
+            <a href="https://www.pnw.edu/chancellor-keon-video-update-keep-the-future-in-mind/">Chancellor Keon Video Update: Keep the Future in Mind</a>
+          </p>
+          <p>Speaking from the brand-new Nils K. Nelson Bioscience Innovation Building, Chancellor Keon shares how the building&#8217;s bright future mirrors PNW&#8217;s plans for fall learning.</p>
+        </div>
+              <div class="card--news">
+          <img width="302" height="301" src="https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-302x301.jpg" class="attachment-302x301 size-302x301 wp-post-image" alt="Jacob Lenson, assistant vice chancellor of campus planning, project and space management, and Chancellor Keon celebrate the handover of the Nils K. Nelson Bioscience Innovation Building." srcset="https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-302x301.jpg 302w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-150x150.jpg 150w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-235x235.jpg 235w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-250x250.jpg 250w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-200x200.jpg 200w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-272x271.jpg 272w, https://www.pnw.edu/wp-content/uploads/2020/04/ChancellorJacob_Bioscience_KCF_Hammond_2020-04-22_349x436-181x181.jpg 181w" sizes="(max-width: 302px) 100vw, 302px" />          <p class="headline--sm">
+            <a href="https://www.pnw.edu/limited-return-to-campus-begins-july-6/">Limited Return to Campus Begins July 6</a>
+          </p>
+          <p>As we continue preparations to safely welcome students back to campus this fall, Purdue University Northwest senior administration has approved the recommendation of the Safe Return to Campus Task Force to move into the next phase of operations beginning July 6.</p>
+        </div>
+              <div class="card--news">
+          <img width="302" height="301" src="https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-302x301.jpg" class="attachment-302x301 size-302x301 wp-post-image" alt="A lion statue on PNW&#039;s Westville campus" srcset="https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-302x301.jpg 302w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-150x150.jpg 150w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-500x500.jpg 500w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-235x235.jpg 235w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-250x250.jpg 250w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-272x271.jpg 272w, https://www.pnw.edu/wp-content/uploads/2020/02/Lion_Statue_Westville_0B4B2243_550-181x181.jpg 181w" sizes="(max-width: 302px) 100vw, 302px" />          <p class="headline--sm">
+            <a href="https://www.pnw.edu/pnw-covid-19-cleaning-and-disinfecting-protocols/">PNW COVID-19 Cleaning and Disinfecting Protocols</a>
+          </p>
+          <p>Cleaning and disinfecting will be an important aspect of reducing exposure risks associated with COVID-19.  While the university incrementally reopens, all campus community members will be asked to take part in minimizing risk of exposure and preventing the spread by cleaning and disinfecting the various areas of campus. </p>
+        </div>
+                </div>
+  </div>
+</div>
+                  <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <h2>Frequently Asked Questions</h2>
+<h3>On Campus</h3>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+                <div class="module">
+        <div class="container">
+            <div class="accordion__group">
+                        <div class="accordion">
+        <button class="accordion__toggle">When will we be back on campus?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>To protect the health and safety of all faculty and staff, we have created a task force, with representation from each operating division, to develop appropriate health and safety protocols and procedures with the goal of a partial safe return to campus on July 6. PNW is planning strategically to ensure your safe return to work and into the classroom.</p>
+<p>Assuming governmental authorities permit doing so, Purdue University Northwest intends to offer classes on campus this fall, while remaining conscientious about whatever rules and practices are necessary to protect the health and safety of students, faculty, staff and the community. While we are all eager to come back to campus, <strong>we must do so in a safe way, which may require hybrid or online courses.</strong></p>
+<p>Experts tell us that three things need to be in place to ensure a safe campus environment: appropriate spaces for social distancing; the ability to test for COVID-19; and, contact tracing of those who have the virus. We are seeking information on these three criteria, from our experts here at PNW, as well as the greater Northwest Indiana area and the State of Indiana.</p>
+<p><a class="button__link" href="https://www.pnw.edu/preparation-for-safe-return-to-campus/">Learn More About Preparation for a Safe Return to Campus</a></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">Is campus open? </button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>As of July 6, Lawshe Hall and the Student Union Library Building on the Hammond Campus will be unlocked in designated areas and open from 8 a.m. to 5 p.m.</p>
+<p>Similarly, Schwarz Hall and the Library Student Faculty Building on the Westville Campus will be unlocked in designated areas and open from 8 a.m. to 5 p.m.</p>
+<p>If you’re coming to any of these buildings for official university business, we recommend contacting the relevant department to learn more about their operating procedures during Phase One of PNW&#8217;s <a href="https://www.pnw.edu/pnw-and-coronavirus-covid-19/safe-return-to-campus/">Safe Return to Campus</a>.</p>
+<p>Staff working in other campus buildings will use their I.D. for access at designated entrances. Students will not have access to other buildings at this time unless arranged for by staff or faculty.</p>
+<p>If assistance is needed, please contact Facilities Services at (219) 989-2285.</p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">Do I Have to Wear a Face Covering on Campus?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Until further guidance is received, a face covering should be used as described below. An account has been established for the purchase of COVID19 personal-protection equipment. Please contact your department business manager for details.</p>
+<h2>PNW Face Covering Protocol for All On-Site Campus Members</h2>
+<ol>
+<li>When you are in a building, hallway, classroom, laboratory, washroom, common area, you must wear a face covering.</li>
+<li>If you are faculty or staff member, and in your own office, you do not have to wear a face covering. When you leave your office and are in the hallway, your face covering must be on. When you are visiting another Purdue Northwest office, you must wear a face covering.</li>
+<li>If you are outdoors, you do not have to wear a face covering, but social distancing still applies.</li>
+<li>If you are at an outdoor event, with multiple participants, you must wear your face covering.</li>
+</ol>
+<p><a class="button__link" href="https://www.pnw.edu/pnw-mask-protocol-for-on-campus-community-members/">See the Full Face Covering Update</a></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">Are the PNW libraries open?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>The libraries and computer labs on both campuses will be closed for in-person use. Electronic resources and services are available 24/7 through our website. We also have “Chat with a Librarian” available to help with research questions during regular business hours.</p>
+<p><a class="button__link" href="https://www.pnw.edu/covid-19-pnw-library-resource-guide/">Explore Library Resources</a></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">How is campus transportation affected?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Service on the inter-campus shuttle between the Hammond and Westville campuses will be suspended as of March 12. Service will resume once instructional operations return to normal.</p>
+<p>Friday March 27, 2020 will be the last day for the South Shore to Hammond campus shuttle bus service, until further notice.</p>
+<p>In accordance with the Indiana State Department of Health’s social-distancing requirements, the PNW Hammond Shuttle will transport only six passengers at a time.</p>
+<p>Advanced reservations are required and will be accommodated on a first-come, first-served basis.</p>
+<p><a class="button__link" href="https://www.pnw.edu/getting-to-pnw/visiting/transportation/pnw-shuttles/hammond-community-shuttle/">See the Schedule and Reservation Process</a></p>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+      </div>
+                  <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <h3>Employment</h3>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+                <div class="module">
+        <div class="container">
+            <div class="accordion__group">
+                        <div class="accordion">
+        <button class="accordion__toggle">How does COVID-19 Affect PNW Employment, Leave and Pay?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>Employees across PNW are showing impressive flexibility and resilience in continuing to work and support the university and our students during this unprecedented time. The situation has raised a number of questions for employees and supervisors, including definitions of “essential” workers, telework, employee pay, FLMA and more.</p>
+<p>Answers to many of these questions can be found in Purdue West Lafayette’s official guidelines for employees during this period (March 25 to June 30).</p>
+<p><a class="button__link" href="https://coronavirus.purdue.edu/faculty-staff/#stay-home">Explore “Important Employment Information for Employees and Staff”</a></p>
+<p><a class="button__link" href="https://www.pnw.edu/memo-to-student-workers-and-student-worker-supervisors/">See PNW’s Memo to Student Workers and Student Worker Supervisors</a></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">Do faculty and staff have to come to work?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>The university remains operational, with academic instruction provided via online delivery and services provided remotely.</p>
+<p>Remote working on a temporary basis is available and encouraged. Any staff member who wishes to work remotely during the spring semester should discuss the options with their supervisor. Please also see <a href="https://www.pnw.edu/covid-update-campus-operations-and-telework/">the memo from Interim Provost Latif and Vice Chancellor Turner</a> for additional information on this subject.</p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">How do I work safely on campus?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p><span style="font-size: 13.5pt; color: black;">As a reminder, we ask all faculty and staff not to come to work if you are feeling ill, and to follow the CDC best practice recommendations for preventive actions such as frequent hand washing and avoiding touching your face.</span></p>
+<p><span style="font-size: 13.5pt; color: black;">You will also want to practice social distancing, keeping a distance of about 6 feet from others. </span></p>
+<p><span style="font-size: 13.5pt; color: black;">In addition, any faculty or staff member who has a fever or other symptoms of coronavirus, who has a family member with symptoms of the virus, or who has been exposed to the virus, must self-quarantine for 14 days before returning to any PNW facilities. You can see guidance for self-quarantining in the “How Do I Self-Quarantine” FAQ on this page.</span></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">How Should We Respond to COVID-19 Exposure, Symptoms or Positive Test Results?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <ol>
+<li>If an employee experiences any COVID-19 related symptoms, they should not report to work, immediately contact their medical provider and follow their directions.</li>
+<li>If an employee receives a positive COVID-19 test, they should not report to work and should immediately contact Human Resources, who will work with the employee and department on next steps.</li>
+<li>If an employee is exposed to an individual who has tested positive for COVID-19, they should immediately contact their supervisor, who will work with HR on next steps. If they experience any symptoms they, should not report to work, contact their medical provider and follow their directions.</li>
+<li>Whenever possible, the university will contact employees who have had direct contact with an individual who has a confirmed COVID-19 positive test.  The university will respect employee confidentiality to the greatest extent possible and will rely on state and local public health authorities to perform detailed contact tracing.</li>
+</ol>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">What travel restrictions are in place?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p><a href="https://coronavirus.purdue.edu/faculty-staff/#travel">We recommend visiting Purdue West Lafayette&#8217;s official COVID-19 travel guidelines.</a></p>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+      </div>
+                  <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <h3 id="Health">Health and COVID-19</h3>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+                <div class="module">
+        <div class="container">
+            <div class="accordion__group">
+                        <div class="accordion">
+        <button class="accordion__toggle">Is PNW tracing any individuals who may have been exposed to a student who has a confirmed diagnosis of COVID-19 and notifying them that they may have been exposed?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>The treating physician is responsible for notifying local or state public-health authorities of a COVID-19 diagnosis. The public health department performs a detailed interview of any COVID-19 positive patient and then contacts all people with whom the patient had direct, personal contact within the relevant time period.</p>
+<p>The university cannot provide any identifying information about or the health condition of a student, faculty or staff member in compliance with privacy laws including the Health Insurance Portability and Accountability Act (HIPAA) and the Family Educational Rights and Privacy Act (FERPA), and other applicable laws on health privacy.</p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">How Is PNW Addressing Airflow in Buildings?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>While CDC guidance does not indicate that COVID 19 can become a systemic pollutant in a building’s heating, ventilation and air-conditioning (HVAC) system, PNW is taking measures to enhance indoor air quality in facilities.</p>
+<p><a class="button__link" href="https://www.pnw.edu/hvac-strategies-related-to-covid-19/">See PNW&#8217;s Air Quality Measures</a></p>
+          </div>
+        </div>
+      </div>
+                              <div class="accordion">
+        <button class="accordion__toggle">I live with someone who is medically vulnerable to serious illness. What should I do to help protect them?</button>
+        <div class="accordion__content">
+          <div class="accordion__interior">
+            <p>The CDC recommends several practical things that you can do to protect vulnerable family members from your own work activities. These practices include the basics associated with practicing good social distance practices, wearing a face mask, frequent hand-washing, and avoiding public transportation.</p>
+<p><a class="button__link" href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/living-in-close-quarters.html" target="_blank" rel="noopener">See More CDC Guidelines</a></p>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+      </div>
+                  <div class="module module--text-panel">
+    <div class="container">
+              <div class="grid grid--66-33-split">
+          <div>
+            <p>Have questions about campus reopening? Contact <a href="mailto:safereturn@pnw.edu">safereturn@pnw.edu</a>.</p>
+          </div>
+          <div></div>
+        </div>
+          </div>
+  </div>
+
+      
+
+</main>
+    <footer class="footer" id="footer">
+  <div class="footer__top">
+    <a href="/" class="footer__logo">Purdue University Northwest</a>
+    <div class="footer__grid">
+      <div class="footer__grid__item">
+                  <div class="footer__address__group">
+            <div class="footer__address">
+                                            <p><strong>Hammond Campus</strong><br />
+2200 169th Street<br />
+Hammond, IN 46323<br />
+(219) 989-2400<br />
+(855) 608-4600</p>
+                                                          <a href="https://www.pnw.edu/getting-to-pnw/visiting/driving-directions-hammond-campus/"  class="footer__address__link">
+                  Hammond                </a>
+                          </div>
+            <div class="footer__address">
+                                            <p><strong>Westville Campus</strong><br />
+1401 S. U.S. 421<br />
+Westville, IN 46391<br />
+(219) 785-5200<br />
+(855) 608-4600</p>
+                                                          <a href="https://www.pnw.edu/getting-to-pnw/visiting/driving-directions-westville-campus/"  class="footer__address__link">
+                  Westville                </a>
+                          </div>
+          </div>
+              </div>
+              <div class="footer__grid__item">
+                      <ul class="footer__link__list">
+                                              <li><a href="https://www.pnw.edu/academic-and-administrative-offices/"  class="footer__link">
+                Academic and Administrative Offices</a></li>
+                                              <li><a href="https://www.pnw.edu/human-resources/"  class="footer__link">
+                Human Resources</a></li>
+                                              <li><a href="https://www.pnw.edu/faculty-staff-directory-placeholder-page/"  class="footer__link">
+                Faculty & Staff Directory</a></li>
+                                              <li><a href="https://www.pnw.edu/website-feedback-form/"  class="footer__link">
+                Website Feedback Form</a></li>
+                          </ul>
+                  </div>
+                    <div class="footer__grid__item">
+                                <div class="footer__headline">Give to PNW</div>
+                                          <a href="https://www.pnw.edu/giving/"  class="footer__link__special">
+              Your Support Means Everything            </a>
+                  </div>
+          </div>
+  </div>
+  <div class="footer__middle">
+          <ul class="footer__social">
+                          <li class="footer__social__item">
+            <a href="https://www.facebook.com/purduenorthwest/" class="footer__social__link">
+              <span class=" svgstore svgstore--icon-facebook">
+    <svg>
+      <title>facebook</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-facebook"></use>
+    </svg>
+  </span>            </a>
+          </li>
+                                  <li class="footer__social__item">
+            <a href="https://www.instagram.com/purduenorthwest/" class="footer__social__link">
+              <span class=" svgstore svgstore--icon-instagram">
+    <svg>
+      <title>instagram</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-instagram"></use>
+    </svg>
+  </span>            </a>
+          </li>
+                                  <li class="footer__social__item">
+            <a href="https://www.linkedin.com/edu/school?id=18359" class="footer__social__link">
+              <span class=" svgstore svgstore--icon-linkedin">
+    <svg>
+      <title>linkedin</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-linkedin"></use>
+    </svg>
+  </span>            </a>
+          </li>
+                                  <li class="footer__social__item">
+            <a href="https://twitter.com/PurdueNorthwest" class="footer__social__link">
+              <span class=" svgstore svgstore--icon-twitter">
+    <svg>
+      <title>twitter</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-twitter"></use>
+    </svg>
+  </span>            </a>
+          </li>
+                                  <li class="footer__social__item">
+            <a href="https://www.youtube.com/channel/UCUDyKoLShm-5peUuHQ0O9RA" class="footer__social__link">
+              <span class=" svgstore svgstore--icon-youtube">
+    <svg>
+      <title>youtube</title>
+      <use xlink:href="https://www.pnw.edu/wp-content/themes/pnw/dist/img/svgstore.svg#icon-youtube"></use>
+    </svg>
+  </span>            </a>
+          </li>
+              </ul>
+    
+                  <ul class="footer__middle__list">
+          <li>&copy; 2020 Purdue University Northwest</li>
+                                  <li><a href="https://www.pnw.edu/diversity-equity-inclusion/accessibility/"  class="footer__middle__link">
+              Accessibility            </a></li>
+                                  <li><a href="https://www.pnw.edu/financial-aid/undergraduate-financial-aid/resources/consumer-information/"  class="footer__middle__link">
+              Consumer Information            </a></li>
+                                  <li><a href="https://www.pnw.edu/legal-and-privacy/"  class="footer__middle__link">
+              Legal and Privacy            </a></li>
+                                  <li><a href="https://www.purdue.edu/policies/ethics/iiic1.html"  class="footer__middle__link">
+              Anti-Harassment Policy            </a></li>
+                                  <li><a href="https://www.pnw.edu/public-safety/"  class="footer__middle__link">
+              University Police            </a></li>
+                  </ul>
+            </div>
+      <div class="footer__bottom"><div class="footer__accessible"><p>For assistance with accessibility issues while using this page, please contact Marketing &#038; Communications at <a href="mailto:marketing@pnw.edu">marketing@pnw.edu</a>.</p>
+</div></div>
+  
+</footer>
+  </div>
+    		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type='text/javascript' src='https://www.pnw.edu/wp-content/themes/pnw/dist/js/main.js'></script>
+<script type='text/javascript' src='https://www.pnw.edu/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-ef68e02b7b848eac80b","applicationID":"454473153","transactionName":"M11TYkNQWRBQV0QNXwoXcFVFWFgNHkRRA1VJFUVTQ0VeAkNN","queueTime":0,"applicationTime":557,"atts":"HxpQFAtKSh4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
