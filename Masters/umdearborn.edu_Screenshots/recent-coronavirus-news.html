@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!-- Sorry no IE7 support! -->
+<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"613f8bbc03",applicationID:"222393352"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon-1_0.ico" />
+<meta http-equiv="ImageToolbar" content="false" />
+<meta name="description" content="A collection of recent coronavirus news from UM-Dearborn." />
+<meta name="referrer" content="unsafe-url" />
+<link rel="canonical" href="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news" />
+<link rel="shortlink" href="https://umdearborn.edu/node/282244" />
+<meta property="og:url" content="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news" />
+<meta property="og:title" content="Recent Coronavirus News" />
+<meta property="og:description" content="A collection of recent coronavirus news from UM-Dearborn." />
+<meta property="og:updated_time" content="2020-06-22T08:25:30-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@UM_Dearborn" />
+<meta name="twitter:url" content="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news" />
+<meta name="twitter:title" content="Recent Coronavirus News" />
+<meta name="twitter:image" content="https://umdearborn.edu/" />
+<meta name="google-site-verification" content="Lul35pOnYAT2vi40LHOGZ--3PqnuGFuz0v4sn2D3stY" />
+  <title>Recent Coronavirus News</title>
+  <link rel="stylesheet" href="/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_1v1p6c3aYqINkya-CnRDeLYnpIDB3CJKRfC0JfKYsxw.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_LZtQExS9a9zTd8_E39SZaht8gG6iajoIjYjinN2B7Mo.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_xYfZjeK0bauLjMx1QCPBzCHh0rdZXe3kLv6-3wigYps.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i" />
+<link rel="stylesheet" href="/sites/default/files/css/css_L3HIGPsOKcMjf3KGAnYggXX-hkl1nV1FQ4YmuxPvE8Q.css" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&amp;display=swap&amp;qd5re9" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;display=swap&amp;qd5re9" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.type='text/javascript';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTB2XX');</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")</script>
+<script src="/sites/default/files/js/js_uJR3Qfgc-bGacxkh36HU9Xm2Q98e_V5UWlFISwie5ro.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="/sites/default/files/js/js_XomvYCNrjJziL_QPwU-ZLKTfbyWU4Gn6OfWoETz-pEE.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="/sites/default/files/js/js_a8T84gWk8lpEIw7vxISF70zeDUAD6rEuDXtl98Pv7Kg.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="/sites/default/files/js/js_MkWmx2MZzzJRXtTTne5rZbLo3ckQPCKzuZ8eA9Jf0Q8.js"></script>
+<script>var $buoop = {c:2};</script>
+<script src="/sites/default/files/js/js_HnCByXTiwvCIAMWMPrhs3pj0h1-ImUaEtpR0nB9UPYI.js"></script>
+<script src="/sites/default/files/js/js_4JqfqD8H1E27wZYEiZimzcR6HQ21RpilVmOzCE6d1_Y.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"panda_theme","theme_token":"cXHpaMR4wSbCC9w-1FMZByDBPCiBdY5xdiw9xwAluBo","jquery_version":"1.10","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.js":1,"0":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"1":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.10.2\/jquery-ui.min.js":1,"2":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"3":1,"sites\/all\/modules\/contrib\/geofield_gmap\/geofield_gmap.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/custom\/panda\/panda.js":1,"sites\/all\/modules\/custom\/panda_news\/panda_news.js":1,"4":1,"sites\/all\/modules\/contrib\/async_js\/async_js.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"5":1,"sites\/all\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/themes\/zurb_foundation\/js\/vendor\/modernizr.js":1,"sites\/all\/themes\/panda_theme\/js\/foundation.min.js":1,"sites\/all\/themes\/panda_theme\/js\/libs.min.js":1,"sites\/all\/themes\/panda_theme\/js\/panda_theme.js":1,"sites\/all\/themes\/panda_theme\/js\/panda_hamburger.js":1,"sites\/all\/themes\/panda_theme\/js\/checkbox.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.datepicker.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/geofield_gmap\/geofield_gmap.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/custom\/panda\/panda.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/field_collection\/field_collection.theme.css":1,"https:\/\/fonts.googleapis.com\/css?family=Zilla+Slab:400,400i,700,700i":1,"sites\/all\/themes\/panda_theme\/css\/normalize.css":1,"sites\/all\/themes\/panda_theme\/css\/foundation.min.css":1,"sites\/all\/themes\/panda_theme\/css\/panda_theme.css":1,"\/\/fonts.googleapis.com\/css?family=Montserrat:400,400i,500,500i,700,700i\u0026display=swap":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,400i,700,700i\u0026display=swap":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleCSE":{"cx":"016977350206647639974:352ezmznld4","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":true},"better_exposed_filters":{"datepicker":true,"slider":false,"settings":[],"autosubmit":false,"datepicker_options":{"dateFormat":""},"views":{"news_filterable_list":{"displays":{"block":{"filters":{"field_news_display_date":{"required":false},"field_news_display_date_1":{"required":false},"search_api_views_fulltext":{"required":false},"field_news_interest_area":{"required":false},"field_news_organizational_unit":{"required":false}}}}}}},"urlIsAjaxTrusted":{"\/":true,"\/views\/ajax":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:0abcec34ac16f6ecbc5e815523139b09":{"view_name":"news_filterable_list","view_display_id":"block","view_args":"","view_path":"node\/282244","view_base_path":null,"view_dom_id":"0abcec34ac16f6ecbc5e815523139b09","pager_element":0}}},"field_group":{"div":"full","html-element":"full"},"async_js":{"javascript":{"\/\/browser-update.org\/update.min.js":{"data":"\/\/browser-update.org\/update.min.js","callbacks":[],"fade":[],"container":null,"dependencies":[],"dependents":[],"queued":false,"loaded":false}},"timeout":1000,"finalCallback":""}});</script>
+  <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+figure { margin: 0 !important; }
+.node-news-filterable-list .views-exposed-form .views-exposed-widget,
+.node-news-filterable-list .views-exposed-form .filter-labels,
+.node-news-filterable-list .views-exposed-form .form-item-search-api-views-fulltext { display: none; }
+</style></head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-282244 node-type-page page-offices site-root-283702" >
+  <div class="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTB2XX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+<div role="document" class="page">
+
+  
+  
+  <header class="has-grey-bar site-root-283702">
+    <div class="header-grey-bar">
+      <div class="row">
+        <div>
+          <nav id="search-nav" class="search medium-3 columns right">
+            <h2 class="show-for-sr">Site Search</h2>
+            <form action="/" method="post" id="panda-google-cse-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-container"><div class="form-item form-type-textfield form-item-query">
+ <input aria-label="Search" placeholder="enter search" type="text" id="edit-query" name="query" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<button id="edit-sa" name="op" value="Search" type="submit" class="form-submit">Search</button>
+</div><input type="hidden" name="form_build_id" value="form-88E5hvxHdoNvPMHgEb3NqpPQrTdyIoORwiQi4MCKLjw" />
+<input type="hidden" name="form_id" value="panda_google_cse_form" />
+</div></form>          </nav>
+
+          <div class="panda-site-root-top-bar"><ul class="panda-site-root-menu-one"></ul><ul class="panda-site-root-menu-two"><li><a href="https://leadersandbest.umich.edu/find/#!/give/basket/fund/329434">Support COVID-19 Impacted Students</a></li><li><a href="/">UM-Dearborn Home</a></li></ul></div>        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="siteroot-logo small-12 columns">
+        <div id="logo">
+          <a title="Home" rel="home" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response">
+            <picture><source srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1.png" media="(min-width: 768px)"><source srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1_0.png" media="(min-width: 0px)"><img  alt="UM-Dearborn" title="" class="logo" srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1.png"/></picture>          </a>
+        </div>
+
+              </div>
+    </div>
+
+    
+          <nav id="primary-nav" aria-label="primary-nav" class="hamburger-panel mainmenu-hamburger-panel
+        block-panda-main-menu" data-topbar  data-options="mobile_show_parent_link:true" style="background-color: #9b9a6d;">
+        <button class="hamburger hamburger--squeeze" aria-label="Main menu" aria-controls="mainmenu-hamburger-content" aria-expanded="false" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+          <span class="hamburger-label" id="primary-nav-label">Main Menu &amp; Search</span>
+        </button>
+        <div id="mainmenu-hamburger-content" class="content menu main-menu-content row small-12">
+            
+      
+    <ul><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/guiding-principles" class="">Guiding Principles</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/faculty-staff" class="">Faculty &amp; Staff</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/students" class="">Students</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/prospective-students" class="">Prospective Students</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/resources" class="">Resources</a></li></ul>  
+          </div>
+      </nav>
+        </header>
+
+  
+  
+  
+  <main id="main-content" class="main l-main">
+    
+    
+    
+          <div class="row">
+        <div class="columns">
+          
+                  </div>
+      </div>
+    
+    
+
+    
+      
+      
+    <article class="node-282244 node node-page view-mode-full" >
+
+<!-- Print title and breadcrumb above lead section only on events page. -->
+        
+  <div class="row content-wrapper">
+
+          <aside  class="panda-nav-wrapper large-3 medium-4 columns"><div class="panda-nav" id="panda-nav">
+        <h2 class="show-for-sr">Sidebar</h2>
+
+                  <nav class="main-nav" aria-label="main-nav">
+            <h3 class="show-for-sr">Main Navigation</h3>
+            <ul class="field-children field-wrapper"><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/guiding-principles">Guiding Principles</a></li><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/faculty-staff">Faculty & Staff</a></li><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/students">Students</a></li><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/prospective-students">Prospective Students</a></li><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/resources">Resources</a></li></ul>          </nav>
+        
+                  <nav class="related-nav" aria-label="related-nav">
+            <h3 class="releated-nav-head">Related Links</h3>
+            <div class="field-related-navigation-links field-wrapper"><ul ><li><a href="/offices/information-technology-services/um-dearborn-faculty-staff-technology-resources-working-remotely">UM-Dearborn Faculty / Staff Technology Resources for Working Remotely<i class=""></i></a></li><li><a href="/offices/information-technology-services/student-resources-working-and-studying-remotely">Student Resources for Working and Studying Remotely<i class=""></i></a></li><li><a href="/faculty-staff/hub-teaching-learning-resources/teaching-and-learning-resources/emergency-planning-continuity-instruction">Emergency Planning for Continuity of Instruction<i class=""></i></a></li></ul></div>          </nav>
+        
+                  <div class="hide-for-small-only">
+                      </div>
+              </div></aside>
+
+    
+    <div class="content-sections columns large-9 medium-8">
+                        <div class="row title-and-breadcrumb-wrapper">
+                          <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <h2 class="show-for-sr">You are here</h2><ul><li><a href="/home">Home</a></li><li><a href="/offices">Offices</a></li><li><a href="/offices/external-relations">External Relations</a></li><li><a href="/offices/external-relations/key-issues">Key Issues</a></li><li><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response">UM-Dearborn COVID-19 Response</a></li><li class="current"><a href="#">Recent Coronavirus News</a></li></ul>              </nav>
+            
+                        <h1 class="node-title">Recent Coronavirus News</h1>
+                      </div>
+              
+              <div class="show-for-small-only">
+                  </div>
+      
+      
+  <div class="node-282246 node node-news-filterable-list view-mode-default">
+
+
+                      <h2 class="node-title">Recent Coronavirus News</h2>
+              
+  
+  <div class="view view-news-filterable-list view-id-news_filterable_list view-display-id-block view-dom-id-0abcec34ac16f6ecbc5e815523139b09">
+        
+      <div class="view-filters">
+      <form action="/" method="get" id="views-exposed-form-news-filterable-list-block" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+		<div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+  <label for="edit-search-api-views-fulltext">Search for news by keyword or date range </label>
+ <input placeholder="enter search" aria-label="Search news articles" type="text" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" />
+</div>
+    <div
+      id="edit-field-news-display-date-wrapper"
+      class="views-exposed-widget views-widget-1">
+
+      <div class="views-widget">
+				<div class="form-item form-type-textfield form-item-field-news-display-date">
+ <input class="bef-datepicker form-text" placeholder="Start date" aria-label="Start date" type="text" id="edit-field-news-display-date" name="field_news_display_date" value="" size="30" maxlength="128" />
+</div>
+      </div>
+    </div>
+    <div
+      id="edit-field-news-display-date-1-wrapper"
+      class="views-exposed-widget views-widget-1">
+      <div class="views-widget">
+				<div class="form-item form-type-textfield form-item-field-news-display-date-1">
+ <input class="bef-datepicker form-text" placeholder="End date" aria-label="End date" type="text" id="edit-field-news-display-date-1" name="field_news_display_date_1" value="" size="30" maxlength="128" />
+</div>
+      </div>
+    </div>
+
+    <div class="filter-labels">
+						    </div>
+
+    <div class="search-submit-wrapper">
+      <div class="views-exposed-widget views-submit-button">
+				<button id="edit-submit-news-filterable-list" name="" value="Apply" type="submit" class="form-submit">Apply</button>
+      </div>
+			        <div class="views-exposed-widget views-reset-button">
+					<button id="edit-reset" name="op" value="Clear" type="submit" class="form-submit">Clear</button>
+        </div>
+			    </div>
+  </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/how-students-can-use-their-pandemic-time-jumpstart-career-or-internship-search"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/pandemic_prep_tips_final.jpg?itok=_NXPFrZQ&amp;timestamp=1594062938 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/pandemic_prep_tips_final.jpg?itok=nBv7ilCI&amp;timestamp=1594062938 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/pandemic_prep_tips_final.jpg?itok=e4HECJbE&amp;timestamp=1594062938 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/pandemic_prep_tips_final.jpg?itok=TC8ORIB1&amp;timestamp=1594062938 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/pandemic_prep_tips_final.jpg?itok=j8gy66cD&amp;timestamp=1594062938 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/pandemic_prep_tips_final.jpg?itok=InbZqcM3&amp;timestamp=1594062938 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/pandemic_prep_tips_final.jpg?itok=_NXPFrZQ&amp;timestamp=1594062938" alt="A collage graphic showing a laptop, books, and a hand writing &quot;My Plan&quot; on a piece of paper." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/pandemic_prep_tips_final.jpg?itok=_NXPFrZQ&amp;timestamp=1594062938 314w" alt="A collage graphic showing a laptop, books, and a hand writing &quot;My Plan&quot; on a piece of paper." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">7/6/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/how-students-can-use-their-pandemic-time-jumpstart-career-or-internship-search">How students can use their pandemic time to jumpstart a career or internship search</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">To be ready when the economy starts to rebound, students should make sure they’re doing the stuff on this list.</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/takeaways-june-25-virtual-town-hall"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/summer-campus.jpg?itok=Ma_SkxCJ&amp;timestamp=1593517880 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/summer-campus.jpg?itok=GRuD-115&amp;timestamp=1593517880 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/summer-campus.jpg?itok=jSUguKLg&amp;timestamp=1593517880 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/summer-campus.jpg?itok=hozN6rRW&amp;timestamp=1593517880 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/summer-campus.jpg?itok=cT6gpcUQ&amp;timestamp=1593517880 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/summer-campus.jpg?itok=vYjcGVz6&amp;timestamp=1593517880 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/summer-campus.jpg?itok=Ma_SkxCJ&amp;timestamp=1593517880" alt="A summer scene on campus outside the Natural Sciences Building." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/summer-campus.jpg?itok=Ma_SkxCJ&amp;timestamp=1593517880 314w" alt="A summer scene on campus outside the Natural Sciences Building." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/30/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/takeaways-june-25-virtual-town-hall">Takeaways from the June 25 virtual town hall</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">University leaders shared an update on the FY21 budget, the cancellation of fall athletics, working from home, and the hybrid model for fall classes.</span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/um-dearborn-lays-out-its-plan-hybrid-fall-semester"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8787.jpg?itok=Zry1_LKJ&amp;timestamp=1592860973 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/img_8787.jpg?itok=uqCw4zS0&amp;timestamp=1592860973 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/img_8787.jpg?itok=iEHQPLYl&amp;timestamp=1592860973 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/img_8787.jpg?itok=K1z68iQK&amp;timestamp=1592860973 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/img_8787.jpg?itok=pLsa6fRc&amp;timestamp=1592860973 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/img_8787.jpg?itok=PGRa6hMd&amp;timestamp=1592860973 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/img_8787.jpg?itok=Zry1_LKJ&amp;timestamp=1592860973" alt="The outside of the University Center building on the UM-Dearborn campus." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8787.jpg?itok=Zry1_LKJ&amp;timestamp=1592860973 314w" alt="The outside of the University Center building on the UM-Dearborn campus." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/22/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/um-dearborn-lays-out-its-plan-hybrid-fall-semester">UM-Dearborn lays out its plan for a ‘hybrid’ fall semester</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">To do its part in the fight against COVID-19 and protect its students, faculty and staff, the university is planning for a ‘remote-first’ approach to the fall. Here’s what that will look like.</span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/university-michigan-dearborn-announces-plans-public-health-informed-fall-2020-semester"><picture  title="Chancellor&#039;s Pond in the fall">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/chancellors_pond_l_1.jpg?itok=1T3KlKVl&amp;timestamp=1592833647 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/chancellors_pond_l_1.jpg?itok=V7zQ3k2V&amp;timestamp=1592833647 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/chancellors_pond_l_1.jpg?itok=H5LWG3Eb&amp;timestamp=1592833647 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/chancellors_pond_l_1.jpg?itok=bYlGWxHK&amp;timestamp=1592833647 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/chancellors_pond_l_1.jpg?itok=SwMUiaYa&amp;timestamp=1592833647 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/chancellors_pond_l_1.jpg?itok=X4nmdbEH&amp;timestamp=1592833647 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/chancellors_pond_l_1.jpg?itok=1T3KlKVl&amp;timestamp=1592833647" alt="Chancellor&#039;s Pond in the fall" title="Chancellor&#039;s Pond in the fall" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/chancellors_pond_l_1.jpg?itok=1T3KlKVl&amp;timestamp=1592833647 314w" alt="Chancellor&#039;s Pond in the fall" title="Chancellor&#039;s Pond in the fall" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/22/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/university-michigan-dearborn-announces-plans-public-health-informed-fall-2020-semester">University of Michigan-Dearborn announces plans for a public health informed fall 2020 semester </a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Plans include a hybrid semester with many classes in a remote format, a shift in the academic calendar and a continued focus on remote engagement opportunities for students.</span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/safety-protocols-place-um-dearborn-begins-phased-reopening-research-labs"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/sam_5815.jpg?itok=M-shNxVp&amp;timestamp=1591650722 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/sam_5815.jpg?itok=GCo4IaFb&amp;timestamp=1591650722 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/sam_5815.jpg?itok=NDaYEWpW&amp;timestamp=1591650722 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/sam_5815.jpg?itok=fREy4yGR&amp;timestamp=1591650722 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/sam_5815.jpg?itok=gTZ7Kday&amp;timestamp=1591650722 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/sam_5815.jpg?itok=hCk5d6Gz&amp;timestamp=1591650722 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/sam_5815.jpg?itok=M-shNxVp&amp;timestamp=1591650722" alt="An overhead view of a UM-Dearborn graduate student wearing a white lab coat, working in a bioengineering lab." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/sam_5815.jpg?itok=M-shNxVp&amp;timestamp=1591650722 314w" alt="An overhead view of a UM-Dearborn graduate student wearing a white lab coat, working in a bioengineering lab." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/8/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/safety-protocols-place-um-dearborn-begins-phased-reopening-research-labs">With safety protocols in place, UM-Dearborn begins a phased reopening of research labs</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Some researchers and their grad students are getting the green light to return to campus labs. </span>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/what-expect-fiscal-year-21-budget"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=g4zdqkdB&amp;timestamp=1591029340 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=U6B9bo7c&amp;timestamp=1591029340 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=LqCKoYSk&amp;timestamp=1591029340 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=4hkZTTLn&amp;timestamp=1591029340 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=8SlhM5rw&amp;timestamp=1591029340 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=pSVdDhwr&amp;timestamp=1591029340 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=g4zdqkdB&amp;timestamp=1591029340" alt="An evening view of Chancellor&#039;s Pond outside the Adminstration Building." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/dearbornevening13135_1l_0.jpg?itok=g4zdqkdB&amp;timestamp=1591029340 314w" alt="An evening view of Chancellor&#039;s Pond outside the Adminstration Building." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/1/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/what-expect-fiscal-year-21-budget">What to expect from the fiscal year ‘21 budget</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Here’s a quick breakdown of the knowns and unknowns that will shape  UM-Dearborn’s fall finances.</span>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/what-it-will-take-make-remote-k-12-school-year-work">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=8kmEEJk_&amp;timestamp=1591024564 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=grEtPFpx&amp;timestamp=1591024564 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=lwcNt-a1&amp;timestamp=1591024564 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=PGY_Hsyk&amp;timestamp=1591024564 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=AVRoAAjp&amp;timestamp=1591024564 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=Ll4VA-DA&amp;timestamp=1591024564 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=8kmEEJk_&amp;timestamp=1591024564" alt="A young girl doing remote school work alone at her kitchen table." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/49771221596_0ac9453ccf_o-2.jpg?itok=8kmEEJk_&amp;timestamp=1591024564 314w" alt="A young girl doing remote school work alone at her kitchen table." title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">6/1/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/what-it-will-take-make-remote-k-12-school-year-work">What it will take to make a remote K-12 school year work</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">A UM-Dearborn educational technology professor breaks down why remote education is a particularly tough challenge for public schools and how far our adaptation strategies can take us.</span>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/university-michigan-dearborn-modifies-policies-assist-current-and-prospective-students"><picture  title="The Social Sciences Building">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8848l_1.jpg?itok=ijfGFWSN&amp;timestamp=1589468057 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/img_8848l_1.jpg?itok=Z_Kh9rA6&amp;timestamp=1589468057 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/img_8848l_1.jpg?itok=culKxxja&amp;timestamp=1589468057 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/img_8848l_1.jpg?itok=Yc5pqFZ4&amp;timestamp=1589468057 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/img_8848l_1.jpg?itok=DuJ4v9uC&amp;timestamp=1589468057 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/img_8848l_1.jpg?itok=yL0s-QkG&amp;timestamp=1589468057 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/img_8848l_1.jpg?itok=ijfGFWSN&amp;timestamp=1589468057" alt="The Social Sciences Building" title="The Social Sciences Building" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8848l_1.jpg?itok=ijfGFWSN&amp;timestamp=1589468057 314w" alt="The Social Sciences Building" title="The Social Sciences Building" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">5/14/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/university-michigan-dearborn-modifies-policies-assist-current-and-prospective-students">University of Michigan-Dearborn modifies policies to assist current and prospective students during coronavirus pandemic </a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">To support students and help them prepare for success today and in the future, the university modified some admissions and registration process policies. </span>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/covid-19-and-older-adults-research-findings"><picture  title="Check in with older adults in your life during the pandemic.">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/socialdistancingolder.jpg?itok=WhE1CVed&amp;timestamp=1589292434 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/socialdistancingolder.jpg?itok=PcRJnY9e&amp;timestamp=1589292434 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/socialdistancingolder.jpg?itok=u3g3kE4e&amp;timestamp=1589292434 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/socialdistancingolder.jpg?itok=XpRejQxc&amp;timestamp=1589292434 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/socialdistancingolder.jpg?itok=IMx9uB_V&amp;timestamp=1589292434 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/socialdistancingolder.jpg?itok=6zm2pTrs&amp;timestamp=1589292434 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/socialdistancingolder.jpg?itok=WhE1CVed&amp;timestamp=1589292434" alt="Photo of a grandmother having a social distance conversation with her young granddaughter" title="Check in with older adults in your life during the pandemic." />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/socialdistancingolder.jpg?itok=WhE1CVed&amp;timestamp=1589292434 314w" alt="Photo of a grandmother having a social distance conversation with her young granddaughter" title="Check in with older adults in your life during the pandemic." />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">5/12/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/covid-19-and-older-adults-research-findings">COVID-19 and older adults research findings</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">From late March though now, Psychology Associate Professor Brenda Whitehead has heard from more than 1,500 older adults nationwide about their pandemic stressors and joys. Here are some preliminary results of her research.</span>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/study-finds-wearing-really-about-caring"><picture  title="College of Business Associate Professor Jun He created a survey to study people’s willingness to wear face masks as a precautionary measure against COVID-19. ">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_n95_caring_update.jpg?itok=qtejs2tM&amp;timestamp=1589236283 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/reporter_n95_caring_update.jpg?itok=r9ShTmpE&amp;timestamp=1589236283 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/reporter_n95_caring_update.jpg?itok=bpqm8XVX&amp;timestamp=1589236283 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/reporter_n95_caring_update.jpg?itok=Hhj4VTuo&amp;timestamp=1589236283 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/reporter_n95_caring_update.jpg?itok=uA2MJGtS&amp;timestamp=1589236283 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/reporter_n95_caring_update.jpg?itok=13oDEivt&amp;timestamp=1589236283 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_n95_caring_update.jpg?itok=qtejs2tM&amp;timestamp=1589236283" alt="Graphic about mask wearing" title="College of Business Associate Professor Jun He created a survey to study people’s willingness to wear face masks as a precautionary measure against COVID-19. " />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_n95_caring_update.jpg?itok=qtejs2tM&amp;timestamp=1589236283 314w" alt="Graphic about mask wearing" title="College of Business Associate Professor Jun He created a survey to study people’s willingness to wear face masks as a precautionary measure against COVID-19. " />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">5/11/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/study-finds-wearing-really-about-caring">Study finds that wearing really is about caring</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Wanting to better understand people’s behavior when it comes to precautionary measures against COVID-19 like mask wearing, a business professor started a research project  — and discovered that most people are choosing to  be socially responsible.</span>  </div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/five-ways-you-can-show-support-others-during-pandemic"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=oYtbA5R6&amp;timestamp=1588198934 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=4qmPP_XQ&amp;timestamp=1588198934 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=EH89sr4q&amp;timestamp=1588198934 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=s9u3IsBY&amp;timestamp=1588198934 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=fT9_q4zT&amp;timestamp=1588198934 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=BFhh7AUD&amp;timestamp=1588198934 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=oYtbA5R6&amp;timestamp=1588198934" alt="An illustration showing four raised hands of different colors, representing people stepping up to volunteer.." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/quickwaystohelp_reporter_b.jpg?itok=oYtbA5R6&amp;timestamp=1588198934 314w" alt="An illustration showing four raised hands of different colors, representing people stepping up to volunteer.." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/29/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/five-ways-you-can-show-support-others-during-pandemic">Five ways you can show support for others during the pandemic</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Social distancing makes helping others a little trickier. But there are still ways you can pitch in and show support for your community.</span>  </div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/um-dearborn-maker-lab-staff-are-making-3d-printed-ppe-home">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/maker-bot16x9-2.jpg?itok=HIp_20-f&amp;timestamp=1588176722 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/maker-bot16x9-2.jpg?itok=aYre0xfS&amp;timestamp=1588176722 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/maker-bot16x9-2.jpg?itok=ENn7vDiH&amp;timestamp=1588176722 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/maker-bot16x9-2.jpg?itok=YQFBHim5&amp;timestamp=1588176722 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/maker-bot16x9-2.jpg?itok=IxGmRpb1&amp;timestamp=1588176722 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/maker-bot16x9-2.jpg?itok=x3T7vYq0&amp;timestamp=1588176722 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/maker-bot16x9-2.jpg?itok=HIp_20-f&amp;timestamp=1588176722" alt="Green plastic PPE headbands fresh off the presses of a 3D printer" title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/maker-bot16x9-2.jpg?itok=HIp_20-f&amp;timestamp=1588176722 314w" alt="Green plastic PPE headbands fresh off the presses of a 3D printer" title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/29/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/um-dearborn-maker-lab-staff-are-making-3d-printed-ppe-home">The UM-Dearborn ‘Maker Lab’ staff are making 3D-printed PPE from home</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">When the pandemic forced all but essential personnel off campus, the MSEL staff joined the DIY effort to help frontline health care workers.</span>  </div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/u-m-leadership-shares-plan-address-covid-19-related-financial-challenges"><picture  title="UM-Dearborn seal on Social Sciences Building">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=tBBqfguw&amp;timestamp=1589469387 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=-HFEn1Uq&amp;timestamp=1589469387 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=VZF9fkg5&amp;timestamp=1589469387 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=ueDLko6N&amp;timestamp=1589469387 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=Z4ScDoN1&amp;timestamp=1589469387 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=h34Ec-61&amp;timestamp=1589469387 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=tBBqfguw&amp;timestamp=1589469387" alt="UM-Dearborn seal on Social Sciences Building" title="UM-Dearborn seal on Social Sciences Building" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/13316979_10153637497186526_8329099331123758199_o.jpg?itok=tBBqfguw&amp;timestamp=1589469387 314w" alt="UM-Dearborn seal on Social Sciences Building" title="UM-Dearborn seal on Social Sciences Building" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/21/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/u-m-leadership-shares-plan-address-covid-19-related-financial-challenges">U-M leadership shares plan to address COVID-19-related financial challenges </a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Plans for preserving financial resources include a five-to-10-percent pay reduction for leadership, hiring freezes and no employee base salary increases.</span>  </div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/faculty-are-prioritizing-flexibility-student-mental-health-after-switch-remote-classes"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=VVEAa5zX&amp;timestamp=1587412780 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=zOFoG7Nd&amp;timestamp=1587412780 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=lNo61FEs&amp;timestamp=1587412780 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=RP-uzKAa&amp;timestamp=1587412780 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=uZxYLAVT&amp;timestamp=1587412780 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=qh-vh8jb&amp;timestamp=1587412780 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=VVEAa5zX&amp;timestamp=1587412780" alt="A graphic representing a switch from in-person to remote classes, showing a desk on one side, a laptop on the other, with an arrow connecting the two." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_transitionstory_gradient_final.jpg?itok=VVEAa5zX&amp;timestamp=1587412780 314w" alt="A graphic representing a switch from in-person to remote classes, showing a desk on one side, a laptop on the other, with an arrow connecting the two." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/20/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/faculty-are-prioritizing-flexibility-student-mental-health-after-switch-remote-classes">Faculty are prioritizing flexibility, student mental health after switch to remote classes</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Three UM-Dearborn faculty talk about what being a “good” professor means during a global pandemic.</span>  </div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/ive-had-four-amazing-years-coronavirus-cant-take-me"><picture  title="College of Business senior Rosa Gonzalez">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/rosa_gonzalez.jpg?itok=Zopq-ep5&amp;timestamp=1586817952 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/rosa_gonzalez.jpg?itok=LRgNpRcQ&amp;timestamp=1586817952 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/rosa_gonzalez.jpg?itok=-jbYXPAr&amp;timestamp=1586817952 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/rosa_gonzalez.jpg?itok=oi0ntC7y&amp;timestamp=1586817952 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/rosa_gonzalez.jpg?itok=1pAWPFaL&amp;timestamp=1586817952 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/rosa_gonzalez.jpg?itok=T0c4JLss&amp;timestamp=1586817952 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/rosa_gonzalez.jpg?itok=Zopq-ep5&amp;timestamp=1586817952" alt="College of Business senior Rosa Gonzalez" title="College of Business senior Rosa Gonzalez" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/rosa_gonzalez.jpg?itok=Zopq-ep5&amp;timestamp=1586817952 314w" alt="College of Business senior Rosa Gonzalez" title="College of Business senior Rosa Gonzalez" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/13/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/ive-had-four-amazing-years-coronavirus-cant-take-me">&#039;I&#039;ve had four amazing years. Coronavirus can&#039;t take that from me.&#039;</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Senior Rosa Gonzalez is a first-generation student whose parents moved to the U.S. from Mexico when she was seven to give her access to a quality education. Even with several life challenges, her diploma determination never wavered.</span>  </div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/student-maegan-cedro-living-nearly-every-major-storyline-pandemic">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/maegan-with-mom-2.jpg?itok=293Ps4O4&amp;timestamp=1586781266 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/maegan-with-mom-2.jpg?itok=YOT0rGxU&amp;timestamp=1586781266 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/maegan-with-mom-2.jpg?itok=b_9XJ_Ab&amp;timestamp=1586781266 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/maegan-with-mom-2.jpg?itok=ZVX-4sli&amp;timestamp=1586781266 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/maegan-with-mom-2.jpg?itok=hcw6DT84&amp;timestamp=1586781266 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/maegan-with-mom-2.jpg?itok=4HcpR1kU&amp;timestamp=1586781266 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/maegan-with-mom-2.jpg?itok=293Ps4O4&amp;timestamp=1586781266" alt="UM-Dearborn engineering student Maegan Cedro taking a selfie with her mom, a COVID unit nurse, at home." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/maegan-with-mom-2.jpg?itok=293Ps4O4&amp;timestamp=1586781266 314w" alt="UM-Dearborn engineering student Maegan Cedro taking a selfie with her mom, a COVID unit nurse, at home." title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/13/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/student-maegan-cedro-living-nearly-every-major-storyline-pandemic">Student Maegan Cedro is living nearly every major storyline of the pandemic</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">A UM-Dearborn student opens up about the switch to online classes, working from home, getting laid off, living with a frontline healthcare worker, and coronavirus-fueled discrimination against Asian Americans.</span>  </div>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/how-covid-19-could-affect-us-presidential-election"><picture  title="COVID-19 and the 2020 U.S. Presidential election">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/covid_election_a.jpg?itok=Fa4VbLwz&amp;timestamp=1586376358 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/covid_election_a.jpg?itok=2Axxku_0&amp;timestamp=1586376358 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/covid_election_a.jpg?itok=gItW8Ihv&amp;timestamp=1586376358 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/covid_election_a.jpg?itok=4x5vwAkq&amp;timestamp=1586376358 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/covid_election_a.jpg?itok=onZsbXlT&amp;timestamp=1586376358 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/covid_election_a.jpg?itok=TmDooTd9&amp;timestamp=1586376358 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/covid_election_a.jpg?itok=Fa4VbLwz&amp;timestamp=1586376358" alt="COVID-19 and the presidential election. n95 face masks with an &quot;I Voted&quot; sticker" title="COVID-19 and the 2020 U.S. Presidential election" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/covid_election_a.jpg?itok=Fa4VbLwz&amp;timestamp=1586376358 314w" alt="COVID-19 and the presidential election. n95 face masks with an &quot;I Voted&quot; sticker" title="COVID-19 and the 2020 U.S. Presidential election" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/8/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/how-covid-19-could-affect-us-presidential-election">How COVID-19 could affect the U.S. Presidential Election</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Political Science Professor Mitchel Sollenberger, who’s a political source for USA Today, C-SPAN, The Hill, Washington Post and others, talks about how the COVID-19 crisis may impact what happens on November 3.</span>  </div>  </div>
+  <div class="views-row views-row-18 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/stock-market-may-be-volatile-um-dearborn-finance-expert-says-dont-panic-heres-why"><picture  title="Senior Vivian Dinh presents a report in her College of Business investment fund management class.">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/stockphoto2_1.jpg?itok=4KB3GfkT&amp;timestamp=1586187779 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/stockphoto2_1.jpg?itok=Qrq7Mh9d&amp;timestamp=1586187779 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/stockphoto2_1.jpg?itok=5v5c92UV&amp;timestamp=1586187779 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/stockphoto2_1.jpg?itok=CiB6Bdt1&amp;timestamp=1586187779 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/stockphoto2_1.jpg?itok=nn5loFAa&amp;timestamp=1586187779 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/stockphoto2_1.jpg?itok=1m-oJmDj&amp;timestamp=1586187779 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/stockphoto2_1.jpg?itok=4KB3GfkT&amp;timestamp=1586187779" alt="Senior Vivian Dinh presents a report in her College of Business investment fund management class." title="Senior Vivian Dinh presents a report in her College of Business investment fund management class." />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/stockphoto2_1.jpg?itok=4KB3GfkT&amp;timestamp=1586187779 314w" alt="Senior Vivian Dinh presents a report in her College of Business investment fund management class." title="Senior Vivian Dinh presents a report in her College of Business investment fund management class." />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/6/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/stock-market-may-be-volatile-um-dearborn-finance-expert-says-dont-panic-heres-why">The stock market may be volatile, but a UM-Dearborn finance expert says don&#039;t panic. Here&#039;s why.</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">&quot;Professor Nick Vlisides keeps providing advice to us about how to view the stock market and how to move forward ourselves. When I look back, that’s what I’ll remember,” says Finance major Vivian Dihn.</span>  </div>  </div>
+  <div class="views-row views-row-19 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/teaching-kindergarten-home">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8035-3.jpg?itok=Nz65m_6a&amp;timestamp=1586176430 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/img_8035-3.jpg?itok=cpbyuqIs&amp;timestamp=1586176430 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/img_8035-3.jpg?itok=QXeHpFkM&amp;timestamp=1586176430 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/img_8035-3.jpg?itok=yppwXW4j&amp;timestamp=1586176430 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/img_8035-3.jpg?itok=J0KQ1fI0&amp;timestamp=1586176430 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/img_8035-3.jpg?itok=RVTxEgIo&amp;timestamp=1586176430 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/img_8035-3.jpg?itok=Nz65m_6a&amp;timestamp=1586176430" alt="A laptop screen displaying  kindergartners logged in for a virtual class via Zoom" title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/img_8035-3.jpg?itok=Nz65m_6a&amp;timestamp=1586176430 314w" alt="A laptop screen displaying  kindergartners logged in for a virtual class via Zoom" title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/6/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/teaching-kindergarten-home">Teaching kindergarten from home</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">A UM-Dearborn student teacher explains why letting go of expectations is what the kids need most right now. </span>  </div>  </div>
+  <div class="views-row views-row-20 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/how-creating-new-routine-can-save-you-groundhog-day-social-isolation">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/covid_newroutine_b_copy.jpg?itok=o66Y6ZPa&amp;timestamp=1585744714 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/covid_newroutine_b_copy.jpg?itok=4OPhht1F&amp;timestamp=1585744714 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/covid_newroutine_b_copy.jpg?itok=yJyoA52d&amp;timestamp=1585744714 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/covid_newroutine_b_copy.jpg?itok=LALNukhN&amp;timestamp=1585744714 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/covid_newroutine_b_copy.jpg?itok=a7A0v9bi&amp;timestamp=1585744714 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/covid_newroutine_b_copy.jpg?itok=Hd2Xfp01&amp;timestamp=1585744714 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/covid_newroutine_b_copy.jpg?itok=o66Y6ZPa&amp;timestamp=1585744714" alt="A montage of images symbolizing healthy behaviors, including cooking, exercising and meditation." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/covid_newroutine_b_copy.jpg?itok=o66Y6ZPa&amp;timestamp=1585744714 314w" alt="A montage of images symbolizing healthy behaviors, including cooking, exercising and meditation." title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">4/1/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/how-creating-new-routine-can-save-you-groundhog-day-social-isolation">How creating a new routine can save you from the ‘Groundhog Day’ of social isolation</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">UM-Dearborn’s counseling director talks about how to nurture your mental health during the pandemic — including why you should still shower and comb your hair even if no one’s watching.</span>  </div>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/spreading-joy-older-adults-time-social-distance">
+  <picture  title="Elizabeth MacNicol of Taylor, Mich., age 90, says hello to her great-grandchildren through the glass front door.">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/olderadultssocialhealth.jpeg?itok=ip5VA1ey&amp;timestamp=1585589407 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/olderadultssocialhealth.jpeg?itok=mxnPp7QA&amp;timestamp=1585589407 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/olderadultssocialhealth.jpeg?itok=ID81ebNk&amp;timestamp=1585589407 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/olderadultssocialhealth.jpeg?itok=MFOktyUD&amp;timestamp=1585589407 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/olderadultssocialhealth.jpeg?itok=-ONzH6Rt&amp;timestamp=1585589407 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/olderadultssocialhealth.jpeg?itok=9DtOrrch&amp;timestamp=1585589407 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/olderadultssocialhealth.jpeg?itok=ip5VA1ey&amp;timestamp=1585589407" alt="A great-grandmother is greeted by young family members at a socially safe distance during the Coronavirus pandemic." title="Elizabeth MacNicol of Taylor, Mich., age 90, says hello to her great-grandchildren through the glass front door." />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/olderadultssocialhealth.jpeg?itok=ip5VA1ey&amp;timestamp=1585589407 314w" alt="A great-grandmother is greeted by young family members at a socially safe distance during the Coronavirus pandemic." title="Elizabeth MacNicol of Taylor, Mich., age 90, says hello to her great-grandchildren through the glass front door." />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">3/30/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/spreading-joy-older-adults-time-social-distance">Spreading joy to older adults in a time of social distance</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">Psychology Associate Professor Brenda Whitehead, a gerontologist whose research focuses on stress in later life, developed  a survey for people ages 60+ to hear about their stressors and joys during this historic pandemic. </span>  </div>  </div>
+  <div class="views-row views-row-22 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/student-centered-events-are-getting-reboot-online">
+  <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/sam_6300-2.jpg?itok=POebqj96&amp;timestamp=1585145653 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/sam_6300-2.jpg?itok=ddtJ_cOK&amp;timestamp=1585145653 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/sam_6300-2.jpg?itok=4l_DtrKH&amp;timestamp=1585145653 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/sam_6300-2.jpg?itok=v0Ui8Fj0&amp;timestamp=1585145653 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/sam_6300-2.jpg?itok=1S8M9pdA&amp;timestamp=1585145653 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/sam_6300-2.jpg?itok=2Ax14_h7&amp;timestamp=1585145653 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/sam_6300-2.jpg?itok=POebqj96&amp;timestamp=1585145653" alt="A Facebook Live event featuring UM-Dearborn&#039;s Saulo Ortiz in his home kitchen displays on a laptop." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/sam_6300-2.jpg?itok=POebqj96&amp;timestamp=1585145653 314w" alt="A Facebook Live event featuring UM-Dearborn&#039;s Saulo Ortiz in his home kitchen displays on a laptop." title="" />
+<!-- <![endif]-->
+</picture>  
+
+</a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">3/25/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/student-centered-events-are-getting-reboot-online">Student-centered events are getting a reboot online</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">The Division of Student Affairs is adapting quickly to keep UM-Dearborn’s student community feeling connected.</span>  </div>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/small-business-how-does-show-go"><picture  title="Paula and Tim Guthat, &#039;93 B.A., had to shut the doors of their business, Cinema Detroit, during the state&#039;s emergency orders.">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/showmustgoon_b_1.jpg?itok=ZCWeT9IP&amp;timestamp=1585060000 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/showmustgoon_b_1.jpg?itok=u6vLYwaP&amp;timestamp=1585060000 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/showmustgoon_b_1.jpg?itok=yRmQsItN&amp;timestamp=1585060000 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/showmustgoon_b_1.jpg?itok=aQAicUwO&amp;timestamp=1585060000 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/showmustgoon_b_1.jpg?itok=75PdomY-&amp;timestamp=1585060000 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/showmustgoon_b_1.jpg?itok=RyDHl2z_&amp;timestamp=1585060000 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/showmustgoon_b_1.jpg?itok=ZCWeT9IP&amp;timestamp=1585060000" alt="Paula and Tim Guthat, &#039;93 B.A., had to shut the doors of their business, Cinema Detroit, during the state&#039;s emergency orders." title="Paula and Tim Guthat, &#039;93 B.A., had to shut the doors of their business, Cinema Detroit, during the state&#039;s emergency orders." />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/showmustgoon_b_1.jpg?itok=ZCWeT9IP&amp;timestamp=1585060000 314w" alt="Paula and Tim Guthat, &#039;93 B.A., had to shut the doors of their business, Cinema Detroit, during the state&#039;s emergency orders." title="Paula and Tim Guthat, &#039;93 B.A., had to shut the doors of their business, Cinema Detroit, during the state&#039;s emergency orders." />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">3/23/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/small-business-how-does-show-go">For small business, how does the show go on?</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">A College of Business entrepreneurship educator and Detroit small business owners talk about keeping businesses visible and viable when COVID-19 closes the doors.</span>  </div>  </div>
+  <div class="views-row views-row-24 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/articles/how-think-about-coronavirus-public-health-expert"><picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=7OSkC5Su&amp;timestamp=1584563917 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=bR_KI0Yz&amp;timestamp=1584563917 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=LTGKzDud&amp;timestamp=1584563917 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=3wCqE0WK&amp;timestamp=1584563917 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=xRij-SxZ&amp;timestamp=1584563917 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=kpl0zW7Q&amp;timestamp=1584563917 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=7OSkC5Su&amp;timestamp=1584563917" alt="A coronavirus-themed graphic featuring a photo of Patricia Wren, chair of UM-Dearborn&#039;s Department of Health and Human Services." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/reporter_qa_coronavirus_a_final.jpg?itok=7OSkC5Su&amp;timestamp=1584563917 314w" alt="A coronavirus-themed graphic featuring a photo of Patricia Wren, chair of UM-Dearborn&#039;s Department of Health and Human Services." title="" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">3/18/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/articles/how-think-about-coronavirus-public-health-expert">How to think about coronavirus like a public health expert</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">A UM-Dearborn public health leader weighs in on why the current disruptions to our daily lives are necessary — and why we should probably prepare for the long haul.</span>  </div>  </div>
+  <div class="views-row views-row-25 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-field-image">        <span class="field-content"><a href="/news/all-news/articles/covid-19-update-recommendations-illness-prevention"><picture  title="COVID-19">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/news_carousel/public/group-library/341/cv.jpg?itok=DkWUxZf_&amp;timestamp=1583842680 1x, /sites/default/files/styles/news_carousel_2x/public/group-library/341/cv.jpg?itok=-7-TGsRj&amp;timestamp=1583842680 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/news_carousel_desktop/public/group-library/341/cv.jpg?itok=CIgP7-_S&amp;timestamp=1583842680 1x, /sites/default/files/styles/news_carousel_desktop_2x/public/group-library/341/cv.jpg?itok=KY7QmnLw&amp;timestamp=1583842680 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/news_carousel_mobile/public/group-library/341/cv.jpg?itok=BYyvwSLy&amp;timestamp=1583842680 1x, /sites/default/files/styles/news_carousel_mobile_2x/public/group-library/341/cv.jpg?itok=e69s0o5s&amp;timestamp=1583842680 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/news_carousel/public/group-library/341/cv.jpg?itok=DkWUxZf_&amp;timestamp=1583842680" alt="COVID-19" title="COVID-19" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/news_carousel/public/group-library/341/cv.jpg?itok=DkWUxZf_&amp;timestamp=1583842680 314w" alt="COVID-19" title="COVID-19" />
+<!-- <![endif]-->
+</picture></a></span>  </div>  
+  <div class="views-field views-field-field-news-display-date">        <span class="field-content"><span class="date-display-single">3/10/2020</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/news/all-news/articles/covid-19-update-recommendations-illness-prevention">COVID-19 Update: Recommendations for illness prevention</a></span>  </div>  
+  <div class="views-field views-field-field-copy-title-1">        <span class="field-content">To promote a safe and healthy environment for our community, UM-Dearborn leadership is working closely with U-M health professionals and executive officers.</span>  </div>  </div>
+    </div>
+  
+      <h2 class="element-invisible">Pages</h2><div class="pagination-centered"><div class="item-list"><ul class="pagination pager"><li class="current first"><a href="">1</a></li>
+<li><a title="Go to page 2" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news?field_news_interest_area%5B0%5D=13511&amp;page=1">2</a></li>
+<li class="arrow"><a title="Go to next page" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news?field_news_interest_area%5B0%5D=13511&amp;page=1">next ›</a></li>
+<li class="arrow last"><a title="Go to last page" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news?field_news_interest_area%5B0%5D=13511&amp;page=1">last »</a></li>
+</ul></div></div>  
+  
+  
+  
+  
+</div>
+        
+    
+</div>
+    </div>
+  </div>
+
+      <div class="location-contact-wrapper"><div class="row">
+        <div class="location-contact-header">
+                      
+  <h2 class="field-location-contact-heading field-wrapper">
+    Office of External Relations  </h2>
+                  </div>
+
+      <div class="location-contact-flex">
+        <div class="location-info">
+                        <div class="field-collection-container clearfix">
+  <div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="location-address icon icon-pin">
+  <div class="field-room-number field-wrapper">
+    1161  </div>
+
+  <div class="field-building-space field-wrapper">
+    Administration Building (AB)  </div>
+</div></div></div>                    
+  <div class="contact-info"><div class="contact-numbers icon icon-phone"><div class="field-telephone inline field-wrapper"><div  class="field-label">Phone:&nbsp;</div><a href="tel:313-593-5140">313-593-5140</a></div><div class="field-fax inline field-wrapper"><div  class="field-label">Fax:&nbsp;</div>313-593-5403</div></div></div><div class="social-wrapper"><ul class="social-links">
+  <li><a href="https://www.facebook.com/UMDearborn"><span class="show-for-sr">Facebook page</span><i class="fa fa-facebook"></i></a></li>
+  <li><a href="http://twitter.com/#!/UM_Dearborn"><span class="show-for-sr">Twitter profile</span><i class="fa fa-twitter"></i></a></li>
+  <li><a href="http://instagram.com/umdearborn/"><span class="show-for-sr">Instagram profile</span><i class="fa fa-instagram"></i></a></li>
+  <li><a href="http://www.youtube.com/user/UMDearborn"><span class="show-for-sr">YouTube channel</span><i class="fa fa-youtube"></i></a></li></ul></div>        </div>
+      </div>
+    </div></div>
+  
+  
+</article>
+  
+  
+    
+    
+      </main>
+
+  
+  
+      <footer id="footer" class="l-footer-columns">
+      <div class="row">
+        <div class="top-row">
+        <div class="logo-address-wrap footer-first columns">
+          <a class="logo" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response">
+            <picture><img  src="/sites/default/files/footer-logo/dearborn-logo-footer_2.png" alt="UM-Dearborn" title="" class="logo"/></picture>          </a>
+
+          <div class="information">
+            <ul class="campuses">
+              <li><a href="https://umdearborn.edu/">Dearborn</a> |</li>
+              <li><a href="http://umflint.edu/">Flint</a> |</li>
+              <li><a href="http://umich.edu/">Ann Arbor</a></li>
+            </ul>
+
+            <ul class="contact">
+              <li class="address"><i class="fa fa-map-marker"></i>4901 Evergreen Road<br />Dearborn, MI 48128, US</li>
+                                            <li class="email"><a href="/"><i class="fa fa-envelope"></i>Contact us</a></li>
+                          </ul>
+
+            <ul class="social-links">
+                                                <li>
+                    <a href="/">Facebook</a>                  </li>
+                                  <li>
+                    <a href="/">Twitter</a>                  </li>
+                                  <li>
+                    <a href="/">Instagram</a>                  </li>
+                                  <li>
+                    <a href="/">LinkedIn</a>                  </li>
+                                  <li>
+                    <a href="/">YouTube</a>                  </li>
+                                         </ul>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="row footer-links">
+                          <div class="footer-second small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-1">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="https://umdearborn.edu/about/visit-campus/maps-directions" title="">Maps &amp; Directions</a></li>
+<li class="leaf"><a href="http://umdearborn.edu/emergency" title="">Emergency Information</a></li>
+<li class="last leaf"><a href="http://umjobs.org" title="">Employment</a></li>
+</ul>  
+  </div>              </div>
+                                      <div class="footer-third small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-2">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="https://umdearborn.edu/canvas" title="">Canvas</a></li>
+<li class="leaf"><a href="https://selfservice.umd.umich.edu/BANP/twbkwbis.P_GenMenu?name=homepage" title="">UM-Dearborn Connect</a></li>
+<li class="last leaf"><a href="http://umd.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=25557&amp;catalogId=10001&amp;langId=-1" title="">Bookstore</a></li>
+</ul>  
+  </div>              </div>
+                                      <div class="footer-fourth small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-3">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="http://email.umich.edu" title="">U-M Google Mail</a></li>
+<li class="leaf"><a href="https://wolverineaccess.umich.edu" title="">Wolverine Access</a></li>
+<li class="last leaf"><a href="http://library.umd.umich.edu" title="">Library</a></li>
+</ul>  
+  </div>              </div>
+                      </div>
+        </div>
+        </div>
+
+        <div class="medium-12 columns bottom-row">
+          <div class="copyright medium-6 columns">
+            <small>
+              &copy; 2020 <a href="http://regents.umich.edu/">The Regents of the University of Michigan</a> |             </small>
+            <small><a href="/privacy-policy">Privacy Policy</a></small>
+             |
+                          <a href="/login?destination=node/282244" title="Login to the University of Michigan Dearborn Website">Login</a>                      </div>
+          <div class="budget-and-safety-informaton medium-6 columns">
+            <div class="medium-6 columns">
+              <a href="/budget-performance">
+                <picture><img class="budget-logo" src="/sites/all/themes/panda_theme/images/budget-transparency-logo.png" alt="Budget and Performance Transparency Reporting" /></picture>              </a>
+            </div>
+            <div class="medium-6 columns">
+              <a href="/offices/enrollment-management-student-life/incident-and-complaint-reporting/campus-safety-information-and-resources">
+                <picture><img class="safety-logo" src="/sites/all/themes/panda_theme/images/safety-badge.png" alt="Campus Safety Information Resources Badge" /></picture>              </a>
+            </div>
+          </div>
+      </div>
+
+              </div>
+    </footer>
+  
+  
+  <a class="back-to-top position-fixed placed-bottom-right bg-maize fg-blue" href="#">
+    <i class="fa fas fa-chevron-up"></i>
+    <span class="show-for-sr">Back to top of page</span>
+  </a>
+</div>
+  <script src="/sites/default/files/js/js_j_eiqOT8aQWASBJqy6WltR1LnOlWxv69uk8JaEQ-ow8.js"></script>
+    <script>
+    (function ($, Drupal, window, document, undefined) {
+      $(document).foundation();
+    })(jQuery, Drupal, this, this.document);
+  </script>
+      <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1559529854336914');
+      fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1559529854336914&ev=PageView&noscript=1"
+      /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"613f8bbc03","applicationID":"222393352","transactionName":"Z1IANxBWXBVWU0INCV4YNxELGB0PWVRTHEhAXxI=","queueTime":0,"applicationTime":33,"atts":"SxUDQVhMTxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

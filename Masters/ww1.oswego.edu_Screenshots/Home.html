@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b647467edf",applicationID:"56782803"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="shortlink" href="https://ww1.oswego.edu/oswego-forward/" />
+<link rel="canonical" href="https://ww1.oswego.edu/oswego-forward/" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>function euCookieComplianceLoadScripts(category) {var scriptTag = document.createElement("script");scriptTag.src = "\/oswego-forward\/oswego-forward\/sites\/default\/files\/google_tag\/suny_oswego_d8\/google_tag.script.js";document.body.appendChild(scriptTag);}</script>
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #235937} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="shortcut icon" href="/oswego-forward/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://ww1.oswego.edu/oswego-forward/oswego-forward-0" />
+
+    <title>Oswego Forward | SUNY Oswego</title>
+    <link rel="stylesheet" media="all" href="/oswego-forward/sites/oswego-forward/files/css/css_WwHdIqsjNNAVpR82irI6IQCjuK-pkVa9lhkgEyheW7g.css" />
+<link rel="stylesheet" media="all" href="/oswego-forward/sites/oswego-forward/files/css/css_BqlT-w5IF_2E7Btrkh0x3UNKNs_mdtujoSWuElzyPbg.css" />
+<link rel="stylesheet" media="all" href="//cloud.typography.com/6053872/7911992/css/fonts.css" />
+<link rel="stylesheet" media="all" href="/oswego-forward/sites/oswego-forward/files/css/css_yBM4UD-q4B4tMkROo_fAcM41RSjQgucaFmolld4GVyo.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/oswego-forward/sites/oswego-forward/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/oswego-forward/sites/oswego-forward/files/js/js_u9OepQzrrEOHEGWAPerUE6rwsqzO0JtU-p2KahRYgmU.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+<script src="/oswego-forward/sites/oswego-forward/files/js/js_eS0cW3WcvhhuoHmqaC8pwncUy7oe_ZhrlEzBjrGTbGU.js"></script>
+
+  </head>
+  <body>
+    <div id="alert-container"></div>
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+<div  class="layout-container">
+        
+
+<div id="main-nav" class="main-nav">
+  <div class="mobile-search">
+    <form class="navbar-search flex" id="searchbox_003327519464892966402:tdtbguomc1q-mobile" method="get" action="https://www.oswego.edu/google_search.html">
+      <label for="search" class="sr-only">Search oswego.edu (mobile)</label>
+      <input type="text" class="w-100 form-item__textfield" placeholder="Search Oswego.edu" id="search" maxlength="255" name="q">
+      <button class="o-btn btn-green" type="submit">Search</button>
+      <input type="hidden" value="003327519464892966402:tdtbguomc1q-mobile" name="cx">
+      <input type="hidden" value="FORID:11" name="cof">
+    </form>
+  </div>
+  <ul region="header" class="main-menu">
+    <li><a href="main-menu__link" href="#">Popular Links</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswego.edu/about">About</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswego.edu/academics">Academics</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswego.edu/admissions">Admissions</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswego.edu/student-life">Student Life</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswego.edu/news">News and Events</a></li>
+    <li class=""><a class="main-menu__link" href="https://www.oswegolakers.com">Athletics</a></li>
+    <li class=""><a class="main-menu__link" href="https://alumni.oswego.edu">Alumni and Friends</a></li>
+  </ul>
+</div>
+
+<header class="header flex justify-between items-center">
+  <div class="header__logo">
+      
+
+<div  id="block-sunyoswego-branding" class="block">
+  
+    
+      
+
+          <img
+         src="/oswego-forward/themes/custom/sunyoswego/logo.svg" alt="Home" typeof="foaf:Image" class="img img--"
+                        src="/oswego-forward/themes/custom/sunyoswego/logo.svg"
+                    alt="Home"
+                        />
+        
+  </div>
+
+  </div>
+
+  <div class="">
+        <ul class="list flex utility-nav">
+      <li><a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=en&hd=oswego.edu" class="tc lh-solid">  
+<svg class="icon icon-envelop2 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-envelop2"></use>
+</svg> <span class="db">email</span></a></li>
+      <li><a href="https://oswego.open.suny.edu/" class="tc lh-solid">  
+<svg class="icon icon-book2 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-book2"></use>
+</svg> <span class="db">blackboard</span></a></li>
+      <li><a href="https://www.oswego.edu/myoswego" class="tc lh-solid">  
+<svg class="icon icon-library ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-library"></use>
+</svg> <span class="db">myoswego</span></a></li>
+      <li><a href="https://www.oswego.edu/about/index" class="tc lh-solid">  
+<svg class="icon icon-list ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-list"></use>
+</svg> <span class="db">a-z index</span></a></li>
+      <li><a href="https://www.oswego.edu/popular-links" class="tc lh-solid">  
+<svg class="icon icon-plus3 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-plus3"></use>
+</svg> <span class="db">quick links</span></a></li>
+      <li><a href="https://www.oswego.edu/google_search.html" class="tc lh-solid">  
+<svg class="icon icon-search2 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-search2"></use>
+</svg> <span class="db">search</span></a></li>
+    </ul>
+      </div>
+
+
+  <button class="hamburger hamburger--spin" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+  </button>
+</header>
+
+  
+      
+    
+    
+  
+  
+    
+
+
+  <div class="hero">
+    
+    <div class="video-hero"><div>
+  
+  
+      
+
+          <img
+         src="/oswego-forward/sites/oswego-forward/files/2020-06/20200531_throop_0027lighter%20%281%29.jpg" width="1920" height="768" alt="" typeof="foaf:Image" class="img img--"
+                        src="/oswego-forward/sites/oswego-forward/files/2020-06/20200531_throop_0027lighter%20%281%29.jpg"
+                    alt=""
+                        />
+        
+
+
+</div>
+</div>
+
+  <div class="hero__content">
+        
+<h1  class="hero__title hero__title--">
+      Oswego Forward
+  </h1>          <p class="f4 pt2">With caution, creativity and care, SUNY Oswego has developed a plan for an on-campus restart in late August. (Updated: July 1, 2020)</p>
+              <a
+   class="link link-- button btn-white"
+    href="https://ww1.oswego.edu/oswego-forward/sites/oswego-forward/files/Oswego%20Forward%20last%20-%20A%20Plan%20for%20Fall%202020%20Restart%20at%20SUNY%20Oswego%20--%20July%201%202020.pdf"
+>
+      View Approved Restart Plan
+      </a>
+      </div>
+</div>
+
+
+    
+
+<div  id="block-breadcrumbs" class="block">
+  
+    
+      
+  <div role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumb-container">
+    <h2 class="visually-hidden">Breadcrumb</h2>
+    <div class="wrapper">
+      <ol class="breadcrumb">
+              <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="/oswego-forward/">Home</a>
+                  </li>
+            </ol>
+    </div>
+  </div>
+
+  </div>
+
+    <main role="main">
+    <a id="main-content" tabindex="-1"></a>    <div  class="main">
+      <div  class="main-content">
+            <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+
+<div  id="block-mainpagecontent" class="block">
+  
+    
+      
+<article  role="article" about="/oswego-forward/oswego-forward-0" class="node">
+  
+    
+
+  
+  <div>
+    
+  </div>
+
+</article>
+  </div>
+
+  </div>
+
+      </div>
+            </div>
+    <div class="full-width w-100">
+           
+    
+<section class="bg-lg pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">What to Know</h2>
+
+<p class="f4">The <a href="https://ww1.oswego.edu/oswego-forward/sites/oswego-forward/files/Oswego%20Forward%20last%20-%20A%20Plan%20for%20Fall%202020%20Restart%20at%20SUNY%20Oswego%20--%20July%201%202020.pdf" target="_blank">Oswego Forward plan</a> has been approved by SUNY and meets the New York State Department of Health’s “Reopening New York Higher Education Guidelines.”</p>
+
+<p class="f4">The&nbsp;Oswego Forward plan will guide us as we restart on-campus operations and welcome our students and employees back to campus. The plan remains subject to change due to new information, guidance and/or direction received from the State of New York and the Governor’s Office.</p>
+</div>
+      
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+    
+<section class="bg-lg  ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content"><div class="grid 
+    grid--columns-2
+">
+    
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h3>Important Dates</h3>
+
+<ul>
+	<li>August 14 - 17:&nbsp;New student move-in</li>
+	<li>August 22-24: Returning student move-in</li>
+	<li>August 24: Classes&nbsp;begin&nbsp;</li>
+	<li>September 7 (Labor Day): Classes held</li>
+	<li>September 18-19 (Rosh Hashanah): Classes held</li>
+	<li>September 28 (Yom Kippur): Classes held</li>
+	<li>October 16 (Fall Break Day): Classes held</li>
+	<li>November 25: Classes held face-to-face stop meeting</li>
+	<li>December 11: Fall term ends</li>
+</ul>
+</div>
+      
+</div>
+
+
+    
+<div class="accordion">
+  
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Academics
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li>SUNY Oswego is creating a full class schedule for the campus that is approximately: 1/3 face-to-face; 1/3 online; and 1/3 hybrid. Limiting our fully face-to-face classes in this way will have a positive effect on reducing classroom density.&nbsp;&nbsp;</li>
+	<li>Classes will begin on August 24, 2020. The fall term will end on December 11, but all face-to-face delivery will be completed by November 25, 2020 (the day before Thanksgiving).</li>
+	<li>Final exams/assessment will mainly occur remotely. Classes needing to offer an in-person assessment will have that opportunity during the week of November 23. &nbsp;</li>
+	<li>The college plans to cancel breaks and hold classes on days that are currently on our Fall 2020 calendar as holidays.</li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Oswego Forward Pledge
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><p>SUNY Oswego students, faculty members and staff who will attend classes or work on campus will be asked to agree to the Oswego Forward Pledge, which will require all students and employees to:</p>
+
+<ul>
+	<li>Complete a health screening questionnaire 14 days prior to their specified or desired date of arriving on campus</li>
+	<li>Quarantine at home for seven days prior to arriving on campus to lessen the exposure opportunity to COVID-19</li>
+	<li>Complete a daily health screen via an app (or alternative method if necessary) that will soon be available on the SUNY Oswego COVID-19 website</li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Testing and Tracing
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li>If students and employees screen positive on the health screening questionnaire and/or show symptoms of COVID-19, each student/employee must take a COVID-19 test from home and test negative for COVID-19 prior to returning to campus (pending what we learn about available test kits and supplies).</li>
+	<li>SUNY Oswego is currently working closely with SUNY Upstate Medical University with the goal of gaining access to the saliva test kit that is in development. If the supply chain allows, SUNY Oswego will need access to 10,000 saliva test kits to be able to mail a test kit to each student and employee who plans to be on campus this fall for coursework and/or employment. The test will be performed at home by the individual and the saliva sample will then be mailed to the designated laboratory for processing.</li>
+	<li>SUNY Oswego through its Department of Human Resources and its Health Services Department will work closely with Oswego and Onondaga County health departments to provide support to students, faculty and staff who need to isolate and/or quarantine, and also provide support to tracing efforts.</li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    PPE and Social Distancing
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li>All students, faculty members and staff will be required to wear face coverings in accordance with CDC guidelines when they are with another person(s).</li>
+	<li>All students, faculty and staff will be provided with two free cloth face coverings from SUNY Oswego before rejoining the campus community.</li>
+</ul>
+
+<p>We will continue to stress that all members of our campus community:</p>
+
+<ul>
+	<li>Wash their hands frequently with soap and water for at least 20 seconds</li>
+	<li>Follow physical distancing and other guidelines</li>
+	<li>Remain home if you are not feeling well</li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Residential Student Experience
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><p>The residential student experience will remain rich, dynamic, student-centered and focused on nurturing the social-emotional needs of the residential population through the creation of “Pod” family-style living groups.</p>
+
+<p>Additional information, including guidelines for student-athletes, will soon be shared in an email from Dr. Jerri Howland, the college’s Vice President for Student Affairs and Enrollment Management.</p>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Dining Operations
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><p>Operations will resume to serve all residential students and residential staff who will be assigned a dining time and a specific dining hall. They will have the option to:</p>
+
+<ol>
+	<li>Order online pickup in the dining hall</li>
+	<li>Choose take out</li>
+	<li>Dine at site with members of their assigned Pod and adhere to social distancing rules.</li>
+</ol>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Hygiene, Cleaning and Disinfection
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><p>SUNY Oswego will adhere to CDC and State guidelines related to cleaning, providing protective barriers, controlling foot traffic flows, and using elevators and stairwells.</p>
+</div>
+            
+  </div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+    
+<section class="bg-gr pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">Have Questions?</h2>
+
+<p class="f4 text-align-center">We're here to help. Please fill out our contact form and we will respond within 72 hours.</p>
+
+<p class="text-align-center"><a class="button btn-white" href="https://sunyoswego.formstack.com/forms/oswego_forward">Contact us</a></p>
+</div>
+      
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+    
+<section class=" pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content"><div class="grid 
+    grid--columns-2
+">
+    
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2>Latest updates</h2>
+
+<div class="mb4" id="covid-updates">&nbsp;</div>
+
+<p><a class="button btn-arrow" href="https://www.oswego.edu/safety-on-campus/covid19-updates" target="_blank">View all COVID-19 updates</a> <script type="text/javascript">
+jQuery("#covid-updates").load( "https://www.oswego.edu/safety-on-campus/covid-19-latest-feed .take-me" );
+</script></p>
+<style type="text/css">#covid-updates .sentinel {
+  font-family: "Mercury SSm A", "Mercury SSm B", serif;
+  font-style: italic;
+}
+p.ma0 {
+  margin: 0;
+}
+</style>
+</div>
+      
+</div>
+
+
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2>Quick Facts</h2>
+
+<ul>
+	<li>New students will arrive one week to ten days prior to the start of classes (Aug. 24) for a specialized<i>&nbsp;Welcome Week</i>&nbsp;tailored to develop small-group connections, with returning students moving into the residence halls the weekend of August 22.</li>
+	<li>Campus and student services remain open</li>
+	<li>Non-essential employees are telecommuting</li>
+	<li>In-person events are canceled or must be moved to an online format until further notice</li>
+</ul>
+</div>
+      
+</div>
+
+
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+    
+<section class="bg-lg pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">Our Guiding Principles</h2>
+<br/>
+</div>
+      
+</div>
+
+</div>
+    <div class="field-full-width-content"><div class="grid 
+    grid--columns-3
+">
+    
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><p class="page-intro">Health and Safety</p>
+
+<p class="f6">Safety is our top priority.&nbsp;SUNY Oswego will follow all federal, state and local health standards in our academic spaces, residential and&nbsp;dining&nbsp;halls and other facilities&nbsp;to reduce health risks to the best of the college’s ability. We are making plans for campus safety, including protocols for testing, sanitization, protective equipment, social distancing and other safety measures.</p>
+</div>
+      
+</div>
+
+
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><p class="page-intro">Academic Excellence</p>
+
+<p class="f6">We are committed to delivering high quality academic experiences. This fall, we plan to deliver a blend of online, hybrid and face-to-face courses. Students will receive additional communication confirming the instruction format of the classes they will be taking. If necessary, we’ll be prepared to transition all courses to online delivery.
+</p>
+</div>
+      
+</div>
+
+
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><p class="page-intro">The Campus Experience</p>
+
+<p class="f6">The Oswego experience is built on a model that encourages deep learning by surrounding students, faculty and staff with an environment that allows connections, exploration, discovery and understanding. Residential, dining and social experiences, and student support services will be available but delivery will be modified to ensure the health and safety of our campus community.</p>
+</div>
+      
+</div>
+
+
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+    
+<section class="bg-gr pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">Oswego Forward Planning Team</h2>
+
+<p class="f5">People from every corner of our college community have been focusing, planning and envisioning how to move “Oswego Forward.”&nbsp;Three groups, the COVID-19 Task Force, Academic Planning Committee, and the Health and Safety (Restart) Group were assembled to lead restart efforts. These groups consist of faculty governance leaders, faculty members, staff and administrators from all divisions of the college.</p>
+
+<p class="f5">Several members of SUNY Oswego’s Health and Safety Group attend or convene weekly meetings with medical experts from local hospitals. Campus leaders and Health and Safety Group members also regularly consult with and share restart strategies with local higher education, medical, business and civic leaders.</p>
+</div>
+      
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+    
+<section class="bg-ye pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">Student Emergency Fund</h2>
+
+<p>&nbsp;</p>
+</div>
+      
+</div>
+
+</div>
+    <div class="field-full-width-content"><div class="grid 
+    grid--columns-2
+">
+    
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h3>Help Oswego Students Affected by COVID-19</h3>
+
+<p>Our Student Emergency Fund provides financial support to students facing unanticipated expenses related to the COVID-19 pandemic, and will meet immediate student needs. This fund is made possible by generous donations from the SUNY Oswego Community,&nbsp;we are #TogetherOZ.</p>
+
+<p><a class="button btn-white" href="https://securelb.imodules.com/s/1552/bp18/interior.aspx?sid=1552&amp;gid=1&amp;pgid=388&amp;cid=1028&amp;dids=720" target="_blank">Make a Donation</a></p>
+</div>
+      
+</div>
+
+
+    
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h3>Apply for Funds</h3>
+
+<p>These funds are available to any SUNY Oswego student who needs extra resources for a wide range of expenses or shortages that arise due to the COVID-19 pandemic . Email the Dean of Students to request funds.</p>
+
+<p><a class="button btn-white" href="mailto:deanofstudents@oswego.edu?subject=Student%20Emergency%20Fund%20Request">Email the Dean of Students</a></p>
+</div>
+      
+</div>
+
+
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+    
+<section class=" pv5 ">
+<div class="full-width-content">
+  
+    <div class="field-full-width-content">
+<div class="content cont-1300">
+    
+
+            <div class="text-long"><h2 class="text-align-center">Resources and Information</h2>
+
+<p>&nbsp;</p>
+</div>
+      
+</div>
+
+</div>
+    <div class="field-full-width-content">
+<div class="accordion">
+  
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Students
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li><a href="https://www.oswego.edu/news/announcements/guidance-students-choosing-pass-%E2%80%93-fail" target="_blank">Guidance on Pass-Fail Options</a></li>
+	<li><a href="https://www.oswego.edu/student-resources/" target="_blank">Student Resources "Central Hub"</a></li>
+	<li><a href="https://oswego.edu/cts/students-online" target="_blank">Student Online Learning Portal</a></li>
+	<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc1dRoIwMPPEfQ208WQOorNbJLr7Dgi4jIGASyXw31r1fuSYA/viewform?vc=0&amp;c=0&amp;w=1" target="_blank">Travel Declaration Form</a></li>
+	<li><a href="https://www2.sysadm.suny.edu/studyabroadStudent/index.cfm" target="_blank">SUNY Study Abroad portal</a></li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Employees
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li><a href="https://www.oswego.edu/news/announcements/state-issues-guidance-requirement-employees-wear-face-coverings" target="_blank">State guidance on employees wearing protective masks</a></li>
+	<li><a href="https://www.oswego.edu/walker-health-center/sites/www.oswego.edu.walker-health-center/files/supervisor_protocol_for_covid-19_040620.pdf" target="_blank">Supervisor Protocol (FAQs) for COVID-19&nbsp;(PDF)</a></li>
+	<li><a href="https://www.oswego.edu/human-resources/sites/www.oswego.edu.human-resources/files/covid-19-telecommuting-pilot-rem.pdf" target="_blank">Statewide Telecommuting Pilot Program&nbsp;(PDF)</a></li>
+	<li><a href="https://www.oswego.edu/human-resources/sites/www.oswego.edu.human-resources/files/telecommuting_pilot_mc_csea_pef_uup.pdf" target="_blank">Updated: Statewide Telecommuting Pilot Program</a></li>
+	<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScyhsWvpUf167GSWUNifbfDnX5DSUmfBhV6ooIvozJjwo1MKQ/viewform?pli=1" target="_blank">Telecommuting&nbsp;Application</a></li>
+	<li><a href="https://www.oswego.edu/cts/telecommute" target="_blank">Telecommuting Information for Employees</a></li>
+	<li><a href="https://www.oswego.edu/walker-health-center/sites/www.oswego.edu.walker-health-center/files/exec_covid19_employeeexposuretestingevaluation_031520.pdf" target="_blank">Employee Testing &amp; Evaluation Protocol</a></li>
+	<li><a href="https://www.oswego.edu/walker-health-center/sites/www.oswego.edu.walker-health-center/files/contacts_of_contacts_guidance_doh.pdf" target="_blank">Guidance on Contact w/ Confirmed or Suspected Case</a></li>
+	<li><a href="https://www.oswego.edu/human-resources/leave-programs" target="_blank">Employee Leave Programs</a></li>
+	<li><a href="https://www.oswego.edu/walker-health-center/sites/www.oswego.edu.walker-health-center/files/updated-_covid19_statwide_non_essential_memo.pdf" target="_blank">UPDATED: Statewide COVID-19 Non-Essential Employee Guidance</a></li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Faculty
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li><a href="https://www.oswego.edu/cts/online-learning-portal" target="_blank">Online Learning Portal</a></li>
+	<li><a href="https://www.oswego.edu/celt/" target="_blank">CELT Workshops</a></li>
+	<li><a href="https://innovate.suny.edu/community/covid19/%20" target="_blank">SUNY Resources</a></li>
+</ul>
+</div>
+            
+  </div>
+</div>
+    
+ 
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">
+    Health
+</div>
+        
+<svg class="icon icon-arrow-down4 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-arrow-down4"></use>
+</svg>  </div>
+  <div class="accordion-content" style="display: none;">
+  
+
+            <div class="text-long"><ul>
+	<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">Center for Disease Control and Prevention</a></li>
+	<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">World Health Organization</a></li>
+	<li><a href="https://coronavirus.health.ny.gov/home" target="_blank">NYS Department of Health</a></li>
+	<li><a href="https://health.oswegocounty.com/information/2019_novel_coronavirus/index.php" target="_blank">Oswego County Health</a></li>
+	<li><a href="https://www.suny.edu/health-alert/" target="_blank">SUNY Health Alert</a></li>
+	<li><a href="https://www.upstate.edu/news/articles/2020/2020-03-14-clark.php" target="_blank">Upstate University Hospital Triage Line</a></li>
+</ul>
+</div>
+            
+  </div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+      </div>
+  </main>
+
+      <footer class="footer">
+    <div class="container footer__container">
+        <div class="w-40-ns pr4-ns footer__address-container">
+            
+          <img
+         class="logo logo--"
+                        src="https://ww1.oswego.edu/themes/custom/sunyoswego/images/oswego-white.svg"
+                    alt="SUNY Oswego logo"
+                        />
+        
+            <p class="pl4-ns f6 pt3">7060 State Route 104<br>
+            Oswego, NY 13126-3599<br>
+            315.312.2500</p>
+        </div>
+        <div class="w-100-ns">
+            <div id="cta-links">
+
+                    <div class="grid grid--4 tc">
+                        <a class="button btn-outline" id="cta-footer-apply" href="https://www.oswego.edu/admissions/apply">  
+<svg class="icon icon-clipboard2 ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-clipboard2"></use>
+</svg> Apply</a>
+                        <a class="button btn-outline" id="cta-footer-request" href="https://www.oswego.edu/admissions/request-information">  
+<svg class="icon icon-info ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-info"></use>
+</svg> Request info</a>
+                        <a class="button btn-outline" id="cta-footer-visit" href="https://www.oswego.edu/admissions/plan-your-visit">  
+<svg class="icon icon-location ">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-location"></use>
+</svg> Visit</a>
+                    </div>
+
+            </div>
+            <div class="footer__address-container--mobile">
+                
+          <img
+         class="logo logo--"
+                        src="https://ww1.oswego.edu/themes/custom/sunyoswego/images/oswego-white.svg"
+                    alt="SUNY Oswego logo"
+                        />
+        
+                <p class="pl4-ns f6 pt3">7060 State Route 104<br>
+                    Oswego, NY 13126-3599<br>
+                    315.312.2500</p>
+            </div>
+        <div class="footer__links-container relative">
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">Campus</h5>
+                <hr class="columns-line">
+                <ul class="f6 list footer__links">
+                    <li><a href="https://www.oswego.edu/about/contact-us">Contact us</a></li>
+                    <li><a href="https://www.oswego.edu/safety-on-campus">Commitment to safety</a></li>
+                    <li><a href="https://www.oswego.edu/library">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">Resources</h5>
+                <ul class="f6 list footer__links">
+                    <li><a href="https://www.oswego.edu/about/index/">A-Z index</a></li>
+                    <li><a href="https://www.oswego.edu/accessibility">Accessibility</a></li>
+                    <li><a href="https://www.oswego.edu/human-resources/your-opportunity-awaits/">Careers at Oswego</a></li>
+                    <li><a href="https://www.oswego.edu/institutional-research/consumer-information">Consumer Information: Student Right to Know</a></li>
+                    <li><a href="https://www.oswego.edu/people-search/">People Search</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">More</h5>
+                <ul class="f6 list footer__links">
+                    <li><a href="https://sunyoswego.formstack.com/forms/report_accessibility_issue?field57188949=https://www.oswego.edu/">Report an accessibility issue</a></li>
+                    <li><a href="https://www.oswego.edu/about/about-site">About this site</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container"><hr class="mb4 mt5"></div>
+    <div class="container flex justify-between">
+
+        <div class="social-icons pl3">
+            <a target="_blank" href="https://www.facebook.com/SUNYOswego">
+              
+<svg class="icon icon-facebook2 mr3">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-facebook2"></use>
+</svg>            </a>
+            <a target="_blank" href="https://www.instagram.com/SUNYOswego">
+              
+<svg class="icon icon-instagram mr3">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-instagram"></use>
+</svg>            </a>
+            <a target="_blank" href="https://www.twitter.com/SUNYOswego">
+              
+<svg class="icon icon-twitter mr3">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-twitter"></use>
+</svg>            </a>
+            <a target="_blank" href="https://www.youtube.com/SUNYOswegovideo">
+              
+<svg class="icon icon-youtube mr3">
+  <use xlink:href="/themes/custom/sunyoswego/svg/symbol-defs.svg#icon-youtube"></use>
+</svg>            </a>
+
+        </div>
+        <p class="f6 pr3">© State University of New York at Oswego</p>
+    </div>
+</footer>
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/oswego-forward\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp class=\u0022f6\u0022\u003EThis website uses cookies to offer you a better browsing experience.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EView our privacy policy\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EView our privacy policy\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":500,"popup_link":"https:\/\/www.oswego.edu\/about\/about-site\/internet-privacy-policy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":true,"cookie_name":"","reload_page":true,"domain":"","domain_all_sites":true,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"opt_in","whitelisted_cookies":"reduced_motion","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2 class=\u0022mt0\u0022\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"statistics":{"data":{"nid":"1"},"url":"\/oswego-forward\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"fa65301cfbe8ec41f120f779bf138d73e92012cf59e7b806c9cbb0313de72bd1"}}</script>
+<script src="/oswego-forward/sites/oswego-forward/files/js/js_VrSn_nvTXdJuhrKvv4uZmk_MiniRCUmevJYKVc1TuZk.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="/oswego-forward/sites/oswego-forward/files/js/js_LWxVFPKJmzNyOHyke6NTOQcbd-SOaRJUaMYeZnJO_xs.js"></script>
+
+      <script>
+          jQuery("#alert-container").load("https://www.oswego.edu/alerts/ .alerts-are-here")
+      </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b647467edf","applicationID":"56782803","transactionName":"YFEBNktQWkNYB0QIXVkbIgFNWFteFhRRBldoVwIBUVQ=","queueTime":0,"applicationTime":58,"atts":"TBYCQANKSU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

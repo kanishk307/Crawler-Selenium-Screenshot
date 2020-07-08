@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head id="head"><title>
+	Waldorf University Departments - COVID-19 Guidance
+</title><meta name="description" content="Waldorf University is a private, coeducational liberal arts college located in Forest City, Iowa, United States offering both residential and online degree programs." /> 
+<meta charset="UTF-8" /> 
+<link href="/CMSPages/GetResource.ashx?stylesheetname=WU-Master" type="text/css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width" />
+
+<script src="/CMSScripts/Custom/Waldorf2016/modernizr-custom.js"></script>
+<script src="/CMSScripts/Custom/Waldorf2016/jquery-2.2.4.js"></script>
+<!--Typekit -->
+<script src="https://use.typekit.net/gvn6exc.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!-- End Typekit -->
+
+<!-- Google Tag Manager WU - JAN - 2016 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBH94GB');</script>
+<!-- End Google Tag Manager WU - JAN - 2016 -->
+
+<!-- ============ Google Verification / Google Tag Manager updated Dec 18 2017 by DE ===============  -->
+<meta name="google-site-verification" content="P5WuhfSrttWwX5s4QB7jqSE6Yxpc6l2RhRmVmEOQdlY" /> 
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TBH94GB"></script>
+<meta name="google-site-verification" content="UNVBijI9Vzv6yYOuDjK3LUhSfNNWrYZsyaFxT6QAlkE" />
+
+
+ <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="/CMSScripts/Custom/Waldorf/popup.js"></script>
+<script type="text/javascript" src="/CMSScripts/Custom/Waldorf/prototype.js"></script>-->
+
+<style>
+.myButton {
+	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#46166b;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style> 
+
+<script type="text/javascript">
+	//<![CDATA[
+(function ($, window, document, undefined) {
+
+    GetTermADatesCurrentYear();
+    GetTermBDatesCurrentYear();
+    GetTermADatesNextYear();
+    GetTermBDatesNextYear();
+    
+    
+    function GetTermADatesCurrentYear()
+    {
+      // async ajax call to fill in the state select options.
+      var getTermADatesUrl = '/CSEGWebServices/GradCalcService.asmx/GetTermInfo_TrackA_CurrentYearWAL';
+      $.ajax({
+          url: getTermADatesUrl,
+          type: 'GET',
+          dataType:"xml",
+          success: function (response) {
+                  
+                var trHTML = '';
+                $(response).find('TermInformation').each(function(){
+                                    var semester = $(this).find("Description").text();
+                                    var term = $(this).find("Name").text();
+                                    var termcoursescheduleurl = "/WALDORF/termschedule/Default.asp?term=" + term;
+                                    var registrationStart = $(this).find("RegistrationStartDate").text();
+                                    var registrationEnd = $(this).find("RegistrationEndDate").text();
+                                    var registrationRange = registrationStart + ' to ' + registrationEnd
+                                    var FADocumentationDue = $(this).find("FADocumentationDueDate").text();
+                                    var startDate = $(this).find("StartDate").text();
+                                    var dropDate = $(this).find("DropAddEndDate").text();
+                                    var endDate = $(this).find("EndDate").text();
+                                    trHTML += '<tr><td><a href=' + termcoursescheduleurl + '>' + term + '</a></td><td class="text-center">' + registrationRange + '</td><td>' + startDate + '</td><td>' + dropDate + '</td><td>' + endDate + '</td></tr>';  
+                                });
+                $('#tblTrackA19').append(trHTML);
+          },
+          error:function(xhr, ajaxOptions, thrownError)
+          {
+              alert('Error');alert(xhr.status);
+              alert(thrownError);}
+      });
+    }
+    
+    function GetTermBDatesCurrentYear()
+    {
+      // async ajax call to fill in the state select options.
+      var getTermBDatesUrl = '/CSEGWebServices/GradCalcService.asmx/GetTermInfo_TrackB_CurrentYearWAL';
+      $.ajax({
+          url: getTermBDatesUrl,
+          type: 'GET',
+          dataType:"xml",
+          success: function (response) {
+                  
+                var trHTML = '';
+                $(response).find('TermInformation').each(function(){
+                                    var semester = $(this).find("Description").text();
+                                    var term = $(this).find("Name").text();
+                                    var termcoursescheduleurl = "/WALDORF/termschedule/Default.asp?term=" + term;
+                                    var registrationStart = $(this).find("RegistrationStartDate").text();
+                                    var registrationEnd = $(this).find("RegistrationEndDate").text();
+                                    var registrationRange = registrationStart + ' to ' + registrationEnd
+                                    var FADocumentationDue = $(this).find("FADocumentationDueDate").text();
+                                    var startDate = $(this).find("StartDate").text();
+                                    var dropDate = $(this).find("DropAddEndDate").text();
+                                    var endDate = $(this).find("EndDate").text();
+                                    trHTML += '<tr><td><a href=' + termcoursescheduleurl + '>' + term + '</a></td><td class="text-center">' + registrationRange + '</td><td>' + startDate + '</td><td>' + dropDate + '</td><td>' + endDate + '</td></tr>';  
+                                });
+                $('#tblTrackB19').append(trHTML);
+          },
+          error:function(xhr, ajaxOptions, thrownError)
+          {
+              alert('Error');alert(xhr.status);
+              alert(thrownError);}
+      });
+    }
+    
+    function GetTermADatesNextYear()
+    {
+       // alert("GetTermADatesNextYear is working");
+      // async ajax call to fill in the state select options.
+      var getTermADatesUrl = '/CSEGWebServices/GradCalcService.asmx/GetTermInfo_TrackA_NextYearWAL';
+      $.ajax({
+          url: getTermADatesUrl,
+          type: 'GET',
+          dataType:"xml",
+          success: function (response) {
+                  
+                var trHTML = '';
+                $(response).find('TermInformation').each(function(){
+                                    var semester = $(this).find("Description").text();
+                                    var term = $(this).find("Name").text();
+                                    var termcoursescheduleurl = "/WALDORF/termschedule/Default.asp?term=" + term;
+                                    var registrationStart = $(this).find("RegistrationStartDate").text();
+                                    var registrationEnd = $(this).find("RegistrationEndDate").text();
+                                    var registrationRange = registrationStart + ' to ' + registrationEnd
+                                    var FADocumentationDue = $(this).find("FADocumentationDueDate").text();
+                                    var startDate = $(this).find("StartDate").text();
+                                    var dropDate = $(this).find("DropAddEndDate").text();
+                                    var endDate = $(this).find("EndDate").text();
+                                    trHTML += '<tr><td><a href=' + termcoursescheduleurl + '>' + term + '</a></td><td class="text-center">' + registrationRange + '</td><td>' + startDate + '</td><td>' + dropDate + '</td><td>' + endDate + '</td></tr>';  
+                                });
+                $('#tblTrackA20').append(trHTML);
+          },
+          error:function(xhr, ajaxOptions, thrownError)
+          {
+              alert('Error');alert(xhr.status);
+              alert(thrownError);}
+      });
+    }
+    
+    function GetTermBDatesNextYear()
+    {
+        //alert("GetTermBDatesNextYear is working");
+      // async ajax call to fill in the state select options.
+      var getTermBDatesUrl = '/CSEGWebServices/GradCalcService.asmx/GetTermInfo_TrackB_NextYearWAL';
+      $.ajax({
+          url: getTermBDatesUrl,
+          type: 'GET',
+          dataType:"xml",
+          success: function (response) {
+                  
+                var trHTML = '';
+                $(response).find('TermInformation').each(function(){
+                                    var semester = $(this).find("Description").text();
+                                    var term = $(this).find("Name").text();
+                                    var termcoursescheduleurl = "/WALDORF/termschedule/Default.asp?term=" + term;
+                                    var registrationStart = $(this).find("RegistrationStartDate").text();
+                                    var registrationEnd = $(this).find("RegistrationEndDate").text();
+                                    var registrationRange = registrationStart + ' to ' + registrationEnd
+                                    var FADocumentationDue = $(this).find("FADocumentationDueDate").text();
+                                    var startDate = $(this).find("StartDate").text();
+                                    var dropDate = $(this).find("DropAddEndDate").text();
+                                    var endDate = $(this).find("EndDate").text();
+                                    trHTML += '<tr><td><a href=' + termcoursescheduleurl + '>' + term + '</a></td><td class="text-center">' + registrationRange + '</td><td>' + startDate + '</td><td>' + dropDate + '</td><td>' + endDate + '</td></tr>';  
+                                });
+                $('#tblTrackB20').append(trHTML);
+          },
+          error:function(xhr, ajaxOptions, thrownError)
+          {
+              alert('Error');alert(xhr.status);
+              alert(thrownError);}
+      });
+    }
+    function getTermInfo()
+    {
+    //alert('HERE');
+    $.ajax({
+        url: '/CSEGWebServices/GradCalcService.asmx/GetTermsWAL',
+        type: 'GET',
+        dataType:"xml",
+        success: function (response) {
+                var trHTML = '';
+                $(response).find('Term').each(function(){
+                                    var name = $(this).find("Name").text();
+                                    var endDate = $(this).find("RegistrationEndDate").text();
+                                    var termcoursescheduleurl = "/WALDORF/termschedule/Default.asp?term=" + name
+                                    trHTML += '<tr><td><a href=' + termcoursescheduleurl + '>' + name + '</a></td><td>' + endDate + '</td></tr>';  
+                                });
+                $('#termTable').append(trHTML);
+        },
+        error:function(xhr, ajaxOptions, thrownError)
+        {
+            alert('Error');alert(xhr.status);
+            alert(thrownError);}
+    });
+    }
+    function getMyQStringInfo(name) 
+  {
+      //This is the helper file to get the value for name.
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(window.location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+var term = getMyQStringInfo('term');
+var getTermCoursesUrl = '/CSEGWebServices/GradCalcService.asmx/GetTermCoursesWAL?termName=' + term;
+var termStartDate = '';
+var termEndDate = '';
+// var newTitle = 'Term ' + term + 'courses schedule';
+
+$.ajax({
+    url: getTermCoursesUrl,
+    type: 'GET',
+    dataType:"xml",
+    success: function (response) {
+			var trHTML = '';
+            var count = 0;
+/* if (document.title != newTitle){
+document.title = newTitle;
+} */
+			$(response).find('TermCourse').each(function(){
+                                if (count === 0)
+                                {
+                                  count++;
+                                  termStartDate = $(this).find("TermStartDate").text();
+                                  termEndDate = $(this).find("TermEndDate").text();                                  
+                                }
+                                
+								var termName = $(this).find("TermName").text();
+								var courseNumber = $(this).find("CourseNumber").text();
+								var courseTitle = $(this).find("CourseTitle").text();
+                                var courseinformationurl = "/waldorf/courseinformation/courseinformation.aspx?coursenum=" + courseNumber;
+                                var courseinformationurl = encodeURI(courseinformationurl) // encoding to pass the space along
+								trHTML += '<tr><td><a href=' + courseinformationurl + '  onclick="event.preventDefault(); return Popup.open({url:this.href});" >' + courseNumber + '</a></td><td>' + courseTitle + '</td></tr>';  
+							});
+      
+            // Update the table.
+			$('#termTable').append(trHTML);
+
+            // Update the term header.
+            var termHeader = "Term Course Schedule : " + term;
+            $('#termheader').html(termHeader);
+
+            // Update the term info div.
+            var termDetails = "<h2>Term : " + term + "</h2><span>(Start Date: " + termStartDate + ", End Date: " + termEndDate + ")</span>";
+            $('#termdetails').html(termDetails);
+    },
+	error:function(xhr, ajaxOptions, thrownError)
+	{
+		alert('Error');alert(xhr.status);
+        alert(thrownError);}
+});
+    }
+)(jQuery, window, document);
+//]]>
+</script><link rel="icon" sizes="16x16" type="image/png" href="/Waldorf2016/media/Waldorf-Logos/Waldorf_W_16.png" />
+<link href="/CMSPages/GetResource.ashx?_webparts=677" type="text/css" rel="stylesheet"/>
+</head>
+<body class="LTR Unknown ENUS ContentBody" >
+    
+    <form method="post" action="/faculty-staff/departments/health-services/covid-19-guidance" id="form">
+<input type="hidden" name="__CMSCsrfToken" id="__CMSCsrfToken" value="qaVHqIf9OfPliPXvsiKpfyfW5s99Lo4x9wu7oq0D7bGhcWPyqH/Jseg7PRdRjuOb5IYmcbwU5sx2z0HMJ86dUAdXmeK59YmX7KM7NhYuNFM=" />
+
+
+<input type="hidden" name="lng" id="lng" value="en-US" />
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script>
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yB8Yxz5QaxTppawO0qZDDdOd6s-wKKLa0wWFQIRb4L_MycOzXBPfv6wHMeIpt8V__xVQj9IcZF8CdqHkICS8tvNlOVwwxW_XeN80ze0LDcrG1RxGC0dm4mosLBdWTcwy-ibR0uaT8xwQW6c8nUgkQC81&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "language": "en",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDebuggingEnabled": false,
+  "applicationUrl": "/",
+  "isDialog": false,
+  "isRTL": "false"
+};
+
+//]]>
+</script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185" />
+    
+    <div id="ctxM">
+
+</div>
+    
+<!-- Google Tag Manager WU - Jan - 2016 (noscript) -->
+<!--
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBH94GB" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+</noscript>
+-->
+<!-- End Google Tag Manager WU - JAN -2016(noscript) -->
+
+<a id="skip-navigation" class="visually-hidden focusable" href="#content-start">Skip Navigation</a>
+
+
+<div id="search-box" class="bg-purple">
+  <div class="row collapse">
+    <div class="small-11 small-centered columns">
+      <div id="p_lt_ctl00_SearchBox_pnlSearch" class="searchBox">
+	
+    <label for="p_lt_ctl00_SearchBox_txtWord" id="p_lt_ctl00_SearchBox_lblSearch" style="display:none;">Search for:</label>
+    <input name="p$lt$ctl00$SearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl00_SearchBox_txtWord" class="form-control" />
+    <input type="submit" name="p$lt$ctl00$SearchBox$btnSearch" value="Search" id="p_lt_ctl00_SearchBox_btnSearch" class="btn btn-default" />
+    
+    <div id="p_lt_ctl00_SearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder">
+
+	</div>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================= website content ======================================== -->
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    <div class="off-canvas position-right quick-links-sidewrap" id="offCanvas" data-off-canvas data-position="right">
+      
+      <ul class="quick-links-list">
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-mywaldorf.png" alt="login"><a href="/students/login">Student Login</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-programs.png" alt="programs"><a href="/academics/degree-programs">Degree Programs</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-events-calendar.png" alt="calendar"><a href="/calendar">Campus Calendar</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-campus-directory.png" alt="directory"><a href="/directory">Campus Directory</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-campus-map.png" alt="map"><a href="/map">Campus Map</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/WU-WebIcons-QuickLinks-ApplyNow.png" alt="checkmark"><a href="/apply">Apply</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-request-info.png" alt="request icon"><a href="/request-information">Request Info</a></li>
+        <li><img class="ql-icon" src="/Waldorf2016/media/waldorf-2016-assets/icons/quicklinks/ql-contact.png" alt="contact icon"><a href="/about/contact">Contact Us</a></li>
+      </ul>
+      
+    </div>
+    
+    <div class="off-canvas-content" data-off-canvas-content>
+      <!-- fixed footer links -->
+      <div class="show-for-medium" style="
+width: 573px; border-right:10px solid #B79257; background:#313131; color:#fff; z-index: 50000; position: fixed; left: 0px; bottom: 0px; height: 37px; cursor:pointer;">
+  
+  <div class="chat-launch" style="line-height:37px; font-size:16px;display:inline-block; width:160px;border-right:1px solid #B79257; text-align:center">LIVE CHAT <img style="display:inline-block; margin-top:-3px; margin-left:4px;" src="/Waldorf2016/media/waldorf-2016-assets/layout/chat-icon.png" alt="Need Help?"></div>
+  
+  <div style="line-height:37px; font-size:16px;display:inline-block; width:225px;border-right:1px solid #B79257; text-align:center;">
+    <a style="color:#fff; display:block" href="/request-information">REQUEST INFORMATION</a>
+  </div>
+  <div style="line-height:37px; font-size:16px;display:inline-block; width:170px; text-align:center;">
+    <a style="color:#fff; display:block" href="/apply">APPLY NOW</a>
+  </div>
+  <div style="line-height:37px; font-size:16px;display:inline-block;display:none">
+    &nbsp;
+  </div>
+  
+      </div>
+      <!-- /fixed footer links -->
+      
+      <!-- ============== website visible page begins ============== -->
+      
+      <div class="bg-gold-header"></div>
+      
+      <header class="row collapse zero-bottom site-header">
+        
+        <div class="small-top-row flex-wrap align-vertical">
+          <div class="small-5 medium-3 large-3 columns">
+            <a href="/">
+              <img class="header-logo" src="/Waldorf2016/media/waldorf-2016-assets/logos/wu-horizontal-header-logo.png" alt="Waldorf University">        
+            </a>
+          </div>
+          <div class="medium-6 large-6 columns text-right show-for-medium">
+            
+            <nav class="header-nav-audience">
+              <a class="audience-link" href="/">Future Students</a> <span class="nav-separator">//</span>
+              <a class="audience-link" href="/students/">Current Students</a> <span class="nav-separator">//</span>
+              <a class="audience-link" href="/alumni/">Alumni</a> <span class="nav-separator">//</span>
+              <a class="audience-link" href="/faculty-staff/">Faculty &amp; Staff</a>
+            </nav>
+            
+          </div>
+          <div class="small-5 medium-2 large-1 columns self-align-center">
+            
+            <img class="header-icon chat-icon chat-launch" src="/Waldorf2016/media/waldorf-2016-assets/layout/header-chat.png" alt="Live Chat">
+            <img class="header-icon search-icon" id="header-search-trigger" src="/Waldorf2016/media/waldorf-2016-assets/layout/header-search.png" alt="Go Search">
+            
+          </div>
+          
+          <div class="small-2 medium-1 large-2 columns quick-links-wrap self-align-center">
+            
+            <p class="text-right zero-bottom quick-links self-align-center">
+              <a class="quick-links-trigger show-for-large" href="#" data-toggle="offCanvas"><span class="ql-span">Helpful Links &rsaquo;</span></a>
+              <a class="quick-links-trigger hide-for-large" href="#" data-toggle="offCanvas"><span class="ql-span">&rang;</span></a>
+            </p>
+          </div>
+          
+        </div>
+        
+        <!-- mobile audience nav -->
+        
+        <div class="small-12 column bg-gold hide-for-medium">
+          
+          <nav class="small-header-nav-audience">
+            <a class="small-audience-link" href="/">Future Students</a> <span class="nav-separator">//</span>
+            <a class="small-audience-link" href="/students/">Current Students</a> <span class="nav-separator">//</span>
+            <a class="small-audience-link" href="/alumni/">Alumni</a> <span class="nav-separator">//</span>
+            <a class="small-audience-link" href="/faculty-staff/">Faculty &amp; Staff</a>
+          </nav>
+          
+        </div>
+        
+        
+      </header>
+      
+      <!-- ============== HEADER MENU ============== -->
+      
+      <div class="expanded row bg-nav">
+        <div class="small-12 columns bg-nav">
+          <div class="row row-fixed collapse">
+            <div class="small-12 columns">
+              
+              <nav id="desktop-menu-wrap" class="show-for-medium">
+                <div id="mega-menu" class="menu-container home-menu master-menu">
+ <!-- header 1st level -->
+<div class="menu">
+    <ul>
+      <li>
+        <!-- /header 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/academics">Academics</a>
+
+<!-- /item 1st level --><!-- header 2nd level -->
+<ul class="menu-dropdown mega">
+  <li class="mega-capsule-li">
+<!-- /header 2nd level --><!-- first child - 2nd level -->
+
+<div style="mega-capsule">
+  <!--
+  <h2 class="mega-capsule-title">Academics</h2>
+-->
+
+  <!--<img alt="" class="mega-capsule-img" src='/getattachment/55c39529-d2e3-47c9-a502-98ba787c40eb/Academics-MM-Capsule?maxsidesize=400' />-->
+  <img class='mega-capsule-img' src='/getattachment/55c39529-d2e3-47c9-a502-98ba787c40eb/Academics-MM-Capsule?maxsidesize=400' />
+  <div class="mega-capsule-copy">
+
+    <!--Waldorf offers a curriculum to liberate the way students think so that they may develop a basic understanding and knowledge of how those in a variety of disciplines think and approach life.-->
+    <p>Waldorf offers a curriculum to liberate the way students think so that they may develop a basic understanding and knowledge of how those in a variety of disciplines think and approach life.</p>
+  </div>
+  
+  <p class='mega-capsule-link'><a class='hollow button white'  href='/academics'>Learn More</a></p>
+  
+  
+  
+</div>
+     
+<!-- /first child - 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/degree-programs">Degree Programs</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/academic-calendar">Residential Academic Calendar</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/core-requirements">Core Requirements</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/continuing-education">Continuing Education</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/academic-achievement-center">Academic Achievement Center</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/graduation-calculator">Graduation Calculator</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/honors-college">Honors College</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/library">Library</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/registrar">Registrar's Office</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/term-calendar-online-programs">Term Calendar - Online Programs</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/academics/transfer-friendly-institutions">Transfer-Friendly Institutions</a>
+
+<!-- /item 2nd level --><!-- footer 2nd level -->
+
+</li>
+</ul>
+
+<!-- /footer 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/admissions">Admissions</a>
+
+<!-- /item 1st level --><!-- header 2nd level -->
+<ul class="menu-dropdown mega">
+  <li class="mega-capsule-li">
+<!-- /header 2nd level --><!-- first child - 2nd level -->
+
+<div style="mega-capsule">
+  <!--
+  <h2 class="mega-capsule-title">Admissions @ Waldorf University</h2>
+-->
+
+  <!--<img alt="" class="mega-capsule-img" src='/getattachment/1ec5b655-6f61-42b6-9069-81a347213d03/Admissions-MM-Capsule?maxsidesize=400' />-->
+  <img class='mega-capsule-img' src='/getattachment/1ec5b655-6f61-42b6-9069-81a347213d03/Admissions-MM-Capsule?maxsidesize=400' />
+  <div class="mega-capsule-copy">
+
+    <!--Our tight-knit team of professors, coaches and administration work together to put you first. We believe that every student deserves a dedicated support system in the classroom &ndash; and everywhere else.-->
+    <p>Our tight-knit team of professors, coaches and administration work together to put you first. We believe that every student deserves a dedicated support system in the classroom &ndash; and everywhere else.</p>
+  </div>
+  
+  <p class='mega-capsule-link'><a class='hollow button white'  href='/admissions'>Learn More</a></p>
+  
+  
+  
+</div>
+     
+<!-- /first child - 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/admissions-process">Admissions Process</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/why-waldorf-university">Why Waldorf University?</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/requirements">Requirements</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/admissions-status">Admissions Status</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/visit-waldorf">Visit Waldorf</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/transfer-students">Transfer Students</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/international-students">International Students</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/special-terms">Special Terms</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/transcript-request-service">Transcript Request Service</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/military">Military</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/admissions/scholarships">Scholarships</a>
+
+<!-- /item 2nd level --><!-- footer 2nd level -->
+
+</li>
+</ul>
+
+<!-- /footer 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/about">About</a>
+
+<!-- /item 1st level --><!-- header 2nd level -->
+<ul class="menu-dropdown mega">
+  <li class="mega-capsule-li">
+<!-- /header 2nd level --><!-- first child - 2nd level -->
+
+<div style="mega-capsule">
+  <!--
+  <h2 class="mega-capsule-title">About Waldorf University</h2>
+-->
+
+  <!--<img alt="" class="mega-capsule-img" src='/getattachment/88cb5e12-0fe5-4f95-8fc9-c4214d3d4dab/About-MM-Capsule?maxsidesize=400' />-->
+  <img class='mega-capsule-img' src='/getattachment/88cb5e12-0fe5-4f95-8fc9-c4214d3d4dab/About-MM-Capsule?maxsidesize=400' />
+  <div class="mega-capsule-copy">
+
+    <!--Waldorf University is a friendly, private liberal arts school located centrally in beautiful Forest City, Iowa. For more than 100 years, Waldorf has been the cornerstone in the lives of thousands, setting the solid foundation for success among students, their families and the community.-->
+    <p>Waldorf University is a friendly, private liberal arts school located centrally in beautiful Forest City, Iowa. For more than 100 years, Waldorf has been the cornerstone in the lives of thousands, setting the solid foundation for success among students, their families and the community.</p>
+  </div>
+  
+  <p class='mega-capsule-link'><a class='hollow button white'  href='/about'>Learn More</a></p>
+  
+  
+  
+</div>
+     
+<!-- /first child - 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/history">History</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/letter-from-the-president">Letter from the President</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/mission">Mission</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/news">News</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/partners">Partners</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/administration-board">Board of Trustees</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/accreditation-licensure">Accreditation / Licensure</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/careers">Careers</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/map">Campus Map</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/about/social">Social</a>
+
+<!-- /item 2nd level --><!-- footer 2nd level -->
+
+</li>
+</ul>
+
+<!-- /footer 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/tuition-financial-aid">Tuition & Financing</a>
+
+<!-- /item 1st level --><!-- header 2nd level -->
+<ul class="menu-dropdown mega">
+  <li class="mega-capsule-li">
+<!-- /header 2nd level --><!-- first child - 2nd level -->
+
+<div style="mega-capsule">
+  <!--
+  <h2 class="mega-capsule-title"></h2>
+-->
+
+  <!--<img alt="" class="mega-capsule-img" src='/getattachment/72366357-c9ae-4485-b1b4-f6534a2f3fa9/Tuition-Financing-MM-Capsule?maxsidesize=400' />-->
+  <img class='mega-capsule-img' src='/getattachment/72366357-c9ae-4485-b1b4-f6534a2f3fa9/Tuition-Financing-MM-Capsule?maxsidesize=400' />
+  <div class="mega-capsule-copy">
+
+    <!--There are so many savings options at Waldorf. From academic or industry-specific scholarships to federal grants, we&rsquo;ll help you find the plan that works best with your budget.-->
+    <p>There are so many savings options at Waldorf. From academic or industry-specific scholarships to federal grants, we&rsquo;ll help you find the plan that works best with your budget.</p>
+  </div>
+  
+  
+  
+  
+  
+</div>
+     
+<!-- /first child - 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/online-programs-tuition">Online Programs Tuition</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/residential-programs-tuition">Residential Programs Tuition</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/federal-student-aid">Federal Student Aid</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/payment-info">Payment Information</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/scholarships">Scholarships</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/net-price-calculator">Net Price Calculator</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/policies">Policies</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/tuition-deposit-form">Tuition / Housing Deposit Form</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/tuition-financial-aid/private-loans">Private Alternative Loans</a>
+
+<!-- /item 2nd level --><!-- footer 2nd level -->
+
+</li>
+</ul>
+
+<!-- /footer 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/campus-life">Campus Life</a>
+
+<!-- /item 1st level --><!-- header 2nd level -->
+<ul class="menu-dropdown mega">
+  <li class="mega-capsule-li">
+<!-- /header 2nd level --><!-- first child - 2nd level -->
+
+<div style="mega-capsule">
+  <!--
+  <h2 class="mega-capsule-title"></h2>
+-->
+
+  <!--<img alt="" class="mega-capsule-img" src='/getattachment/12b88de7-d399-4404-9ee1-8e1ffd9ce14e/Campus-Life-MM-Capsule?maxsidesize=400' />-->
+  <img class='mega-capsule-img' src='/getattachment/12b88de7-d399-4404-9ee1-8e1ffd9ce14e/Campus-Life-MM-Capsule?maxsidesize=400' />
+  <div class="mega-capsule-copy">
+
+    <!--At Waldorf, there are many of ways to get involved on campus. Join one of Waldorf&#39;s 35 student groups, get involved in a theatre production or attend a gallery opening. The possibilities are endless.-->
+    <p>At Waldorf, there are many of ways to get involved on campus. Join one of Waldorf&#39;s 35 student groups, get involved in a theatre production or attend a gallery opening. The possibilities are endless.</p>
+  </div>
+  
+  <p class='mega-capsule-link'><a class='hollow button white'  href='/campus-life'>Learn More</a></p>
+  
+  
+  
+</div>
+     
+<!-- /first child - 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/athletics">Athletics</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/music">Music</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/fine-arts-weekend">Fine Arts Weekend</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/theatre">Theatre</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/theatre-workshop-weekend">Theatre Workshop Weekend</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/art-gallery">Art Gallery</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/boman-fine-arts-center">Boman Fine Arts Center</a>
+
+<!-- /item 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 2nd level -->
+
+<a href="/campus-life/bookstore">Bookstore</a>
+
+<!-- /item 2nd level --><!-- footer 2nd level -->
+
+</li>
+</ul>
+
+<!-- /footer 2nd level --><!-- sep 1st level -->
+
+</li>
+
+<li class="menu-divider">//</li>
+
+<li>
+  
+<!--/ sep 1st level --><!-- item 1st level -->
+
+<a class="text-uc" href="/request-information">Request Information</a>
+
+<!-- /item 1st level --><!-- footer 1st level -->
+      
+      </li>
+    </ul>
+  </div>
+
+<!-- /footer 1st level -->
+</div>
+              </nav>
+              
+              <nav id="mobile-menu-wrap" class="hide-for-medium">
+                <div class="title-bar bg-purple" data-responsive-toggle="wu-mobile-menu">
+                  <button class="menu-icon" type="button" aria-label="menu" data-toggle></button>
+                  <div class="title-bar-title">Menu</div>
+                </div>
+                
+                
+	<ul id="wu-mobile-menu">
+		<li>
+			<a href="/academics/degree-programs">Academics</a>
+			<ul>
+				<li>
+					<a href="/academics">Academics</a>
+				</li>
+				<li>
+					<a href="/degree-programs">Degree Programs</a>
+				</li>
+				<li>
+					<a href="/academics/academic-calendar">Residential Academic Calendar</a>
+				</li>
+				<li>
+					<a href="/academics/core-requirements">Core Requirements</a>
+				</li>
+				<li>
+					<a href="/academics/continuing-education">Continuing Education</a>
+				</li>
+				<li>
+					<a href="/faculty-staff/departments/academic-achievement-center">Academic Achievement Center</a>
+				</li>
+				<li>
+					<a href="/academics/graduation-calculator">Graduation Calculator</a>
+				</li>
+				<li>
+					<a href="/academics/honors-college">Honors College</a>
+				</li>
+				<li>
+					<a href="/faculty-staff/departments/library">Library</a>
+				</li>
+				<li>
+					<a href="/academics/registrar">Registrar&#39;s Office</a>
+				</li>
+				<li>
+					<a href="/academics/term-calendar-online-programs">Term Calendar - Online Programs</a>
+				</li>
+				<li>
+					<a href="/academics/transfer-friendly-institutions">Transfer-Friendly Institutions</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/admissions">Admissions</a>
+			<ul>
+				<li>
+					<a href="/admissions/admissions-process">Admissions Process</a>
+				</li>
+				<li>
+					<a href="/admissions">Admissions</a>
+				</li>
+				<li>
+					<a href="/admissions/why-waldorf-university">Why Waldorf University?</a>
+				</li>
+				<li>
+					<a href="/admissions/requirements">Requirements</a>
+				</li>
+				<li>
+					<a href="/admissions/admissions-status">Admissions Status</a>
+				</li>
+				<li>
+					<a href="/admissions/visit-waldorf">Visit Waldorf</a>
+				</li>
+				<li>
+					<a href="/admissions/transfer-students">Transfer Students</a>
+				</li>
+				<li>
+					<a href="/admissions/international-students">International Students</a>
+				</li>
+				<li>
+					<a href="/admissions/special-terms">Special Terms</a>
+				</li>
+				<li>
+					<a href="/admissions/transcript-request-service">Transcript Request Service</a>
+				</li>
+				<li>
+					<a href="/admissions/military">Military</a>
+				</li>
+				<li>
+					<a href="/admissions/tuition-financial-aid/scholarships">Scholarships</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/about">About</a>
+			<ul>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/about/history">History</a>
+				</li>
+				<li>
+					<a href="/about/letter-from-the-president">Letter from the President</a>
+				</li>
+				<li>
+					<a href="/about/mission">Mission</a>
+				</li>
+				<li>
+					<a href="/about/news">News</a>
+				</li>
+				<li>
+					<a href="/about/partners">Partners</a>
+				</li>
+				<li>
+					<a href="/about/administration-board">Board of Trustees</a>
+				</li>
+				<li>
+					<a href="/about/accreditation-licensure">Accreditation / Licensure</a>
+				</li>
+				<li>
+					<a href="/about/careers">Careers</a>
+				</li>
+				<li>
+					<a href="/map">Campus Map</a>
+				</li>
+				<li>
+					<a href="/about/social">Social</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/tuition-financial-aid">Tuition &amp; Financing</a>
+			<ul>
+				<li>
+					<a href="/tuition-financial-aid/tuition-rates/online">Online Programs Tuition</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/tuition-rates/residential">Residential Programs Tuition</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/federal-student-aid">Federal Student Aid</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/payment-info">Payment Information</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/scholarships">Scholarships</a>
+				</li>
+				<li>
+					<a href="https://npc.collegeboard.org/student/app/waldorf">Net Price Calculator</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/policies">Policies</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/tuition-deposit-form">Tuition / Housing Deposit Form</a>
+				</li>
+				<li>
+					<a href="/tuition-financial-aid/private-loans">Private Alternative Loans</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/campus-life">Campus Life</a>
+			<ul>
+				<li>
+					<a href="http://www.waldorfwarriors.com/">Athletics</a>
+				</li>
+				<li>
+					<a href="/campus-life/music">Music</a>
+				</li>
+				<li>
+					<a href="/campus-life/fine-arts-weekend">Fine Arts Weekend</a>
+				</li>
+				<li>
+					<a href="/campus-life/theatre">Theatre</a>
+				</li>
+				<li>
+					<a href="/campus-life/theatre-workshop-weekend">Theatre Workshop Weekend</a>
+				</li>
+				<li>
+					<a href="/campus-life/art-gallery">Art Gallery</a>
+				</li>
+				<li>
+					<a href="/campus-life/boman-fine-arts-center">Boman Fine Arts Center</a>
+				</li>
+				<li>
+					<a href="/faculty-staff/departments/bookstore">Bookstore</a>
+				</li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/request-information">Request Info</a>
+		</li>
+		<li>
+			<a href="/contact">Contact</a>
+		</li>
+
+	</ul>
+
+
+
+              </nav>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============== END HEADER MENU =============== -->
+      
+      
+      <div id="content-start" class="expanded row collapse text-uc zero-top site-content-wrap">
+        
+        
+
+
+
+
+
+<!-- //////////////////// page content wrapper ///////////////////////// -->
+
+
+
+<!-- full width page header -->
+<div class="row expanded collapse banner-header">
+  
+  <div class="row row-fixed collapse banner-title-wrap">
+    <p class="banner-title">Health &amp; Counseling Services
+
+
+
+</p>
+  </div>
+  
+  <div class="banner-header-img-wrap">
+    <img id="p_lt_ctl03_pageplaceholder_p_lt_zonePageHeaderImg_PageBanner_ucEditableImage_imgImage" src="/Waldorf2016/media/waldorf-2016-assets/page-headers/pghd-grass-group.jpg" alt="Students on campus sitting" />
+
+
+  </div>
+  
+</div><!-- /full width page header -->
+
+<div class="row row-fixed collapse">
+  <div class="page-breadcrumbs">
+    <div class="breadcrumbs width-100">
+  <a href="/"><img alt="Home" src="/Waldorf2016/media/waldorf-2016-assets/icons/breadcrumbs-icon-home.png" ></a>
+  <span class="breadcrumb-trail">&gt;</span>
+   <a href="/faculty-staff" class="CMSBreadCrumbsLink">Faculty &amp; Staff</a> <span class="breadcrumb-trail">&gt;</span> <a href="/faculty-staff/directory/by-department" class="CMSBreadCrumbsLink">Department Directory</a> <span class="breadcrumb-trail">&gt;</span> <a href="/faculty-staff/departments/health-services" class="CMSBreadCrumbsLink">Health &amp; Counseling Services</a> <span class="breadcrumb-trail">&gt;</span> <span  class="CMSBreadCrumbsCurrentItem">COVID-19 Guidance</span>
+</div>
+  </div>
+</div>
+
+<div class="row row-fixed collapse page-content-wrap">
+  
+  <div class="large-8 medium-9 small-12 columns page-content">
+    
+    <main>
+		
+      <h1 class="page-title">Guidance for Online Students
+
+
+
+</h1><div class="page-copy"><p>All courses for online degree programs will continue without interruption. If you are impacted by COVID-19 or have any questions, please contact your student services representative.</p>
+
+<hr />
+
+
+
+</div><h1 class="page-title">Guidance for Residential Students
+
+
+
+</h1><div class="page-copy"><span style="color: inherit; font-family: hypatia-sans-pro; font-size: 1.7rem;">​​​​</span><font size="6">Coronavirus Update 7/2/2020:</font>
+
+<p>Students. Please reference&nbsp;<a href="https://www.waldorf.edu/fall-arrivals" target="_blank">waldorf.edu/fall-arrivals</a>&nbsp;for important move-in/check-in dates, times and additional information.</p>
+
+<p>Don&#39;t forget we do have a&nbsp;<a href="/faculty-staff/departments/health-services/covid-19-guidance/faq-for-campus-students"><u><font color="#000080">COVID-19 FAQ</font></u></a>&nbsp;page available. Please take a moment to visit this page, familiarize yourself with the subjects covered, and utilize this reference when you have questions.</p>
+
+<p>4:45<em> p.m.</em></p>
+
+<p>&nbsp;</p>
+
+<h2><img alt="Call-Ahead-Final.jpg" src="/getattachment/Faculty-Staff/Departments/Health-Services/COVID-19-Guidance/Call-Ahead-Final.jpg.aspx;?width=249&amp;height=247" style="margin: auto 10px; width: 249px; height: 247px; float: left;" title="Call-Ahead-Final.jpg" />I&#39;m sick. What should I do?</h2>
+
+<p>As is normal this time of year, we are seeing cases of influenza, colds and other respiratory illnesses in our students, faculty and staff.&nbsp;If you develop a fever, cough or difficulty breathing, if you have been in close contact with a person known to have COVID-19 or if you have recently traveled to an area with ongoing community spread, please call ahead before deciding to go in.</p>
+
+<p><strong>Students:</strong> Call the Student Health Center at 641.585.8157 or Nurse Mary at 641.590.0619</p>
+
+<p><strong>Faculty &amp; Staff:</strong> Call the Student Health Center, Nurse Mary or call your primary care provider.</p>
+
+<h2>What to do to stay healthy?</h2>
+
+<p>Waldorf recommends the following CDC prevention guidelines, including:<img alt="Washing Hands.jpg" src="/getattachment/Faculty-Staff/Departments/Health-Services/COVID-19-Guidance/GettyImages-1166835058.jpg.aspx;?width=250&amp;height=166" style="margin: 20px 10px; width: 250px; height: 166px; float: right;" title="GettyImages-1166835058.jpg" /></p>
+
+<ul>
+	<li>Wash your hands often with soap and water for at least 20 seconds several times a day</li>
+	<li>Avoid people who are sick</li>
+	<li>Cover your mouth and nose with the crook of your elbow or tissue when you&nbsp;cough or sneeze</li>
+	<li>Avoid touching your eyes, nose and mouth</li>
+	<li>Clean and disinfect frequently touched objects and surfaces</li>
+	<li>Stay home when you are sick, except to get medical care</li>
+</ul>
+
+<h4>Additional Information about COVID-19 can be found on the following websites:</h4>
+
+<ul>
+	<li><a href="https://idph.iowa.gov" target="_blank">Iowa Department of Health</a></li>
+	<li><a href="https://www.cdc.gov" target="_blank">Center for Disease Control</a></li>
+	<li><a href="http://www.acha.org/ACHA/Resources/Topics/COVID-19_FAQs.aspx" target="_blank">American College Health Association COVID-19 FAQ</a></li>
+</ul>
+
+
+
+
+</div><div class="row expanded"><div class="page-copy"></div><div class="page-copy"><div class="small-2 large-4 columns">
+
+
+
+</div><div class="small-2 large-4 columns">
+
+
+
+</div><div class="small-2 large-4 columns">
+
+
+
+</div></div>
+</div><div class="row expanded">
+
+
+
+</div>
+
+
+
+
+     
+    </main>
+     
+  </div>
+  
+  <div class="large-4 medium-3 small-12 columns page-sidebar">
+    
+    <section class="page-sidebar-nav">
+		
+      <ul>
+	<li><a href="/faculty-staff/departments/health-services/covid-19-guidance/faq-for-campus-students" target="_blank">COVID-19 FAQs</a></li>
+	<li><a href="/faculty-staff/departments/health-services/covid-19-guidance/covid-19-update-archive">Previous COVID-19 Updates</a><a href="/faculty-staff/departments/health-services/covid-19-guidance/faq-for-campus-students">&nbsp;</a></li>
+</ul>
+
+<h4 align="LEFT" dir="LTR">Suspended/Modified&nbsp;Physical Access:</h4>
+
+<ul>
+	<li>Registrar</li>
+	<li>Foundation/Alumni</li>
+	<li>Business Office</li>
+	<li>Career Center</li>
+	<li>Library</li>
+</ul>
+
+<h4>Cancelled COVID-19 Events:</h4>
+
+<ul>
+	<li>July 10 W.O.A.R. event transitioned to virtual event</li>
+	<li>Dinner &amp; Jazz Concert</li>
+	<li>Junior Preview Day</li>
+	<li>Spring Spectacular: Instrumental &amp; Vocal Ensemble Concerts</li>
+	<li>2020 All-Sports Recognition event &ndash; stay tuned for a virtual event</li>
+	<li>Theatre Workshop Weekend, April 17-18</li>
+	<li>Next to Normal, April 15-18</li>
+	<li>Comm/Honors Europe Trip</li>
+	<li>Fac/Staff Coffee</li>
+	<li>HPE Trip to Sanford in May</li>
+	<li>2020 Spring Choir Tour</li>
+	<li>MVP Sexual Violence Presentation on April 5</li>
+	<li>Alpha Psi Omega dance-a-thon on April 4</li>
+	<li>&nbsp;2020 Art and Creative Writing Festival</li>
+	<li>Taste of the World</li>
+	<li>DVWS: Author Jane Kurtz</li>
+	<li>Zach Feldt Senior Vocal Recital&nbsp;</li>
+	<li>Makenzie Davis Senior Recital&nbsp;</li>
+	<li>2020 Spring Mock Interviews</li>
+	<li>WCAS &ndash; Shaun Johnson Big Band Experience</li>
+	<li>Music Career Day &nbsp;&ndash; Changed to virtual event</li>
+	<li>All Athletic Spring Sports</li>
+</ul>
+
+
+
+
+
+     
+    </section>
+     
+  </div>
+  
+
+
+</div>
+<!-- //////////////////// page content wrapper ///////////////////////// -->
+        
+      </div>
+      
+      
+      <!-- ============ END PAGE CONTENT ==============  -->
+      
+      <footer class="expanded row collapse color-white site-footer">
+        
+        <div class="row row-fixed bg-footer">
+          
+          <div class="small-12 pad-2">
+            
+            <div class="text-center medium-text-right footer-address-wrap">
+              <h2 class="show-for-medium footer-title">WALDORF UNIVERSITY</h2>
+              <img class="footer-logo hide-for-medium" src="/Waldorf2016/media/waldorf-2016-assets/logos/wu-small-footer-logo.png" alt="Waldorf University">
+              <p class="footer-address">106 South 6th St, Forest City, IA 50436</p>              
+              <p class="footer-phone">
+                877.267.2157 online<br />800.292.1903 residential</p>
+            </div>
+            
+            
+            <nav class="menu-centered text-uc show-for-large">
+              <ul class="menu color-white footer-menu">
+                <li><a href="/">Home</a></li>
+                <!--<li class="footer-nav-separator">//</li>
+                <li><a href="/calendar">Calendar</a></li>-->
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/faculty-staff/departments-(1)/health-safety/emergency-safety-procedures">Campus Safety</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/COVID-19">COVID-19 Updates</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/download-information">Catalog</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/contact">Contact</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/ferpa">FERPA</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/privacy">Privacy</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/site-map">Site Map</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/disclosure">Disclosure</a></li>
+              </ul>
+            </nav>
+            
+            <nav class="menu-centered text-uc show-for-medium-only">
+              <ul class="menu color-white footer-menu zero-bottom">
+                <li><a href="/">Home</a></li>
+                <!--<li class="footer-nav-separator">//</li>
+                <li><a href="/calendar">Calendar</a></li>-->
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/faculty-staff/departments-(1)/health-safety/emergency-safety-procedures">Safety</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/COVID-19">COVID-19 Updates</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/contact">Contact</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/ferpa">FERPA</a></li>
+              </ul>
+              
+              <ul class="menu color-white footer-menu zero-top">
+                <li><a href="/consumer-information/privacy">Privacy</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/site-map">Site Map</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/disclosure">Disclosure</a></li>
+              </ul>
+            </nav>
+            
+            <nav class="menu-centered text-uc hide-for-medium">
+              <ul class="menu color-white footer-menu zero-bottom">
+                <li><a href="/">Home</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/faculty-staff/departments-(1)/health-safety/emergency-safety-procedures">Safety</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+              
+              <ul class="menu color-white footer-menu zero-top">
+                <li><a href="/consumer-information/ferpa">FERPA</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/privacy">Privacy</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/site-map">Site Map</a></li>
+                <li class="footer-nav-separator">//</li>
+                <li><a href="/consumer-information/disclosure">Disclosure</a></li>
+              </ul>
+              
+              
+            </nav>
+            
+            <p class="text-center text-uc pad-top-2"><small>
+              <span class="color-white">&copy; Waldorf University 2020</span><br>
+              <a class="color-white" href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a></small></p>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+
+<!-- call modern jQuery and Foundation -->
+
+
+<script src="/js/foundation-min.js"></script>
+<script src="/js/what-input.js"></script>
+<script src="/js/slider.js"></script>
+<script src="/js/mega-menu.js"></script>
+<script src="/js/app.js"></script>
+<script src="/CSEGWebServices/Content/lib/kendoui-pro-2014.3.1119/js/kendo.all.min.js"></script>
+<script src="/js/getTerms.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.plus-names.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script>
+  jQuery( function() {
+    
+    function startFade() {
+      jQuery( "#chat-floater" ).animate( { "background-color": "#46166b" }, 2000 ).animate( { "background-color": '#000000' }, 2000, endFade );
+    }
+    
+    function endFade() {
+      jQuery( "#chat-floater" ).animate( { "background-color": "#000000" }, 2000 ).animate( { "background-color": '#46166b' }, 2000, startFade );
+    }
+    
+    startFade();
+    
+  } );
+</script>
+
+<script>
+  ( function( $, window, document, undefined ) { // use $ to refer to jQuery  // $(document).addClass('test');
+    
+    $( 'a.gallery' ).featherlightGallery( {
+      gallery: {
+        fadeIn: 300,
+        fadeOut: 300
+      },
+      openSpeed: 300,
+      closeSpeed: 300
+    } );
+    $( 'a.gallery2' ).featherlightGallery( {
+      gallery: {
+        next: 'next »',
+        previous: '« previous'
+      },
+      variant: 'featherlight-gallery2'
+    } );
+    $( 'a.gallery3' ).featherlightGallery( {
+      gallery: {
+        next: 'next »',
+        previous: '« previous'
+      },
+      variant: 'featherlight-gallery3'
+    } );
+    $( 'a.gallery4' ).featherlightGallery( {
+      gallery: {
+        next: 'next »',
+        previous: '« previous'
+      },
+      variant: 'featherlight-gallery4'
+    } );
+    $.featherlightGallery.prototype.afterContent = function() {
+      debugger
+        var caption = this.$currentTarget.find('img').attr('alt');
+      this.$instance.find('.caption').remove();
+      $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+    };
+  } )( jQuery, window, document );
+  
+</script>
+    
+    
+
+<script type="text/javascript">
+	//<![CDATA[
+WebServiceCall('/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/Faculty-Staff/Departments/Health-Services/COVID-19-Guidance","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+</script>  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="kb/kLLA9wKLNiIUrGoXB6fzXv6kzcqS2H+TqJ4TmFk/tf7rv+1zJPDcKGk4NICzr6vK7nTTs2nYmlOmm4F5D9lcfZU8jJcHj/PoVHAtEHEeQOVI4z2aPrRTGVY9blNC8VPk1qx7d4O8Ut5HCOqjwKpDO4iNGWEmNQoQka7ulqyP8BhTmTOGj/zZhNvdJP2E+MSTeYDefGS/MD3NWrkina3uYXr1oKrgfIpJ0rTgKMD+zjksJV23cgyYwKKFZdYZ5xZfYujwhWj+a1p5ojbpX3lDYTYpRct4vVRuG0ZfeNI05emLMQZOz0/YgplonTmDqZq/rYpJg69SvR1r4NB5K+yGxFRpHcIjEOpyzyBAFatbHS4bHhWOw72PINvPMdEy+zGsPC0ZerxFrvjStCQcOqKoI4RtGyhORsZP7DJKm2Nk/WwxBimzUvNX6yJoy1Xnhw7zAFOLFqsfM2aoHIb8SAumiorqfnl+TCxjOKpIIKB12lp0Dl3KgS6Gqomka1vQ8izNDVV2ezlZARv4eq3uIAQ==" />
+  <script type="text/javascript">
+      //<![CDATA[
+      if (window.WebForm_InitCallback) {
+        __theFormPostData = '';
+        __theFormPostCollection = new Array();
+        window.WebForm_InitCallback();
+      }
+      //]]>
+    </script>
+  </form>
+</body>
+</html>

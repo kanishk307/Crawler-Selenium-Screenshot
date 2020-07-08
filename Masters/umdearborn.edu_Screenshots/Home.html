@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!-- Sorry no IE7 support! -->
+<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"613f8bbc03",applicationID:"222393352"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon-1_0.ico" />
+<meta http-equiv="ImageToolbar" content="false" />
+<meta name="description" content="Guided by scientific data and public health guidance, UM-Dearborn is committed to student success while protecting health and safety by minimizing the spread of COVID-19." />
+<meta name="referrer" content="unsafe-url" />
+<link rel="canonical" href="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response" />
+<link rel="shortlink" href="https://umdearborn.edu/node/276740" />
+<meta property="og:url" content="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response" />
+<meta property="og:title" content="UM-Dearborn COVID-19 Response" />
+<meta property="og:description" content="Guided by scientific data and public health guidance, UM-Dearborn is committed to student success while protecting health and safety by minimizing the spread of COVID-19." />
+<meta property="og:updated_time" content="2020-06-22T10:47:39-04:00" />
+<meta property="og:image" content="/sites/default/files/styles/opengraph/public/group-library/341/umdearbornseal.jpg?itok=sWtppxFL" />
+<meta property="og:image:secure_url" content="https://umdearborn.edu/sites/default/files/styles/opengraph/public/group-library/341/umdearbornseal.jpg?itok=sWtppxFL" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@UM_Dearborn" />
+<meta name="twitter:url" content="https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response" />
+<meta name="twitter:title" content="UM-Dearborn COVID-19 Response" />
+<meta name="twitter:image" content="https://umdearborn.edu//sites/default/files/group-library/341/umdearbornseal.jpg" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:image:alt" content="UM-Dearborn seal" />
+<meta name="google-site-verification" content="Lul35pOnYAT2vi40LHOGZ--3PqnuGFuz0v4sn2D3stY" />
+  <title>UM-Dearborn COVID-19 Response</title>
+  <link rel="stylesheet" href="/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_Kl6_OlLQqWzLL893X3cJhN3ioo8T7E1iWpGsSy9GLv8.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_LZtQExS9a9zTd8_E39SZaht8gG6iajoIjYjinN2B7Mo.css" />
+<link rel="stylesheet" href="/sites/default/files/css/css_BTbypzlNYVbptuza8qzKwXCnB4TjuEzUY43Cz2FsXVA.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700,700i" />
+<link rel="stylesheet" href="/sites/default/files/css/css_L3HIGPsOKcMjf3KGAnYggXX-hkl1nV1FQ4YmuxPvE8Q.css" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&amp;display=swap&amp;qd5okv" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;display=swap&amp;qd5okv" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.type='text/javascript';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTB2XX');</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")</script>
+<script src="/sites/default/files/js/js_uJR3Qfgc-bGacxkh36HU9Xm2Q98e_V5UWlFISwie5ro.js"></script>
+<script src="/sites/default/files/js/js_RXLcCqK_EyMH02L2ujauqxT6hS1onWzZ-icgeKbaKGI.js"></script>
+<script src="/sites/default/files/js/js_a8T84gWk8lpEIw7vxISF70zeDUAD6rEuDXtl98Pv7Kg.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="/sites/default/files/js/js_MkWmx2MZzzJRXtTTne5rZbLo3ckQPCKzuZ8eA9Jf0Q8.js"></script>
+<script>var $buoop = {c:2};</script>
+<script src="/sites/default/files/js/js_LYEoqsdFaBO_vsX6oFc_90il5_OdEtQgYIp6DQ5xVcs.js"></script>
+<script src="/sites/default/files/js/js_4JqfqD8H1E27wZYEiZimzcR6HQ21RpilVmOzCE6d1_Y.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"panda_theme","theme_token":"HMUsBx14EExYUgUcmGxtzR-yyCqyKXiKD8lmRbk1Vtg","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.js":1,"0":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"1":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/easing\/jquery.easing.min.js":1,"sites\/all\/libraries\/slick\/slick\/slick.min.js":1,"sites\/all\/modules\/contrib\/geofield_gmap\/geofield_gmap.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/custom\/panda\/panda.js":1,"sites\/all\/modules\/custom\/panda_news\/panda_news.js":1,"2":1,"sites\/all\/modules\/contrib\/async_js\/async_js.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"3":1,"sites\/all\/modules\/contrib\/slick\/js\/slick.load.min.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/themes\/zurb_foundation\/js\/vendor\/modernizr.js":1,"sites\/all\/themes\/panda_theme\/js\/foundation.min.js":1,"sites\/all\/themes\/panda_theme\/js\/libs.min.js":1,"sites\/all\/themes\/panda_theme\/js\/panda_theme.js":1,"sites\/all\/themes\/panda_theme\/js\/panda_hamburger.js":1,"sites\/all\/themes\/panda_theme\/js\/checkbox.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/slick\/slick\/slick.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/geofield_gmap\/geofield_gmap.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/custom\/panda\/panda.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"https:\/\/fonts.googleapis.com\/css?family=Zilla+Slab:400,400i,700,700i":1,"sites\/all\/themes\/panda_theme\/css\/normalize.css":1,"sites\/all\/themes\/panda_theme\/css\/foundation.min.css":1,"sites\/all\/themes\/panda_theme\/css\/panda_theme.css":1,"\/\/fonts.googleapis.com\/css?family=Montserrat:400,400i,500,500i,700,700i\u0026display=swap":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,400i,700,700i\u0026display=swap":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleCSE":{"cx":"016977350206647639974:352ezmznld4","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":true},"better_exposed_filters":{"views":{"hero_carousel":{"displays":{"default":{"filters":[]}}},"news_basic_list":{"displays":{"slick_view":{"filters":{"field_news_interest_area_tid":{"required":false},"field_news_organizational_unit_tid":{"required":false}}}}}}},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"arrows":true,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.35,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","useTransform":false,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true,"mousewheel":false},"urlIsAjaxTrusted":{"\/":true},"field_group":{"div":"default","hidden":"default","html-element":"full"},"async_js":{"javascript":{"\/\/browser-update.org\/update.min.js":{"data":"\/\/browser-update.org\/update.min.js","callbacks":[],"fade":[],"container":null,"dependencies":[],"dependents":[],"queued":false,"loaded":false}},"timeout":1000,"finalCallback":""}});</script>
+  <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+
+@media only screen and (max-width: 64rem) {
+.view-hero-carousel .feature-copy h2 {
+    font-size: 2.75rem !important;
+}
+}
+
+@media only screen and (min-width: 991px) {
+.view-hero-carousel .feature-copy {
+    margin-top: 0;
+    bottom: 0;
+    height: 285px;
+    top: 66%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+}
+
+@media only screen and (min-width: 80rem) {
+.view-hero-carousel .feature-copy {
+  top: 74%;
+}
+}
+
+.view-hero-carousel .feature-copy a {
+    display: none;
+}
+
+.breadcrumbs: { display: none; }
+
+div.topic-tile-text {text-align: left;
+    padding: 1.5rem; }
+
+.node-video-with-callout-quote {    border: 5px solid #ffcb05;
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+.node-topic-image-tiles .field-tiles .topic-tile-headline {
+    font-size: 1.5rem;
+}
+
+</style></head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-276740 node-type-page page-offices site-root-283702" >
+  <div class="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTB2XX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+<div role="document" class="page">
+
+  
+  
+  <header class="has-grey-bar site-root-283702">
+    <div class="header-grey-bar">
+      <div class="row">
+        <div>
+          <nav id="search-nav" class="search medium-3 columns right">
+            <h2 class="show-for-sr">Site Search</h2>
+            <form action="/" method="post" id="panda-google-cse-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-container"><div class="form-item form-type-textfield form-item-query">
+ <input aria-label="Search" placeholder="enter search" type="text" id="edit-query" name="query" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<button id="edit-sa" name="op" value="Search" type="submit" class="form-submit">Search</button>
+</div><input type="hidden" name="form_build_id" value="form-zbueWwsuNQPM3ysJtheJKegMBFmm9tH9qUxMbd6cR30" />
+<input type="hidden" name="form_id" value="panda_google_cse_form" />
+</div></form>          </nav>
+
+          <div class="panda-site-root-top-bar"><ul class="panda-site-root-menu-one"></ul><ul class="panda-site-root-menu-two"><li><a href="https://leadersandbest.umich.edu/find/#!/give/basket/fund/329434">Support COVID-19 Impacted Students</a></li><li><a href="/">UM-Dearborn Home</a></li></ul></div>        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="siteroot-logo small-12 columns">
+        <div id="logo">
+          <a title="Home" rel="home" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response">
+            <picture><source srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1.png" media="(min-width: 768px)"><source srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1_0.png" media="(min-width: 0px)"><img  alt="UM-Dearborn" title="" class="logo" srcset="/sites/default/files/header-logo/umdearborn_horizontal_white_nobg_1.png"/></picture>          </a>
+        </div>
+
+              </div>
+    </div>
+
+    
+          <nav id="primary-nav" aria-label="primary-nav" class="hamburger-panel mainmenu-hamburger-panel
+        block-panda-main-menu" data-topbar  data-options="mobile_show_parent_link:true" style="background-color: #9b9a6d;">
+        <button class="hamburger hamburger--squeeze" aria-label="Main menu" aria-controls="mainmenu-hamburger-content" aria-expanded="false" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+          <span class="hamburger-label" id="primary-nav-label">Main Menu &amp; Search</span>
+        </button>
+        <div id="mainmenu-hamburger-content" class="content menu main-menu-content row small-12">
+            
+      
+    <ul><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/guiding-principles" class="">Guiding Principles</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/faculty-staff" class="">Faculty &amp; Staff</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/students" class="">Students</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/prospective-students" class="">Prospective Students</a></li><li><span class="hidden-for-small-only hidden-for-medium-only"></span><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/resources" class="">Resources</a></li></ul>  
+          </div>
+      </nav>
+        </header>
+
+  
+  
+  
+  <main id="main-content" class="main l-main">
+    
+    
+    
+          <div class="row">
+        <div class="columns">
+          
+                  </div>
+      </div>
+    
+    
+
+    
+      
+      
+    <article class="node-276740 node node-page view-mode-full" >
+
+<!-- Print title and breadcrumb above lead section only on events page. -->
+            <div id="lead" class="lead-wrapper">
+        
+  <div class="node-283744 node node-hero-carousel view-mode-default">
+
+
+            
+  
+  <div class="view view-hero-carousel view-id-hero_carousel view-display-id-default view-dom-id-e320b9cf61a0b66782effbd9a2044e6f">
+        
+  
+  
+      <div class="view-content">
+            <div class="slick slick--view--hero-carousel slick--view--hero-carousel--default slick--optionset--hero-carousel unslick" id="slick-views-hero-carousel-2">
+  
+                              
+          
+  <div class="image">
+    <picture  title="UM-Dearborn campus">
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/hero_carousel_desktop/public/group-library/341/umdearborn.jpg?itok=qRZ-AOBn&amp;timestamp=1497559311 1x, /sites/default/files/styles/hero_carousel_desktop_2x/public/group-library/341/umdearborn.jpg?itok=1gAfSNyF&amp;timestamp=1497559311 2x" media="(min-width: 1024px)" />
+<source srcset="/sites/default/files/styles/hero_carousel_tablet/public/group-library/341/umdearborn.jpg?itok=KsCCCPIa&amp;timestamp=1497559311 1x, /sites/default/files/styles/hero_carousel_tablet_2x/public/group-library/341/umdearborn.jpg?itok=EmoSV8-w&amp;timestamp=1497559311 2x" media="(min-width: 768px)" />
+<source srcset="/sites/default/files/styles/hero_carousel_mobile/public/group-library/341/umdearborn.jpg?itok=S_x6USDJ&amp;timestamp=1497559311 1x, /sites/default/files/styles/hero_carousel_mobile_2x/public/group-library/341/umdearborn.jpg?itok=Y2tJFxTh&amp;timestamp=1497559311 2x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/hero_carousel_desktop/public/group-library/341/umdearborn.jpg?itok=qRZ-AOBn&amp;timestamp=1497559311" alt="University of Michigan Dearborn seal on campus" title="UM-Dearborn campus" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="/sites/default/files/styles/hero_carousel_desktop/public/group-library/341/umdearborn.jpg?itok=qRZ-AOBn&amp;timestamp=1497559311 1619w" alt="University of Michigan Dearborn seal on campus" title="UM-Dearborn campus" />
+<!-- <![endif]-->
+</picture>  </div>
+    
+          <div class="hero-wrapper">
+<div class="feature-copy">
+<h2>Go Safe - Go Blue - Go Dearborn!</h2>
+<p>
+  Our guide to providing a transformative UM-Dearborn experience while keeping our community safe and healthy.
+</p>
+<p>
+  <a href="/"><span>/</span><i class=""></i></a></p>
+</div>
+</div>              
+                      
+  </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div>
+        
+    
+</div>
+      </div>
+      
+  <div class="row content-wrapper">
+
+              
+    <div class="content-sections columns ">
+                        <div class="row title-and-breadcrumb-wrapper">
+                          <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <h2 class="show-for-sr">You are here</h2><ul><li><a href="/home">Home</a></li><li><a href="/offices">Offices</a></li><li><a href="/offices/external-relations">External Relations</a></li><li><a href="/offices/external-relations/key-issues">Key Issues</a></li><li class="current"><a href="#">UM-Dearborn COVID-19 Response</a></li></ul>              </nav>
+            
+                        <h1 class="node-title">UM-Dearborn COVID-19 Response</h1>
+                      </div>
+              
+              <div class="show-for-small-only">
+                  </div>
+      
+      
+  <div class="node-283703 node node-copy-image view-mode-default">
+
+
+            
+  
+  
+  <div class="field-copy field-wrapper">
+    <p>Guided by scientific data and public health guidance, University of Michigan-Dearborn is committed to student success, academic excellence and creating access and opportunity for qualified students while protecting health and safety by minimizing the spread of COVID-19, both within our campus community and throughout our region. </p>
+  </div>
+
+        
+    
+</div>
+  <div class="node-283704 node node-topic-tiles-image view-mode-default">
+
+
+                      <h2 class="node-title">Important Things to Know </h2>
+              
+  
+  
+  <div class="field-copy field-wrapper">
+    <p>Before coming to campus, all UM-Dearborn faculty, staff, student employees and research assistants must complete the U-M online training on MyLinc: COVID-19: Working Safely at U-M and the daily health screening.</p>
+<p><em>You must be logged into MyLinc to review the COVID-19 course.</em></p>
+  </div>
+<div class="field-links-v2 field-wrapper"><ul  class="field-links-v2 large-block-grid-2 medium-block-grid-2 small-block-grid-1 "><li><a href="https://maislinc.umich.edu/core/pillarRedirect?relyingParty=LM&amp;url=app/management/LMS_ActDetails.aspx%3FActivityId%3D47721%26UserMode%3D0">Training: COVID-19: Working Safely at U-M<i class=""></i></a></li><li><a href="https://healthscreen.umich.edu/">Daily Health Screening<i class=""></i></a></li></ul></div>
+        
+    
+</div>
+  <div class="node-283705 node node-video-with-callout-quote view-mode-default">
+
+
+            
+  
+  <div class="group-video-wrapper large-6 columns medium-6 columns">
+  <div class="field-vid field-wrapper">
+    <figure>
+  
+<div class="embedded-video">
+  <div class="player">
+    <iframe class="" width="640" height="360" src="//www.youtube.com/embed/4RD3jimxFIc?width=640&amp;height=360&amp;autoplay=0&amp;vq=large&amp;rel=0&amp;controls=1&amp;autohide=2&amp;showinfo=1&amp;modestbranding=0&amp;theme=dark&amp;iv_load_policy=1&amp;wmode=opaque" frameborder="0" allowfullscreen></iframe>  </div>
+</div>
+</figure>  </div>
+</div><div class="group-quotation-wrapper large-6 columns medium-6 columns">
+  <div class="field-quotation field-wrapper">
+    UM-Dearborn will continue to prioritize the well-being of our students, faculty and staff while not compromising the quality of our education.   </div>
+
+  <div class="field-quotation-attribution field-wrapper">
+    Chancellor Domenico Grasso  </div>
+</div>
+        
+    
+</div>
+  <div class="node-283706 node node-copy-image view-mode-default">
+
+
+                      <h2 class="node-title">Current Phase Summary</h2>
+              
+  
+  
+  <div class="field-copy field-wrapper">
+    <p>The state of Michigan is following a six-stage approach to addressing the pandemic. The current stage for southeast Michigan is Stage 4: Improving. This means that the pandemic is no longer increasing and the region’s health systems are able to handle all current needs. This phase calls for continued use of physical distancing and face coverings and limiting gatherings to small groups. </p>
+<p>Here’s what that means for UM-Dearborn: </p>
+<ul><li>UM-Dearborn classes and exams are being held remotely through the end of Summer II.</li>
+<li>Remote Work: All work that can be done remotely should be. All campus buildings are locked during normal business hours, with access only available via approved MCard use. If you must be on campus for work, safety measures must be followed. </li>
+<li>All UM-Dearborn events, and events organized by others on our campus, are canceled, postponed or offered in a virtual format until August 22.</li>
+<li>UM-Dearborn is suspending all domestic and international travel until further notice. More details about U-M travel restrictions and guidance can be found on the <a href="https://global.umich.edu/travel-resources/warnings-restrictions/">Global Michigan website</a>, which will be updated to reflect changes.</li>
+<li>Research has restarted on campus in a phased approach. Research labs will continue to operate differently in the months ahead to protect health and safety. For more information on health and safety preparations in regards to research, visit the <a href="/offices/environmental-health-and-safety/covid-19-safety-information">Environmental Health &amp; Safety website</a>.</li>
+<li>Our collective safety requires we all do our part following health and safety best practices. We should all practice strong personal hygiene habits, wear a face covering when in campus buildings, maintain a physical distance of six feet and follow posted signage/guidelines. <a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/resources">View the latest health and safety guidelines.</a></li>
+</ul><p> </p>
+  </div>
+
+        
+    
+</div>
+  <div class="node-283707 node node-html view-mode-default">
+
+
+            
+  
+  
+  <div class="field-copy field-wrapper">
+    <div class="node-277589 node node-topic-image-tiles view-mode-default">
+
+
+                      <h2 class="node-title">What Will Fall Look Like?</h2>  
+  
+  <div class="field-copy field-wrapper">
+</div>
+
+<div class="field-tiles field-wrapper large-block-grid-2 medium-block-grid-2 small-block-grid-1 ">
+
+                                  <a class="topic-tile" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/faculty-staff">
+          
+  <div class="image">
+    <picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/topic_tiles/public/group-library/341/line_van_nieuwstadt.jpg?itok=MCSi5sjY&amp;timestamp=1523287003 1x, /sites/default/files/styles/topic_tiles_2x/public/group-library/341/line_van_nieuwstadt.jpg?itok=YKwg9fla&amp;timestamp=1523287003 2x" media="(min-width: 1024px)">
+<source srcset="/sites/default/files/styles/topic_tiles_tablet_12/public/group-library/341/line_van_nieuwstadt.jpg?itok=BPt385eI&amp;timestamp=1523287003 1x, /sites/default/files/styles/topic_tiles_tablet_12_2x/public/group-library/341/line_van_nieuwstadt.jpg?itok=QHy4dC66&amp;timestamp=1523287003 2x" media="(min-width: 768px)">
+<source srcset="/sites/default/files/styles/topic_tiles_mobile/public/group-library/341/line_van_nieuwstadt.jpg?itok=p-RlKgcP&amp;timestamp=1523287003 1x, /sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/line_van_nieuwstadt.jpg?itok=KN-Y4TDA&amp;timestamp=1523287003 2x" media="(min-width: 0px)">
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/line_van_nieuwstadt.jpg?itok=KN-Y4TDA&amp;timestamp=1523287003" alt="Line van Nieuwstadt" title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img srcset="/sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/line_van_nieuwstadt.jpg?itok=KN-Y4TDA&amp;timestamp=1523287003 365w" alt="Line van Nieuwstadt" title="">
+<!-- <![endif]-->
+</picture>  </div>
+          <div class="topic-tile-headline">Faculty and Staff</div>
+          <div class="topic-tile-text">Many faculty and staff will continue working remotely to help keep density down on campus. For those who come to campus, your experience includes daily health screenings and temperature checks, wearing a face covering while indoors, and adhering to additional health and safety protocols. Learn more about how UM-Dearborn is protecting your health and safety and how these plans affect your work.</div>
+        </a>
+                                            <a class="topic-tile" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/students">
+          
+<div class="image">
+    <picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="/sites/default/files/styles/topic_tiles/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=6BHaU1wx&amp;timestamp=1592786299 1x, /sites/default/files/styles/topic_tiles_2x/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=jphEF7b3&amp;timestamp=1592786299 2x" media="(min-width: 1024px)">
+<source srcset="/sites/default/files/styles/topic_tiles_tablet_12/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=jnZVszZd&amp;timestamp=1592786299 1x, /sites/default/files/styles/topic_tiles_tablet_12_2x/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=DytgZ_we&amp;timestamp=1592786299 2x" media="(min-width: 768px)">
+<source srcset="/sites/default/files/styles/topic_tiles_mobile/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=NtiAvynC&amp;timestamp=1592786299 1x, /sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=6T7k_iOx&amp;timestamp=1592786299 2x" media="(min-width: 0px)">
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img  src="/sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=6T7k_iOx&amp;timestamp=1592786299" alt="Students walking across the street." title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img srcset="/sites/default/files/styles/topic_tiles_mobile_2x/public/group-library/341/160704_hr1cx_umd2_12634.jpg?itok=6T7k_iOx&amp;timestamp=1592786299 365w" alt="Students walking across the street." title="">
+<!-- <![endif]-->
+</picture>  </div>          
+<div class="topic-tile-headline">Students</div>
+          <div class="topic-tile-text">Student life this fall will be different, but still the amazing experience expected at UM-Dearborn. This includes taking classes in a variety of formats (in-person, remote and hybrid), following an adjusted academic calendar with no fall break, a longer Thanksgiving break (with most in-person work ending at Thanksgiving), and following safety guidelines in and outside the classroom. Get more information about learning at UM-Dearborn this fall.</div>
+        </a>
+            
+</div>
+
+        
+    
+</div>  </div>
+
+        
+    
+</div>
+    </div>
+  </div>
+
+  
+      <div id="anchor" class="anchor-wrapper">
+      
+  <div class="node-282224 node node-news-basic-list view-mode-default slick_view">
+
+
+            
+  
+  <div class="panel-header"><div class="row"><h2 class="node-title">Latest News</h2></div></div><div class="row more-news-button"><a href="/offices/external-relations/key-issues/um-dearborn-covid-19-response/recent-coronavirus-news" class="more-news-link">More Coronavirus News</a></div><div class="row"><div class="view view-news-basic-list view-id-news_basic_list view-display-id-slick_view news-carousel view-dom-id-aead207979a9e708566bdcde33f7fa24">
+        
+  
+  
+      <div class="view-content">
+        <div class="news-card">
+      
+          <a href="/news/articles/how-students-can-use-their-pandemic-time-jumpstart-career-or-internship-search" class="card"><picture><img src="/sites/default/files/styles/news_carousel_2x/public/group-library/341/pandemic_prep_tips_final.jpg?itok=nBv7ilCI&amp;c=0db30779ff5b8180f364b0e922ce6a2b" width="628" height="352" alt="A collage graphic showing a laptop, books, and a hand writing &quot;My Plan&quot; on a piece of paper." /></picture>
+<div class="card-details">
+<div class="news-overline"><span class="date-display-single">7/6/2020</span></div>
+<h2 class="news-headline">How students can use their pandemic time to jumpstart a career or internship search</h2>
+<div class="news-dek">To be ready when the economy starts to rebound, students should make sure they’re doing the stuff on this list.</div>
+</div></a>    </div>
+  <div class="news-card">
+      
+          <a href="/news/articles/takeaways-june-25-virtual-town-hall" class="card"><picture><img src="/sites/default/files/styles/news_carousel_2x/public/group-library/341/summer-campus.jpg?itok=GRuD-115&amp;c=6e968cf49fd94f28cddf6fc0493442c6" width="628" height="352" alt="A summer scene on campus outside the Natural Sciences Building." /></picture>
+<div class="card-details">
+<div class="news-overline"><span class="date-display-single">6/30/2020</span></div>
+<h2 class="news-headline">Takeaways from the June 25 virtual town hall</h2>
+<div class="news-dek">University leaders shared an update on the FY21 budget, the cancellation of fall athletics, working from home, and the hybrid model for fall classes.</div>
+</div></a>    </div>
+  <div class="news-card">
+      
+          <a href="/news/articles/um-dearborn-lays-out-its-plan-hybrid-fall-semester" class="card"><picture><img src="/sites/default/files/styles/news_carousel_2x/public/group-library/341/img_8787.jpg?itok=uqCw4zS0&amp;c=03c60b329cc904e1face6acf2c705213" width="628" height="352" alt="The outside of the University Center building on the UM-Dearborn campus." /></picture>
+<div class="card-details">
+<div class="news-overline"><span class="date-display-single">6/22/2020</span></div>
+<h2 class="news-headline">UM-Dearborn lays out its plan for a ‘hybrid’ fall semester</h2>
+<div class="news-dek">To do its part in the fight against COVID-19 and protect its students, faculty and staff, the university is planning for a ‘remote-first’ approach to the fall. Here’s what that will look like.</div>
+</div></a>    </div>
+  <div class="news-card">
+      
+          <a href="/news/all-news/articles/university-michigan-dearborn-announces-plans-public-health-informed-fall-2020-semester" class="card"><picture><img src="/sites/default/files/styles/news_carousel_2x/public/group-library/341/chancellors_pond_l_1.jpg?itok=V7zQ3k2V" width="628" height="352" alt="Chancellor&#039;s Pond in the fall" title="Chancellor&#039;s Pond in the fall" /></picture>
+<div class="card-details">
+<div class="news-overline"><span class="date-display-single">6/22/2020</span></div>
+<h2 class="news-headline">University of Michigan-Dearborn announces plans for a public health informed fall 2020 semester </h2>
+<div class="news-dek">Plans include a hybrid semester with many classes in a remote format, a shift in the academic calendar and a continued focus on remote engagement opportunities for students.</div>
+</div></a>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+        
+    
+</div>
+    </div>
+  
+</article>
+  
+  
+    
+    
+      </main>
+
+  
+  
+      <footer id="footer" class="l-footer-columns">
+      <div class="row">
+        <div class="top-row">
+        <div class="logo-address-wrap footer-first columns">
+          <a class="logo" href="/offices/external-relations/key-issues/um-dearborn-covid-19-response">
+            <picture><img  src="/sites/default/files/footer-logo/dearborn-logo-footer_2.png" alt="UM-Dearborn" title="" class="logo"/></picture>          </a>
+
+          <div class="information">
+            <ul class="campuses">
+              <li><a href="https://umdearborn.edu/">Dearborn</a> |</li>
+              <li><a href="http://umflint.edu/">Flint</a> |</li>
+              <li><a href="http://umich.edu/">Ann Arbor</a></li>
+            </ul>
+
+            <ul class="contact">
+              <li class="address"><i class="fa fa-map-marker"></i>4901 Evergreen Road<br />Dearborn, MI 48128, US</li>
+                                            <li class="email"><a href="/"><i class="fa fa-envelope"></i>Contact us</a></li>
+                          </ul>
+
+            <ul class="social-links">
+                                                <li>
+                    <a href="/">Facebook</a>                  </li>
+                                  <li>
+                    <a href="/">Twitter</a>                  </li>
+                                  <li>
+                    <a href="/">Instagram</a>                  </li>
+                                  <li>
+                    <a href="/">LinkedIn</a>                  </li>
+                                  <li>
+                    <a href="/">YouTube</a>                  </li>
+                                         </ul>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="row footer-links">
+                          <div class="footer-second small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-1">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="https://umdearborn.edu/about/visit-campus/maps-directions" title="">Maps &amp; Directions</a></li>
+<li class="leaf"><a href="http://umdearborn.edu/emergency" title="">Emergency Information</a></li>
+<li class="last leaf"><a href="http://umjobs.org" title="">Employment</a></li>
+</ul>  
+  </div>              </div>
+                                      <div class="footer-third small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-2">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="https://umdearborn.edu/canvas" title="">Canvas</a></li>
+<li class="leaf"><a href="https://selfservice.umd.umich.edu/BANP/twbkwbis.P_GenMenu?name=homepage" title="">UM-Dearborn Connect</a></li>
+<li class="last leaf"><a href="http://umd.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=25557&amp;catalogId=10001&amp;langId=-1" title="">Bookstore</a></li>
+</ul>  
+  </div>              </div>
+                                      <div class="footer-fourth small-4 columns">
+                  <div class="block block-menu block-menu-menu-footer-menu-3">
+  
+      
+    <ul class="menu"><li class="first leaf"><a href="http://email.umich.edu" title="">U-M Google Mail</a></li>
+<li class="leaf"><a href="https://wolverineaccess.umich.edu" title="">Wolverine Access</a></li>
+<li class="last leaf"><a href="http://library.umd.umich.edu" title="">Library</a></li>
+</ul>  
+  </div>              </div>
+                      </div>
+        </div>
+        </div>
+
+        <div class="medium-12 columns bottom-row">
+          <div class="copyright medium-6 columns">
+            <small>
+              &copy; 2020 <a href="http://regents.umich.edu/">The Regents of the University of Michigan</a> |             </small>
+            <small><a href="/privacy-policy">Privacy Policy</a></small>
+             |
+                          <a href="/login?destination=node/276740" title="Login to the University of Michigan Dearborn Website">Login</a>                      </div>
+          <div class="budget-and-safety-informaton medium-6 columns">
+            <div class="medium-6 columns">
+              <a href="/budget-performance">
+                <picture><img class="budget-logo" src="/sites/all/themes/panda_theme/images/budget-transparency-logo.png" alt="Budget and Performance Transparency Reporting" /></picture>              </a>
+            </div>
+            <div class="medium-6 columns">
+              <a href="/offices/enrollment-management-student-life/incident-and-complaint-reporting/campus-safety-information-and-resources">
+                <picture><img class="safety-logo" src="/sites/all/themes/panda_theme/images/safety-badge.png" alt="Campus Safety Information Resources Badge" /></picture>              </a>
+            </div>
+          </div>
+      </div>
+
+              </div>
+    </footer>
+  
+  
+  <a class="back-to-top position-fixed placed-bottom-right bg-maize fg-blue" href="#">
+    <i class="fa fas fa-chevron-up"></i>
+    <span class="show-for-sr">Back to top of page</span>
+  </a>
+</div>
+  <script src="/sites/default/files/js/js_j_eiqOT8aQWASBJqy6WltR1LnOlWxv69uk8JaEQ-ow8.js"></script>
+    <script>
+    (function ($, Drupal, window, document, undefined) {
+      $(document).foundation();
+    })(jQuery, Drupal, this, this.document);
+  </script>
+      <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1559529854336914');
+      fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1559529854336914&ev=PageView&noscript=1"
+      /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"613f8bbc03","applicationID":"222393352","transactionName":"Z1IANxBWXBVWU0INCV4YNxELGB0PWVRTHEhAXxI=","queueTime":0,"applicationTime":16,"atts":"SxUDQVhMTxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

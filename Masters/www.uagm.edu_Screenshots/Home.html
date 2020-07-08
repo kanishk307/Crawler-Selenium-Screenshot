@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"41fb58817e",applicationID:"466176541"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon_UAGM.png" type="image/png" />
+<link rel="canonical" href="https://www.uagm.edu/covid19" />
+<link rel="shortlink" href="https://www.uagm.edu/node/2916" />
+<link rel="revision" href="https://www.uagm.edu/covid19" />
+<script src="/sites/default/files/google_tag/gtm_glu/google_tag.script.js?qa91y4" defer="true"></script>
+<script src="/sites/default/files/google_tag/remoto_tag/google_tag.script.js?qa91y4" defer="true"></script>
+
+    <title>Coronavirus | Universidad Ana G. Méndez</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Dji6xhlmB1ihFCmJ5XdQsY5BpWx1Z8-6XrpUS-Ic4Ac.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_gyNdkaISv6aUDt8CLGBYgfZmm1ZAAH1KipZ-SYv94GU.css" />
+<link rel="stylesheet" media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" />
+<link rel="stylesheet" media="all" href="/themes/custom/scholarly/css/theme/color-red.css?qa91y4" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="form-style-1 hff-07 pff-07 sff-07 slff-07 gray-content-background fixed-header-enabled path-node page-node-type-page">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN934Z9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNC6V8M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <div id="header-top" class="header-container clearfix">
+    <div class="container">
+
+      <div id="header-top-inside" class="clearfix">
+        <div class="row">
+
+                      <div class="col-md-12">
+              <div id="header-top-left" class="clearfix">
+                <div class="header-top-area">
+                    <div class="region region-header-top-first">
+    <div id="block-headertop" class="block block-superfish block-superfishheader-top">
+  
+    
+      <div class="content">
+      
+<ul id="superfish-header-top" class="menu sf-menu sf-header-top sf-horizontal sf-style-none">
+  
+<li id="header-top-menu-link-content69313134-c8b2-41dc-b900-b998657e09f1" class="sf-depth-1 sf-no-children"><a href="/estudiantes" title="Estudiantes" class="sf-depth-1">Estudiantes</a></li><li id="header-top-menu-link-content3b4c896c-739c-4453-a026-380c00a91006" class="sf-depth-1 sf-no-children"><a href="/asociados" title="Asociados" class="sf-depth-1">Asociados</a></li><li id="header-top-menu-link-contentc0dfa4ae-6dfb-4a08-be5d-9307c89e81b1" class="sf-depth-1 sf-no-children"><a href="/recursos_humanos" title="Recursos Humanos" class="sf-depth-1">Recursos Humanos</a></li><li id="header-top-menu-link-content665fe0e9-6ad3-4940-872a-44e4c26f586e" class="sf-depth-1 sf-no-children"><a href="https://uagm.edu/internacionalizacion" title="Internacional" class="sf-depth-1 sf-external">Internacional</a></li><li id="header-top-menu-link-content90cb916e-91c6-4af9-afe3-e7e81036d01c" class="sf-depth-1 sf-no-children"><a href="/empleo" title="Empleo" class="sf-depth-1">Empleo</a></li>
+</ul>
+
+    </div>
+  </div>
+
+  </div>
+
+                </div>
+              </div>
+            </div>
+          
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<header id="header" role="banner" class="header-container clearfix">
+  <div class="container">
+
+    <div id="header-inside" class="clearfix">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div id="header-inside-left" class="clearfix">
+
+                            <div class="region region-header">
+    <div id="block-sitebranding" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+      <div class="logo">
+    <a href="/index.php/" title="Home" rel="home" class="site-branding__logo">
+      <img src="/sites/default/files/inline-images/2018_logo_uagm_cadenas.png" alt="Home" />
+    </a>
+  </div>
+      </div>
+
+  </div>
+
+            
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div id="header-inside-right" class="clearfix">
+
+            <div id="main-navigation" class="clearfix">
+              <nav role="navigation">
+
+                                    <div class="region region-navigation">
+    <div id="block-mainnavigation-2" class="block block-superfish block-superfishmain">
+  
+    
+      <div class="content">
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none">
+  
+<li id="main-menu-link-content37ab4d5f-0d4a-4790-a7ed-1bf2d67ec994" class="sf-depth-1 menuparent"><a href="/uagm" title="SUAGM" class="sf-depth-1 menuparent">UAGM</a><ul><li id="main-menu-link-content127ed65d-b8c0-4609-ac3e-bda035bd7ccf" class="sf-depth-2 sf-no-children"><a href="/historia" class="sf-depth-2">Historia</a></li><li id="main-menu-link-contentba6e5604-31ac-4812-adb9-355632978575" class="sf-depth-2 sf-no-children"><a href="/mision-vision" class="sf-depth-2">Misión y visión</a></li><li id="main-menu-link-content30bd8fae-6759-4f12-ba49-423de54be4b6" class="sf-depth-2 sf-no-children"><a href="/presidente-jose-f-mendez-mendez" class="sf-depth-2">Presidente</a></li><li id="main-menu-link-content8c4541ca-edd3-4687-92a3-77faba4e89b6" class="sf-depth-2 sf-no-children"><a href="/president_emeritus" class="sf-depth-2">Presidente Emérito</a></li><li id="main-menu-link-content7e1f6351-ff1c-495a-9182-6e22a9a8c915" class="sf-depth-2 sf-no-children"><a href="/junta-directores" class="sf-depth-2">Junta de Directores</a></li><li id="main-menu-link-content853199ab-41f8-4f1b-8b5b-caa355d33944" class="sf-depth-2 sf-no-children"><a href="/administracion-central-suagm" class="sf-depth-2">Administración</a></li><li id="main-menu-link-content4b940063-54da-4c73-8f5c-34ec8db94600" class="sf-depth-2 sf-no-children"><a href="/excelencia0" class="sf-depth-2">Excelencia</a></li><li id="main-menu-link-content69d8bf9f-767c-41eb-bc55-6bc73cef479d" class="sf-depth-2 sf-no-children"><a href="/internacionalizacion" class="sf-depth-2">Internacional</a></li></ul></li><li id="main-menu-link-content61ec64bd-151f-4c4e-8998-a23a6b407f19" class="sf-depth-1 sf-no-children"><a href="/universidades?utm_source=websiteAC&amp;utm_medium=enlace" title="Universidades" class="sf-depth-1">Recintos y localidades</a></li><li id="main-menu-link-content9bada752-8a23-4da0-b640-7eee5ce48942" class="sf-depth-1 menuparent"><a href="" title="Investigación" class="sf-depth-1 menuparent">Investigación</a><ul><li id="main-menu-link-content102e908f-d847-494a-bd00-590aa6c64f67" class="sf-depth-2 sf-no-children"><a href="/vicepresidencia-asociada-recursos-externos-cumplimiento" class="sf-depth-2">Recursos Externos y Cumplimiento</a></li><li id="main-menu-link-content81f19835-7202-4525-934b-6d0a33684cc5" class="sf-depth-2 sf-no-children"><a href="/bibliotecas" class="sf-depth-2">Bibliotecas</a></li><li id="main-menu-link-content808d02c1-531a-45e7-9c1f-73867f5dc4bc" class="sf-depth-2 sf-no-children"><a href="/observatorio-arecibo" class="sf-depth-2">Observatorio de Arecibo</a></li></ul></li><li id="main-menu-link-content4c1b14eb-4e17-45fa-96b5-434bbda31f82" class="sf-depth-1 sf-no-children"><a href="https://myuagm.uagm.edu" class="sf-depth-1 sf-external">Mi UAGM</a></li>
+</ul>
+
+    </div>
+  </div>
+<div id="block-analytics" class="block block-block-content block-block-content67829aec-419b-45f1-85eb-2d6cab7aa4ca">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3800189-1"></script><script>
+<!--//--><![CDATA[// ><!--
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-3800189-1');
+
+//--><!]]>
+</script></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+                
+              </nav>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <div id="banner" class="clearfix">
+    <div class="container">
+
+      <div id="banner-inside" class="clearfix">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="banner-area">
+                <div class="region region-banner">
+    
+  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<div id="page" class="clearfix">
+
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="region region-system-messages">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  
+  
+  <div id="main-content">
+    <div class="container">
+
+      <div class="row">
+
+        
+        <section class="col-md-8">
+
+          
+          <div id="main" class="clearfix">
+
+                            <div class="region region-content">
+    <div id="block-scholarly-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+<article data-history-node-id="2916" role="article" about="/covid19" typeof="schema:WebPage" class="node node--type-page node--view-mode-full clearfix">
+  <div class="node--content-container">
+            <div class="node--content">
+      <header>
+        
+                  <span property="schema:name" content="Coronavirus " class="rdf-meta hidden"></span>
+
+                                </header>
+              
+            <div property="schema:text" class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><img alt="importante" data-entity-type="file" data-entity-uuid="5e621c22-f383-44cd-8ed1-ccd72f8e754e" src="/sites/default/files/inline-images/hdr_coronavirus_ac_0.png" /></p>
+
+<h2>Sitio especial</h2>
+
+<p>Como parte de las medidas relacionadas a la situación de alerta provocada por el desarrollo del Coronavirus (COVID-19), hemos creado un sitio especial en nuestra página web. </p>
+
+<p>En este sitio único estarán disponibles todos los boletines de nuestro Presidente y las actualizaciones de información que sean necesarias para mantener comunicación directa con toda nuestra comunidad universitaria.</p>
+
+<p><strong>Te invitamos a mantenerte informado.</strong></p>
+
+<p> </p>
+
+<p><img alt="fuentes oficiales" data-entity-type="file" data-entity-uuid="21261bde-e68c-4e09-9de0-e2395194bb14" src="/sites/default/files/inline-images/hdr_coronavirus_ac_fuentes_0.png" /></p>
+
+<p><strong>Organización Mundial de la Salud (OMS)</strong></p>
+
+<ul><li><a href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019</a></li>
+</ul><p><strong>Centros para el Control y la Prevención de Enfermedades (CDC) </strong></p>
+
+<ul><li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html">https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html</a></li>
+</ul></div>
+      
+          </div>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+  </div>
+
+            
+          </div>
+
+        </section>
+
+                  <aside class="col-md-4 fix-sidebar-second">
+            <section id="sidebar-second" class="sidebar clearfix">
+                <div class="region region-sidebar-second">
+    <div id="block-botoncolumnasprofesorescovid19" class="block block-block-content block-block-contente1447ae9-a30e-4ec7-9c93-238e739c961a">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><center>
+
+<a href="/columnas-profesores-covid">
+<button class="btn btn-danger" type="button">Columnas de nuestros profesores<br />sobre COVID-19</button></a>
+</center></div>
+      
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockcoronavirus-block-1" id="block-views-block-coronavirus-block-1">
+  
+      <h2 class="title">Noticias y últimos boletines</h2>
+    
+      <div class="content">
+      <div><div class="view view-coronavirus view-id-coronavirus view-display-id-block_1 js-view-dom-id-52c147fc391758c495cbe9f227498a9a718ced12c1ab61ceaf218e7098ae16bd">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/cancelacion-graduaciones-reembolso-cuotas" hreflang="en">Cancelación de ceremonias de Graduación 2020 y reembolso de cuota general y laboratorios</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/clases-verano-2020" hreflang="en">Boletín Coronavirus (2020-013) - Clases de verano 2020</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/fondos-ayuda-economica-estudiantes" hreflang="en">Boletín Coronavirus (2020-012) - UAGM recibe asignación de fondos para ayuda económica a los estudiantes</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/ayuda-economica-federal-cares" hreflang="en">Carta del Presidente - Nueva ayuda económica federal</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/se-extiende-periodo-toque-queda" hreflang="en">Boletín coronavirus (2020-011) - Se extiende periodo de toque de queda</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/asociados-mantienen-servicio-remoto" hreflang="en">Boletín coronavirus (2020-010) - Se mantienen las clases y servicios en formato remoto</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/mantienen-clases-remoto" hreflang="en">Boletín coronavirus (2020-009) - Se mantienen las clases y los servicios estudiantiles de manera remota</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/terminos-pagos-se-posponen" hreflang="en">Boletín Coronavirus (2020-008) - Términos de pagos se posponen hasta nuevo aviso</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/metodo-ensenanza-remota-boletin" hreflang="en">Boletín (2020-007) - Flexibilidad en el Método de Enseñanza Remota</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/covid/sitio-servicios-estudiantiles" hreflang="en">Sitio web para servicios estudiantiles</a></span></div></div>
+
+    </div>
+  
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+                                      <li class="pager__item pager__item--next">
+          <a href="?page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">Next ›</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?page=1" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">Last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+            </section>
+          </aside>
+        
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+  <div id="footer-top" class="clearfix two-regions">
+    <div class="container">
+
+      <div id="footer-top-inside" class="clearfix">
+        <div class="row">
+
+                      <div class="col-sm-6">
+              <div id="footer-top-left" class="clearfix">
+                <div class="footer-top-area">
+                    <div class="region region-footer-top-first">
+    <div id="block-subscribetonewsletter" class="block block-block-content block-block-content682aea45-f95b-49d2-a33f-63ccc7f4bbcd">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h3>PARA MÁS INFORMACIÓN:</h3>
+
+<h2>787-751-1403</h2>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+                </div>
+              </div>
+            </div>
+          
+                      <div class="col-sm-6">
+              <div id="footer-top-right" class="clearfix">
+                <div class="footer-top-area">
+                    <div class="region region-footer-top-second">
+    <div id="block-socialbookmarks" class="block block-block-content block-block-contenta433068e-fd8b-43a3-9020-324b278e3541">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul class="icons-list text-right"><li class="text">Redes Sociales</li>
+	<li class="facebook"><a href="https://www.facebook.com/uagmoficial"><i class="fa fa-facebook"><span class="sr-only">facebook</span></i></a></li>
+	<li class="twitter"><a href="https://twitter.com/SUAGM"><i class="fa fa-twitter"><span class="sr-only">twitter</span></i></a></li>
+	<li class="linkedin"><a href="https://www.linkedin.com/company/sistema-universitario-ana-g-m-ndez-suagm-/"><i class="fa fa-linkedin"><span class="sr-only">linkedin</span></i></a></li>
+	<li class="youtube"><a href="https://www.uagm.edu/youtube"><i class="fa fa-youtube-play"><span class="sr-only">youtube</span></i></a></li>
+	<li class="instagram"><a href="https://www.instagram.com/uagm.oficial/"><i class="fa fa-instagram"><span class="sr-only">instagram</span></i></a></li>
+	<!-- <li class="flickr"><a href="http://www.flickr.com/photos/morethanthemes/"><i class="fa fa-flickr"><span class="sr-only">flickr</span></i></a></li>
+	<li class="vimeo"><a href="http://vimeo.com/morethanthemes"><i class="fa fa-vimeo-square"><span class="sr-only">vimeo</span></i></a></li>
+	<li class="pinterest"><a href="http://www.pinterest.com/morethanthemes/"><i class="fa fa-pinterest"><span class="sr-only">pinterest</span></i></a></li>
+	<li class="skype"><a href="#"><i class="fa fa-skype"><span class="sr-only">skype</span></i></a></li>-->
+</ul></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="footer" class="clearfix">
+    <div class="container">
+
+      <div class="row">
+                  <div class="col-sm-3">
+            <div class="footer-area">
+                <div class="region region-footer-first">
+    <div id="block-about" class="block block-block-content block-block-content5338d48b-1365-40bf-aad4-ce31db0f9275">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+<!--/*--><![CDATA[/* ><!--*/
+#header {
+    padding: 40px 0 10px 0; 
+}
+
+.logo {
+    max-width: 70%;
+}
+
+/*--><!]]]]><![CDATA[>*/
+
+/*--><!]]>*/
+</style><p> </p>
+<img alt="UAGM" src="/sites/default/files/inline-images/logo_uagm_blanco_transparente_footer.png" class="align-center" /><p> </p>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+            </div>
+          </div>
+        
+                  <div class="col-sm-3">
+            <div class="footer-area">
+                <div class="region region-footer-second">
+    <nav role="navigation" aria-labelledby="block-abouttheinstitution-menu" id="block-abouttheinstitution" class="block block-menu navigation menu--footer-navigation-menu">
+      
+  <h2 id="block-abouttheinstitution-menu">ENLACES DIRECTOS</h2>
+  
+
+      <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-abouttheinstitution"></div>
+    <div class="menu-toggle-target" id="hide-block-abouttheinstitution"></div>
+    <a class="menu-toggle" href="#show-block-abouttheinstitution">Show &mdash; ENLACES DIRECTOS</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-abouttheinstitution">Hide &mdash; ENLACES DIRECTOS</a>
+    
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="https://www.uagm.edu/carolina">Recinto de Carolina</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.uagm.edu/cupey">Recinto de Cupey</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.uagm.edu/gurabo">Recinto de Gurabo</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.uagm.edu/online">Recinto Online</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.uagm.edu/agmus">Estados Unidos Continental</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</nav>
+
+  </div>
+
+            </div>
+          </div>
+        
+                  <div class="col-sm-3">
+            <div class="footer-area">
+                <div class="region region-footer-third">
+    <nav role="navigation" aria-labelledby="block-studyattheinstitution-menu" id="block-studyattheinstitution" class="block block-menu navigation menu--study-at-the-institution">
+      
+  <h2 id="block-studyattheinstitution-menu">RECURSOS</h2>
+  
+
+      <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-studyattheinstitution"></div>
+    <div class="menu-toggle-target" id="hide-block-studyattheinstitution"></div>
+    <a class="menu-toggle" href="#show-block-studyattheinstitution">Show &mdash; RECURSOS</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-studyattheinstitution">Hide &mdash; RECURSOS</a>
+    
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/index.php/empleo" data-drupal-link-system-path="node/79">Empleo</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/events" data-drupal-link-system-path="events">Eventos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/noticias" data-drupal-link-system-path="noticias">Noticias</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/politica-privacidad-seguridad" data-drupal-link-system-path="node/262">Política de Privacidad y Seguridad</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/seguridad-vigilancia" data-drupal-link-system-path="node/206">Seguridad y Vigilancia</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/seguridad-privacidad-electronica-0" data-drupal-link-system-path="node/168">Seguridad y Privacidad Electrónica</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</nav>
+
+  </div>
+
+            </div>
+          </div>
+        
+                  <div class="col-sm-3">
+            <div class="footer-area">
+                <div class="region region-footer-fourth">
+    <nav role="navigation" aria-labelledby="block-researchattheinstutition-menu" id="block-researchattheinstutition" class="block block-menu navigation menu--research-at-the-instutition">
+      
+  <h2 id="block-researchattheinstutition-menu">ADMINISTRACIÓN</h2>
+  
+
+      <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-researchattheinstutition"></div>
+    <div class="menu-toggle-target" id="hide-block-researchattheinstutition"></div>
+    <a class="menu-toggle" href="#show-block-researchattheinstutition">Show &mdash; ADMINISTRACIÓN</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-researchattheinstutition">Hide &mdash; ADMINISTRACIÓN</a>
+    
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/index.php/vicepresidencia-ejecutiva-operaciones" data-drupal-link-system-path="node/263">Vicepresidencia Ejecutiva y de Operaciones</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/asuntos-financieros" data-drupal-link-system-path="node/136">Vicepresidencia de Asuntos Financieros</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/internacionalizacion" data-drupal-link-system-path="node/141">Vicepresidencia de Asuntos Internacionales</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/vicepresidencia-mercadeo-asuntos-estudiantiles" data-drupal-link-system-path="node/264">Vicepresidencia de Mercadeo y Asuntos Estudiantiles</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/asuntos-academicos" data-drupal-link-system-path="node/87">Vicepresidencia de Planificación y Asuntos Académicos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/recursos_humanos" data-drupal-link-system-path="node/80">Vicepresidencia de Recursos Humanos</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</nav>
+
+  </div>
+
+            </div>
+          </div>
+              </div>
+
+    </div>
+  </footer>
+
+<div id="subfooter" class="clearfix">
+  <div class="container">
+    <div id="subfooter-inside" class="clearfix">
+      <div class="row">
+        <div class="col-md-4">
+                      <div class="subfooter-area left">
+                <div class="region region-sub-footer-first">
+    <div id="block-copyright" class="block block-block-content block-block-contentc2e220f3-9ba6-405e-8971-27a89262a998">
+  
+    
+      <div class="content">
+      
+            <div class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Copyright © UAGM 2020.  All rights Reserved.</p></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+            </div>
+                  </div>
+        <div class="col-md-8">
+                      <div class="subfooter-area right">
+                <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-headertop-3-menu" id="block-headertop-3" class="block block-menu navigation menu--header-top">
+            
+  <h2 class="visually-hidden" id="block-headertop-3-menu">Subfooter Menu</h2>
+  
+
+      <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-headertop-3"></div>
+    <div class="menu-toggle-target" id="hide-block-headertop-3"></div>
+    <a class="menu-toggle" href="#show-block-headertop-3">Show &mdash; Subfooter Menu</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-headertop-3">Hide &mdash; Subfooter Menu</a>
+    
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/index.php/estudiantes" title="Estudiantes" data-drupal-link-system-path="node/75">Estudiantes</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/asociados" title="Asociados" data-drupal-link-system-path="node/78">Asociados</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/recursos_humanos" title="Recursos Humanos" data-drupal-link-system-path="node/80">Recursos Humanos</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://uagm.edu/internacionalizacion" title="Internacional">Internacional</a>
+              </li>
+                <li class="menu-item">
+        <a href="/index.php/empleo" title="Empleo" data-drupal-link-system-path="node/79">Empleo</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+</nav>
+
+  </div>
+
+            </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="to-top"><i class="fa fa-angle-up"></i></div>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2916","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"scholarly":{"sliderRevolutionBoxedWidthInit":{"slideshowBoxedWidthEffectTime":10000,"slideshowBoxedWidthInitialHeight":400,"slideshowBoxedWidthBulletsPosition":"center"},"sliderRevolutionInternalBannerInit":{"slideshowInternalBannerEffectTime":10000,"slideshowInternalBannerInitialHeight":400,"slideshowInternalBannerBulletsPosition":"left"}},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast","autoArrows":false,"dropShadows":false},"plugins":{"smallscreen":{"mode":"window_width","title":"Main navigation"},"supposition":true,"supersubs":true}},"superfish-header-top":{"id":"superfish-header-top","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast","autoArrows":false,"dropShadows":false},"plugins":{"smallscreen":{"mode":"window_width","title":"Header Top"},"supposition":true,"supersubs":true}}},"user":{"uid":0,"permissionsHash":"aa81f8fb2be5573cff63ed28eb60caffe9089c3ec279a3a1ac80d38efd011235"}}</script>
+<script src="/sites/default/files/js/js_4oXBzKDg7Pl7c6P7JjqVfAQZ8vABxuplgf51rBTFlNU.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"41fb58817e","applicationID":"466176541","transactionName":"YQFRYREHVxAAUUxdC1hLclYXD1YNTkJZUwFpB1JWCwM=","queueTime":0,"applicationTime":10,"atts":"TUZSF1kdRB4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
