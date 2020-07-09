@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"8aba717f7c",applicationID:"92533569"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta http-equiv="cleartype" content="on" />
+<meta name="MobileOptimized" content="width" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sterling.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sterling.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sterling.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sterling.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="canonical" href="/student-life/covid19-information" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortlink" href="/node/13186" />
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-config" content="/sites/all/themes/sterling_site/favicons/browserconfig.xml"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<link rel="shortcut icon" href="https://www.sterling.edu/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width" />
+  <title>Sterling College</title>
+  <link type="text/css" rel="stylesheet" href="https://www.sterling.edu/sites/default/files/css/css_Qv4LVhWS7sSw-kGLLqpc9Nb-aFaDat8xhwwl4AW3jxU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.sterling.edu/sites/default/files/css/css_SGTpnqiGrx3qb39079nquf4CU84HkiS7F5TsRvPzKhM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.sterling.edu/sites/default/files/css/css_OoLgXTONrt7vWBMSasM8-yynEf_5BI8OvNNGldtAuxA.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://www.sterling.edu/sites/default/files/css/css_KxsNwrteQsvsSMWVU_aaIDPiNetLHYlmIh9zQBsbZLc.css" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.sterling.edu/sites/default/files/css/css_19K5F4vJ9JgN3JuhKjWZcVJwnK9p_if76vYKgyqc0dg.css" media="all" />
+  <script src="https://www.sterling.edu/sites/default/files/js/js_peFMcQ4h_8YUutZRn1-R0zc9UJ8I7jaxW6vj6UHqPx4.js"></script>
+<script src="https://www.sterling.edu/sites/default/files/js/js_ZDXK4FH1QHK1zJjYzBQ-_-pIG8S6CwrpOqHCcLFPOpo.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://www.sterling.edu/sites/default/files/js/js_zxINVD7B07UFj-3pZXtWhlIMQLnCCYqi6DuRKpGpOKM.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-9480293-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.sterling.edu/sites/default/files/js/js_63mRVbAXB_F33mBxfvtlYSRBt_FNKMeWwC1i5XDdmrA.js"></script>
+<script src="https://www.sterling.edu/sites/default/files/js/js_JFng-oT0Zft7vO0XDQfjInPLczf-9YgAt0CTctR3sSk.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"sterling_site","theme_token":"yPlIeY9rgK2plUgkze5mvegEnJpBzJFiM8kN52odaD0","css":{"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.menus.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.messages.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/comment\/comment.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/field\/field.theme.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/search\/search.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.theme.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/sterling_site\/css\/sterling-site.normalize.css":1,"sites\/all\/themes\/sterling_site\/css\/sterling-site.hacks.css":1,"sites\/all\/themes\/sterling_site\/css\/sterling-site.styles.css":1,"sites\/all\/themes\/sterling_site\/css\/sterling-site.no-query.css":1,"all:0":1},"js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/omega\/omega\/js\/no-js.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/contrib\/views\/js\/jquery.ui.dialog.patch.js":1,"misc\/ajax.js":1,"0":1,"sites\/all\/modules\/contrib\/linkit\/js\/linkit.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/linkit\/editors\/ckeditor\/linkitDialog.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/contrib\/superfish\/superfish.js":1,"sites\/all\/themes\/sterling_site\/js\/sterling-site.behaviors.js":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"linkit":{"autocompletePath":"https:\/\/www.sterling.edu\/linkit\/autocomplete\/___profile___?s=","dashboardPath":"\/linkit\/dashboard\/","currentInstance":{}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"superfish":[{"id":"1","sf":{"animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":false,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}},{"id":"2","sf":{"animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}],"urlIsAjaxTrusted":{"\/student-life\/covid-19-information":true}});</script>
+<!-- Facebook Conversion Code for Registrations - Admissions APPLY 1 -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6036799385559', {'value':'0.00','currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6036799385559&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+<script type="text/javascript">(function(){var c=encodeURIComponent,s="SCRIPT",d=document,e=d.createElement(s),t=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||"");e.src="https://api.autopilothq.com/anywhere/7ddbf1e0b3914e88b62c6f296fa741e937f92f69c61c42ae92efa501bc7fa017?"+p;e.type="text/javascript";e.async=true;t.parentNode.insertBefore(e, t);})();(function(){var c=encodeURIComponent,s="SCRIPT",d=document,e=d.createElement(s),t=d.getElementsByTagName(s)[0];e.src="https://api.autopilothq.com/anywhere/aa/7ddbf1e0b3914e88b62c6f296fa741e937f92f69c61c42ae92efa501bc7fa017";e.type="text/javascript";e.async=false;t.parentNode.insertBefore(e, t);window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}};if(!window.Autopilot) window.Autopilot=window.AutopilotAnywhere;})();</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '977782372291747');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=977782372291747&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:104584,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-13186 node-type-page layout-no-sidebar section-student-life">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <div class="l-page">
+  <div class="l-search">
+    		  <div class="l-region l-region--search">
+    <div class="panel-pane pane-block pane-search-form pane-search">
+            <form class="search-block-form" action="/student-life/covid-19-information" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-XmXAkgiBzg7stzEuxgUO_2V3t3U1jVW2UO5DDrI4tO0" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>    </div>
+  </div>
+  </div>
+  <header class="l-header" role="banner">
+    <div class="l-branding">
+    	<div class="l-constrained">
+    		  <div class="l-region l-region--branding">
+    <div class="panel-pane pane-page-logo">
+            <a href="/" rel="home" id="logo" title="Home"><img src="https://www.sterling.edu/sites/all/themes/sterling_site/logo.png" alt="Home" /></a>    </div>
+<div class="panel-pane pane-custom pane-1 mobilenav">
+            <p><img class="menu-t" src="/sites/all/themes/sterling_site/images/interface/m-menu.png" title="Main Menu" /><img class="search-t" src="/sites/all/themes/sterling_site/images/interface/m-search.png" title="Search" /></p>    </div>
+<div class="panel-pane pane-block pane-superfish-1 pane-superfish">
+            <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-7 sf-parent-items-5 sf-single-items-2"><li id="menu-3325-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/about" class="sf-depth-1 menuparent">About</a><ul><li id="menu-3326-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/about/what-we-believe" class="sf-depth-2">What We Believe</a></li><li id="menu-3327-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/about/president" class="sf-depth-2">Office of the President</a></li><li id="menu-3329-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/bookstore" class="sf-depth-2">Bookstore</a></li><li id="menu-3332-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/about/ross-and-fern-freeman-lecture-series" class="sf-depth-2">Freeman Lecture Series</a></li><li id="menu-5786-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/about/directory" class="sf-depth-2">Employee Directory</a></li></ul></li><li id="menu-2849-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-12 sf-parent-children-1 sf-single-children-11 menuparent"><a href="/admissions" class="sf-depth-1 menuparent">Admissions</a><ul><li id="menu-3333-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://applysterling.force.com/application/TX_SiteLogin?startURL=%2Fapplication%2FTargetX_Portal__PB" class="sf-depth-2">Apply</a></li><li id="menu-95885-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/sites/default/files/Warrior%20Next%20Steps%20%281%29.pdf" class="sf-depth-2">Warrior Next Steps</a></li><li id="menu-3335-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/admissions/visit-campus" class="sf-depth-2">Visit Campus</a></li><li id="menu-17148-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/#/vte/?data-platform=v&amp;data-inst=63238&amp;" class="sf-depth-2">Virtual Tour</a></li><li id="menu-39183-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/admissions/new-student-enrollment" class="sf-depth-2">Enrollment Day</a></li><li id="menu-93276-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/admissions/enrollment-fee" class="sf-depth-2">Enrollment Fee</a></li><li id="menu-7155-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/admissions/housing-form-and-deposit" class="sf-depth-2">Housing Form and Deposit</a></li><li id="menu-3336-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="/admissions/transfer-students" class="sf-depth-2">Transfer Students</a></li><li id="menu-41590-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/admissions/international-students" class="sf-depth-2">International Students</a></li><li id="menu-97116-1" class="middle even sf-item-10 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/academics/registrar/veterans-benefits" class="sf-depth-2">Military</a></li><li id="menu-3338-1" class="middle odd sf-item-11 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/financial-aid" class="sf-depth-2 menuparent">Financial Aid</a><ul><li id="menu-96584-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children"><a href="/financial-aid/we-kan-scholarship" class="sf-depth-3">WE KAN Scholarship</a></li></ul></li><li id="menu-3339-1" class="last even sf-item-12 sf-depth-2 sf-no-children"><a href="/admissions/refer-a-student" class="sf-depth-2">Refer a Student</a></li></ul></li><li id="menu-2846-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-14 sf-parent-children-0 sf-single-children-14 menuparent"><a href="/academics" class="sf-depth-1 menuparent">Academics</a><ul><li id="menu-3340-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="http://online.sterling.edu" class="sf-depth-2">Online Learning</a></li><li id="menu-93242-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/academics/graduate-programs" class="sf-depth-2">Graduate Programs</a></li><li id="menu-3341-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/academics/majors" class="sf-depth-2">Majors</a></li><li id="menu-97158-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/academics/arts-sterling-college" class="sf-depth-2">Arts</a></li><li id="menu-93296-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/academics/honors-program" class="sf-depth-2">Honors Program</a></li><li id="menu-97159-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/sites/default/files/2019-2020%20Academic%20Calendar%207-10-19.doc" class="sf-depth-2">Academic Calendar 2019-2020</a></li><li id="menu-96583-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/sites/default/files/2020-21%20Academic%20Calendar%204-16-20.doc" class="sf-depth-2">Academic Calendar 2020-2021</a></li><li id="menu-3342-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/academics/academic-catalog" class="sf-depth-2">Academic Catalog</a></li><li id="menu-3343-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="/academics/resources" class="sf-depth-2">Academic Resources</a></li><li id="menu-3344-1" class="middle even sf-item-10 sf-depth-2 sf-no-children"><a href="/academics/course-finals-schedule" class="sf-depth-2">Course/Finals Schedule</a></li><li id="menu-3345-1" class="middle odd sf-item-11 sf-depth-2 sf-no-children"><a href="/academics/mabee-library" class="sf-depth-2">Mabee Library</a></li><li id="menu-3346-1" class="middle even sf-item-12 sf-depth-2 sf-no-children"><a href="/academics/registrar" class="sf-depth-2">Registrar</a></li><li id="menu-4424-1" class="middle odd sf-item-13 sf-depth-2 sf-no-children"><a href="/academics/commencement" class="sf-depth-2">Commencement</a></li><li id="menu-5787-1" class="last even sf-item-14 sf-depth-2 sf-no-children"><a href="/about/directory/faculty" class="sf-depth-2">Faculty Directory</a></li></ul></li><li id="menu-2845-1" class="middle even sf-item-4 sf-depth-1 sf-no-children"><a href="http://www.scwarriors.com/" class="sf-depth-1">Athletics</a></li><li id="menu-3365-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-17 sf-parent-children-0 sf-single-children-17 menuparent"><a href="/resources" class="sf-depth-1 menuparent">Resources</a><ul><li id="menu-3366-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/calendar" class="sf-depth-2">Academic Calendar</a></li><li id="menu-48668-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="http://www.scwarriors.com/SIDHelp/calendar" class="sf-depth-2">Athletic Calendar</a></li><li id="menu-3368-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="http://www.sterling.edu/student-life/career-services" class="sf-depth-2">Career Services</a></li><li id="menu-93816-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/student-success/academic-support-center" class="sf-depth-2">Academic Support</a></li><li id="menu-93815-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/student-success" class="sf-depth-2">Student Success</a></li><li id="menu-46503-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="https://office.com" class="sf-depth-2">Student Email</a></li><li id="menu-3372-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://mail.sterling.edu/" class="sf-depth-2">Employee Email</a></li><li id="menu-3371-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="https://my.sterling.edu/ics/" class="sf-depth-2">MySterling</a></li><li id="menu-7681-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="/about/campus-map" class="sf-depth-2">Campus Map</a></li><li id="menu-15550-1" class="middle even sf-item-10 sf-depth-2 sf-no-children"><a href="/student-life/residence-life" class="sf-depth-2">Residence Life</a></li><li id="menu-3367-1" class="middle odd sf-item-11 sf-depth-2 sf-no-children"><a href="/student-life/safety-security" class="sf-depth-2">Campus Safety</a></li><li id="menu-40955-1" class="middle even sf-item-12 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/student-life/crisis-care-and-action-team" class="sf-depth-2">Crisis Care and Action Team</a></li><li id="menu-4417-1" class="middle odd sf-item-13 sf-depth-2 sf-no-children"><a href="/student-life/health-and-counseling" class="sf-depth-2">Health and Counseling</a></li><li id="menu-4432-1" class="middle even sf-item-14 sf-depth-2 sf-no-children"><a href="/marketing-and-communications" class="sf-depth-2">Marketing Office</a></li><li id="menu-3369-1" class="middle odd sf-item-15 sf-depth-2 sf-no-children"><a href="/about/buildings-and-office-directory" class="sf-depth-2">Building and Office Directory</a></li><li id="menu-3370-1" class="middle even sf-item-16 sf-depth-2 sf-no-children"><a href="/resources/guest-and-conference-services" class="sf-depth-2">Conference Services</a></li><li id="menu-3373-1" class="last odd sf-item-17 sf-depth-2 sf-no-children"><a href="/employment" class="sf-depth-2">Employment</a></li></ul></li><li id="menu-2844-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="/giving" class="sf-depth-1 menuparent">Giving</a><ul><li id="menu-93281-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/sterlingnow" class="sf-depth-2">SterlingNOW</a></li><li id="menu-3374-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/giving/sterling-scholarship-fund" class="sf-depth-2">Sterling Scholarship Fund</a></li><li id="menu-3375-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/giving/cooper-society" class="sf-depth-2">Cooper Society</a></li><li id="menu-3376-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/giving/kelsey-society" class="sf-depth-2">Kelsey Society</a></li><li id="menu-2879-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="http://scgift.org" class="sf-depth-2">Gift Planning</a></li><li id="menu-3377-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/giving/ways-to-give" class="sf-depth-2">Ways to Give</a></li><li id="menu-3378-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/meet-advancement-team" class="sf-depth-2">Meet the Advancement Team</a></li><li id="menu-3379-1" class="last even sf-item-8 sf-depth-2 sf-no-children"><a href="https://www.sterling.edu/give-today" class="sf-depth-2">Give Online</a></li></ul></li><li id="menu-3529-1" class="last odd sf-item-7 sf-depth-1 sf-no-children"><span class="search-t sf-depth-1 nolink">Search</span></li></ul>    </div>
+  </div>
+ 
+    	</div>
+    </div>
+    <div class="l-subnav">
+      	<div class="l-constrained">
+      		  <div class="l-region l-region--navigation">
+    <div class="panel-pane pane-block pane-crumbs-breadcrumb pane-crumbs">
+            <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a><span class="crumbs-separator"> / </span><a href="/site-sections/student-life">Student Life</a><span class="crumbs-separator"> / </span><span class="crumbs-current-page">COVID-19 Information </span></div>    </div>
+<div class="panel-pane pane-block pane-superfish-2 pane-superfish">
+            <ul id="superfish-2" class="menu sf-menu sf-menu-students-menu sf-horizontal sf-style-none sf-total-items-4 sf-parent-items-0 sf-single-items-4"><li id="menu-3356-2" class="first odd sf-item-1 sf-depth-1 sf-no-children"><a href="/student-life" class="sf-depth-1">Student Life</a></li><li id="menu-3348-2" class="middle even sf-item-2 sf-depth-1 sf-no-children"><a href="/alumni" title="" class="sf-depth-1">Alumni</a></li><li id="menu-3607-2" class="middle odd sf-item-3 sf-depth-1 sf-no-children"><a href="https://online.sterling.edu/" class="sf-depth-1">Online</a></li><li id="menu-96582-2" class="last even sf-item-4 sf-depth-1 sf-no-children"><a href="https://sterling.instructure.com/login/ldap" class="sf-depth-1">Canvas</a></li></ul>    </div>
+  </div>
+    	</div>
+    </div>
+  </header>
+  <div class="l-main full">
+      <a id="main-content"></a>
+      <div class="panel-pane pane-page-content">
+            
+      <div class="l-region l-hero">
+      <div class="panel-pane pane-entity-field pane-node-field-hero-image">
+            
+  <div class="field field--name-field-hero-image field--type-image field--label-hidden">
+    <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://www.sterling.edu/sites/default/files/styles/hero_images/public/default_images/Cooper%20Default.png?itok=ZyHyqwWO 1x" media="(min-width: 931px)" />
+<source srcset="https://www.sterling.edu/sites/default/files/styles/hero_images/public/default_images/Cooper%20Default.png?itok=ZyHyqwWO 1x" media="(min-width: 701px) and (max-width: 930px)" />
+<source srcset="https://www.sterling.edu/sites/default/files/styles/tablet_breakpoints_theme_sterling_site_tablet_1x/public/default_images/Cooper%20Default.png?itok=51jJ4KGB 1x" media="(min-width: 544px) and (max-width: 700px)" />
+<source srcset="https://www.sterling.edu/sites/default/files/styles/mobile_breakpoints_theme_sterling_site_mobile_1x/public/default_images/Cooper%20Default.png?itok=36e9h0AX 1x" media="(min-width: 0px) and (max-width: 543px)" />
+<!--[if IE 9]></video><![endif]-->
+<!--[if lt IE 9]>
+<img typeof="foaf:Image" src="https://www.sterling.edu/sites/default/files/styles/mobile_breakpoints_theme_sterling_site_mobile_1x/public/default_images/Cooper%20Default.png?itok=36e9h0AX" alt="" title="" />
+<![endif]-->
+<!--[if !lt IE 9]><!-->
+<img  srcset="https://www.sterling.edu/sites/default/files/styles/mobile_breakpoints_theme_sterling_site_mobile_1x/public/default_images/Cooper%20Default.png?itok=36e9h0AX 500w" alt="" title="" />
+<!-- <![endif]-->
+</picture>  </div>
+    </div>
+<div class="panel-pane pane-node-title">
+            <h1>COVID-19 Information </h1>
+    </div>
+    </div>
+    <div class="content-holder">
+      <div class="l-region l-top">
+      <div class="l-constrained"><div class="panel-pane pane-views-panes pane-cta-content-panel-pane-1">
+            <div class="view view-cta-content view-id-cta_content view-display-id-panel_pane_1 cta-block view-dom-id-19db7f144af8fabd816135503cd9d8e5">
+        
+  
+  
+      <div class="view-content">
+        <div>
+      
+          <div class="field-content"></div>    
+          <div class="field-collection-view clearfix view-mode-full"><div class="cta">
+   <a href="
+  https://www.sterling.edu/academics/majors" title="
+  Majors">      
+      <div class="image">
+  <img typeof="foaf:Image" src="https://www.sterling.edu/sites/default/files/styles/cta/public/ma.jpg?itok=8fSdizBn" width="300" height="155" alt="Majors - Sterling College" title="Majors - Sterling College" />      	<div class="text-wrapper"><div class="text">
+  Majors</div></div>
+      </div>
+      <div class="cta-link-text">
+  Majors</div>
+    </a>
+</div>
+</div><div class="field-collection-view clearfix view-mode-full"><div class="cta">
+   <a href="
+  https://www.sterling.edu/academics/minors" title="
+  Minors">      
+      <div class="image">
+  <img typeof="foaf:Image" src="https://www.sterling.edu/sites/default/files/styles/cta/public/mi.jpg?itok=GqiBxEsY" width="300" height="155" alt="Minors - Sterling College" title="Minors - Sterling College" />      	<div class="text-wrapper"><div class="text">
+  Minors</div></div>
+      </div>
+      <div class="cta-link-text">
+  Minors</div>
+    </a>
+</div>
+</div><div class="field-collection-view clearfix view-mode-full"><div class="cta">
+   <a href="
+  https://online.sterling.edu/" title="
+  Online Programs">      
+      <div class="image">
+  <img typeof="foaf:Image" src="https://www.sterling.edu/sites/default/files/styles/cta/public/Online.jpg?itok=RRU14pkj" width="300" height="155" alt="Online Programs at Sterling College" title="Online Programs at Sterling College" />      	<div class="text-wrapper"><div class="text">
+  Earn Your Degree Online</div></div>
+      </div>
+      <div class="cta-link-text">
+  Online Programs</div>
+    </a>
+</div>
+</div><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="cta">
+   <a href="
+  https://www.sterling.edu/student-success/academic-support-center" title="
+  Academic Support">      
+      <div class="image">
+  <img typeof="foaf:Image" src="https://www.sterling.edu/sites/default/files/styles/cta/public/IMG_0363_1.jpg?itok=XBeafWNz" width="300" height="155" alt="Academic Support - Sterling College" title="Academic Support - Sterling College" />      	<div class="text-wrapper"><div class="text">
+  Academic Support</div></div>
+      </div>
+      <div class="cta-link-text">
+  Academic Support</div>
+    </a>
+</div>
+</div>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>
+    </div>
+  	  <div class="l-content l-constrained has-sidebar" role="main">
+	  	<div class="l-messages">
+	  			  	</div>	
+	    <div class="l-content--first">
+	      <div class="panel-pane pane-entity-field pane-node-body">
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden"><div class="field__items"><div class="field__item even" property="content:encoded"><p><a class="button blue" href="https://www.sterling.edu/frequently-asked-questions-covid19">Frequently Asked Questions - COVID-19</a></p>
+<p><a class="button blue" href="https://www.sterling.edu/sites/default/files/2020-2021%20CSC%20Campus%20Wide%20COVID%20PLAN%20-%206-23-20.pdf">COVID-19 Preparedness Plan</a></p>
+<p>Subject: Message from the President: COVID-19 - June 18</p>
+<p>Date: June 18, 2020<br />
+ <br />
+Warriors:</p>
+<p>In an effort to assist in your plans and preparations, we are happy to announce Sterling College's Commencement ceremony will be held on Sunday, August 23, at 2 p.m. The ceremony will take place in the Gleason Physical Education Center. Please check the Commencement website at <a href="http://www.sterling.edu/academics/commencement">www.sterling.edu/academics/commencement</a> for all the latest information regarding any travel considerations over the summer. </p>
+<p>While the celebration has been delayed, your accomplishments have been well noted and we look forward to gathering together in celebration of the Class of 2020. </p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<p> </p>
+<hr />
+<p>Subject: Message from the President: COVID-19 - June 16</p>
+<p>Date: June 16</p>
+<p>Friends:</p>
+<p>As I shared with you several weeks ago, we at Sterling College intend to hold on-campus classes this fall semester. We are excited to have campus full with the excitement of students, faculty and staff all together again. Now, as a result of the COVID-19 pandemic, things might look a little differently and that is what I want to bring to your attention. But, I am confident that we can meet this challenge head on and provide the best learning experience to our Warrior family by following some simple guidelines. <br />
+ <br />
+For the past weeks and months, our campus leadership has been deep in prayer, thought, discussion and decision-making to provide this learning atmosphere. Specifically, I’d like to introduce you to our COVID Task Force, a team that is solely focused on responsibly putting safeguards and best practices in place for our community to meet together again on campus. Jason Briar, Vice President for Student Life, leads this task force, and together with input from local, county and state health officials, the COVID Task Force will establish appropriate guidelines for our fall semester and beyond. <br />
+ <br />
+You will hear regular updates from the COVID Task Force over the summer and towards fall as plans and guidelines are adopted and implemented. These updates will be sent to your Sterling email address, so please watch for the latest communications. If you have specific questions for the COVID Task Force, please check the COVID-19 webpage and corresponding FAQ page. If your specific question is not addressed there please send an email to <a href="mailto:covid19update@sterling.edu">covid19update@sterling.edu</a>. The team is monitoring this address and will get back to you in a timely fashion. </p>
+<p>You will also be receiving an email very soon from Dr. Brown regarding some slight modifications to our fall academic calendar. The NAIA has published their plan which includes a delay in season start and a reduced number of competitions. While there are no current changes to our first day of class, we are able to delay new student move-in by one full week as well as finalize (to the degree we can) some other strategies. We are relieved that these NAIA changes mesh well with our current academic plans and are thankful for the early decision.  </p>
+<p> <br />
+I look forward to seeing you on campus very soon.</p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<p> </p>
+<hr />
+<p> </p>
+<p>Subject: Message from the President: Commencement Postponement <br />
+ <br />
+Date: April 17, 2020<br />
+ <br />
+Warriors:</p>
+<p>Commencement is a very special time for our graduating seniors to be celebrated for their accomplishments. We want you to have that time and that experience where we can celebrate our graduates. This year the circumstances in the world right now make it impossible to meet as originally planned. <strong>Therefore, we are announcing that Sterling College’s Commencement, originally scheduled for Saturday, May 16, has been postponed.</strong> However, we are committed to providing an on-campus Commencement celebration, when safe to do so. </p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<p> </p>
+<hr />
+<p> </p>
+<p>Subject: Message from the President: COVID-19 - March 19<br />
+ <br />
+Date: March 19, 2020<br />
+ <br />
+Warriors:<br />
+ <br />
+<strong>We have made the difficult decision to complete the remainder of this semester in an online format using Canvas and other virtual tools.</strong> I appreciate the patience you have exhibited during this time and please know that I wish the decision could have been different. The choice is about more than the health of campus and all of our students, faculty, staff and campus guests, it’s also about the health for the community of Sterling. With Sterling Village senior center just a block south of campus, and many residents of our town in potentially higher risk categories, the decision to finish the year online seems most prudent.<br />
+ <br />
+Unfortunately, due to this circumstance, students that are currently away from campus, have traveled outside of the state, or have traveled to high risk counties, will not be permitted to return to campus at this time. Students that are on campus will be asked to check out of their rooms and make arrangements to leave campus as soon as possible. Residence Life staff will be in contact with these students. <br />
+ <br />
+Once it is safe for students to return to campus to collect the items they have stored in their residence hall rooms, an email will be sent with directions as to how to collect these items. We currently anticipate this date to potentially be in May. We are working with local health authorities to determine a date that will be safe for all students and the community. Until that time, dorms will remain locked and secured.<br />
+ <br />
+<strong>Only students that remained in Rice County during the entirety of Spring Break may return to check out of their dorm room.</strong> Please contact the Office of Student Life at <a href="mailto:tess.cannon@sterling.edu">tess.cannon@sterling.edu</a> to make arrangements. Before you are cleared to return to pick up your belongings you must fill out this Return to Campus Screening Form and you will be contacted by campus health officials prior to your return. This form can be found here:<br />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ56u9uiGm6TlLimWJ-LZJ9cZnVg75XhqDV6duOFlpdjTAfQ/viewform">https://docs.google.com/forms/d/e/1FAIpQLSeJ56u9uiGm6TlLimWJ-LZJ9cZnVg75XhqDV6duOFlpdjTAfQ/viewform</a> <br />
+ <br />
+It is recognized that select, international students may need to remain on campus for an extended time. These students need to contact the Office of Student Life and be approved to live on campus for a limited amount of time. <br />
+ <br />
+In order to answer many other questions that you may have, please know that I will be sending the next email to students and staff on Monday.  Please continue your patience with this process and early next week expect communication from your professors, advisors, coaches and those in student life.    <br />
+ <br />
+ <br />
+Dr. Scott A. Rich<br />
+President<br />
+Sterling College<br />
+Sterling, Kansas<br />
+<a href="http://www.sterling.edu">www.sterling.edu</a></p>
+<p> </p>
+<p> </p>
+<hr />
+<p> </p>
+<p>Subject: Message from the President: COVID-19 - March 18</p>
+<p>Date: March 18, 2020</p>
+<p>Dear Sterling College Community,</p>
+<p>We wanted to provide a brief update to you as we approach the end of this first week of Spring Break. <br />
+ <br />
+As a reminder, Sterling College leadership has <strong>extended Spring Break scheduled for March 14-22, by an additional week, from March 23-29</strong>, to provide additional time for faculty and staff to prepare for a potential move to online learning for all face to face classes, should it be necessary to do so. <strong>We have also decided to extend our staff Spring Breather by an additional day, so campus will be closed Thursday, March 19 and Friday, March 20.</strong> Offices reopen Monday, March 23.  </p>
+<p>We will continue to monitor the situation along with all of the complexities and will communicate our decision to you no later than Thursday, March 26.  I appreciate your patience as we hold out in hope.  Picture me playing the part of William Wallace in the movie Braveheart as he defies the instincts of battle and says “hold…hold…hold…hold” waiting until the best possible moment to make a very important decision.  That is what I am trying to do – and, watch the movie again over break – it’s a good one.   And, by the way, I appreciate the students who sent me that William Wallace GIF as a reminder - that really made my day.<br />
+ <br />
+As a reminder, all members of the campus community should monitor their <strong>Sterling College email</strong> as the primary source for further instructions. Course-specific communications will come from faculty and students are encouraged to check their Canvas account often for updates. <br />
+ <br />
+The College website has a page that will provide the most updated information along with information regarding events, program cancellations or rescheduling. This page can be found here: <a href="https://www.sterling.edu/student-life/covid-19-information/">https://www.sterling.edu/student-life/covid-19-information/</a><br />
+ <br />
+Thank you for your patience and perseverance in these unprecedented times. Our commitment and resolve is to ensure the best education and experience possible for our students, the next generation of servant leaders. </p>
+<p>I am reminded today of Romans 12:12 “Rejoice in hope, be patient in tribulation, be constant in prayer”.  Join me in praying for our nation, our communities and our campus – that we would be patient during these days and be reminded that, as believers in Jesus Christ, we have a joyous hope that rests not in the circumstances of this world.</p>
+<p>I miss you…and I love you.<br />
+ <br />
+Dr. Scott A. Rich<br />
+President</p>
+<p> </p>
+<hr />
+<p>Date: March 13, 2020</p>
+<p>Dear Sterling College Community,</p>
+<p>Sterling College leadership is closely monitoring the outbreak of the coronavirus (COVID-19) and will continue to monitor the situation and follow the guidance of the CDC and other health agencies. </p>
+<p>Please review this information carefully, as some normal activities may be impacted. We understand at least some of the difficult implications of these decisions. Please know that we make the following announcement from a desire to demonstrate caution and to protect our students, faculty, staff and guests.</p>
+<p>At present, the College has not identified any cases of the virus within our community and is operating “as usual” based on the guidance we are receiving. Because of the spread of the virus in the U.S., the situation may change quickly, and we will initiate appropriate action as necessary to further protect our campus community. We will continue to exercise caution for all concerned and will be mindful of the needs of our faculty and staff. We especially want to assure students that their academic programs, services and support needs will be fully considered as we move forward.</p>
+<p><strong>Guidance for Faculty and Students Regarding Classroom Teaching</strong><br />
+Out of an abundance of caution and to follow guidance set forth by state leadership, Sterling College leadership has decided to <strong>extend Spring Break scheduled for March 14-22, by an additional week, from March 23-29</strong>, to provide additional time for faculty and staff to prepare for a potential move to online learning for all face to face classes, should it be necessary to do so. This will provide a two week break to permit continued monitoring of the virus situation and provide time for additional preparation and response to these issues. Our prayer and hope has been and will be to have<strong> face-to-face classes back in session on Monday, March 30</strong>. We will continue to monitor the situation and provide additional guidance about classes by Thursday, March 26. </p>
+<p><strong>Residential Living</strong><br />
+The traditional undergraduate student population will be welcome to return to residence halls on Sunday morning, March 29, with classes resuming on Monday, March 30. Students leaving for Spring Break should take textbooks, supplies and materials necessary and be prepared to return to classes on Monday, March 30. Should classes be moved to online format the College has computers located in Mabee Library that are accessible for students who do not otherwise have computer access. As a reminder, the College’s learning platform, Canvas, is available anywhere via the internet. Additional communication will be provided prior to the return of students regarding class format, preparation for return and other instructions. </p>
+<p>It is recognized that select students may need to remain on campus for the extended spring break. The Office of Student Life will identify and must approve all requests for students who desire to remain as residents on campus. If you received approval to stay on campus during Spring Break, this approval is extended for the extended Spring Break. During the break, visitors, family and non-residential guests will not be allowed to visit the residence halls without the approval of Student Life. </p>
+<p><strong>Dining Services</strong><br />
+With the extended Spring Break, dining services will be closed for the entire Spring Break, from March 14-29, with regular dining services starting again on Sunday evening, March 29. Maintenance and custodial staff will initiate additional disinfecting or cleaning procedures in all occupied buildings and hand sanitizer will be distributed to all classrooms, offices and common areas.</p>
+<p><strong>Coronavirus Preparedness</strong><br />
+Prior to returning to campus, any student that is ill should contact the Office of Student Life at <a href="mailto:tess.cannon@sterling.edu">tess.cannon@sterling.edu</a>. Please visit the CDC Coronavirus travel information link to be aware of travel alerts. You will be asked by Sterling College to fill out screening questions as to your extended spring break travel prior to your return to campus depending on the current state of the spread of Coronavirus at that time. There is also a possibility the KDHE or CDC may recommend a period of self-quarantine depending on the area that you may have traveled to during the extended spring break. Should this be the case, online coursework will be made available to you at this time. </p>
+<p>All College sponsored or reimbursed travel by faculty, staff and students is immediately suspended unless specifically approved by their respective vice president.</p>
+<p>All current online learning classes, graduate or other clinical classes may continue to meet or may be converted to an online learning format and function as scheduled, unless it is determined that circumstances require changes approved by the vice president for academic affairs.</p>
+<p><strong>Faculty and Staff Work Arrangements</strong><br />
+During the extended portion of spring break, College facilities and offices will remain open for regular hours including the Student Union (excluding dining services) and the Mabee Library. Faculty and staff will receive internal communications and updates regarding operations and functions within their areas. Faculty or staff who become ill should not report to work and should utilize College PTO provisions and may be required to provide physicians clearance prior to reporting for work.</p>
+<p>The College will continue to monitor the situation and further announcements will be issued as necessary. During the extended break (March 14-29) all scheduled campus events, public events and use of campus facilities by outside groups are cancelled. The sponsoring group or department will be responsible for communication of cancelled or rescheduled events.</p>
+<p>I want to assure the campus community that there is no immediate threat or cause for alarm. Current information has indicated that our area is not at immediate risk, but definitive action is necessary out of a serious need for caution and care. Students can be assured that the College will keep them fully informed and that their class work and academic progress will be a high priority consideration, especially for our seniors and those contemplating graduation. They should not be alarmed or have undue concern. Commencement services are still planned to take place as scheduled on Saturday, May 16. </p>
+<p><strong>Athletics</strong><br />
+Per the Kansas Collegiate Athletic Conference (KCAC), all athletic activity (including organized practices and competitions) have been suspended indefinitely at this time. If you have any questions, please contact Justin Morris, athletic director. </p>
+<p><strong>Academic Activities</strong><br />
+All Sterling College co-curricular activities (including organized practices and competitions) have been suspended indefinitely at this time. If you have any questions, please contact Dr. Ken Brown, vice president for academic affairs.</p>
+<p><strong>Travel</strong><br />
+Nonessential business travel will cease effective immediately. The respective vice president or athletic director will provide further guidance concerning College business. We have cancelled all missions trip travel including summer and Spring Break trips. </p>
+<p>All members of the campus community should monitor their <strong>Sterling College email</strong> as the primary source for further instructions. The College website has a page that will provide the most updated information along with information regarding events, program cancellations or rescheduling. This page can be found here: <a href="https://www.sterling.edu/student-life/covid-19-information/">https://www.sterling.edu/student-life/covid-19-information/</a></p>
+<p>These are exceptional times and as a Christ-centered community we have a responsibility and a privilege to demonstrate compassion, long suffering and patience during these difficult circumstances. I am confident that as Warriors we can work together to deal with these issues as we become even stronger in our commitment to serve and support each other.</p>
+<p>We will continue to monitor the situation and share regular updates and resources with our campus community.</p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<hr />
+<p>March 12, 2020</p>
+<p>Sterling College Community – </p>
+<p>Please find the below update from the Office of Academic Affairs. In an abundance of caution, we are encouraging students and faculty to follow the below recommendation to bring essential learning items with them as they depart for Spring Break. </p>
+<p>Thank you, </p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<p class="rtecenter">--------</p>
+<p>Sterling College Students – </p>
+<p>With the rapidly changing nature of the COVID-19 virus, as well as the responses to it, I recommend that you take all essential learning items with you as you leave campus.  <strong><em>This would include laptops, tablets, textbooks, and other classroom materials and resources. </em></strong></p>
+<p>At the moment, there are no changes or extensions that have been made to the dates for our spring break, but in the event that changes must be made due to the virus, it’s wise for you to take these items with you to be prepared for such an event.</p>
+<p>Sterling College will continue to monitor the situation and will keep in touch with you through all available modes of communication (text alerts, email, website notifications, etc.).</p>
+<p>Dr. Brown</p>
+<p><strong>Ken Brown, Ph.D.<br />
+Vice-President for Academic Affairs<br />
+Dean of the College</strong></p>
+<hr />
+<p>March 11, 2020</p>
+<p>Dear Sterling College Community, </p>
+<p>As the spread of the Coronavirus (COVID-19) continues, we want to communicate information on how Sterling College is monitoring and preparing for any potential impact to our campus community.</p>
+<p><strong>We do not anticipate any disruption to classes or regular college activities at this time. </strong></p>
+<p>Sterling prepares for situations of this nature and has a campus preparedness and response plan in place that addresses prevention, care, communication, and safety measures as well as the many academic and student support implications that could arise in any situation like this.</p>
+<p>Our team is reviewing this plan and is updating in light of the most recent Coronavirus data and communication available from the CDC as well as our local health care providers. Further, our campus safety committee has been monitoring the situation with resources from the state and CDC.</p>
+<p>Many preventative measures are also being taken. We are encouraging everyone to wash their hands frequently and thoroughly and prioritizing the cleaning of frequently touched surfaces such as doorknobs, keyboards and light switches. Special focus is being put on the cleaning of public areas. The Kansas Department of Health has produced <a href="http://www.kdheks.gov/coronavirus/" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; color: rgb(149, 79, 114);" target="_blank">a guide</a> for helping individuals protect themselves from the coronavirus. </p>
+<p>Please visit the <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html" rel="noopener noreferrer" style="margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; color: rgb(149, 79, 114);" target="_blank">CDC Coronavirus travel information link</a> to be aware of travel alerts. <strong>You may be asked by Sterling College to fill out screening questions as to your spring break travel prior to your return to campus depending on the current state of the spread of Coronavirus at that time</strong>. There is also a possibility the KDHE or CDC may recommend a period of self-quarantine depending on the area that you may have traveled to during spring break.</p>
+<p>We will continue to monitor the situation and share regular updates and resources with our campus community.</p>
+<p>Dr. Scott A. Rich<br />
+President</p>
+<p>
+Links:<br />
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html">https://www.cdc.gov/coronavirus/2019-ncov/travelers/index.html</a><br />
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf">https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf</a><br />
+<a href="http://www.kdheks.gov/coronavirus/">http://www.kdheks.gov/coronavirus/</a></p>
+<p> </p>
+</div></div></div>    </div>
+	    </div>
+	    		    <aside class="l-region--sidebar">
+		      <div class="panel-pane pane-block pane-menu-menu-sidebar-student-life pane-menu">
+            <ul class="menu"><li class="first leaf"><a href="/student-life/clubs-and-organizations" title="">Clubs and Organizations</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/campus-ministry">Campus Ministry</a></li>
+<li class="leaf"><a href="/student-life/safety-security">Safety and Security</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/student-life/crisis-care-and-action-team">Crisis Care and Action Team</a></li>
+<li class="leaf"><a href="/about/business-office">Business Office</a></li>
+<li class="leaf"><a href="/student-life/intramurals">Intramurals</a></li>
+<li class="leaf"><a href="/parents">Parents</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/sites/default/files/2019-20%2520Student%2520Handbook_1.pdf">Student Handbook</a></li>
+<li class="leaf"><a href="/student-life/staff">Student Life Staff</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/sterling-college-complaint-process">Student Complaint Process</a></li>
+<li class="leaf"><a href="/student-life/resources">Sexual Assault Resources</a></li>
+<li class="leaf"><a href="/student-life/clery-act-compliance-information">Clery Act Compliance Information</a></li>
+<li class="last leaf"><a href="/love-sterling">Love Sterling</a></li>
+</ul>    </div>
+		    </aside>
+	    	    	  </div>	
+  </div>
+
+    
+  
+  
+    </div>
+  </div>
+  <footer class="l-footer" role="contentinfo">
+    <div class="l-footer-first">
+    	<div class="l-constrained">
+      <div class="l-region l-region--footer">
+    <div class="panel-pane pane-custom pane-2">
+            <p><img alt="test" src="/sites/all/themes/sterling_events/images/logo-icon.png" /></p>
+<p><strong>Sterling College</strong><br />
+125 W.Cooper<br />
+Sterling, KS 67579</p>
+<p><strong>Contact &amp; Feedback</strong><br />
+800-346-1017 | 620-278-2173<br />
+<a href="/contact" target="_blank">Email Sterling College</a></p>
+    </div>
+<div class="panel-pane pane-block pane-menu-menu-footer-menu pane-menu">
+            <ul class="menu"><li class="first expanded"><span title="" class="nolink">About SC</span><ul class="menu"><li class="first leaf"><a href="/about/what-we-believe">What We Believe</a></li>
+<li class="leaf"><a href="/giving" title="">Advancement</a></li>
+<li class="leaf"><a href="/about/buildings-and-office-directory" title="">Campus Directory</a></li>
+<li class="leaf"><a href="/human-resources" title="">Human Resources</a></li>
+<li class="leaf"><a href="/employment" title="">Employment</a></li>
+<li class="last leaf"><a href="/privacy-policy-and-web-disclaimer" title="">Privacy Policy</a></li>
+</ul></li>
+<li class="expanded"><span title="" class="nolink">Academics</span><ul class="menu"><li class="first leaf"><a href="/academics/majors">Departments</a></li>
+<li class="leaf"><a href="/academics/course-finals-schedule">Course &amp; Finals Schedule</a></li>
+<li class="leaf"><a href="/academics/registrar">Registrar</a></li>
+<li class="leaf"><a href="http://online.sterling.edu">Online Learning</a></li>
+<li class="leaf"><a href="https://office.com">Student Email</a></li>
+<li class="leaf"><a href="https://outlook.office365.com/mail">Employee Email</a></li>
+<li class="leaf"><a href="https://my.sterling.edu/ics/">mySterling</a></li>
+<li class="last leaf"><a href="/academics/academic-catalog">Catalog</a></li>
+</ul></li>
+<li class="last expanded"><span title="" class="nolink">Quick Links</span><ul class="menu"><li class="first leaf"><a href="/admissions/visit-campus">Visit Campus</a></li>
+<li class="leaf"><a href="/bookstore">Bookstore</a></li>
+<li class="leaf"><a href="http://www.scwarriors.com/">Athletics</a></li>
+<li class="leaf"><a href="/financial-aid">Financial Aid</a></li>
+<li class="leaf"><a href="/student-life">Student Life</a></li>
+<li class="leaf"><a href="/student-life/services">Student Services</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/title-ix">Title IX</a></li>
+<li class="leaf"><a href="https://www.sterling.edu/#/vte/?data-platform=v&amp;data-inst=63238&amp;">Virtual Tour</a></li>
+<li class="last leaf"><a href="https://www.sterling.edu/financial-aid/consumerism-at-a-glance">Consumerism at a Glance</a></li>
+</ul></li>
+</ul>    </div>
+<div class="panel-pane pane-custom pane-3 accreditation-section">
+            <div class="member-image"><a href="http://www.cccu.org/"><img alt="" class="media-image attr__typeof__foaf:Image img__fid__11055 img__view_mode__default attr__format__default attr__field_file_image_alt_text[und][0][value]__ attr__field_file_image_title_text[und][0][value]__" src="https://www.sterling.edu/sites/default/files/CCCU_Member_Logo.png" style="height: 60px; width: 72px;" typeof="foaf:Image" /></a></div>
+<div class="member-image"><a href="http://www.cic.org/Pages/default.aspx"><img src="/sites/default/files/cic-logo.png" style="width: 72px; height: 60px;" /></a></div>
+<div class="member-image">
+<iframe allowtransparency="true" frameborder="0" height="165" max-height="130" scrolling="no" src="https://cdn.yoshki.com/iframe/54732.html" style="border:0px; margin:0px; padding:0px; backgroundColor:transparent;" width="120"></iframe></div>
+    </div>
+  </div>
+        </div>
+    </div>
+    <div class="l-footer-second">    
+    <div class="l-constrained">
+    <div class="l-copy">Copyright 2020 Sterling College, all rights reserved.</div>
+        <div class="l-social">
+          <a class="social-facebook" href="https://www.facebook.com/sterlingcollege" target="_blank" title="Add us on Facebook"><span>Facebook</span></a>
+          <a class="social-googleplus" href="https://plus.google.com/+sterlingcollege/posts" target="_blank" title="Join our Google plus page"><span>Google Plus</span></a>
+          <a class="social-twitter" href="https://twitter.com/sterlingclife" target="_blank" title="Follow us on Twitter"><span>Twitter</span></a>
+          <a class="social-youtube" href="https://www.youtube.com/user/SterlingCollege" target="_blank" title="Subscribe to our youtube channel"><span>Youtube</span></a>
+          <a class="social-instagram" href="http://iconosquare.com/sterlingcollege" target="_blank" title="Follow us on Instagram"><span>Instagram</span></a>
+        </div>
+    </div>
+    </div>
+  </footer>
+</div>  <script src="https://www.sterling.edu/sites/default/files/js/js_REsLPu7rmWMjWdJcbmAAi4_CGneW_u1kgEQ0gfYfPC4.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8aba717f7c","applicationID":"92533569","transactionName":"YAcDZUMAVxUAUBJcDllNIFJFCFYITkMHUgRoDwBfUAZcFD5dCVEEaBQIVEY+SQcGVg==","queueTime":0,"applicationTime":1032,"atts":"TEAAEwsaRBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
