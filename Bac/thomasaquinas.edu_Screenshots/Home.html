@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:fb="http://ogp.me/ns/fb#"
+  xmlns:og="http://ogp.me/ns#">
+    <head profile="http://www.w3.org/1999/xhtml/vocab">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"d36ffdb30c",applicationID:"27278622"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link href="https://thomasaquinas.edu/sites/all/themes/thomasaquines/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+<link href="https://thomasaquinas.edu/sites/all/themes/thomasaquines/menu/css/dcaccordion.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="https://thomasaquinas.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="https://thomasaquinas.edu/sites/all/themes/thomasaquines/menu/css/style.css" rel="stylesheet" type="text/css" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=5" name="viewport" />
+<meta name="description" content="Last updated March 19, 2020 | 10:20 p.m. PDT On March 19 Gov. Gavin Newsom issued a “stay at home” order for the State of California. As such, all students now must depart the California campus by the end of Friday, March 20. Exceptions will be granted only in cases of extreme hardship, at the discretion of the Assistant Dean. Students who need help getting off campus should" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://thomasaquinas.edu/coronavirus" />
+<link rel="shortlink" href="https://thomasaquinas.edu/node/19813" />
+<meta property="og:site_name" content="Thomas Aquinas College" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thomasaquinas.edu/coronavirus" />
+<meta property="og:title" content="COVID-19 Updates and Information" />
+<meta property="og:description" content="Last updated March 19, 2020 | 10:20 p.m. PDT On March 19 Gov. Gavin Newsom issued a “stay at home” order for the State of California. As such, all students now must depart the California campus by the end of Friday, March 20. Exceptions will be granted only in cases of extreme hardship, at the discretion of the Assistant Dean. Students who need help getting off campus should contact a prefect for assistance. We apologize for the difficulties this change will no doubt cause many, and ask for continued prayers during these trying times." />
+<meta property="og:updated_time" content="2020-03-20T11:21:16-07:00" />
+<meta property="article:published_time" content="2020-03-02T16:49:26-08:00" />
+<meta property="article:modified_time" content="2020-03-20T11:21:16-07:00" />
+<meta itemprop="name" content="COVID-19 Updates and Information" />
+<meta itemprop="description" content="Last updated March 19, 2020 | 10:20 p.m. PDT On March 19 Gov. Gavin Newsom issued a “stay at home” order for the State of California. As such, all students now must depart the California campus by the end of Friday, March 20. Exceptions will be granted only in cases of extreme hardship, at the discretion of the Assistant Dean. Students who need help getting off campus should contact a prefect for assistance. We apologize for the difficulties this change will no doubt cause many, and ask for continued prayers during these trying times." />
+        <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/thomasaquines/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/sites/all/themes/thomasaquines/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/sites/all/themes/thomasaquines/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/sites/all/themes/thomasaquines/images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/sites/all/themes/thomasaquines/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta property="fb:page_id" content="101339168018" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>COVID-19 Updates and Information | Thomas Aquinas College</title>
+        <link type="text/css" rel="stylesheet" href="https://thomasaquinas.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://thomasaquinas.edu/sites/default/files/css/css_cg0o3Y51MxwosXB3K5pFIWEASyegBGEc-y7zXa2A3YU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://thomasaquinas.edu/sites/default/files/css/css_xMK9UaQhDKB-JS1Et4_f7vZn39_wNPFBp6SPQNE9JNA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://thomasaquinas.edu/sites/default/files/css/css_whQGxgoaXZqSi0KgQQy81roV6KiI8VW4MOEi9C3Kvyg.css" media="all" />
+        <script type="text/javascript" src="https://thomasaquinas.edu/sites/default/files/js/js_Ua98zxjH9I2U2rTee9IFt0Bz0daoaQQTSnaDxCxt3Kc.js"></script>
+<script type="text/javascript" src="https://thomasaquinas.edu/sites/default/files/js/js_FvBWezKhsGxJU-Yi41qvYAlpXctdNNR7mIzff4prZrg.js"></script>
+<script type="text/javascript" src="https://thomasaquinas.edu/sites/default/files/js/js_kXAG4HKvWI96JXKzh_GkJu2WLJ7yW-Xcy37bzqyOC9o.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-6672391-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://thomasaquinas.edu/sites/default/files/js/js_zsU7pE_En9PuEzx00IjN_iCxIwgABAiEwJNkh1iTG9k.js"></script>
+<script type="text/javascript" src="https://thomasaquinas.edu/sites/default/files/js/js_xx14vx5v_b_lnnfebzPwBuIdQBOVSamF2sJQ2LiR0ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"thomasaquines","theme_token":"fPclyp4YOqhbANt4vD9r8MX9PY1yBZf21J4BAXXlx8c","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/ubercart\/uc_file\/uc_file.js":1,"sites\/all\/modules\/contrib\/video\/js\/video.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/themes\/thomasaquines\/js\/topmenu.js":1,"sites\/all\/themes\/thomasaquines\/js\/jquery.lightbox.js":1,"sites\/all\/themes\/thomasaquines\/js\/easySlider.js":1,"sites\/all\/themes\/thomasaquines\/js\/flowplayer.js":1,"sites\/all\/themes\/thomasaquines\/js\/flowplayer.ipad-3.2.1.js":1,"sites\/all\/themes\/thomasaquines\/js\/flowplayer.embed-3.0.3.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/contrib\/uc_fedex\/uc_fedex.css":1,"sites\/all\/modules\/contrib\/ubercart\/uc_file\/uc_file.css":1,"sites\/all\/modules\/contrib\/ubercart\/uc_order\/uc_order.css":1,"sites\/all\/modules\/contrib\/ubercart\/uc_product\/uc_product.css":1,"sites\/all\/modules\/contrib\/ubercart\/uc_store\/uc_store.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/date_repeat_entity\/date_repeat_entity.css":1,"sites\/all\/modules\/contrib\/nodeorder\/css\/nodeorder.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/video\/css\/video.css":1,"sites\/all\/modules\/contrib\/print\/print_ui\/css\/print_ui.theme.css":1,"sites\/all\/themes\/thomasaquines\/css\/style.css":1,"sites\/all\/themes\/thomasaquines\/css\/jquery.lightbox.css":1,"sites\/all\/themes\/thomasaquines\/css\/jquery.fancybox-1.3.4.css":1}},"urlIsAjaxTrusted":{"\/search-website":true,"\/search\/node":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":1},"field_group":{"hidden":"full"}});
+//--><!]]>
+</script>
+        <!-- Captcha -->
+        <script type="text/javascript">
+          var onloadCallback = function() {
+            grecaptcha.render('captcha_image', {
+              'sitekey' : '6LfgiAoUAAAAAC8V-gzlNB1X87RjzZXNV-IRBcW2'
+            });
+          };
+        </script>
+    </head>
+    <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-19813 node-type-about" >
+        <div id="skip-nav">
+          <a href="#main-content" class="element-invisible element-focusable">Skip to Content</a>
+        </div>
+        <div class="headerdiv">
+            <div class="header">
+                <div class="logo">
+                    <a href="/" title=""><img src="https://thomasaquinas.edu/sites/default/files/logo_0.png" alt="logo" id="logo" /></a>                </div>
+                <div class="topnav">
+                    <div id="block-menu-menu-header-menu" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu menu-"><li class="first leaf"><a href="/home" title="home">Home</a></li>
+<li class="leaf"><a href="/contact" title="Contact">Contact</a></li>
+<li class="leaf"><a href="https://thomasaquinas.edu/bookstore" title="">Bookstore</a></li>
+<li class="last leaf"><a href="/calendars" title="calendars">Calendar</a></li>
+</ul>  </div>
+</div>
+<div id="block-views-exp-solr-search-page" class="block block-views">
+
+    
+  <div class="content">
+    <form action="/search-website" method="get" id="views-exposed-form-solr-search-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-keywords-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-keywords">
+ <input placeholder="Search" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-solr-search" name="" value="Search" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form>  </div>
+</div>
+                </div>
+                <!--<div class="search" id="search-box-header">  </div>-->
+                <div class="clear"></div>
+            </div>
+
+            <div class="navdiv">
+                <div class="nav"> <div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <script  type="text/javascript"  src="/sites/all/themes/thomasaquines/menu/js/jquery.slight-submenu.js"></script><script type="text/javascript">
+(function($) {
+$(document).ready(function($){
+	//$('.accordion').hide();
+	$('.home').click(function() {
+		$('.accordion').slideToggle();
+	});
+        
+	$('.with-submenu').slightSubmenu({
+	buttonActivateEvents : 'click',
+	multipleSubmenusOpenedAllowed : false
+	});
+        
+        $('.slight-submenu-button').mouseenter(function(){
+	$(this).click();
+	});
+
+        $('.li-with-ul a').mouseenter(function(){
+	$(this).click();
+	});
+	
+					
+});
+})(jQuery);
+</script><ul>
+	<li><a class="menu-about" href="https://thomasaquinas.edu/about"><img alt="About" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+	<li><a class="menu-a-liberating-education" href="https://thomasaquinas.edu/a-liberating-education"><img alt="A Liberating Education" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+	<li><a class="menu-a-catholic-life" href="https://thomasaquinas.edu/a-catholic-life"><img alt="A Catholic Life" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+	<li><a class="menu-admissions" href="https://thomasaquinas.edu/admissions"><img alt="Admissions" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+	<li><a class="menu-meet-our-alumni" href="https://thomasaquinas.edu/meet-our-alumni"><img alt="Meet Our Alumni" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+	<li><a class="menu-support" href="https://thomasaquinas.edu/support"><img alt="Support" height="10" src="/sites/default/files/spacer.png" width="10" /></a></li>
+</ul>
+
+<div class="menu-mobile-responcive">
+<div class="grey demo-container">
+<div class="home">--Select--</div>
+
+<ul class="accordion with-submenu" id="accordion-1">
+	<li><a href="/about">About</a>
+
+	<ul class="with-submenu">
+		<li><a href="/about/fact-sheet">Fact Sheet </a></li>
+		<li><a href="/about/news-press">News &amp; Press </a>
+		<ul class="with-submenu">
+			<li><a href="/about/hi-res-photos">Hi-Res Photos </a></li>
+			<li><a href="/about/hi-res-photos">Press Releases </a>
+			<ul>
+				<li><a href="/about/press-release-archive">Press Release Archive </a></li>
+			</ul>
+			</li>
+			<li><a href="/about/news-archive">News Archive </a></li>
+			<li><a href="/about/thomas-aquinas-college-newsletter">Newsletter </a>
+			<ul>
+				<li><a href="/about/subscribe-college-newsletter">Subscribe </a></li>
+				<li><a href="/about/newsletter-archive">Newsletter Archive </a></li>
+			</ul>
+			</li>
+			<li><a href="/about/thomas-aquinas-college-e-letter">E-Letter </a>
+			<ul>
+				<li><a href="/about/e-letter-archive">Archive </a></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><a href="/about/mission-history">Mission &amp; History </a>
+		<ul class="with-submenu">
+			<li><a href="/about/brief-history-thomas-aquinas-college">A Brief History of Thomas Aquinas College</a></li>
+			<li><a href="/about/founding-governing-document">Founding &amp; Governing Document </a>
+			<ul>
+				<li><a href="/about/founding-document-0">The Crisis in the Catholic College </a></li>
+				<li><a href="/about/founding-document-1">Can Faith Illumine Understanding? </a></li>
+				<li><a href="/about/founding-document-2">Academic Freedom</a></li>
+				<li><a href="/about/founding-document-3">Freedom and Catholic Education </a></li>
+				<li><a href="/about/founding-document-4">The Catholic Teacher </a></li>
+				<li><a href="/about/founding-document-5">What is Liberal Education? </a></li>
+				<li><a href="/about/founding-document-6">Liberal Education, Its Parts and the Order Among Them </a></li>
+				<li><a href="/about/founding-document-7">Liberal Education and the Christian Faith</a></li>
+				<li><a href="/about/founding-document-8">The Present Need for Genuine Liberal Education </a></li>
+				<li><a href="/about/founding-document-9">The Curriculum </a></li>
+			</ul>
+			</li>
+			<li><a href="/about/founders-presidents">Founders &amp; Presidents </a></li>
+		</ul>
+		</li>
+		<li><a href="/about/seminal-documents">Seminal Documents </a>
+		<ul>
+			<li><a href="/about/why-great-books">Why the Great Books?</a></li>
+			<li><a href="/a-liberating-education/why-discussion-socratic-method">Why the Discussion (Socratic) Method?</a></li>
+			<li><a href="/about/liberal-education-and-freedom">Liberal Education and Freedom</a></li>
+			<li><a href="/about/liberal-education-and-humanities">Liberal Education and Humanities</a></li>
+			<li><a href="/about/formation-catholic-mind">The Formation of the Catholic Mind</a></li>
+			<li><a href="/about/liberal-education-preservation-political-order">Liberal Education &amp; the Preservation of the Political Order</a></li>
+			<li><a href="/about/study-st-thomas">The Study of St. Thomas</a></li>
+			<li><a href="/about/roots-modern-education">The Roots of Modern Education </a></li>
+			<li><a href="/about/reflection-campus-life">A Reflection on Campus Life</a></li>
+			<li><a href="/about/order-learning">Order of Learning </a></li>
+			<li><a href="/about/scholarship-catholic-tradition">Scholarship in the Catholic Tradition</a></li>
+			<li><a href="/about/place-liberal-arts-curriculum">The Place of the Liberal Arts in the Curriculum</a></li>
+		</ul>
+		</li>
+		<li><a href="/about/faculty">Faculty </a>
+		<ul>
+			<li><a href="/about/prospective-tutors">Prospective Tutors</a></li>
+		</ul>
+		</li>
+		<li><a href="/about/governance">Governance</a></li>
+		<li><a href="/about/honorees">Honorees </a></li>
+		<li><a href="/about/college-reviews">College Reviews </a></li>
+		<li><a href="/review">Aquinas Review</a></li>
+		<li><a href="/about/contact">Contact</a></li>
+	</ul>
+	</li>
+	<li><a href="/a-liberating-education">A Liberating Education </a>
+	<ul class="with-submenu">
+		<li class="dcjq-current-parent"><a href="/a-liberating-education/liberal-arts-sciences">The Liberal Arts &amp; Sciences</a>
+		<ul>
+			<li><a href="/a-liberating-education/order-arts-and-sciences">The Order of the Arts and Sciences</a></li>
+			<li><a href="/a-liberating-education/lost-tools-learning">The Lost Tools of Learning</a></li>
+		</ul>
+		</li>
+		<li><a href="/a-liberating-education/great-books">The Great Books</a></li>
+		<li><a href="/a-liberating-education/syllabus">Syllabus</a></li>
+		<li><a href="/a-liberating-education/why-we-study">Why We Study...</a>
+		<ul>
+			<li><a href="/a-liberating-education/defending-damascene">Defending Damascene</a></li>
+			<li><a href="/a-liberating-education/reckoning-rousseau">Reckoning with Rousseau</a></li>
+			<li><a href="/a-liberating-education/why-we-study-mathematics">Why We Study Mathematics</a></li>
+			<li><a href="/a-liberating-education/great-apostle-philosophy">A Great Apostle for Philosophy</a></li>
+			<li><a href="/a-liberating-education/our-patron-mentor-muse-and-master">Our Patron, Mentor, Muse, and Master</a></li>
+			<li><a href="/a-liberating-education/gods-kitchen">The Gods in the Kitchen</a></li>
+			<li><a href="/a-liberating-education/poet-catholic-liberal-education">The Poet of Catholic Liberal Education</a></li>
+			<li><a href="/a-liberating-education/way-health-and-hope-and-love">The Way of Health and Hope and Love</a></li>
+			<li><a href="/news/weird-and-wonderful-midwife">The Weird and Wonderful Midwife</a></li>
+		</ul>
+		</li>
+		<li><a href="/a-liberating-education/discussion-method">The Discussion Method</a>
+		<ul>
+			<li><a href="/a-liberating-education/why-discussion-socratic-method">Why the Discussion (Socratic) Method?</a></li>
+		</ul>
+		</li>
+		<li><a href="/a-liberating-education/course-descriptions">Course Descriptions</a></li>
+		<li><a href="/a-liberating-education/program-objectives">Program Objectives</a></li>
+		<li><a href="/a-liberating-education/degree">The Degree</a></li>
+		<li><a href="/a-liberating-education/assessment">Assessment</a></li>
+		<li><a href="/a-liberating-education/our-patron">Our Patron </a>
+		<ul>
+			<li><a href="/a-liberating-education/popes-st-thomas">The Popes on St. Thomas</a></li>
+			<li><a href="/a-liberating-education/formation-catholic-mind">The Formation of the Catholic Mind</a></li>
+		</ul>
+		</li>
+		<li><a href="/a-liberating-education/beyond-classroom">Beyond the Classroom</a>
+		<ul>
+			<li><a href="/a-liberating-education/lecture-concert-series">Lecture &amp; Concert Series</a></li>
+			<li><a href="/a-liberating-education/theater">Theater</a></li>
+			<li><a href="/a-liberating-education/music">Music</a></li>
+			<li><a href="/a-liberating-education/athletics">Athletics</a></li>
+			<li><a href="/about/tutor-talks">Tutor Talks</a></li>
+			<li><a href="/a-liberating-education/st-bernardine-siena-library">St. Bernardine of Siena Library</a></li>
+		</ul>
+		</li>
+		<li><a href="/a-liberating-education/beaches-mountains-more">Beaches, Mountains &amp; More</a></li>
+	</ul>
+	</li>
+	<li><a href="/a-catholic-life">A Catholic Life </a>
+	<ul class="with-submenu">
+		<li class="dcjq-current-parent"><a href="/catholic-life/chapels">Chapels</a>
+		<ul>
+			<li><a href="/pdfs/a-church-that-teaches.pdf">A Church That Teaches (PDF)</a></li>
+			<li><a href="/catholic-life/awards-recognition">Awards &amp; Recognition</a></li>
+			<li><a href="/catholic-life/architect-patron">The Architect &amp; The Patron</a></li>
+		</ul>
+		</li>
+		<li><a href="/catholic-life/mass-schedule">Mass Schedules</a></li>
+		<li><a href="/catholic-life/oath-fidelity">Oath of Fidelity</a></li>
+		<li><a href="/catholic-life/faith-works">Faith &amp; Works</a></li>
+		<li><a href="/catholic-life/vocations">Vocations</a>
+		<ul>
+			<li><a href="/catholic-life/vocations-flourish">Why So Many?</a></li>
+		</ul>
+		</li>
+		<li><a href="/catholic-life/chaplains">Chaplains</a></li>
+		<li><a href="/catholic-life/prayer-requests">Prayer Requests</a></li>
+	</ul>
+	</li>
+	<li><a href="/admissions">Admissions </a>
+	<ul class="with-submenu">
+		<li class="dcjq-current-parent"><a href="/admission/apply">Apply to the College</a>
+		<ul>
+			<li><a href="/admission/apply-online">Apply Online</a></li>
+			<li><a href="/admission/apply-mail-e-mail">Apply by Mail / E-Mail </a></li>
+		</ul>
+		</li>
+		<li><a href="/admission/financial-aid">Financial Aid</a>
+		<ul class="with-submenu">
+			<li><a href="/admission/cost-attendance">Cost of Attendance</a></li>
+			<li><a href="/admission/student-parent-responsibility">Student &amp; Parent Responsibility</a></li>
+			<li><a href="/admission/types-financial-aid-available">Types of Financial Aid Available</a>
+			<ul>
+				<li><a href="/admission/pell-grants">Pell Grants</a></li>
+				<li><a href="/admission/cal-grants-0">Cal Grants</a></li>
+				<li><a href="/admission/outside-grants-scholarships">Outside Grants/Scholarships</a></li>
+				<li><a href="/admission/loans">Loans</a></li>
+				<li><a href="/admission/institutional-aid">Institutional Aid</a></li>
+			</ul>
+			</li>
+			<li class="dcjq-current-parent"><a href="/admission/net-price-calculator-financial-aid-calculator">Financial Aid Calculator</a>
+			<ul>
+				<li><a href="/admission/net-price-calculator-privacy-policy">Financial Aid Calculator Privacy Policy</a></li>
+			</ul>
+			</li>
+			<li class="dcjq-current-parent"><a href="/admission/apply-financial-aid">Apply for Financial Aid </a>
+			<ul>
+				<li><a href="/admission/deadlines">Deadlines</a></li>
+				<li><a href="/admission/international-students">International Students</a></li>
+			</ul>
+			</li>
+			<li><a href="/admission/financial-aid-faqs">Financial Aid FAQs</a></li>
+			<li><a href="/admission/forms-documents-instructional-videos-links">Forms</a></li>
+			<li><a href="/admission/secure-file-upload">Secure File Upload</a></li>
+			<li><a href="/admission/financial-aid-contact">Contact</a></li>
+		</ul>
+		</li>
+		<li class="dcjq-current-parent"><a href="/admission/high-school-summer-program">High School Summer Program</a>
+		<ul class="with-submenu">
+			<li><a href="/admission/apply-high-school-summer-program">Apply to the Summer Program</a></li>
+			<li><a href="/admission/summer-program-blog">Summer Program Blog</a>
+			<ul>
+				<li><a href="/admission/summer-program-archives">Archived Items</a></li>
+			</ul>
+			</li>
+			<li><a href="/admission/hssp/send-me-information">Send Me Information</a></li>
+			<li><a href="/admission/summer/forms-info-payment">Forms, Information &amp; Payment</a></li>
+		</ul>
+		</li>
+		<li><a href="/about/college-reviews">College Reviews</a></li>
+		<li><a href="/admission/campus-living">Campus Living</a></li>
+		<li><a href="/admission/when-will-admissions-visit-my-area">When Will Admissions Visit My Area?</a></li>
+		<li><a href="/admission/visit-connect">Visit &amp; Connect</a>
+		<ul>
+			<li><a href="/admission/request-visit">Request a Visit</a></li>
+			<li><a href="/admission/how-get-thomas-aquinas-college">How to Get to Thomas Aquinas College</a></li>
+			<li><a href="/admission/nearby-accommodations">Nearby Accommodations</a></li>
+			<li><a href="/admission/dining">Dining</a></li>
+			<li><a href="/admission/outings-attractions">Outings &amp; Attractions</a></li>
+		</ul>
+		</li>
+		<li><a href="/admission/frequently-asked-questions">FAQs (Admissions)</a></li>
+		<li><a href="/admission/send-me-information">Send Me Information</a></li>
+		<li><a href="/admission/student-video-interviews">Student Video Interviews</a></li>
+		<li><a href="/sites/default/files/New360/TAC-2014.html">360° Tour</a></li>
+	</ul>
+	</li>
+	<li><a href="/meet-our-alumni">Meet Our Alumni </a>
+	<ul>
+		<li><a href="/alumni/profiles-leadership">Profiles in Leadership</a></li>
+		<li><a href="/alumni/faith-action-blog">Faith in Action Blog</a></li>
+		<li><a href="/alumni">Alumni Gateway</a></li>
+		<li><a href="https://alumni.thomasaquinas.edu/">Alumni Association website</a></li>
+	</ul>
+	</li>
+	<li><a href="https://thomasaquinas.edu/support">Support</a>
+	<ul class="with-submenu">
+		<li><a href="/support/make-gift-now-0">Make a Gift Now</a></li>
+		<li><a href="/news/fr-buckley-scholarship-fund">The Fr. Buckley Scholarship Fund</a></li>
+		<li class="dcjq-current-parent"><a href="/support/presidents-council">President's Council</a>
+		<ul>
+			<li><a href="/support/great-books-summer-seminar-weekends">Great Books Summer Seminar Weekends</a></li>
+			<li><a href="https://thomasaquinas.edu/support/join-presidents-council">Join the President's Council</a></li>
+		</ul>
+		</li>
+		<li class="dcjq-current-parent"><a href="/support/planned-giving">Gift Planning: The Legacy Society</a>
+		<ul>
+			<li><a href="/support/contact">Contact Gift Planning</a></li>
+			<li><a href="/support/gifts-through-will-or-trust">Gifts through a Will or a Trust</a></li>
+			<li><a href="/support/send-me-information-0">Send Me Information</a></li>
+		</ul>
+		</li>
+		<li><a href="/support/gifts-stock">Gifts of Stock</a></li>
+		<li><a href="/support/matching-gifts">Matching Gifts</a></li>
+		<li><a href="/support/why-no-government-funding">Why No Government Funding</a></li>
+		<li><a href="/support/order-st-albert">Order of St. Albert</a></li>
+		<li><a href="/corporate-benefactors">Corporate Benefactors</a></li>
+		<li class="dcjq-current-parent"><a href="/support/parents-association">The Parents´ Association</a>
+		<ul class="with-submenu">
+			<li><a href="/support/activities">Activities</a></li>
+			<li><a href="/support/daily-prayer">Daily Prayer</a></li>
+			<li><a href="/support/parents-association-executive-committee">Executive Committee</a>
+			<ul>
+				<li><a href="/support/contact-executive-committee">Contact the Executive Committee</a></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><a href="/support/board-regents">Boards of Regents</a></li>
+		<li><a href="/support/contact-0">Contact</a></li>
+	</ul>
+	</li>
+	<li class="li-with-ul"><a href="/bookstore">Bookstore</a></li>
+	<li class="li-with-ul"><a href="/calendar">Calendar</a></li>
+	<li class="li-with-ul"><a href="/about/contact">Contact</a></li>
+</ul>
+</div>
+<a class="search_bg" href="/search">&nbsp;</a></div>
+  </div>
+</div>
+ </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <div class="manidiv">
+            <div class="main" style="border:0px;">
+                <div class="nav1"  >
+                    <ul class="link1"><li class="menu-811 first"><a href="/about/fact-sheet">Fact Sheet</a></li>
+<li class="menu-18968"><a href="/about/news-press">News &amp; Press</a></li>
+<li class="menu-813"><a href="/about/mission-history-0">Mission &amp; History</a></li>
+<li class="menu-814"><a href="/about/faculty">Faculty</a></li>
+<li class="menu-11051"><a href="/about/governance">Governance</a></li>
+<li class="menu-9448"><a href="/about/college-reviews">College Reviews</a></li>
+<li class="menu-18540 last"><a href="/review">Aquinas Review</a></li>
+</ul><ul class="link2"><li class="menu-1283 first"><a href="/a-liberating-education/liberal-arts-sciences">The Liberal Arts &amp; Sciences</a></li>
+<li class="menu-1284"><a href="/a-liberating-education/great-books">The Great Books</a></li>
+<li class="menu-1286"><a href="/a-liberating-education/discussion-method">The Discussion Method</a></li>
+<li class="menu-6937"><a href="/a-liberating-education/program-objectives">Program Objectives</a></li>
+<li class="menu-1288"><a href="/a-liberating-education/our-patron">Our Patron</a></li>
+<li class="menu-1289"><a href="/a-liberating-education/beyond-classroom">Beyond the Classroom</a></li>
+<li class="menu-1290 last"><a href="/a-liberating-education/beaches-mountains-more">Beaches, Mountains &amp; More</a></li>
+</ul><ul class="link3"><li class="menu-14870 first"><a href="/catholic-life/chapels" title="Chapels">Chapels</a></li>
+<li class="menu-18930"><a href="/masstimes">Mass Schedules</a></li>
+<li class="menu-1293"><a href="/catholic-life/faith-works" title="Faith &amp; Works">Faith &amp; Works</a></li>
+<li class="menu-13963 last"><a href="/catholic-life/prayer-requests">Prayer Requests</a></li>
+</ul><ul class="link4"><li class="menu-1296 first"><a href="/admission/apply" title="Apply">Apply</a></li>
+<li class="menu-1297"><a href="/admission/financial-aid" title="Financial Aid">Financial Aid</a></li>
+<li class="menu-1298"><a href="/admission/high-school-summer-program" title="High School Summer Program">High School Summer Program</a></li>
+<li class="menu-1299"><a href="/admission/campus-living">Campus Living</a></li>
+<li class="menu-1300 last"><a href="/admission/visit-connect">Visit &amp; Connect</a></li>
+</ul><ul class="link5"><li class="menu-1302 first"><a href="/alumni/profiles-leadership">Profiles in Leadership</a></li>
+<li class="menu-1303"><a href="/alumni/faith-action-blog">Faith in Action Blog</a></li>
+<li class="menu-19490"><a href="/content/alumni-gateway">Alumni Gateway</a></li>
+<li class="menu-19491 last"><a href="https://alumni.thomasaquinas.edu/" title="">Alumni Association Website</a></li>
+</ul><ul class="link6"><li class="menu-14692 first"><a href="/support/make-gift-now-0" title="">Make a Gift Now</a></li>
+<li class="menu-1307"><a href="/support/presidents-council" title="President&#039;s Council">President&#039;s Council</a></li>
+<li class="menu-19725"><a href="/giftplanning">Gift Planning</a></li>
+<li class="menu-9466"><a href="/support/matching-gifts">Matching Gifts</a></li>
+<li class="menu-1309"><a href="/support/order-st-albert">Order of St. Albert</a></li>
+<li class="menu-15020"><a href="/corporate-benefactors">Corp. Benefactors</a></li>
+<li class="menu-1310 last"><a href="/support/board-regents">Boards of Regents</a></li>
+</ul>                </div>
+                                                <script type="text/javascript">
+    (function($) {
+        $(document).ready(function () {
+            $("#slider").easySlider();
+        });
+    })(jQuery);
+</script>
+<style type="text/css">
+    .leftdiv div { position:inherit;}
+    #slider { position:relative;}
+
+</style>
+
+<div class="adminitop">
+    <div class="adminnav">
+        <div class="breadcrumb"><a href="/">Home</a> <a href="/about">About</a> <a class="active"  href="/coronavirus">COVID-19 Updates and Information</a></div>        <div class="clear"></div>
+        <div class="hgroup">
+            <h1>COVID-19 Updates and Information</h1>
+            <div class="email">
+                <ul>
+                    <li><a href="javascript:;" id="mailicon1" class="addthis_button_email" title="Email"><img alt="Email" src="/sites/all/themes/thomasaquines/images/email.png"></a></li>
+                    <li><a href="/print/19813" id="printicon" title="Print"><img alt="Print" src="/sites/all/themes/thomasaquines/images/print.png"></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div id="main-content" class="containeradmi">
+    <div class="leftdiv">
+                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-19813" class="node node-about">
+  
+      
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p class="rteright"><em><strong>Last updated March 19, 2020 | 10:20 p.m. PDT</strong></em></p>
+<p>On March 19 Gov. Gavin Newsom issued a “stay at home” order for the State of California. As such, all students now must depart the California campus by the end of Friday, March 20. Exceptions will be granted only in cases of extreme hardship, at the discretion of the Assistant Dean. Students who need help getting off campus should contact a prefect for assistance. We apologize for the difficulties this change will no doubt cause many, and ask for continued prayers during these trying times.</p>
+</div></div></div>  </div>
+
+  <div class="clearfix">
+          <div class="links"><ul class="links inline"><li class="print_html first"><a href="/print/19813" title="Display a printer-friendly version of this page." class="print-page" rel="nofollow"><img class="print-icon" src="https://thomasaquinas.edu/sites/all/modules/contrib/print/icons/print_icon.png" width="16px" height="16px" alt="Printer-friendly version" title="Printer-friendly version" /></a></li>
+<li class="print_mail last"><a href="/printmail/19813" title="Send this page by email." class="print-mail" rel="nofollow"><img class="print-icon" src="https://thomasaquinas.edu/sites/all/modules/contrib/print/print_mail/icons/mail_icon.png" width="16px" height="16px" alt="Send by email" title="Send by email" /></a></li>
+</ul></div>
+    
+      </div>
+
+</div>
+  </div>
+</div>
+  </div>
+    </div>
+    <div class="rightdiv">
+                <div class="Admission">
+                    </div>
+
+                    <div class="Related">
+                                    <h4 class="relatedh4" >Previous Updates</h4>
+                                <div >
+                    <p><a href="/news/students-return-home-dr-mcleans-letter-tac-parents">March 17</a></p>
+
+<p><a href="https://thomasaquinas.edu/news/covid-19-status-update-03-12-2020">March 12</a></p>
+
+<p><a href="https://thomasaquinas.edu/news/college-advisory-covid-19">March 2</a></p>
+
+<p><a href="/about/restrictions-campus-visits">Campus-Access Restrictions</a></p>
+                </div>
+            </div>
+        
+        
+        
+        
+        <div class="clear"></div>
+
+                <!-- NEWS END -->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+                <div class="footer">
+                    <div class="leftfooter"> <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <h6>Thomas Aquinas College</h6>
+<p>10,000 Ojai Road, Santa Paula, California 93060<br />
+231 Main Street, Northfield, Massachusetts 01360</p>
+<p>800-634-9797 | <a href="/about/contact">contact</a><br />
+map: <a href="/about/map">California</a> | <a href="/about/new-england-campus-map">New England</a></p>
+  </div>
+</div>
+ </div>
+                    <div class="rigthfooter">
+                        <div class="footerbts"> <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <div class="socialablelinks"><a class="social-newsletter " href="/about/thomas-aquinas-college-e-letter" title="Subscribe to the E-Letter"><img alt="Addthis" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-linkedin addthis_button" href="#"><img alt="Addthis" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-facebook" href="http://www.facebook.com/ThomasAquinasCollege" target="_blank" title="Like the College on Facebook"><img alt="Facebook" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-youtube" href="http://www.youtube.com/user/ThomasAquinasCollege" target="_blank" title="The College’s YouTube Channel"><img alt="youtube" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-twitter" href="https://twitter.com/TACollege" target="_blank" title="Follow the College on Twitter"><img alt="twitter" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-instagram" href="https://www.instagram.com/thomas.aquinas.college/" target="_blank" title="Follow the College on Instagram"><img alt="instagram" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-rss" href="/about/rss-feeds" target="_blank" title="Subscribe via RSS"><img alt="RSS" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" />&nbsp;</a><a class="social-mail addthis_button_email" href="#"><img alt="Email" src="/sites/default/files/spacer.png" style="height: 10px; width: 10px;" /></a></div>
+  </div>
+</div>
+<div id="block-block-12" class="block block-block">
+
+    
+  <div class="content">
+    <script src="//static.getclicky.com/js" type="text/javascript"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+try{ clicky.init(100999795); }catch(e){}
+//--><!]]>
+</script><p></p><noscript>
+<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100999795ns.gif" /></p>
+<p></p></noscript>
+  </div>
+</div>
+ </div>
+                        <div class="clear"></div>
+                        <div class="footernav">
+                            <ul class="links"><li class="menu-9528 first"><a href="/about/thomas-aquinas-college-e-letter">College E-Letter</a></li>
+<li class="menu-18981"><a href="/privacy">Privacy Policy</a></li>
+<li class="menu-150"><a href="/page/regulatory-information">Regulatory Information</a></li>
+<li class="menu-151 last"><a href="/accessibility" title="Site Map">Accessibility</a></li>
+</ul>                        </div>
+                        <div class="clear"></div>
+                        <div class="fright"><div id="block-block-8" class="block block-block">
+
+    
+  <div class="content">
+    <p>© 2020 Thomas Aquinas College Board of Governors. All rights reserved.</p>
+  </div>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                         <script type="text/javascript">var addthis_config = {"data_track_clickback": true};</script>
+        <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=thomasaquinas"></script>
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d36ffdb30c","applicationID":"27278622","transactionName":"YVdbYBFSDBBYBkZbDlgdbEYKHE0KVwFXSk9GWkk=","queueTime":0,"applicationTime":76,"atts":"TRBYFllIHx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
