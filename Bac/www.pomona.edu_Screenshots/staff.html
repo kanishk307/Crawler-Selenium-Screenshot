@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 9]><html class="ie-9 ie9"  lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if (gt IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-9e6943035079d822b1b",applicationID:"280184676"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="apple-touch-icon-precomposed" href="https://www.pomona.edu/sites/default/files/favicon-152.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://www.pomona.edu/sites/default/files/favicon-144.png" />
+<link rel="icon" href="https://www.pomona.edu/sites/default/files/favicon-32.png" sizes="32x32" />
+<link rel="icon" href="https://www.pomona.edu/sites/default/files/favicon.ico" sizes="16x16 32x32" />
+<link rel="shortcut icon" href="https://www.pomona.edu/sites/default/files/favicon.ico" />
+<meta name="description" content="Telecommuting On March 19, California Gov. Gavin Newsom issued a sweeping new statewide stay-at-home order in response to the coronavirus (COVID-19) crisis. Since March 23, all staff members who were able to work from home were instructed to do so. Given the ongoing public health emergency, staff members will continue to work from home until further notice. The full emergency teleworking policy is found in the portal under the HR document library." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www.pomona.edu/coronavirus/staff" />
+<link rel="shortlink" href="https://www.pomona.edu/node/72013" />
+<meta property="og:site_name" content="Pomona College in Claremont, California - Pomona College" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.pomona.edu/coronavirus/staff" />
+<meta property="og:title" content="Coronavirus Staff FAQ" />
+<meta property="og:description" content="Telecommuting On March 19, California Gov. Gavin Newsom issued a sweeping new statewide stay-at-home order in response to the coronavirus (COVID-19) crisis. Since March 23, all staff members who were able to work from home were instructed to do so. Given the ongoing public health emergency, staff members will continue to work from home until further notice. The full emergency teleworking policy is found in the portal under the HR document library." />
+<meta property="og:updated_time" content="2020-07-08T07:51:27-07:00" />
+<meta property="og:image" content="https://www.pomona.edu/sites/all/themes/custom/edu_theme/images/default_640_336.png" />
+<meta property="article:published_time" content="2020-07-07T21:19:23-07:00" />
+<meta property="article:modified_time" content="2020-07-08T07:51:27-07:00" />
+  <title>Coronavirus Staff FAQ | Pomona College in Claremont, California - Pomona College</title>
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="cleartype" content="on">
+
+  <link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_Xl7Vrs2sAqJ4KhfDT9Wo1TLiXOelqQO5GM8MjAycMNw.css" media="all" />
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_74NxbsXeF--6SUjYLWmeOoRfkUCQR6RCHDWDEX-cvMo.css" media="all" />
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_CJSU178t3ZSDIQtPIgzFUR7Bjw-i3tV3NAMaQ5Ek5-Q.css" media="all" />
+
+<!--[if IE 9]>
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_4U0tI8l75_3dslW24i85d2-ceUqsbgQ9jweM9FLCZi4.css" media="all" />
+<![endif]-->
+<style>.node-type-event .group-other-contact{border:none;padding:0;}
+.node-type-event .fieldset-legend{background:none;padding-left:0}
+.node-type-event .fieldset-wrapper{padding:0}
+.tinynav{display:none;}#zone-menu .region-menu ul.menu{display:block;}
+</style>
+<style media="all and (max-width:780px)">.tinynav{display:block;}#zone-menu .region-menu ul.menu{display:none;}
+</style>
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_nh5alZ9NoNeVQE5G2uXy_ciJPMi6jrwHZ3V2p3etPu8.css" media="all" />
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_StV8wN4Qp4JYLu_A55N4pC0rHF0stR33DcbimSEeEHw.css" media="all" />
+<link rel="stylesheet" href="https://www.pomona.edu/sites/default/files/css/css_wN8TYuqN9D7MGfugdmDwY5JRUATu5WXGW9JIAGPkg4E.css" media="all" />
+  <script src="https://www.pomona.edu/sites/default/files/google_tag/google_tag.script.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js?v=1.11.2"></script>
+<script>jQuery.migrateMute=true;jQuery.migrateTrace=false;</script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/jquery-migrate/1/jquery-migrate.min.js?v=1"></script>
+<script src="https://www.pomona.edu/misc/jquery-extend-3.4.0.js?v=1.11.2"></script>
+<script src="https://www.pomona.edu/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.11.2"></script>
+<script src="https://www.pomona.edu/misc/jquery.once.js?v=1.2"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script src="https://www.pomona.edu/misc/drupal.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.datepicker.min.js?v=1.10.2"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.accordion.min.js?v=1.10.2"></script>
+<script src="https://www.pomona.edu/misc/jquery.ba-bbq.js?v=1.2.1"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/jquery_ui_filter/jquery_ui_filter.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/campus_alerts/campus_alerts.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/edu_custom/edu_custom.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/edu_custom/js/spin.min.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/edu_custom/js/directory.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/edu_custom/js/tabs.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/google_cse/google_cse.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/media_colorbox/media_colorbox.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/custom/mobile_menu/js/mobile_menu.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/features/pomona_events/pomona_events.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/extlink/extlink.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/absolute_messages/absolute_messages.js?qd6c4a"></script>
+<script>jQuery.extend(Drupal.absolute_messages, {"dismiss":{"status":false,"warning":false,"error":false},"dismiss_time":{"status":"","warning":"","error":""},"dismiss_all_count":2});</script>
+<script src="https://www.pomona.edu/sites/all/libraries/colorbox/jquery.colorbox-min.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/colorbox/js/colorbox.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/colorbox/styles/plain/colorbox_style.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/colorbox/js/colorbox_load.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/ScrollToFixed/jquery-scrolltofixed.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/sticky/jquery.sticky.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/stickem/jquery.stickem.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/tinynav/tinynav-fork.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/tinynav/tinynav-drupal.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/field_group/field_group.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/superfish/jquery.hoverIntent.minified.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/superfish/supposition.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/superfish/superfish.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/libraries/superfish/supersubs.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/modules/contrib/superfish/superfish.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/themes/custom/edu_theme/js/script.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/all/themes/custom/edu_theme/js/youtube-responsive.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_11.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_56.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_106.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_116.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_196.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_221.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_246.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_256.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_451.js?qd6c4a"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"edu_theme","theme_token":"BuDzVw3wwLOi3EVyZrMJSzg-UTCBid2TDh8HujZ16ww","js":{"sites\/all\/modules\/contrib\/addthis\/addthis.js":1,"sites\/default\/files\/js_injector\/js_injector_136.js":1,"sites\/default\/files\/js_injector\/js_injector_266.js":1,"sites\/default\/files\/js_injector\/js_injector_361.js":1,"sites\/default\/files\/js_injector\/js_injector_371.js":1,"sites\/default\/files\/js_injector\/js_injector_396.js":1,"sites\/default\/files\/js_injector\/js_injector_416.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.11\/jquery.min.js":1,"0":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery-migrate\/1\/jquery-migrate.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.datepicker.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.accordion.min.js":1,"misc\/jquery.ba-bbq.js":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/jquery_ui_filter.js":1,"sites\/all\/modules\/custom\/campus_alerts\/campus_alerts.js":1,"sites\/all\/modules\/custom\/edu_custom\/edu_custom.js":1,"sites\/all\/modules\/custom\/edu_custom\/js\/spin.min.js":1,"sites\/all\/modules\/custom\/edu_custom\/js\/directory.js":1,"sites\/all\/modules\/custom\/edu_custom\/js\/tabs.js":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/contrib\/media_colorbox\/media_colorbox.js":1,"sites\/all\/modules\/custom\/mobile_menu\/js\/mobile_menu.js":1,"sites\/all\/modules\/features\/pomona_events\/pomona_events.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.js":1,"1":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/plain\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/libraries\/ScrollToFixed\/jquery-scrolltofixed.js":1,"sites\/all\/libraries\/sticky\/jquery.sticky.js":1,"sites\/all\/libraries\/stickem\/jquery.stickem.js":1,"sites\/all\/modules\/contrib\/tinynav\/tinynav-fork.js":1,"sites\/all\/modules\/contrib\/tinynav\/tinynav-drupal.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/contrib\/superfish\/superfish.js":1,"sites\/all\/themes\/custom\/edu_theme\/js\/script.js":1,"sites\/all\/themes\/custom\/edu_theme\/js\/youtube-responsive.js":1,"sites\/default\/files\/js_injector\/js_injector_11.js":1,"sites\/default\/files\/js_injector\/js_injector_56.js":1,"sites\/default\/files\/js_injector\/js_injector_106.js":1,"sites\/default\/files\/js_injector\/js_injector_116.js":1,"sites\/default\/files\/js_injector\/js_injector_196.js":1,"sites\/default\/files\/js_injector\/js_injector_221.js":1,"sites\/default\/files\/js_injector\/js_injector_246.js":1,"sites\/default\/files\/js_injector\/js_injector_256.js":1,"sites\/default\/files\/js_injector\/js_injector_451.js":1},"css":{"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.datepicker.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/custom\/campus_alerts\/campus_alerts.less":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/patched\/date\/date_api\/date.css":1,"sites\/all\/modules\/patched\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/patched\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/google_cse\/google_cse.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/custom\/mobile_menu\/css\/mobile_menu.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/office_hours\/office_hours.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/absolute_messages\/absolute_messages.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/plain\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/custom\/edu_theme\/css\/ie9.css.less":1,"0":1,"1":1,"2":1,"3":1,"4":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/custom\/edu_theme\/system.menus.css":1,"sites\/all\/themes\/custom\/edu_theme\/css\/base\/normalize.css.less":1,"sites\/all\/themes\/custom\/edu_theme\/fonts\/stylesheet.css":1,"sites\/all\/themes\/custom\/edu_theme\/css\/styles.css.less":1,"sites\/all\/themes\/custom\/edu_theme\/css\/theme\/print.css.less":1,"public:\/\/css_injector\/css_injector_21.css":1,"public:\/\/css_injector\/css_injector_31.css":1,"public:\/\/css_injector\/css_injector_36.css":1,"public:\/\/css_injector\/css_injector_61.css":1,"public:\/\/css_injector\/css_injector_66.css":1,"public:\/\/css_injector\/css_injector_81.css":1,"public:\/\/css_injector\/css_injector_86.css":1,"public:\/\/css_injector\/css_injector_91.css":1,"public:\/\/css_injector\/css_injector_96.css":1,"public:\/\/css_injector\/css_injector_106.css":1,"public:\/\/css_injector\/css_injector_116.css":1,"public:\/\/css_injector\/css_injector_131.css":1,"public:\/\/css_injector\/css_injector_136.css":1,"public:\/\/css_injector\/css_injector_141.css":1,"public:\/\/css_injector\/css_injector_146.css":1,"public:\/\/css_injector\/css_injector_151.css":1,"public:\/\/css_injector\/css_injector_156.css":1,"public:\/\/css_injector\/css_injector_161.css":1,"public:\/\/css_injector\/css_injector_166.css":1,"public:\/\/css_injector\/css_injector_196.css":1,"public:\/\/css_injector\/css_injector_206.css":1,"public:\/\/css_injector\/css_injector_216.css":1,"public:\/\/css_injector\/css_injector_221.css":1,"public:\/\/css_injector\/css_injector_231.css":1,"public:\/\/css_injector\/css_injector_241.css":1,"public:\/\/css_injector\/css_injector_246.css":1,"public:\/\/css_injector\/css_injector_266.css":1,"public:\/\/css_injector\/css_injector_276.css":1,"public:\/\/css_injector\/css_injector_281.css":1,"public:\/\/css_injector\/css_injector_286.css":1,"public:\/\/css_injector\/css_injector_296.css":1,"public:\/\/css_injector\/css_injector_301.css":1,"public:\/\/css_injector\/css_injector_306.css":1,"public:\/\/css_injector\/css_injector_321.css":1,"public:\/\/css_injector\/css_injector_336.css":1,"public:\/\/css_injector\/css_injector_361.css":1,"public:\/\/css_injector\/css_injector_376.css":1,"public:\/\/css_injector\/css_injector_386.css":1,"public:\/\/css_injector\/css_injector_421.css":1,"public:\/\/css_injector\/css_injector_436.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleCSE":{"cx":"016998130110691331936:hsmgdhpdis4","language":"","resultsWidth":1150,"domain":"www.google.com","showWaterMark":true},"jQueryUiFilter":{"disabled":0},"tinynav":{"selector":"#zone-menu .region-menu ul.menu","media_query":"all and (max-width:780px)","header":false,"active":"active-trail"},"better_exposed_filters":{"views":{"testimonials":{"displays":{"block":{"filters":[]}}}}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"currentPath":"node\/72013","currentPathIsAdmin":false,"urlIsAjaxTrusted":{"\/search":true},"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"supposition":true,"supersubs":true}}},"field_group":{"htabs":"full"}});</script>
+      <!--[if lte IE 9]>
+    <script src="/sites/all/themes/contrib/zen/js/html5-respond.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/38b3210f-518c-460d-81a1-ae98fe7f6532.css"/>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-72013 node-type-page section-coronavirus" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVBCHG" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager">Google Tag Manager</iframe></noscript>  </div>
+  
+<div id="pom-wrapper">
+
+  <div id="page">
+
+    <header id="header" role="banner">
+        <div class="header__region region region-header">
+    <div id="block-bean-pomona-mobile-menu-button" class="block block-bean block-mobile-menu-mobile-button first odd">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/pomona-mobile-menu-button" typeof="">
+
+  <div class="content">
+    
+  <div class="field field-name-field-body field-type-text-with-summary field-label-hidden">
+    <div><a class="mobile-menu-popout-link button" href="/">Menu<span class="fa fa-bars"> </span> </a></div>
+  </div>
+  </div>
+</div>
+
+</div>
+<div id="block-menu-block-15" class="block block-menu-block mobile-menu-popout even" role="navigation">
+
+      
+  <div class="menu-block-wrapper menu-block-15 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-parent is-leaf menu__item is-parent is-leaf first leaf has-children menu-mlid-776"><a href="/admissions-aid" class="menu__link menu__link">Admissions &amp; Aid</a></li>
+<li class="menu__item is-active-trail is-parent is-leaf menu__item is-active-trail is-parent is-leaf leaf has-children active-trail menu-mlid-775"><a href="/academics" class="menu__link is-active-trail menu__link is-active-trail active-trail">Academics</a></li>
+<li class="menu__item is-parent is-leaf menu__item is-parent is-leaf leaf has-children menu-mlid-777"><a href="/life-at-pomona" class="menu__link menu__link">Life @ Pomona</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-345 logo"><a href="/" class="menu__link menu__link logo">Home</a></li>
+<li class="menu__item is-parent is-leaf menu__item is-parent is-leaf leaf has-children menu-mlid-779"><a href="/news-events" class="menu__link menu__link">News &amp; Events</a></li>
+<li class="menu__item is-parent is-leaf menu__item is-parent is-leaf leaf has-children menu-mlid-5311"><a href="/about" class="menu__link menu__link">About</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-780"><a href="/alumni-families" class="menu__link menu__link">Alumni &amp; Families</a></li>
+</ul></div>
+
+</div>
+<div id="block-block-3" class="block block-block mobile-only search-quicklink-block odd">
+
+      
+  <div><span>/</span></div>
+</div>
+<div id="block-menu-menu-quicklinks" class="block block-menu menu-quicklinks header-quick-links-block more-link even" role="navigation">
+
+        <h2 class="block__title block-title"><a href="/">Quicklinks</a> <span>+</span></h2>
+    
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf"><a href="/directory/all" class="menu__link menu__link">A-Z Directory</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="https://www.pomona.edu/academic-calendar" class="menu__link menu__link">Academic Calendar</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="http://www.sagehens.com" class="menu__link menu__link">Athletics</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="https://www.pomona.edu/map" class="menu__link menu__link">Campus Map</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="http://catalog.pomona.edu/" class="menu__link menu__link">Catalog</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/administration/dining/menus/frank" class="menu__link menu__link">Dining Menus</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="https://www.pomona.edu/give" class="menu__link menu__link">Give Today</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><span class="menu__link menu__link nolink">Pages For...</span></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/new-students" class="menu__link menu__link">New Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/students" class="menu__link menu__link">Students</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf"><a href="/faculty" class="menu__link menu__link">Faculty</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf"><a href="/staff" class="menu__link menu__link">Staff</a></li>
+</ul>
+</div>
+<div id="block-search-form" class="block block-search site-search last odd" role="search">
+
+        <h2 class="block__title block-title"><a href="/">Search</a></h2>
+    
+  <form action="/search" method="get" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+    <div class="form-item form-type-searchfield form-item-query">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--2" name="query" value="" size="15" maxlength="128" class="form-text form-search" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="" value="Search" class="form-submit" /></div></div>
+</div></form>
+</div>
+  </div>
+    </header>
+
+    <div id="navigation">
+        <div class="region region-navigation">
+    <div id="block-block-2" class="block block-block mobile-only mobile-logo-block first odd">
+
+      
+  <p><a href="/"><img src="/sites/all/themes/custom/edu_theme/images/bkg-pomona-logo.svg" /></a></p>
+</div>
+<div id="block-superfish-1" class="block block-superfish header-menu-block no-mobile last even">
+
+      
+  <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-7 sf-parent-items-0 sf-single-items-7"><li id="menu-776-1" class="first odd sf-item-1 sf-depth-1 sf-no-children"><a href="/admissions-aid" class="sf-depth-1">Admissions &amp; Aid</a></li><li id="menu-775-1" class="middle even sf-item-2 sf-depth-1 sf-no-children"><a href="/academics" class="sf-depth-1">Academics</a></li><li id="menu-777-1" class="middle odd sf-item-3 sf-depth-1 sf-no-children"><a href="/life-at-pomona" class="sf-depth-1">Life @ Pomona</a></li><li id="menu-345-1" class="middle even sf-item-4 sf-depth-1 sf-no-children"><a href="/" class="logo sf-depth-1">Home</a></li><li id="menu-779-1" class="middle odd sf-item-5 sf-depth-1 sf-no-children"><a href="/news-events" class="sf-depth-1">News &amp; Events</a></li><li id="menu-5311-1" class="middle even sf-item-6 sf-depth-1 sf-no-children"><a href="/about" class="sf-depth-1">About</a></li><li id="menu-780-1" class="last odd sf-item-7 sf-depth-1 sf-no-children"><a href="/alumni-families" class="sf-depth-1">Alumni &amp; Families</a></li></ul>
+</div>
+  </div>
+    </div><!-- /#navigation -->
+
+    <div id="main">
+
+      <div class="title-wrapper">
+        <div class="inner-wrapper">
+          <nav class="breadcrumb" role="navigation"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/coronavirus">Coronavirus</a></li><li>Staff FAQ</li></ol></nav>
+                                <h1 class="title" id="page-title"><div data-quickedit-field-id="node/72013/title/und/full">Coronavirus Staff FAQ</div></h1>
+                    
+        </div><!-- /.inner-wrapper -->
+      </div><!-- /.title-wrapper -->
+
+      <div class="highlighted-wrapper">
+              </div><!-- /.region-wrapper -->
+
+      <div class="content-wrapper">
+        <div class="content-inner-wrapper">
+          <div id="content" class="column" role="main">
+            <a id="main-content"></a>
+                                                            
+
+
+<article class="node-72013 node node-page view-mode-full clearfix" data-quickedit-entity-id="node/72013" about="/coronavirus/staff" typeof="foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Coronavirus Staff FAQ" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden" data-quickedit-field-id="node/72013/body/und/full">
+    <h2>Telecommuting</h2>
+
+<p>On March 19, California Gov. Gavin Newsom issued a sweeping new statewide stay-at-home order in response to the coronavirus (COVID-19) crisis. Since March 23, all staff members who were able to work from home were instructed to do so. Given the ongoing public health emergency, staff members will continue to work from home until further notice.</p>
+
+<p>The full emergency teleworking policy is found in the portal under the HR document library.</p>
+
+<p>For more information, please reach out to Pomona College’s Human Resources via email at <a href="mailto:pomonahr@pomona.edu">pomonahr@pomona.edu</a>.</p>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>How do I know if my position has been designated as eligible for telework?</h3>
+
+<div>
+<p>Your manager/director has worked with your division vice president to determine which positions are eligible for telework. If you disagree with their decision, please discuss with your direct supervisor, vice president or <a href="/administration/human-resources/staff/business-partners">HR Business Partner</a>.</p>
+</div>
+
+<h3>Where can I update my contact information?</h3>
+
+<div>
+<p>Please ensure that Workday includes the most updated contact information, including your home address, home telephone, mobile telephone, personal email, as well as your work email. The attached job aid can assist with this process or call Monica Villanueva at 909-607-9829 for assistance. Since the coronavirus (COVID-19) situation is rapidly evolving, employees’ specific circumstances may make them eligible for other resources, so please continue to refer employee requests to <a href="mailto:brenda.rushforth@pomona.edu">brenda.rushforth@pomona.edu</a>, (909) 607-1686 or your <a href="/administration/human-resources/staff/business-partners">division/department HR Business Partner</a> to ensure the College’s responses.</p>
+</div>
+
+<h3>Will I be charged sick leave or other forms of leave while telecommuting? What if I’m sick and I run out of sick time?</h3>
+
+<div>
+<p>As of July 1, 2020, any staff member who is sick and cannot work, even remotely, must use available sick leave balances.</p>
+</div>
+
+<h3>What if I don’t have childcare?</h3>
+
+<div>
+<p>In circumstances where summer camps or schools continue to be closed in response to the coronavirus (COVID-19) and children are home, the College will be flexible and permit employees to work from home. If the employee is in a position that is not eligible for telework, the employee should discuss the situation with their direct supervisor, vice president or <a href="/administration/human-resources/staff/business-partners">HR Business Partner</a>. We want to help you in this challenging situation.</p>
+</div>
+
+<h3>How long will telework be available?</h3>
+
+<div>
+<p>Telework will continue until further notice. Please note that telework may be discontinued without much notice, so employees must be ready to return to work and to their regular schedules quickly. Employees should be maintaining their regular work schedules and be available during work hours while teleworking.</p>
+</div>
+
+<h3>What if there’s less work I can do at home to do while teleworking?</h3>
+
+<div>
+<p>We expect Pomona College employees to work their full scheduled hours. If an employee is unable to work their full schedule, they will be paid for their hours worked. The College wants to work with all employees to ensure that they can effectively work remotely. Employees should work with their direct supervisor and with HR on the work they can or cannot do remotely.</p>
+</div>
+
+<h3>Can employees come to campus if campus is closed?</h3>
+
+<div>
+<p>We recognize that employees who have been working remotely may need to come to campus from time to time. If an employee needs to return to campus to pick up mail, or to perform work functions, they must follow existing protocols, i.e. wear a mask or face covering, frequent handwashing, be non-symptomatic, a minimum of 6 feet social distancing, etc.</p>
+</div>
+
+<h3>What health protocols should employees follow once on campus?</h3>
+
+<div>
+<p>Any member of our community who returns to the workplace must, on their own, conduct symptom monitoring every day before returning to campus, you must be free of ALL symptoms. Symptoms may include one or more of the following: </p>
+
+<ul><li>Cough </li>
+	<li>Shortness of breath or difficulty breathing </li>
+	<li>Fever </li>
+	<li>Chills </li>
+	<li>Repeated shaking with chills </li>
+	<li>Runny nose or new sinus congestion </li>
+	<li>Muscle pain </li>
+	<li>Headache </li>
+	<li>Sore throat </li>
+	<li>Fatigue </li>
+	<li>New GI symptoms </li>
+	<li>New loss of taste or smell </li>
+</ul><p>If you have any of these symptoms, you must notify Pomona College Human Resources at (909) 621-8175, between the hours of 8 a.m. and 4:30 p.m., as well as your supervisor or department chair, and then contact your healthcare professional for assessment of symptoms and self-isolate at home until you are free of all symptoms and cleared by your personal physician to return to work and have notified HR for clearance to return. </p>
+
+<p>According to the CDC, individuals with certain conditions may have a higher risk for COVID-19 infection. Those conditions may include: </p>
+
+<ul><li>Older adults (aged 65 years and older) </li>
+	<li>People with HIV </li>
+	<li>Asthma (moderate-to-severe) </li>
+	<li>Chronic lung disease </li>
+	<li>Diabetes </li>
+	<li>Serious heart conditions </li>
+	<li>Chronic kidney disease being treated with dialysis </li>
+	<li>Severe obesity </li>
+	<li>Being immunocompromised </li>
+</ul><p>When on campus, employees need to follow the following protocols:</p>
+
+<ul><li>Maintain proper distancing of six feet from others; </li>
+	<li>Wash hands frequently with soap and water or alcohol-based hand sanitizer when soap/water are not available. The College will place hand sanitizing stations throughout campus, and members of our community are advised to make regular use of hand sanitizers throughout their time on campus; </li>
+	<li>Avoid in-person meetings; conduct all meetings via Zoom when possible;</li>
+	<li>Wear face masks in public areas and when in proximity to other people. This may include wearing face coverings when in the office for those working in spaces with open office plans, cubicles, etc. The College will provide face masks to any member of our community who does not have one;</li>
+	<li>Avoid using common kitchens and other common areas; and</li>
+	<li>To the extent possible, avoid sharing materials or objects such as office supplies.</li>
+</ul></div>
+</div>
+
+<h2>Campus Operations</h2>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>What are we doing to ensure the safety and health of our service workers, particularly housekeeping, grounds and maintenance employees?</h3>
+
+<div>
+<p>All members of the Facilities and Campus Services staff are screened on a daily basis and provided all required personal protective equipment (PPE) and supplies necessary for the performance of their duties in a safe and responsible manner</p>
+</div>
+
+<h3>How can employees access campus and what measures are in place to secure campus buildings?</h3>
+
+<div>
+<p>Building access is limited, 24 hours a day, to those with card or key access. Many interior spaces, such as classrooms, will remain locked.</p>
+</div>
+
+<h3>Does mail services still do mail pickups and deliveries?</h3>
+
+<div>
+<p>The College’s Campus Mail Services will continue to operate Monday through Friday 8 a.m. through noon. Departments are currently required to pick up and drop off all mail at the mail services office in the lower level of Sumner Hall. The campus mail delivery schedule will be reviewed weekly and adjusted as required.</p>
+</div>
+</div>
+
+<h2>Information Technology Services Support</h2>
+
+<p>ITS has developed a number of Instructional and operational continuity resources to help support online teaching and learning as well as remote work. An overview of these resources can be found below. For more information on instructional continuity, please visit the <a href="http://ritg.pomona.edu/resources/instructional-continuity/">Instructional Continuity site</a>, our <a href="https://sakai.claremont.edu/portal/site/5760451c-50fa-4762-ad6f-856e8896a679/tool/408e7644-9913-4b13-afe4-e74c7a758bc5" target="_blank">Instructional Continuity Sakai page</a> or the <a href="/administration/its/instructional-and-operational-continuity/faqs">Instructional Continuity FAQ</a> page.</p>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>As faculty or staff, how do I access applications and my local files while working remotely?</h3>
+
+<div>
+<p>ITS has built a terminal server to offer faculty and staff remote access to work resources from anywhere, using any device. Through the terminal server, faculty and staff will be able to connect remotely to commonly used software and their local files from almost any device. This service does not require a VPN connection. To access the service, simply follow these easy steps or see the <a href="https://pomona.app.box.com/s/fvk9031impxja32ix7hgmmgiuypmg4q4" target="_blank">job aid</a> for more details.</p>
+
+<h4><strong>Open a Web Browser</strong></h4>
+
+<p>Open <a href="https://pomonacollege.cloud.com/" target="_blank">https://pomonacollege.cloud.com</a> in your browser and sign in using your Pomona College email account and password (user@pomona.edu) and password. In the “permissions requested” window, select “accept.” If you are currently enrolled in DUO, you may be asked to authenticate your login.</p>
+
+<h4><strong>Download Citrix Workspace</strong></h4>
+
+<p>After logging in, you will be taken to a “Welcome Citrix Workspace” window. Select “detect workspace.” Next, check the box to indicate that you agree with the Citrix license agreement and select “download.” If prompted, open the file to begin the download.</p>
+
+<h4><strong>Install Citrix Workspace</strong></h4>
+
+<p>Open the downloaded file and install Citrix Workspace. At the “Add Account” installation step, select the checkbox “add account” and select “continue” to complete installation.</p>
+
+<h4><strong>Add Account</strong></h4>
+
+<p>To add your account, enter “pomonacollege.cloud.com” to Citrix Workspace and select the “add” button. Enter your Pomona College email account and password (user@pomona.edu). If you are currently enrolled in DUO, you may be prompted to authenticate your login. Please note: if you receive a message that you were unable to login, reenter your username and password to proceed.</p>
+
+<h4><strong>Select Desktop</strong></h4>
+
+<p>Select “Desktops” on the left to expand the menu. Select “all desktops” which will display the environments you can access. Select your preferred desktop and login with your Pomona College email account and password (<a href="mailto:user@pomona.edu">user@pomona.edu</a>). Please note: You may see a grey colored blank screen. This is a known bug – click anywhere within that space to display the login prompt.</p>
+
+<h4><strong>Start Working</strong></h4>
+
+<p>Once you’ve logged in, you will see what appears to be a Windows computer. From this screen you can access basic software such as Microsoft Outlook, Office, Excel, and PowerPoint.</p>
+
+<p>For support, the ITS Help Desk may be reached at (909) 621-8061 or <a href="mailto:servicedesk@pomona.edu">servicedesk@pomona.edu</a>.</p>
+</div>
+
+<h3>How do I access telecommuting or network services from home?</h3>
+
+<div>
+<p>ITS offers a broad range of technologies, resources and services to help staff successfully work remotely in the event of an emergency:</p>
+
+<h4><strong>Software</strong></h4>
+
+<p>All Pomona College staff have access to <a href="https://support.office.com/en-us/article/download-and-install-or-reinstall-office-365-or-office-2019-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658" target="_blank">Microsoft 365</a>, which means that your email, documents, and the entire Microsoft Suite, including Microsoft Office, are accessible from virtually anywhere. To download the application, log in to <a href="http://www.office.com/" target="_blank">office.com</a> with your Pomona College email account select the application you’d like to download.</p>
+
+<h4><strong>Collaboration</strong></h4>
+
+<p>To help employees stay in touch with one another, ITS has implemented Slack and instituted Slack workplaces. Slack is an all-purpose collaboration app that allows staff to continue collaborating when they aren’t together through private, encrypted and secure conversations. To use Slack, please refer to the <a href="https://pomona.box.com/s/cnazc9cqapoghsiai6nfdrsyo4v424wn" target="_blank">Slack installation and Job Aid</a>.</p>
+
+<h4><strong>Video Conferencing</strong></h4>
+
+<p>To facilitate meetings remotely, ITS has implemented Zoom. Zoom offers users video meetings, chat and screen-sharing features. It also has the added bonus of split-screen video conferencing so you can see everyone at once, much like an in-person meeting. <a href="/administration/its/services/zoom">Learn how to setup and use Zoom at Pomona College</a>. </p>
+
+<h4><strong>Cloud Storage</strong></h4>
+
+<p>If you currently use Box, all of your files are already in the cloud and will be accessible from home. If you have not started using Box and store your files locally, now is the time to move your files so they are accessible via the cloud. <a href="/administration/its/services/file-storage-box">Learn how to setup and use Box at Pomona College</a>.</p>
+
+<h4><strong>Support</strong></h4>
+
+<p>When in doubt, contact the ITS Service Desk, <a href="mailto:Servicesdesk@pomona.edu">Servicesdesk@pomona.edu</a> or 909-621-8061. ITS has invested in making our remote support tools more robust and will be available remotely.</p>
+</div>
+</div>
+
+<h2>Remote Work Setup</h2>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>What if I use my personal phone for work calls?</h3>
+
+<div>
+<p>During the temporary period when employees will be permitted to work remotely, employees should use their personal phones, laptops and other devices.</p>
+</div>
+
+<h3>What if I don’t have a reliable internet connection at home?</h3>
+
+<div>
+<p>Employees should, where possible, use available municipal WiFi, such as in public libraries. To the extent that this is not available, the College is still open, and employees should come to campus to work and use the internet to perform their work when possible. We recommend not using internet cafes or coffee shops.</p>
+</div>
+
+<h3>Will I be compensated for my home internet plan?</h3>
+
+<div>
+<p>Employees who are designated for telework are responsible for their own home internet service and plans. The College can consider assisting staff with internet capacity on a case-by-case basis.</p>
+</div>
+
+<h3>Am I able to telework from locations other than home?</h3>
+
+<div>
+<p>Employees may be able to telework from other locations – please discuss the details with your supervisor.</p>
+</div>
+
+<h3>Do I still need to use Kronos?</h3>
+
+<div>
+<p>Hourly employees are still expected to keep track of their time in Kronos. Employees and their supervisors are still expected to sign off on their timecards regularly.</p>
+</div>
+
+<h3>Will overtime be offered?</h3>
+
+<div>
+<p>In accordance with College policy, overtime must be approved in advance by the supervisor before it is worked. Employees should not be working overtime without express approval from their supervisor, and this includes any increments over eight regular hours per day.</p>
+</div>
+
+<h3>What if there is a meeting on campus and I am unable to attend in person?</h3>
+
+<div>
+<p>An employee should be in regular contact with their direct supervisor and should immediately inform the supervisor regarding attendance at meetings.</p>
+</div>
+</div>
+
+<h2>College Finances</h2>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>How does the decision to be fully online impact the College’s finances?</h3>
+
+<div>
+<p>Moving to a fully online semester does present financial challenges. The College will lose room and board revenue and potentially tuition revenue if students choose not to return. At the same time, the College will continue to incur costs to make the campus ready to receive students, faculty and staff at some point in the future. </p>
+
+<p>The College could see an annual budget shortfall ranging from $21 million to $35 million depending on final enrollment. The College is working on financial plans to make up this shortfall that will include deep reductions to the budgets of departments and offices, deferral of maintenance and renovation of our facilities and use of reserves, among other means</p>
+</div>
+
+<h3>Will the College need to furlough staff?</h3>
+
+<div>
+<p>We are trying our hardest to avoid furloughing staff. We are not currently anticipating furloughs, but this could change after our financial situation becomes clearer over the summer.  Issues that could compel us to furlough some staff would be a sharp decline in enrollment and needing to incur unanticipated expenses associated with preparing the campus to implement public health protocols.</p>
+</div>
+
+<h3>If the College furloughs staff, who will be impacted?</h3>
+
+<div>
+<p>We are not now anticipating furloughs, and will do everything we can to avoid them, but they are a possibility. If we need to furlough staff, those jobs that can no longer be performed or have been significantly curtailed will likely be impacted.</p>
+</div>
+</div>
+
+<h2>Health Concerns</h2>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>What if I get hurt while working at home?</h3>
+
+<div>
+<p>Employees are responsible for the safety of their home work environment. Employees are covered by workers compensation while performing telework. All injuries or illnesses associated with work must be reported to HR immediately, and employees must be cooperative with the workers compensation insurance carrier if an investigation must be conducted regarding the injury or illness.</p>
+</div>
+
+<h3>What if someone in my office is sick and I’m concerned?</h3>
+
+<div>
+<p>Please speak to your direct supervisor about your concerns. If the supervisor is unavailable, please contact your <a href="/administration/human-resources/staff/business-partners">HR Business Partner</a>.</p>
+</div>
+
+<h3>What if I need to work from campus, and I’m nervous about coming in contact with someone who may have been exposed to coronavirus (COVID-19)?</h3>
+
+<div>
+<p>You should discuss your concerns directly with their supervisor. Every effort will be made to accommodate you. If you wish to discuss their individual circumstance, you may contact their divisional vice president or <a href="/administration/human-resources/staff/business-partners">HR Business Partner</a> for more assistance.</p>
+</div>
+
+<h3>What precautions should I take if I’m coming to work?</h3>
+
+<div>
+<p>Any member of our community who returns to the workplace must, on their own, conduct symptom monitoring every day before returning to campus and be free of ALL symptoms. Symptoms may include one or more of the following: </p>
+
+<ul><li>Cough </li>
+	<li>Shortness of breath or difficulty breathing </li>
+	<li>Fever </li>
+	<li>Chills </li>
+	<li>Repeated shaking with chills </li>
+	<li>Runny nose or new sinus congestion </li>
+	<li>Muscle pain </li>
+	<li>Headache </li>
+	<li>Sore throat </li>
+	<li>Fatigue </li>
+	<li>New GI symptoms </li>
+	<li>New loss of taste or smell </li>
+</ul><p>If you have any of these symptoms, you must notify Pomona College Human Resources at (909) 621-8175, between the hours of 8 a.m. and 4:30 p.m., as well as your supervisor or department chair, and then contact your healthcare professional for assessment of symptoms and self-isolate at home until you are free of all symptoms and cleared by your personal physician to return to work and have notified HR for clearance to return. </p>
+
+<p>According to the CDC, individuals with certain conditions may have a higher risk for COVID-19 infection. Those conditions may include:</p>
+
+<ul><li>Older adults (aged 65 years and older) </li>
+	<li>People with HIV </li>
+	<li>Asthma (moderate-to-severe) </li>
+	<li>Chronic lung disease </li>
+	<li>Diabetes </li>
+	<li>Serious heart conditions </li>
+	<li>Chronic kidney disease being treated with dialysis </li>
+	<li>Severe obesity </li>
+	<li>Being immunocompromised </li>
+</ul><p>When on campus, employees need to follow the following protocols:</p>
+
+<ul><li>Maintain proper distancing of six feet from others; </li>
+	<li>Wash hands frequently with soap and water or alcohol-based hand sanitizer when soap/water are not available. The College will place hand sanitizing stations throughout campus, and members of our community are advised to make regular use of hand sanitizers throughout their time on campus; </li>
+	<li>Avoid in person meetings; conduct all meetings via Zoom when possible;</li>
+	<li>Wear face masks in public areas and when in proximity to other people. This may include wearing face coverings when in the office for those working in spaces with open office plans, cubicles, etc. The College will provide face masks to any member of our community who does not have one;</li>
+	<li>Avoid using common kitchens and other common areas; and</li>
+	<li>To the extent possible, avoid sharing materials or objects such as office supplies.</li>
+</ul></div>
+
+<h3>What should I do if I am in a high-risk group?</h3>
+
+<div>
+<p>If you are in a high-risk group, please stay home. California Gov. Gavin Newsom has directed that those 65 years old or older and those with chronic health conditions isolate themselves at home.</p>
+</div>
+</div>
+
+<h2>Other Resources</h2>
+
+<div class="pom-accordion pom-accordion-all-closed">
+<h3>What Other Resources Are Available?</h3>
+
+<div>
+<p>The Employee Assistance Program is available to all faculty and staff 24 hours a day/7 days per week. Please call (800) 234-5465 or log onto <a href="http://www.liveandworkwell.com/" target="_blank">www.liveandworkwell.com</a>. The access code is claremontcolleges</p>
+</div>
+
+<h3>If I’m getting a physical paycheck, how do I enroll in direct deposit?</h3>
+
+<div>
+<p>Please contact the Payroll Office. The College encourages all faculty, staff and students to have direct deposit whenever possible in order to avoid delays in the receipt of earnings. (If you have questions regarding your paycheck, please call Lawrence Youhanna at 909-607-3408 or Karen Lamb at ext. 909-607-3974.)</p>
+</div>
+
+<h3>Can I pick up my physical paycheck?</h3>
+
+<div>
+<p>Paychecks on payday will be held in the Payroll Office at 150 E. 8th Street, and any paycheck not picked up by 3 p.m. on payday will be mailed to the address on the check. Employees who receive physical paychecks are encouraged to come to the Payroll Office on payday to receive their paychecks.</p>
+</div>
+
+<h3>If I’m required to come to campus for a meeting, will I be reimbursed for travel pay?</h3>
+
+<div>
+<p>Employees will not be reimbursed for travel pay to and from campus as their normal commute.</p>
+</div>
+
+<h3>What if I had a pre-planned, pre-approved vacation?</h3>
+
+<div>
+<p>An employee would be allowed to go on their pre-approved vacation, understanding that these are unique circumstances and supervisors may have to be in contact regarding emergency questions or needs of the College.</p>
+</div>
+</div>
+  </div>
+
+  
+  
+</article><!-- /.node -->
+                      </div><!-- /#content -->
+
+          
+                      <aside class="sidebars">
+                              <section class="region region-sidebar-second column sidebar">
+    <div id="block-menu-block-14" class="block block-menu-block sidebar-main-menu primary-menu-block first last odd" role="navigation">
+
+        <h2 class="block__title block-title"><a href="/coronavirus" class="active-trail">Coronavirus</a></h2>
+    
+  <div class="menu-block-wrapper menu-block-14 menu-name-main-menu parent-mlid-0 menu-level-2">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-52866"><a href="/coronavirus/updates" class="menu__link menu__link">Community Updates</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-52896"><a href="/coronavirus/faq" class="menu__link menu__link">Frequently Asked Questions</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-53382"><a href="/coronavirus/students" class="menu__link menu__link">Students FAQ</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-53383"><a href="/coronavirus/faculty" class="menu__link menu__link">Faculty FAQ</a></li>
+<li class="menu__item is-active is-active-trail is-leaf menu__item is-active is-active-trail is-leaf leaf active-trail active menu-mlid-53384"><a href="/coronavirus/staff" class="menu__link is-active-trail menu__link is-active-trail active-trail active">Staff FAQ</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-52926"><a href="/coronavirus/academic-faq" class="menu__link menu__link">Academics/Study Abroad FAQ</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-52941"><a href="/coronavirus/admissions-faq" class="menu__link menu__link">Admissions FAQ</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-53031"><a href="/coronavirus/cares-act" class="menu__link menu__link">CARES Act</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-52966"><a href="/coronavirus/case-notifications-reporting" class="menu__link menu__link">Case Notifications &amp; Reporting</a></li>
+</ul></div>
+
+</div>
+  </section>
+            </aside><!-- /.sidebars -->
+                  </div>
+      </div>
+      <div class="footer-wrapper">
+        <div class="footer-inner-wrapper">
+                  </div>
+      </div>
+    </div><!-- /#main -->
+
+  </div><!-- /#page -->
+  <div class="footersection">
+
+
+    <div class="bottom-wrapper">
+      <div class="region region-bottom">
+    <div id="block-bean-social-media-hub" class="block block-bean social-media-hub first odd">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/social-media-hub" typeof="">
+
+  <div class="content">
+    
+  <div class="field field-name-field-body field-type-text-with-summary field-label-hidden">
+    <a class="more-link" href="http://social.pomona.edu/">Social Media Hub</a>  </div>
+  </div>
+</div>
+
+</div>
+<div id="block-bean-footer-contact-info" class="block block-bean footer-contact-info even">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/footer-contact-info" typeof="">
+
+  <div class="content">
+    
+  <div class="field field-name-field-body field-type-text-with-summary field-label-hidden">
+    <div class="contact-info">
+<div class="address-1">Mailing Address:<br />
+333 N. College Way</div>
+
+<div class="address-2">Claremont, CA 91711</div>
+
+<div class="phone"><a href="tel:1-909-621-8000">(909) 621-8000</a></div>
+
+<ul><li><a aria-label="general Pomona College contact form" class="contact-us" href="/contact">Contact Us</a></li>
+	<li><a class="location" href="/map/">Location &amp; Maps</a></li>
+</ul></div>
+  </div>
+  </div>
+</div>
+
+</div>
+<div id="block-menu-block-6" class="block block-menu-block footer-menu-block odd" role="navigation">
+
+      
+  <div class="menu-block-wrapper menu-block-6 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-912"><a href="/arts" class="menu__link menu__link">The Arts</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-911"><a href="http://www.sagehens.com" class="menu__link menu__link">Athletics</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1520"><a href="/emergency" class="menu__link menu__link">Emergency</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1521"><a href="/employment" class="menu__link menu__link">Employment</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1526"><a href="https://services.claremont.edu/" class="menu__link menu__link">TCCS</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-30361"><a href="/accessibility" class="menu__link menu__link">Accessibility</a></li>
+</ul></div>
+
+</div>
+<div id="block-bean-footer-association" class="block block-bean footer-association even">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/footer-association" typeof="">
+
+  <div class="content">
+    
+  <div class="field field-name-field-body field-type-text-with-summary field-label-hidden">
+    <div class="association"><p>Part of the</p><span class="button"><a class="more-link" href="http://www.claremont.edu/">Claremont Colleges Consortium</a></span></div>  </div>
+  </div>
+</div>
+
+</div>
+<div id="block-views-testimonials-block" class="block block-views footer-testimonials odd">
+
+      
+  <div class="view view-testimonials view-id-testimonials view-display-id-block view-dom-id-2e16f3b1e9174f90134bc14abbaa60e5">
+            <div class="view-header">
+      Support Pomona College
+<div class="partial-underline"></div>    </div>
+  
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <article class="node-12786 node node-testimonial node-teaser clearfix" data-quickedit-entity-id="node/12786" about="/testimonial/professor-robert-gaines" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  <span property="dc:title" content="Professor Robert Gaines" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+      
+          </header>
+  
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden" data-quickedit-field-id="node/12786/body/und/teaser">
+    <p>"I’ve seen how summer research allows students to gain command of an area in their chosen discipline, and carry the confidence and excitement from that experience forward in their undergraduate careers and beyond."</p>
+  </div>
+
+  <div class="field field-name-title-field field-type-text field-label-hidden" data-quickedit-field-id="node/12786/title_field/und/teaser">
+    Professor Robert Gaines  </div>
+
+  
+  
+</article><!-- /.node -->
+  </div>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/support-pomona" class="more-link">Support Pomona College</a>    </div>
+  
+  
+</div>
+</div>
+<div id="block-menu-block-9" class="block block-menu-block footer-legal-block even" role="navigation">
+
+      
+  <div class="menu-block-wrapper menu-block-9 menu-name-menu-legal-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-mlid-1272"><a href="/privacy" class="menu__link menu__link">Privacy</a></li>
+<li class="menu__item is-leaf menu__item is-leaf leaf menu-mlid-1273"><a href="/website-feedback" class="menu__link menu__link">Feedback</a></li>
+<li class="menu__item is-leaf menu__item is-leaf last leaf menu-mlid-18286"><a href="/directory/all" class="menu__link menu__link">Directory</a></li>
+</ul></div>
+
+</div>
+<div id="block-bean-copyright" class="block block-bean footer-copy-right-block last odd">
+
+      
+  <div class="entity entity-bean bean-generic clearfix" about="/block/copyright" typeof="">
+
+  <div class="content">
+    
+  <div class="field field-name-field-body field-type-text-with-summary field-label-hidden">
+    <div class="copyright"><span class="yellow-font">&copy;&nbsp;</span>2020 Pomona College</div>  </div>
+  </div>
+</div>
+
+</div>
+  </div>
+    </div>
+  </div>
+</div><!-- /#pom-wraqpper -->
+
+  <script src="https://www.pomona.edu/sites/all/modules/contrib/addthis/addthis.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_136.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_266.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_361.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_371.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_396.js?qd6c4a"></script>
+<script src="https://www.pomona.edu/sites/default/files/js_injector/js_injector_416.js?qd6c4a"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-9e6943035079d822b1b","applicationID":"280184676","transactionName":"NVFQYkRTDUFRUUQLCwwbZ0RfHUxbXlZVGkoSXEI=","queueTime":0,"applicationTime":17,"atts":"GRZTFAxJHk8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

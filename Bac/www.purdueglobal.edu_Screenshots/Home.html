@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1b70bdd1ac","applicationID":"106639792","transactionName":"ZQQBY0JYDEtUBxAKXFxOImRgFgNbVAABDlpRTBBCQEkNSkFLBwxFWwVOBgkUBFlESgUQQ0o=","queueTime":0,"applicationTime":0,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMGVVdSABABVFdUBAgAX1Y=",licenseKey:"1b70bdd1ac",applicationID:"106639792"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"> 
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/shared/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/shared/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/shared/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/shared/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/shared/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/shared/favicon/favicon.ico" type="image/x-icon"/>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/shared/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">   
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/fonts/font-awesome-5.9.0/css/all.min.css" media="all" />
+  	<link rel="stylesheet" type="text/css" href="/assets/css/fonts/font-awesome-5.9.0/css/v4-shims.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/foundation.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.min.css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:700,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+     
+    
+                <script>
+                 var dataLayer = window.dataLayer = window.dataLayer || [];
+                 var device = (window.innerWidth > 1199) ? 'Desktop' : 'Mobile';
+                 dataLayer = [{
+                    'areaOfStudy': 'not set',
+                    'programLevel': 'not set',
+                    'programName': 'not set',
+                    'pageType': 'Master',
+                    'siteVersion': device,
+                    'Has_Running_Experiment' : ''
+            }];
+            </script>
+        <!--Google Optimize Flickering-->
+        <style type="text/css">.async-hide { opacity: 0 !important} </style>
+        <script type="text/javascript">(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+        h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document.documentElement,'async-hide','dataLayer',4000,
+        {'GTM-KTLDFLS': true });</script>
+        <!--End Google Optimize Flickering-->
+  
+  			
+  
+  
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KTLDFLS');</script>
+        <!-- End Google Tag Manager -->
+          
+        
+    
+
+
+    <!-- SEO Page Metadata Component -->
+        <!--begin - PageSeo--><!--begin - PageTitleTag--><title>Frequently Asked Questions About COVID-19 | Purdue Global</title><!--end - PageTitleTag--><!--begin - PageMetaTag--><meta name="description" content="Find answers to your questions about how Purdue Global is supporting students during the COVID-19 outbreak."/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@PurdueGlobal"/><meta name="twitter:title" content=""/><meta name="twitter:description" content=""/><meta name="twitter:image" content=""/><meta property="og:title" content="Frequently Asked Questions About COVID-19 | Purdue Global"/><meta property="og:description" content="Find answers to your questions about how Purdue Global is supporting students during the COVID-19 outbreak."/><meta property="og:site_name" content="Purdue Global"/><meta property="og:url" content="https://www.purdueglobal.edu/academic-support/covid-19-faq/"/><meta property="og:image" content=""/><meta property="og:type" content="website"/><meta property="fb:app_id" content="842979529092272"/><!--end - PageMetaTag--><meta name="robots" content="index, follow"/><meta name="googlebot" content="index, follow"/><!--begin - RelCanonical--><link rel="canonical" href="https://www.purdueglobal.edu/academic-support/covid-19-faq/"/><!--end - RelCanonical--><!--end - PageSeo-->
+   
+   <!--   Solr Index     -->
+        <script>
+        var searchIndex = "main-redesign-live";
+    </script>
+    <!-- END Solr Index -->
+        
+    <script type="application/ld+json">
+ {
+ "@context": "http://schema.org",
+ "@type": "CollegeOrUniversity",
+ "name": "Purdue Global",
+ "url": "https://www.purdueglobal.edu",
+ "logo": "https://www.purdueglobal.edu/shared/globelogo.png",
+ "foundingDate": "2017",
+ "ContactPoint":
+
+{ "@type": "ContactPoint", "contactType": "customer support", "telephone": "+1-844-787-3834" }
+
+,
+ "description": "Purdue University Global serves online and campus-based students, offering certificates and associate's, bachelor's, and master's degrees as well as professional law degrees through Concord Law School.",
+ "sameAs": [
+ "https://www.facebook.com/purdueglobal/",
+ "https://twitter.com/purdueglobal",
+ "https://www.instagram.com/purdueglobal/",
+ "https://www.linkedin.com/school/purdue-global/",
+ "https://www.youtube.com/channel/UCFWhZLCA3O1wFYxc9fvwnsg",
+ "https://en.wikipedia.org/wiki/Purdue_University_Global"
+ ],
+ "hasCredential":
+
+{ "@type": "EducationalOccupationalCredential", "credentialCategory": "Accreditation", "name": "Higher Learning Commission", "url": "http://hlcommission.org/" }
+
+}
+ </script>
+    
+</head>
+<body>	   
+            <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTLDFLS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) --> 
+    	<a class="skip" id="skip-to-main-content" href="#main-content" tabindex="0" aria-label="skip to main content"></a>
+    <header>
+        
+    
+
+        <div class="navbar utility navbar-1" role="navigation">
+            <div class="container">
+				
+    <!--begin - LowerPrimaryNav--><!--begin - LowerPrimaryNav-->
+<div class=" audienceNav visible-lg">
+    <div class=" container">
+        <div class=" row">
+            <ul>
+                <!--begin - Link--><li>  <a href="/military/">Military/Veterans</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/transfer-students/">Transfer Students</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/education-partnerships/">Education Partnerships</a></li><!--end - Link--><!--begin - Link--><li>  <a href="https://online.purdue.edu" target="_blank"><span style="background-image:url('/icons/icon-online-degrees.svg')"></span>All Purdue Online Degrees</a></li><!--end - Link-->
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class=" utility right">
+    <li> <span class="chatClicker" style="display:none">   <span aria-hidden="true" class="nav-icon chatMobile">  <span class="icon-chatIcon" aria-hidden="true"></span> </span>Live Chat </span> </li>
+    <li> <a href="tel:+1.844.787.3834" data-cta-placement="mini-header" data-cta-name="call">      <span aria-hidden="true" class="nav-icon phoneMobile">      <span class="icon-iphoneIcon" aria-hidden="true"></span>      </span>844-PURDUE-G</a>   </li>
+    <li class="hidden-xs hidden-sm hidden-md">
+        <a id="header_login" href=" https://campus.purdueglobal.edu/Security/Login?ReturnUrl=%2f" data-cta-placement=" mini-header" data-cta-name=" student login">
+            <span aria-hidden=" true" class=" nav-icon requestMobile">
+                <span class=" icon-loginIcon"></span>
+            </span>
+            Student Login
+        </a>
+    </li>
+</ul>
+<!--end - LowerPrimaryNav--><!--end - LowerPrimaryNav-->
+ 
+
+   
+            </div>
+        </div>
+        <div class="above-navbar-23"></div>
+        <div class="navbar-23">
+            <div class="navbar-2">
+                <div class="narrow">
+                    <button id="openMobileNav" type="button" class="navbar-toggle offcanvas-toggle visible-xs visible-sm visible-md" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>				<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-close">Close Navigation</span></button>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/shared/pug-logo-mobile.png" alt="Purdue University Global" class="" />
+                        </a>
+                    </div>
+                    <a href="#" id="openMobileSearch" class="">
+                        <span class="icon-searchIcon">Search</span>
+                        <span class="icon-close" aria-hidden="true">Close Search</span>
+                    </a>
+                                                <a href="tel:+1." class="mobile-head-cta option call" data-cta-placement="footer" data-cta-name="call">
+                                <img src="/shared/wht-call.svg" alt="" aria-hidden="true" />
+                            </a>                             <span class="mobile-head-cta option chat chatClicker" style="display:none;">
+			                    <span style="cursor: pointer; color: #fff;">
+				                    <img src="/shared/wht-chat.svg" alt="Chat with Purdue" aria-hidden="true">
+			                    </span>
+		                    </span>                 </div>
+                <div class="wide">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="/shared/pug-logo-desktop.png" alt="Purdue University Global" class="" />
+                            </a>
+                        </div>
+						
+    <!--begin - MiniContact--> <div class="mini-contact ">   <span style=" display: block;" id="lpChatButtonNew"></span>  <a style=" display: inline-flex;" href="tel:+1.844.787.3834" data-cta-placement="header" data-cta-name="call">    <span aria-hidden="true" class="nav-icon phoneMobile">      <span class="icon-iphoneIcon"></span>    </span>844-PURDUE-G</a></div><!--end - MiniContact-->
+ 
+
+                        
+                        <div class="right ">
+                            
+    <!--begin - RequestInfoAndApplyButtons--><div class="header-cta">  <ul>    <li>      <a class="button-cta" href="/request-information/" data-cta-placement="header" data-cta-name="request info"> Request Info </a>    </li>    <li>      <a class="button-cta" target="_blank" href="/enrollment-application/" data-cta-placement="header" data-cta-name="enroll now"> Apply Now </a>    </li>  </ul></div><!--end - RequestInfoAndApplyButtons-->
+
+                        </div>
+                        <div class="hide">
+                            <!--this hidden section allows templates to work if they expect the contentplaceholder section "cphNavCtaButtonsMobile" to exist; however it is never shown -->
+                            
+    <!--begin - RequestInfoAndApplyButtons--><div class="header-cta">  <ul>    <li>      <a class="button-cta" href="/request-information/" data-cta-placement="header" data-cta-name="request info"> Request Info </a>    </li>    <li>      <a class="button-cta" target="_blank" href="/enrollment-application/" data-cta-placement="header" data-cta-name="enroll now"> Apply Now </a>    </li>  </ul></div><!--end - RequestInfoAndApplyButtons-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-3">
+                <div class="container">
+                    <ul id="main-navbar" role="menu">
+                        <li role="menuitem">
+
+<a href="/degree-programs/" class="main-navbar-item">Degree Programs</a><!--begin - PrimaryDegreeProgramsNavMainSub--><div class="subnav subnav-full">  <div class="container">    <div class="row">      <div class="col-md-3" >          <ul id="nav-flyout-selections">            <!--AOS-->            <!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Aviation</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/aviation/"> View All Aviation Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Professional Flight</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/aviation/online-bachelor-professional-flight/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Business</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/business/"> View All Business Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Accounting</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/online-master-accounting-degree/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/online-bachelor-accounting-degree/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/associate-degree-accounting/"   >Associate of Applied Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/online-accounting-graduate-certificate/"   >Graduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Business Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/online-mba-master-business-administration/"   >Master of Business Administration</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/exceltrack-competency-based-mba-degree/"   >ExcelTrack Master of Business Administration</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/bachelor-business-administration/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/exceltrack-bachelor-business-administration/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/associate-degree-business-administration/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Finance</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/online-master-finance-degree/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/online-bachelor-finance-degree/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Human Resources</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/human-resources-graduate-certificate/"   >Graduate Certificate</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/online-human-resources-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Management and Leadership</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/online-master-management-degree/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Project Management</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/project-management-graduate-certificate/"   >Graduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Communication</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/communication/"> View All Communication Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Communication</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-communication/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Liberal Studies</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Criminal Justice</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/criminal-justice/"> View All Criminal Justice Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Corrections</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/bachelor-degree-corrections/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/online-corrections-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Crime Scene Technician</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/crime-scene-technician-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Criminal Justice and Criminology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/online-master-criminal-justice/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/bachelor-degree-criminal-justice/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/exceltrack-bachelors-in-criminal-justice/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/associate-degree-criminal-justice-criminology/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Homeland Security and Emergency Management</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/online-master-homeland-security/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Management and Supervision</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/administration-management-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Public Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/public-policy/master-public-administration-online/"   >Master of Public Administration</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Public Safety and Security</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/public-safety-associate-degree/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Private Security</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/private-security-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Education</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/education/"> View All Education Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Early Childhood Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/bachelor-early-childhood-administration/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Education (for Existing Teachers)</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/online-education-master-degree/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Educational Psychology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/online-master-educational-psychology/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Higher Education</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/online-master-higher-education/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Instructional Design and Technology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/online-master-instructional-technology/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/education/graduate-certificate-instructional-design/"   >Graduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Teaching (for Aspiring Teachers)</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/master-teaching-degree-nationwide-noncertification/"   >Master of Arts (Noncertification)</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Fire Science</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/fire-science/"> View All Fire Science Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Fire and Emergency Management</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/fire-science/bachelor-fire-emergency-management/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Fire Science</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/fire-science/online-bachelor-fire-science/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/fire-science/online-associate-degree-fire-science/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Health Sciences</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/health-sciences/"> View All Health Sciences Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">COVID-19 Contact Tracing</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/covid-19-contact-tracing-course/"   >Course</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health and Wellness</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/health-wellness-bachelor-degree/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health Care Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/master-health-care-administration/"   >Master of Health Care Administration</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/bachelor-health-care-administration/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/exceltrack-bachelors-healthcare-administration/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health Education</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/master-degree-health-education/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health Informatics</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/online-master-health-informatics/"   >Master of Health Informatics</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health Information Management</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/master-health-information-management/"   >Master of Health Information Management</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/bachelor-health-information-management/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Health Science</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/online-bachelor-health-science/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Medical Assistant</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/medical-assistant-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Medical Billing and Coding</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/medical-billing-coding-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Medical Office Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/medical-office-administration-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Nutrition</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/nutrition-bachelors-degree-online/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Public Health</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/online-master-degree-public-health/"   >Master of Public Health</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Human Services</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/human-services/"> View All Human Services Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Elder Care Services</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/human-services/online-certificate-elder-care/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Human Services</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/human-services/online-master-human-services/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Youth and Family Services</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/human-services/bachelor-human-services-online/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/human-services/online-certificate-child-family/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Information Technology</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/information-technology/"> View All Information Technology Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Analytics</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/bachelor-degree-analytics/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/exceltrack-bachelor-degree-analytics/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Cisco Networks</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/cisco-networking-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Cloud Computing</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/bachelor-degree-cloud-computing-solutions/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/exceltrack-bachelor-degree-cloud-computing-solutions/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Computer Forensics</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/computer-forensics-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Cybersecurity</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/master-cybersecurity-management/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/bachelor-cybersecurity/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/exceltrack-bachelors-cybersecurity/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Information Security</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/information-security-graduate-certificate/"   >Graduate Certificate</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/information-security-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Information Technology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/master-information-technology/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/online-bachelor-it/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/exceltrack-bachelor-information-technology/"   >ExcelTrack Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/associate-degree-information-technology/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Microsoft Operating Systems</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/microsoft-operating-systems-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Programming and Software Development</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/information-technology/software-development-certificate-online/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Legal Studies</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/legal-studies/"> View All Legal Studies Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Law Degrees</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="https://www.concordlawschool.edu/academic-programs/executive-juris-doctor/"   >Executive Juris Doctor</a></li><!--end - Link--><!--begin - Link--><li>  <a href="https://www.concordlawschool.edu/academic-programs/juris-doctor/"   >Juris Doctor</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Legal Secretary</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/legal-studies/online-legal-secretary-certificate/"   >Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Legal Studies</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/legal-studies/online-master-degree-legal-studies/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Legal Support and Services</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/legal-studies/bachelor-degree-legal-support-services/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/legal-studies/legal-support-services-associate-degree/"   >Associate of Applied Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Paralegal</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/legal-studies/pathway-to-paralegal-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Nursing</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/nursing/"> View All Nursing Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Adult-Gerontology Acute Care Nurse Practitioner</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/acute-care-nurse-practitioner-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Adult-Gerontology Primary Care Nurse Practitioner</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/adult-gerontology-nurse-practitioner-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">COVID-19 Contact Tracing</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/covid-19-contact-tracing-course/"   >Course</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Executive Leader</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/executive-leadership-graduate-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Family Nurse Practitioner, Primary Care</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/family-nurse-practitioner-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Nurse Educator</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/online-nurse-educator-graduate-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Nursing and Business Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/msn-mba-online/"   >Dual Master's Degrees</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Nursing</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/online-master-degree-nursing/"   >Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/exceltrack-competency-based-msn-nursing-degree/"   >ExcelTrack Master of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/online-nursing-master-dnp/"   >Master of Science (DNP Path)</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/bachelor-degree-nursing/"   >Bachelor of Science (RN-to-BSN)</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/exceltrack-competency-based-rn-bsn-nursing-degree/"   >ExcelTrack Bachelor of Science (RN-to-BSN)</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/associate-degree-nursing/"   >Associate of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Nursing Practice</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/nursing/online-doctor-of-nursing/"   >Doctor of Nursing Practice</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Psychology</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/psychology/"> View All Psychology Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Addictions</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/psychology/bachelor-psychology-addictions/"   >Bachelor of Science in Psychology</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/psychology/graduate-certificate-addictions/"   >Graduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Applied Behavioral Analysis</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/psychology/psychology-applied-behavior-analysis-bachelor-degree/"   >Bachelor of Science in Psychology</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/psychology/aba-postbaccalaureate-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/psychology/applied-behavioral-analysis-postgraduate-certificate/"   >Postgraduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Autism Spectrum Disorder</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/psychology/autism-spectrum-disorders-certificate/"   >Postbaccalaureate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Educational Psychology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/education/online-master-educational-psychology/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Industrial/Organizational Psychology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/psychology/bachelor-industrial-organizational-psychology/"   >Bachelor of Science in Psychology</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/psychology/industrial-organizational-psychology-graduate-certificate/"   >Graduate Certificate</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Psychology</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/psychology/master-degree-psychology/"   >Master of Science</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Public Policy</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/public-policy/"> View All Public Policy Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Environmental Policy and Management</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/public-policy/bachelor-environmental-policy-management/"   >Bachelor of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Public Administration</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/public-policy/master-public-administration-online/"   >Master of Public Administration</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Military and Veterans</a>
+    <div class="nav-info-column">
+        
+        <div class="nav-intro"><span id="nav-intro-header"><div> <p>Servicemembers and veterans can select one of our degrees designed specifically for military students, or choose from one of our 175+ programs. We will evaluate your JST and civilian transcript for credit and determine the most efficient path to your chosen degree.</p> </div></span></div>
+        <div class="nav-info-header nav-intro"><a id="nav-intro-text" href="/military/"> Try our military credit calculator ></a></div>
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Air Force </div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/military/air-force/"   >AU-ABC</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/general-education/air-force-gem/"   >General Education Mobile (GEM) Program</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/aas-degree-health-science-military/"   >AAS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/health-science-associate-degree-military/"   >AS in Health Science </a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >BS in Liberal Studies</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Army</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/aas-degree-health-science-military/"   >AAS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/associate-degree-small-group-management/"   >AAS in Small Group Management</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/health-science-associate-degree-military/"   >AS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >BS in Liberal Studies</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Coast Guard</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/associate-degree-small-group-management/"   >AAS Small Group Management </a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/criminal-justice-associate-degree-military/"   >AAS in Criminal Justice</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/aas-degree-health-science-military/"   >AAS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/health-science-associate-degree-military/"   >AS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >BS in Liberal Studies</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Marines</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/business/associate-degree-small-group-management/"   >AAS Small Group Management</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >BS in Liberal Studies</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Navy</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/health-sciences/aas-degree-health-science-military/"   >AAS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/health-science-associate-degree-military/"   >AS in Health Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/online-bachelor-liberal-studies/"   >BS in Liberal Studies </a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">Open College</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/open-college/"> View All Open College Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">Professional Studies</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/open-college/bachelor-professional-studies/"   >Bachelor of Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/open-college/associate-degree-professional-studies/"   >Associate of Science</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Self-Paced Course</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/open-college/lrc100/"   >Experiential Learning Portfolio</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav--><!--begin - DegreeProgramsAosNav-->
+<li class="nav_info_item_wrapper">
+    <a href="#" class="nav_info_item">View All Degree Programs</a>
+    <div class="nav-info-column">
+        <div class="nav-info-header"> <a href="/degree-programs/"> View All Degree Programs <i class="fa fa-chevron-right" aria-hidden="true"></i> </a> </div>
+        
+        
+        <div class="nav-columns">
+            <!--Program-->
+            <div class="nav-info-section">
+                    <div class="nav-header">All Degree Programs</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/online-masters-degrees/"   >Master's Degrees</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/bachelors-degrees/"   >Bachelor's Degrees</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/associates-degrees/"   >Associate's Degrees</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/online-certificates/"   >Certificate Programs</a></li><!--end - Link-->
+                    </ul>
+                </div><div class="nav-info-section">
+                    <div class="nav-header">Self-Paced Course</div>
+                    <ul>
+                        <!--Program links-->
+                        <!--begin - Link--><li>  <a href="/degree-programs/open-college/lrc100/"   >Experiential Learning Portfolio</a></li><!--end - Link-->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</li>
+<!--end - DegreeProgramsAosNav-->            <li class="nav_info_item_wrapper">                <a href="#"></a>            </li>          </ul>        </div>      <div class="col-md-8">        <div id="nav-stage-wrapper">          <div id="nav-stage"></div>        </div>      </div>      <div class="col-md-1">        <input type="button" id="nav-close" class="close" value="Close Menu" />      </div>    </div>  </div></div><!--end - PrimaryDegreeProgramsNavMainSub--></li>
+                        <li role="menuitem"><!--begin - MainPrimaryNav--><a href="/tuition-financial-aid/" class="main-navbar-item">Tuition & Financial Aid</a><!--begin - PrimaryNavMainSub--><div class="subnav">	<div class="container">		<div class="nav-column">				<div class="nav-header"><a href="#"></a></div>				<ul>					<!--begin - Link--><li>  <a href="/tuition-financial-aid/"   >Tuition & Financial Aid</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/tuition-reduction/"   >Tuition and Savings</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/financial-aid-process/"   >Financial Aid Process</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/student-grants/"   >Student Grants</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/student-loans/"   >Student Loans</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/financial-resources/"   >Financial Resources</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/frequently-asked-questions/"   >Frequently Asked Questions</a></li><!--end - Link-->				</ul>			</div>	</div></div><!--end - PrimaryNavMainSub--><!--end - MainPrimaryNav--></li>
+                        <li role="menuitem"><!--begin - MainPrimaryNav--><a href="/admissions/" class="main-navbar-item">Admissions</a><!--begin - PrimaryNavMainSub--><div class="subnav">	<div class="container">		<div class="nav-column">				<div class="nav-header"><a href="#"></a></div>				<ul>					<!--begin - Link--><li>  <a href="/admissions/"   >Admissions</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/academic-calendar/"   >Academic Calendar</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/admissions-checklist/"   >Admissions Process</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/general-requirements/"   >General Requirements</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/technology-requirements/"   >Technology Requirements</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/transfer-students/"   >Transfer Students</a></li><!--end - Link-->				</ul>			</div>	</div></div><!--end - PrimaryNavMainSub--><!--end - MainPrimaryNav--></li>
+                        <li role="menuitem"><!--begin - MainPrimaryNav--><a href="/student-experience/" class="main-navbar-item">Student Experience</a><!--begin - PrimaryNavMainSub--><div class="subnav">	<div class="container">		<div class="nav-column">				<div class="nav-header"><a href="#"></a></div>				<ul>					<!--begin - Link--><li>  <a href="/student-experience/"   >Student Experience</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/online-experience/"   >Online Experience</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/student-life/"   >Student Life</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/campus-locations/"   >Locations</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/graduation/"   >Graduation</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/alumni/"   >Alumni Engagement</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/international-students/"   >International Students</a></li><!--end - Link-->				</ul>			</div>	</div></div><!--end - PrimaryNavMainSub--><!--end - MainPrimaryNav--></li>
+                        <li role="menuitem"><!--begin - MainPrimaryNav--><a href="/academic-support/" class="main-navbar-item">Academic Support</a><!--begin - PrimaryNavMainSub--><div class="subnav">	<div class="container">		<div class="nav-column">				<div class="nav-header"><a href="#"></a></div>				<ul>					<!--begin - Link--><li>  <a href="/academic-support/"   >Academic Support</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/career-services/"   >Career Services</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/covid-19-faq/"   >COVID-19 FAQs</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/student-resources/"   >Student Resources</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/request-transcript/"   >Transcript Request</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/faculty/"   >Faculty</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/disability-services-center/"   >Center for Disability Services</a></li><!--end - Link-->				</ul>			</div>	</div></div><!--end - PrimaryNavMainSub--><!--end - MainPrimaryNav--></li>
+                        <li role="menuitem"><!--begin - MainPrimaryNav--><a href="/about/" class="main-navbar-item">About</a><!--begin - PrimaryNavMainSub--><div class="subnav">	<div class="container">		<div class="nav-column">				<div class="nav-header"><a href="#"></a></div>				<ul>					<!--begin - Link--><li>  <a href="/about/"   >About</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/about-purdue-global/"   >About Purdue Global</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/accreditation/"   >Accreditation</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/approach-to-learning/"   >Approach to Learning</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/contact-us/"   >Contact Us</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/purdue-global-commitment/"   >Purdue Global Commitment</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/cybersecurity-center/"   >Cybersecurity Center</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/leadership-board/"   >Leadership and Board</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/fast-facts/"   >Facts and Statistics</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/newsroom/"   >Newsroom</a></li><!--end - Link-->				</ul>			</div>	</div></div><!--end - PrimaryNavMainSub--><!--end - MainPrimaryNav--></li>
+                        <li role="menuitem" class="blog-link"><!--begin - MainPrimaryNav--><a href="/blog/" class="main-navbar-item">Blog</a><!--end - MainPrimaryNav--></li>
+                        
+                        <li role="menuitem">
+                            <button class="open-search" aria-expanded="true" aria-label="Search"></button>
+                        </li>
+                    </ul>
+                    <div class="desktop-search">
+                        <div class="container">
+                            <div class="row search-box">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <label class="title" for="search-desktop">SEARCH PURDUE UNIVERSITY GLOBAL</label>
+                                </div>
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input type="search" id="search-desktop" class="search-input" placeholder="What are you looking for?" />
+                                    <input type="button" class="search-btn" value="Search" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="common">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <p class="header">
+                                            Most Commonly Searched:
+                                        </p>
+                                        <ul class="terms">
+                                            <!--begin - MostCommonlySearch--><li>    <a href="/search-results/?q=Tuition">Tuition</a>  </li><li>    <a href="/search-results/?q=Academic Calendar">Academic Calendar</a>  </li><li>    <a href="/search-results/?q=Accreditation">Accreditation</a>  </li><li>    <a href="/search-results/?q=Career Services">Career Services</a>  </li><li>    <a href="/search-results/?q=Resources">Resources</a>  </li><li>    <a href="/search-results/?q=Academic Support">Academic Support</a>  </li><li>    <a href="/search-results/?q=Student Life">Student Life</a>  </li><li>    <a href="/search-results/?q=Programs">Programs</a>  </li><!--end - MostCommonlySearch-->                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="close" value="Close Search" />
+                    </div>
+                </div>
+            </div>
+        </div><!--end navbar-23-->
+        <div id="mobile-menu" class="hide">
+          <div id="mobile-search">
+            <div class="container">
+              <label class="search-label" for="search-mobile">Search Purdue University Global</label>
+              <div class="mobile-search-container">
+                <form action="/search-results">
+                  <input id="search-mobile" type="search" name="q" placeholder="What are you looking for?" required />
+                  <input class="button" type="submit" value="Search">
+                </form>
+              </div>
+              <div class="common-searched">
+                <p>Most Commonly Searched</p>
+                <ul>
+                  <!--begin - MostCommonlySearch--><li>    <a href="/search-results/?q=Tuition">Tuition</a>  </li><li>    <a href="/search-results/?q=Academic Calendar">Academic Calendar</a>  </li><li>    <a href="/search-results/?q=Accreditation">Accreditation</a>  </li><li>    <a href="/search-results/?q=Career Services">Career Services</a>  </li><li>    <a href="/search-results/?q=Resources">Resources</a>  </li><li>    <a href="/search-results/?q=Academic Support">Academic Support</a>  </li><li>    <a href="/search-results/?q=Student Life">Student Life</a>  </li><li>    <a href="/search-results/?q=Programs">Programs</a>  </li><!--end - MostCommonlySearch-->                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-nav" class="hide">
+            
+            <div class="container">
+              <ul>
+                <!--begin - MobileMenu--><li>		<a href='#' class="sectionLink">Degree Programs			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/degree-programs/"   >All Degree Programs </a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/aviation/"   >Aviation</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/business/"   >Business</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/communication/"   >Communication</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/criminal-justice/"   >Criminal Justice</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/education/"   >Education</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/fire-science/"   >Fire Science</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/health-sciences/"   >Health Sciences</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/human-services/"   >Human Services</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/information-technology/"   >Information Technology</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/legal-studies/"   >Legal Studies</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/nursing/"   >Nursing</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/psychology/"   >Psychology</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/public-policy/"   >Public Policy</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/military/"   >Military and Veterans</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/degree-programs/open-college/"   >Open College</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">Tuition & Financial Aid			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/tuition-financial-aid/"   >Tuition & Financial Aid Overview</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/financial-resources/"   >Financial Resources</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/student-grants/"   >Student Grants</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/student-loans/"   >Student Loans</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/financial-aid-process/"   >Financial Aid Process</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/frequently-asked-questions/"   >Frequently Asked Questions</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/tuition-financial-aid/tuition-reduction/"   >Tuition and Savings</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">Admissions			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/admissions/"   >Admissions Overview</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/academic-calendar/"   >Academic Calendar</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/admissions-checklist/"   >Admissions Process</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/general-requirements/"   >General Requirements</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/admissions/technology-requirements/"   >Technology Requirements</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">Student Experience			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/student-experience/"   >Student Experience Overview</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/online-experience/"   >Online Experience</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/student-life/"   >Student Life</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/campus-locations/"   >Locations</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/graduation/"   >Graduation</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/student-experience/alumni/"   >Alumni Engagement</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/international-students/"   >International Students</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">Academic Support			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/academic-support/"   >Academic Support Overview</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/career-services/"   >Career Services</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/covid-19-faq/"   >COVID-19 FAQs</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/student-resources/"   >Student Resources</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/request-transcript/"   >Transcript Request</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/faculty/"   >Faculty</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/academic-support/disability-services-center/"   >Center for Disability Services</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">About			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/about/"   >About</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/about-purdue-global/"   >About Purdue Global</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/accreditation/"   >Accreditation</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/competency-based-learning-options/"   >Approach to Learning</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/contact-us/"   >Contact Us</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/purdue-global-commitment/"   >Purdue Global Commitment</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/cybersecurity-center/"   >Cybersecurity Center</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/leadership-board/"   >Leadership and Board</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/fast-facts/"   >Facts and Statistics</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/about/newsroom/"   >Newsroom</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><li>		<a href='#' class="sectionLink">Blog			<i class="fa fa-chevron-down" aria-hidden="true"></i>		</a>		<div>			<ul class='subnavLinks'>
+					<!--begin - Link--><li>  <a href="/blog/"   >Blog</a></li><!--end - Link-->
+				</ul>		</div>	</li>	<li class='subnavLinks'>		<a href='/news-resources/'>News & Resources			<i class="fa fa-chevron-right" aria-hidden="true"></i>		</a>	</li><!--end - MobileMenu-->              </ul>
+            </div>
+            <div class="audienceNav hidden-lg-up">
+			   <!--begin - MobileLowerPrimaryNav--><ul>  <!--begin - Link--><li>  <a href="/military/"   >Military & Veterans</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/transfer-students/"   >Transfer Students</a></li><!--end - Link--><!--begin - Link--><li>  <a href="/education-partnerships/"   >Education Partnerships</a></li><!--end - Link--><!--begin - Link--><li>  <a href="https://online.purdue.edu/"   target="_blank"><span style="background-image:url('/icons/icon-online-degrees.svg')"></span>All Purdue Online Degrees</a></li><!--end - Link--><!--begin - Link--><li>  <a href="https://campus.purdueglobal.edu/Security/Login?ReturnUrl=%2f"   target="_blank">Student Login</a></li><!--end - Link--></ul><!--end - MobileLowerPrimaryNav-->			   
+                
+            </div>
+            <br class="clear" />
+          </div>
+        </div>
+    </header>
+    <div id="main-content" tabindex="-1"></div>
+    
+    <main class="faq_v2">
+    <div class="container breadcrumb-container"><section><ul class="breadcrumbs"><li><a href="/"> Home</a></li><li><a href="/academic-support/"> Academic Support</a></li><li>COVID-19 FAQ</li></ul></section></div>    <link rel="stylesheet" href="/assets/css/faq-page-template-v2.min.css" type="text/css"/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                                        <h1 class="hero-default-title">Frequently Asked Questions About Purdue Global and COVID-19</h1>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Background Check Processing Delays</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What do I do if the results of my background check are delayed beyond the submission deadline?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If closures to facilities in your state of residence delay the processing of your background check results, you are eligible to&nbsp;complete and submit an attestation form that enables you to exceed the deadline to have an approved background check on file and remain enrolled at the University. However, you must have an approved background check on file by the end of your first term. Please contact your Student Advisor for details.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will all background check processing be delayed?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Currently, facilities in most states continue to process background checks without disruption. We will notify you if facilities in your state are affected, causing processing delays.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Proof of Degree Completion, Transcripts, and Diplomas</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if my official transcript(s) showing prior degree completion are or might be delayed past the submission deadline of the end of my first term?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If the official transcript(s) you ordered showing prior degree completion required for your program of enrollment are being delayed, the Office of the Registrar will attempt to use the unofficial transcript you provided and compare it to other official record sources to confirm that the degree completion requirements for your program have been met.</p>
+<p>You will remain in conditional admission status and you will not be eligible for federal financial aid until your program's degree admission requirements have been met by one method or the other.</p>
+<p>If you cannot provide the required documentation by the end of the first term of enrollment, you could be dismissed from the University according to University policy.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if my official proof of foreign-based secondary completion is or might be delayed past the submission deadline of the end of my first term?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If your official proof of foreign-based secondary completion is or might be delayed, the Office of the Registrar and the Dean's Office will review certification from other official sources.</p>
+<div class="ephox-sloth-bin ephox-sloth-bin_2071867311584737336790" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;" contenteditable="true">If your official proof of foreign-based secondary completion is or might be delayed, the Office of the Registrar and the Dean&rsquo;s Office will review certification from other official sources.</div>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if my official transcript(s) that I&#8217;m trying to submit to receive transfer credit are delayed?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>We cannot award transfer credit until an official transcript is submitted; it cannot be awarded from an unofficial transcript. Work with your Advisor to try to register for courses for which you do not expect transfer credit. We expect minimal disruption to the receipt of transcripts, but some delays may occur based on staffing adjustments at institutions across the country.&nbsp;</p>
+<div class="ephox-sloth-bin ephox-sloth-bin_2071867311584737336790" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;" contenteditable="true">We cannot award transfer credit until an official transcript is submitted; it cannot be awarded from an unofficial transcript. Work with your Advisor to try to register for courses for which you do not expect transfer credit. We expect minimal disruption to the receipt of transcripts, but some delays may occur based on staffing adjustments at institutions across the country.&nbsp;</div>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I am going to graduate soon or have just graduated. Will there be a delay in the receipt of my diploma?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>At this time, we do not anticipate any delays with your diploma. Diplomas are printed and sent through a third-party vendor that has a solid continuity plan, but if they are compelled to limit or stop work at their facilities this could change.</p>
+<div class="ephox-sloth-bin ephox-sloth-bin_2071867311584737336790" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;" contenteditable="true">At this time we do not anticipate any delays with your diploma. Diplomas are printed and sent through a third-party vendor that has a solid continuity plan, but if they are compelled to limit or stop work at their facilities this could change.</div>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Academics</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will I still be required to remain in attendance in my current courses?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>You must remain in attendance. If you are affected by the virus and believe that you will not be able to meet attendance requirements, contact your Advisor to discuss options.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Are extensions on courses or course assessments permitted?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Under these extenuating circumstances, instructors can provide alternatives, such as an extension, if a student demonstrates a commitment to completing the work. Contact your instructor to discuss.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Are incomplete grades available if I need it?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Under these extenuating circumstances, instructors can award incomplete grades if a student demonstrates a commitment to completing the work. Contact your instructor to discuss.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will I be penalized with any point deductions for late work?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Check the Late Policy in your course syllabus to determine if there are penalties for late work. Under these extenuating circumstances, instructors can provide alternatives, such as an extension, if a student demonstrates a commitment to completing the work. Contact your instructor to discuss.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Under what circumstances may I apply for a leave of absence?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If you have completed at least one term of your degree program at the University and can demonstrate extenuating circumstances beyond your control, you may request a leave of absence. A leave generally permits you to suspend studies and return to the version of the program that you left.</p>
+<p>A leave of absence is generally a last resort. Contact your instructor to discuss options that could help you stay enrolled in your program without taking a leave. Your Advisor can provide tips to bridge a difficult time period as well.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Are tutoring services still available?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>The Academic Success Center is available for tutoring services. Students can visit the <a href="https://campus2.purdueglobal.edu/page/academic-success-center">Academic Success Center</a> or email <a href="mailto:askasc@purdueglobal.edu" target="_blank">askasc@purdueglobal.edu</a> for academic assistance.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>How will my job search be affected by the virus? Who can I discuss this with?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>The Career Services department is committed to providing you with personalized career assistance. Please visit the CareerNetwork, an interactive online platform available 24/7, which contains a wealth of information and resources. To navigate to the CareerNetwork, log on to your Purdue Global Campus homepage, click on the Community Center tab, and select CareerNetwork. In addition, to connect with your Career Specialist please email <a href="mailto:CareerServices@purdueglobal.edu" target="_blank">CareerServices@purdueglobal.edu</a>.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Who should I contact if I have a question or concern about my work study site?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If you have any questions about federal work study, you are welcome to contact Shannon Cianelli at <a href="mailto:scianelli@purdueglobal.edu" target="_blank">scianelli@purdueglobal.edu</a> or Guilene Williams at <a href="mailto:guilene.williams@purdueglobal.edu" target="_blank">guilene.williams@purdueglobal.edu</a>.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will graduation still occur as scheduled?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>The graduation scheduled for June 6, 2020, in Indianapolis has been cancelled. We will offer a virtual graduation with live streaming 360-degree video. We offered this for our recent graduation in Los Angeles and the feedback was very positive.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Funding</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will there be flexibility in payment plan options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If you are having difficulty meeting payment obligations, please contact the Student Accounts team to discuss available options.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my financial aid disbursements or stipend payments be delayed due to the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>No. Financial aid disbursements will occur as scheduled, provided the eligibility criteria are met. Eligibility criteria include, but are not limited to, maintaining attendance per University policy. In addition, any resulting stipend payments will be made within 14 days of the funds being disbursed to your account. For more detail on those transactions, please visit the funding dashboard on your student portal.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>If I must withdraw from classes, will my funding be affected?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Depending on the type of funding and withdrawal date, your funding may be affected. Please contact your designated Advisor or the financial aid office at 866-458-2008.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I am displaced from work. Can I continue to use federal financial aid?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If your expected family contribution (EFC) is already zero, you have reached Pell lifetime eligibility (LEU), and you have reached maximal loan limits, you may not qualify for additional funding. If those conditions do not apply and you have experienced a loss of income compared to what was previously listed on your current FAFSA, you may be eligible for additional funding. Appropriate documentation must be provided (e.g., proof of unemployment, proof of reduced income). To begin the process, send an email explaining your situation to <a href="mailto:pjudgment@purdueglobal.edu" target="_blank">pjudgment@purdueglobal.edu</a>. We will then contact you to discuss your individual circumstances.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What do I do if I have lost my employer/alternative funding?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>If you did not previously apply for financial aid, begin the process by completing the FAFSA using Purdue Global's school code of 004586 at <a href="https://studentaid.gov/h/apply-for-aid/fafsa">studentaid.gov/h/apply-for-aid/fafsa</a>. You may also need to complete a Master Promissory Note (MPN) and Loan Entrance Counseling at studentaid.gov. Additional documentation may be requested once the FAFSA is processed.</p>
+<p>The Purdue University Global website provides information and videos to assist you if you have questions. You can access them in the <a href="/tuition-financial-aid/">Paying for School</a> section.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Health Sciences</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if my clinical site cancels my hours?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Please contact your Clinical Student Manager. They will work with you to create a solution for completion of your hours at a later date.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if I am not comfortable going to clinicals?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>We understand some students may want or need to delay their clinical hours. Please contact your Clinical Student Manager. We will work with you to create a solution for completion of your hours at a later date.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my field study or externship be affected by the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>We are responding to possible impacts on a case-by-case basis, for example, if a site cancels the placement, or if a student cannot fulfill hours due to unforeseen circumstances, or if a student chooses to not go to the site to avoid exposure. In these cases, we will work with you to mitigate the situation. Each program may require a different approach. Connect with your Clinical Student Manager if you are experiencing an issue.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Is Purdue Global offering any courses related to COVID-19?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Yes, Purdue Global is offering an <a href="/covid-19-contact-tracing-course/">online COVID-19 contact tracing course</a> free of charge for a limited time ($295 value). This contact tracing course focuses on helping you learn how you can assist public health agencies track and limit the spread of the coronavirus.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Business and IT</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my internship be affected by the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>We will continue to have internships as an option for students. If internships are affected by COVID-19, students can work with their instructors to find alternative solutions fitting their circumstances.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Nursing</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>My upcoming onsite acute care skills lab in Des Moines, Iowa, was cancelled. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>You can continue to register for your coursework. Additional details will be provided on the makeup schedule for the lab.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Because an onsite/clinical nursing course of mine was cancelled, I may have to take an extra term. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>The School of Nursing will work with you to minimize delays to your program completion and graduation. We encourage you to take an extra theory/didactic course in this term. The School of Nursing will also continue to identify the best options for you to complete your clinical and obtain the clinical hours you need to sit for the nurse practitioner certification exam.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Clinicals have been suspended at my external site location. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Should this occur, students are encouraged to complete the didactic portion of all coursework and follow a prescribed contingency plan that will be deployed by the School of Nursing at that time.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>My computer does not have a webcam for me to complete my exam. What options do I have to get the proper equipment?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Beneplace offers a wide variety of products and services including computers and related electronics at a discount from vendors, such as Logitech, that carry web cameras. Go to Purdue Global campus &gt; University Info &gt; Student Store and Discounts &gt; Beneplace.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I have contracted COVID-19. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p><strong>ADN/PLBSN Students:</strong> Contact your instructor to review options including proactively moving all sim activities to the end of term and do as much clinical practice experience as possible now.</p>
+<p><strong>RN-to-BSN Students:</strong> Contact your instructor to review options. The 2-week period of incomplete will be waived and flexibility with assignment due dates may be applied.</p>
+<p><strong>DNP Students:</strong> You can complete your work virtually. However, access to preceptors will be vital for progression and implementation of your DNP project.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Social and Behavioral Sciences</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my field experience be affected by the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Please contact your instructor. They will have options for students who are working on field experience.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my internship be affected by the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>AS495 has been cancelled for the March 25, 2020, term (2002C). Because the course is not a requirement, you may take it in another term.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will my practicum be affected by the virus?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>You will be given the choice to continue with the practicum or push the practicum back to another term. You will also be eligible to take the comprehensive exam or thesis course before taking the practicum. If you still have other courses remaining, you will be able to take those scheduled classes and take the practicum during the comprehensive exam or thesis. The department chair will contact you to explain options for you and the pros and cons of each to help you make the decision that is right for you.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>What if my practicum closes or reduces my hours?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Contact your clinical manager and instructor to discuss options.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">Military</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Are there any expected interruptions to Tuition Assistance (TA) and Veterans Assistance (VA) educational benefits?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>No. There are no expected interruptions.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                                <h2 class="hero-default-title">General Questions About the Coronavirus (COVID-19)</h2>
+                                            <div class="faq-summary-content">
+                                                    </div>
+                        <div class="faqDropdown">
+                            <ul class="faqDropdownList">
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I am showing symptoms consistent with COVID-19. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Your health is the top priority. As soon as you can, please contact your instructors to keep them informed of your situation. In extenuating circumstances, they award extensions of assignment deadlines and/or an <a href="https://catalog.purdueglobal.edu/policy-information/academic-standards/grades-marks/" target="_blank">incomplete grade</a> to afford you more time. If these measures do not suffice, speak with your Advisor about options that may allow you to take a break and return to school as soon as you can.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I have contracted COVID-19. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>We are so very sorry to hear of your illness and wish you a speedy and full recovery. As soon as you can, please contact your instructors to keep them informed of you situation. In extenuating circumstances, they award extensions of assignment deadlines and/or an <a href="https://catalog.purdueglobal.edu/policy-information/academic-standards/grades-marks/" target="_blank">incomplete grade</a> to afford you more time. If these measures do not suffice, speak with your Advisor about options that may allow you to take a break and return to school as soon as you can.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>A family member of mine whom I look after has COVID-19. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Your and your family&rsquo;s health are our priority. As soon as you can, please contact your instructors to keep them informed of your situation. In extenuating circumstances, they award extensions of assignment deadlines and/or an <a href="https://catalog.purdueglobal.edu/policy-information/academic-standards/grades-marks/">incomplete grade</a> to afford you more time. If these measures do not suffice, speak with your Advisor about options that may allow you to take a break and return to school as soon as you can.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I am not feeling well. Do I qualify for a leave of absence (LOA)?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>Your health is the top priority. As soon as you can, please contact your instructors to keep them informed of your situation. In extenuating circumstances, they award extensions of assignment deadlines and/or an <a href="https://catalog.purdueglobal.edu/policy-information/academic-standards/grades-marks/" target="_blank">incomplete grade</a> to afford you more time. If these measures do not suffice, speak with your Advisor about options that may allow you to take a break and return to school as soon as you can.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>I have lost internet access because the place where it was available to me is closed. What can I do?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>As soon as you can, please contact your instructors to keep them informed of your situation. In extenuating circumstances, they award extensions of assignment deadlines and/or an <a href="https://catalog.purdueglobal.edu/policy-information/academic-standards/grades-marks/" target="_blank">incomplete grade</a> to afford you more time. If these measures do not suffice, speak with your Advisor about options that may allow you to take a break and return to school as soon as you can.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Now that my children are home, I have less time for studies. What are my options?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>The Academic Success Center has recorded <a href="https://campus2.purdueglobal.edu/page/join-a-webinar" target="_blank">time management webinars</a> to help you optimize your study time. Your Advisor can review schedule options with you as well to help you bridge this period of time.</p>                                                        </div>
+                                                    </li>
+                                                                                <li>
+                                                        <a tabindex="0" class="accesibility-expanded" aria-expanded="false" aria-haspopup="true" role="link">
+                                                            <span>Will the University's hours of operation be affected?</span>
+                                                            <span class="icon-downArrowIcon"></span>
+                                                        </a>
+                                                                                    <div role="group">
+                                                            <p>No. Operating hours will not be affected.</p>                                                        </div>
+                                                    </li>
+                                                        </ul>
+                        </div>
+                                </div>
+        </div>
+    </div>
+    <section class="sub-footer">  
+    <div class="divider gray"><span></span></div>
+    <!--begin - RightRailSif_Footer--><div class="container">
+									<div class="row">
+										<div class="rightRailSifBottom_with_aos col-xs-12 col-md-12 col-lg-8 col-lg-offset-2">
+											<p class="title">Request More Information</p>                               <p>To receive the Purdue Global Program Guide, including associated career paths, please select an area of study.</p>
+											<div class="sifform_content rightRailSifBottom">
+												<div id="interestWrapper">
+													<select name="interest" aria-label="interest" required="">
+														<option value="Choose an area of study" disabled="">Choose an area of study</option>
+														<option value="BIZ">Business</option>
+														<option value="COMM">Communication</option>
+														<option value="CJ">Criminal Justice</option>
+														<option value="EDU">Education</option>
+														<option value="FSEM">Fire Science</option>
+														<option value="HS">Health Sciences</option>
+														<option value="HUSER">Human Services</option>
+														<option value="IT">Information Technology</option>
+														<option value="CLS">Law Programs (Concord Law School)</option>
+														<option value="LS">Legal Studies</option>
+														<option value="NUR">Nursing</option>
+														<option value="PSYC">Psychology</option>
+														<option value="PPOL">Public Policy</option>
+														<option value="MIL">Special Military Programs</option>
+														<option value="HMD">Help Me Decide</option>
+													</select>
+													<div role="alert" aria-describedby="areaOfInterestLabel" class="errorText" style="display: none;" aria-hidden="true">Select an Area of Study</div>
+												</div>
+												<a href="/request-information" data-cta-placement="RightRailBottom" data-cta-name="next" role="button" class="rightRailSIF_btn purdue-btn-outline purdue-btn">Next</a>
+											</div>
+										</div>
+									</div>
+								</div><!--end - RightRailSif_Footer--> 
+</section></main>
+    
+    <footer class="pg-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-md-10 col-lg-3 divider max-80">
+                <div class="inner">
+                    <img class="footer-logo" src="/shared/pug-logo-stacked.png" alt="Purdue University Global"/>
+                                                    <p>
+                                    Prospective Students                                     <br/>
+                                                                844-PURDUE-G<br/>
+                                                                <a href="/request-information/" class="gold" target="_self" data-cta-placement='footer-link' data-cta-name='request info'>Request Information ></a><br/>
+                                                                <a href="/enrollment-application/" class="gold" target="_self" data-cta-placement='footer-link' data-cta-name='apply'>Apply Now ></a><br/>
+                            </p>                                <p>
+                                    Current Students                                    <br/>
+                                                                866-522-7747<br/>
+                                                                <a href="https://campus.purdueglobal.edu/Security/Login?ReturnUrl=%2f" class="gold" target="_blank" data-cta-placement='footer' data-cta-name='student login'>Student Login ></a><br/>
+                            </p>                                <p>
+                                                                <a href="/contact-us/" class="gold" target="_self">All Contact & Location Information ></a><br/>
+                            </p>                </div>
+            </div>
+            <div class="col-xs-12 col-lg-2 fc-wrap">
+                <div class="inner">
+                    <p data-toggle="collapse" data-target=".fc-first" class="footer-header top"><span class="footer-header">LEARN</span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
+                    <ul class="footer-col fc-first collapse in">
+                                                <li><a href="/degree-programs/" target="_self">Degree Programs</a></li>
+                                                <li><a href="/tuition-financial-aid/" target="_self">Tuition & Financial Aid</a></li>
+                                                <li><a href="/admissions/" target="_self">Admissions</a></li>
+                                                <li><a href="/about/about-purdue-global/" target="_self">About Purdue Global</a></li>
+                                                <li><a href="/education-partnerships/" target="_self">Employers</a></li>
+                                                <li><a href="//www.concordlawschool.edu/" target="_blank">Concord Law School</a></li>
+                                                <li><a href="/about/careers/" target="_self">Career Opportunities</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-2 fc-wrap">
+                <div class="inner">
+                    <p data-toggle="collapse" data-target=".fc-second" class="footer-header top"><span class="footer-header">EXPERIENCE</span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
+                    <ul class="footer-col fc-second collapse in">
+                                                <li><a href="/student-experience/online-experience/" target="_self">Online Experience</a></li>
+                                                <li><a href="/student-experience/student-life/" target="_self">Student Life</a></li>
+                                                <li><a href="/student-experience/alumni/" target="_self">Alumni Engagement</a></li>
+                                                <li><a href="/campus-locations/" target="_self">Locations</a></li>
+                                                <li><a href="/student-experience/graduation/" target="_self">Graduation</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-2 fc-wrap">
+                <div class="inner">
+                    <p data-toggle="collapse" data-target=".fc-third" class="footer-header top">
+                        <span class="footer-header">STUDENTS</span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    </p>
+                    <ul class="footer-col fc-third collapse in">
+                                                <li><a href="http://www.studentclearinghouse.org/" target="_blank">National Student Clearinghouse &reg;</a></li>
+                                                <li><a href="https://catalog.purdueglobal.edu" target="_blank">University Catalog</a></li>
+                                                <li><a href="/student-consumer-information/" target="_blank">Student Consumer Information</a></li>
+                                                <li><a href="https://purdueglobalgear.merchorders.com/" target="_blank">Student Store</a></li>
+                                                <li><a href="/academic-support/request-transcript/" target="_self">Transcript Request</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-2 fc-wrap">
+                <div class="inner">
+                    <p data-toggle="collapse" data-target=".fc-fourth" class="footer-header top">
+                        <span class="footer-header">SUPPORT</span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    </p>
+                    <ul class="footer-col fc-fourth collapse in">
+                                                <li><a href="/academic-support/career-services/" target="_self">Career Services</a></li>
+                                                <li><a href="/academic-support/student-resources/" target="_self">Student Resources</a></li>
+                                                <li><a href="/academic-support/disability-services-center/" target="_self">Center for Disability Services</a></li>
+                                                <li><a href="/security-policy/" target="_self">Annual Security Policy</a></li>
+                                                <li><a href="/academic-support/disability-services-center/" target="_self">Accessibility</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-1 max-20">
+                <div class="inner">
+                    <ul class="footer-col social">
+                        <li><span class="footer-header">SOCIAL</span>
+                        </li>
+                                                <li>
+                            <a href="https://www.facebook.com/purdueglobal/" aria-label="Facebook">
+                                <i class="fa fa-facebook-f" aria-label="hidden"></i>
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.instagram.com/purdueglobal/" aria-label="Instagram">
+                                <i class="fa fa-instagram" aria-label="hidden"></i>
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.twitter.com/purdueglobal" aria-label="Twitter">
+                                <i class="fa fa-twitter" aria-label="hidden"></i>
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.linkedin.com/school/purdue-global/" aria-label="Linkedin">
+                                <i class="fa fa-linkedin" aria-label="hidden"></i>
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.youtube.com/channel/UCFWhZLCA3O1wFYxc9fvwnsg" aria-label="Youtube">
+                                <i class="fa fa-youtube" aria-label="hidden"></i>
+                            </a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            <div class="content">
+                <p class="copy">
+                    Copyright &copy; 2020, Purdue University Global, Inc., a public, nonprofit&nbsp;institution.                </p>
+                <p class="copy">
+                    
+                    
+                                                    <a href="/privacy-policy/" class="gold" target="_self">Privacy&nbsp;Policy</a>
+                                                            &nbsp;&nbsp; | &nbsp;&nbsp;                            
+                                                            <a href="/user-agreement/" class="gold" target="_self">End&nbsp;User&nbsp;Agreement</a>
+                                                            &nbsp;&nbsp; | &nbsp;&nbsp;                            
+                                                            <a href="/site-map/" class="gold" target="_self">Site&nbsp;Map</a>
+                                            </p>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+
+		<script type="text/javascript" src="//code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor.min.js" defer></script>
+    <!-- LinkedIn -->
+    <script type="text/javascript">
+        if(typeof IN === 'undefined'){
+            $.getScript('//platform.linkedin.com/in.js?async=true', function(data, textStatus){
+                IN.init({
+                    api_key: '77fb6r9n8wej8j',
+                    authorize: true
+                });
+            });
+        }
+    </script>
+    
+     
+    
+    <script type="text/javascript" src="/assets/js/scripts.min.js" defer></script>
+    <script type="text/javascript" src="/assets/sif/js/zipcodehelper.js" defer></script> 
+    <script type="text/javascript" src="/assets/js/foundation.min.js" defer></script>
+    
+</body>
+</html>

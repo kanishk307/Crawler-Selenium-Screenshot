@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3f1c144735",applicationID:"72185179"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Coronavirus Update and Precautions | Soka University of America" />
+<link rel="canonical" href="https://www.soka.edu/coronavirus-update" />
+<meta name="description" content="The latest on our response to the COVID-19 pandemic." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/soka_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.soka.edu/coronavirus-update" />
+<script src="/sites/default/files/google_tag/google_tag.script.js?qd679s"></script>
+
+    <title>Coronavirus Update and Precautions | Soka University of America</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_d9jx1E6rKyZOREKbOSIb28m-gnMFwbWHbb2w_R9agGI.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__fPojp6sNjhJJMnD5B72OeK4RycLJ-D4cyB9U3AW5E8.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i" />
+<link rel="stylesheet" media="all" href="https://fast.fonts.net/cssapi/ab135b4c-050f-4918-a086-cfdcb223b19f.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_5ndhHsQ6dMfXTWUECH8Bsyw1pQXQof69yM2lqZDy5v0.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Xj5wj4jWcE_rY0pkes2LsHu6_hZxxF7E3TYM4GZdQRY.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="node-11776 path-node page-node-type-page">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ9THSC" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="overlay"></div>
+<div class="layout-container">
+
+  <header role="banner">
+          <div class="header-wrapper">
+          <div class="region region-header">
+    <div id="block-soka-theme-siteheader" class="block block-ifde-wrapper block-ifde-header-block">
+  
+    
+      
+
+      <div class="field field--name-field-wrapper-support-nav field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/soka-performing-arts-center">Performing Arts Center</a></div>
+              <div class="field__item"><a href="https://www.soka.edu/map">Campus Map</a></div>
+              <div class="field__item"><a href="/giving">Giving</a></div>
+              <div class="field__item"><a href="/coronavirus-update">ATTENTION: Coronavirus Update</a></div>
+          </div>
+      
+                          <div  class="field--name-field-org-logo" >
+        <a href="https://www.soka.edu/"><img src="/sites/default/files/site-logo/logo.png" width="328" height="94" alt="SOKA Logo" typeof="Image" /></a></div>
+      
+  
+
+
+            <div class="field field--name-field-org-name field--type-string field--label-hidden field__item">Soka University of America</div>
+      
+      <div class="field field--name-field-wrapper-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="http://admissions.soka.edu/apply">Apply</a></div>
+              <div class="field__item"><a href="/about/visit-soka">Visit</a></div>
+              <div class="field__item"><a href="/get-information">Get Info</a></div>
+          </div>
+  
+
+
+  </div>
+<div class="ifde-search-form block block-ifde-search block-ifde-search-block" data-drupal-selector="ifde-search-form" id="block-soka-theme-searchblockifdesearch" role="search">
+  <button class="search__button">
+    <span class="visually-hidden">Toggle search</span>
+    <span class="x-mag-glass">
+
+    </span>
+  </button>
+  
+    
+      <form action="/coronavirus-update" method="post" id="ifde-search-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input placeholder="Search" class="ifde-search-form__search-box form-text" data-drupal-selector="edit-keys" type="text" id="edit-keys" name="keys" value="" size="60" maxlength="128" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-ilsz2hjoxypr73ot9twg23apbfxqtngl-kpdxlelsk8" type="hidden" name="form_build_id" value="form-iLsz2HjoXYpR73Ot9TWG23ApBFXqtnGl-KpdxLelSk8" />
+<input data-drupal-selector="edit-ifde-search-form" type="hidden" name="form_id" value="ifde_search_form" />
+<div class="ifde-search-form__submit form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-mainnavsoka-menu" id="block-mainnavsoka" class="block block-menu navigation menu--">
+  <button class="menu__button">Menu
+    <span class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+            
+  <h2 class="visually-hidden" id="block-mainnavsoka-menu">Main Nav (soka)</h2>
+  
+
+        
+<nav class="menu menu--main menu--main-nav ifde-main-nav">
+                    <ul>
+                            <li>
+                    <a href="/about" >About</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/news-events" >News &amp; Events</a>
+                                    </li>
+                            <li>
+                    <a href="/about/proud-heritage" >A Proud Heritage</a>
+                                    </li>
+                            <li>
+                    <a href="/about/international-festival" >International Festival</a>
+                                    </li>
+                            <li>
+                    <a href="/about/visit-soka" >Visit Soka</a>
+                                    </li>
+                            <li>
+                    <a href="/about/highlights" >Highlights</a>
+                                    </li>
+                            <li>
+                    <a href="/about/university-leadership" >University Leadership</a>
+                                    </li>
+                            <li>
+                    <a href="/about/faculty-staff" >Faculty &amp; Staff Directory</a>
+                                    </li>
+                            <li>
+                    <a href="/about/our-stories" >Our Stories</a>
+                                    </li>
+                            <li>
+                    <a href="/about/sustainability" >Sustainability</a>
+                                    </li>
+                            <li>
+                    <a href="/about/press-and-media-center" >Press and Media Center</a>
+                                    </li>
+                            <li>
+                    <a href="/about/office-institutional-research-and-assessment" >Institutional Research &amp; Assessment</a>
+                                    </li>
+                            <li>
+                    <a href="/about/accreditation" >Accreditation</a>
+                                    </li>
+                            <li>
+                    <a href="/about/contact-us" >Contact Us</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                    <a href="/academics" >Academics</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/academics/undergraduate-studies" >Undergraduate Studies</a>
+                                    </li>
+                            <li>
+                    <a href="/academics/graduate-studies" >Graduate Studies</a>
+                                    </li>
+                            <li>
+                    <a href="/academics/our-academic-facilities" >Academic Facilities</a>
+                                    </li>
+                            <li>
+                    <a href="/academics/research" >Research</a>
+                                    </li>
+                            <li>
+                    <a href="/academics/office-registrar" >Academic Services</a>
+                                    </li>
+                            <li>
+                    <a href="/academics/daisaku-and-kaneko-ikeda-library" >Daisaku and Kaneko Ikeda Library</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                    <a href="/admission" >Admission</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/admission/undergraduate-admission" >Undergraduate Admission</a>
+                                    </li>
+                            <li>
+                    <a href="/admission/graduate-admission" >Graduate Admission</a>
+                                    </li>
+                            <li>
+                    <a href="http://admissions.soka.edu/status" >GoSoka! Account/Application Status</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                    <a href="/financial-aid" >Financial Aid &amp; Tuition</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/financial-aid-tuition/cost-attendance" >Cost of Attendance</a>
+                                    </li>
+                            <li>
+                    <a href="/financial-aid-tuition/net-price-calculator" >Net Price Calculator</a>
+                                    </li>
+                            <li>
+                    <a href="/financial-aid-tuition/aid-undergraduate-students" >Aid for Undergraduate Students</a>
+                                    </li>
+                            <li>
+                    <a href="/financial-aid-tuition/aid-graduate-students" >Aid for Graduate Students</a>
+                                    </li>
+                            <li>
+                    <a href="/financial-aid-tuition/frequently-asked-questions" >Frequently Asked Questions</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                    <a href="/student-life" >Student Life</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/student-life/celebrating-our-2020-graduates" >Celebrating Our 2020 Graduates</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/critical-conversations-soka" >Critical Conversations @Soka</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/living-sua" >Living at SUA</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/student-activities" >Student Activities</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/leadership-service" >Leadership &amp; Service</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/career-development" >Career Development</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/bridges-business" >Bridges to Business</a>
+                                    </li>
+                            <li>
+                    <a href="https://sokaathletics.com/" >Athletics </a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/orientation-and-commencement" >Orientation &amp; Commencement</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/policies-procedures" >Policies &amp; Procedures</a>
+                                    </li>
+                            <li>
+                    <a href="/student-life/student-affairs-staff" >Meet Student Affairs Staff</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                    <a href="/soka-performing-arts-center" >Soka Performing Arts Center</a>
+                                            <button class="menu__toggle" aria-expanded="false"><span class="visually-hidden">Expand</span></button>
+                        <div class="menu__drop">
+                            <div class="menu__drop-inner">
+                                                <ul class="menu__submenu">
+                            <li>
+                    <a href="/soka-performing-arts-center/calendar-events" >Calendar of Events</a>
+                                    </li>
+                            <li>
+                    <a href="/soka-performing-arts-center/about-soka-performing-arts-center" >About Us</a>
+                                    </li>
+                            <li>
+                    <a href="/soka-performing-arts-center/tickets" >Tickets</a>
+                                    </li>
+                            <li>
+                    <a href="/soka-performing-arts-center/your-visit" >Your Visit</a>
+                                    </li>
+                            <li>
+                    <a href="/soka-performing-arts-center/get-involved" >Get Involved</a>
+                                    </li>
+                    </ul>
+    
+                            </div>
+                        </div>
+                                    </li>
+                    </ul>
+    
+</nav>
+
+
+
+  </nav><div id="block-customlabelforsupportingnavigation" class="block block-block-content block-block-contentd77a0e2a-2c0d-40d9-aaf6-a0d6007e7d91">
+  
+    
+      
+            <div class="field field--name-field-b-nav-label field--type-string field--label-hidden field__item">Welcome to Soka</div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-supportingmenu-menu" id="block-supportingmenu" class="block block-menu navigation menu--supporting-menu">
+            
+  <h2 class="visually-hidden" id="block-supportingmenu-menu">Welcome to Soka</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/news-events" data-drupal-link-system-path="node/17">News &amp; Events</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/giving" data-drupal-link-system-path="node/1936">Support SUA</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://sokaathletics.com/" target="_blank">Athletics</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/sustainability" data-drupal-link-system-path="node/2976">Sustainability </a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-shortcutsblock" class="block block-block-content block-block-contentf344747f-5f78-4885-af63-7bc28bf324f3">
+  
+    
+      
+
+            <div class="field field--name-field-b-sec-nav-title field--type-string field--label-hidden field__item">Shortcuts</div>
+      
+      <div class="field field--name-field-b-sec-nav-link field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/jobs">Jobs</a></div>
+              <div class="field__item"><a href="/about/faculty-staff">Faculty &amp; Staff Directory</a></div>
+              <div class="field__item"><a href="/academics/daisaku-and-kaneko-ikeda-library">Daisaku and Kaneko Ikeda Library</a></div>
+              <div class="field__item"><a href="/information-technology-services">Information Technology Services</a></div>
+              <div class="field__item"><a href="/about/contact-us">Contact Us</a></div>
+          </div>
+  
+
+
+  </div>
+<nav role="navigation" aria-labelledby="block-soka-theme-informationfor-menu" id="block-soka-theme-informationfor" class="block block-menu navigation menu--information-for">
+      
+  <h2 id="block-soka-theme-informationfor-menu">Information For</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/admitted-students" data-drupal-link-system-path="node/3936">Admitted Students</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/information-current-students" data-drupal-link-system-path="node/3116">Current Students</a>
+              </li>
+                <li class="menu-item">
+        <a href="/information-parents" data-drupal-link-system-path="node/3086">Parents</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/info-community-members" data-drupal-link-system-path="node/3106">Community Members</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/alumni" data-drupal-link-system-path="node/2201">Alumni</a>
+              </li>
+                <li class="menu-item">
+        <a href="/information-faculty-staff" data-drupal-link-system-path="node/3056">Faculty &amp; Staff</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-soka-theme-sociallinkssoka" class="block block-soka block-soka-social-links">
+  
+    
+      
+
+      <div class="field field--name-field-social-profiles field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--facebook" href="https://www.facebook.com/Soka.University.of.America">
+    <span class="visually-hidden">    
+                  Facebook
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--instagram" href="https://www.instagram.com/sokauniv/">
+    <span class="visually-hidden">    
+                  Instagram
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--twitter" href="https://twitter.com/SokaUniv">
+    <span class="visually-hidden">    
+                  Twitter
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--youtube" href="https://www.youtube.com/user/SokaUnivAmerica">
+    <span class="visually-hidden">    
+                  YouTube
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+          </div>
+  
+
+
+  </div>
+<div id="block-soka-theme-supportingnavsoka" class="block block-soka block-soka-supporting-nav">
+  
+    
+      
+
+      <div class="field field--name-field-wrapper-support-nav field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/soka-performing-arts-center">Performing Arts Center</a></div>
+              <div class="field__item"><a href="https://www.soka.edu/map">Campus Map</a></div>
+              <div class="field__item"><a href="/giving">Giving</a></div>
+              <div class="field__item"><a href="/coronavirus-update">ATTENTION: Coronavirus Update</a></div>
+          </div>
+  
+
+
+  </div>
+
+  </div>
+
+      </div>
+      </header>
+
+    <div class="region region-help">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div class="region region-hero">
+    <div id="block-entityviewcontent" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="node node--type-page node--view-mode-hero ifde-standard">
+    
+
+    <div class="ifde-standard__inner">
+
+                <div class="ifde-standard__content">
+            
+           
+
+      
+<div  class="ifde-page__title-wrapper page__title-wrapper">
+          
+                          <h1  >
+      Coronavirus Update and Precautions</h1>
+      
+  
+
+
+            <div class="field field--name-ifde-node-page-title-cta field--type-ds field--label-hidden field__item"></div>
+      
+  </div>
+
+        </div>
+        
+    </div>
+
+</div>
+
+  </div>
+<div id="block-sectionnavsoka" class="block block-soka block-soka-section-nav-block">
+  
+    
+      
+  </div>
+<div id="block-breadcrumbsoka" class="block block-soka block-soka-breadcrumb-block">
+  
+    
+      
+  </div>
+
+  </div>
+
+        <div class="region region-content">
+    <div id="block-soka-theme-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="ifde-page clearfix">
+    
+
+    <div class="ifde-page__inner">
+
+        
+        
+                <div class="ifde-page__content">
+                  <div  class="ifde-page__paragraphs">
+        
+                  <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <p class="text-align-right"><em>Updated: July 8,&nbsp;2020</em></p>
+
+<p>This page details actions Soka University of America&nbsp;is taking to prevent and/or limit the spread of the novel coronavirus on campus and within the campus community. Soka is committed to maintaining a safe and healthy campus while supporting our fundamental purpose of delivering a quality education.</p>
+
+<p>There have been 20,225&nbsp;confirmed cases of COVID-19 in Orange County, including 145 in Aliso Viejo. The Orange County Health Care Agency&#8217;s <a href="https://occovid19.ochealthinfo.com/coronavirus-in-oc" target="_blank">website reports</a> that there is laboratory evidence of community transmission in Orange County, indicating that the novel coronavirus (SARS-CoV-2)&nbsp;is spreading locally. OCHCA holds regular phone conferences for college and university health care providers in the county. Soka takes part in these phone conferences. Among the Soka responses to the situation:</p>
+
+<ul>
+	<li>The SUA campus is closed to guests and visitors until further notice.</li>
+	<li>Instruction for the Fall 2020 semester will be remote.</li>
+	<li>Soka will not offer on-campus housing during the Fall semester.&nbsp;&nbsp;</li>
+	<li>No increase in tuition, room and board: The tuition, room and board fees for 2020-21 will remain at the 2019-20 levels. The previously announced increase has been rescinded. No room and board charges will be applied for Fall 2020.</li>
+	<li>Coronavirus relief grant: For 2020-21 academic year, all students will receive a one-time coronavirus relief grant of $8,062 that will be applied toward tuition. This grant will be added financial aid packages and may impact eligibility for other financial aid awards.</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Admission</h2>
+
+<ul><li>We understand that students and families have many pressing questions about their college search process, preparing for college, and paying for an education, especially during the coronavirus crisis. We hope to provide answers and information as new policies are implemented and respond to your questions and concerns as quickly as possible. Read more details on the<a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d7f659e0-69e6-4986-b7a0-74b27d6ee6c0" href="/admission/undergraduate-admission/coronavirus-and-admissions"> Admission COVID-19 FAQ page</a> or contact us at <a href="mailto:admission@soka.edu">admission@soka.edu</a>.</li>
+</ul>
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>International Students</h2>
+
+<ul>
+	<li>On July 6, 2020, US Immigration and Customs Enforcement announced modifications to the temporary exemptions to the federal regulations for nonimmigrant students taking online classes due to the pandemic for the Fall 2020 semester.<br />
+	<br />
+	The new guidance states nonimmigrant F-1 students attending schools operating entirely online may not continue to take a full online course load and remain in the US for the upcoming Fall semester. So international students who are taking 100% of their classes online can only be a full-time student and maintain your F-1 visa status if you are residing outside the US.<br />
+	<br />
+	Please note - This new guidance does not affect international students who are already outside the US and planning to study remotely from your home country this fall. You will remain in active status in SEVIS and continue to maintain your F-1 status.&nbsp;</li>
+	<li>The Office of International Student Services is continuing to monitor information from the&nbsp;US Immigration and Customs Enforcement,&nbsp;Department of Homeland Security, and the&nbsp;Centers for Disease Control and Prevention&nbsp;about the COVID-19 pandemic and how it may impact our international students. To address the fluid and rapidly changing situation, we have created an <a href="https://www.soka.edu/current-students/international-student-services/covid-19-faqs-international-students">FAQ page to provide answers for international students</a>.</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Federal Cares Act Aid</h2>
+
+<ul>
+	<li>As part of the Coronavirus Aid, Relief, Economic Security (CARES) Act, Congress allocated $14.25 billion for the Higher Education Emergency Relief Fund (HEERF). HEERF allocations have been awarded to institutions using a methodology that focuses&nbsp;75% on the number of full-time Pell Grant recipients and 25% on the institution&#8217;s overall enrollment.<br />
+	<br />
+	Using this formula, Soka University of America will receive $351,126 of HEERF funding. While the act requires that at least 50% be allocated to Title IV eligible students, SUA has decided to distribute 100% of these funds to Title IV eligible students and has awarded and disbursed HEERF funds to these students based on <a href="https://www.soka.edu/financial-aid-tuition/emergency-financial-aid">financial need</a>. Federal guidelines stipulate that international and undocumented students are not eligible for the HEERF funding. The university will provide funds from its own resources to support international and undocumented students.</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Financial Aid</h2>
+
+<ul>
+	<li>The Office of Financial Aid, with guidance from the US&nbsp;Department of Education, is working to address questions and concerns of Soka students who are impacted by the recent developments from the COVID-19 pandemic. We have created a&nbsp;<a href="https://www.soka.edu/financial-aid-tuition/frequently-asked-questions/financial-aid-covid-19-faq">COVID-19 FAQ page</a>&nbsp;to provide answers.&nbsp;(<strong>Updated June 4</strong>)</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Soka Loan Forbearance</h2>
+
+<ul>
+	<li>To provide relief to student loan borrowers during the COVID-19 national emergency, SUA Soka Loan borrowers in regular standing are automatically being placed in an administrative forbearance, which allows you to temporarily stop making monthly loan payment. This suspension of payments will last until Sept. 30, 2020, but you can still make payments if you choose. Please refer to the <a href="https://www.soka.edu/current-students/student-accounts/soka-loan-repayment/coronavirus-forbearance-information-sua-soka">COVID-19 Loan Forbearance Information page</a> for details.</li>
+</ul>
+
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Science Faculty Committee Fact Sheet</h2>
+
+<ul>
+	<li>The SUA Covid-19 Scientific Advisory Committee committee has created a fact sheet of consensus scientific thinking and emerging perspectives that may be helpful in applying precautionary principles to protect student, staff, and faculty health.<br /><br />
+	“The information we present is widely available as published by public health, medical, and scientific authorities,”&nbsp; the committee reported.&nbsp;“Our role is to assist SUA policy makers in understanding how to apply it to our unique situation at SUA.”&nbsp;<br /><br />
+	<a href="https://www.soka.edu/sites/default/files/docs/2020-05/SUA%20Covid-19%20Scientific%20Advisory%20Committee%20Fact%20Sheet.pdf">Read the fact sheet</a></li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Ikeda Library</h2>
+
+<ul>
+	<li>The Ikeda Library is closed. Please continue to ask for our assistance via phone, email, and&nbsp;Microsoft Teams. Library staff are working and on stand-by during the hours of 9 a.m. to 5 p.m., Monday through Friday.</li>
+	<li>The&nbsp;<a href="https://libguides.soka.edu/covid19" title="https://libguides.soka.edu/covid19">COVID-19 Library Services LibGuide</a>&nbsp;provides information about services and online resources are available. Please note that many publishers have provided expanded or new access to various types of resources such as books, articles, etc., ​for different time lengths. Many are available through June 30.&nbsp;</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Soka Performing Arts Center</h2>
+
+<ul>
+	<li><a href="/soka-performing-arts-center">Soka Performing Arts Center</a>&nbsp;has postponed&nbsp;all performances&nbsp;for the remainder of the 2019-2020 season. Tickets for postponed shows will automatically be valid for the rescheduled date. No action is required.&nbsp;Tickets may also be refunded or returned for an account credit in the amount of the original purchase price.&nbsp;</li>
+	<li>The Soka Performing Arts Center box office is closed to walk-up service.&nbsp;Due to current circumstances, the volume and length of wait time has increased dramatically.&nbsp;The preferred method of communication is through email at&nbsp;<a href="mailto:tickets@soka.edu">tickets@soka.edu</a>.&nbsp;</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Other Updates</h2>
+
+<ul>
+	<li>The Recreation Center, including weight rooms, gymnasium, pool, courts, aerobics room, fields, and track, is closed.</li>
+	<li>The Soka bookstore is&nbsp;closed.</li>
+	<li>The academic administration and Information Technology Services&nbsp;are working to help faculty use online platforms effectively to provide online courses and prevent disruption of the course of study.</li>
+	<li>Student employees are not permitted to work remotely. If you have any questions about student employment, please contact <a href="mailto:studentjobs@soka.edu">studentjobs@soka.edu.</a></li>
+	<li>All in-person university-sponsored events and activities are postponed or canceled until further notice.&nbsp;</li>
+	<li>All individual and group campus tours are canceled until further notice.</li>
+	<li>To enable social distancing, we are implementing a Temporary Emergency Situation Teleworking period for faculty and staff. This went into effect on March 17&nbsp;and will continue until further notice. This does not apply to employees whose area head has determined that they need to continue to work on campus. As a reminder, employees who need to continue to work on campus should practice healthy hygiene and social distancing per CDC recommendations. For those who will be able to work remotely, employees need to communicate to their direct supervisor if they have the equipment needed to work remotely. Each area head will need to communicate with their staff if they are expected to work on campus or remotely. Each staff member will need to complete the Temporary Emergency Situation Teleworking Agreement, which has been sent to all staff via email,&nbsp;prior to starting to work remotely. Please send the completed forms to HR through interoffice mail or email to <a href="mailto:humanresources@soka.edu">humanresources@soka.edu</a>.</li>
+	<li>Please continue to follow all the CDC recommended guidelines including frequent hand washing and social distancing.</li>
+	<li>University-sponsored travel will be restricted to essential travel only, and everyone will be required to monitor both State Department travel advisories and news about all affected areas before traveling. Faculty and staff will need to inform the academic deans or area head/supervisor, respectively, about their personal travel plans as well.</li>
+	<li>As previously communicated, faculty and staff who are not feeling well are to remain home and communicate directly with their supervisor.</li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>CDC Guidelines</h2>
+
+<p>The <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">U.S. Centers for Disease Control and Prevention</a> (CDC) recommends that normal hygiene practices are most effective for prevention of the spread of coronavirus:</p>
+
+<ul>
+	<li>Wash hands with soap and water for 20 seconds, especially after you have been in a public place, or after blowing your nose, coughing, or sneezing. Use a 60% alcohol-based hand sanitizer when soap and water are not available.</li>
+	<li>Cover nose and mouth with elbow or a tissue when coughing or sneezing.</li>
+	<li>Avoid touching eyes, nose, and mouth.</li>
+	<li>Limit close contact, like kissing, or sharing cups or utensils, with sick people.</li>
+	<li>Put <strong>distance between yourself and other people</strong>. This is especially important for&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html">people who are at higher risk of getting very sick</a>.</li>
+</ul>
+
+<p>We urge anyone on campus feeling ill (fever, cough, shortness of breath, other respiratory symptoms) to contact Student Health at (949) 480-4143.</p>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Community Updates</h2>
+
+<ul>
+	<li><a href="/news-events/news/sua-continue-remote-class-instruction-fall-semester">May 22: SUA to Continue Remote Class Instruction for Fall Semester</a></li>
+	<li><a href="https://www.soka.edu/news-events/news/march-18-campus-closure-coronavirus-update">March 18: Campus Closure, Community Update</a></li>
+	<li><a href="https://www.soka.edu/news-events/news/coronavirus-update-march-13-2020">March 13: Letter to the Community from President Daniel Y. Habuki</a></li>
+	<li><a href="https://www.soka.edu/news-events/news/performing-arts-center-soka-university-coronavirus-update-and-precautions">March 12: Soka Performing Arts Center Cancels Season</a></li>
+	<li><a href="https://www.soka.edu/news-events/news/soka-university-america-coronavirus-update-and-precautions">March 12: Coronavirus Update</a></li>
+</ul>
+
+<h2>More Resources</h2>
+
+<ul>
+	<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">US Centers for Disease Control and Prevention</a> (CDC)</li>
+	<li><a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx">California Department of Public Health</a></li>
+	<li><a href="http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus" target="_blank">Orange County Public Health</a></li>
+	<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/guidance-business-response.html" target="_blank">CDC Coronavirus College and University Guidance</a></li>
+	<li><a href="https://absa.org/covid19toolbox/">American Biological Safety Assn. COVID-19 Toolbox</a></li>
+	<li><a href="https://tools.niehs.nih.gov/wetp/covid19worker/">National Institute of Environmental Health Sciences</a></li>
+	<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-to-make-cloth-face-covering.html">How to make a cloth face covering (CDC)</a></li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+                <div class="wysiwyg paragraph paragraph--type-wysiwyg paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  <div class="wysiwyg__content">
+          <div  class="wysiwyg__body">
+        
+                  <h2>Video</h2>
+
+<ul>
+	<li><a href="https://www.youtube.com/watch?v=3PmVJQUCm4E" target="_blank">How to wash hands with soap and water</a></li>
+	<li><a href="https://www.youtube.com/watch?v=nA3G7NBOseQ" target="_blank">How to clean hands with hand sanitizer</a></li>
+	<li><a href="https://www.youtube.com/watch?v=PlAA_ZxHTbE" target="_blank">How to clean hands with hand sanitizer (American Sign Language)</a></li>
+	<li><a href="https://www.youtube.com/watch?v=KHR5do-b7zY" target="_blank">How to don and doff hand gloves</a></li>
+	<li><a href="https://www.youtube.com/watch?v=tPx1yqvJgf4">How to make a face covering without sewing</a></li>
+	<li><a href="https://www.youtube.com/watch?v=t9cnxxsEKpk">Use of face coverings to slow viral spread (American Sign Language)</a></li>
+</ul>
+
+      
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+      
+  
+    </div>
+
+
+        </div>
+        
+        
+    </div>
+
+</div>
+
+  </div>
+
+  </div>
+
+    </div>
+
+  </main>
+
+      <footer role="contentinfo">
+        <div class="region region-footer">
+    <div id="block-soka-theme-sitefooter" class="block block-ifde-wrapper block-ifde-footer-block">
+  
+    
+      
+
+            <div class="field field--name-field-org-logo field--type-image field--label-hidden field__item">  <img src="/sites/default/files/site-logo/logo.png" width="328" height="94" alt="SOKA Logo" typeof="foaf:Image" />
+
+</div>
+      
+<div  class="footer__address-wrapper">
+      
+            <div class="clearfix text-formatted field field--name-field-wrapper-address field--type-text-long field--label-hidden field__item"><p>1 University Drive, Aliso Viejo, CA 92656</p></div>
+      
+            <div class="field field--name-field-wrapper-phone field--type-string field--label-hidden field__item">949-480-4000</div>
+      
+            <div class="field field--name-field-wrapper-email field--type-email field--label-hidden field__item"><a href="mailto:info@soka.edu">info@soka.edu</a></div>
+      
+  </div>
+
+      <div class="field field--name-field-social-profiles field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--facebook" href="https://www.facebook.com/Soka.University.of.America">
+    <span class="visually-hidden">    
+                  Facebook
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--instagram" href="https://www.instagram.com/sokauniv/">
+    <span class="visually-hidden">    
+                  Instagram
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--twitter" href="https://twitter.com/SokaUniv">
+    <span class="visually-hidden">    
+                  Twitter
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+              <div class="field__item">
+    
+                  <a target="_blank" class="social-icon social-icon--youtube" href="https://www.youtube.com/user/SokaUnivAmerica">
+    <span class="visually-hidden">    
+                  YouTube
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+          </div>
+  
+      <div class="field field--name-field-utility-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/jobs">Jobs</a></div>
+              <div class="field__item"><a href="/about/faculty-staff">Directory</a></div>
+              <div class="field__item"><a href="/about/contact-us">Contact Us</a></div>
+              <div class="field__item"><a href="/about/visit-soka/directions-sua-campus">Directions</a></div>
+              <div class="field__item"><a href="/consumer-disclosure">Consumer Disclosures</a></div>
+              <div class="field__item"><a href="/student-life/policies-procedures/title-ixsexual-misconduct-policies-procedures">Title IX</a></div>
+              <div class="field__item"><a href="/student-lifeliving-suasafety/annual-security-and-fire-safety-report">Annual Security and Fire Safety (Clery Act) Report</a></div>
+              <div class="field__item"><a href="/coronavirus-update">Coronavirus Update</a></div>
+          </div>
+  
+            <div class="field field--name-soka-copyright field--type-ds field--label-hidden field__item"><div class="site-copyright">&copy; 2020 Soka University&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved</div></div>
+      
+            <div class="field field--name-ifde-site-design-by-config-pages field--type-ds field--label-hidden field__item"><div class="ifde-site-design-by-ifactory">
+    <span class="site-design">Site Design by <a target="_blank" href="http://ifactory.com">iFactory</a></span>
+</div></div>
+      
+
+
+  </div>
+
+  </div>
+
+    </footer>
+  
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11776","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"asset_injector\/css\/alert_heading_non_emergency,asset_injector\/js\/siteimprove_usability_,classy\/base,classy\/messages,core\/html5shiv,core\/normalize,ifde_alert\/alert,paragraphs\/drupal.paragraphs.unpublished,soka_theme\/main,system\/base","theme":"soka_theme","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"field_group":{"html_element":{"mode":"hero","context":"view","settings":{"id":"","classes":"ifde-page__title-wrapper page__title-wrapper","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast"}}},"user":{"uid":0,"permissionsHash":"f8d84dc557f2a8cc82c25e40f5519a339024b011d1211c2ba7bffaedfecbb2c7"}}</script>
+<script src="/sites/default/files/js/js_j2y84Je-KwW5UauFBW6xkIdMKs2FuPLS0B0a8-lOjPg.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+<script src="/sites/default/files/js/js_JY_AY6rswTUVq73bn6NoRQ5gJOeEyo6UXrUcc4Yz40I.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3f1c144735","applicationID":"72185179","transactionName":"NFNaYhdUWEoHU0FcVg0ZeVURXFlXSUBUUlw8VVlVDVA=","queueTime":0,"applicationTime":36,"atts":"GBRZFF9OS0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

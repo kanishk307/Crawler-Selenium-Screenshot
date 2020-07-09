@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"515f0b4697",applicationID:"362748531"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta property="og:site_name" content="Penn State York" />
+<link rel="canonical" href="https://york.psu.edu/feature/coronavirus-information" />
+<link rel="shortlink" href="https://york.psu.edu/node/7066" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://york.psu.edu/feature/coronavirus-information" />
+<meta property="og:title" content="Coronavirus Information" />
+<meta property="og:image" content="https://york.psu.edu/sites/york/files/styles/teaser_thumbnail/public/spring-romano.jpg?itok=dXV32A6J" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/psucampus/themes/psu_sub/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://york.psu.edu/feature/coronavirus-information" />
+
+    <title>Coronavirus Information | Penn State York</title>
+    <link rel="stylesheet" media="all" href="/sites/york/files/css/css_bbJXz94V7zqSNyG6R6UVq1SUTIgyTfxUgNLZp9V4YJA.css" />
+<link rel="stylesheet" media="all" href="/sites/york/files/css/css_B-ugd7GJ-t_eUOl-4b1S8vxZCUBAXlt-QbJQ9s0-MIw.css" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/york/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <!-- Begin Google fonts -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Roboto+Slab:400,700,300,100:latin', 'Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <!-- End Google fonts -->
+          <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQ9WCJ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PQ9WCJ');</script>
+      <!-- End Google Tag Manager -->
+      </head>
+  <body class="path-node page-node-type-feature-article has-glyphicons">
+    <div class="alert-wrapper">
+      <div class="alert-container">
+        <span class="alert-button hide"><a href="#"></a></span>
+      </div>
+    </div>
+    <nav id="skip-link" aria-label="skip-link">
+      <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+      </a>
+    </nav>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+          <header class="navbar outer-wrapper navbar-default container" id="header-outer-wrapper" role="banner">
+          <div id="header-inner-wrapper" class="inner-wrapper clearfix">
+        <div class="navbar-header header-layout" id="header-layout">
+          <div id="header" class="region--header clearfix column">
+                          <div id="navbar" class="navbar">
+                <div class="inner-float">
+                    <div class="region region-header-menus">
+    <nav role="navigation" aria-labelledby="block-secondary-menu-menu" id="block-secondary-menu">
+            
+  <h2 class="visually-hidden" id="block-secondary-menu-menu">Secondary Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-secondary-menu nav">
+                      <li class="first">
+                                        <a href="https://universityethics.psu.edu/penn-state-hotline">Hotline</a>
+              </li>
+                      <li>
+                                        <a href="/visit" data-drupal-link-system-path="node/306">Visit Us</a>
+              </li>
+                      <li class="last">
+                                        <a href="/this-is-penn-state/leadership" data-drupal-link-system-path="node/294">Contact Us</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-call-to-action-header-menu-menu" id="block-call-to-action-header-menu">
+            
+  <h2 class="visually-hidden" id="block-call-to-action-header-menu-menu">Call to Action Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-cta-menu nav">
+                      <li class="first">
+                                        <a href="/giving" data-drupal-link-system-path="node/275">Giving</a>
+              </li>
+                      <li class="last">
+                                        <a href="/admission/apply" data-drupal-link-system-path="node/47">Apply Now</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<div class="search-block-form google-cse block block-search block-search-form-block" data-drupal-selector="search-block-form" novalidate="novalidate" id="block-search-form" role="search">
+  
+    
+        
+  <form action="/search/cse" method="get" id="search-block-form" accept-charset="UTF-8">
+    <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+    <div class="search-type clearfix">
+      <fieldset>
+        <legend class="element-invisible">Search type:</legend>
+        <div id="search-type" class="form-radios">
+          <div class="form-item form-type-radio form-item-search-type">
+            <input type="radio" id="-search-type-campussite" name="search_type" value="/search/cse"
+              checked class="form-radio search-type-campussite">
+            <label class="option" for="-search-type-campussite">Penn State York</label>
+          </div>
+          <div class="form-item form-type-radio form-item-search-type">
+            <input type="radio" id="-search-type-campus-people" name="search_type" value="/campus-directory/results"
+               class="form-radio search-type-campus-people">
+            <label class="option" for="-search-type-campus-people">Campus Directory </label>
+          </div>
+          <div class="form-item form-type-radio form-item-search-type">
+            <input type="radio" id="-search-type-wwwpsuedu" name="search_type" value="/search/all"
+               class="form-radio search-type-wwwpsuedu">
+            <label class="option" for="-search-type-wwwpsuedu">Penn State (all websites)</label>
+          </div>
+          <div class="form-item form-type-radio form-item-search-type">
+            <input type="radio" id="-search-type-people" name="search_type" value="https://www.psu.edu/search/people/"
+               class="form-radio search-type-people">
+            <label class="option" for="-search-type-people">Penn State Directory </label>
+          </div>
+          <div class="form-item form-type-radio form-item-search-type">
+            <input type="radio" id="-search-type-department" name="search_type" value="https://www.psu.edu/search/department/"
+               class="form-radio search-type-department">
+            <label class="option" for="-search-type-department">Penn State Departments</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+
+  </div>
+
+  </div>
+
+                </div>
+              </div>
+                                      <div class="information-nav-wrapper">
+                <div class="header-information-nav clearfix">
+                  <div class="information-nav">
+                      <div class="region region-information-menu">
+    <div class="info-for-label">Information for:</div>
+<nav role="navigation" aria-labelledby="block-information-menu-menu">
+            
+  <h2 class="visually-hidden" id="block-information-menu-menu">Information Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-information-menu nav">
+                      <li class="first">
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Future Students</a>
+              </li>
+                      <li>
+                                        <a href="/current-students" data-drupal-link-system-path="node/330">Current Students</a>
+              </li>
+                      <li>
+                                        <a href="/faculty-staff" data-drupal-link-system-path="node/331">Faculty &amp; Staff</a>
+              </li>
+                      <li>
+                                        <a href="/adult-learners" data-drupal-link-system-path="node/332">Adult Learners</a>
+              </li>
+                      <li>
+                                        <a href="/admission/apply/transfer-students" data-drupal-link-system-path="node/94">Transfer Students</a>
+              </li>
+                      <li>
+                                        <a href="/alumni" data-drupal-link-system-path="node/317">Alumni</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                  </div>
+                </div>
+              </div>
+                          <div class="region region-navigation">
+      <div id="logo">
+    <div class="logo-default">
+      <div id="mainlogo">
+                  <img src="/sites/york/files/logos/york_logo_2x_0.png" alt="Penn State York" title="Penn State York" />
+                <a href="/" class="campus-home">Home</a>
+      </div>
+    </div>
+    <div class="logo-mobile">
+              <img src="/sites/york/files/logos/york_logo_2x_mobile.png" alt="Penn State York" title="Penn State York" />
+            <a href="/" class="campus-home">Home</a>
+    </div>
+  </div>
+      <a class="name navbar-brand" href="/" title="Home" rel="home">Penn State York</a>
+    
+  </div>
+
+                                     <div id="mobile-toggles">
+                <a href="#" class="nav-toggle nav-toggle-search"><img src="/profiles/psucampus/themes/psu_sub/images/search_icon.png"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".mobile-combined-menu">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+            
+            <div id="mobile-menus">
+                              <div class="info-for-group">
+                    <div class="region region-mobile-information-menu">
+    <button class="nav-label" data-toggle="collapse" data-target=".tablet-information-for">Information For:</button>
+<span class="tablet-information-for">
+
+<nav role="navigation" aria-labelledby="block-mobile-information-menu-menu">
+            
+  <h2 class="visually-hidden" id="block-mobile-information-menu-menu">Information Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-information-menu nav">
+                      <li class="first">
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Future Students</a>
+              </li>
+                      <li>
+                                        <a href="/current-students" data-drupal-link-system-path="node/330">Current Students</a>
+              </li>
+                      <li>
+                                        <a href="/faculty-staff" data-drupal-link-system-path="node/331">Faculty &amp; Staff</a>
+              </li>
+                      <li>
+                                        <a href="/adult-learners" data-drupal-link-system-path="node/332">Adult Learners</a>
+              </li>
+                      <li>
+                                        <a href="/admission/apply/transfer-students" data-drupal-link-system-path="node/94">Transfer Students</a>
+              </li>
+                      <li>
+                                        <a href="/alumni" data-drupal-link-system-path="node/317">Alumni</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+</span>
+
+  </div>
+
+                </div>
+                  <div class="region region-mobile-cta-menu">
+    <nav role="navigation" aria-labelledby="block-mobile-secondary-menu-menu" id="block-mobile-secondary-menu">
+            
+  <h2 class="visually-hidden" id="block-mobile-secondary-menu-menu">Secondary Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-secondary-menu nav">
+                      <li class="first">
+                                        <a href="https://universityethics.psu.edu/penn-state-hotline">Hotline</a>
+              </li>
+                      <li>
+                                        <a href="/visit" data-drupal-link-system-path="node/306">Visit Us</a>
+              </li>
+                      <li class="last">
+                                        <a href="/this-is-penn-state/leadership" data-drupal-link-system-path="node/294">Contact Us</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-mobile-call-to-action-menu-menu" id="block-mobile-call-to-action-menu">
+            
+  <h2 class="visually-hidden" id="block-mobile-call-to-action-menu-menu">Call to Action Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-cta-menu nav">
+                      <li class="first">
+                                        <a href="/giving" data-drupal-link-system-path="node/275">Giving</a>
+              </li>
+                      <li class="last">
+                                        <a href="/admission/apply" data-drupal-link-system-path="node/47">Apply Now</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                            <div class="mobile-combined-menu">
+                                  <div class="mobile-main-menu">
+                      <div class="region region-mobile-main-menu">
+    <nav role="navigation" aria-labelledby="block-mobile-main-navigation-menu" id="block-mobile-main-navigation">
+            <h2 class="sr-only" id="block-mobile-main-navigation-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="/this-is-penn-state" data-drupal-link-system-path="node/289">This is Penn State</a>
+              </li>
+                      <li>
+                                        <a href="/academics" data-drupal-link-system-path="node/56">Academics</a>
+              </li>
+                      <li>
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Admission</a>
+              </li>
+                      <li>
+                                        <a href="/tuition-and-financial-aid" data-drupal-link-system-path="node/201">Tuition &amp; Financial Aid</a>
+              </li>
+                      <li>
+                                        <a href="/student-life" data-drupal-link-system-path="node/51">Student Life</a>
+              </li>
+                      <li>
+                                        <a href="http://pennstateyorksports.com">Athletics</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community Impact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                  </div>
+                                                  <div class="mobile-information-for">
+                      <div class="region region-information-menu">
+    <div class="info-for-label">Information for:</div>
+<nav role="navigation" aria-labelledby="block-information-menu-menu">
+            
+  <h2 class="visually-hidden" id="block-information-menu-menu">Information Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-information-menu nav">
+                      <li class="first">
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Future Students</a>
+              </li>
+                      <li>
+                                        <a href="/current-students" data-drupal-link-system-path="node/330">Current Students</a>
+              </li>
+                      <li>
+                                        <a href="/faculty-staff" data-drupal-link-system-path="node/331">Faculty &amp; Staff</a>
+              </li>
+                      <li>
+                                        <a href="/adult-learners" data-drupal-link-system-path="node/332">Adult Learners</a>
+              </li>
+                      <li>
+                                        <a href="/admission/apply/transfer-students" data-drupal-link-system-path="node/94">Transfer Students</a>
+              </li>
+                      <li>
+                                        <a href="/alumni" data-drupal-link-system-path="node/317">Alumni</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                  </div>
+                              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+                    <div id="header-menu-outer">
+          <div id="header-menu" class="header-layout clearfix">
+            <div id="navbar-collapse" class="navbar-collapse collapse nav--primary-nav nav">
+                <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-psu-sub-main-menu-menu" id="block-psu-sub-main-menu">
+            <h2 class="sr-only" id="block-psu-sub-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="/this-is-penn-state" data-drupal-link-system-path="node/289">This is Penn State</a>
+              </li>
+                      <li>
+                                        <a href="/academics" data-drupal-link-system-path="node/56">Academics</a>
+              </li>
+                      <li>
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Admission</a>
+              </li>
+                      <li>
+                                        <a href="/tuition-and-financial-aid" data-drupal-link-system-path="node/201">Tuition &amp; Financial Aid</a>
+              </li>
+                      <li>
+                                        <a href="/student-life" data-drupal-link-system-path="node/51">Student Life</a>
+              </li>
+                      <li>
+                                        <a href="http://pennstateyorksports.com">Athletics</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community Impact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+            </div>
+          </div>
+        </div>
+      
+      
+        </header>
+  
+  <section id="preface-outer-wrapper" class="outer-wrapper clearfix" role="main" aria-label="features">
+    <div id="preface-layout" class="preface-layout inner-wrapper clearfix">
+      <div id="preface-first" class="region--preface-first">
+          <div class="region region-preface-first">
+        <ol class="breadcrumb">
+          <li >
+                  <a href="/">Home</a>
+              </li>
+      </ol>
+
+<section class="feature-article-header clearfix block block-psucampus-feature-article block-psucampus-feature-article-header" id="block-feature-article-header">
+  
+    
+
+      <article role="article" about="/photo/7071/2020/03/17/romano-administration-building-spring" class="node image node-image feature-article-header clearfix">
+
+  <div class="content">
+    
+            <div class="field field--name-field-image field--type-image field--label-hidden field--item">  <img src="/sites/york/files/styles/feature_article_primary/public/spring-romano.jpg?itok=z4U1QDzO" width="800" height="450" alt="Romano Administration Building with spring-flower trees outside." typeof="foaf:Image" class="img-responsive" />
+
+
+</div>
+      
+  </div>
+
+
+</article>
+<div class="feature-info clearfix"><h1 id="page-title" class="title">Coronavirus Information</h1>
+<div class="summary">Following a three-month comprehensive planning process involving faculty, staff, and administrators across 16 task groups,  Penn State officials have decided the University can meet or exceed the Pennsylvania Department of Education guidelines for colleges and universities to return to campus and looks forward to welcoming back faculty, staff, and students to resume on-campus classes and other activities this fall.</div>
+<div class="authors"></div>
+</div>
+  </section>
+
+
+  </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+                                    <div class="col-sm-12 sidebar-second-only" id="heading">
+              <div class="region region-header">
+    <div data-drupal-messages-fallback class="hidden"></div>
+  <div id="page-title-wrapper" role="main" aria-label="title">
+  
+    
+</div>
+
+
+  </div>
+
+          </div>
+                    
+                  
+      <section class="col-sm-9 sidebar-second-only">
+
+                
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article role="article" about="/feature/coronavirus-information" class="node feature-article node-feature-article full clearfix">
+
+  
+  
+  <div class="content">
+    
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>Penn State has announced the University, including all campuses, will resume on-campus work and learning in the fall semester. For the latest information, <a href="https://virusinfo.psu.edu/">see the University’s Coronavirus Information updates website</a>. Information specific to Penn State York is below.</p>
+
+<h2>Message from Dr. David Christiansen, Chancellor, June 24, 2020</h2>
+
+<p>Penn State President Eric Barron announced on June 15 that faculty and staff members would begin a gradual return to campuses with a goal of resuming residential instruction on Monday, August 24. This return will be conducted in a series of phases to ensure that a healthy campus environment has been prepared for all individuals. The Penn State York Return to Work Committee has been created to implement University safety guidelines, including the enhanced cleaning of public spaces; reconfiguration of offices and classrooms; comprehensive signage; determination of occupancy limits for classrooms, labs, and offices; and a variety of social-distancing measures, including a requirement that <strong>masks must be worn at all times while on campus.</strong></p>
+
+<p>Faculty and staff members wishing to visit campus briefly to pick up documents or materials should contact campus Police and Public Safety at 814-810-7880.</p>
+
+<p>The University has also established a process by which faculty and staff members are permitted to return to campus on a regular basis, starting as early as July:</p>
+
+<ol><li><strong>Faculty members</strong> wishing to return to campus to resume in-office or in-lab work should submit their requests to Bob Farrell, who will review them with the Penn State York Return to Work Committee. Once this review is complete, the campus will submit the request to the Office of the Vice President for Commonwealth Campuses (OVPCC) in University Park for final approval. Faculty members will be allowed to return to campus in phases, with top priority given to individuals who need on-campus access to labs and equipment. We will notify faculty members once the OVPCC has approved their return to campus. We anticipate that the entire review process may take two-three weeks. The University continues to expect that faculty members who can work at home should continue working at home throughout the summer.</li>
+	<li><strong>Staff members (including tech service workers)</strong> wishing to return to campus to resume in-office work should indicate so to their supervisor. Supervisors will submit their plan for staff members to return to <a href="mailto:yk-returntowork@psu.edu">yk-returntowork@psu.edu</a>. Once our Return to Work committee has reviewed these requests, we will send them to the OVPCC in University Park for final approval. We will notify staff members once the OVPCC has approved their return to campus. We anticipate that the entire review process may take two-three weeks. The University continues to expect that staff members who can work at home should continue working at home throughout the summer.</li>
+	<li><strong>Penn State students</strong> may not come onto campus until the beginning of the fall semester on Monday, August 24.</li>
+	<li><strong>Members of the public</strong> may not come onto campus until the beginning of the fall semester on Monday, August 24.</li>
+</ol><p>These guidelines will evolve over the summer as the University and campus continue prepare for the resumption of in-class instruction in August. In the meanwhile, I wish you all to stay healthy!</p>
+
+<p>David</p>
+
+<p> </p>
+
+<hr /><p> </p>
+
+<h2>Table of Contents</h2>
+
+<ul><li><a href="#faqs">Frequently Asked Questions</a></li>
+	<li><a href="#offices">Contacting Campus Offices</a></li>
+	<li><a href="#cancellations">List of Cancellations and Postponements</a></li>
+</ul><p> </p>
+
+<hr /><p> </p>
+
+<h2 id="faqs">Frequently Asked Questions Regarding Penn State York’s Response to the Global Coronavirus Outbreak</h2>
+
+<p>Penn State York is providing a campus-specific set of Frequently Asked Questions (FAQs) to help provide information during this global coronavirus outbreak. The FAQs will be updated as information becomes available. We realize that our students, faculty, staff, and the community have specific questions about how the campus will handle modified operations.</p>
+
+<p>Also <a href="https://sites.psu.edu/virusinfo/faqs/">visit the University’s FAQs page concerning coronavirus</a> for more information.</p>
+
+<p> </p>
+
+<h3>Is the campus closed?</h3>
+
+<p>Buildings and offices at Penn State York are locked down, with all business being conducted remotely. The campus is not open to the general public for face-to-face services. Please refer to the <a href="#offices">contact list for information on how to reach departments</a> for services.</p>
+
+<p><strong>Students</strong> are no longer permitted on campus, and all classes are being taught remotely. Students who need assistance accessing a remotely delivered class should contact Penn State IT at <a href="tel:814-865-HELP">814-865-HELP</a> (4357) or <a href="mailto:ITservicedesk@psu.edu">ITservicedesk@psu.edu</a>. The University is assisting students who lack a computer and/or access to broadband internet.</p>
+
+<p><strong>Faculty members</strong> are still permitted to come to campus to continue their teaching but they are strongly encouraged to teach from home. If teaching from home is not possible, faculty members should be teaching from their computer in their office. Only as a final resort will classrooms be unlocked for instructors to deliver their classes. Faculty members will be able to teach from a limited number of classrooms, as each room needs to be cleaned after each class.</p>
+
+<p><strong>Staff members (including technical service employees)</strong> are permitted to come to campus only if they receive permission from their immediate supervisor. Telecommuting is being promoted and, when necessary, supervisors will identify alternative work assignments that can be completed at home.</p>
+
+<p><strong>As ordered by the Governor, all employees must wear a cloth mask while working and performing essential duties on campus.</strong></p>
+
+<p><strong>Penn State York faculty and staff should continue telecommuting through at least May 31, unless instructed otherwise by their supervisors.</strong></p>
+
+<p> </p>
+
+<h3>Academic Affairs</h3>
+
+<h4>I am not comfortable with remote delivery of my classes. Where can I get more information to make it easier for me?</h4>
+
+<p>Visiting <a href="https://remotelearning.psu.edu/">Remote Learning at Penn State</a> is a good place to start! Your professors can also provide you with specific information about the courses they are teaching.</p>
+
+<h4>Is tutoring still available while face-to-face instruction is suspended?</h4>
+
+<p>Yes, the Nittany Success Center (NSC) is offering <strong>Synchronous Online Tutoring</strong> currently. The staff will return to in-person tutoring when classes resume on campus.</p>
+
+<p><a href="https://york.mywconline.com/">Request a Tutor</a> online to view our tutoring schedule, make appointments, review instructions for online tutoring, reset password directions and also watch a video demonstrating how online tutoring works. Contact information for the NSC is also listed there.</p>
+
+<h4>I have not heard from one of my professors. What should I do?</h4>
+
+<p>Start by emailing your professor directly using the email address on the course syllabus that you were given at the beginning of the semester. If you don’t hear back from the professor within 24 hours, please contact <a href="mailto:YK-Academic-Affairs@psu.edu">YK-Academic-Affairs@psu.edu</a>.</p>
+
+<h4>I am involved in undergraduate research this semester with one of my professors. When can I resume my work?</h4>
+
+<p>Until the campus reopens for face-to-face instruction, students may not come to campus for this purpose. The hope is that students and their faculty mentors will be able to once again collaborate in person at the beginning of the fall semester.</p>
+
+<h4>I’ve worked really hard to earn my college degree. What is happening with the commencement ceremony?</h4>
+
+<p>A University-wide spring virtual commencement was held on Saturday, May 9, at 2:00 p.m. To view the virtual commencement and special pages dedicated to York graduates follow this link <a href="https://spring2020.commencement.psu.edu/">Spring 2020 Virtual Commencement.</a></p>
+
+<h4>How can I obtain a copy of the commencement program?</h4>
+
+<p>Each graduate will receive one copy of the commencement program. The programs will be sent to the graduate’s mailing address listed in Lion Path, and should arrive in late summer.</p>
+
+<h4>Will face-to-face instruction resume when the fall semester begins?</h4>
+
+<p>The University is actively exploring this possibility and will deliver guidance for all Penn State campuses by June 15.  At that time, the campus will be in a better position to answer this question.  Penn State York is likewise planning for a return to campus now so that, when the time comes, all members of the campus community will be able to do so safely.  <br />
+ </p>
+
+<p> </p>
+
+<h3>Admissions and Financial Aid</h3>
+
+<h4>Will my acceptance for summer/fall 2020 be impacted by the global coronavirus outbreak?</h4>
+
+<p>No, we are excited to work with you on the steps to become a Penn State student starting summer/fall 2020.</p>
+
+<h4>Can I still apply for Penn State York for summer/fall 2020?</h4>
+
+<p>Yes, we continue to process applications on an ongoing basis.</p>
+
+<p>Most staff are working remotely, so we recommend transcripts be sent electronically via fax (<a href="tel:814-863-7590">814-863-7590</a>), Parchment, eScrip-Safe, the National Student Clearinghouse or SCOIR <strong><u>directly to Penn State from the institution where the course work was attempted</u></strong>. These records cannot come direct from the student. <a href="https://admissions.psu.edu/info/future/transfer/credit/sending-official-transcripts-to-penn-state/">More information regarding sending transcripts</a></p>
+
+<p>Admissions office staff will provide updates on our events on our <a href="https://york.psu.edu/admission/visit" rel="noreferrer noopener" target="_blank">Schedule a Visit page</a>. </p>
+
+<h4 paraeid="{2810eb8f-bc9d-462b-9760-9c25e8f003e1}{215}" paraid="1121392982"><strong>While the campus is closed, how can I learn more about the Penn State York campus and the application process? </strong></h4>
+
+<p aria-level="4" paraeid="{2810eb8f-bc9d-462b-9760-9c25e8f003e1}{229}" paraid="1259528514" role="heading">Based on guidance from state and federal health mandates, all on-campus admissions events will be delivered electronically over the summer. The health and safety of all students, families, visitors, and employees are our top priority. The global coronavirus outbreak has caused an actively evolving situation.  </p>
+
+<p aria-level="4" paraeid="{2810eb8f-bc9d-462b-9760-9c25e8f003e1}{243}" paraid="863532804" role="heading">The following programs will be offered: </p>
+
+<ul><li aria-level="4" paraeid="{2810eb8f-bc9d-462b-9760-9c25e8f003e1}{243}" paraid="863532804" role="heading"><strong>Virtual Information Session and Tour-Mondays and Fridays at 4:00 p.m. </strong></li>
+	<li aria-level="4" paraeid="{2810eb8f-bc9d-462b-9760-9c25e8f003e1}{243}" paraid="863532804" role="heading"><strong>Virtual Spend A Summer Evening (Open House)- August 13, 6:00-7:30 p.m. </strong></li>
+</ul><h4>Is the Admissions and Financial Aid Office open?</h4>
+
+<p>Yes, we are working normal business hours, from 8:00 a.m.–5:00 p.m., Monday through Friday. However, we are be working remotely until further notice in alignment with federal and state health mandates. We offer individual student appointments by phone, <a href="https://zoom.us/">Zoom</a>, or in-person. Please call <a href="tel:717-771-4040">717-771-4040</a> or email us at <a href="mailto:ykadmission@psu.edu">ykadmission@psu.edu</a> to schedule a meeting or with any questions.</p>
+
+<h4>Will there be an impact to my 2020-2021 Financial Aid because of the global coronavirus outbreak?</h4>
+
+<p>Currently, there are not any direct financial aid impacts for the 2020-21 academic year. </p>
+
+<h4 paraeid="{2b38601f-e488-4aef-bfdb-ee9c5d1fce7f}{80}" paraid="535172163"><strong>How will I know if I am eligible for the CARES Act Higher Education Emergency Relief Fund?  </strong></h4>
+
+<p paraeid="{2b38601f-e488-4aef-bfdb-ee9c5d1fce7f}{92}" paraid="1902016421">Eligible students will be notified via their Penn State email as these funds are made available to the University. Students must follow the instructions outlined in their email to accept this grant. </p>
+
+<h4>I am receiving veteran benefits. Will my benefits be impacted?</h4>
+
+<p>Courses that are being held remotely are still counted as residential. Currently, there is no impact to BAH or other benefits. Please contact Billy Dunkel if you have questions at <a href="mailto:wjd30@psu.edu" rel="noreferrer noopener" target="_blank">wjd30@psu.edu</a> or <a href="tel:717-771-4196" rel="noreferrer noopener" target="_blank">717-771-4196</a>. </p>
+
+<h4>What if I have other Admissions and Financial Aid questions?</h4>
+
+<p>Please call <a href="tel:717-771-4040">717-771-4040</a> or email us at <a href="mailto:ykadmission@psu.edu">ykadmission@psu.edu</a>.</p>
+
+<p> </p>
+
+<h3>Advising and Career Development</h3>
+
+<h4>How can I talk with an academic adviser?</h4>
+
+<p>During this time, advisers will be able to work with students remotely such as online meetings using Zoom, phone appointments, via email, etc. Preferences will vary from one adviser to another, so if you are unsure, contact your adviser to confirm.</p>
+
+<p>Contact information for your assigned adviser is in <a href="https://lionpath.psu.edu/">LionPATH</a>. Select the “My Advisors” icon in top right corner of the student home base.</p>
+
+<p>If you don’t currently have an academic adviser, need help contacting your assigned adviser, or have related questions, please call <a href="tel:717-771-4053">717-771-4053</a> or email <a href="mailto:advising@york.psu.edu">advising@york.psu.edu</a>.</p>
+
+<h4>When can I schedule classes for fall 2020?</h4>
+
+<p>The first day you can schedule classes for the fall semester is listed on the student home base when you login to LionPATH under the “Enrollment Appointment” section.</p>
+
+<h4>Who can I contact for help with my résumé, searching for a job/internship, or other related topics?</h4>
+
+<p>Advising and Career Development continues to provide career development services to students, alumni, and employers remotely. Please call <a href="tel:717-771-4053">717-771-4053</a> or email <a href="mailto:lnm5048@psu.edu">lnm5048@psu.edu</a> for more information.</p>
+
+<p> </p>
+
+<h3>Athletics</h3>
+
+<p>The 2020 baseball season has been cancelled by the conference. <a href="https://pennstateyorksports.com/sports/bsb/2019-20/releases/20200316mzo7y1">Please visit the athletics website for more details.</a></p>
+
+<h4>May students and the public use the outside recreational spaces, i.e. tennis courts, soccer field, practice fields?</h4>
+
+<p>All athletic facilities at Penn State York are currently closed for use. This includes all outdoor spaces as well as indoor facilities in the Ruhl Center.</p>
+
+<h4>I am a student-athlete and have equipment or my uniform to return. What should I do?</h4>
+
+<p>Please be in touch with your head coach or with Jeff Barkdoll, athletic director, at <a href="tel:717-718-6776">717-718-6776</a> or email to <a href="mailto:jdb53@psu.edu">jdb53@psu.edu</a>, to make arrangements to return the equipment.</p>
+
+<p> </p>
+
+<h3>Bookstore</h3>
+
+<h4>Is the Penn State York Bookstore Open?</h4>
+
+<p>The bookstore is closed to the public as of Mach 17, but bookstore staff is still working in the store. Web orders can be filled with shipping fees being waived if students need textbooks. Visit <a href="https://www.psu.bncollege.com">www.psu.bncollege.com</a> to place an order.</p>
+
+<p>The bookstore has also partnered with VitalSource to provide Penn State students free access of up to seven eBooks while their classes are using remote instruction. While not every textbook publisher’s eBook is available through VitalSource, many publishers are included. Visit <a href="https://press.vitalsource.com/vitalsource-helps">https://press.vitalsource.com/vitalsource-helps</a> to learn more and access eBooks.</p>
+
+<p> </p>
+
+<h3>Bursar Office</h3>
+
+<h4>How can I pay my balance?</h4>
+
+<p>During this time, you will be able to pay your balance through CASHNet by echeck or credit card.</p>
+
+<h4>How do I pay my balance by echeck or credit card?</h4>
+
+<p>Please complete the following steps to pay through CASHNet:</p>
+
+<ol><li>From the Student Home Base in <a href="https://lionpath.psu.edu">LionPATH</a>, select the My Finances option.</li>
+	<li>On the My Account page, select Manage My Account/Make a Payment.</li>
+	<li>This will take you to CASHNet.</li>
+	<li>Select Make a Payment in the top left box.</li>
+	<li>Choose a payment method and complete all the necessary steps.</li>
+</ol><h4>Are there any additional fees when paying through CASHNet?</h4>
+
+<p>If you pay by echeck, there are no additional fees. Credit card payments will be charged a 2 percent service fee.</p>
+
+<h4>How can I view the Tuition Calendar if I am planning to drop a course or complete a withdraw for the semester?</h4>
+
+<p>To check the Tuition Calendar for your specific courses please complete the following steps:</p>
+
+<ol><li>From the Student Home Base in LionPATH, select “Enrollment” on the right.</li>
+	<li>Select “Drop Classes” on the left.</li>
+	<li>View the Tuition Calendar for each course by clicking the “$” symbol under the Tuition Calendar column.</li>
+</ol><p>If you are planning to drop a course or withdraw and have questions about your account, please contact the Penn State York Bursar’s Office at <a href="tel:717-771-4122">717-771-4122</a>. A drop or withdraw could also impact your financial aid. For questions concerning financial aid, please call <a href="tel:717-771-4196">717-771-4196</a>.</p>
+
+<h4>What is the tuition rate for summer courses at Penn State York?</h4>
+
+<p>Please visit <a href="http://tuition.psu.edu/">tuition.psu.edu</a> to view the summer tuition rates. Tuition rates are assessed based on a student’s campus, semester classification, residency, and credit load. If you have questions, please call the Bursar Office at 717-771-4122.</p>
+
+<h4>Who can I speak with about my account and other questions related to tuition and payments?</h4>
+
+<p>Please call <a href="tel:717-771-4122">717-771-4122</a> to receive assistance with questions you may have about your account or making a payment.</p>
+
+<p>For additional questions regarding Bursar services and information, please visit the <a href="https://bursar.psu.edu/">University’s FAQs</a>.</p>
+
+<p> </p>
+
+<h3>Business Services</h3>
+
+<h4>Is the campus receiving packages, deliveries, and mail?</h4>
+
+<p>Yes, the campus is still receiving mail, UPS, and FedEx deliveries as of now. As drivers arrive on campus, there are signs indicating the number they should call for someone to meet them so they can make their drop offs.</p>
+
+<h4>Will I be notified if I get mail on campus?</h4>
+
+<p>Mail is being sorted on Tuesday and Thursday afternoons and distributed into mailboxes in the mailroom. You will not be notified of regular mail deliveries. If you are looking for something in particular, please email Raeann Koterwas at <a href="mailto:rak65@psu.edu">rak65@psu.edu</a>, Bob Lehman at <a href="mailto:ral271@psu.edu">ral271@psu.edu</a>, and/or Holly Gumke at <a href="mailto:hlg4@psu.edu">hlg4@psu.edu</a>, and we’ll let you know if it has arrived.</p>
+
+<h4>I have items that I need to order to use at my home for telework. Where should I have them delivered?</h4>
+
+<p>During this unprecedented time, the University has authorized the delivery of supplies to individual homes if they are to be used for telework, and if your home is in Pennsylvania. (No shipments of any kind can be sent/delivered outside of Pennsylvania for any reason.) Rosa Brewster (<a href="mailto:rbb141@psu.edu">rbb141@psu.edu</a>) can assist with General Stores and other large purchases, but you may use your purchasing card to make smaller purchases as well. As always, you need to receive the appropriate approvals before doing so.</p>
+
+<p> </p>
+
+<h3>Continuing Education</h3>
+
+<h4>I am currently registered for or taking a noncredit class via Zoom. Is it still running?</h4>
+
+<p>Currently, all scheduled noncredit classes are running via Zoom. Emails were sent to all registered students. If you are a current student and did not receive communication, email <a data-auth="NotApplicable" href="mailto:ce@york.psu.edu" rel="noopener noreferrer" target="_blank">ce@york.psu.edu</a> or call <a data-auth="NotApplicable" href="tel:717-771-4032" rel="noopener noreferrer" target="_blank">717-771-4032</a>.</p>
+
+<h4>What if I am too sick to attend a Zoom session?</h4>
+
+<p>Please contact your instructor of record or email <a href="mailto:ce@york.psu.edu">ce@york.psu.edu</a>.</p>
+
+<h4>I registered for the Assisted Living or Personal Care Administrator Training. Will the class be cancelled?</h4>
+
+<p>The upcoming 15-hour Assisted Living Administrator (April 24–25) has been postponed. The date is to be determined. All those currently registered are being issued a full refund and will be contacted by Continuing Education.</p>
+
+<p>At this time, the Accelerated Personal Care Home Administer (May 28–June 26) training will run as scheduled. If there are any changes in the schedule, registered students will be notified via email.</p>
+
+<h4>Is the Serving Transgender Communities in Health Care workshop still scheduled?</h4>
+
+<p>No, the April 30 workshop, Serving Transgender Communities in Health Care, is being rescheduled for the Fall. All those currently registered are being issued a full refund and will be contacted by Continuing Education on the future date.</p>
+
+<h4>My child is registered for the April 25–May 16, 2020, Scholastic Aptitude Test (SAT) Preparation Course. Will it still run?</h4>
+
+<p>The April 25-May 16 course has been cancelled. A refund will be issued, and you will be contacted by Continuing Education concerning future dates.</p>
+
+<h4>I am interested in the accelerated bachelor of science in Business (BSB) program, how do I apply or where can I get information?</h4>
+
+<p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5bcf835c-d700-43f2-b403-7c286844fe75" href="/adult-learners/accelerated-business">See additional information and requirements.</a> For questions, contact Patty Bowen at <a href="mailto:ce@york.psu.edu">ce@york.psu.edu</a> or Dr. Ali Kara at <a href="mailto:axk19@psu.edu">axk19@psu.edu</a>.</p>
+
+<h4>My workplace is interested in training, when will you be offering classes?</h4>
+
+<p>If you are interested in any of the current programs or would like to discuss training for your organization, email <a href="mailto:ce@york.psu.edu">ce@york.psu.edu</a> or call Patty Bowen at <a href="tel:717-771-4032">717-771-4032</a>.</p>
+
+<p> </p>
+
+<h3>Counseling and Psychological Services (CAPS)</h3>
+
+<h4>Will counseling services continue to be available to students?</h4>
+
+<p>The Counseling Center will be providing reduced services through June and July. If more extensive support is needed beyond these limited services over the summer, referrals can be to community resources. Services will be facilitated through Zoom and telephone meetings in order to support social distancing efforts to address COVID-19 concerns.</p>
+
+<p>Students are encouraged to reach out to CAPS at Penn State York through calling Sarah Bender in the CAPS office at <a href="tel:717-771-4088">717-771-4088</a> or emailing at <a href="mailto:slb6315@psu.edu">slb6315@psu.edu</a>. If urgent concerns or crisis concerns exist, do not wait for a response from the Counseling Center. Please immediately reach out to emergency services noted below.</p>
+
+<h4>How do I access immediate support in the event of an emergency such as suicidal, homicidal, or self-injurious ideation, planning, intent, or actions?</h4>
+
+<p>If support is needed for urgent or emergency concerns when the counseling office is not open, it is recommended that individuals reach out to Penn State Crisis Line available 24/7 to students, staff, and faculty of Penn State at <a href="tel:1-877-229-6400">1-877-229-6400</a>. National <a href="https://CrisisTextLine.org">CrisisTextLine.org</a> will also continue to be available by texting “LIONS” to 741741. Emergency assistance is also available through local Crisis Intervention Resources (York Hospital <a href="tel:717- 851-5320">717- 851-5320</a> or <a href="tel:1-800-673-2496">1-800-673-2496</a>; True North Wellness <a href="tel:1-866-325-0339">1-866-325-0339</a> or <a href="tel:717-637-7633">717-637-7633</a>).</p>
+
+<h4>What are some self-help resources that are available to students?</h4>
+
+<p><strong>WellTrack</strong></p>
+
+<p>Students are encouraged to access additional support resources including WellTrack (available at <a href="https://welltrack.com/">WellTrack.com</a> or in the iPhone and Android App Store). WellTrack has tools for assessing stress, anxiety, and depression as well as mood check tools and educational information on self-management of anxiety and depression.</p>
+
+<p><u><strong>BetterHelp</strong></u></p>
+
+<p>External telehealth counseling services are available including the following programs:</p>
+
+<ul role="list"><li><a href="https://www.betterhelp.com/">BetterHelp</a> is a telehealth counseling service offered through the Penn State Student Health Insurance Plan. They do accept payment outside of the Student Health Insurance Plan, as well.</li>
+</ul><p><u><strong>Life Hacks through University Park CAPS</strong></u></p>
+
+<p>University Park CAPS is offering a twice-daily drop-in support opportunity for all Penn State students at ALL Campuses – Virtual Life Hacks. These run Monday–Friday at 3:30 p.m. for one hour and is comprised of a 20–25 minute presentation about the transitions, managing stress, and coping skills associated with COVID-19 and small group discussions. It is designed for all students, both undergraduate and graduate and run by CAPS staff. Please note – this is NOT a therapy group.</p>
+
+<p><a href="https://studentaffairs.psu.edu/counseling/wellness-services/life-hacks">More information and how to get started with Virtual Life Hacks</a></p>
+
+<p><u><strong><a href="mailto:You@PSU">You@PSU</a></strong></u></p>
+
+<p><a href="mailto:You@PSU">You@PSU</a> is a unique and free web portal dedicated to student health, happiness and success. <a href="mailto:You@PSU">You@PSU</a> emphasizes individual wellbeing and self-awareness in order to connect students to information, campus resources, peers and opportunities—whenever they need it.</p>
+
+<p><a href="mailto:You@PSU">You@PSU</a> was created to mirror the lifestyle of college students. With expertise in three main areas — Succeed, Thrive and Matter —<a href="mailto:You@PSU">You@PSU</a> helps students assess and improve their health, sense of purpose and life trajectory. <a href="mailto:You@PSU">You@PSU</a> works best when answers are honest and open. For that reason, all personal information that students provide on <a href="mailto:You@PSU">You@PSU</a> is kept private.</p>
+
+<ul><li>Step 1:  Visit <a href="https://you.psu.edu/">https://you.psu.edu</a>. On the homepage, students can get a breakdown of the portal or just jump right in.</li>
+	<li>Step 2:  Students, faculty and staff can sign up using their university email account. As an extension of campus, <a href="mailto:You@PSU">You@PSU</a> keeps all personal information that students provide on the <a href="mailto:You@PSU">You@PSU</a> portal private.</li>
+	<li>Step 3:  Discover. Once inside, students can start to customize their profile or take one of three Reality Checks. Both features are designed to cater content like tips, quizzes, videos and campus resources based on general needs and interests of individual students.</li>
+	<li>Step 4:  Revisit. The <a href="mailto:You@PSU">You@PSU</a> portal is intended to be used throughout a student’s college life. With changing content and dynamic tools, there’s a use for YOU from move-in day to landing that first job.</li>
+</ul><p><u><strong>Columbia Protocol App</strong></u></p>
+
+<p>Additionally, students can seek out the Columbia Protocol App for support with assessing for suicidal ideation and concerns (available in the iPhone and Android App Store). If there is ever concern about immediate risk of harm to self or others, students are encouraged to seek out immediate support through crisis resources (see above) or 911.</p>
+
+<p><u><strong>Educational Information</strong></u></p>
+
+<p>Educational information is also available for working to address distress that is experienced in relation to current concerns about the COVID-19 pandemic:</p>
+
+<ul><li><a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/managing-stress-anxiety.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fcoping.html">Mental Health and Coping During COVID-19</a></li>
+	<li><a href="https://theconversation.com/7-science-based-strategies-to-cope-with-coronavirus-anxiety-133207">7 science-based strategies to cope with coronavirus anxiety</a></li>
+	<li><a href="https://afsp.org/taking-care-of-your-mental-health-in-the-face-of-uncertainty/">Taking Care of Your Mental Health in the Face of Uncertainty</a></li>
+</ul><p> </p>
+
+<h3>Graham Fellows Program for Entrepreneurial Leadership</h3>
+
+<h4>What impact does the suspension of on-campus events have on the Graham Fellows Program for Entrepreneurial Leadership?</h4>
+
+<p>All in-person events are canceled during the face-to-face suspension, March 16 through April 5. Graham candidates will receive email communication regarding requirement completion and future events. Please contact Allan Lehman, director of the Graham Fellows Program, at <a href="mailto:asl167@psu.edu">asl167@psu.edu</a> or <a href="tel:717-771-8408">717-771-8408</a>.</p>
+
+<p> </p>
+
+<h3>Information Technology</h3>
+
+<h4>Are the computer labs on campus open?</h4>
+
+<p>No, the computer labs on campus are closed until further notice.</p>
+
+<h4>Can faculty and students get remote access to campus computer labs?</h4>
+
+<p>Yes, they can. <a href="https://weblabs.psu.edu/">WebLabs</a>, a new service, allows faculty and students remote access to Penn State York lab computers. Engineering students will also have access to the Engineering Computer Lab (Room 5 Romano) to access engineering-specific software. One important note is that all users of <a href="https://weblabs.psu.edu">WebLabs</a> must be enrolled in <a href="https://2fa.psu.edu/">Duo two factor authentication (2FA)</a>. Students are currently not required to be enrolled in 2FA, but that will change after the semester is over.</p>
+
+<h4>What can I do if I need technology assistance?</h4>
+
+<p>Students with unmet technology needs should contact Penn State IT at <a href="tel:814-865-HELP">814-865-HELP</a> (4357) or <a data-auth="NotApplicable" href="mailto:ITservicedesk@psu.edu" rel="noopener noreferrer" target="_blank">ITservicedesk@psu.edu</a> for individual arrangements.</p>
+
+<p>Faculty and staff with technology needs should call <a href="tel:717-771-4080">717-771-4080</a> or email <a data-auth="NotApplicable" href="mailto:ykhelpdesk@psu.edu" rel="noopener noreferrer" target="_blank">ykhelpdesk@psu.edu</a> for assistance.</p>
+
+<p> </p>
+
+<h3>Lee R. Glatfelter Library Information</h3>
+
+<h4>Are there additional resources available to us during this time?</h4>
+
+<p>The Remote Resources for <a href="https://libraries.psu.edu/remote-resources-penn-state-library-users">Penn State Library Users</a> web page is continually updated to include new, temporary resources. Make sure to check out the link to the <a href="https://libraries.psu.edu/temporary-and-expanded-access-vendor-and-publisher-resources">Temporary and Expanded Access to Vendor and Publisher Resources</a>.</p>
+
+<ul><li><a href="https://libraries.psu.edu/services/borrow-renew/my-library-accounts">My Library Account</a></li>
+	<li><a href="https://libraries.psu.edu/remote-resources-penn-state-library-users">Remote Resources for Penn State Library Users</a></li>
+	<li><a href="https://libraries.psu.edu/temporary-and-expanded-access-vendor-and-publisher-resources">Temporary and Expanded Access to Vendor and Publisher Resources</a></li>
+</ul><h4>Do I need to return my library books by the end of the semester?</h4>
+
+<p>No, due dates for all library materials have been extended until 8/13/20. Please check <a href="https://libraries.psu.edu/services/borrow-renew/my-library-accounts">My Library Account</a> online for items checked out to you, the updated due dates, and your account status. No fines are being assessed during this period and we ask that no one comes to campus to return materials until the campus reopens. Returns will not be processed and will remain on your library account until the library resumes regular operations. Please contact us at 717-771-4020 or email <a href="mailto:UL-YORK@lists.psu.edu">UL-YORK@lists.psu.edu</a> if you will be leaving the state or the country and will not be able to return materials by the August due date.</p>
+
+<h4>What are the hours for the Lee R. Glatfelter Library during this period of remote learning?</h4>
+
+<p>Beginning March 20, 2020, the library will be closed until further notice.</p>
+
+<p>Library staff and faculty will be available from 10:00 a.m. until 4:00 p.m. to handle online consultations and assistance, as well as appointments by request. Please call <a href="tel:717-771-4020">717-771-4020</a> or email <a href="mailto:UL-YORK@lists.psu.edu">UL-YORK@lists.psu.edu</a>.</p>
+
+<h4>What if I need help with an assignment or with research?</h4>
+
+<p>Joel Burkholder, reference and instruction librarian, will be available via email (<a href="mailto:jmb7609@psu.edu">jmb7609@psu.edu</a>), phone (<a href="tel:717-771-4024">717-771-4024</a>), and Zoom. If you are unable to reach him, please call <a href="tel:717-771-4020">717-771-4020</a> or email <a href="mailto:UL-YORK@lists.psu.edu">UL-YORK@lists.psu.edu</a>. <a href="https://libraries.psu.edu/ask">The Libraries’ Ask a Librarian service</a>, offering live chat and email support, is available.</p>
+
+<h4><b>Will students have access to textbooks currently on course reserve in the library?</b></h4>
+
+<p>If there is an acceptable e-book option for a textbook currently on course reserve, the e-book is being purchased by the Libraries in order to help students during this period of remote learning. Please check the Library Resources in your Canvas course to see if your textbook is there.</p>
+
+<p>Students are also eligible for 7 free e-books from VitalSource by creating an account at <a data-auth="VerificationFailed" href="https://nam01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbookshelf.vitalsource.com%2F&amp;data=02%7C01%7Cdcm20%40psu.edu%7Cf1f1eef3dce044d2809c08d7cce44565%7C7cf48d453ddb4389a9c1c115526eb52e%7C0%7C0%7C637203153093048834&amp;sdata=xKWxOIUOiuph%2Bq9uM959km%2BApIPKdZBvABI4X%2FcIs5E%3D&amp;reserved=0" originalsrc="https://bookshelf.vitalsource.com/" rel="noopener noreferrer" shash="Ufc5zbkeYySMHpNXEWcASihLkHliJrs6uXfX1WO0Rlm9OW/6ISUChLcZtkTKj3XdzhYlyySQpaIvrvRKuDRiBNZ0afQt/J8TsAHBlnpXxKqD4fbOK8PpAN2i+YH3rwtFZx79IlxrkOtVUrxbkjLzLM399r0pTYEmlPrpcRH0T2Y=" target="_blank" title="">https://bookshelf.vitalsource.com</a> using their PSU email (it must be a .edu email to gain access).</p>
+
+<p> </p>
+
+<h3>Nittany Success Center (NSC)</h3>
+
+<h4>Is the Nittany Success Center (NSC) open on campus?</h4>
+
+<p>No, the NSC is closed at this time and services are offered remotely. The NSC will reopen when staff and students are permitted back on campus</p>
+
+<h4>Is tutoring still available while face-to-face instruction is suspended?</h4>
+
+<p>Yes, the Nittany Success Center (NSC) is offering Synchronous Online Tutoring while we are learning remotely. We will return to in-person tutoring when classes resume on campus.</p>
+
+<p>From the NSC webpage, click <u>Request a Tutor</u> to view our tutoring schedule, make appointments, review instructions for online tutoring, watch a video demonstrating how online tutoring works and directions for resetting your password.</p>
+
+<h4>How does Synchronous Online Tutoring work?</h4>
+
+<p>The tutoring session is conducted live with our current tutoring staff using an online platform. Both tutor and tutee need a webcam to view the session. Appointments are made through our current tutor scheduling software, <a href="york.mywconline.com">york.mywconline.com</a>. Click on the link below to view a demonstration of Synchronous Online Tutoring.</p>
+
+<p><a href="https://psu.app.box.com/s/dn125oxh03b01pmgg1riribszkrf7dh4">Online Synchronous Tutoring video demo</a></p>
+
+<h4>Do I need to use my Penn State email to login to the tutoring schedule?</h4>
+
+<p>Yes, you must login with your <a href="mailto:email@psu.edu">email@psu.edu</a> address. You may create any password; it doesn’t need to match your other PSU logins.</p>
+
+<h4>Do I need to set up an account in the scheduling system?</h4>
+
+<p>If you have used the NSC for tutoring or testing before we began remote learning, then NO, you already have an account created with your PSU email credentials. If you don’t remember your password, follow the directions online or below to reset your password</p>
+
+<p>If you’ve never used NSC services, then YES, you must set up an account using your <a href="mailto:email@psu.edu">email@psu.edu</a> address. Creating an account takes a few minutes, you’ll need to answer five questions, including your nine-digit PSU ID# and create a password. Once you create an account you can login to schedule appointments.</p>
+
+<h4>How do I schedule an appointment?</h4>
+
+<ul><li>Click on REQUEST A TUTOR from our webpage or Login to <a href="york.mywconline.com">york.mywconline.com</a></li>
+	<li>Review written instructions listed on login page, review video demo about online tutoring sessions</li>
+	<li>Login with your PSU email and the password created for this account. You will be taken to the tutoring schedule.</li>
+	<li>Use the pull-down menu to select a specific course</li>
+	<li>Available appointments will be displayed</li>
+	<li>Select an available appointment, list a few details about content you would like to cover with the tutor and your name will be added to the schedule.</li>
+	<li>Once an appointment is scheduled, an email is sent to the tutor and tutee with appointment details.</li>
+</ul><h4>How do I meet my tutor for online tutoring?</h4>
+
+<ul><li>Tutor and tutee login to the tutoring schedule using a device with a webcam</li>
+	<li>Login to <a href="york.mywconline.com">york.mywconline.com</a> using your <a href="mailto:email@psu.edu">email@psu.edu</a> address and password created for this account.</li>
+	<li>Click on your appointment just a few minutes before your scheduled time.</li>
+	<li>Click on START OR JOIN ONLINE CONSULTATION at the bottom of the page.</li>
+	<li>The screen will display the live webcam images of tutor and tutees, with a shared whiteboard for writing or sharing content, a pull-down menu allows the addition of math symbols.</li>
+	<li>Click on <b>?</b> on menu bar for more information about online features.</li>
+</ul><h4>What should I do if I need my password reset?</h4>
+
+<p>If you need your password reset, send an email to <a href="mailto:muv92@psu.edu">muv92@psu.edu</a> or <a href="mailto:ksm5346@psu.edu">ksm5346@psu.edu</a></p>
+
+<h4>Can study groups meet online?</h4>
+
+<p>Yes, tutoring sessions can include multiple students. Groups of five or less is recommended for an online study group.</p>
+
+<h4>Is the Test Center open for proctoring?</h4>
+
+<p>No, the NSC is closed for in-person services to comply with social distancing recommendations.</p>
+
+<h4>What should I do if I need to discuss resources for disability related challenges?</h4>
+
+<p>Peggy Violette, campus liaison for Student Disability Resources (SDR), has reached out privately to students who are currently registered with the NSC for disability services to provide additional information and resources about online accommodations. Registered students should contact Peggy with accommodation and accessibility concerns and continue to monitor email for updates.</p>
+
+<p>Temporary accommodations are available for temporary injuries such as a concussion or extended recovery from illness. Students applying for accommodations while we are working remotely should email Peggy Violette, <a href="mailto:muv92@psu.edu">muv92@psu.edu</a>, to schedule an appointment to discuss available resources and accommodations. Intake meetings for new students registering for Student Disability Resources (SDR) can be accomplished remotely. We can confer through email, phone or an online meeting.</p>
+
+<p>PLEASE NOTE: Accommodations are not retroactive. Accommodations are effective upon the provision of appropriate disability documentation and completion of an SDR Intake meeting, ADA paperwork, and delivery of an accommodation letter to faculty. Any questions or concerns about accommodations or accessibility should be directed to Peggy Violette, <a href="mailto:muv92@psu.edu">muv92@psu.edu</a>.</p>
+
+<p> </p>
+
+<h3>Student Affairs and Services</h3>
+
+<h4>How are student activities, clubs, and organizations affected?</h4>
+
+<p>Student Government Association (SGA) and the University Programming Board (UPB) are making plans to continue meeting virtually for the remainder of the semester.  If you are a club leader and are interested in holding virtual activities/meetings, please contact Sarah Guillen, associate director, for assistance.  The Student Affairs staff can help clubs and organizations keep connected with students.</p>
+
+<p>All on-campus activities have been cancelled through April 6.</p>
+
+<h4>Am I able to use spaces in the Joe and Rosie Ruhl Student Community Center (Ruhl Center), including the Fitness Center, Gyms, or Student Affairs Office?</h4>
+
+<p>At this time, the Ruhl Center is closed. The Student Affairs Office is available virtually and staff will respond to email messages and phone calls.</p>
+
+<h4>I am a student who is hurting financially. Is there any support available for students who may be experiencing difficulty?</h4>
+
+<p>Penn State has Student Emergency Funds that can help students experiencing financial difficulty. <a href="mailto:sfs9@psu.edu">Contact Scott Simonds</a> for more information.</p>
+
+<h4>I have purchased the Penn State Student Health Insurance Plan (SHIP). How do I access coverage if I need to see a doctor?</h4>
+
+<p>Details about the Student Health Insurance Plan (SHIP), including coverages, customer care contact information, and a provider directory, are available through the <a href="https://www.firststudent.com/school_detail/brochures-flyers-sbc-pennsylvania-state-university/">First Student website</a>. For more information, students may contact the Student Insurance Office at <a href="tel:814-865-7467">814-865-7467</a> or e-mail <a href="mailto:uhs-insurance@psu.edu">uhs-insurance@psu.edu</a>.</p>
+
+<p> </p>
+
+<h3>Talent Search York</h3>
+
+<h4>Is the Penn State Talent Search York and/or the Educational Opportunity Center main office open during this time?</h4>
+
+<p>The Penn State Talent Search York and the Educational Opportunity Center main office is open Monday through Friday from 8:00 a.m.–5:00 p.m. by appointment, email, and phone. The office is in room 326 in the Lee R. Glatfelter Library of Penn State York until September 1, 2020. Please call <a href="tel:717-771-4146">717-771-4146</a> to speak with a representative or to schedule an appointment.</p>
+
+<p> </p>
+
+<hr /><p> </p>
+
+<h2 id="offices">Contacting Campus Offices</h2>
+
+<p>Penn State York is committed to providing information and support to the campus and community during the coronavirus pandemic. Most faculty and staff members are working remotely to help contain the spread of the coronavirus as recommended by the state and federal government. The campus will continue to provide quality services throughout this crisis. Please continue to call campus offices and communicate via your Penn State email. Phone calls and emails will be answered between 8:00 a.m. to 5:00 p.m., Monday through Friday. Those calls and emails placed after hours will be answered the next business day. If face-to-face meetings are necessary, please schedule an appointment with the appropriate office.</p>
+
+<p>Buildings on campus are locked, but those who must visit campus will be able to gain access. If there are not people working in the building, visitors can call Police and Public Safety at <a href="tel:717-771-8444">717-771-8444</a>.</p>
+
+<p>Please see the list of contact people and departments in each building.</p>
+
+<p> </p>
+
+<h3>The Bradley Building</h3>
+
+<h4>Alumni Relations</h4>
+
+<p>Iona Conlon – <a href="tel:717-718-6781">717-718-6781</a>, <a href="mailto:iona@psu.edu">iona@psu.edu</a></p>
+
+<h4>Graham Fellows Program for Entrepreneurial Leadership</h4>
+
+<p>Allan Lehman – <a href="tel:717-771-8408">717-771-8408</a>, <a href="mailto:asl167@psu.edu">asl167@psu.edu</a></p>
+
+<h4>Development</h4>
+
+<p>Di Hershey – <a href="tel:717-771-4127">717-771-4127</a>, <a href="mailto:dkh13@psu.edu">dkh13@psu.edu</a></p>
+
+<h3> </h3>
+
+<h3>Edward M. Elias Science Building</h3>
+
+<h4>Continuing Education</h4>
+
+<p>Patty Bowen – <a href="tel:717-771-4032">717-771-4032</a>, <a href="mailto:pab166@psu.edu">pab166@psu.edu</a></p>
+
+<h3> </h3>
+
+<h3>Joe and Rosie Ruhl Student Community Center (Ruhl Center)</h3>
+
+<h4>Athletics</h4>
+
+<p>Jeff Barkdoll – <a href="tel:717-718-6776">717-718-6776</a>, <a href="mailto:jdb53@psu.edu">jdb53@psu.edu</a></p>
+
+<h4>Student Affairs</h4>
+
+<p>Scott Simonds – <a href="tel:717-718-6715">717-718-6715</a>, <a href="mailto:sfs9@psu.edu">sfs9@psu.edu</a></p>
+
+<p> </p>
+
+<h3>John J. Romano Administration Building</h3>
+
+<h4>Academic Affairs</h4>
+
+<p>Christina Lee – <a href="tel:717-771-4051">717-771-4051</a>, <a href="mailto:cob165@psu.edu">cob165@psu.edu</a></p>
+
+<h4>Business Services</h4>
+
+<p>Patti Tabb – <a href="tel:717-771-4061">717-771-4061</a>, <a href="mailto:pat12@psu.edu">pat12@psu.edu</a></p>
+
+<h4>Bursar Office</h4>
+
+<p>Lee-Ann Miller – <a href="tel:717-771-4122">717-771-4122</a>, <a href="mailto:lmm362@psu.edu">lmm362@psu.edu</a></p>
+
+<h4>Chancellor’s Office</h4>
+
+<p>Jane Pflaum – <a href="tel:717-771-4120">717-771-4120</a>, <a href="mailto:jap34@psu.edu">jap34@psu.edu</a></p>
+
+<h4>Human Resources</h4>
+
+<p>Lindsay Shields – <a href="tel:717-771-4138">717-771-4138</a>, <a href="mailto:lms7128@psu.edu">lms7128@psu.edu</a></p>
+
+<h4>Registrar’s Office</h4>
+
+<p>Rita Archer-Clark – <a href="tel:717-771-4056">717-771-4056</a>, <a href="mailto:rxa258@psu.edu">rxa258@psu.edu</a></p>
+
+<p> </p>
+
+<h3>Lee R. Glatfelter Library</h3>
+
+<h4>Graduate Program</h4>
+
+<p>Francine Baker – <a href="tel:717-771-8413">717-771-8413</a>, <a href="mailto:fcb11@psu.edu">fcb11@psu.edu</a></p>
+
+<h4>Library</h4>
+
+<p><a href="tel:717-771-4020">717-771-4020</a>, <a href="mailto:UL-YORK@lists.psu.edu">UL-YORK@lists.psu.edu</a></p>
+
+<h4>Nittany Success Center</h4>
+
+<p>Peggy Violette – <a href="tel:717-771-4013">717-771-4013</a>, <a href="mailto:muv92@psu.edu">muv92@psu.edu</a></p>
+
+<h4>University Relations</h4>
+
+<p>Barbara Dennis – <a dir="ltr" href="tel:717-771-4128" x-apple-data-detectors="true" x-apple-data-detectors-result="0/2" x-apple-data-detectors-type="telephone">717-771-4128</a>, <a dir="ltr" href="mailto:bhd5@psu.edu" x-apple-data-detectors="true" x-apple-data-detectors-result="0/1" x-apple-data-detectors-type="link">bhd5@psu.edu</a></p>
+
+<p> </p>
+
+<h3>M.S. Grumbacher Information Sciences and Technology Center (Grumbacher)</h3>
+
+<h4>Advising and Career Development</h4>
+
+<p>Cathy Sheaffer – <a href="tel:717-771-4053">717-771-4053</a>, <a href="mailto:ces9@psu.edu">ces9@psu.edu</a></p>
+
+<h4>Bookstore</h4>
+
+<p><a href="tel:717-771-4110">717-771-4110</a>, <a href="mailto:sm455@bncollege.com">sm455@bncollege.com</a></p>
+
+<h4>Information Technology</h4>
+
+<p>Please email Loren Brewster at <a href="mailto:lxb104@psu.edu">lxb104@psu.edu</a></p>
+
+<p> </p>
+
+<h3>Pullo Family Performing Arts Center (The Pullo Center)</h3>
+
+<h4>Admissions</h4>
+
+<p>Shelly Drabik – <a href="tel:717-771-4040">717-771-4040</a>, <a href="mailto:ykadmission@psu.edu">ykadmission@psu.edu</a></p>
+
+<h4>Financial Aid</h4>
+
+<p>Billy Dunkel – <a href="tel:717-771-4196">717-771-4196</a>, <a href="mailto:wjd30@psu.edu">wjd30@psu.edu</a></p>
+
+<h4>The Pullo Center</h4>
+
+<p>Tina Rohrbach – <a href="tel:717-505-8910">717-505-8910</a>, <a href="mailto:tmr27@psu.edu">tmr27@psu.edu</a></p>
+
+<p> </p>
+
+<hr /><p> </p>
+
+<h2 id="cancellations">List of Cancellations and Postponements</h2>
+
+<p>All activities, events, and meetings on the Penn State York campus have been cancelled or postponed until further notice.</p>
+</div>
+      
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+            
+                              <aside class="col-sm-3 sidebar-second-only sidebar-second" role="complementary">
+              <div class="region region-sidebar-second">
+    <section id="block-feature-article-more-features" class="block block-psucampus-feature-article block-psucampus-feature-article-more clearfix">
+  
+    
+
+      <a href="/feature/archive" class="feature-more-link">More  Features <span class="button-arrow" aria-hidden="true"></span></a>
+  </section>
+
+<section id="block-feature-article-current-features" class="block block-psucampus-feature-article block-psucampus-feature-article-cur clearfix">
+  
+      <h2 class="block-title">Current Features</h2>
+    
+
+      <article role="article" about="/feature/making-important-student-connections" class="node feature-article node-feature-article teaser-condensed node-teaser clearfix">
+
+  <div class="content">
+    <div class="field-type-image"><a href="/feature/making-important-student-connections">  <img src="/sites/york/files/styles/teaser_thumbnail/public/joel-news_1.jpg?itok=Qhbim5tQ" width="780" height="439" alt="Joel Gugino" typeof="foaf:Image" class="img-responsive" />
+
+
+</a></div>
+
+          
+              <h2 class="node-title">
+          <a href="/feature/making-important-student-connections" rel="bookmark"><span>Making Important Student Connections</span>
+</a>
+        </h2>
+            
+      </div>
+
+
+</article>
+<article role="article" about="/feature/we-want-you" class="node feature-article node-feature-article teaser-condensed node-teaser clearfix">
+
+  <div class="content">
+    <div class="field-type-image"><a href="/feature/we-want-you">  <img src="/sites/york/files/styles/teaser_thumbnail/public/lion-we-want-you-feature.jpg?itok=N7lYyj7b" width="780" height="439" alt="Nittany Lion holding a We Want You! sign." typeof="foaf:Image" class="img-responsive" />
+
+
+</a></div>
+
+          
+              <h2 class="node-title">
+          <a href="/feature/we-want-you" rel="bookmark"><span>We Want You!</span>
+</a>
+        </h2>
+            
+      </div>
+
+
+</article>
+<article role="article" about="/feature/life-one-big-school" class="node feature-article node-feature-article teaser-condensed node-teaser clearfix">
+
+  <div class="content">
+    <div class="field-type-image"><a href="/feature/life-one-big-school">  <img src="/sites/york/files/styles/teaser_thumbnail/public/engineering-student.jpg?itok=uk9eI4-s" width="780" height="439" alt="Engineering Student Mohamed El Sonbaty working with electronics in the lab" typeof="foaf:Image" class="img-responsive" />
+
+
+</a></div>
+
+          
+              <h2 class="node-title">
+          <a href="/feature/life-one-big-school" rel="bookmark"><span>Life is one big school</span>
+</a>
+        </h2>
+            
+      </div>
+
+
+</article>
+
+  </section>
+
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+  <section id="postscript-outer-wrapper" class="outer-wrapper clearfix" role="complementary" aria-label="postscript features">
+    <div id="postscript-layout" class="postscript-layout inner-wrapper clearfix">
+      <div id="postscript-first" class="region--postscript-first">
+        
+      </div>
+    </div>
+  </section>
+
+      <footer container id="footer-outer-wrapper" role="contentinfo">
+    <div id="footer-first-outer-wrapper" class="outer-wrapper clearfix without--footer with--footer-second without--footer-third">
+      <div id="footer-layout-main" class="footer-layout inner-wrapper clearfix">
+        <div id="footer-main" class="footer">
+          <div class="footer-campus-data">
+            <div class="site-address">
+              <address class="vcard" aria-label="contact">
+                <div class="adr">
+                                      <h3 class="org">Penn State York</h3>
+                                                        <div class="street-address">1031 Edgecomb Avenue</div>
+                    <span class="locality">York, </span>
+                    <span class="region">PA</span>
+                    <span class="postal-code">17403-3326</span>
+                    <div class="tel">717-771-4000</div>
+                                  </div>
+              </address>
+              <div class="campus-map">
+                                  <a href="/" id="footer-campus-map" class="footer-campus-map">
+                    <img src="/sites/york/files/logos/map_yk.png" alt="Locations of Penn State’s campuses throughout Pennsylvania with Penn State York highlighted" title="" />
+                  </a>
+                              </div>
+            </div>
+              <div class="region region-secondary-menu">
+    <nav role="navigation" aria-labelledby="block-footer-secondary-menu-menu" id="block-footer-secondary-menu">
+            
+  <h2 class="visually-hidden" id="block-footer-secondary-menu-menu">Secondary Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-secondary-menu nav">
+                      <li class="first">
+                                        <a href="https://universityethics.psu.edu/penn-state-hotline">Hotline</a>
+              </li>
+                      <li>
+                                        <a href="/visit" data-drupal-link-system-path="node/306">Visit Us</a>
+              </li>
+                      <li class="last">
+                                        <a href="/this-is-penn-state/leadership" data-drupal-link-system-path="node/294">Contact Us</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+              <div class="region region-call-to-action-links">
+    <nav role="navigation" aria-labelledby="block-call-to-action-menu-menu" id="block-call-to-action-menu">
+            
+  <h2 class="visually-hidden" id="block-call-to-action-menu-menu">Call to Action Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-cta-menu nav">
+                      <li class="first">
+                                        <a href="/giving" data-drupal-link-system-path="node/275">Giving</a>
+              </li>
+                      <li class="last">
+                                        <a href="/admission/apply" data-drupal-link-system-path="node/47">Apply Now</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+            <div class="site-slogan">Situated on 51 beautiful hillside acres overlooking the historic city of York in south-central Pennsylvania, Penn State York offers a&nbsp;small, engaging college environment with all the resources of a major research university.
+</div>
+          </div>
+          <div class="footer-menu">
+                          <div class="footer-information-nav">
+                <div class="information-nav">
+                    <div class="region region-information-menu">
+    <div class="info-for-label">Information for:</div>
+<nav role="navigation" aria-labelledby="block-information-menu-menu">
+            
+  <h2 class="visually-hidden" id="block-information-menu-menu">Information Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-information-menu nav">
+                      <li class="first">
+                                        <a href="/admission" data-drupal-link-system-path="node/46">Future Students</a>
+              </li>
+                      <li>
+                                        <a href="/current-students" data-drupal-link-system-path="node/330">Current Students</a>
+              </li>
+                      <li>
+                                        <a href="/faculty-staff" data-drupal-link-system-path="node/331">Faculty &amp; Staff</a>
+              </li>
+                      <li>
+                                        <a href="/adult-learners" data-drupal-link-system-path="node/332">Adult Learners</a>
+              </li>
+                      <li>
+                                        <a href="/admission/apply/transfer-students" data-drupal-link-system-path="node/94">Transfer Students</a>
+              </li>
+                      <li>
+                                        <a href="/alumni" data-drupal-link-system-path="node/317">Alumni</a>
+              </li>
+                      <li class="last">
+                                        <a href="/community" data-drupal-link-system-path="node/307">Community</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                </div>
+              </div>
+                                    <div class="footer-main-nav" role="navigation" aria-label="footer super">
+                <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-footer-menu-menu" id="block-footer-menu">
+            
+  <h2 class="visually-hidden" id="block-footer-menu-menu">Footer Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-footer-menu">
+                      <li class="expanded first">
+                                                  <a href="/this-is-penn-state" data-drupal-link-system-path="node/289">            <span class="showhide">+</span>This is Penn State
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/visit" data-drupal-link-system-path="node/306">Visit Us</a>
+              </li>
+                      <li>
+                                                  <a href="/this-is-penn-state/facts" data-drupal-link-system-path="node/293">Quick Facts</a>
+              </li>
+                      <li class="last">
+                                                  <a href="/this-is-penn-state/leadership" data-drupal-link-system-path="node/294">Campus Leadership</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/academics" data-drupal-link-system-path="node/56">            <span class="showhide">+</span>Academics
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/academics/baccalaureate" data-drupal-link-system-path="node/209">Baccalaureate Degrees</a>
+              </li>
+                      <li>
+                                                  <a href="/academics/associate" data-drupal-link-system-path="node/219">Associate Degrees</a>
+              </li>
+                      <li>
+                                                  <a href="http://psu.edu">Graduate Programs</a>
+              </li>
+                      <li>
+                                                  <a href="/academics/support" data-drupal-link-system-path="node/225">Support Services</a>
+              </li>
+                      <li class="last">
+                                                  <a href="https://libraries.psu.edu/york">Lee R. Glatfelter Library</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/academics/special-programs" data-drupal-link-system-path="node/265">            <span class="showhide">+</span>Special Programs
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/academics/graham-fellows-program" data-drupal-link-system-path="node/197">Graham Fellows Program</a>
+              </li>
+                      <li>
+                                                  <a href="/academics/special-programs/global" data-drupal-link-system-path="node/264">Global Programs</a>
+              </li>
+                      <li>
+                                                  <a href="/academics/special-programs/honors" data-drupal-link-system-path="node/267">Honors Program</a>
+              </li>
+                      <li>
+                                                  <a href="/academics/special-programs/undergraduate-research" data-drupal-link-system-path="node/270">Undergraduate Research</a>
+              </li>
+                      <li class="last">
+                                                  <a href="/academics/special-programs/engaged-scholarship" data-drupal-link-system-path="node/271">Engaged Scholarship</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/admission" data-drupal-link-system-path="node/46">            <span class="showhide">+</span>Admission
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/admission/visit" data-drupal-link-system-path="node/49">Schedule a Visit</a>
+              </li>
+                      <li>
+                                                  <a href="/admission/apply" data-drupal-link-system-path="node/47">How to Apply</a>
+              </li>
+                      <li>
+                                                  <a href="/admission/apply/transfer-students" data-drupal-link-system-path="node/94">Transfer Students</a>
+              </li>
+                      <li class="last">
+                                                  <a href="/admission/contact" data-drupal-link-system-path="node/101">Contact Admissions</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/tuition-and-financial-aid" data-drupal-link-system-path="node/201">            <span class="showhide">+</span>Tuition &amp; Financial Aid
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/academics/support/bursar" data-drupal-link-system-path="node/260">Bursar’s Office</a>
+              </li>
+                      <li class="last">
+                                                  <a href="/tuition-and-financial-aid/scholarships-old" data-drupal-link-system-path="node/346">Scholarships</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/student-life" data-drupal-link-system-path="node/51">            <span class="showhide">+</span>Student Life
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/student-life/activities" data-drupal-link-system-path="node/53">Activities</a>
+              </li>
+                      <li>
+                                                  <a href="/student-life/activities/clubs" data-drupal-link-system-path="node/75">Clubs and Organizations</a>
+              </li>
+                      <li>
+                                                  <a href="/student-life/services" data-drupal-link-system-path="node/54">Student Services</a>
+              </li>
+                      <li>
+                                                  <a href="/student-life/services/police" data-drupal-link-system-path="node/83">Police &amp; Public Safety</a>
+              </li>
+                      <li class="last">
+                                                  <a href="http://pennstateyorksports.com">Athletics</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded">
+                                                  <a href="/community" data-drupal-link-system-path="node/307">            <span class="showhide">+</span>Community Impact
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/community/youth" data-drupal-link-system-path="node/321">Youth Programs</a>
+              </li>
+                      <li>
+                                                  <a href="http://pullocenter.york.psu.edu">The Pullo Center</a>
+              </li>
+                      <li class="last">
+                                                  <a href="http://olli.york.psu.edu">OLLI at Penn State York</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="expanded last">
+                                                  <a href="/campus-directory" data-drupal-link-system-path="campus-directory">            <span class="showhide">+</span>Campus Directory
+          </a>
+                        <ul class="menu">
+                      <li class="first">
+                                                  <a href="/campus-directory/results?type=80" data-drupal-link-query="{&quot;type&quot;:&quot;80&quot;}" data-drupal-link-system-path="campus-directory/results">Faculty</a>
+              </li>
+                      <li class="last">
+                                                  <a href="/campus-directory/results?type=81" data-drupal-link-query="{&quot;type&quot;:&quot;81&quot;}" data-drupal-link-system-path="campus-directory/results">Staff</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+            </div>
+                      </div>
+        </div>
+      </div>
+            <div id="footer-second-outer-wrapper" class="outer-wrapper clearfix">
+        <div id="footer-layout-social" class="footer-layout inner-wrapper clearfix">
+          <div id="footer-second" class="region--footer-second">
+                        <div class="region region-footer-second">
+    <section id="block-social-media-block" class="block block-psucampus-core block-social-media-block clearfix">
+  
+    
+
+      <h2>Connect with Us</h2><div class="content social-icon-wrapper"><ul class="social-share-list"><li class="social-share-list__item"><a href="https://www.facebook.com/PennStateYork" class="prototype-icon prototype-icon-social-facebook" title="facebook"><span class="social-icon-text">facebook</span></a></li><li class="social-share-list__item"><a href="https://twitter.com/PennStateYork" class="prototype-icon prototype-icon-social-twitter" title="twitter"><span class="social-icon-text">twitter</span></a></li><li class="social-share-list__item"><a href="https://www.flickr.com/photos/pennstateyork/" class="prototype-icon prototype-icon-social-flickr" title="flickr"><span class="social-icon-text">flickr</span></a></li><li class="social-share-list__item"><a href="https://www.youtube.com/user/PennStateYork" class="prototype-icon prototype-icon-social-youtube" title="youtube"><span class="social-icon-text">youtube</span></a></li></ul></div>
+  </section>
+
+
+  </div>
+
+                    </div>
+        </div>
+      </div>
+            <div id="footer-third-outer-wrapper" class="outer-wrapper clearfix">
+        <div id="footer-layout-copy" class="footer-layout inner-wrapper clearfix">
+          <div id="footer-third" class="region--footer-third">
+            <div id="copyright-bar" class="clearfix">
+              <div class="footer-logo">
+                <a href="https://www.psu.edu">
+                  <img src="/profiles/psucampus/themes/psu_sub/images/footer_logo.png" alt="Penn State University" title="Penn State University" />
+                </a>
+              </div>
+              <div class="mobile-footer-logo">
+                <a href="https://www.psu.edu">
+                  <img src="/profiles/psucampus/themes/psu_sub/images/footer_logo.png" alt="Penn State University" title="Penn State University" />
+                </a>
+              </div>
+              <div class="copy-left">
+                  <div class="region region-footer-third">
+    <nav role="navigation" aria-labelledby="block-footer-info-menu-menu" id="block-footer-info-menu">
+            
+  <h2 class="visually-hidden" id="block-footer-info-menu-menu">Footer Info Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-footer-info-menu nav">
+                      <li class="first">
+                                        <a href="/this-is-penn-state/leadership" data-drupal-link-system-path="node/294">Contact Us</a>
+              </li>
+                      <li>
+                                        <a href="/visit/map" data-drupal-link-system-path="node/325">Map</a>
+              </li>
+                      <li>
+                                        <a href="https://york.psu.edu/events-calendar">Calendar</a>
+              </li>
+                      <li>
+                                        <a href="https://psu.jobs">Employment</a>
+              </li>
+                      <li class="last">
+                                        <a href="/student-life/services/personal-counseling" data-drupal-link-system-path="node/91">Hotlines</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                <div class="address-copy">
+                                      <address class="vcard" aria-label="contact">
+                      <div class="adr">
+                        <span class="street-address">1031 Edgecomb Avenue</span>,
+                        <span class="locality">York</span>,
+                        <span class="region">Pennsylvania</span>
+                        <span class="postal-code">17403-3326</span> |
+                        <span class="tel">717-771-4000</span>
+                      </div>
+                    </address>
+                                </div>
+              </div>
+              <div class="copy-right">
+                                    <div class="region region-footer-fourth">
+    <nav role="navigation" aria-labelledby="block-footer-legal-menu-menu" id="block-footer-legal-menu">
+            
+  <h2 class="visually-hidden" id="block-footer-legal-menu-menu">Footer Legal Menu</h2>
+  
+
+        
+      <ul class="menu menu--menu-footer-legal-menu nav">
+                      <li class="first">
+                                        <a href="http://www.psu.edu/web-privacy-statement">Privacy</a>
+              </li>
+                      <li>
+                                        <a href="http://guru.psu.edu/policies/AD85.html">Non-discrimination</a>
+              </li>
+                      <li>
+                                        <a href="http://guru.psu.edu/policies/OHR/hr11.html">Equal Opportunity</a>
+              </li>
+                      <li>
+                                        <a href="/accessibility" data-drupal-link-system-path="node/327">Accessibility</a>
+              </li>
+                      <li class="last">
+                                        <a href="http://www.psu.edu/copyright-information">Copyright</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                                <div class="copyright-copy">The Pennsylvania State University &copy; 2020</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/7066","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"psucampus_getrave":{"psucampus_getrave_url":"https:\/\/content.getrave.com\/rss\/psu\/channel34"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"manual"},"googleCSE":{"cx":"008764984120410162534:1e5_y56j5ry","language":"en","resultsWidth":0,"domain":"","isDefault":true},"ajaxTrustedUrl":{"\/search\/cse":true},"user":{"uid":0,"permissionsHash":"6d29ff8844b8fdd7da34f07910eee06d43f78249776a64bb25b2a02e167bde2b"}}</script>
+<script src="/sites/york/files/js/js_3ms1tOS6k7dhUwXhF3kUQlW2pElgsZqJ_0g4sUDGMR4.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"515f0b4697","applicationID":"362748531","transactionName":"NlJTYENRVkNRVxcPWg8YcFdFWVdeH3ARE0UAW21aXlRdbHNbDRJHDltdUUNsdl9UUTUPUBZ0XlpFQldcXFERSwsXXlRD","queueTime":0,"applicationTime":817,"atts":"GhVQFgtLRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
